@@ -3,7 +3,6 @@ let allPackages;
 $.getJSON('./output.json',  function(responseObject){
     allPackages = responseObject.source;
     initializePackages(allPackages);
-    console.log(allPackages)
 });
 
 var initializePackages = function(packagesList){
@@ -65,7 +64,6 @@ var renderPackages = function(packagesList, searchString="") {
 
 function searchPackages() {
     var query = document.getElementsByClassName("search-box")[0].value.trim();
-    console.log(query)
     clearPackages();
     if (query === '') {
         renderPackages(allPackages);
