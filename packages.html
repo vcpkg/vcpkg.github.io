@@ -12,17 +12,12 @@
         <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
         <script src = 'js/packages.js'></script>
         <script> 
             $(document).ready(function() {
                 $("#loadNavBar").load("nav.html");
                 $("#loadFooter").load("footer.html");
-                console.log("pkg");
-                $.getJSON('./output.json',  function(responseObject){
-                    var obj = responseObject.source;
-                    console.log(obj);
-                    renderPackages(obj);
-                });
             });
         </script> 
     </head>
@@ -31,8 +26,11 @@
         <div class="header-text">
             <h1> Browse Packages </h1>
         </div>
+        <div class="search-bar">
+            <input class="search-box" type="text" name="search" placeholder="Search Packages" autocomplete="off" oninput=searchPackages() />
+            <span class="search-icon"></span>
+        </div>
         <div class="package-results">
-
         </div>
     </body> 
     <div id=loadFooter></div>
