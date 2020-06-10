@@ -7,7 +7,7 @@ def getFiles(path):
     files = os.listdir(path)
     return list(filter(lambda x: x[0] != '.', files))
 
-path = "ports"
+path = "ports_mini"
 data = {}
 data["Generated On"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 files = getFiles(path)
@@ -27,6 +27,7 @@ for filename in files:
             prev = x[:idx]
     jsonlist.append(jsonf)
     f.close()
+jsonlist.sort(key=lambda item: item['Name'])
 data["source"] = jsonlist
 #print(data)
 out = json.dumps(data, sort_keys=True, indent=4)
