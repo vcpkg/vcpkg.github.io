@@ -1,9 +1,28 @@
-let allPackages, currentPackages, query;
+let allPackages, currentPackages;
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+// initialize query to result from index.html or blank
+let query = getUrlParameter('query') || "";
 
 $.getJSON('./output.json',  function(responseObject){
     allPackages = responseObject.source;
     currentPackages = allPackages;
-    renderPackages(allPackages);
+    document.getElementById("pkg-search").value = query;
+    searchPackages();
 });
 
 var renderPackages = function(packagesList) {
