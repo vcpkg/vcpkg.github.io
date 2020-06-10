@@ -1,16 +1,13 @@
-let allPackages;
+let allPackages, currentPackages, query;
 
 $.getJSON('./output.json',  function(responseObject){
     allPackages = responseObject.source;
-    initializePackages(allPackages);
+    currentPackages = allPackages;
+    renderPackages(allPackages);
 });
 
-var initializePackages = function(packagesList){
-    renderPackages(packagesList);
-    let allPackages = packagesList;
-}
-
-var renderPackages = function(packagesList, searchString="") {
+var renderPackages = function(packagesList) {
+    clearPackages();
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
     if (packagesList.length > 0) {
@@ -41,6 +38,7 @@ var renderPackages = function(packagesList, searchString="") {
             var homepageURL = package.Homepage;
             if (homepageURL) {
                 var websiteLink = document.createElement('a')
+                websiteLink.className = "package-website"
                 websiteLink.href = homepageURL
                 websiteLink.innerHTML = "Website"
                 websiteLink.target = "_blank"
@@ -55,16 +53,22 @@ var renderPackages = function(packagesList, searchString="") {
         noResultDiv.className = 'package-card'
 
         var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + searchString + '</b>'
+        noResultPara.innerHTML = "No results for " + '<b>' + query + '</b>'
         noResultDiv.appendChild(noResultPara)
 
         mainDiv.appendChild(noResultDiv)
     }
 }
 
+function clearPackages() {
+    var mainDiv = document.getElementsByClassName("package-results")[0]
+    while (mainDiv.firstChild) {
+        mainDiv.removeChild(mainDiv.firstChild)
+    }
+}
+
 function searchPackages() {
-    var query = document.getElementsByClassName("search-box")[0].value.trim();
-    clearPackages();
+    query = document.getElementsByClassName("search-box")[0].value.trim();
     if (query === '') {
         renderPackages(allPackages);
     } 
@@ -87,13 +91,27 @@ function searchPackages() {
         for (var rslt of searchResult) {
             newPackagesList.push(rslt.item)
         }
-        renderPackages(newPackagesList, searchString=query)
+        currentPackages = newPackagesList;
+        renderPackages(currentPackages);
     }
 }
 
-function clearPackages() {
-    var mainDiv = document.getElementsByClassName("package-results")[0]
-    while (mainDiv.firstChild) {
-        mainDiv.removeChild(mainDiv.firstChild)
+const sortAlphabetical = function(a, b) {
+    var pkgA = a.Name.toUpperCase();
+    var pkgB = b.Name.toUpperCase();
+    return pkgA >= pkgB ? 1 : -1
+}
+
+function sortPackages(){
+    let val = document.getElementById("sortBtn").value
+    
+    switch(val){
+        case "Best Match":
+            searchPackages(currentPackages);
+            break;
+        case "Alphabetical":
+            currentPackages.sort(sortAlphabetical);
+            renderPackages(currentPackages);
+            break;
     }
 }

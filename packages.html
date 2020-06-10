@@ -30,8 +30,14 @@
             <input class="search-box" type="text" name="search" placeholder="Search Packages" autocomplete="off" oninput=searchPackages() />
             <span class="search-icon"></span>
         </div>
-        <div class="package-results">
+        <div class="sort-bar">
+            <select class="dropdown" id="sortBtn" onChange="sortPackages()">
+                <option value="Best Match"selected>Best Match</option>
+                <option value="Alphabetical">Alphabetical</option>
+            </select>
+            <span class="sort-text">Sort By:</span>
         </div>
+        <div class="package-results"> </div>
     </body> 
     <div id=loadFooter></div>
 </html>
