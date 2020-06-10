@@ -27,9 +27,9 @@ for filename in files:
             prev = x[:idx]
     jsonlist.append(jsonf)
     f.close()
-jsonlist.sort(key=lambda item: item['Name'])
+
+jsonlist.sort(key=lambda item: item["Name"])
 data["source"] = jsonlist
-#print(data)
 out = json.dumps(data, sort_keys=True, indent=4)
 output = open("output/output.json", mode = 'w')
 output.write(out)
