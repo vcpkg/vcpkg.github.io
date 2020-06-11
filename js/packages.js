@@ -27,7 +27,7 @@ $.getJSON('./output.json',  function(responseObject){
 
 
 var renderCompability = function (pkg){
-    const processors = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
+    const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
     var compatRowDiv = document.createElement('div')
     compatRowDiv.className = "package-compatibility"
 
@@ -38,10 +38,10 @@ var renderCompability = function (pkg){
     compatRowDiv.appendChild(compatDiv)
 
     // Display processor statuses
-    for (var proc of processors){
+    for (var t of triples){
         var procStatusDiv = document.createElement('div');
         procStatusDiv.className = "processor-status";
-        var status = pkg[proc];
+        var status = pkg[t];
         var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
         procStatusDiv.classList.add(simplifiedStatus);
 
@@ -52,7 +52,7 @@ var renderCompability = function (pkg){
         procStatusDiv.appendChild(procStatusIconDiv);
 
         var procStatusName = document.createElement('span');
-        procStatusName.innerHTML = proc;
+        procStatusName.innerHTML = t;
         procStatusDiv.appendChild(procStatusName);
         
         compatRowDiv.appendChild(procStatusDiv);
