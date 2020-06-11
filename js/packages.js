@@ -153,6 +153,7 @@ function searchPackages() {
             newPackagesList.push(rslt.item)
         }
         currentPackages = newPackagesList;
+        sortPackages();
         renderPackages(currentPackages);
     }
 }
@@ -168,11 +169,12 @@ function sortPackages(){
     
     switch(val){
         case "Best Match":
-            searchPackages(currentPackages);
+            renderPackages(currentPackages);
             break;
         case "Alphabetical":
-            currentPackages.sort(sortAlphabetical);
-            renderPackages(currentPackages);
+            let sortedPackages = currentPackages.slice(); // make a deep copy of the array
+            sortedPackages.sort(sortAlphabetical);
+            renderPackages(sortedPackages);
             break;
     }
 }
