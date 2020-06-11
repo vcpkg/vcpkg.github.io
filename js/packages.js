@@ -136,9 +136,9 @@ function searchPackages() {
     else {
         var options = {
           findAllMatches: true,
-          threshold: 0.2,
+          threshold: 0.1,
           location: 0,
-          distance: 50,
+          distance: 100,
           maxPatternLength: 50,
           minMatchCharLength: 1,
           keys: [
@@ -154,7 +154,6 @@ function searchPackages() {
         }
         currentPackages = newPackagesList;
         sortPackages();
-        renderPackages(currentPackages);
     }
 }
 
