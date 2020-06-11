@@ -25,6 +25,40 @@ $.getJSON('./output.json',  function(responseObject){
     searchPackages();
 });
 
+
+var renderCompability = function (pkg){
+    const processors = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
+    var compatRowDiv = document.createElement('div')
+    compatRowDiv.className = "package-compatibility"
+
+    // Compatibility text
+    var compatDiv = document.createElement('span')
+    compatDiv.className = "package-compatibility-text"
+    compatDiv.innerHTML = "Compatibility: "
+    compatRowDiv.appendChild(compatDiv)
+
+    // Display processor statuses
+    for (var proc of processors){
+        var procStatusDiv = document.createElement('div');
+        procStatusDiv.className = "processor-status";
+        var status = pkg[proc];
+        var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
+        procStatusDiv.classList.add(simplifiedStatus);
+
+        var procStatusIconDiv = document.createElement('img');
+        procStatusIconDiv.className = "processor-status-icon";
+        procStatusIconDiv.setAttribute("alt", simplifiedStatus)
+        procStatusIconDiv.setAttribute("src", "assets/" + simplifiedStatus + ".png")
+        procStatusDiv.appendChild(procStatusIconDiv);
+
+        var procStatusName = document.createElement('span');
+        procStatusName.innerHTML = proc;
+        procStatusDiv.appendChild(procStatusName);
+        
+        compatRowDiv.appendChild(procStatusDiv);
+    }
+    return compatRowDiv;
+}
 var renderPackages = function(packagesList) {
     clearPackages();
     // Parent div to hold all the package cards
@@ -40,18 +74,18 @@ var renderPackages = function(packagesList) {
             nameDiv.className = "package-name"
             nameDiv.innerHTML = package.Name
             packageDiv.appendChild(nameDiv)
-
-            // Package Version
-            var versionDiv = document.createElement('div')
-            versionDiv.className = "package-version"
-            versionDiv.innerHTML = "Version: "+ package.Version
-            packageDiv.appendChild(versionDiv)
-
+            
             // Package Description (HTML version)
             var descriptionDiv = document.createElement('div')
             descriptionDiv.className = "package-description"
             descriptionDiv.innerHTML = package.Description
             packageDiv.appendChild(descriptionDiv)
+
+            // Package Processor Compatibilities
+            packageDiv.appendChild(renderCompability(package))
+
+            cardFooterDiv = document.createElement('div')
+            cardFooterDiv.className = "package-card-footer"
 
             // Website link (with clause)
             var homepageURL = package.Homepage;
@@ -61,8 +95,16 @@ var renderPackages = function(packagesList) {
                 websiteLink.href = homepageURL
                 websiteLink.innerHTML = "Website"
                 websiteLink.target = "_blank"
-                packageDiv.appendChild(websiteLink)
+                cardFooterDiv.appendChild(websiteLink)
             }
+
+            // Package Version
+            var versionDiv = document.createElement('div')
+            versionDiv.className = "package-version"
+            versionDiv.innerHTML = "Version: "+ package.Version
+            cardFooterDiv.appendChild(versionDiv)
+
+            packageDiv.appendChild(cardFooterDiv)
 
             // Add the package card to the page
             mainDiv.appendChild(packageDiv)
