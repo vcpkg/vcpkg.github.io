@@ -40,7 +40,7 @@ var renderCompability = function (pkg){
     // Display processor statuses
     let statusDiv = document.createElement('div');
     statusDiv.className = "processor-status";
-
+    
     var iconDiv = document.createElement('img');
     iconDiv.className = "processor-status-icon";
 
@@ -51,15 +51,17 @@ var renderCompability = function (pkg){
         var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
         procStatusDiv.classList.add(simplifiedStatus);
 
+        procStatusFrag = document.createDocumentFragment();
         procStatusIconDiv = iconDiv.cloneNode(true);
         procStatusIconDiv.setAttribute("alt", simplifiedStatus)
         procStatusIconDiv.setAttribute("src", "assets/" + simplifiedStatus + ".png")
-        procStatusDiv.appendChild(procStatusIconDiv);
+        procStatusFrag.appendChild(procStatusIconDiv)
 
         var procStatusName = document.createElement('span');
         procStatusName.textContent = t;
-        procStatusDiv.appendChild(procStatusName);
-        
+        procStatusFrag.appendChild(procStatusName);
+
+        procStatusDiv.appendChild(procStatusFrag);
         compatRowFrag.appendChild(procStatusDiv);
     }
     
@@ -94,7 +96,7 @@ var renderPackages = function(packagesList) {
         var parentVersionDiv = document.createElement('div')
         parentVersionDiv.className = "package-version"
 
-        for (var package of packagesList) {
+        function renderCard (package){
             // Div for each package
             var packageDiv = parentPackageDiv.cloneNode(true);
             let cardFrag = document.createDocumentFragment();
@@ -131,9 +133,13 @@ var renderPackages = function(packagesList) {
 
             // Add the package card to the page
             packageDiv.appendChild(cardFrag)
-            mainPackageFrag.appendChild(packageDiv)
+            mainDiv.appendChild(packageDiv)
         }
-        mainDiv.appendChild(mainPackageFrag);
+
+        for (var package of packagesList) {
+            setTimeout(renderCard.bind(this, package),0);
+        }
+        //mainDiv.appendChild(mainPackageFrag);
     } else {
         var noResultDiv = document.createElement('div')
         noResultDiv.className = 'package-card'
