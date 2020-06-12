@@ -34,89 +34,110 @@ var renderCompability = function (pkg){
     // Compatibility text
     var compatDiv = document.createElement('span')
     compatDiv.className = "package-compatibility-text"
-    compatDiv.innerHTML = "Compatibility: "
+    compatDiv.textContent = "Compatibility: "
     compatRowDiv.appendChild(compatDiv)
 
     // Display processor statuses
+    let statusDiv = document.createElement('div');
+    statusDiv.className = "processor-status";
+
+    var iconDiv = document.createElement('img');
+    iconDiv.className = "processor-status-icon";
+
+    let compatRowFrag = document.createDocumentFragment();
     for (var t of triples){
-        var procStatusDiv = document.createElement('div');
-        procStatusDiv.className = "processor-status";
+        var procStatusDiv =statusDiv.cloneNode(true);
         var status = pkg[t];
         var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
         procStatusDiv.classList.add(simplifiedStatus);
 
-        var procStatusIconDiv = document.createElement('img');
-        procStatusIconDiv.className = "processor-status-icon";
+        procStatusIconDiv = iconDiv.cloneNode(true);
         procStatusIconDiv.setAttribute("alt", simplifiedStatus)
         procStatusIconDiv.setAttribute("src", "assets/" + simplifiedStatus + ".png")
         procStatusDiv.appendChild(procStatusIconDiv);
 
         var procStatusName = document.createElement('span');
-        procStatusName.innerHTML = t;
+        procStatusName.textContent = t;
         procStatusDiv.appendChild(procStatusName);
         
-        compatRowDiv.appendChild(procStatusDiv);
+        compatRowFrag.appendChild(procStatusDiv);
     }
+    
+    compatRowDiv.appendChild(compatRowFrag);
     return compatRowDiv;
 }
 var renderPackages = function(packagesList) {
     clearPackages();
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
+    
     if (packagesList.length > 0) {
+        let mainPackageFrag = document.createDocumentFragment();
+
+        var parentPackageDiv = document.createElement('div')
+        parentPackageDiv.className = "package-card"
+
+        var parentNameDiv = document.createElement('div')
+        parentNameDiv.className = "package-name"
+
+        var parentdescriptionDiv = document.createElement('div')
+        parentdescriptionDiv.className = "package-description"
+
+        var parentCardFooterDiv = document.createElement('div')
+        parentCardFooterDiv.className = "package-card-footer"
+
+        var parentWebsiteLink = document.createElement('a')
+        parentWebsiteLink.className = "package-website"
+        parentWebsiteLink.textContent = "Website"
+        parentWebsiteLink.target = "_blank"
+
+        var parentVersionDiv = document.createElement('div')
+        parentVersionDiv.className = "package-version"
+
         for (var package of packagesList) {
             // Div for each package
-            var packageDiv = document.createElement('div')
-            packageDiv.className = "package-card"
+            var packageDiv = parentPackageDiv.cloneNode(true);
+            let cardFrag = document.createDocumentFragment();
 
             // Package Name
-            var nameDiv = document.createElement('div')
-            nameDiv.className = "package-name"
-            nameDiv.innerHTML = package.Name
-            packageDiv.appendChild(nameDiv)
+            var nameDiv = parentNameDiv.cloneNode(true);
+            nameDiv.textContent = package.Name
+            cardFrag.appendChild(nameDiv)
             
             // Package Description (HTML version)
-            var descriptionDiv = document.createElement('div')
-            descriptionDiv.className = "package-description"
-            descriptionDiv.innerHTML = package.Description
-            packageDiv.appendChild(descriptionDiv)
+            var descriptionDiv = parentdescriptionDiv.cloneNode(true);
+            descriptionDiv.textContent = package.Description
+            cardFrag.appendChild(descriptionDiv)
 
             // Package Processor Compatibilities
-            packageDiv.appendChild(renderCompability(package))
+            cardFrag.appendChild(renderCompability(package))
 
-            cardFooterDiv = document.createElement('div')
-            cardFooterDiv.className = "package-card-footer"
+            var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
 
             // Website link (with clause)
             var homepageURL = package.Homepage;
             if (homepageURL) {
-                var websiteLink = document.createElement('a')
-                websiteLink.className = "package-website"
+                var websiteLink = parentWebsiteLink.cloneNode(true)
                 websiteLink.href = homepageURL
-                websiteLink.innerHTML = "Website"
-                websiteLink.target = "_blank"
                 cardFooterDiv.appendChild(websiteLink)
             }
 
             // Package Version
-            var versionDiv = document.createElement('div')
-            versionDiv.className = "package-version"
-            versionDiv.innerHTML = "Version: "+ package.Version
+            var versionDiv = parentVersionDiv.cloneNode(true)
+            versionDiv.textContent = "Version: "+ package.Version
             cardFooterDiv.appendChild(versionDiv)
 
-            packageDiv.appendChild(cardFooterDiv)
+            cardFrag.appendChild(cardFooterDiv)
 
             // Add the package card to the page
-            mainDiv.appendChild(packageDiv)
+            packageDiv.appendChild(cardFrag)
+            mainPackageFrag.appendChild(packageDiv)
         }
+        mainDiv.appendChild(mainPackageFrag);
     } else {
         var noResultDiv = document.createElement('div')
         noResultDiv.className = 'package-card'
-
-        var noResultPara = document.createElement('p')
-        noResultPara.innerHTML = "No results for " + '<b>' + query + '</b>'
-        noResultDiv.appendChild(noResultPara)
-
+        noResultDiv.innerHTML = "No results for " + '<b>' + query + '</b>'
         mainDiv.appendChild(noResultDiv)
     }
 }
