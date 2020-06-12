@@ -1,4 +1,4 @@
-let allPackages, currentPackages;
+let allPackages, currentPackages, cancellationToken;
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
@@ -69,6 +69,7 @@ var renderCompability = function (pkg){
     return compatRowDiv;
 }
 var renderPackages = function(packagesList) {
+    cancellationToken = new Object();
     clearPackages();
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
@@ -96,7 +97,8 @@ var renderPackages = function(packagesList) {
         var parentVersionDiv = document.createElement('div')
         parentVersionDiv.className = "package-version"
 
-        function renderCard (package){
+        function renderCard (package, oldCancellationToken){
+            if (oldCancellationToken !== cancellationToken) return;
             // Div for each package
             var packageDiv = parentPackageDiv.cloneNode(true);
             let cardFrag = document.createDocumentFragment();
@@ -137,7 +139,7 @@ var renderPackages = function(packagesList) {
         }
 
         for (var package of packagesList) {
-            setTimeout(renderCard.bind(this, package),0);
+            setTimeout(renderCard.bind(this, package, cancellationToken),0);
         }
         //mainDiv.appendChild(mainPackageFrag);
     } else {
