@@ -52,8 +52,9 @@ var renderCompability = function (pkg, packageDiv){
         var status = pkg[t];
         var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
         procStatusDiv.classList.add(simplifiedStatus);
-        if (simplifiedStatus !== "fail" && compatFilter.includes(t)){
+        if (simplifiedStatus === "fail" && compatFilter.includes(t)){
              packageDiv.classList.add("hide")
+             console.log("hide")
         }
         procStatusFrag = document.createDocumentFragment();
         procStatusIconDiv = iconDiv.cloneNode(true);
@@ -191,7 +192,7 @@ function searchAndRenderPackages() {
     else {
         searchPackages(query);
     }
-    sortPackages();
+    renderPackages(currentPackages);
 }
 
 const sortAlphabetical = function(a, b) {
@@ -205,16 +206,16 @@ function sortPackages(){
     
     switch(val){
         case "Best Match":
-            renderPackages(currentPackages);
+            searchAndRenderPackages();
             break;
         case "Alphabetical":
-            let sortedPackages = currentPackages.slice(); // make a deep copy of the array
-            sortedPackages.sort(sortAlphabetical);
-            renderPackages(sortedPackages);
+            currentPackages.sort(sortAlphabetical);
+            renderPackages(currentPackages);
             break;
     }
 }
 
 function filterCompat(){
     compatFilter = [...document.querySelectorAll(".compat-card input[type='checkbox']:checked")].map(e=> e.value);
+    renderPackages(currentPackages);
 }
