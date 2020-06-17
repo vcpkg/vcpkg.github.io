@@ -77,7 +77,7 @@ base = "https://api.github.com/repos"
 data["source"] = jsonlist
 
 
-def get_stars():
+def get_stars(data):
     count = 1
     for port in data["source"]:
         print("Loading " + str(count) + " out of " + str(data["size"]))
@@ -90,7 +90,7 @@ def get_stars():
                 stars = github_json["stargazers_count"]
                 port["stars"] = stars
 
-get_stars()
+get_stars(data)
 out = json.dumps(data, sort_keys=True, indent=4)
 output = open("output.json", mode = 'w')
 output.write(out)
