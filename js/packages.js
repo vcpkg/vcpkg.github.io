@@ -1,4 +1,6 @@
 let allPackages, currentPackages, cancellationToken;
+const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
+let compatFilter = [];
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
@@ -22,12 +24,11 @@ $.getJSON('./output.json',  function(responseObject){
     allPackages = responseObject.source;
     currentPackages = allPackages;
     document.getElementById("pkg-search").value = query;
-    searchPackages();
+    searchAndRenderPackages();
 });
 
 
-var renderCompability = function (pkg){
-    const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
+var renderCompability = function (pkg, packageDiv){
     var compatRowDiv = document.createElement('div')
     compatRowDiv.className = "package-compatibility"
 
@@ -45,12 +46,15 @@ var renderCompability = function (pkg){
     iconDiv.className = "processor-status-icon";
 
     let compatRowFrag = document.createDocumentFragment();
+    let passUnknowns = [];
     for (var t of triples){
         var procStatusDiv =statusDiv.cloneNode(true);
         var status = pkg[t];
         var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
         procStatusDiv.classList.add(simplifiedStatus);
-
+        if (simplifiedStatus !== "fail" && compatFilter.includes(t)){
+             packageDiv.classList.add("hide")
+        }
         procStatusFrag = document.createDocumentFragment();
         procStatusIconDiv = iconDiv.cloneNode(true);
         procStatusIconDiv.setAttribute("alt", simplifiedStatus)
@@ -64,10 +68,10 @@ var renderCompability = function (pkg){
         procStatusDiv.appendChild(procStatusFrag);
         compatRowFrag.appendChild(procStatusDiv);
     }
-    
     compatRowDiv.appendChild(compatRowFrag);
     return compatRowDiv;
 }
+
 var renderPackages = function(packagesList) {
     cancellationToken = new Object();
     clearPackages();
@@ -78,7 +82,7 @@ var renderPackages = function(packagesList) {
         let mainPackageFrag = document.createDocumentFragment();
 
         var parentPackageDiv = document.createElement('div')
-        parentPackageDiv.className = "package-card"
+        parentPackageDiv.className = "card package-card"
 
         var parentNameDiv = document.createElement('div')
         parentNameDiv.className = "package-name"
@@ -114,7 +118,7 @@ var renderPackages = function(packagesList) {
             cardFrag.appendChild(descriptionDiv)
 
             // Package Processor Compatibilities
-            cardFrag.appendChild(renderCompability(package))
+            cardFrag.appendChild(renderCompability(package, packageDiv))
 
             var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
 
@@ -144,7 +148,7 @@ var renderPackages = function(packagesList) {
         //mainDiv.appendChild(mainPackageFrag);
     } else {
         var noResultDiv = document.createElement('div')
-        noResultDiv.className = 'package-card'
+        noResultDiv.className = 'card package-card'
         noResultDiv.innerHTML = "No results for " + '<b>' + query + '</b>'
         mainDiv.appendChild(noResultDiv)
     }
@@ -157,33 +161,37 @@ function clearPackages() {
     }
 }
 
-function searchPackages() {
-    query = document.getElementsByClassName("search-box")[0].value.trim();
+function searchPackages(query){
+    var options = {
+        findAllMatches: true,
+        threshold: 0.1,
+        location: 0,
+        distance: 100,
+        maxPatternLength: 50,
+        minMatchCharLength: 1,
+        keys: [
+          "Name",
+          "Description"
+        ]
+      }
+      var fuse = new Fuse(allPackages, options);
+      var searchResult = fuse.search(query);
+      var newPackagesList = [];
+      for (var rslt of searchResult) {
+          newPackagesList.push(rslt.item)
+      }
+      currentPackages = newPackagesList;
+}
+
+function searchAndRenderPackages() {
+    query = document.getElementById("pkg-search").value.trim();
     if (query === '') {
-        renderPackages(allPackages);
+        currentPackages = allPackages;
     } 
     else {
-        var options = {
-          findAllMatches: true,
-          threshold: 0.1,
-          location: 0,
-          distance: 100,
-          maxPatternLength: 50,
-          minMatchCharLength: 1,
-          keys: [
-            "Name",
-            "Description"
-          ]
-        }
-        var fuse = new Fuse(allPackages, options);
-        var searchResult = fuse.search(query);
-        var newPackagesList = [];
-        for (var rslt of searchResult) {
-            newPackagesList.push(rslt.item)
-        }
-        currentPackages = newPackagesList;
-        sortPackages();
+        searchPackages(query);
     }
+    sortPackages();
 }
 
 const sortAlphabetical = function(a, b) {
@@ -205,4 +213,8 @@ function sortPackages(){
             renderPackages(sortedPackages);
             break;
     }
+}
+
+function filterCompat(){
+    compatFilter = [...document.querySelectorAll(".compat-card input[type='checkbox']:checked")].map(e=> e.value);
 }

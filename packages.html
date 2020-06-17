@@ -25,17 +25,50 @@
             <h1> Browse Packages </h1>
         </div>
         <div class="search-bar">
-            <input class="search-box" id="pkg-search" type="search" name="search" placeholder="Search Packages" autocomplete="off" oninput=searchPackages() />
+            <input class="search-box" id="pkg-search" type="search" name="search" placeholder="Search Packages" autocomplete="off" oninput=searchAndRenderPackages() />
             <span class="search-icon"></span>
         </div>
-        <div class="sort-bar">
-            <select class="dropdown" id="sortBtn" onChange="sortPackages()">
-                <option value="Best Match"selected>Best Match</option>
-                <option value="Alphabetical">Alphabetical</option>
-            </select>
-            <span class="sort-text">Sort By:</span>
+        <div class="package-body">
+            <div class="side-bar">
+                <div class="filter-sort-text">Compatibility</div>
+                <div class="card compat-card">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="arm-uwp" onchange="filterCompat();"/> arm-uwp</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="arm64-windows" onchange="filterCompat();"/> arm64-windows</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="x64-linux" onchange="filterCompat();"/> x64-linux</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="x64-osx" onchange="filterCompat();"/> x64-osx</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="x64-uwp" onchange="filterCompat();"/> x64-uwp</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="x64-windows" onchange="filterCompat();"/> x64-windows</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="x64-windows-static" onchange="filterCompat();"/> x64-windows-static</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="x86-windows" onchange="filterCompat();"/> x86-windows</label>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="sort-bar">
+                    <select class="card dropdown" id="sortBtn" onChange="sortPackages()">
+                        <option value="Best Match"selected>Best Match</option>
+                        <option value="Alphabetical">Alphabetical</option>
+                    </select>
+                    <span class="sort-text filter-sort-text">Sort By:</span>
+                </div>
+                <div class="package-results"> </div>
+            </div>
         </div>
-        <div class="package-results"> </div>
     </body> 
     <div id=loadFooter></div>
 </html>
