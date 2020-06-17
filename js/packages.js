@@ -46,15 +46,15 @@ var renderCompability = function (pkg, packageDiv){
     iconDiv.className = "processor-status-icon";
 
     let compatRowFrag = document.createDocumentFragment();
-    let passUnknowns = [];
     for (var t of triples){
         var procStatusDiv =statusDiv.cloneNode(true);
         var status = pkg[t];
         var simplifiedStatus = (status === "pass" || status === "fail") ? status : "unknown";
         procStatusDiv.classList.add(simplifiedStatus);
+
+        // hide card if it doesn't pass the compatibility filter
         if (simplifiedStatus === "fail" && compatFilter.includes(t)){
              packageDiv.classList.add("hide")
-             console.log("hide")
         }
         procStatusFrag = document.createDocumentFragment();
         procStatusIconDiv = iconDiv.cloneNode(true);
@@ -146,7 +146,7 @@ var renderPackages = function(packagesList) {
         for (var package of packagesList) {
             setTimeout(renderCard.bind(this, package, cancellationToken),0);
         }
-        //mainDiv.appendChild(mainPackageFrag);
+
     } else {
         var noResultDiv = document.createElement('div')
         noResultDiv.className = 'card package-card'
@@ -203,7 +203,6 @@ const sortAlphabetical = function(a, b) {
 
 function sortPackages(){
     let val = document.getElementById("sortBtn").value
-    
     switch(val){
         case "Best Match":
             searchAndRenderPackages();
