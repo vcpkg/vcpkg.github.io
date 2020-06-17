@@ -91,6 +91,15 @@ var renderPackages = function() {
         var parentdescriptionDiv = document.createElement('div')
         parentdescriptionDiv.className = "package-description"
 
+        var parentShortDescSpan = document.createElement('span')
+        parentShortDescSpan.className = "package-description-short"
+
+        var parentMoreDescSpan = document.createElement('span')
+        parentMoreDescSpan.className = "package-description-more"
+
+        var parentExtraDescSpan = document.createElement('span')
+        parentExtraDescSpan.className = "package-description-extra"
+
         var parentCardFooterDiv = document.createElement('div')
         parentCardFooterDiv.className = "package-card-footer"
 
@@ -114,10 +123,25 @@ var renderPackages = function() {
             cardFrag.appendChild(nameDiv)
             
             // Package Description (HTML version)
-            var descriptionDiv = parentdescriptionDiv.cloneNode(true);
-            descriptionDiv.textContent = package.Description
-            cardFrag.appendChild(descriptionDiv)
+            let fullDesc = package.Description;
+            let cutoff = 140; //character cut off
+            if (fullDesc){
+                var descriptionDiv = parentdescriptionDiv.cloneNode(true);
+                var shortDescSpan = parentShortDescSpan.cloneNode(true);
+                shortDescSpan.textContent = fullDesc.substring(0,cutoff);
+                descriptionDiv.appendChild(shortDescSpan)
 
+                let extraText = fullDesc.substring(cutoff);
+                if (extraText){
+                    var moreDescSpan = parentMoreDescSpan.cloneNode(true);
+                    moreDescSpan.textContent = "More...";
+
+                    var extarDescSpan = parentExtraDescSpan.cloneNode(true);
+                    extarDescSpan.textContent = fullDesc.substring(cutoff);
+                    descriptionDiv.appendChild(moreDescSpan).appendChild(extarDescSpan);
+                }
+                cardFrag.appendChild(descriptionDiv)
+            }
             // Package Processor Compatibilities
             cardFrag.appendChild(renderCompability(package, packageDiv))
 
