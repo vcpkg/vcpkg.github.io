@@ -201,6 +201,18 @@ const sortAlphabetical = function(a, b) {
     return pkgA >= pkgB ? 1 : -1
 }
 
+const sortStars = function(a,b){
+    if (a.stars === null){
+        return -1
+    }
+    else if (b.stars === null){
+        return 1
+    }
+    else{
+        return Number(a.stars) >= Number(b.stars) ? 1 : -1
+    }
+}
+
 function sortPackages(){
     let val = document.getElementById("sortBtn").value
     switch(val){
@@ -209,6 +221,10 @@ function sortPackages(){
             break;
         case "Alphabetical":
             currentPackages.sort(sortAlphabetical);
+            renderPackages();
+            break;
+        case "GitHub Stars":
+            currentPackages.sort(sortStars);
             renderPackages();
             break;
     }
