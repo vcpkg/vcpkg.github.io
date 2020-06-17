@@ -73,13 +73,13 @@ var renderCompability = function (pkg, packageDiv){
     return compatRowDiv;
 }
 
-var renderPackages = function(packagesList) {
+var renderPackages = function() {
     cancellationToken = new Object();
     clearPackages();
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
     
-    if (packagesList.length > 0) {
+    if (currentPackages.length > 0) {
         let mainPackageFrag = document.createDocumentFragment();
 
         var parentPackageDiv = document.createElement('div')
@@ -143,7 +143,7 @@ var renderPackages = function(packagesList) {
             mainDiv.appendChild(packageDiv)
         }
 
-        for (var package of packagesList) {
+        for (var package of currentPackages) {
             setTimeout(renderCard.bind(this, package, cancellationToken),0);
         }
 
@@ -192,7 +192,7 @@ function searchAndRenderPackages() {
     else {
         searchPackages(query);
     }
-    renderPackages(currentPackages);
+    renderPackages();
 }
 
 const sortAlphabetical = function(a, b) {
@@ -209,12 +209,12 @@ function sortPackages(){
             break;
         case "Alphabetical":
             currentPackages.sort(sortAlphabetical);
-            renderPackages(currentPackages);
+            renderPackages();
             break;
     }
 }
 
 function filterCompat(){
     compatFilter = [...document.querySelectorAll(".compat-card input[type='checkbox']:checked")].map(e=> e.value);
-    renderPackages(currentPackages);
+    renderPackages();
 }
