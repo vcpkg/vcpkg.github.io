@@ -164,7 +164,7 @@ var renderPackages = function() {
 
             // Package Version
             var versionDiv = parentVersionDiv.cloneNode(true)
-            versionDiv.textContent = "Version: "+ package.Version
+            versionDiv.textContent = package.stars + " Version: "+ package.Version
             cardFooterDiv.appendChild(versionDiv)
 
             cardFrag.appendChild(cardFooterDiv)
@@ -223,6 +223,9 @@ function searchAndRenderPackages() {
     else {
         searchPackages(query);
     }
+    if (document.getElementById("sortBtn").value !== "Best Match"){
+        sortPackages();
+    }
     renderPackages();
 }
 
@@ -230,6 +233,10 @@ const sortAlphabetical = function(a, b) {
     var pkgA = a.Name.toUpperCase();
     var pkgB = b.Name.toUpperCase();
     return pkgA >= pkgB ? 1 : -1
+}
+
+const sortStars = function(a,b){
+    return (b.stars || 0) - (a.stars || 0);
 }
 
 function sortPackages(){
@@ -240,6 +247,10 @@ function sortPackages(){
             break;
         case "Alphabetical":
             currentPackages.sort(sortAlphabetical);
+            renderPackages();
+            break;
+        case "GitHub Stars":
+            currentPackages.sort(sortStars);
             renderPackages();
             break;
     }
