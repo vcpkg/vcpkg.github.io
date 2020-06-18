@@ -83,7 +83,8 @@ var renderPackages = function() {
     clearPackages();
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
-    
+    var totalPackags = document.getElementsByClassName("total-packages")[0]
+    totalPackags.textContent = "Total: " + currentPackages.length + " Packages"
     if (currentPackages.length > 0) {
         let mainPackageFrag = document.createDocumentFragment();
 
@@ -109,8 +110,8 @@ var renderPackages = function() {
         parentCardFooterDiv.className = "package-card-footer"
 
         var parentWebsiteLink = document.createElement('a')
-        parentWebsiteLink.className = "package-website"
-        parentWebsiteLink.textContent = "Website "
+        parentWebsiteLink.className = "package-website align-bottom"
+        parentWebsiteLink.textContent = "Website"
         parentWebsiteLink.target = "_blank"
 
         var parentFullBtnSpan = document.createElement('span')
