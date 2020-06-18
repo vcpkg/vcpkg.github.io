@@ -74,7 +74,6 @@ var renderCompability = function (pkg, packageDiv){
 }
 
 function expandText (moreDescSpan, extraDescSpan){
-    console.log("clck", extraDescSpan) // TODO unhide this and hide the more ... text
     extraDescSpan.classList.remove("hide")
     moreDescSpan.className = "hide"
 }
