@@ -133,7 +133,7 @@ var renderPackages = function() {
 
             // Package Version
             var versionDiv = parentVersionDiv.cloneNode(true)
-            versionDiv.textContent = "Version: "+ package.Version
+            versionDiv.textContent = package.stars + " Version: "+ package.Version
             cardFooterDiv.appendChild(versionDiv)
 
             cardFrag.appendChild(cardFooterDiv)
@@ -192,6 +192,9 @@ function searchAndRenderPackages() {
     else {
         searchPackages(query);
     }
+    if (document.getElementById("sortBtn").value !== "Best Match"){
+        sortPackages();
+    }
     renderPackages();
 }
 
@@ -202,15 +205,7 @@ const sortAlphabetical = function(a, b) {
 }
 
 const sortStars = function(a,b){
-    if (a.stars === null){
-        return -1
-    }
-    else if (b.stars === null){
-        return 1
-    }
-    else{
-        return Number(a.stars) >= Number(b.stars) ? 1 : -1
-    }
+    return (b.stars || 0) - (a.stars || 0);
 }
 
 function sortPackages(){
