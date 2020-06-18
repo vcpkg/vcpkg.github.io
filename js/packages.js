@@ -73,6 +73,12 @@ var renderCompability = function (pkg, packageDiv){
     return compatRowDiv;
 }
 
+function expandText (moreDescSpan, extraDescSpan){
+    console.log("clck", extraDescSpan) // TODO unhide this and hide the more ... text
+    extraDescSpan.classList.remove("hide")
+    moreDescSpan.className = "hide"
+}
+
 var renderPackages = function() {
     cancellationToken = new Object();
     clearPackages();
@@ -98,7 +104,7 @@ var renderPackages = function() {
         parentMoreDescSpan.className = "package-description-more"
 
         var parentExtraDescSpan = document.createElement('span')
-        parentExtraDescSpan.className = "package-description-extra"
+        parentExtraDescSpan.className = "hide"
 
         var parentCardFooterDiv = document.createElement('div')
         parentCardFooterDiv.className = "package-card-footer"
@@ -124,7 +130,7 @@ var renderPackages = function() {
             
             // Package Description (HTML version)
             let fullDesc = package.Description;
-            let cutoff = 140; //character cut off
+            let cutoff = 200; //character cut off
             if (fullDesc){
                 var descriptionDiv = parentdescriptionDiv.cloneNode(true);
                 var shortDescSpan = parentShortDescSpan.cloneNode(true);
@@ -133,12 +139,14 @@ var renderPackages = function() {
 
                 let extraText = fullDesc.substring(cutoff);
                 if (extraText){
-                    var moreDescSpan = parentMoreDescSpan.cloneNode(true);
-                    moreDescSpan.textContent = "More...";
+                    var extraDescSpan = parentExtraDescSpan.cloneNode(true);
+                    extraDescSpan.textContent = fullDesc.substring(cutoff);
 
-                    var extarDescSpan = parentExtraDescSpan.cloneNode(true);
-                    extarDescSpan.textContent = fullDesc.substring(cutoff);
-                    descriptionDiv.appendChild(moreDescSpan).appendChild(extarDescSpan);
+                    var moreDescSpan = parentMoreDescSpan.cloneNode(true);
+                    moreDescSpan.addEventListener("click",expandText.bind(this, moreDescSpan, extraDescSpan))
+                    moreDescSpan.textContent = " More...";
+                    descriptionDiv.appendChild(moreDescSpan);
+                    descriptionDiv.appendChild(extraDescSpan);
                 }
                 cardFrag.appendChild(descriptionDiv)
             }
