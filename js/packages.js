@@ -110,9 +110,28 @@ var renderPackages = function() {
 
         var parentWebsiteLink = document.createElement('a')
         parentWebsiteLink.className = "package-website"
-        parentWebsiteLink.textContent = "Website"
+        parentWebsiteLink.textContent = "Website "
         parentWebsiteLink.target = "_blank"
 
+        var parentFullBtnSpan = document.createElement('span')
+        parentFullBtnSpan.className = "github-btn"
+
+        var parentGitHub = document.createElement('a')
+        parentGitHub.className = "gh-btn"
+        parentGitHub.target = "_blank"
+
+        var parentBtnIcoSpan = document.createElement('span')
+        parentBtnIcoSpan.className = "gh-ico"
+
+        var parentBtnTxtSpan = document.createElement('span')
+        parentBtnTxtSpan.className = "gh-text"
+        parentBtnTxtSpan.textContent = "Star"
+
+        var parentGitHubCount = document.createElement('a')
+        parentGitHubCount.className = "gh-count"
+        parentGitHubCount.target = "_blank"
+        parentGitHubCount.style.display = 'block'
+        
         var parentVersionDiv = document.createElement('div')
         parentVersionDiv.className = "package-version"
 
@@ -160,11 +179,28 @@ var renderPackages = function() {
                 var websiteLink = parentWebsiteLink.cloneNode(true)
                 websiteLink.href = homepageURL
                 cardFooterDiv.appendChild(websiteLink)
+
+                if (package.stars){
+                    var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
+                        var btnSpan = parentGitHub.cloneNode(true)
+                        btnSpan.href = homepageURL
+                            var btnIcoSpan = parentBtnIcoSpan.cloneNode(true)
+                            var btnTxtSpan = parentBtnTxtSpan.cloneNode(true)
+                            btnSpan.appendChild(btnIcoSpan)
+                            btnSpan.appendChild(btnTxtSpan)
+                        fullBtnSpan.appendChild(btnSpan)
+                        var ghCount = parentGitHubCount.cloneNode(true)
+                        ghCount.textContent = package.stars
+                        ghCount.setAttribute('aria-label', package.stars)
+                        ghCount.href = homepageURL
+                    fullBtnSpan.appendChild(ghCount)
+                    cardFooterDiv.appendChild(fullBtnSpan)
+                }
             }
 
             // Package Version
             var versionDiv = parentVersionDiv.cloneNode(true)
-            versionDiv.textContent = package.stars + " Version: "+ package.Version
+            versionDiv.textContent =" Version: "+ package.Version
             cardFooterDiv.appendChild(versionDiv)
 
             cardFrag.appendChild(cardFooterDiv)
