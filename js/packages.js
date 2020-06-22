@@ -1,4 +1,4 @@
-let allPackages, currentPackages, cancellationToken;
+let allPackages, currentPackages, cancellationToken, hiddenCount;
 const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
 let compatFilter = [];
 
@@ -54,7 +54,9 @@ var renderCompability = function (pkg, packageDiv){
 
         // hide card if it doesn't pass the compatibility filter
         if (simplifiedStatus === "fail" && compatFilter.includes(t)){
-             packageDiv.classList.add("hide")
+            packageDiv.classList.add("hide")
+            hiddenCount+=1;
+            console.log(hiddenCount)
         }
         procStatusFrag = document.createDocumentFragment();
         procStatusIconDiv = iconDiv.cloneNode(true);
@@ -81,6 +83,7 @@ function expandText (moreDescSpan, extraDescSpan){
 var renderPackages = function() {
     cancellationToken = new Object();
     clearPackages();
+    hiddenCount = 0;
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
     
@@ -109,10 +112,29 @@ var renderPackages = function() {
         parentCardFooterDiv.className = "package-card-footer"
 
         var parentWebsiteLink = document.createElement('a')
-        parentWebsiteLink.className = "package-website"
+        parentWebsiteLink.className = "package-website align-bottom"
         parentWebsiteLink.textContent = "Website"
         parentWebsiteLink.target = "_blank"
 
+        var parentFullBtnSpan = document.createElement('span')
+        parentFullBtnSpan.className = "github-btn"
+
+        var parentGitHub = document.createElement('a')
+        parentGitHub.className = "gh-btn"
+        parentGitHub.target = "_blank"
+
+        var parentBtnIcoSpan = document.createElement('span')
+        parentBtnIcoSpan.className = "gh-ico"
+
+        var parentBtnTxtSpan = document.createElement('span')
+        parentBtnTxtSpan.className = "gh-text"
+        parentBtnTxtSpan.textContent = "Star"
+
+        var parentGitHubCount = document.createElement('a')
+        parentGitHubCount.className = "gh-count"
+        parentGitHubCount.target = "_blank"
+        parentGitHubCount.style.display = 'block'
+        
         var parentVersionDiv = document.createElement('div')
         parentVersionDiv.className = "package-version"
 
@@ -152,6 +174,10 @@ var renderPackages = function() {
             // Package Processor Compatibilities
             cardFrag.appendChild(renderCompability(package, packageDiv))
 
+            var totalPackags = document.getElementsByClassName("total-packages")[0]
+            console.log("loading total packages: " +hiddenCount)
+            totalPackags.textContent = "Total: " + (currentPackages.length-hiddenCount) + " Packages"
+
             var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
 
             // Website link (with clause)
@@ -160,11 +186,28 @@ var renderPackages = function() {
                 var websiteLink = parentWebsiteLink.cloneNode(true)
                 websiteLink.href = homepageURL
                 cardFooterDiv.appendChild(websiteLink)
+
+                if (package.stars){
+                    var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
+                        var btnSpan = parentGitHub.cloneNode(true)
+                        btnSpan.href = homepageURL
+                            var btnIcoSpan = parentBtnIcoSpan.cloneNode(true)
+                            var btnTxtSpan = parentBtnTxtSpan.cloneNode(true)
+                            btnSpan.appendChild(btnIcoSpan)
+                            btnSpan.appendChild(btnTxtSpan)
+                        fullBtnSpan.appendChild(btnSpan)
+                        var ghCount = parentGitHubCount.cloneNode(true)
+                        ghCount.textContent = package.stars
+                        ghCount.setAttribute('aria-label', package.stars)
+                        ghCount.href = homepageURL
+                    fullBtnSpan.appendChild(ghCount)
+                    cardFooterDiv.appendChild(fullBtnSpan)
+                }
             }
 
             // Package Version
             var versionDiv = parentVersionDiv.cloneNode(true)
-            versionDiv.textContent = package.stars + " Version: "+ package.Version
+            versionDiv.textContent =" Version: "+ package.Version
             cardFooterDiv.appendChild(versionDiv)
 
             cardFrag.appendChild(cardFooterDiv)
@@ -184,6 +227,7 @@ var renderPackages = function() {
         noResultDiv.innerHTML = "No results for " + '<b>' + query + '</b>'
         mainDiv.appendChild(noResultDiv)
     }
+    
 }
 
 function clearPackages() {

@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="css/index.css" rel="stylesheet">
         <link href="css/packages.css" rel="stylesheet">
+        <link href="css/githubBtn.css" rel="stylesheet">
         <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -17,6 +18,7 @@
                 $("#loadFooter").load("footer.html");
             });
         </script> 
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
         
     </head>
     <div id=loadNavBar></div>
@@ -60,6 +62,7 @@
             </div>
             <div class="main-content">
                 <div class="sort-bar">
+                    <p class='total-packages filter-sort-text'></p>
                     <select class="card dropdown" id="sortBtn" onChange="sortPackages()">
                         <option value="Best Match"selected>Best Match</option>
                         <option value="Alphabetical">Alphabetical</option>
