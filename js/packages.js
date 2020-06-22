@@ -1,4 +1,4 @@
-let allPackages, currentPackages, cancellationToken;
+let allPackages, currentPackages, cancellationToken, hiddenCount;
 const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
 let compatFilter = [];
 
@@ -54,7 +54,9 @@ var renderCompability = function (pkg, packageDiv){
 
         // hide card if it doesn't pass the compatibility filter
         if (simplifiedStatus === "fail" && compatFilter.includes(t)){
-             packageDiv.classList.add("hide")
+            packageDiv.classList.add("hide")
+            hiddenCount+=1;
+            console.log(hiddenCount)
         }
         procStatusFrag = document.createDocumentFragment();
         procStatusIconDiv = iconDiv.cloneNode(true);
@@ -81,10 +83,10 @@ function expandText (moreDescSpan, extraDescSpan){
 var renderPackages = function() {
     cancellationToken = new Object();
     clearPackages();
+    hiddenCount = 0;
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
-    var totalPackags = document.getElementsByClassName("total-packages")[0]
-    totalPackags.textContent = "Total: " + currentPackages.length + " Packages"
+    
     if (currentPackages.length > 0) {
         let mainPackageFrag = document.createDocumentFragment();
 
@@ -172,6 +174,10 @@ var renderPackages = function() {
             // Package Processor Compatibilities
             cardFrag.appendChild(renderCompability(package, packageDiv))
 
+            var totalPackags = document.getElementsByClassName("total-packages")[0]
+            console.log("loading total packages: " +hiddenCount)
+            totalPackags.textContent = "Total: " + (currentPackages.length-hiddenCount) + " Packages"
+
             var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
 
             // Website link (with clause)
@@ -221,6 +227,7 @@ var renderPackages = function() {
         noResultDiv.innerHTML = "No results for " + '<b>' + query + '</b>'
         mainDiv.appendChild(noResultDiv)
     }
+    
 }
 
 function clearPackages() {
