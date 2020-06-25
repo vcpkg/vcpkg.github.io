@@ -21,7 +21,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 let query = getUrlParameter('query') || "";
 
 $.getJSON('./output.json',  function(responseObject){
-    allPackages = responseObject.source;
+    allPackages = responseObject.Source;
     currentPackages = allPackages;
     document.getElementById("pkg-search").value = query;
     searchAndRenderPackages();
@@ -187,7 +187,7 @@ var renderPackages = function() {
                 websiteLink.href = homepageURL
                 cardFooterDiv.appendChild(websiteLink)
 
-                if (package.stars){
+                if (package.Stars){
                     var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
                         var btnSpan = parentGitHub.cloneNode(true)
                         btnSpan.href = homepageURL
@@ -197,8 +197,8 @@ var renderPackages = function() {
                             btnSpan.appendChild(btnTxtSpan)
                         fullBtnSpan.appendChild(btnSpan)
                         var ghCount = parentGitHubCount.cloneNode(true)
-                        ghCount.textContent = package.stars
-                        ghCount.setAttribute('aria-label', package.stars)
+                        ghCount.textContent = package.Stars
+                        ghCount.setAttribute('aria-label', package.Stars)
                         ghCount.href = homepageURL
                     fullBtnSpan.appendChild(ghCount)
                     cardFooterDiv.appendChild(fullBtnSpan)
