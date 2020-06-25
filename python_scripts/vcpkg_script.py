@@ -8,7 +8,7 @@ import requests
 from datetime import datetime
 
 # modidy this to be your own token or environmental variable for github repo api access
-token = ""
+token = "token 24261058f1804a578f6b1dcd9931f71acea42f65"
 
 def getFiles(path):
     files = os.listdir(path)
@@ -51,7 +51,7 @@ def gen_all_files():
         jsonf = {}
         jsonf["Name"] = filename
         for x in f:
-            if x[0] == "#":
+            if x.strip() == "" or x.strip()[0] == "#":
                 continue
             idx = x.find(":") # colon delimiter for properties
             if idx == -1 and prev != "" and x[idx+1]==" ":
@@ -91,6 +91,28 @@ def get_stars(data):
                 port["stars"] = stars
 
 get_stars(data)
+
+def index_of(lst, name):
+    for i in range(len(lst)):
+        if lst[i]["Name"] == name:
+            return i
+    return -1
+
+def get_all_files(data):
+    jsonlist = data["source"]
+    file = open('VCPKGHeadersDatabase.txt')
+    for line in file:
+        idx = line.strip().find(":")
+        package = line.strip()[:idx]
+        file_name = line.strip()[idx+1:]
+        pos = index_of(jsonlist, package)
+        if "files" in jsonlist[pos]:
+            jsonlist[pos]["files"].append(file_name)
+        else:
+            jsonlist[pos]["files"] = [file_name]
+    file.close()
+
+get_all_files(data)
 out = json.dumps(data, sort_keys=True, indent=4)
 output = open("output.json", mode = 'w')
 output.write(out)
