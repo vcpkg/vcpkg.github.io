@@ -101,17 +101,17 @@ def index_of(lst, name):
     return -1
 
 def get_all_files(data):
-    jsonlist = data["Source"]
+    jsonlist = data["source"]
     file = open('VCPKGHeadersDatabase.txt')
     for line in file:
         idx = line.strip().find(":")
         package = line.strip()[:idx]
         file_name = line.strip()[idx+1:]
         pos = index_of(jsonlist, package)
-        if "Files" in jsonlist[pos]:
-            jsonlist[pos]["Files"].append(file_name)
+        if "files" in jsonlist[pos]:
+            jsonlist[pos]["files"].append(file_name)
         else:
-            jsonlist[pos]["Files"] = [file_name]
+            jsonlist[pos]["files"] = [file_name]
     file.close()
 
 get_all_files(data)
