@@ -10,11 +10,9 @@ from datetime import datetime
 # modidy this to be your own token or environmental variable for github repo api access
 token = ""
 
-
 def getFiles(path):
     files = os.listdir(path)
     return list(filter(lambda x: x[0] != '.', files))
-
 
 path = "ports"
 data = {}
@@ -22,7 +20,7 @@ data["Generated On"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 files = getFiles(path)
 data["Size"] = len(files)
 jsonlist = []
-# systems found in ci.baseline.txt
+#systems found in ci.baseline.txt
 systems = ["arm64-windows", "arm-uwp", "x64-linux", "x64-osx", "x64-uwp", "x64-windows", "x64-windows-static", "x86-windows"]
 
 
@@ -101,17 +99,17 @@ def index_of(lst, name):
     return -1
 
 def get_all_files(data):
-    jsonlist = data["source"]
+    jsonlist = data["Source"]
     file = open('VCPKGHeadersDatabase.txt')
     for line in file:
         idx = line.strip().find(":")
         package = line.strip()[:idx]
         file_name = line.strip()[idx+1:]
         pos = index_of(jsonlist, package)
-        if "files" in jsonlist[pos]:
-            jsonlist[pos]["files"].append(file_name)
+        if "Files" in jsonlist[pos]:
+            jsonlist[pos]["Files"].append(file_name)
         else:
-            jsonlist[pos]["files"] = [file_name]
+            jsonlist[pos]["Files"] = [file_name]
     file.close()
 
 get_all_files(data)
