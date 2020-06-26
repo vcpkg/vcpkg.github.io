@@ -92,6 +92,8 @@ var renderPackages = function() {
 
         var parentPackageDiv = document.createElement('div')
         parentPackageDiv.className = "card package-card"
+        parentPackageDiv.setAttribute("data-toggle", "modal")
+        parentPackageDiv.setAttribute("data-target","#pkg-modal")
 
         var parentNameDiv = document.createElement('div')
         parentNameDiv.className = "package-name"
@@ -142,6 +144,8 @@ var renderPackages = function() {
             if (oldCancellationToken !== cancellationToken) return;
             // Div for each package
             var packageDiv = parentPackageDiv.cloneNode(true);
+            packageDiv.addEventListener("click", updateModal.bind(this,package))
+            packageDiv.setAttribute("data-details", package);
             let cardFrag = document.createDocumentFragment();
 
             // Package Name
@@ -303,4 +307,9 @@ function sortPackages(){
 function filterCompat(){
     compatFilter = [...document.querySelectorAll(".compat-card input[type='checkbox']:checked")].map(e=> e.value);
     renderPackages();
+}
+
+function updateModal(pkg){
+    console.log("updateModal")
+    document.getElementById("pkg-modal-title").textContent = pkg.Name
 }
