@@ -257,7 +257,6 @@ function renderCard (package, mainDiv, oldCancellationToken){
     packageDiv.appendChild(cardFrag)
 
     // Parent div to hold all the package cards
-   // var mainDiv = document.getElementsByClassName("package-results")[0];
     mainDiv.appendChild(packageDiv)
 }
 
@@ -367,7 +366,6 @@ function updateModal(pkg){
     modalDetails.replaceWith(newDetails)
 
     // Package files
-    console.log(pkg.Name)
     let fileList = pkg.Files
     if (fileList !== undefined){
         var fileDiv = document.createElement('div')
