@@ -27,6 +27,41 @@ $.getJSON('./output.json',  function(responseObject){
     searchAndRenderPackages();
 });
 
+var renderModalDescription = function (fullDesc){
+    let cutoff = 400; //character cut off
+    var descriptionDiv = parentDescriptionDiv.cloneNode(true);
+    var shortDescSpan = parentShortDescSpan.cloneNode(true);
+    shortDescSpan.textContent = fullDesc.substring(0,cutoff);
+    descriptionDiv.appendChild(shortDescSpan)
+
+    let extraText = fullDesc.substring(cutoff);
+    if (extraText){
+        //modal should have expandable description
+        var extraDescSpan = parentExtraDescSpan.cloneNode(true);
+        extraDescSpan.textContent = fullDesc.substring(cutoff);
+        var moreDescSpan = parentMoreDescSpan.cloneNode(true);
+        moreDescSpan.addEventListener("click",expandText.bind(this, moreDescSpan, extraDescSpan))
+        moreDescSpan.textContent = " More...";
+        descriptionDiv.appendChild(moreDescSpan);
+        descriptionDiv.appendChild(extraDescSpan);
+    }
+    return descriptionDiv;
+}
+
+var renderCardDescription = function (fullDesc){
+    let cutoff = 200; //character cut off
+    var descriptionDiv = parentDescriptionDiv.cloneNode(true);
+    var shortDescSpan = parentShortDescSpan.cloneNode(true);
+    shortDescSpan.textContent = fullDesc.substring(0,cutoff);
+    
+    let extraText = fullDesc.substring(cutoff);
+    if (extraText){ //card cuts off the content
+        shortDescSpan.textContent += "...";
+       
+    }
+    descriptionDiv.appendChild(shortDescSpan)
+    return descriptionDiv;
+}
 
 var renderCompability = function (pkg, packageDiv){
     var compatRowDiv = document.createElement('div')
@@ -53,7 +88,7 @@ var renderCompability = function (pkg, packageDiv){
         procStatusDiv.classList.add(simplifiedStatus);
 
         // hide card if it doesn't pass the compatibility filter
-        if (simplifiedStatus === "fail" && compatFilter.includes(t)){
+        if (packageDiv && simplifiedStatus === "fail" && compatFilter.includes(t)){
             packageDiv.classList.add("hide")
             hiddenCount+=1;
             console.log(hiddenCount)
@@ -80,151 +115,162 @@ function expandText (moreDescSpan, extraDescSpan){
     moreDescSpan.className = "hide"
 }
 
+// elements for a package card
+let mainPackageFrag = document.createDocumentFragment();
+
+var parentPackageDiv = document.createElement('div')
+parentPackageDiv.className = "card package-card"
+parentPackageDiv.setAttribute("data-toggle", "modal")
+parentPackageDiv.setAttribute("data-target","#pkg-modal")
+
+var parentCardHeaderDiv = document.createElement('div')
+parentCardHeaderDiv.className = "package-card-header"
+
+var parentNameDiv = document.createElement('div')
+parentNameDiv.className = "package-name"
+
+var parentDescriptionDiv = document.createElement('div')
+parentDescriptionDiv.className = "package-text"
+
+var parentShortDescSpan = document.createElement('span')
+parentShortDescSpan.className = "package-description-short"
+
+var parentMoreDescSpan = document.createElement('span')
+parentMoreDescSpan.className = "package-description-more"
+
+var parentExtraDescSpan = document.createElement('span')
+parentExtraDescSpan.className = "hide"
+
+var parentCardFooterDiv = document.createElement('div')
+parentCardFooterDiv.className = "package-card-footer"
+
+var parentWebsiteLink = document.createElement('a')
+parentWebsiteLink.className = "package-website align-bottom"
+parentWebsiteLink.textContent = "Website"
+parentWebsiteLink.target = "_blank"
+
+var parentFullBtnSpan = document.createElement('span')
+parentFullBtnSpan.className = "github-btn"
+
+var parentGitHub = document.createElement('a')
+parentGitHub.className = "gh-btn"
+parentGitHub.target = "_blank"
+
+var parentBtnIcoSpan = document.createElement('span')
+parentBtnIcoSpan.className = "gh-ico"
+
+var parentBtnTxtSpan = document.createElement('span')
+parentBtnTxtSpan.className = "gh-text"
+parentBtnTxtSpan.textContent = "Star"
+
+var parentGitHubCount = document.createElement('a')
+parentGitHubCount.className = "gh-count"
+parentGitHubCount.target = "_blank"
+parentGitHubCount.style.display = 'block'
+
+var parentVersionDiv = document.createElement('div')
+parentVersionDiv.className = "package-version"
+
+function renderPackageDetails(package, packageDiv, isCard=true){
+    let detailFrag = document.createDocumentFragment();
+    if (isCard) {
+        var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
+
+        // Package Name
+        var nameDiv = parentNameDiv.cloneNode(true);
+        nameDiv.textContent = package.Name
+        cardHeaderDiv.appendChild(nameDiv)
+
+        // Package Version
+        var versionDiv = parentVersionDiv.cloneNode(true)
+        versionDiv.textContent =" Version: "+ package.Version
+        cardHeaderDiv.appendChild(versionDiv)
+        detailFrag.appendChild(cardHeaderDiv)
+    }
+
+    // Package Description (HTML version)
+    let fullDesc = package.Description;
+    if (fullDesc){
+        var descriptionDiv =  isCard ?  renderCardDescription(fullDesc) : renderModalDescription(fullDesc)
+        detailFrag.appendChild(descriptionDiv)
+    }
+    // Package Processor Compatibilities
+    detailFrag.appendChild(renderCompability(package, packageDiv))
+
+    // Package Version for modal
+    if (!isCard){
+        var versionDiv = parentDescriptionDiv.cloneNode(true)
+        versionDiv.textContent =" Version: "+ package.Version
+        detailFrag.appendChild(versionDiv)
+    }  
+
+    // Website link (with clause)
+    var homepageURL = package.Homepage;
+    if (homepageURL) {
+        var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
+        var websiteLink = parentWebsiteLink.cloneNode(true)
+        websiteLink.href = homepageURL
+        cardFooterDiv.appendChild(websiteLink)
+
+        if (package.Stars){
+            var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
+                var btnSpan = parentGitHub.cloneNode(true)
+                btnSpan.href = homepageURL
+                    var btnIcoSpan = parentBtnIcoSpan.cloneNode(true)
+                    var btnTxtSpan = parentBtnTxtSpan.cloneNode(true)
+                    btnSpan.appendChild(btnIcoSpan)
+                    btnSpan.appendChild(btnTxtSpan)
+                fullBtnSpan.appendChild(btnSpan)
+                var ghCount = parentGitHubCount.cloneNode(true)
+                ghCount.textContent = package.Stars
+                ghCount.setAttribute('aria-label', package.Stars)
+                ghCount.href = homepageURL
+            fullBtnSpan.appendChild(ghCount)
+            cardFooterDiv.appendChild(fullBtnSpan)
+        }
+        detailFrag.appendChild(cardFooterDiv)
+    }
+  
+    return detailFrag
+}
+
+
+function renderCard (package, mainDiv, oldCancellationToken){
+    if (oldCancellationToken !== null && oldCancellationToken !== cancellationToken) return; //don't render old packages
+    
+    console.log("loading packages")
+    var totalPackags = document.getElementsByClassName("total-packages")[0]
+    totalPackags.textContent = "Total: " + (currentPackages.length-hiddenCount) + " Packages"
+
+    // Div for each package
+    var packageDiv = parentPackageDiv.cloneNode(true);
+
+    packageDiv.addEventListener("click", updateModal.bind(this,package))
+    packageDiv.setAttribute("data-details", package);
+       
+    let cardFrag = document.createDocumentFragment();
+
+    //package details (e.g description, compatibility, website)
+    cardFrag.appendChild(renderPackageDetails(package, packageDiv))
+
+    // Add the package card to the page
+    packageDiv.appendChild(cardFrag)
+
+    // Parent div to hold all the package cards
+   // var mainDiv = document.getElementsByClassName("package-results")[0];
+    mainDiv.appendChild(packageDiv)
+}
+
 var renderPackages = function() {
     cancellationToken = new Object();
     clearPackages();
     hiddenCount = 0;
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName("package-results")[0];
-    
     if (currentPackages.length > 0) {
-        let mainPackageFrag = document.createDocumentFragment();
-
-        var parentPackageDiv = document.createElement('div')
-        parentPackageDiv.className = "card package-card"
-        parentPackageDiv.setAttribute("data-toggle", "modal")
-        parentPackageDiv.setAttribute("data-target","#pkg-modal")
-
-        var parentNameDiv = document.createElement('div')
-        parentNameDiv.className = "package-name"
-
-        var parentdescriptionDiv = document.createElement('div')
-        parentdescriptionDiv.className = "package-description"
-
-        var parentShortDescSpan = document.createElement('span')
-        parentShortDescSpan.className = "package-description-short"
-
-        var parentMoreDescSpan = document.createElement('span')
-        parentMoreDescSpan.className = "package-description-more"
-
-        var parentExtraDescSpan = document.createElement('span')
-        parentExtraDescSpan.className = "hide"
-
-        var parentCardFooterDiv = document.createElement('div')
-        parentCardFooterDiv.className = "package-card-footer"
-
-        var parentWebsiteLink = document.createElement('a')
-        parentWebsiteLink.className = "package-website align-bottom"
-        parentWebsiteLink.textContent = "Website"
-        parentWebsiteLink.target = "_blank"
-
-        var parentFullBtnSpan = document.createElement('span')
-        parentFullBtnSpan.className = "github-btn"
-
-        var parentGitHub = document.createElement('a')
-        parentGitHub.className = "gh-btn"
-        parentGitHub.target = "_blank"
-
-        var parentBtnIcoSpan = document.createElement('span')
-        parentBtnIcoSpan.className = "gh-ico"
-
-        var parentBtnTxtSpan = document.createElement('span')
-        parentBtnTxtSpan.className = "gh-text"
-        parentBtnTxtSpan.textContent = "Star"
-
-        var parentGitHubCount = document.createElement('a')
-        parentGitHubCount.className = "gh-count"
-        parentGitHubCount.target = "_blank"
-        parentGitHubCount.style.display = 'block'
-        
-        var parentVersionDiv = document.createElement('div')
-        parentVersionDiv.className = "package-version"
-
-        function renderCard (package, oldCancellationToken){
-            if (oldCancellationToken !== cancellationToken) return;
-            // Div for each package
-            var packageDiv = parentPackageDiv.cloneNode(true);
-            packageDiv.addEventListener("click", updateModal.bind(this,package))
-            packageDiv.setAttribute("data-details", package);
-            let cardFrag = document.createDocumentFragment();
-
-            // Package Name
-            var nameDiv = parentNameDiv.cloneNode(true);
-            nameDiv.textContent = package.Name
-            cardFrag.appendChild(nameDiv)
-            
-            // Package Description (HTML version)
-            let fullDesc = package.Description;
-            let cutoff = 200; //character cut off
-            if (fullDesc){
-                var descriptionDiv = parentdescriptionDiv.cloneNode(true);
-                var shortDescSpan = parentShortDescSpan.cloneNode(true);
-                shortDescSpan.textContent = fullDesc.substring(0,cutoff);
-                descriptionDiv.appendChild(shortDescSpan)
-
-                let extraText = fullDesc.substring(cutoff);
-                if (extraText){
-                    var extraDescSpan = parentExtraDescSpan.cloneNode(true);
-                    extraDescSpan.textContent = fullDesc.substring(cutoff);
-
-                    var moreDescSpan = parentMoreDescSpan.cloneNode(true);
-                    moreDescSpan.addEventListener("click",expandText.bind(this, moreDescSpan, extraDescSpan))
-                    moreDescSpan.textContent = " More...";
-                    descriptionDiv.appendChild(moreDescSpan);
-                    descriptionDiv.appendChild(extraDescSpan);
-                }
-                cardFrag.appendChild(descriptionDiv)
-            }
-            // Package Processor Compatibilities
-            cardFrag.appendChild(renderCompability(package, packageDiv))
-
-            var totalPackags = document.getElementsByClassName("total-packages")[0]
-            console.log("loading total packages: " +hiddenCount)
-            totalPackags.textContent = "Total: " + (currentPackages.length-hiddenCount) + " Packages"
-
-            var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
-
-            // Website link (with clause)
-            var homepageURL = package.Homepage;
-            if (homepageURL) {
-                var websiteLink = parentWebsiteLink.cloneNode(true)
-                websiteLink.href = homepageURL
-                cardFooterDiv.appendChild(websiteLink)
-
-                if (package.Stars){
-                    var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
-                        var btnSpan = parentGitHub.cloneNode(true)
-                        btnSpan.href = homepageURL
-                            var btnIcoSpan = parentBtnIcoSpan.cloneNode(true)
-                            var btnTxtSpan = parentBtnTxtSpan.cloneNode(true)
-                            btnSpan.appendChild(btnIcoSpan)
-                            btnSpan.appendChild(btnTxtSpan)
-                        fullBtnSpan.appendChild(btnSpan)
-                        var ghCount = parentGitHubCount.cloneNode(true)
-                        ghCount.textContent = package.Stars
-                        ghCount.setAttribute('aria-label', package.Stars)
-                        ghCount.href = homepageURL
-                    fullBtnSpan.appendChild(ghCount)
-                    cardFooterDiv.appendChild(fullBtnSpan)
-                }
-            }
-
-            // Package Version
-            var versionDiv = parentVersionDiv.cloneNode(true)
-            versionDiv.textContent =" Version: "+ package.Version
-            cardFooterDiv.appendChild(versionDiv)
-
-            cardFrag.appendChild(cardFooterDiv)
-
-            // Add the package card to the page
-            packageDiv.appendChild(cardFrag)
-            mainDiv.appendChild(packageDiv)
-        }
-
         for (var package of currentPackages) {
-            setTimeout(renderCard.bind(this, package, cancellationToken),0);
+            setTimeout(renderCard.bind(this, package, mainDiv, cancellationToken),0);
         }
-
     } else {
         var noResultDiv = document.createElement('div')
         noResultDiv.className = 'card package-card'
@@ -310,6 +356,32 @@ function filterCompat(){
 }
 
 function updateModal(pkg){
-    console.log("updateModal")
+    // Package name
     document.getElementById("pkg-modal-title").textContent = pkg.Name
+    
+    // Package details
+    let modalDetails = document.getElementById("pkg-modal-details")
+    var newDetails = document.createElement('div')
+    newDetails.appendChild(renderPackageDetails(pkg, null, false))
+    newDetails.id = "pkg-modal-details"
+    modalDetails.replaceWith(newDetails)
+
+    // Package files
+    console.log(pkg.Name)
+    let fileList = pkg.Files
+    if (fileList !== undefined){
+        var fileDiv = document.createElement('div')
+        fileDiv.id = "pkg-modal-files"
+        var fileTitle = document.createElement('p')
+        fileTitle.textContent = "Files"
+        fileTitle.className = "pkg-modal-file-title"
+        fileDiv.appendChild(fileTitle)
+        console.log("files", pkg.Files)
+        for (var file of fileList){
+            listItem = document.createElement('li')
+            listItem.textContent = file
+            fileDiv.appendChild(listItem)
+        }
+        document.getElementById("pkg-modal-files").replaceWith(fileDiv)
+    }
 }
