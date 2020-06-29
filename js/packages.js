@@ -289,14 +289,14 @@ function clearPackages() {
 function searchPackages(query){
     var options = {
         findAllMatches: true,
+        ignoreLocation: true,
         threshold: 0.1,
-        location: 0,
-        distance: 100,
         maxPatternLength: 50,
         minMatchCharLength: 1,
         keys: [
           "Name",
-          "Description"
+          "Description",
+          "Files"
         ]
       }
       var fuse = new Fuse(allPackages, options);
