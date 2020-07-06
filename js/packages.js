@@ -1,6 +1,7 @@
 let allPackages, currentPackages, cancellationToken, hiddenCount;
 const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
 let compatFilter = [];
+let selectedPackage = "";
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
@@ -355,18 +356,22 @@ function filterCompat(){
 }
 
 function updateModal(pkg){
+    selectedPackage = pkg
     // Package name
-    document.getElementById("pkg-modal-title").textContent = pkg.Name
+    document.getElementById("pkg-modal-title").textContent = selectedPackage.Name
     
     // Package details
     let modalDetails = document.getElementById("pkg-modal-details")
     var newDetails = document.createElement('div')
-    newDetails.appendChild(renderPackageDetails(pkg, null, false))
+    newDetails.appendChild(renderPackageDetails(selectedPackage, null, false))
     newDetails.id = "pkg-modal-details"
     modalDetails.replaceWith(newDetails)
 
+    //Package installation code
+    clickInstallTab("Windows") //TODO: detect platform that user is on
+
     // Package files
-    let fileList = pkg.Files
+    let fileList = selectedPackage.Files
     if (fileList !== undefined){
         var fileDiv = document.createElement('div')
         fileDiv.id = "pkg-modal-files"
@@ -374,12 +379,50 @@ function updateModal(pkg){
         fileTitle.textContent = "Files"
         fileTitle.className = "pkg-modal-file-title"
         fileDiv.appendChild(fileTitle)
-        console.log("files", pkg.Files)
         for (var file of fileList){
             listItem = document.createElement('li')
             listItem.textContent = file
             fileDiv.appendChild(listItem)
         }
         document.getElementById("pkg-modal-files").replaceWith(fileDiv)
+    }
+}
+
+function clickInstallTab(platform){
+    let installCode = document.getElementById("install-code")
+    installCode.setAttribute("readonly", false)
+    let windowsTab = document.getElementById("windows-tab")
+    let linuxTab = document.getElementById("linux-tab")
+    switch (platform){
+        case "Windows":
+            installCode.textContent = ".\\vcpkg\\vcpkg install "+ selectedPackage.Name
+            windowsTab.classList.add("selected")
+            linuxTab.classList.remove("selected")
+            break;
+        case "Linux":
+            installCode.textContent = "./vcpkg/vcpkg install " + selectedPackage.Name    
+            windowsTab.classList.remove("selected")
+            linuxTab.classList.add("selected")   
+            break;
+        default:
+            console.log("Error: unexpected platform",platform)
+    }
+    installCode.setAttribute("readonly", true)
+}
+
+function copyInstallTab(){
+    let temp = document.getElementById("install-code");
+    temp.value = temp.textContent;
+    temp.select();
+    document.execCommand('copy');
+    clearSelection();
+}
+
+//remove the highlight from selected text
+function clearSelection() { 
+    if (window.getSelection) {
+        window.getSelection().removeAllRanges();
+    } else if (document.selection) {
+        document.selection.empty();
     }
 }
