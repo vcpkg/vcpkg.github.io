@@ -2,6 +2,7 @@ let allPackages, currentPackages, cancellationToken, hiddenCount;
 const triples = ["arm-uwp","arm64-windows","x64-linux","x64-osx","x64-uwp","x64-windows","x64-windows-static","x86-windows"];
 let compatFilter = [];
 let selectedPackage = "";
+let os = detectOS();
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
@@ -368,7 +369,7 @@ function updateModal(pkg){
     modalDetails.replaceWith(newDetails)
 
     //Package installation code
-    clickInstallTab("Windows") //TODO: detect platform that user is on
+    clickInstallTab(os) //TODO: detect platform that user is on
 
     // Package files
     let fileList = selectedPackage.Files
@@ -418,11 +419,31 @@ function copyInstallTab(){
     clearSelection();
 }
 
-//remove the highlight from selected text
+// remove the highlight from selected text
 function clearSelection() { 
     if (window.getSelection) {
         window.getSelection().removeAllRanges();
     } else if (document.selection) {
         document.selection.empty();
     }
+}
+
+// determine what OS the user is on, used to render corresponding package installation code
+function detectOS () {
+    var clientStrings = [
+        {s:'Windows', r:/(Win)/},
+        {s:'Android', r:/Android/},
+        {s:'Linux', r:/(Linux|X11(?!.*CrOS))/},
+        {s:'iOS', r:/(iPhone|iPad|iPod)/},
+        {s:'Mac', r:/Mac/},
+        {s:'UNIX', r:/',UNIX/},
+    ];
+    for (var id in clientStrings) {
+        var cs = clientStrings[id];
+        if (cs.r.test(navigator.platform)) {
+            //assumes of the clients above, only windows and andriod users prefer Windows instructions
+            return (cs.s === 'Windows' || cs.s === 'Android') ? 'Windows' : 'Linux' ;
+        }
+    }
+    return 'Windows'; //return Windows by default
 }
