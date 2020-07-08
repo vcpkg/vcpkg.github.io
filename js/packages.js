@@ -431,7 +431,7 @@ function clickInstallTab(platform) {
             windowsTab.classList.add('selected')
             unixTab.classList.remove('selected')
             break
-        case 'Linux':
+        case 'Unix':
             installCode.textContent =
                 './vcpkg/vcpkg install ' + selectedPackage.Name
             windowsTab.classList.remove('selected')
@@ -461,23 +461,8 @@ function clearSelection() {
 }
 
 // determine what OS the user is on, used to render corresponding package installation code
-function detectOS() {
-    var clientStrings = [
-        { s: 'Windows', r: /(Win)/ },
-        { s: 'Android', r: /Android/ },
-        { s: 'Linux', r: /(Linux|X11(?!.*CrOS))/ },
-        { s: 'iOS', r: /(iPhone|iPad|iPod)/ },
-        { s: 'Mac', r: /Mac/ },
-        { s: 'UNIX', r: /',UNIX/ },
-    ]
-    for (var id in clientStrings) {
-        var cs = clientStrings[id]
-        if (cs.r.test(navigator.platform)) {
-            //assumes of the clients above, only windows and andriod users prefer Windows instructions
-            return cs.s === 'Windows'
-                ? 'Windows'
-                : 'Unix'
-        }
-    }
-    return 'Windows' //return Windows by default
+// default to Unix unless the user is on a Windows device
+function detectOS() {   
+    var cs = { s: 'Windows', r: /(Win)/ }
+    return cs.r.test(navigator.platform)? 'Windows' : 'Unix'
 }
