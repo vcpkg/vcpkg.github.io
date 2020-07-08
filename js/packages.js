@@ -399,7 +399,7 @@ function updateModal(pkg) {
     modalDetails.replaceWith(newDetails)
 
     //Package installation code
-    clickInstallTab(os) //TODO: detect platform that user is on
+    clickInstallTab(os) //default to platform that user is on
 
     // Package files
     let fileList = selectedPackage.Files
@@ -423,19 +423,19 @@ function clickInstallTab(platform) {
     let installCode = document.getElementById('install-code')
     installCode.setAttribute('readonly', false)
     let windowsTab = document.getElementById('windows-tab')
-    let linuxTab = document.getElementById('linux-tab')
+    let unixTab = document.getElementById('unix-tab')
     switch (platform) {
         case 'Windows':
             installCode.textContent =
                 '.\\vcpkg\\vcpkg install ' + selectedPackage.Name
             windowsTab.classList.add('selected')
-            linuxTab.classList.remove('selected')
+            unixTab.classList.remove('selected')
             break
         case 'Linux':
             installCode.textContent =
                 './vcpkg/vcpkg install ' + selectedPackage.Name
             windowsTab.classList.remove('selected')
-            linuxTab.classList.add('selected')
+            unixTab.classList.add('selected')
             break
         default:
             console.log('Error: unexpected platform', platform)
@@ -474,9 +474,9 @@ function detectOS() {
         var cs = clientStrings[id]
         if (cs.r.test(navigator.platform)) {
             //assumes of the clients above, only windows and andriod users prefer Windows instructions
-            return cs.s === 'Windows' || cs.s === 'Android'
+            return cs.s === 'Windows'
                 ? 'Windows'
-                : 'Linux'
+                : 'Unix'
         }
     }
     return 'Windows' //return Windows by default
