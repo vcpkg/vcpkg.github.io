@@ -1,4 +1,4 @@
-function copyInstallTab(id) {
+function copyCodePanel(id) {
     let temp = document.getElementById(id)
     temp.value = temp.textContent
     temp.select()
@@ -18,6 +18,8 @@ function clearSelection() {
 // determine what OS the user is on, used to render corresponding package installation code
 // default to Unix unless the user is on a Windows device
 function detectOS() {   
-    var cs = { s: 'Windows', r: /(Win)/ }
-    return cs.r.test(navigator.platform)? 'Windows' : 'Unix'
+    if (/Win/.test(navigator.platform)) {
+        return 'Windows'
+    }
+    return 'Unix'
 }
