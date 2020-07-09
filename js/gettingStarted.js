@@ -1,24 +1,34 @@
-function clickGetStartedTab(platform){
-    // let installCode = document.getElementById('install-code')
-    // installCode.setAttribute('readonly', false)
-    // let windowsTab = document.getElementById('windows-tab')
-    // let unixTab = document.getElementById('unix-tab')
-    
-    let elems = document.getElementsByClassName(platform)
+let os = detectOS()
+window.onload = init
 
-    $(".show").removeClass("show")
-    $(".selected").removeClass("selected")
-    
-    console.log(platform+"-gs-btn")
-    document.getElementById(platform+"-gs-btn").classList.add('selected')
-    for (e of elems){
+function init() {
+    clickGetStartedTab(os) //initialized to user's current platform
+}
+
+function clickGetStartedTab(platform) {
+    os = platform
+    let elems = document.getElementsByClassName(os)
+
+    $('.show').removeClass('show')
+    $('.selected').removeClass('selected')
+
+    document.getElementById(os + '-gs-btn').classList.add('selected')
+    for (e of elems) {
         e.classList.add('show')
     }
 
-    if (platform === "linux" || platform === "mac"){
+    if (os === 'linux' || os === 'mac') {
         elems = document.getElementsByClassName('unix')
-        for (e of elems){
+        for (e of elems) {
             e.classList.add('show')
         }
     }
+}
+
+function copyGSCode(step) {
+    if (step === 'step5') {
+        // the code for windows and unix is shared in this case
+        copyCodePanel(step)
+    } else if (os === 'windows') copyCodePanel('windows-' + step)
+    else copyCodePanel('unix-' + step)
 }

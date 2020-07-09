@@ -1,5 +1,6 @@
 function copyCodePanel(id) {
     let temp = document.getElementById(id)
+    console.log(temp)
     temp.value = temp.textContent
     temp.select()
     document.execCommand('copy')
@@ -17,9 +18,9 @@ function clearSelection() {
 
 // determine what OS the user is on, used to render corresponding package installation code
 // default to Unix unless the user is on a Windows device
-function detectOS() {   
+function detectOS() {
     if (/Win/.test(navigator.platform)) {
-        return 'Windows'
+        return 'windows'
     }
-    return 'Unix'
+    return 'unix'
 }

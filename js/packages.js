@@ -356,7 +356,7 @@ const sortAlphabetical = function (a, b) {
 }
 
 const sortStars = function (a, b) {
-    return (b.stars || 0) - (a.stars || 0)
+    return (b.Stars || 0) - (a.Stars || 0)
 }
 
 function sortPackages() {
@@ -425,13 +425,13 @@ function clickInstallTab(platform) {
     let windowsTab = document.getElementById('windows-tab')
     let unixTab = document.getElementById('unix-tab')
     switch (platform) {
-        case 'Windows':
+        case 'windows':
             installCode.textContent =
                 '.\\vcpkg\\vcpkg install ' + selectedPackage.Name
             windowsTab.classList.add('selected')
             unixTab.classList.remove('selected')
             break
-        case 'Unix':
+        case 'unix':
             installCode.textContent =
                 './vcpkg/vcpkg install ' + selectedPackage.Name
             windowsTab.classList.remove('selected')

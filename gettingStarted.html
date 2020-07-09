@@ -67,10 +67,10 @@
             </button>
 
             <button
-            role="tab"
-            onclick="clickGetStartedTab('mac');"
-            class="tab-btn"
-            id="mac-gs-btn"
+                role="tab"
+                onclick="clickGetStartedTab('mac');"
+                class="tab-btn"
+                id="mac-gs-btn"
             >
                 MacOS
             </button>
@@ -78,7 +78,9 @@
         <section id="get-started">
             <div id="prerequisite" class="container-fluid">
                 <div class="row">
-                    <h4 class="section-title col-md-11 offset-md-1 space windows">
+                    <h4
+                        class="section-title col-md-11 offset-md-1 space windows"
+                    >
                         Windows Prerequisites
                     </h4>
                     <h4 class="section-title col-md-11 offset-md-1 space linux">
@@ -101,7 +103,9 @@
                         </ul>
                         <ul class="col-md-11 offset-md-1 mac">
                             <li>Apple Developer Tools</li>
-                            <li>On macOS 10.14 or below, you will also need:</li>
+                            <li>
+                                On macOS 10.14 or below, you will also need:
+                            </li>
                             <ul>
                                 <li>Homebrew</li>
                                 <li>g++ >= 6 from Homebrew</li>
@@ -113,23 +117,32 @@
             <div id="dl-vcpkg" class="container-fluid">
                 <div class="row">
                     <h4 class="section-title col-md-11 offset-md-1 space">
-                        1. Download vcpkg
+                        Download vcpkg
                     </h4>
                 </div>
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
                         <p class="text-desc windows">
-                            First, download and bootstrap vcpkg itself; it can be installed anywhere, but generally we recommend using vcpkg as a submodule for CMake projects, and installing it globally for Visual Studio projects. We recommend somewhere like C:\src\vcpkg or C:\dev\vcpkg, since otherwise you may run into path issues for some port build systems.
+                            First, download and bootstrap vcpkg itself; it can
+                            be installed anywhere, but generally we recommend
+                            using vcpkg as a submodule for CMake projects, and
+                            installing it globally for Visual Studio projects.
+                            We recommend somewhere like
+                            <mark>C:\src\vcpkg</mark> or
+                            <mark>C:\dev\vcpkg</mark>, since otherwise you may
+                            run into path issues for some port build systems.
                         </p>
                         <p class="text-desc unix">
-                            First, download and bootstrap vcpkg itself; it can be installed anywhere, but generally we recommend using vcpkg as a submodule for CMake projects.
+                            First, download and bootstrap vcpkg itself; it can
+                            be installed anywhere, but generally we recommend
+                            using vcpkg as a submodule for CMake projects.
                         </p>
                         <div id="tab-container" class="tabs">
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
                                         id="install-copy"
-                                        onclick="copyCodePanel('step1');"
+                                        onclick="copyGSCode('step1');"
                                         viewBox="0 0 16 16"
                                         class="bi bi-files copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -144,8 +157,20 @@
                                     </svg>
                                 </div>
                             </div>
-                            <textarea class="tab-panel step1 windows" readonly>git clone https:github.com/Microsoft/vcpkg.git && .\vcpkg\bootstrap-vspkg.bat</textarea>
-                            <textarea class="tab-panel step1 unix" readonly>git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</textarea>
+                            <textarea
+                                id="windows-step1"
+                                class="tab-panel windows"
+                                readonly
+                            >
+git clone https:github.com/Microsoft/vcpkg.git && .\vcpkg\bootstrap-vspkg.bat</textarea
+                            >
+                            <textarea
+                                id="unix-step1"
+                                class="tab-panel unix"
+                                readonly
+                            >
+git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</textarea
+                            >
                         </div>
                     </div>
                 </div>
@@ -153,7 +178,7 @@
             <div id="build" class="container-fluid">
                 <div class="row">
                     <h4 class="section-title col-md-11 offset-md-1 space">
-                        2. Install Libraries For Your Project
+                        Install Libraries for Your Project
                     </h4>
                 </div>
                 <div class="row">
@@ -163,7 +188,7 @@
                                 <div>
                                     <svg
                                         id="install-copy"
-                                        onclick="copyCodePanel('step2');"
+                                        onclick="copyGSCode('step2');"
                                         viewBox="0 0 16 16"
                                         class="bi bi-files copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +203,20 @@
                                     </svg>
                                 </div>
                             </div>
-                            <textarea id="step2" class="tab-panel" readonly>.\vcpkg\vcpkg install [packages to install]</textarea>
+                            <textarea
+                                id="windows-step2"
+                                class="tab-panel windows"
+                                readonly
+                            >
+.\vcpkg\vcpkg install [packages to install]</textarea
+                            >
+                            <textarea
+                                id="unix-step2"
+                                class="tab-panel unix"
+                                readonly
+                            >
+./vcpkg/vcpkg install [packages to install]</textarea
+                            >
                         </div>
                     </div>
                 </div>
@@ -186,7 +224,7 @@
             <div id="integrate" class="container-fluid">
                 <div class="row">
                     <h4 class="section-title col-md-11 offset-md-1 space">
-                        3. Search for Packages
+                        Search for Packages
                     </h4>
                 </div>
                 <div class="row">
@@ -196,7 +234,7 @@
                                 <div>
                                     <svg
                                         id="install-copy"
-                                        onclick="copyCodePanel('step3');"
+                                        onclick="copyGSCode('step3');"
                                         viewBox="0 0 16 16"
                                         class="bi bi-files copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -211,15 +249,29 @@
                                     </svg>
                                 </div>
                             </div>
-                            <textarea id="step3" class="tab-panel" readonly>.\vcpkg\vcpkg search [search term]</textarea>
+                            <textarea
+                                id="windows-step3"
+                                class="tab-panel windows"
+                                readonly
+                            >
+.\vcpkg\vcpkg search [search term]</textarea
+                            >
+                            <textarea
+                                id="unix-step3"
+                                class="tab-panel unix"
+                                readonly
+                            >
+./vcpkg/vcpkg search [search term]</textarea
+                            >
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="install" class="container-fluid">
+            <div id="install" class="container-fluid windows">
                 <div class="row">
                     <h4 class="section-title col-md-11 offset-md-1 space">
-                        4. Integrate with Visual Studio (may require administrator elevation)
+                        Integrate with Visual Studio (may require administrator
+                        elevation)
                     </h4>
                 </div>
                 <div class="row">
@@ -229,7 +281,7 @@
                                 <div>
                                     <svg
                                         id="install-copy"
-                                        onclick="copyCodePanel('step4');"
+                                        onclick="copyGSCode('step4');"
                                         viewBox="0 0 16 16"
                                         class="bi bi-files copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -244,34 +296,55 @@
                                     </svg>
                                 </div>
                             </div>
-                            <textarea id="step4" class="tab-panel" readonly>.\vcpkg\vcpkg integrate install</textarea>
+                            <textarea
+                                id="windows-step4"
+                                class="tab-panel"
+                                readonly
+                            >
+.\vcpkg\vcpkg integrate install</textarea
+                            >
+                            <p class="text-desc">
+                                After this, you can now create a New non-CMake
+                                Project (or open an existing one). All installed
+                                libraries are immediately ready to be
+                                <mark>#include</mark>'d and used in your project
+                                without additional configuration.
+                            </p>
+                            <p class="text-desc">
+                                If you're using CMake with Visual Studio,
+                                continue here.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="cmake" class="container-fluid">
                 <div class="row">
-                    <h4 class="section-title col-md-11 offset-md-1 space">
-                        5. Open or Create a Project
+                    <h4
+                        class="section-title col-md-11 offset-md-1 space windows"
+                    >
+                        Using CMake Outside of an IDE
+                    </h4>
+                    <h4 class="section-title col-md-11 offset-md-1 space unix">
+                        Using CMake
                     </h4>
                 </div>
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <p class="text-desc">
-                            You can now create a New non-CMake Project (or open an existing one). All installed libraries are immediately ready to be #include'd and used in your project without additional configuration.
+                        <p class="text-desc windows">
+                            In order to use vcpkg with CMake outside of an IDE,
+                            you can use the toolchain file:
                         </p>
-                        <p class="text-desc">
-                            If you're using CMake with Visual Studio, continue here.
-                        </p>
-                        <p class="text-desc">
-                            In order to use vcpkg with CMake outside of an IDE, you can use the toolchain file:
+                        <p class="text-desc unix">
+                            In order to use vcpkg with CMake, you can use the
+                            toolchain file:
                         </p>
                         <div id="tab-container" class="tabs">
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
                                         id="install-copy"
-                                        onclick="copyCodePanel('step5');"
+                                        onclick="copyGSCode('step5');"
                                         viewBox="0 0 16 16"
                                         class="bi bi-files copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -286,7 +359,28 @@
                                     </svg>
                                 </div>
                             </div>
-                            <textarea id="step5" class="tab-panel" readonly> cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake && cmake --build [build directory]</textarea>
+                            <textarea id="step5" class="tab-panel" readonly>
+ cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake && cmake --build [build directory]</textarea
+                            >
+                            <p class="text-desc windows">
+                                With CMake, you will still need to
+                                <mark>find_package</mark>
+                                and the like to use the libraries. Check out the
+                                CMake section for more information, including on
+                                using CMake with an IDE.
+                            </p>
+                            <p class="text-desc unix">
+                                With CMake, you will still need to
+                                <mark>find_package</mark>
+                                and the like to use the libraries. Check out the
+                                CMake section for more information on how best
+                                to use vcpkg with CMake, and CMake Tools for
+                                VSCode.
+                            </p>
+                            <p class="text-desc">
+                                For any other tools, including Visual Studio
+                                Code, check out the integration guide.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -295,7 +389,7 @@
         <div id="cmake" class="container-fluid">
             <div class="row">
                 <h4 class="section-title col-md-11 offset-md-1 space">
-                    6.Visit Our
+                    Visit Our
                     <a
                         class="section-title link"
                         href="https://vcpkg.readthedocs.io/en/latest/"
