@@ -51,26 +51,23 @@
         <div class="tablist col-md-10 offset-md-1 centered" role="tablist">
             <button
                 role="tab"
-                onclick="clickGetStartedTab('windows');"
-                class="tab-btn"
-                id="windows-gs-btn"
+                class="tab-btn gs-tab-btn"
+                id="gs-btn-windows"
             >
                 Windows
             </button>
             <button
                 role="tab"
-                onclick="clickGetStartedTab('linux');"
-                class="tab-btn"
-                id="linux-gs-btn"
+                class="tab-btn gs-tab-btn"
+                id="gs-btn-linux"
             >
                 Linux
             </button>
 
             <button
                 role="tab"
-                onclick="clickGetStartedTab('mac');"
-                class="tab-btn"
-                id="mac-gs-btn"
+                class="tab-btn gs-tab-btn"
+                id="gs-btn-mac"
             >
                 MacOS
             </button>
@@ -141,10 +138,9 @@
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
-                                        id="install-copy"
-                                        onclick="copyGSCode('step1');"
+                                        id="step1"
                                         viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn"
+                                        class="bi bi-files copy-btn gs-copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
                                         <path
@@ -162,14 +158,14 @@
                                 class="tab-panel windows"
                                 readonly
                             >
-git clone https:github.com/Microsoft/vcpkg.git && .\vcpkg\bootstrap-vspkg.bat</textarea
+git clone https:github.com/Microsoft/vcpkg.git && .\vcpkg\bootstrap-vcpkg.bat</textarea
                             >
                             <textarea
                                 id="unix-step1"
                                 class="tab-panel unix"
                                 readonly
                             >
-git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</textarea
+git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vcpkg.bat</textarea
                             >
                         </div>
                     </div>
@@ -187,10 +183,9 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</t
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
-                                        id="install-copy"
-                                        onclick="copyGSCode('step2');"
+                                        id="step2"
                                         viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn"
+                                        class="bi bi-files copy-btn gs-copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
                                         <path
@@ -229,14 +224,16 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</t
                 </div>
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
+                        <p class="text-desc">
+                            Search for packages using the <a href="packages.html">packages tab</a> or the vcpkg command line tool.
+                        </p>
                         <div id="tab-container" class="tabs">
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
-                                        id="install-copy"
-                                        onclick="copyGSCode('step3');"
+                                        id="step3"
                                         viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn"
+                                        class="bi bi-files copy-btn gs-copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
                                         <path
@@ -280,10 +277,9 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</t
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
-                                        id="install-copy"
-                                        onclick="copyGSCode('step4');"
+                                        id="step4"
                                         viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn"
+                                        class="bi bi-files copy-btn gs-copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
                                         <path
@@ -343,10 +339,9 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</t
                             <div class="tablist" role="tablist">
                                 <div>
                                     <svg
-                                        id="install-copy"
-                                        onclick="copyGSCode('step5');"
+                                        id="step5"
                                         viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn"
+                                        class="bi bi-files copy-btn gs-copy-btn"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
                                         <path
@@ -359,7 +354,7 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vspkg.bat</t
                                     </svg>
                                 </div>
                             </div>
-                            <textarea id="step5" class="tab-panel" readonly>
+                            <textarea id="all-step5" class="tab-panel" readonly>
  cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake && cmake --build [build directory]</textarea
                             >
                             <p class="text-desc windows">

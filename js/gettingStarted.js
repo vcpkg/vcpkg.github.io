@@ -1,9 +1,22 @@
 let os = detectOS()
-window.onload = init
 
-function init() {
+$( document ).ready(function() {
     clickGetStartedTab(os) //initialized to user's current platform
-}
+
+    $('.gs-copy-btn').click(function() { 
+        var step = $(this).attr('id');
+        if (step === 'step5') {
+            // the code for windows and unix is shared in this case
+            copyCodePanel('all-'+step)
+        } else if (os === 'windows') copyCodePanel('windows-' + step)
+        else copyCodePanel('unix-' + step)
+    });
+
+    $('.gs-tab-btn').click(function(){
+        var id = $(this).attr('id');
+        clickGetStartedTab(id.substring(7))
+    })
+ });
 
 function clickGetStartedTab(platform) {
     os = platform
@@ -12,7 +25,7 @@ function clickGetStartedTab(platform) {
     $('.show').removeClass('show')
     $('.selected').removeClass('selected')
 
-    document.getElementById(os + '-gs-btn').classList.add('selected')
+    document.getElementById('gs-btn-' + os).classList.add('selected')
     for (e of elems) {
         e.classList.add('show')
     }
@@ -23,12 +36,4 @@ function clickGetStartedTab(platform) {
             e.classList.add('show')
         }
     }
-}
-
-function copyGSCode(step) {
-    if (step === 'step5') {
-        // the code for windows and unix is shared in this case
-        copyCodePanel(step)
-    } else if (os === 'windows') copyCodePanel('windows-' + step)
-    else copyCodePanel('unix-' + step)
 }

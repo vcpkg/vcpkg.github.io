@@ -13,6 +13,16 @@ let compatFilter = []
 let selectedPackage = ''
 let os = detectOS()
 
+$( document).ready(function() {
+    $('.install-tab-btn').click(function(){
+        clickInstallTab($(this).attr('id').substring(12));
+    })
+
+    $('#install-copy').click(function(){
+        copyCodePanel('install-code');
+    })
+})
+
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1)
     var sURLVariables = sPageURL.split('&')
@@ -422,8 +432,8 @@ function updateModal(pkg) {
 function clickInstallTab(platform) {
     let installCode = document.getElementById('install-code')
     installCode.setAttribute('readonly', false)
-    let windowsTab = document.getElementById('windows-tab')
-    let unixTab = document.getElementById('unix-tab')
+    let windowsTab = document.getElementById('install-tab-windows')
+    let unixTab = document.getElementById('install-tab-unix')
     switch (platform) {
         case 'windows':
             installCode.textContent =
