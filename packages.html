@@ -22,6 +22,7 @@
             crossorigin="anonymous"
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+        <script src="js/common.js"></script>
         <script src="js/packages.js"></script>
         <link
             rel="stylesheet"
@@ -193,23 +194,20 @@
                                     <div class="tablist" role="tablist">
                                         <button
                                             role="tab"
-                                            id="windows-tab"
-                                            onclick="clickInstallTab('Windows');"
-                                            class="tab-btn"
+                                            id="install-tab-windows"
+                                            class="tab-btn install-tab-btn"
                                         >
                                             Windows
                                         </button>
                                         <button
                                             role="tab"
-                                            id="unix-tab"
-                                            onclick="clickInstallTab('Unix');"
-                                            class="tab-btn"
+                                            id="install-tab-unix"
+                                            class="tab-btn install-tab-btn"
                                         >
                                             MacOS/Linux
                                         </button>
                                         <svg
                                             id="install-copy"
-                                            onclick="copyInstallTab();"
                                             viewBox="0 0 16 16"
                                             class="bi bi-files copy-btn"
                                             xmlns="http://www.w3.org/2000/svg"

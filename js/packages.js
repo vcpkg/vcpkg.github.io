@@ -13,6 +13,16 @@ let compatFilter = []
 let selectedPackage = ''
 let os = detectOS()
 
+$( document).ready(function() {
+    $('.install-tab-btn').click(function(){
+        clickInstallTab($(this).attr('id').substring(12));
+    })
+
+    $('#install-copy').click(function(){
+        copyCodePanel('install-code');
+    })
+})
+
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1)
     var sURLVariables = sPageURL.split('&')
@@ -356,7 +366,7 @@ const sortAlphabetical = function (a, b) {
 }
 
 const sortStars = function (a, b) {
-    return (b.stars || 0) - (a.stars || 0)
+    return (b.Stars || 0) - (a.Stars || 0)
 }
 
 function sortPackages() {
@@ -422,16 +432,16 @@ function updateModal(pkg) {
 function clickInstallTab(platform) {
     let installCode = document.getElementById('install-code')
     installCode.setAttribute('readonly', false)
-    let windowsTab = document.getElementById('windows-tab')
-    let unixTab = document.getElementById('unix-tab')
+    let windowsTab = document.getElementById('install-tab-windows')
+    let unixTab = document.getElementById('install-tab-unix')
     switch (platform) {
-        case 'Windows':
+        case 'windows':
             installCode.textContent =
                 '.\\vcpkg\\vcpkg install ' + selectedPackage.Name
             windowsTab.classList.add('selected')
             unixTab.classList.remove('selected')
             break
-        case 'Unix':
+        case 'unix':
             installCode.textContent =
                 './vcpkg/vcpkg install ' + selectedPackage.Name
             windowsTab.classList.remove('selected')
@@ -441,30 +451,4 @@ function clickInstallTab(platform) {
             console.log('Error: unexpected platform', platform)
     }
     installCode.setAttribute('readonly', true)
-}
-
-function copyInstallTab() {
-    let temp = document.getElementById('install-code')
-    temp.value = temp.textContent
-    temp.select()
-    document.execCommand('copy')
-    clearSelection()
-}
-
-// remove the highlight from selected text
-function clearSelection() {
-    if (window.getSelection) {
-        window.getSelection().removeAllRanges()
-    } else if (document.selection) {
-        document.selection.empty()
-    }
-}
-
-// determine what OS the user is on, used to render corresponding package installation code
-// default to Unix unless the user is on a Windows device
-function detectOS() {   
-    if (/Win/.test(navigator.platform)) {
-        return 'Windows'
-    }
-    return 'Unix'
 }
