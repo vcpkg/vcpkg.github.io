@@ -1,22 +1,22 @@
 let os = detectOS()
 
-$( document ).ready(function() {
+$(document).ready(function () {
     clickGetStartedTab(os) //initialized to user's current platform
 
-    $('.gs-copy-btn').click(function() { 
-        var step = $(this).attr('id');
+    $('.gs-copy-btn').click(function () {
+        var step = $(this).attr('id')
         if (step === 'step5') {
             // the code for windows and unix is shared in this case
-            copyCodePanel('all-'+step)
+            copyCodePanel('all-' + step)
         } else if (os === 'windows') copyCodePanel('windows-' + step)
         else copyCodePanel('unix-' + step)
-    });
+    })
 
-    $('.gs-tab-btn').click(function(){
-        var id = $(this).attr('id');
+    $('.gs-tab-btn').click(function () {
+        var id = $(this).attr('id')
         clickGetStartedTab(id.substring(7))
     })
- });
+})
 
 function clickGetStartedTab(platform) {
     os = platform
