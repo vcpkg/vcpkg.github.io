@@ -1,4 +1,6 @@
 declare var Fuse : any;
+declare var detectOS: any;
+declare var copyCodePanel: any;
 
 let allPackages, currentPackages, cancellationToken, hiddenCount
 const triples = [
@@ -399,6 +401,7 @@ function filterCompat() {
 }
 
 function updateModal(pkg) {
+    let selectedPackage: any
     selectedPackage = pkg
     // Package name
     document.getElementById('pkg-modal-title').textContent =
@@ -433,8 +436,9 @@ function updateModal(pkg) {
 }
 
 function clickInstallTab(platform) {
+    let selectedPackage: any
     let installCode = document.getElementById('install-code')
-    installCode.setAttribute('readonly', false)
+    installCode.setAttribute('readonly', "false")
     let windowsTab = document.getElementById('install-tab-windows')
     let unixTab = document.getElementById('install-tab-unix')
     switch (platform) {
@@ -453,5 +457,5 @@ function clickInstallTab(platform) {
         default:
             console.log('Error: unexpected platform', platform)
     }
-    installCode.setAttribute('readonly', true)
+    installCode.setAttribute('readonly', "true")
 }
