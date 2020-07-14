@@ -1,3 +1,7 @@
+declare var Fuse : any;
+declare var detectOS: any;
+declare var copyCodePanel: any;
+
 let allPackages, currentPackages, cancellationToken, hiddenCount
 const triples = [
     'arm-uwp',
@@ -23,6 +27,10 @@ $(document).ready(function () {
     })
 })
 
+interface ArrayConstructor {
+	from(arrayLike: any, mapFn?, thisArg?): Array<any>;
+}
+
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1)
     var sURLVariables = sPageURL.split('&')
@@ -46,7 +54,7 @@ let query = getUrlParameter('query') || ''
 $.getJSON('./output.json', function (responseObject) {
     allPackages = responseObject.Source
     currentPackages = allPackages
-    document.getElementById('pkg-search').value = query
+    (<HTMLInputElement>document.getElementById('pkg-search')).value = query
     searchAndRenderPackages()
 })
 
@@ -111,24 +119,24 @@ var renderCompability = function (pkg, packageDiv) {
         var procStatusDiv = statusDiv.cloneNode(true)
         var status = pkg[t]
         var simplifiedStatus =
-            status === 'pass' || status === 'fail' ? status : 'unknown'
-        procStatusDiv.classList.add(simplifiedStatus)
+            status === 'pass' || status === 'fail' ? status : 'unknown';
+        (<Element>procStatusDiv).classList.add(simplifiedStatus)
 
         // hide card if it doesn't pass the compatibility filter
         if (
             packageDiv &&
             simplifiedStatus === 'fail' &&
-            compatFilter.includes(t)
+            compatFilter.indexOf(t) !== -1
         ) {
             if (!packageDiv.classList.contains('hide')) {
                 packageDiv.classList.add('hide')
                 hiddenCount += 1
             }
         }
-        procStatusFrag = document.createDocumentFragment()
-        procStatusIconDiv = iconDiv.cloneNode(true)
-        procStatusIconDiv.setAttribute('alt', simplifiedStatus)
-        procStatusIconDiv.setAttribute(
+        var procStatusFrag = document.createDocumentFragment()
+        var procStatusIconDiv = iconDiv.cloneNode(true);
+        (<Element>procStatusIconDiv).setAttribute('alt', simplifiedStatus);
+        (<Element>procStatusIconDiv).setAttribute(
             'src',
             'assets/' + simplifiedStatus + '.png'
         )
@@ -245,14 +253,14 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
     var homepageURL = package.Homepage
     if (homepageURL) {
         var cardFooterDiv = parentCardFooterDiv.cloneNode(true)
-        var websiteLink = parentWebsiteLink.cloneNode(true)
-        websiteLink.href = homepageURL
+        var websiteLink = parentWebsiteLink.cloneNode(true);
+        (<any>websiteLink).href = homepageURL
         cardFooterDiv.appendChild(websiteLink)
 
         if (package.Stars) {
             var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
-            var btnSpan = parentGitHub.cloneNode(true)
-            btnSpan.href = homepageURL
+            var btnSpan = parentGitHub.cloneNode(true);
+            (<any>btnSpan).href = homepageURL
             var btnIcoSpan = parentBtnIcoSpan.cloneNode(true)
             var btnTxtSpan = parentBtnTxtSpan.cloneNode(true)
             btnSpan.appendChild(btnIcoSpan)
@@ -260,8 +268,8 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
             fullBtnSpan.appendChild(btnSpan)
             var ghCount = parentGitHubCount.cloneNode(true)
             ghCount.textContent = package.Stars
-            ghCount.setAttribute('aria-label', package.Stars)
-            ghCount.href = homepageURL
+            (<Element>ghCount).setAttribute('aria-label', package.Stars)
+            (<any>ghCount).href = homepageURL
             fullBtnSpan.appendChild(ghCount)
             cardFooterDiv.appendChild(fullBtnSpan)
         }
@@ -286,8 +294,8 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true)
 
-    packageDiv.addEventListener('click', updateModal.bind(this, package))
-    packageDiv.setAttribute('data-details', package)
+    packageDiv.addEventListener('click', updateModal.bind(this, package));
+    (<Element>packageDiv).setAttribute('data-details', package)
 
     let cardFrag = document.createDocumentFragment()
 
@@ -348,13 +356,13 @@ function searchPackages(query) {
 }
 
 function searchAndRenderPackages() {
-    query = document.getElementById('pkg-search').value.trim()
+    query = (<HTMLInputElement>document.getElementById('pkg-search')).value.trim()
     if (query === '') {
         currentPackages = allPackages
     } else {
         searchPackages(query)
     }
-    if (document.getElementById('sortBtn').value !== 'Best Match') {
+    if ((<HTMLInputElement>document.getElementById('sortBtn')).value !== 'Best Match') {
         sortPackages()
     }
     renderPackages()
@@ -371,7 +379,7 @@ const sortStars = function (a, b) {
 }
 
 function sortPackages() {
-    let val = document.getElementById('sortBtn').value
+    let val = (<HTMLInputElement>document.getElementById('sortBtn')).value
     switch (val) {
         case 'Best Match':
             searchAndRenderPackages()
@@ -388,15 +396,12 @@ function sortPackages() {
 }
 
 function filterCompat() {
-    compatFilter = [
-        ...document.querySelectorAll(
-            ".compat-card input[type='checkbox']:checked"
-        ),
-    ].map((e) => e.value)
+    compatFilter = Array.from(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map((e) => e.value)
     renderPackages()
 }
 
 function updateModal(pkg) {
+    let selectedPackage: any
     selectedPackage = pkg
     // Package name
     document.getElementById('pkg-modal-title').textContent =
@@ -422,7 +427,7 @@ function updateModal(pkg) {
         fileTitle.className = 'pkg-modal-file-title'
         fileDiv.appendChild(fileTitle)
         for (var file of fileList) {
-            listItem = document.createElement('li')
+            var listItem = document.createElement('li')
             listItem.textContent = file
             fileDiv.appendChild(listItem)
         }
@@ -431,8 +436,9 @@ function updateModal(pkg) {
 }
 
 function clickInstallTab(platform) {
+    let selectedPackage: any
     let installCode = document.getElementById('install-code')
-    installCode.setAttribute('readonly', false)
+    installCode.setAttribute('readonly', "false")
     let windowsTab = document.getElementById('install-tab-windows')
     let unixTab = document.getElementById('install-tab-unix')
     switch (platform) {
@@ -451,5 +457,5 @@ function clickInstallTab(platform) {
         default:
             console.log('Error: unexpected platform', platform)
     }
-    installCode.setAttribute('readonly', true)
+    installCode.setAttribute('readonly', "true")
 }
