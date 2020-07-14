@@ -13,6 +13,10 @@ const triples = [
 ]
 let compatFilter = []
 
+interface ArrayConstructor {
+	from(arrayLike: any, mapFn?, thisArg?): Array<any>;
+}
+
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1)
     var sURLVariables = sPageURL.split('&')
@@ -377,11 +381,7 @@ function sortPackages() {
 }
 
 function filterCompat() {
-    compatFilter = [
-        ...document.querySelectorAll(
-            ".compat-card input[type='checkbox']:checked"
-        ),
-    ].map((e) => e.value)
+    compatFilter = Array.from(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map((e) => e.value)
     renderPackages()
 }
 
@@ -407,7 +407,7 @@ function updateModal(pkg) {
         fileDiv.appendChild(fileTitle)
         console.log('files', pkg.Files)
         for (var file of fileList) {
-            listItem = document.createElement('li')
+            var listItem = document.createElement('li')
             listItem.textContent = file
             fileDiv.appendChild(listItem)
         }
