@@ -12,6 +12,18 @@ const triples = [
     'x86-windows',
 ]
 let compatFilter = []
+let selectedPackage = ''
+let os = detectOS()
+
+$(document).ready(function () {
+    $('.install-tab-btn').click(function () {
+        clickInstallTab($(this).attr('id').substring(12))
+    })
+
+    $('#install-copy').click(function () {
+        copyCodePanel('install-code')
+    })
+})
 
 interface ArrayConstructor {
 	from(arrayLike: any, mapFn?, thisArg?): Array<any>;
@@ -114,9 +126,10 @@ var renderCompability = function (pkg, packageDiv) {
             simplifiedStatus === 'fail' &&
             compatFilter.indexOf(t) !== -1
         ) {
-            packageDiv.classList.add('hide')
-            hiddenCount += 1
-            console.log(hiddenCount)
+            if (!packageDiv.classList.contains('hide')) {
+                packageDiv.classList.add('hide')
+                hiddenCount += 1
+            }
         }
         var procStatusFrag = document.createDocumentFragment()
         var procStatusIconDiv = iconDiv.cloneNode(true);
@@ -360,7 +373,7 @@ const sortAlphabetical = function (a, b) {
 }
 
 const sortStars = function (a, b) {
-    return (b.stars || 0) - (a.stars || 0)
+    return (b.Stars || 0) - (a.Stars || 0)
 }
 
 function sortPackages() {
@@ -386,18 +399,23 @@ function filterCompat() {
 }
 
 function updateModal(pkg) {
+    selectedPackage = pkg
     // Package name
-    document.getElementById('pkg-modal-title').textContent = pkg.Name
+    document.getElementById('pkg-modal-title').textContent =
+        selectedPackage.Name
 
     // Package details
     let modalDetails = document.getElementById('pkg-modal-details')
     var newDetails = document.createElement('div')
-    newDetails.appendChild(renderPackageDetails(pkg, null, false))
+    newDetails.appendChild(renderPackageDetails(selectedPackage, null, false))
     newDetails.id = 'pkg-modal-details'
     modalDetails.replaceWith(newDetails)
 
+    //Package installation code
+    clickInstallTab(os) //default to platform that user is on
+
     // Package files
-    let fileList = pkg.Files
+    let fileList = selectedPackage.Files
     if (fileList !== undefined) {
         var fileDiv = document.createElement('div')
         fileDiv.id = 'pkg-modal-files'
@@ -405,7 +423,6 @@ function updateModal(pkg) {
         fileTitle.textContent = 'Files'
         fileTitle.className = 'pkg-modal-file-title'
         fileDiv.appendChild(fileTitle)
-        console.log('files', pkg.Files)
         for (var file of fileList) {
             var listItem = document.createElement('li')
             listItem.textContent = file
@@ -413,4 +430,28 @@ function updateModal(pkg) {
         }
         document.getElementById('pkg-modal-files').replaceWith(fileDiv)
     }
+}
+
+function clickInstallTab(platform) {
+    let installCode = document.getElementById('install-code')
+    installCode.setAttribute('readonly', false)
+    let windowsTab = document.getElementById('install-tab-windows')
+    let unixTab = document.getElementById('install-tab-unix')
+    switch (platform) {
+        case 'windows':
+            installCode.textContent =
+                '.\\vcpkg\\vcpkg install ' + selectedPackage.Name
+            windowsTab.classList.add('selected')
+            unixTab.classList.remove('selected')
+            break
+        case 'unix':
+            installCode.textContent =
+                './vcpkg/vcpkg install ' + selectedPackage.Name
+            windowsTab.classList.remove('selected')
+            unixTab.classList.add('selected')
+            break
+        default:
+            console.log('Error: unexpected platform', platform)
+    }
+    installCode.setAttribute('readonly', true)
 }
