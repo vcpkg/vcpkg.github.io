@@ -38,7 +38,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var query = getUrlParameter('query') || '';
 $.getJSON('./output.json', function (responseObject) {
     allPackages = responseObject.Source;
-    currentPackages = allPackages(document.getElementById('pkg-search')).value = query;
+    currentPackages = allPackages(
+        document.getElementById('pkg-search')
+    ).value = query;
     searchAndRenderPackages();
 });
 var renderModalDescription = function (fullDesc) {
@@ -53,7 +55,10 @@ var renderModalDescription = function (fullDesc) {
         var extraDescSpan = parentExtraDescSpan.cloneNode(true);
         extraDescSpan.textContent = fullDesc.substring(cutoff);
         var moreDescSpan = parentMoreDescSpan.cloneNode(true);
-        moreDescSpan.addEventListener('click', expandText.bind(this, moreDescSpan, extraDescSpan));
+        moreDescSpan.addEventListener(
+            'click',
+            expandText.bind(this, moreDescSpan, extraDescSpan)
+        );
         moreDescSpan.textContent = ' More...';
         descriptionDiv.appendChild(moreDescSpan);
         descriptionDiv.appendChild(extraDescSpan);
@@ -91,12 +96,15 @@ var renderCompability = function (pkg, packageDiv) {
         var t = triples_1[_i];
         var procStatusDiv = statusDiv.cloneNode(true);
         var status = pkg[t];
-        var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
+        var simplifiedStatus =
+            status === 'pass' || status === 'fail' ? status : 'unknown';
         procStatusDiv.classList.add(simplifiedStatus);
         // hide card if it doesn't pass the compatibility filter
-        if (packageDiv &&
+        if (
+            packageDiv &&
             simplifiedStatus === 'fail' &&
-            compatFilter.indexOf(t) !== -1) {
+            compatFilter.indexOf(t) !== -1
+        ) {
             if (!packageDiv.classList.contains('hide')) {
                 packageDiv.classList.add('hide');
                 hiddenCount += 1;
@@ -105,7 +113,10 @@ var renderCompability = function (pkg, packageDiv) {
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
         procStatusIconDiv.setAttribute('alt', simplifiedStatus);
-        procStatusIconDiv.setAttribute('src', 'assets/' + simplifiedStatus + '.png');
+        procStatusIconDiv.setAttribute(
+            'src',
+            'assets/' + simplifiedStatus + '.png'
+        );
         procStatusFrag.appendChild(procStatusIconDiv);
         var procStatusName = document.createElement('span');
         procStatusName.textContent = t;
@@ -161,7 +172,9 @@ parentGitHubCount.style.display = 'block';
 var parentVersionDiv = document.createElement('div');
 parentVersionDiv.className = 'package-version';
 function renderPackageDetails(package, packageDiv, isCard) {
-    if (isCard === void 0) { isCard = true; }
+    if (isCard === void 0) {
+        isCard = true;
+    }
     var detailFrag = document.createDocumentFragment();
     if (isCard) {
         var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
@@ -208,7 +221,12 @@ function renderPackageDetails(package, packageDiv, isCard) {
             btnSpan.appendChild(btnTxtSpan);
             fullBtnSpan.appendChild(btnSpan);
             var ghCount = parentGitHubCount.cloneNode(true);
-            ghCount.textContent = package.Stars(ghCount).setAttribute('aria-label', package.Stars)(ghCount).href = homepageURL;
+            ghCount.textContent = package
+                .Stars(ghCount)
+                .setAttribute(
+                    'aria-label',
+                    package.Stars
+                )(ghCount).href = homepageURL;
             fullBtnSpan.appendChild(ghCount);
             cardFooterDiv.appendChild(fullBtnSpan);
         }
@@ -217,8 +235,10 @@ function renderPackageDetails(package, packageDiv, isCard) {
     return detailFrag;
 }
 function renderCard(package, mainDiv, oldCancellationToken) {
-    if (oldCancellationToken !== null &&
-        oldCancellationToken !== cancellationToken)
+    if (
+        oldCancellationToken !== null &&
+        oldCancellationToken !== cancellationToken
+    )
         return; //don't render old packages
     console.log('loading packages');
     var totalPackags = document.getElementsByClassName('total-packages')[0];
@@ -243,12 +263,18 @@ var renderPackages = function () {
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName('package-results')[0];
     if (currentPackages.length > 0) {
-        for (var _i = 0, currentPackages_1 = currentPackages; _i < currentPackages_1.length; _i++) {
+        for (
+            var _i = 0, currentPackages_1 = currentPackages;
+            _i < currentPackages_1.length;
+            _i++
+        ) {
             var package = currentPackages_1[_i];
-            setTimeout(renderCard.bind(this, package, mainDiv, cancellationToken), 0);
+            setTimeout(
+                renderCard.bind(this, package, mainDiv, cancellationToken),
+                0
+            );
         }
-    }
-    else {
+    } else {
         var noResultDiv = document.createElement('div');
         noResultDiv.className = 'card package-card';
         noResultDiv.innerHTML = 'No results for ' + '<b>' + query + '</b>';
@@ -273,7 +299,11 @@ function searchPackages(query) {
     var fuse = new Fuse(allPackages, options);
     var searchResult = fuse.search(query);
     var newPackagesList = [];
-    for (var _i = 0, searchResult_1 = searchResult; _i < searchResult_1.length; _i++) {
+    for (
+        var _i = 0, searchResult_1 = searchResult;
+        _i < searchResult_1.length;
+        _i++
+    ) {
         var rslt = searchResult_1[_i];
         newPackagesList.push(rslt.item);
     }
@@ -283,8 +313,7 @@ function searchAndRenderPackages() {
     query = document.getElementById('pkg-search').value.trim();
     if (query === '') {
         currentPackages = allPackages;
-    }
-    else {
+    } else {
         searchPackages(query);
     }
     if (document.getElementById('sortBtn').value !== 'Best Match') {
@@ -317,7 +346,11 @@ function sortPackages() {
     }
 }
 function filterCompat() {
-    compatFilter = Array.from(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map(function (e) { return e.value; });
+    compatFilter = Array.from(
+        document.querySelectorAll(".compat-card input[type='checkbox']:checked")
+    ).map(function (e) {
+        return e.value;
+    });
     renderPackages();
 }
 function updateModal(pkg) {
@@ -355,7 +388,7 @@ function updateModal(pkg) {
 function clickInstallTab(platform) {
     var selectedPackage;
     var installCode = document.getElementById('install-code');
-    installCode.setAttribute('readonly', "false");
+    installCode.setAttribute('readonly', 'false');
     var windowsTab = document.getElementById('install-tab-windows');
     var unixTab = document.getElementById('install-tab-unix');
     switch (platform) {
@@ -374,5 +407,5 @@ function clickInstallTab(platform) {
         default:
             console.log('Error: unexpected platform', platform);
     }
-    installCode.setAttribute('readonly', "true");
+    installCode.setAttribute('readonly', 'true');
 }
