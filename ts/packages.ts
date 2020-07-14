@@ -1,3 +1,5 @@
+declare var Fuse : any;
+
 let allPackages, currentPackages, cancellationToken, hiddenCount
 const triples = [
     'arm-uwp',
@@ -34,7 +36,7 @@ let query = getUrlParameter('query') || ''
 $.getJSON('./output.json', function (responseObject) {
     allPackages = responseObject.Source
     currentPackages = allPackages
-    document.getElementById('pkg-search').value = query
+    (<HTMLInputElement>document.getElementById('pkg-search')).value = query
     searchAndRenderPackages()
 })
 
@@ -99,23 +101,23 @@ var renderCompability = function (pkg, packageDiv) {
         var procStatusDiv = statusDiv.cloneNode(true)
         var status = pkg[t]
         var simplifiedStatus =
-            status === 'pass' || status === 'fail' ? status : 'unknown'
-        procStatusDiv.classList.add(simplifiedStatus)
+            status === 'pass' || status === 'fail' ? status : 'unknown';
+        (<Element>procStatusDiv).classList.add(simplifiedStatus)
 
         // hide card if it doesn't pass the compatibility filter
         if (
             packageDiv &&
             simplifiedStatus === 'fail' &&
-            compatFilter.includes(t)
+            compatFilter.indexOf(t) !== -1
         ) {
             packageDiv.classList.add('hide')
             hiddenCount += 1
             console.log(hiddenCount)
         }
-        procStatusFrag = document.createDocumentFragment()
-        procStatusIconDiv = iconDiv.cloneNode(true)
-        procStatusIconDiv.setAttribute('alt', simplifiedStatus)
-        procStatusIconDiv.setAttribute(
+        var procStatusFrag = document.createDocumentFragment()
+        var procStatusIconDiv = iconDiv.cloneNode(true);
+        (<Element>procStatusIconDiv).setAttribute('alt', simplifiedStatus);
+        (<Element>procStatusIconDiv).setAttribute(
             'src',
             'assets/' + simplifiedStatus + '.png'
         )
@@ -232,14 +234,14 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
     var homepageURL = package.Homepage
     if (homepageURL) {
         var cardFooterDiv = parentCardFooterDiv.cloneNode(true)
-        var websiteLink = parentWebsiteLink.cloneNode(true)
-        websiteLink.href = homepageURL
+        var websiteLink = parentWebsiteLink.cloneNode(true);
+        (<any>websiteLink).href = homepageURL
         cardFooterDiv.appendChild(websiteLink)
 
         if (package.Stars) {
             var fullBtnSpan = parentFullBtnSpan.cloneNode(true)
-            var btnSpan = parentGitHub.cloneNode(true)
-            btnSpan.href = homepageURL
+            var btnSpan = parentGitHub.cloneNode(true);
+            (<any>btnSpan).href = homepageURL
             var btnIcoSpan = parentBtnIcoSpan.cloneNode(true)
             var btnTxtSpan = parentBtnTxtSpan.cloneNode(true)
             btnSpan.appendChild(btnIcoSpan)
@@ -247,8 +249,8 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
             fullBtnSpan.appendChild(btnSpan)
             var ghCount = parentGitHubCount.cloneNode(true)
             ghCount.textContent = package.Stars
-            ghCount.setAttribute('aria-label', package.Stars)
-            ghCount.href = homepageURL
+            (<Element>ghCount).setAttribute('aria-label', package.Stars)
+            (<any>ghCount).href = homepageURL
             fullBtnSpan.appendChild(ghCount)
             cardFooterDiv.appendChild(fullBtnSpan)
         }
@@ -273,8 +275,8 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true)
 
-    packageDiv.addEventListener('click', updateModal.bind(this, package))
-    packageDiv.setAttribute('data-details', package)
+    packageDiv.addEventListener('click', updateModal.bind(this, package));
+    (<Element>packageDiv).setAttribute('data-details', package)
 
     let cardFrag = document.createDocumentFragment()
 
@@ -335,13 +337,13 @@ function searchPackages(query) {
 }
 
 function searchAndRenderPackages() {
-    query = document.getElementById('pkg-search').value.trim()
+    query = (<HTMLInputElement>document.getElementById('pkg-search')).value.trim()
     if (query === '') {
         currentPackages = allPackages
     } else {
         searchPackages(query)
     }
-    if (document.getElementById('sortBtn').value !== 'Best Match') {
+    if ((<HTMLInputElement>document.getElementById('sortBtn')).value !== 'Best Match') {
         sortPackages()
     }
     renderPackages()
@@ -358,7 +360,7 @@ const sortStars = function (a, b) {
 }
 
 function sortPackages() {
-    let val = document.getElementById('sortBtn').value
+    let val = (<HTMLInputElement>document.getElementById('sortBtn')).value
     switch (val) {
         case 'Best Match':
             searchAndRenderPackages()
