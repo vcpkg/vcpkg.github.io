@@ -13,13 +13,13 @@ let compatFilter = []
 let selectedPackage = ''
 let os = detectOS()
 
-$( document).ready(function() {
-    $('.install-tab-btn').click(function(){
-        clickInstallTab($(this).attr('id').substring(12));
+$(document).ready(function () {
+    $('.install-tab-btn').click(function () {
+        clickInstallTab($(this).attr('id').substring(12))
     })
 
-    $('#install-copy').click(function(){
-        copyCodePanel('install-code');
+    $('#install-copy').click(function () {
+        copyCodePanel('install-code')
     })
 })
 
@@ -120,9 +120,10 @@ var renderCompability = function (pkg, packageDiv) {
             simplifiedStatus === 'fail' &&
             compatFilter.includes(t)
         ) {
-            packageDiv.classList.add('hide')
-            hiddenCount += 1
-            console.log(hiddenCount)
+            if (!packageDiv.classList.contains('hide')) {
+                packageDiv.classList.add('hide')
+                hiddenCount += 1
+            }
         }
         procStatusFrag = document.createDocumentFragment()
         procStatusIconDiv = iconDiv.cloneNode(true)
