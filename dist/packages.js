@@ -1,10 +1,3 @@
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
-};
 var allPackages, currentPackages, cancellationToken, hiddenCount;
 var triples = [
     'arm-uwp',
@@ -17,6 +10,16 @@ var triples = [
     'x86-windows',
 ];
 var compatFilter = [];
+var selectedPackage = '';
+var os = detectOS();
+$(document).ready(function () {
+    $('.install-tab-btn').click(function () {
+        clickInstallTab($(this).attr('id').substring(12));
+    });
+    $('#install-copy').click(function () {
+        copyCodePanel('install-code');
+    });
+});
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
@@ -94,9 +97,10 @@ var renderCompability = function (pkg, packageDiv) {
         if (packageDiv &&
             simplifiedStatus === 'fail' &&
             compatFilter.indexOf(t) !== -1) {
-            packageDiv.classList.add('hide');
-            hiddenCount += 1;
-            console.log(hiddenCount);
+            if (!packageDiv.classList.contains('hide')) {
+                packageDiv.classList.add('hide');
+                hiddenCount += 1;
+            }
         }
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
@@ -294,7 +298,7 @@ var sortAlphabetical = function (a, b) {
     return pkgA >= pkgB ? 1 : -1;
 };
 var sortStars = function (a, b) {
-    return (b.stars || 0) - (a.stars || 0);
+    return (b.Stars || 0) - (a.Stars || 0);
 };
 function sortPackages() {
     var val = document.getElementById('sortBtn').value;
@@ -313,20 +317,25 @@ function sortPackages() {
     }
 }
 function filterCompat() {
-    compatFilter = __spreadArrays(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map(function (e) { return e.value; });
+    compatFilter = Array.from(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map(function (e) { return e.value; });
     renderPackages();
 }
 function updateModal(pkg) {
+    var selectedPackage;
+    selectedPackage = pkg;
     // Package name
-    document.getElementById('pkg-modal-title').textContent = pkg.Name;
+    document.getElementById('pkg-modal-title').textContent =
+        selectedPackage.Name;
     // Package details
     var modalDetails = document.getElementById('pkg-modal-details');
     var newDetails = document.createElement('div');
-    newDetails.appendChild(renderPackageDetails(pkg, null, false));
+    newDetails.appendChild(renderPackageDetails(selectedPackage, null, false));
     newDetails.id = 'pkg-modal-details';
     modalDetails.replaceWith(newDetails);
+    //Package installation code
+    clickInstallTab(os); //default to platform that user is on
     // Package files
-    var fileList = pkg.Files;
+    var fileList = selectedPackage.Files;
     if (fileList !== undefined) {
         var fileDiv = document.createElement('div');
         fileDiv.id = 'pkg-modal-files';
@@ -334,13 +343,36 @@ function updateModal(pkg) {
         fileTitle.textContent = 'Files';
         fileTitle.className = 'pkg-modal-file-title';
         fileDiv.appendChild(fileTitle);
-        console.log('files', pkg.Files);
         for (var _i = 0, fileList_1 = fileList; _i < fileList_1.length; _i++) {
             var file = fileList_1[_i];
-            listItem = document.createElement('li');
+            var listItem = document.createElement('li');
             listItem.textContent = file;
             fileDiv.appendChild(listItem);
         }
         document.getElementById('pkg-modal-files').replaceWith(fileDiv);
     }
+}
+function clickInstallTab(platform) {
+    var selectedPackage;
+    var installCode = document.getElementById('install-code');
+    installCode.setAttribute('readonly', "false");
+    var windowsTab = document.getElementById('install-tab-windows');
+    var unixTab = document.getElementById('install-tab-unix');
+    switch (platform) {
+        case 'windows':
+            installCode.textContent =
+                '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
+            windowsTab.classList.add('selected');
+            unixTab.classList.remove('selected');
+            break;
+        case 'unix':
+            installCode.textContent =
+                './vcpkg/vcpkg install ' + selectedPackage.Name;
+            windowsTab.classList.remove('selected');
+            unixTab.classList.add('selected');
+            break;
+        default:
+            console.log('Error: unexpected platform', platform);
+    }
+    installCode.setAttribute('readonly', "true");
 }
