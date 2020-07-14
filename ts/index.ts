@@ -1,12 +1,13 @@
 function start_email() {
-    window.location.href = 'mailto:vcpkg@microsoft.com'
+    window.location.href = 'mailto:vcpkg@microsoft.com';
 }
 
 function checkEnter(e) {
     if (e.keyCode === 13) {
         // redirect query to packages.html
         window.location.href =
-            'packages.html?query=' + (<HTMLInputElement>document.getElementById('idx-search')).value
+            'packages.html?query=' +
+            (<HTMLInputElement>document.getElementById('idx-search')).value;
     }
-    return false
+    return false;
 }
