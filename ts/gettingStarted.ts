@@ -1,4 +1,4 @@
-let os = detectOS();
+let os: Platform = detectOS();
 
 $(document).ready(function () {
     clickGetStartedTab(os); //initialized to user's current platform
@@ -14,26 +14,28 @@ $(document).ready(function () {
 
     $('.gs-tab-btn').click(function () {
         var id = $(this).attr('id');
-        clickGetStartedTab(id.substring(7));
+        clickGetStartedTab(id.substring(7) as Platform);
     });
 });
 
-function clickGetStartedTab(platform) {
+function clickGetStartedTab(platform: Platform) {
     os = platform;
-    let elems: any = document.getElementsByClassName(os);
-    let e: any;
+    let elems: HTMLCollectionOf<Element> = document.getElementsByClassName(os);
+    let e: Element;
 
     $('.show').removeClass('show');
     $('.selected').removeClass('selected');
 
     document.getElementById('gs-btn-' + os).classList.add('selected');
-    for (e of elems) {
+    for (var i = 0; i < elems.length; i++) {
+        e = elems[i];
         e.classList.add('show');
     }
 
     if (os === 'linux' || os === 'mac') {
         elems = document.getElementsByClassName('unix');
-        for (e of elems) {
+        for (var i = 0; i < elems.length; i++) {
+            e = elems[i];
             e.classList.add('show');
         }
     }

@@ -1,6 +1,10 @@
 declare var Fuse: any;
 
-let allPackages, currentPackages, cancellationToken, hiddenCount;
+let allPackages,
+    currentPackages,
+    cancellationToken,
+    hiddenCount: number,
+    selectedPackage;
 const triples = [
     'arm-uwp',
     'arm64-windows',
@@ -12,7 +16,6 @@ const triples = [
     'x86-windows',
 ];
 let compatFilter = [];
-let selectedPackage: any;
 
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {

@@ -1,4 +1,4 @@
-var allPackages, currentPackages, cancellationToken, hiddenCount;
+var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
 var triples = [
     'arm-uwp',
     'arm64-windows',
@@ -10,7 +10,6 @@ var triples = [
     'x86-windows',
 ];
 var compatFilter = [];
-var selectedPackage;
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {
         clickInstallTab($(this).attr('id').substring(12));

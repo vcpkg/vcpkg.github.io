@@ -1,18 +1,20 @@
+type Platform = 'windows' | 'unix' | 'mac' | 'linux';
+
 function copyCodePanel(id) {
-    let temp: any = document.getElementById(id);
+    let temp: HTMLInputElement = document.getElementById(
+        id
+    ) as HTMLInputElement;
     temp.value = temp.textContent;
     temp.select();
     document.execCommand('copy');
+    temp.select();
     clearSelection();
 }
 
 // remove the highlight from selected text
 function clearSelection() {
-    let doc = document as any;
     if (window.getSelection) {
         window.getSelection().removeAllRanges();
-    } else if (doc.selection) {
-        doc.selection.empty();
     }
 }
 

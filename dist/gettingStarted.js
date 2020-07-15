@@ -24,14 +24,14 @@ function clickGetStartedTab(platform) {
     $('.show').removeClass('show');
     $('.selected').removeClass('selected');
     document.getElementById('gs-btn-' + os).classList.add('selected');
-    for (var _i = 0, elems_1 = elems; _i < elems_1.length; _i++) {
-        e = elems_1[_i];
+    for (var i = 0; i < elems.length; i++) {
+        e = elems[i];
         e.classList.add('show');
     }
     if (os === 'linux' || os === 'mac') {
         elems = document.getElementsByClassName('unix');
-        for (var _a = 0, elems_2 = elems; _a < elems_2.length; _a++) {
-            e = elems_2[_a];
+        for (var i = 0; i < elems.length; i++) {
+            e = elems[i];
             e.classList.add('show');
         }
     }
