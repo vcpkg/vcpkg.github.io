@@ -43,16 +43,17 @@ var getUrlParameter = function getUrlParameter(sParam) {
                 : decodeURIComponent(sParameterName[1]);
         }
     }
+    return true;
 };
 
 // initialize query to result from index.html or blank
-let query = getUrlParameter('query') || '';
+var res = getUrlParameter('query');
+let query = res === true? '' : res;
 
 $.getJSON('./output.json', function (responseObject) {
     allPackages = responseObject.Source;
-    currentPackages = allPackages(
-        <HTMLInputElement>document.getElementById('pkg-search')
-    ).value = query;
+    currentPackages = allPackages;
+    (<HTMLInputElement>document.getElementById('pkg-search')).value = query;
     searchAndRenderPackages();
 });
 
@@ -265,12 +266,9 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
             btnSpan.appendChild(btnTxtSpan);
             fullBtnSpan.appendChild(btnSpan);
             var ghCount = parentGitHubCount.cloneNode(true);
-            ghCount.textContent = package
-                .Stars(<Element>ghCount)
-                .setAttribute(
-                    'aria-label',
-                    package.Stars
-                )(<any>ghCount).href = homepageURL;
+            ghCount.textContent = package.Stars;
+            (<Element>ghCount).setAttribute('aria-label',package.Stars);
+            (<any>ghCount).href = homepageURL;
             fullBtnSpan.appendChild(ghCount);
             cardFooterDiv.appendChild(fullBtnSpan);
         }

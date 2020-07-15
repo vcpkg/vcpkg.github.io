@@ -10,7 +10,8 @@ function clearSelection() {
     var doc = document;
     if (window.getSelection) {
         window.getSelection().removeAllRanges();
-    } else if (doc.selection) {
+    }
+    else if (doc.selection) {
         doc.selection.empty();
     }
 }
