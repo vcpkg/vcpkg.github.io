@@ -11,7 +11,6 @@ var triples = [
 ];
 var compatFilter = [];
 var selectedPackage = '';
-var os = detectOS();
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {
         clickInstallTab($(this).attr('id').substring(12));
