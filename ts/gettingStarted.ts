@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 function clickGetStartedTab(platform) {
     os = platform;
-    let elems : any = document.getElementsByClassName(os);
+    let elems: any = document.getElementsByClassName(os);
     let e: any;
 
     $('.show').removeClass('show');

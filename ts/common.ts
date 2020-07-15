@@ -8,10 +8,10 @@ function copyCodePanel(id) {
 
 // remove the highlight from selected text
 function clearSelection() {
-    let doc = document as any
+    let doc = document as any;
     if (window.getSelection) {
         window.getSelection().removeAllRanges();
-    } else if  (doc.selection) {
+    } else if (doc.selection) {
         doc.selection.empty();
     }
 }

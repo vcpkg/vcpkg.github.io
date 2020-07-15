@@ -6,7 +6,7 @@ function checkEnter(e) {
         // redirect query to packages.html
         window.location.href =
             'packages.html?query=' +
-                document.getElementById('idx-search').value;
+            document.getElementById('idx-search').value;
     }
     return false;
 }

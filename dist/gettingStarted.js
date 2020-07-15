@@ -6,11 +6,8 @@ $(document).ready(function () {
         if (step === 'step5') {
             // the code for windows and unix is shared in this case
             copyCodePanel('all-' + step);
-        }
-        else if (os === 'windows')
-            copyCodePanel('windows-' + step);
-        else
-            copyCodePanel('unix-' + step);
+        } else if (os === 'windows') copyCodePanel('windows-' + step);
+        else copyCodePanel('unix-' + step);
     });
     $('.gs-tab-btn').click(function () {
         var id = $(this).attr('id');

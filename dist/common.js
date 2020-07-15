@@ -7,11 +7,11 @@ function copyCodePanel(id) {
 }
 // remove the highlight from selected text
 function clearSelection() {
+    var doc = document;
     if (window.getSelection) {
         window.getSelection().removeAllRanges();
-    }
-    else if (document.selection) {
-        document.selection.empty();
+    } else if (doc.selection) {
+        doc.selection.empty();
     }
 }
 // determine what OS the user is on, used to render corresponding package installation code
