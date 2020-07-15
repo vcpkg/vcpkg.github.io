@@ -1,6 +1,4 @@
 declare var Fuse: any;
-declare var detectOS: any;
-declare var copyCodePanel: any;
 
 let allPackages, currentPackages, cancellationToken, hiddenCount;
 const triples = [
@@ -15,7 +13,6 @@ const triples = [
 ];
 let compatFilter = [];
 let selectedPackage = '';
-let os = detectOS();
 
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {
