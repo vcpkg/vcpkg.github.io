@@ -12,7 +12,7 @@ const triples = [
     'x86-windows',
 ];
 let compatFilter = [];
-let selectedPackage = '';
+let selectedPackage: any;
 
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {
@@ -48,7 +48,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 // initialize query to result from index.html or blank
 var res = getUrlParameter('query');
-let query = res === true? '' : res;
+let query = res === true ? '' : res;
 
 $.getJSON('./output.json', function (responseObject) {
     allPackages = responseObject.Source;
@@ -267,7 +267,7 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
             fullBtnSpan.appendChild(btnSpan);
             var ghCount = parentGitHubCount.cloneNode(true);
             ghCount.textContent = package.Stars;
-            (<Element>ghCount).setAttribute('aria-label',package.Stars);
+            (<Element>ghCount).setAttribute('aria-label', package.Stars);
             (<any>ghCount).href = homepageURL;
             fullBtnSpan.appendChild(ghCount);
             cardFooterDiv.appendChild(fullBtnSpan);
@@ -407,7 +407,6 @@ function filterCompat() {
 }
 
 function updateModal(pkg) {
-    let selectedPackage: any;
     selectedPackage = pkg;
     // Package name
     document.getElementById('pkg-modal-title').textContent =
@@ -421,13 +420,13 @@ function updateModal(pkg) {
     modalDetails.replaceWith(newDetails);
 
     //Package installation code
+    let os = detectOS();
     clickInstallTab(os); //default to platform that user is on
-
+    var fileDiv = document.createElement('div');
+    fileDiv.id = 'pkg-modal-files';
     // Package files
     let fileList = selectedPackage.Files;
     if (fileList !== undefined) {
-        var fileDiv = document.createElement('div');
-        fileDiv.id = 'pkg-modal-files';
         var fileTitle = document.createElement('p');
         fileTitle.textContent = 'Files';
         fileTitle.className = 'pkg-modal-file-title';
@@ -437,12 +436,11 @@ function updateModal(pkg) {
             listItem.textContent = file;
             fileDiv.appendChild(listItem);
         }
-        document.getElementById('pkg-modal-files').replaceWith(fileDiv);
     }
+    document.getElementById('pkg-modal-files').replaceWith(fileDiv);
 }
 
 function clickInstallTab(platform) {
-    let selectedPackage: any;
     let installCode = document.getElementById('install-code');
     installCode.setAttribute('readonly', 'false');
     let windowsTab = document.getElementById('install-tab-windows');

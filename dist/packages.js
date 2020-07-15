@@ -10,7 +10,7 @@ var triples = [
     'x86-windows',
 ];
 var compatFilter = [];
-var selectedPackage = '';
+var selectedPackage;
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {
         clickInstallTab($(this).attr('id').substring(12));
@@ -326,7 +326,6 @@ function filterCompat() {
     renderPackages();
 }
 function updateModal(pkg) {
-    var selectedPackage;
     selectedPackage = pkg;
     // Package name
     document.getElementById('pkg-modal-title').textContent =
@@ -338,12 +337,13 @@ function updateModal(pkg) {
     newDetails.id = 'pkg-modal-details';
     modalDetails.replaceWith(newDetails);
     //Package installation code
+    var os = detectOS();
     clickInstallTab(os); //default to platform that user is on
+    var fileDiv = document.createElement('div');
+    fileDiv.id = 'pkg-modal-files';
     // Package files
     var fileList = selectedPackage.Files;
     if (fileList !== undefined) {
-        var fileDiv = document.createElement('div');
-        fileDiv.id = 'pkg-modal-files';
         var fileTitle = document.createElement('p');
         fileTitle.textContent = 'Files';
         fileTitle.className = 'pkg-modal-file-title';
@@ -354,11 +354,10 @@ function updateModal(pkg) {
             listItem.textContent = file;
             fileDiv.appendChild(listItem);
         }
-        document.getElementById('pkg-modal-files').replaceWith(fileDiv);
     }
+    document.getElementById('pkg-modal-files').replaceWith(fileDiv);
 }
 function clickInstallTab(platform) {
-    var selectedPackage;
     var installCode = document.getElementById('install-code');
     installCode.setAttribute('readonly', 'false');
     var windowsTab = document.getElementById('install-tab-windows');
