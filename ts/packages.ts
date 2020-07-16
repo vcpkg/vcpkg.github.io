@@ -1,5 +1,20 @@
 declare var Fuse: any;
 
+let wording = {
+    "en": {
+        "version": "Version: ",
+        "more": " More...",
+        "compat": "Compatibility:",
+        "website": 'Website',
+        "star": 'Star',
+        "total-pkgs": "Total Packages: ",
+        "no-results": 'No results for '
+    },
+    "zh": {
+        "version": "zh-filler"
+    }
+}
+
 let allPackages,
     currentPackages,
     cancellationToken,
@@ -78,7 +93,7 @@ var renderModalDescription = function (fullDesc) {
             'click',
             expandText.bind(this, moreDescSpan, extraDescSpan)
         );
-        moreDescSpan.textContent = ' More...';
+        moreDescSpan.textContent = wording[lang]["more"];
         descriptionDiv.appendChild(moreDescSpan);
         descriptionDiv.appendChild(extraDescSpan);
     }
@@ -107,7 +122,7 @@ var renderCompability = function (pkg, packageDiv) {
     // Compatibility text
     var compatDiv = document.createElement('span');
     compatDiv.className = 'package-compatibility-text';
-    compatDiv.textContent = 'Compatibility: ';
+    compatDiv.textContent = wording[lang]["compat"];
     compatRowDiv.appendChild(compatDiv);
 
     // Display processor statuses
@@ -192,7 +207,7 @@ parentCardFooterDiv.className = 'package-card-footer';
 
 var parentWebsiteLink = document.createElement('a');
 parentWebsiteLink.className = 'package-website align-bottom';
-parentWebsiteLink.textContent = 'Website';
+parentWebsiteLink.textContent = wording[lang]["website"];
 parentWebsiteLink.target = '_blank';
 
 var parentFullBtnSpan = document.createElement('span');
@@ -207,7 +222,7 @@ parentBtnIcoSpan.className = 'gh-ico';
 
 var parentBtnTxtSpan = document.createElement('span');
 parentBtnTxtSpan.className = 'gh-text';
-parentBtnTxtSpan.textContent = 'Star';
+parentBtnTxtSpan.textContent = wording[lang]["star"];
 
 var parentGitHubCount = document.createElement('a');
 parentGitHubCount.className = 'gh-count';
@@ -229,7 +244,7 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
 
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
-        versionDiv.textContent = ' Version: ' + package.Version;
+        versionDiv.textContent = wording[lang]["version"] + package.Version;
         cardHeaderDiv.appendChild(versionDiv);
         detailFrag.appendChild(cardHeaderDiv);
     }
@@ -248,7 +263,7 @@ function renderPackageDetails(package, packageDiv, isCard = true) {
     // Package Version for modal
     if (!isCard) {
         var versionDiv = parentDescriptionDiv.cloneNode(true);
-        versionDiv.textContent = ' Version: ' + package.Version;
+        versionDiv.textContent = wording[lang]["version"] + package.Version;
         detailFrag.appendChild(versionDiv);
     }
 
@@ -292,7 +307,7 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     console.log('loading packages');
     var totalPackags = document.getElementsByClassName('total-packages')[0];
     totalPackags.textContent =
-        'Total: ' + (currentPackages.length - hiddenCount) + ' Packages';
+        wording[lang]["total-pkgs"] + (currentPackages.length - hiddenCount);
 
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
@@ -328,7 +343,7 @@ var renderPackages = function () {
     } else {
         var noResultDiv = document.createElement('div');
         noResultDiv.className = 'card package-card';
-        noResultDiv.innerHTML = 'No results for ' + '<b>' + query + '</b>';
+        noResultDiv.innerHTML = wording[lang]['no-results'] + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
 };
