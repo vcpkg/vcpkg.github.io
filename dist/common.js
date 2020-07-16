@@ -1,6 +1,5 @@
 function copyCodePanel(id) {
     var temp = document.getElementById(id);
-    temp.value = temp.textContent;
     temp.select();
     document.execCommand('copy');
     clearSelection();

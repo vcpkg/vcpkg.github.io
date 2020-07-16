@@ -4,7 +4,6 @@ function copyCodePanel(id) {
     let temp: HTMLInputElement = document.getElementById(
         id
     ) as HTMLInputElement;
-    temp.value = temp.textContent;
     temp.select();
     document.execCommand('copy');
     clearSelection();
