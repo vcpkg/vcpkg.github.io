@@ -7,7 +7,6 @@ function copyCodePanel(id) {
     temp.value = temp.textContent;
     temp.select();
     document.execCommand('copy');
-    temp.select();
     clearSelection();
 }
 

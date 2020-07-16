@@ -3,7 +3,6 @@ function copyCodePanel(id) {
     temp.value = temp.textContent;
     temp.select();
     document.execCommand('copy');
-    temp.select();
     clearSelection();
 }
 // remove the highlight from selected text
