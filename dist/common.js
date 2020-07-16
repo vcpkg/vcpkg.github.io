@@ -1,3 +1,4 @@
+var lang = (navigator.language).substring(0, 2); //get the prefix for language
 function copyCodePanel(id) {
     var temp = document.getElementById(id);
     temp.select();

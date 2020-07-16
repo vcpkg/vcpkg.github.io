@@ -1,4 +1,5 @@
 type Platform = 'windows' | 'unix' | 'mac' | 'linux';
+let lang = (navigator.language).substring(0, 2) //get the prefix for language
 
 function copyCodePanel(id) {
     let temp: HTMLInputElement = document.getElementById(

@@ -5,6 +5,7 @@ let allPackages,
     cancellationToken,
     hiddenCount: number,
     selectedPackage;
+
 const triples = [
     'arm-uwp',
     'arm64-windows',
@@ -53,7 +54,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var res = getUrlParameter('query');
 let query = res === true ? '' : res;
 
-$.getJSON('./output.json', function (responseObject) {
+$.getJSON('../output.json', function (responseObject) {
     allPackages = responseObject.Source;
     currentPackages = allPackages;
     (<HTMLInputElement>document.getElementById('pkg-search')).value = query;
@@ -140,7 +141,7 @@ var renderCompability = function (pkg, packageDiv) {
         (<Element>procStatusIconDiv).setAttribute('alt', simplifiedStatus);
         (<Element>procStatusIconDiv).setAttribute(
             'src',
-            'assets/' + simplifiedStatus + '.png'
+            '../assets/' + simplifiedStatus + '.png'
         );
         procStatusFrag.appendChild(procStatusIconDiv);
 

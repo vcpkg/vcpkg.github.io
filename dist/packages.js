@@ -36,7 +36,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 // initialize query to result from index.html or blank
 var res = getUrlParameter('query');
 var query = res === true ? '' : res;
-$.getJSON('./output.json', function (responseObject) {
+$.getJSON('../output.json', function (responseObject) {
     allPackages = responseObject.Source;
     currentPackages = allPackages;
     document.getElementById('pkg-search').value = query;
@@ -106,7 +106,7 @@ var renderCompability = function (pkg, packageDiv) {
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
         procStatusIconDiv.setAttribute('alt', simplifiedStatus);
-        procStatusIconDiv.setAttribute('src', 'assets/' + simplifiedStatus + '.png');
+        procStatusIconDiv.setAttribute('src', '../assets/' + simplifiedStatus + '.png');
         procStatusFrag.appendChild(procStatusIconDiv);
         var procStatusName = document.createElement('span');
         procStatusName.textContent = t;
