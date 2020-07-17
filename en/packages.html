@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link href="../css/packages.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/githubBtn.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+    <script src="../dist/common.js"></script>
+    <script src="../dist/packages.js"></script>
+    <link rel="stylesheet"
+        href="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/df-ef4fcb/44-8f633e/2a-941562/14-f79d63/9a-fc1a3b/a2-8ee862/1f-ff69fe/ac-c7fd03?ver=2.0"
+        type="text/css" media="all" />
+    <link rel="stylesheet" href="https://statics-marketingsites-wcus-ms-com.akamaized.net/statics/override.css?c=7"
+        type="text/css" />
+    <script
+        src="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/shell/_scrf/js/themes=default/54-af9f9f/c0-247156/de-099401/e1-a50eee/e7-954872/d8-97d509/f0-251fe2/46-be1318/77-04a268/11-240c7b/63-077520/a4-34de62/1b-c96630/db-bc0148/dc-7e9864/78-4c7d22/e1-c35781/23-c64e70/cd-23d3b0/6d-1e7ed0/b7-cadaa7/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/92-10345d/79-499886/7e-cda2d3/14-983080/ab-30f5b9/e0-3c9860/91-97a04f/1f-100dea/33-abe4df/4d-6e4c52?ver=2.0&iife=1"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loadNavBar').load('header.html');
+            $('#loadFooter').load('footer.html');
+        });
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<div id="loadNavBar"></div>
+
+<body>
+    <div class="header-text">
+        <h1>Browse Packages</h1>
+    </div>
+    <div class="search-bar">
+        <input class="search-box" id="pkg-search" type="search" name="search" placeholder="Search Packages"
+            autocomplete="off" oninput="searchAndRenderPackages()" />
+        <span class="search-icon"></span>
+    </div>
+    <div class="package-body">
+        <div class="side-bar">
+            <div class="filter-sort-text">Compatibility</div>
+            <div class="card compat-card">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="arm-uwp" onchange="filterCompat();" />
+                        arm-uwp</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="arm64-windows" onchange="filterCompat();" />
+                        arm64-windows</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="x64-linux" onchange="filterCompat();" />
+                        x64-linux</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="x64-osx" onchange="filterCompat();" />
+                        x64-osx</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="x64-uwp" onchange="filterCompat();" />
+                        x64-uwp</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="x64-windows" onchange="filterCompat();" />
+                        x64-windows</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="x64-windows-static" onchange="filterCompat();" />
+                        x64-windows-static</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="x86-windows" onchange="filterCompat();" />
+                        x86-windows</label>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="sort-bar">
+                <p class="total-packages filter-sort-text"></p>
+                <select class="card dropdown" id="sortBtn" onChange="sortPackages()">
+                    <option value="Best Match" selected>Best Match</option>
+                    <option value="Alphabetical">Alphabetical</option>
+                    <option value="GitHub Stars">GitHub Stars</option>
+                </select>
+                <span class="sort-text filter-sort-text">Sort By:</span>
+            </div>
+
+            <div class="modal fade" id="pkg-modal" tabindex="-1" role="dialog" aria-labelledby="pkg-modal-title"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pkg-modal-title"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body" id="pkg-modal-body">
+                            <div id="pkg-modal-details"></div>
+                            <p class="installation-header">Installation:</p>
+                            <div id="tab-container" class="tabs">
+                                <div class="tablist" role="tablist">
+                                    <button role="tab" id="install-tab-windows" class="tab-btn install-tab-btn">
+                                        Windows
+                                    </button>
+                                    <button role="tab" id="install-tab-unix" class="tab-btn install-tab-btn">
+                                        MacOS/Linux
+                                    </button>
+                                    <svg id="install-copy" viewBox="0 0 16 16" class="bi bi-files copy-btn"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z" />
+                                        <path
+                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                                    </svg>
+                                </div>
+                                <textarea id="install-code" tabindex="0" role="tabpanel" aria-labelledby="install-code"
+                                    class="tab-panel" readonly>
+                                    </textarea>
+                            </div>
+                            <div id="pkg-modal-files"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="package-results"></div>
+        </div>
+    </div>
+</body>
+<div id="loadFooter"></div>
+
+</html>

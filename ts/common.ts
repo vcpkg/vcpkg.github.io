@@ -1,5 +1,9 @@
 type Platform = 'windows' | 'unix' | 'mac' | 'linux';
 
+//get the prefix for language
+let lang = 'en'; //Since there is only one language, set all visitors to english
+// let lang = navigator.language.substring(0, 2); // TODO: use this later to gets the user's actual current language
+
 function copyCodePanel(id) {
     let temp: HTMLInputElement = document.getElementById(
         id
@@ -22,5 +26,8 @@ function detectOS(): Platform {
     if (/Win/.test(navigator.platform)) {
         return 'windows';
     }
-    return 'unix';
+    if (/Mac/.test(navigator.platform)) {
+        return 'mac';
+    }
+    return 'linux';
 }

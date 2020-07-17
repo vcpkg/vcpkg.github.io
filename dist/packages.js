@@ -1,4 +1,18 @@
-var allPackages, currentPackages, cancellationToken, selectedPackage;
+var wording = {
+    'en': {
+        'version': 'Version: ',
+        'more': ' More...',
+        'compat': 'Compatibility:',
+        'website': 'Website',
+        'star': 'Star',
+        'total-pkgs': 'Total Packages: ',
+        'no-results': 'No results for ',
+    },
+    'zh': {
+        'version': 'zh-filler',
+    },
+};
+var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
 var triplets = [
     'arm-uwp',
     'arm64-windows',
@@ -36,7 +50,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 // initialize query to result from index.html or blank
 var res = getUrlParameter('query');
 var query = res === true ? '' : res;
-$.getJSON('./output.json', function (responseObject) {
+$.getJSON('../output.json', function (responseObject) {
     allPackages = responseObject.Source;
     currentPackages = allPackages;
     document.getElementById('pkg-search').value = query;
@@ -55,7 +69,7 @@ var renderModalDescription = function (fullDesc) {
         extraDescSpan.textContent = fullDesc.substring(cutoff);
         var moreDescSpan = parentMoreDescSpan.cloneNode(true);
         moreDescSpan.addEventListener('click', expandText.bind(this, moreDescSpan, extraDescSpan));
-        moreDescSpan.textContent = ' More...';
+        moreDescSpan.textContent = wording[lang]['more'];
         descriptionDiv.appendChild(moreDescSpan);
         descriptionDiv.appendChild(extraDescSpan);
     }
@@ -80,7 +94,7 @@ var renderCompability = function (pkg, packageDiv) {
     // Compatibility text
     var compatDiv = document.createElement('span');
     compatDiv.className = 'package-compatibility-text';
-    compatDiv.textContent = 'Compatibility: ';
+    compatDiv.textContent = wording[lang]['compat'];
     compatRowDiv.appendChild(compatDiv);
     // Display processor statuses
     var statusDiv = document.createElement('div');
@@ -103,7 +117,7 @@ var renderCompability = function (pkg, packageDiv) {
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
         procStatusIconDiv.setAttribute('alt', simplifiedStatus);
-        procStatusIconDiv.setAttribute('src', 'assets/' + simplifiedStatus + '.png');
+        procStatusIconDiv.setAttribute('src', '../assets/' + simplifiedStatus + '.png');
         procStatusFrag.appendChild(procStatusIconDiv);
         var procStatusName = document.createElement('span');
         procStatusName.textContent = t;
@@ -140,7 +154,7 @@ var parentCardFooterDiv = document.createElement('div');
 parentCardFooterDiv.className = 'package-card-footer';
 var parentWebsiteLink = document.createElement('a');
 parentWebsiteLink.className = 'package-website align-bottom';
-parentWebsiteLink.textContent = 'Website';
+parentWebsiteLink.textContent = wording[lang]['website'];
 parentWebsiteLink.target = '_blank';
 var parentFullBtnSpan = document.createElement('span');
 parentFullBtnSpan.className = 'github-btn';
@@ -151,7 +165,7 @@ var parentBtnIcoSpan = document.createElement('span');
 parentBtnIcoSpan.className = 'gh-ico';
 var parentBtnTxtSpan = document.createElement('span');
 parentBtnTxtSpan.className = 'gh-text';
-parentBtnTxtSpan.textContent = 'Star';
+parentBtnTxtSpan.textContent = wording[lang]['star'];
 var parentGitHubCount = document.createElement('a');
 parentGitHubCount.className = 'gh-count';
 parentGitHubCount.target = '_blank';
@@ -169,7 +183,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
         cardHeaderDiv.appendChild(nameDiv);
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
-        versionDiv.textContent = ' Version: ' + package.Version;
+        versionDiv.textContent = wording[lang]['version'] + package.Version;
         cardHeaderDiv.appendChild(versionDiv);
         detailFrag.appendChild(cardHeaderDiv);
     }
@@ -186,7 +200,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     // Package Version for modal
     if (!isCard) {
         var versionDiv = parentDescriptionDiv.cloneNode(true);
-        versionDiv.textContent = ' Version: ' + package.Version;
+        versionDiv.textContent = wording[lang]['version'] + package.Version;
         detailFrag.appendChild(versionDiv);
     }
     // Website link (with clause)
@@ -246,7 +260,8 @@ var renderPackages = function () {
     else {
         var noResultDiv = document.createElement('div');
         noResultDiv.className = 'card package-card';
-        noResultDiv.innerHTML = 'No results for ' + '<b>' + query + '</b>';
+        noResultDiv.innerHTML =
+            wording[lang]['no-results'] + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
     loadTotalPackages();
@@ -382,12 +397,12 @@ function loadTotalPackages() {
             var t = triplets_2[_i];
             var status_1 = currentPackages[i][t];
             var simplifiedStatus = status_1 === 'pass' || status_1 === 'fail' ? status_1 : 'unknown';
-            if (simplifiedStatus === 'fail' &&
-                compatFilter.indexOf(t) !== -1) {
+            if (simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
                 hiddenPackages.add(currentPackages[i]);
             }
         }
     }
     totalPackages.textContent =
-        'Total: ' + (currentPackages.length - hiddenPackages.size) + ' Packages';
+        wording[lang]["total-pkgs"] +
+            (currentPackages.length - hiddenPackages.size);
 }
