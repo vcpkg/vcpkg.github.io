@@ -26,5 +26,8 @@ function detectOS(): Platform {
     if (/Win/.test(navigator.platform)) {
         return 'windows';
     }
-    return 'unix';
+    if (/Mac/.test(navigator.platform)) {
+        return 'mac';
+    }
+    return 'linux';
 }
