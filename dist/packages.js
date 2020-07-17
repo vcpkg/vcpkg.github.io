@@ -1,19 +1,19 @@
 var wording = {
-    "en": {
-        "version": "Version: ",
-        "more": " More...",
-        "compat": "Compatibility:",
-        "website": 'Website',
-        "star": 'Star',
-        "total-pkgs": "Total Packages: ",
-        "no-results": 'No results for '
+    'en': {
+        'version': 'Version: ',
+        'more': ' More...',
+        'compat': 'Compatibility:',
+        'website': 'Website',
+        'star': 'Star',
+        'total-pkgs': 'Total Packages: ',
+        'no-results': 'No results for ',
     },
-    "zh": {
-        "version": "zh-filler"
-    }
+    'zh': {
+        'version': 'zh-filler',
+    },
 };
 var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
-var triples = [
+var triplets = [
     'arm-uwp',
     'arm64-windows',
     'x64-linux',
@@ -69,7 +69,7 @@ var renderModalDescription = function (fullDesc) {
         extraDescSpan.textContent = fullDesc.substring(cutoff);
         var moreDescSpan = parentMoreDescSpan.cloneNode(true);
         moreDescSpan.addEventListener('click', expandText.bind(this, moreDescSpan, extraDescSpan));
-        moreDescSpan.textContent = wording[lang]["more"];
+        moreDescSpan.textContent = wording[lang]['more'];
         descriptionDiv.appendChild(moreDescSpan);
         descriptionDiv.appendChild(extraDescSpan);
     }
@@ -94,7 +94,7 @@ var renderCompability = function (pkg, packageDiv) {
     // Compatibility text
     var compatDiv = document.createElement('span');
     compatDiv.className = 'package-compatibility-text';
-    compatDiv.textContent = wording[lang]["compat"];
+    compatDiv.textContent = wording[lang]['compat'];
     compatRowDiv.appendChild(compatDiv);
     // Display processor statuses
     var statusDiv = document.createElement('div');
@@ -102,8 +102,8 @@ var renderCompability = function (pkg, packageDiv) {
     var iconDiv = document.createElement('img');
     iconDiv.className = 'processor-status-icon';
     var compatRowFrag = document.createDocumentFragment();
-    for (var _i = 0, triples_1 = triples; _i < triples_1.length; _i++) {
-        var t = triples_1[_i];
+    for (var _i = 0, triplets_1 = triplets; _i < triplets_1.length; _i++) {
+        var t = triplets_1[_i];
         var procStatusDiv = statusDiv.cloneNode(true);
         var status = pkg[t];
         var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
@@ -112,10 +112,7 @@ var renderCompability = function (pkg, packageDiv) {
         if (packageDiv &&
             simplifiedStatus === 'fail' &&
             compatFilter.indexOf(t) !== -1) {
-            if (!packageDiv.classList.contains('hide')) {
-                packageDiv.classList.add('hide');
-                hiddenCount += 1;
-            }
+            packageDiv.classList.add('hide');
         }
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
@@ -157,7 +154,7 @@ var parentCardFooterDiv = document.createElement('div');
 parentCardFooterDiv.className = 'package-card-footer';
 var parentWebsiteLink = document.createElement('a');
 parentWebsiteLink.className = 'package-website align-bottom';
-parentWebsiteLink.textContent = wording[lang]["website"];
+parentWebsiteLink.textContent = wording[lang]['website'];
 parentWebsiteLink.target = '_blank';
 var parentFullBtnSpan = document.createElement('span');
 parentFullBtnSpan.className = 'github-btn';
@@ -168,7 +165,7 @@ var parentBtnIcoSpan = document.createElement('span');
 parentBtnIcoSpan.className = 'gh-ico';
 var parentBtnTxtSpan = document.createElement('span');
 parentBtnTxtSpan.className = 'gh-text';
-parentBtnTxtSpan.textContent = wording[lang]["star"];
+parentBtnTxtSpan.textContent = wording[lang]['star'];
 var parentGitHubCount = document.createElement('a');
 parentGitHubCount.className = 'gh-count';
 parentGitHubCount.target = '_blank';
@@ -186,7 +183,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
         cardHeaderDiv.appendChild(nameDiv);
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
-        versionDiv.textContent = wording[lang]["version"] + package.Version;
+        versionDiv.textContent = wording[lang]['version'] + package.Version;
         cardHeaderDiv.appendChild(versionDiv);
         detailFrag.appendChild(cardHeaderDiv);
     }
@@ -203,7 +200,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     // Package Version for modal
     if (!isCard) {
         var versionDiv = parentDescriptionDiv.cloneNode(true);
-        versionDiv.textContent = wording[lang]["version"] + package.Version;
+        versionDiv.textContent = wording[lang]['version'] + package.Version;
         detailFrag.appendChild(versionDiv);
     }
     // Website link (with clause)
@@ -237,10 +234,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     if (oldCancellationToken !== null &&
         oldCancellationToken !== cancellationToken)
         return; //don't render old packages
-    console.log('loading packages');
-    var totalPackags = document.getElementsByClassName('total-packages')[0];
-    totalPackags.textContent =
-        wording[lang]["total-pkgs"] + (currentPackages.length - hiddenCount);
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
     packageDiv.addEventListener('click', updateModal.bind(this, package));
@@ -256,7 +249,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
 var renderPackages = function () {
     cancellationToken = new Object();
     clearPackages();
-    hiddenCount = 0;
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName('package-results')[0];
     if (currentPackages.length > 0) {
@@ -268,15 +260,19 @@ var renderPackages = function () {
     else {
         var noResultDiv = document.createElement('div');
         noResultDiv.className = 'card package-card';
-        noResultDiv.innerHTML = wording[lang]['no-results'] + '<b>' + query + '</b>';
+        noResultDiv.innerHTML =
+            wording[lang]['no-results'] + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
+    loadTotalPackages();
 };
 function clearPackages() {
     var mainDiv = document.getElementsByClassName('package-results')[0];
     while (mainDiv.firstChild) {
         mainDiv.removeChild(mainDiv.firstChild);
     }
+    var totalPackages = document.getElementsByClassName('total-packages')[0];
+    totalPackages.textContent = '';
 }
 function searchPackages(query) {
     var options = {
@@ -392,4 +388,21 @@ function clickInstallTab(platform) {
             console.log('Error: unexpected platform', platform);
     }
     installCode.setAttribute('readonly', 'true');
+}
+function loadTotalPackages() {
+    var totalPackages = document.getElementsByClassName('total-packages')[0];
+    var hiddenPackages = new Set();
+    for (var i = 0; i < currentPackages.length; i++) {
+        for (var _i = 0, triplets_2 = triplets; _i < triplets_2.length; _i++) {
+            var t = triplets_2[_i];
+            var status_1 = currentPackages[i][t];
+            var simplifiedStatus = status_1 === 'pass' || status_1 === 'fail' ? status_1 : 'unknown';
+            if (simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
+                hiddenPackages.add(currentPackages[i]);
+            }
+        }
+    }
+    totalPackages.textContent =
+        wording[lang]["total-pkgs"] +
+            (currentPackages.length - hiddenPackages.size);
 }

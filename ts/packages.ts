@@ -21,7 +21,7 @@ let allPackages,
     hiddenCount: number,
     selectedPackage;
 
-const triples = [
+const triplets = [
     'arm-uwp',
     'arm64-windows',
     'x64-linux',
@@ -35,7 +35,7 @@ let compatFilter = [];
 
 $(document).ready(function () {
     $('.install-tab-btn').click(function () {
-        clickInstallTab($(this).attr('id').substring(12));
+        clickInstallTab($(this).attr('id').substring(12) as Platform);
     });
 
     $('#install-copy').click(function () {
@@ -133,7 +133,7 @@ var renderCompability = function (pkg, packageDiv) {
     iconDiv.className = 'processor-status-icon';
 
     let compatRowFrag = document.createDocumentFragment();
-    for (var t of triples) {
+    for (var t of triplets) {
         var procStatusDiv = statusDiv.cloneNode(true);
         var status = pkg[t];
         var simplifiedStatus =
@@ -146,10 +146,7 @@ var renderCompability = function (pkg, packageDiv) {
             simplifiedStatus === 'fail' &&
             compatFilter.indexOf(t) !== -1
         ) {
-            if (!packageDiv.classList.contains('hide')) {
-                packageDiv.classList.add('hide');
-                hiddenCount += 1;
-            }
+            packageDiv.classList.add('hide');
         }
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
@@ -304,11 +301,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     )
         return; //don't render old packages
 
-    console.log('loading packages');
-    var totalPackags = document.getElementsByClassName('total-packages')[0];
-    totalPackags.textContent =
-        wording[lang]['total-pkgs'] + (currentPackages.length - hiddenCount);
-
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
 
@@ -330,7 +322,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
 var renderPackages = function () {
     cancellationToken = new Object();
     clearPackages();
-    hiddenCount = 0;
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName('package-results')[0];
     if (currentPackages.length > 0) {
@@ -347,6 +338,7 @@ var renderPackages = function () {
             wording[lang]['no-results'] + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
+    loadTotalPackages();
 };
 
 function clearPackages() {
@@ -354,6 +346,10 @@ function clearPackages() {
     while (mainDiv.firstChild) {
         mainDiv.removeChild(mainDiv.firstChild);
     }
+    let totalPackages: Element = document.getElementsByClassName(
+        'total-packages'
+    )[0];
+    totalPackages.textContent = '';
 }
 
 function searchPackages(query) {
@@ -460,7 +456,7 @@ function updateModal(pkg) {
     document.getElementById('pkg-modal-files').replaceWith(fileDiv);
 }
 
-function clickInstallTab(platform) {
+function clickInstallTab(platform: Platform): void {
     let installCode = document.getElementById('install-code');
     installCode.setAttribute('readonly', 'false');
     let windowsTab = document.getElementById('install-tab-windows');
@@ -482,4 +478,24 @@ function clickInstallTab(platform) {
             console.log('Error: unexpected platform', platform);
     }
     installCode.setAttribute('readonly', 'true');
+}
+
+function loadTotalPackages(): void {
+    let totalPackages: Element = document.getElementsByClassName(
+        'total-packages'
+    )[0];
+    let hiddenPackages = new Set();
+    for (let i = 0; i < currentPackages.length; i++) {
+        for (let t of triplets) {
+            let status = currentPackages[i][t];
+            let simplifiedStatus =
+                status === 'pass' || status === 'fail' ? status : 'unknown';
+            if (simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
+                hiddenPackages.add(currentPackages[i]);
+            }
+        }
+    }
+    totalPackages.textContent =
+        wording[lang]["total-pkgs"] +
+        (currentPackages.length - hiddenPackages.size);
 }

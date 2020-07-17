@@ -1,4 +1,6 @@
-var lang = (navigator.language).substring(0, 2); //get the prefix for language
+//get the prefix for language
+var lang = 'en'; //Since there is only one language, set all visitors to english
+// let lang = navigator.language.substring(0, 2); // TODO: use this later to gets the user's actual current language
 function copyCodePanel(id) {
     var temp = document.getElementById(id);
     temp.select();
