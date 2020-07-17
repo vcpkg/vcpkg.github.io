@@ -1,5 +1,5 @@
-var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
-var triples = [
+var allPackages, currentPackages, cancellationToken, selectedPackage;
+var triplets = [
     'arm-uwp',
     'arm64-windows',
     'x64-linux',
@@ -88,8 +88,8 @@ var renderCompability = function (pkg, packageDiv) {
     var iconDiv = document.createElement('img');
     iconDiv.className = 'processor-status-icon';
     var compatRowFrag = document.createDocumentFragment();
-    for (var _i = 0, triples_1 = triples; _i < triples_1.length; _i++) {
-        var t = triples_1[_i];
+    for (var _i = 0, triplets_1 = triplets; _i < triplets_1.length; _i++) {
+        var t = triplets_1[_i];
         var procStatusDiv = statusDiv.cloneNode(true);
         var status = pkg[t];
         var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
@@ -98,10 +98,7 @@ var renderCompability = function (pkg, packageDiv) {
         if (packageDiv &&
             simplifiedStatus === 'fail' &&
             compatFilter.indexOf(t) !== -1) {
-            if (!packageDiv.classList.contains('hide')) {
-                packageDiv.classList.add('hide');
-                hiddenCount += 1;
-            }
+            packageDiv.classList.add('hide');
         }
         var procStatusFrag = document.createDocumentFragment();
         var procStatusIconDiv = iconDiv.cloneNode(true);
@@ -223,10 +220,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     if (oldCancellationToken !== null &&
         oldCancellationToken !== cancellationToken)
         return; //don't render old packages
-    console.log('loading packages');
-    var totalPackags = document.getElementsByClassName('total-packages')[0];
-    totalPackags.textContent =
-        'Total: ' + (currentPackages.length - hiddenCount) + ' Packages';
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
     packageDiv.addEventListener('click', updateModal.bind(this, package));
@@ -242,7 +235,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
 var renderPackages = function () {
     cancellationToken = new Object();
     clearPackages();
-    hiddenCount = 0;
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName('package-results')[0];
     if (currentPackages.length > 0) {
@@ -257,12 +249,15 @@ var renderPackages = function () {
         noResultDiv.innerHTML = 'No results for ' + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
+    loadTotalPackages();
 };
 function clearPackages() {
     var mainDiv = document.getElementsByClassName('package-results')[0];
     while (mainDiv.firstChild) {
         mainDiv.removeChild(mainDiv.firstChild);
     }
+    var totalPackages = document.getElementsByClassName('total-packages')[0];
+    totalPackages.textContent = '';
 }
 function searchPackages(query) {
     var options = {
@@ -378,4 +373,21 @@ function clickInstallTab(platform) {
             console.log('Error: unexpected platform', platform);
     }
     installCode.setAttribute('readonly', 'true');
+}
+function loadTotalPackages() {
+    var totalPackages = document.getElementsByClassName('total-packages')[0];
+    var hiddenPackages = new Set();
+    for (var i = 0; i < currentPackages.length; i++) {
+        for (var _i = 0, triplets_2 = triplets; _i < triplets_2.length; _i++) {
+            var t = triplets_2[_i];
+            var status_1 = currentPackages[i][t];
+            var simplifiedStatus = status_1 === 'pass' || status_1 === 'fail' ? status_1 : 'unknown';
+            if (simplifiedStatus === 'fail' &&
+                compatFilter.indexOf(t) !== -1) {
+                hiddenPackages.add(currentPackages[i]);
+            }
+        }
+    }
+    totalPackages.textContent =
+        'Total: ' + (currentPackages.length - hiddenPackages.size) + ' Packages';
 }

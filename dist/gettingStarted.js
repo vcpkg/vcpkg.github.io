@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
     $('.gs-tab-btn').click(function () {
         var id = $(this).attr('id');
-        clickGetStartedTab(id.substring(7));
+        clickGetStartedTab(id.split('-')[2]);
     });
 });
 function clickGetStartedTab(platform) {
