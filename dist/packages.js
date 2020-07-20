@@ -99,8 +99,6 @@ var renderCompability = function (pkg, packageDiv) {
     // Display processor statuses
     var statusDiv = document.createElement('div');
     statusDiv.className = 'processor-status';
-    var iconDiv = document.createElement('img');
-    iconDiv.className = 'processor-status-icon';
     var compatRowFrag = document.createDocumentFragment();
     for (var _i = 0, triplets_1 = triplets; _i < triplets_1.length; _i++) {
         var t = triplets_1[_i];
@@ -114,15 +112,18 @@ var renderCompability = function (pkg, packageDiv) {
             compatFilter.indexOf(t) !== -1) {
             packageDiv.classList.add('hide');
         }
-        var procStatusFrag = document.createDocumentFragment();
-        var procStatusIconDiv = iconDiv.cloneNode(true);
-        procStatusIconDiv.setAttribute('alt', simplifiedStatus);
-        procStatusIconDiv.setAttribute('src', '../assets/' + simplifiedStatus + '.png');
-        procStatusFrag.appendChild(procStatusIconDiv);
-        var procStatusName = document.createElement('span');
-        procStatusName.textContent = t;
-        procStatusFrag.appendChild(procStatusName);
-        procStatusDiv.appendChild(procStatusFrag);
+        var statusIcon = void 0;
+        switch (simplifiedStatus) {
+            case "pass":
+                statusIcon = "✓";
+                break;
+            case "fail":
+                statusIcon = "!";
+                break;
+            default:
+                statusIcon = "?";
+        }
+        procStatusDiv.textContent = statusIcon + ' ' + t;
         compatRowFrag.appendChild(procStatusDiv);
     }
     compatRowDiv.appendChild(compatRowFrag);
@@ -403,6 +404,6 @@ function loadTotalPackages() {
         }
     }
     totalPackages.textContent =
-        wording[lang]["total-pkgs"] +
+        wording[lang]['total-pkgs'] +
             (currentPackages.length - hiddenPackages.size);
 }

@@ -129,9 +129,6 @@ var renderCompability = function (pkg, packageDiv) {
     let statusDiv = document.createElement('div');
     statusDiv.className = 'processor-status';
 
-    var iconDiv = document.createElement('img');
-    iconDiv.className = 'processor-status-icon';
-
     let compatRowFrag = document.createDocumentFragment();
     for (var t of triplets) {
         var procStatusDiv = statusDiv.cloneNode(true);
@@ -148,20 +145,20 @@ var renderCompability = function (pkg, packageDiv) {
         ) {
             packageDiv.classList.add('hide');
         }
-        var procStatusFrag = document.createDocumentFragment();
-        var procStatusIconDiv = iconDiv.cloneNode(true);
-        (<Element>procStatusIconDiv).setAttribute('alt', simplifiedStatus);
-        (<Element>procStatusIconDiv).setAttribute(
-            'src',
-            '../assets/' + simplifiedStatus + '.png'
-        );
-        procStatusFrag.appendChild(procStatusIconDiv);
 
-        var procStatusName = document.createElement('span');
-        procStatusName.textContent = t;
-        procStatusFrag.appendChild(procStatusName);
+        let statusIcon;
+        switch (simplifiedStatus) {
+            case 'pass':
+                statusIcon = '✓';
+                break;
+            case 'fail':
+                statusIcon = '!';
+                break;
+            default:
+                statusIcon = '?';
+        }
 
-        procStatusDiv.appendChild(procStatusFrag);
+        procStatusDiv.textContent = statusIcon + ' ' + t;
         compatRowFrag.appendChild(procStatusDiv);
     }
     compatRowDiv.appendChild(compatRowFrag);
