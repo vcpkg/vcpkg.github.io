@@ -496,6 +496,6 @@ function loadTotalPackages(): void {
         }
     }
     totalPackages.textContent =
-        wording[lang]["total-pkgs"] +
+        wording[lang]['total-pkgs'] +
         (currentPackages.length - hiddenPackages.size);
 }

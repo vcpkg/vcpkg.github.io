@@ -1,161 +1,259 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+        />
+        <link href="../css/common.css" rel="stylesheet" />
+        <link href="../css/index.css" rel="stylesheet" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../dist/index.js"></script>
 
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link href="../css/index.css" rel="stylesheet" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="../dist/index.js"></script>
-    <link rel="stylesheet"
-        href="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/df-ef4fcb/44-8f633e/2a-941562/14-f79d63/9a-fc1a3b/a2-8ee862/1f-ff69fe/ac-c7fd03?ver=2.0"
-        type="text/css" media="all" />
-    <link rel="stylesheet" href="https://statics-marketingsites-wcus-ms-com.akamaized.net/statics/override.css?c=7"
-        type="text/css" />
-    <script
-        src="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/shell/_scrf/js/themes=default/54-af9f9f/c0-247156/de-099401/e1-a50eee/e7-954872/d8-97d509/f0-251fe2/46-be1318/77-04a268/11-240c7b/63-077520/a4-34de62/1b-c96630/db-bc0148/dc-7e9864/78-4c7d22/e1-c35781/23-c64e70/cd-23d3b0/6d-1e7ed0/b7-cadaa7/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/92-10345d/79-499886/7e-cda2d3/14-983080/ab-30f5b9/e0-3c9860/91-97a04f/1f-100dea/33-abe4df/4d-6e4c52?ver=2.0&iife=1"></script>
-    <script>
-        $(document).ready(function () {
-            $('#loadNavBar').load('header.html');
-            $('#loadFooter').load('footer.html');
-        });
-    </script>
-
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-</head>
-<div id="loadNavBar"></div>
-
-<body>
-    <header class="masthead">
-        <div class="col-md-6 title-container">
-            <img class="logo-img" src="../assets/logo.png" alt="vcpkg logo" />
-            <div class="title-text">
-                <h3 class="vcpkg-title">VCPKG</h3>
-                <p class="subtitle">A cross-platform C++ package manager</p>
-                <a class="github-button" href="https://github.com/microsoft/vcpkg" data-icon="octicon-star"
-                    data-show-count="true" data-size="large" aria-label="Star microsoft/vcpkg on GitHub">Star</a>
-            </div>
-        </div>
-        <div class="col-md-8 offset-md-2">
-            <div class="row title-buttons">
-                <div class="col-md-6">
-                    <a role="button" class="btn-lg btn-primary btn-block vc-btn text-nowrap"
-                        href="https://github.com/microsoft/vcpkg">Find Us on Github</a>
-                </div>
-                <div class="col-md-6">
-                    <a role="button" class="btn-lg btn-primary btn-block vc-btn text-nowrap"
-                        href="gettingStarted.html">Get VCPKG</a>
-                </div>
-            </div>
-        </div>
-        <div class="search-bar">
-            <input class="idx-search-box" id="idx-search" type="search" name="search" placeholder="Search Packages"
-                autocomplete="off" onkeypress="checkEnter(event)" />
-            <span class="search-icon"></span>
-        </div>
-    </header>
-    <div class="questions">
-        <h1>What is VCPKG?</h1>
-        <p class="what-is">
-            VCPKG helps you manage C and C++ libraries on Windows, Linux and
-            MacOS. This tool and ecosystem are constantly evolving; your
-            involvement is vital to its success!
-        </p>
-        <h1 class="questions2">Why Us?</h1>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </head>
+    <div class="alert alert-warning" role="alert">
+        <span class="text-center"
+            >This website is currently in development. Anything you see is
+            subject to change.
+        </span>
+        <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+        >
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
-    <div class="why-us">
-        <div class="row why-us-row">
-            <div class="col-md-3 border-custom why-us-box">
-                <p class="examples">
-                    Cross Platform
-                </p>
-                <div class="why-us-text">
-                    <p class="padding">
-                        Available for Windows, Mac, and Linux!
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-1 blank-space"></div>
-            <div class="col-md-3 border-custom why-us-box">
-                <p class="examples">
-                    Open Source
-                </p>
-                <div class="why-us-text">
-                    <p class="padding">
-                        Updated libraries from active contributors
-                    </p>
-                </div>
-            </div>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand align-baseline" href="index.html"
+            ><strong>vcpkg</strong></a
+        >
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="row why-us-row">
-            <div class="col-md-3 border-custom why-us-box">
-                <p class="examples">
-                    1300+ Libraries
-                </p>
-                <div class="why-us-text">
-                    <p class="padding">
-                        We have over 1300 libraries cross-tested for
-                        compatibility
-                    </p>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="gettingStarted.html"
+                        >Getting Started
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="packages.html">Packages</a>
+                </li>
+                <li class="nav-item active">
+                    <a
+                        class="nav-link"
+                        href="https://vcpkg.readthedocs.io/en/latest/"
+                    >
+                        Documentation
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a
+                        class="nav-link"
+                        href="https://github.com/microsoft/vcpkg"
+                        >GitHub</a
+                    >
+                </li>
+                <li class="nav-item active">
+                    <a
+                        class="nav-link"
+                        href="https://devblogs.microsoft.com/cppblog/?s=vcpkg"
+                        >Blog</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <body>
+        <header class="masthead">
+            <div class="col-md-6 title-container">
+                <img
+                    class="logo-img"
+                    src="../assets/placeholder.png"
+                    alt="vcpkg logo"
+                />
+                <div class="title-text">
+                    <h3 class="vcpkg-title">VCPKG</h3>
+                    <p class="subtitle">A cross-platform C++ package manager</p>
+                    <a
+                        class="github-button"
+                        href="https://github.com/microsoft/vcpkg"
+                        data-icon="octicon-star"
+                        data-show-count="true"
+                        data-size="large"
+                        aria-label="Star microsoft/vcpkg on GitHub"
+                        >Star</a
+                    >
                 </div>
             </div>
-            <div class="col-md-1 blank-space"></div>
-            <div class="col-md-3 border-custom why-us-box">
-                <p class="examples">
-                    Build From Source
-                </p>
-                <div class="why-us-text">
-                    <p class="padding">
-                        You control how to build the library directly from
-                        source files
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" id="stay-in-touch">
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
-                <h1 class="stay">Stay in Touch</h1>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-8 offset-md-2">
-                <div class="row justify-content-center">
-                    <ul class="media-link">
-                        <li class="media-link-item">
-                            <a href="#stay-in-touch" onclick="start_email()"><img class="media-link-img-big"
-                                    src="../assets/email icon.png" alt="email us" /></a>
-                            <p class="text-center">Email</p>
-                        </li>
-                        <li class="media-link-item">
-                            <a href="https://cppalliance.org/slack/"><img class="media-link-img-small"
-                                    src="../assets/slack.png" alt="vcpkg slack" /></a>
-                            <p class="text-center">Slack</p>
-                        </li>
-                        <li class="media-link-item">
-                            <a href="https://discord.com/invite/ZPErMGW"><img class="media-link-img"
-                                    src="../assets/discord.png" alt="vcpkg discord" /></a>
-                            <p class="text-center">Discord</p>
-                        </li>
-                        <li class="media-link-item">
-                            <a href="https://github.com/microsoft/vcpkg"><img class="media-link-img"
-                                    src="../assets/github.png" alt="vcpkg github" /></a>
-                            <p class="text-center">GitHub</p>
-                        </li>
-                    </ul>
+                <div class="row title-buttons">
+                    <div class="col-md-6">
+                        <a
+                            role="button"
+                            class="btn-lg btn-primary btn-block vc-btn text-nowrap"
+                            href="https://github.com/microsoft/vcpkg"
+                            >Find Us on Github</a
+                        >
+                    </div>
+                    <div class="col-md-6">
+                        <a
+                            role="button"
+                            class="btn-lg btn-primary btn-block vc-btn text-nowrap"
+                            href="gettingStarted.html"
+                            >Get VCPKG</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input
+                    class="idx-search-box"
+                    id="idx-search"
+                    type="search"
+                    name="search"
+                    placeholder="Search Packages"
+                    autocomplete="off"
+                    onkeypress="checkEnter(event)"
+                />
+                <span class="search-icon"></span>
+            </div>
+        </header>
+        <div class="questions">
+            <h1>What is VCPKG?</h1>
+            <p class="what-is">
+                VCPKG helps you manage C and C++ libraries on Windows, Linux and
+                MacOS. This tool and ecosystem are constantly evolving; your
+                involvement is vital to its success!
+            </p>
+            <h1 class="questions2">Why Us?</h1>
+        </div>
+        <div class="why-us">
+            <div class="row why-us-row">
+                <div class="col-md-3 border-custom why-us-box">
+                    <p class="examples">
+                        Cross Platform
+                    </p>
+                    <div class="why-us-text">
+                        <p class="padding">
+                            Available for Windows, Mac, and Linux!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-1 blank-space"></div>
+                <div class="col-md-3 border-custom why-us-box">
+                    <p class="examples">
+                        Open Source
+                    </p>
+                    <div class="why-us-text">
+                        <p class="padding">
+                            Updated libraries from active contributors
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row why-us-row">
+                <div class="col-md-3 border-custom why-us-box">
+                    <p class="examples">
+                        1300+ Libraries
+                    </p>
+                    <div class="why-us-text">
+                        <p class="padding">
+                            We have over 1300 libraries cross-tested for
+                            compatibility
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-1 blank-space"></div>
+                <div class="col-md-3 border-custom why-us-box">
+                    <p class="examples">
+                        Build From Source
+                    </p>
+                    <div class="why-us-text">
+                        <p class="padding">
+                            You control how to build the library directly from
+                            source files
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<div id="loadFooter"></div>
-
+        <div class="container-fluid bottom-border" id="stay-in-touch">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <h1 class="stay">Stay in Touch</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="row justify-content-center">
+                        <ul class="media-link">
+                            <li class="media-link-item">
+                                <a href="#stay-in-touch" onclick="start_email()"
+                                    ><img
+                                        class="media-link-img-big"
+                                        src="../assets/email icon.png"
+                                        alt="email us"
+                                /></a>
+                                <p class="text-center">Email</p>
+                            </li>
+                            <li class="media-link-item">
+                                <a href="https://cppalliance.org/slack/"
+                                    ><img
+                                        class="media-link-img-small"
+                                        src="../assets/slack.png"
+                                        alt="vcpkg slack"
+                                /></a>
+                                <p class="text-center">Slack</p>
+                            </li>
+                            <li class="media-link-item">
+                                <a href="https://discord.com/invite/ZPErMGW"
+                                    ><img
+                                        class="media-link-img"
+                                        src="../assets/discord.png"
+                                        alt="vcpkg discord"
+                                /></a>
+                                <p class="text-center">Discord</p>
+                            </li>
+                            <li class="media-link-item">
+                                <a href="https://github.com/microsoft/vcpkg"
+                                    ><img
+                                        class="media-link-img"
+                                        src="../assets/github.png"
+                                        alt="vcpkg github"
+                                /></a>
+                                <p class="text-center">GitHub</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
