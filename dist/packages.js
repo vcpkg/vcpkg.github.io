@@ -371,21 +371,17 @@ function clickInstallTab(platform) {
     installCode.setAttribute('readonly', 'false');
     var windowsTab = document.getElementById('install-tab-windows');
     var unixTab = document.getElementById('install-tab-unix');
-    switch (platform) {
-        case 'windows':
-            installCode.textContent =
-                '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
-            windowsTab.classList.add('selected');
-            unixTab.classList.remove('selected');
-            break;
-        case 'unix':
-            installCode.textContent =
-                './vcpkg/vcpkg install ' + selectedPackage.Name;
-            windowsTab.classList.remove('selected');
-            unixTab.classList.add('selected');
-            break;
-        default:
-            console.log('Error: unexpected platform', platform);
+    if (platform === 'windows') {
+        installCode.textContent =
+            '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
+        windowsTab.classList.add('selected');
+        unixTab.classList.remove('selected');
+    }
+    else {
+        installCode.textContent =
+            './vcpkg/vcpkg install ' + selectedPackage.Name;
+        windowsTab.classList.remove('selected');
+        unixTab.classList.add('selected');
     }
     installCode.setAttribute('readonly', 'true');
 }
@@ -403,6 +399,6 @@ function loadTotalPackages() {
         }
     }
     totalPackages.textContent =
-        wording[lang]["total-pkgs"] +
+        wording[lang]['total-pkgs'] +
             (currentPackages.length - hiddenPackages.size);
 }
