@@ -458,21 +458,16 @@ function clickInstallTab(platform: Platform): void {
     installCode.setAttribute('readonly', 'false');
     let windowsTab = document.getElementById('install-tab-windows');
     let unixTab = document.getElementById('install-tab-unix');
-    switch (platform) {
-        case 'windows':
-            installCode.textContent =
-                '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
-            windowsTab.classList.add('selected');
-            unixTab.classList.remove('selected');
-            break;
-        case 'unix':
-            installCode.textContent =
-                './vcpkg/vcpkg install ' + selectedPackage.Name;
-            windowsTab.classList.remove('selected');
-            unixTab.classList.add('selected');
-            break;
-        default:
-            console.log('Error: unexpected platform', platform);
+    if (platform === 'windows') {
+        installCode.textContent =
+            '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
+        windowsTab.classList.add('selected');
+        unixTab.classList.remove('selected');
+    } else {
+        installCode.textContent =
+            './vcpkg/vcpkg install ' + selectedPackage.Name;
+        windowsTab.classList.remove('selected');
+        unixTab.classList.add('selected');
     }
     installCode.setAttribute('readonly', 'true');
 }

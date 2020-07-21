@@ -114,14 +114,14 @@ var renderCompability = function (pkg, packageDiv) {
         }
         var statusIcon = void 0;
         switch (simplifiedStatus) {
-            case "pass":
-                statusIcon = "✓";
+            case 'pass':
+                statusIcon = '✓';
                 break;
-            case "fail":
-                statusIcon = "!";
+            case 'fail':
+                statusIcon = '!';
                 break;
             default:
-                statusIcon = "?";
+                statusIcon = '?';
         }
         procStatusDiv.textContent = statusIcon + ' ' + t;
         compatRowFrag.appendChild(procStatusDiv);
@@ -372,21 +372,17 @@ function clickInstallTab(platform) {
     installCode.setAttribute('readonly', 'false');
     var windowsTab = document.getElementById('install-tab-windows');
     var unixTab = document.getElementById('install-tab-unix');
-    switch (platform) {
-        case 'windows':
-            installCode.textContent =
-                '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
-            windowsTab.classList.add('selected');
-            unixTab.classList.remove('selected');
-            break;
-        case 'unix':
-            installCode.textContent =
-                './vcpkg/vcpkg install ' + selectedPackage.Name;
-            windowsTab.classList.remove('selected');
-            unixTab.classList.add('selected');
-            break;
-        default:
-            console.log('Error: unexpected platform', platform);
+    if (platform === 'windows') {
+        installCode.textContent =
+            '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
+        windowsTab.classList.add('selected');
+        unixTab.classList.remove('selected');
+    }
+    else {
+        installCode.textContent =
+            './vcpkg/vcpkg install ' + selectedPackage.Name;
+        windowsTab.classList.remove('selected');
+        unixTab.classList.add('selected');
     }
     installCode.setAttribute('readonly', 'true');
 }

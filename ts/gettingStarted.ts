@@ -25,7 +25,6 @@ function clickGetStartedTab(platform: Platform) {
 
     $('.show').removeClass('show');
     $('.selected').removeClass('selected');
-
     document.getElementById('gs-btn-' + os).classList.add('selected');
     for (var i = 0; i < elems.length; i++) {
         e = elems[i];

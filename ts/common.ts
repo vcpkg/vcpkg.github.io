@@ -1,4 +1,4 @@
-type Platform = 'windows' | 'unix' | 'mac' | 'linux';
+type Platform = 'windows' | 'mac' | 'linux';
 
 //get the prefix for language
 let lang = 'en'; //Since there is only one language, set all visitors to english
