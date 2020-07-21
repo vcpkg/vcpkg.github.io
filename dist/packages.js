@@ -114,14 +114,14 @@ var renderCompability = function (pkg, packageDiv) {
         }
         var statusIcon = void 0;
         switch (simplifiedStatus) {
-            case "pass":
-                statusIcon = "✓";
+            case 'pass':
+                statusIcon = '✓';
                 break;
-            case "fail":
-                statusIcon = "!";
+            case 'fail':
+                statusIcon = '!';
                 break;
             default:
-                statusIcon = "?";
+                statusIcon = '?';
         }
         procStatusDiv.textContent = statusIcon + ' ' + t;
         compatRowFrag.appendChild(procStatusDiv);
