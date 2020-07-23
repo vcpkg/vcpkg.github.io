@@ -93,13 +93,15 @@
         <header class="masthead">
             <div class="col-md-6 title-container">
                 <img
-                    class="logo-img"
+                    class="hide logo-img"
                     src="../assets/placeholder.png"
                     alt="vcpkg logo"
                 />
                 <div class="title-text">
-                    <h3 class="vcpkg-title">VCPKG</h3>
-                    <p class="subtitle">A cross-platform C++ package manager</p>
+                    <h3 class="vcpkg-title">vcpkg</h3>
+                    <p class="subtitle">
+                        Over 1300 C++ libraries built from source
+                    </p>
                     <a
                         class="github-button"
                         href="https://github.com/microsoft/vcpkg"
@@ -113,20 +115,12 @@
             </div>
             <div class="col-md-8 offset-md-2">
                 <div class="row title-buttons">
-                    <div class="col-md-6">
-                        <a
-                            role="button"
-                            class="btn-lg btn-primary btn-block vc-btn text-nowrap"
-                            href="https://github.com/microsoft/vcpkg"
-                            >Find Us on Github</a
-                        >
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 offset-md-3">
                         <a
                             role="button"
                             class="btn-lg btn-primary btn-block vc-btn text-nowrap"
                             href="gettingStarted.html"
-                            >Get VCPKG</a
+                            >Get vcpkg</a
                         >
                     </div>
                 </div>
@@ -145,34 +139,47 @@
             </div>
         </header>
         <div class="questions">
-            <h1>What is VCPKG?</h1>
+            <h1>What is vcpkg?</h1>
             <p class="what-is">
-                VCPKG helps you manage C and C++ libraries on Windows, Linux and
-                MacOS. This tool and ecosystem are constantly evolving; your
-                involvement is vital to its success!
+                vcpkg is a C/C++ package manager that builds libraries from
+                source for you and works on Windows, Linux, and macOS.
             </p>
-            <h1 class="questions2">Why Us?</h1>
+            <img
+                class="gif"
+                src="../assets/install.gif"
+                alt="gif of installing a package using vcpkg"
+            />
+            <h1 class="questions2">Why vcpkg?</h1>
         </div>
         <div class="why-us">
             <div class="row why-us-row">
                 <div class="col-md-3 border-custom why-us-box">
-                    <p class="examples">
-                        Cross Platform
-                    </p>
+                    <div class="title">
+                        <p id="left" class="examples text-center">
+                            vcpkg is easy to use
+                        </p>
+                    </div>
                     <div class="why-us-text">
                         <p class="padding">
-                            Available for Windows, Mac, and Linux!
+                            You don’t have to look up build instructions for
+                            every dependency; just run <code>vcpkg install &lt;library name&gt;</code> and you’re good to go.
                         </p>
                     </div>
                 </div>
+
                 <div class="col-md-1 blank-space"></div>
                 <div class="col-md-3 border-custom why-us-box">
-                    <p class="examples">
-                        Open Source
-                    </p>
+                    <div class="title">
+                        <p id="right" class="examples text-center">
+                            vcpkg is cross-platform and architecture-agnostic
+                        </p>
+                    </div>
                     <div class="why-us-text">
                         <p class="padding">
-                            Updated libraries from active contributors
+                            vcpkg runs on Windows, Linux, and macOS and builds
+                            libraries for these platforms. Support for a variety
+                            of architectures by default, or you can define your
+                            own custom builds.
                         </p>
                     </div>
                 </div>
@@ -180,25 +187,33 @@
 
             <div class="row why-us-row">
                 <div class="col-md-3 border-custom why-us-box">
-                    <p class="examples">
-                        1300+ Libraries
-                    </p>
+                    <div class="title">
+                        <p id="left2" class="examples text-center">
+                            vcpkg has a high-quality, curated library catalog
+                        </p>
+                    </div>
+
                     <div class="why-us-text">
                         <p class="padding">
-                            We have over 1300 libraries cross-tested for
-                            compatibility
+                            vcpkg has over 1300 libraries that are routinely
+                            built against each other in our CI process. This
+                            keeps the catalog working all the time, ensuring
+                            reliability and build reproducibility.
                         </p>
                     </div>
                 </div>
+
                 <div class="col-md-1 blank-space"></div>
                 <div class="col-md-3 border-custom why-us-box">
-                    <p class="examples">
-                        Build From Source
-                    </p>
+                    <div class="title">
+                        <p id="right2" class="examples text-center">
+                            vcpkg is an open source project
+                        </p>
+                    </div>
                     <div class="why-us-text">
                         <p class="padding">
-                            You control how to build the library directly from
-                            source files
+                            You can view, fork, or contribute to our source code
+                            and build recipes on GitHub.
                         </p>
                     </div>
                 </div>
@@ -206,7 +221,7 @@
         </div>
         <div class="container-fluid bottom-border" id="stay-in-touch">
             <div class="row">
-                <div class="col-md-4 offset-md-4">
+                <div class="col-md-6 offset-md-3">
                     <h1 class="stay">Stay in Touch</h1>
                 </div>
             </div>
@@ -256,4 +271,35 @@
             </div>
         </div>
     </body>
+    <footer role="contentinfo">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1 col-sm-5 col-5">
+                <p class="footer-text no-marg">Made with ♥ in Redmond</p>
+            </div>
+            <div
+                class="col-lg-4 offset-lg-1 col-md-3 offset-md-1 text-nowrap right-align col-sm-4 col-4"
+            >
+                <div class="no-marg">
+                    <p class="footer-text inline no-marg">
+                        <a
+                            class="privacy"
+                            href="https://go.microsoft.com/fwlink/?LinkId=521839"
+                            data-mscc-ic="false"
+                            >Privacy</a
+                        >
+                    </p>
+                    <p class="footer-text left-marg inline no-marg">
+                        © 2020 Microsoft
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-3">
+                <img
+                    class="ms-logo-footer"
+                    src="../assets/Microsoft-logo.svg"
+                    alt="Microsoft logo"
+                />
+            </div>
+        </div>
+    </footer>
 </html>
