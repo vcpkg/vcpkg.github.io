@@ -88,12 +88,11 @@
             </ul>
         </div>
     </nav>
+
     <body>
-        <br />
-        <div id="title">
-            <h3 class="text-center page-title">Getting Started</h3>
+        <div class="header-text">
+            <h1>Getting Started</h1>
         </div>
-        <br />
         <div class="tablist col-md-10 offset-md-1 centered" role="tablist">
             <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-windows">
                 Windows
@@ -159,8 +158,8 @@
                             using vcpkg as a submodule for CMake projects, and
                             installing it globally for Visual Studio projects.
                             We recommend somewhere like
-                            <mark>C:\src\vcpkg</mark> or
-                            <mark>C:\dev\vcpkg</mark>, since otherwise you may
+                            <code>C:\src\vcpkg</code> or
+                            <code>C:\dev\vcpkg</code>, since otherwise you may
                             run into path issues for some port build systems.
                         </p>
                         <p class="text-desc unix">
@@ -339,7 +338,7 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vcpkg.bat</t
                                 After this, you can now create a New non-CMake
                                 Project (or open an existing one). All installed
                                 libraries are immediately ready to be
-                                <mark>#include</mark>'d and used in your project
+                                <code>#include</code>'d and used in your project
                                 without additional configuration.
                             </p>
                             <p class="text-desc">
@@ -395,14 +394,14 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vcpkg.bat</t
                             >
                             <p class="text-desc windows">
                                 With CMake, you will still need to
-                                <mark>find_package</mark>
+                                <code>find_package</code>
                                 and the like to use the libraries. Check out the
                                 CMake section for more information, including on
                                 using CMake with an IDE.
                             </p>
                             <p class="text-desc unix">
                                 With CMake, you will still need to
-                                <mark>find_package</mark>
+                                <code>find_package</code>
                                 and the like to use the libraries. Check out the
                                 CMake section for more information on how best
                                 to use vcpkg with CMake, and CMake Tools for
@@ -436,9 +435,7 @@ git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vcpkg.bat</t
             <div class="col-md-5 offset-md-1 col-sm-5 col-5">
                 <p class="footer-text no-marg">Made with ♥ in Redmond</p>
             </div>
-            <div
-                class="col-md-4 text-nowrap right-align col-sm-4 col-4"
-            >
+            <div class="col-md-4 text-nowrap right-align col-sm-4 col-4">
                 <div class="no-marg">
                     <p class="footer-text inline no-marg">
                         <a
