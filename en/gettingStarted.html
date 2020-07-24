@@ -153,19 +153,20 @@
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
                         <p class="text-desc windows">
-                            First, download and bootstrap vcpkg itself; it can
-                            be installed anywhere, but generally we recommend
-                            using vcpkg as a submodule for CMake projects, and
-                            installing it globally for Visual Studio projects.
-                            We recommend somewhere like
+                            First, download and bootstrap vcpkg itself with the
+                            CLI command below; it can be installed anywhere, but
+                            generally we recommend using vcpkg as a submodule
+                            for CMake projects, and installing it globally for
+                            Visual Studio projects. We recommend somewhere like
                             <code>C:\src\vcpkg</code> or
                             <code>C:\dev\vcpkg</code>, since otherwise you may
                             run into path issues for some port build systems.
                         </p>
                         <p class="text-desc unix">
-                            First, download and bootstrap vcpkg itself; it can
-                            be installed anywhere, but generally we recommend
-                            using vcpkg as a submodule for CMake projects.
+                            First, download and bootstrap vcpkg itself with the
+                            CLI command below; it can be installed anywhere, but
+                            generally we recommend using vcpkg as a submodule
+                            for CMake projects.
                         </p>
                         <div id="tab-container" class="tabs">
                             <div class="tablist" role="tablist">
@@ -191,14 +192,14 @@
                                 class="tab-panel windows"
                                 readonly
                             >
-git clone https:github.com/Microsoft/vcpkg.git && .\vcpkg\bootstrap-vcpkg.bat</textarea
+git clone https://github.com/Microsoft/vcpkg.git -and .\vcpkg\bootstrap-vcpkg.bat</textarea
                             >
                             <textarea
                                 id="unix-step1"
                                 class="tab-panel unix"
                                 readonly
                             >
-git clone https:github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vcpkg.bat</textarea
+git clone https://github.com/Microsoft/vcpkg.git && ./vcpkg/bootstrap-vcpkg.bat</textarea
                             >
                         </div>
                     </div>
