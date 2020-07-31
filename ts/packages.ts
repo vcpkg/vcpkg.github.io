@@ -147,18 +147,26 @@ var renderCompability = function (pkg, packageDiv) {
         }
 
         let statusIcon;
+        let alt_text;
         switch (simplifiedStatus) {
             case 'pass':
                 statusIcon = '✓';
+                alt_text = 'Pass';
                 break;
             case 'fail':
                 statusIcon = '!';
+                alt_text = 'Fail';
                 break;
             default:
                 statusIcon = '?';
+                alt_text = 'Unknown';
         }
 
         procStatusDiv.textContent = statusIcon + ' ' + t;
+        let spanTip = document.createElement('span');
+        spanTip.textContent = alt_text;
+        procStatusDiv.appendChild(spanTip);
+        (<HTMLDivElement>procStatusDiv).classList.add('tip');
         compatRowFrag.appendChild(procStatusDiv);
     }
     compatRowDiv.appendChild(compatRowFrag);

@@ -6,11 +6,11 @@ var wording = {
         'website': 'Website',
         'star': 'Star',
         'total-pkgs': 'Total Packages: ',
-        'no-results': 'No results for ',
+        'no-results': 'No results for '
     },
     'zh': {
-        'version': 'zh-filler',
-    },
+        'version': 'zh-filler'
+    }
 };
 var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
 var triplets = [
@@ -113,17 +113,25 @@ var renderCompability = function (pkg, packageDiv) {
             packageDiv.classList.add('hide');
         }
         var statusIcon = void 0;
+        var alt_text = void 0;
         switch (simplifiedStatus) {
             case 'pass':
                 statusIcon = '✓';
+                alt_text = "Pass";
                 break;
             case 'fail':
                 statusIcon = '!';
+                alt_text = "Fail";
                 break;
             default:
                 statusIcon = '?';
+                alt_text = "Unknown";
         }
         procStatusDiv.textContent = statusIcon + ' ' + t;
+        var spanTip = document.createElement("span");
+        spanTip.textContent = alt_text;
+        procStatusDiv.appendChild(spanTip);
+        procStatusDiv.classList.add("tip");
         compatRowFrag.appendChild(procStatusDiv);
     }
     compatRowDiv.appendChild(compatRowFrag);
@@ -282,7 +290,7 @@ function searchPackages(query) {
         threshold: 0.1,
         maxPatternLength: 50,
         minMatchCharLength: 1,
-        keys: ['Name', 'Description', 'Files'],
+        keys: ['Name', 'Description', 'Files']
     };
     var fuse = new Fuse(allPackages, options);
     var searchResult = fuse.search(query);
