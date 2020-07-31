@@ -495,3 +495,15 @@ function loadTotalPackages(): void {
         wording[lang]['total-pkgs'] +
         (currentPackages.length - hiddenPackages.size);
 }
+
+$(document).ready(function () {
+    $('#install-copy').mouseover(function () {
+        $('#tip-text').css('display', 'inline');
+        $('#tip-text').css('margin-right', '10px');
+    });
+    $('#install-copy').mouseout(function () {
+        $('#tip-text').css('display', 'none');
+    });
+});
+
+
