@@ -159,6 +159,10 @@ var renderCompability = function (pkg, packageDiv) {
         }
 
         procStatusDiv.textContent = statusIcon + ' ' + t;
+        let spanTip = document.createElement('span');
+        spanTip.textContent = simplifiedStatus;
+        procStatusDiv.appendChild(spanTip);
+        (<HTMLDivElement>procStatusDiv).classList.add('tip');
         compatRowFrag.appendChild(procStatusDiv);
     }
     compatRowDiv.appendChild(compatRowFrag);
