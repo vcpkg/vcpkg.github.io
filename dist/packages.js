@@ -6,11 +6,11 @@ var wording = {
         'website': 'Website',
         'star': 'Star',
         'total-pkgs': 'Total Packages: ',
-        'no-results': 'No results for '
+        'no-results': 'No results for ',
     },
     'zh': {
-        'version': 'zh-filler'
-    }
+        'version': 'zh-filler',
+    },
 };
 var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
 var triplets = [
@@ -286,7 +286,7 @@ function searchPackages(query) {
         threshold: 0.1,
         maxPatternLength: 50,
         minMatchCharLength: 1,
-        keys: ['Name', 'Description', 'Files']
+        keys: ['Name', 'Description', 'Files'],
     };
     var fuse = new Fuse(allPackages, options);
     var searchResult = fuse.search(query);

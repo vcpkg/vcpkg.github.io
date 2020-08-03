@@ -5,10 +5,7 @@ $(document).ready(function () {
 
     $('.gs-copy-btn').click(function () {
         var step = $(this).attr('id');
-        if (step === 'step5') {
-            // the code for windows and unix is shared in this case
-            copyCodePanel('all-' + step);
-        } else if (os === 'windows') copyCodePanel('windows-' + step);
+        if (os === 'windows') copyCodePanel('windows-' + step);
         else copyCodePanel('unix-' + step);
     });
 
