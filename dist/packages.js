@@ -113,19 +113,24 @@ var renderCompability = function (pkg, packageDiv) {
             packageDiv.classList.add('hide');
         }
         var statusIcon = void 0;
+        var alt_text = void 0;
         switch (simplifiedStatus) {
             case 'pass':
                 statusIcon = '✓';
+                alt_text = "Compatible with " + t;
                 break;
             case 'fail':
                 statusIcon = '!';
+                alt_text = "Not Compatible with " + t;
                 break;
             default:
                 statusIcon = '?';
+                alt_text = "Compatibility unknown on " + t;
         }
         procStatusDiv.textContent = statusIcon + ' ' + t;
         var spanTip = document.createElement('span');
-        spanTip.textContent = simplifiedStatus;
+        var text = void 0;
+        spanTip.textContent = alt_text;
         procStatusDiv.appendChild(spanTip);
         procStatusDiv.classList.add('tip');
         compatRowFrag.appendChild(procStatusDiv);
