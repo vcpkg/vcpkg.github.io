@@ -5,10 +5,7 @@ $(document).ready(function () {
 
     $('.gs-copy-btn').click(function () {
         var step = $(this).attr('id');
-        if (step === 'step5') {
-            // the code for windows and unix is shared in this case
-            copyCodePanel('all-' + step);
-        } else if (os === 'windows') copyCodePanel('windows-' + step);
+        if (os === 'windows') copyCodePanel('windows-' + step);
         else copyCodePanel('unix-' + step);
     });
 
@@ -39,41 +36,3 @@ function clickGetStartedTab(platform: Platform) {
         }
     }
 }
-
-$(document).ready(function () {
-    $('#step1').mouseover(function () {
-        $('#tip-text1').css('display', 'inline');
-        $('#tip-text1').css('margin-right', '10px');
-    });
-    $('#step1').mouseout(function () {
-        $('#tip-text1').css('display', 'none');
-    });
-    $('#step2').mouseover(function () {
-        $('#tip-text2').css('display', 'inline');
-        $('#tip-text2').css('margin-right', '10px');
-    });
-    $('#step2').mouseout(function () {
-        $('#tip-text2').css('display', 'none');
-    });
-    $('#step3').mouseover(function () {
-        $('#tip-text3').css('display', 'inline');
-        $('#tip-text3').css('margin-right', '10px');
-    });
-    $('#step3').mouseout(function () {
-        $('#tip-text3').css('display', 'none');
-    });
-    $('#step4').mouseover(function () {
-        $('#tip-text4').css('display', 'inline');
-        $('#tip-text4').css('margin-right', '10px');
-    });
-    $('#step4').mouseout(function () {
-        $('#tip-text4').css('display', 'none');
-    });
-    $('#step5').mouseover(function () {
-        $('#tip-text5').css('display', 'inline');
-        $('#tip-text5').css('margin-right', '10px');
-    });
-    $('#step5').mouseout(function () {
-        $('#tip-text5').css('display', 'none');
-    });
-});

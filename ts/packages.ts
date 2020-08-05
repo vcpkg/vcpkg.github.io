@@ -147,25 +147,25 @@ var renderCompability = function (pkg, packageDiv) {
         }
 
         let statusIcon;
-        let alt_text:string;
+        let alt_text: string;
         switch (simplifiedStatus) {
             case 'pass':
                 statusIcon = '✓';
-                alt_text = "Compatible with " + t;
+                alt_text = 'Compatible with ' + t;
                 break;
             case 'fail':
                 statusIcon = '!';
-                alt_text = "Not Compatible with " +t;
+                alt_text = 'Not Compatible with ' + t;
                 break;
             default:
                 statusIcon = '?';
-                alt_text = "Compatibility unknown on " + t
+                alt_text = 'Compatibility unknown on ' + t;
         }
 
         procStatusDiv.textContent = statusIcon + ' ' + t;
         let spanTip = document.createElement('span');
-        let text:string;
-    
+        let text: string;
+
         spanTip.textContent = alt_text;
         procStatusDiv.appendChild(spanTip);
         (<HTMLDivElement>procStatusDiv).classList.add('tip');
@@ -501,15 +501,3 @@ function loadTotalPackages(): void {
         wording[lang]['total-pkgs'] +
         (currentPackages.length - hiddenPackages.size);
 }
-
-$(document).ready(function () {
-    $('#install-copy').mouseover(function () {
-        $('#tip-text').css('display', 'inline');
-        $('#tip-text').css('margin-right', '10px');
-    });
-    $('#install-copy').mouseout(function () {
-        $('#tip-text').css('display', 'none');
-    });
-});
-
-
