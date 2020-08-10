@@ -1,5 +1,4 @@
-# TO USE THIS SCRIPT, HAVE A FOLDER CALLED PORTS AT THE SAME LEVEL OF DIRECTORY
-# AS THIS FILE
+#TO USE THIS SCRIPT, HAVE A FOLDER CALLED PORTS AT THE SAME LEVEL OF DIRECTORY AS THIS FILE
 
 
 import os
@@ -8,15 +7,12 @@ import json
 import requests
 from datetime import datetime
 
-# modidy this to be your own token or environmental variable for github repo
-# api access
+# modidy this to be your own token or environmental variable for github repo api access
 token = ""
-
 
 def getFiles(path):
     files = os.listdir(path)
     return list(filter(lambda x: x[0] != '.', files))
-
 
 path = "ports"
 data = {}
@@ -24,14 +20,11 @@ data["Generated On"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 files = getFiles(path)
 data["Size"] = len(files)
 jsonlist = []
-# systems found in ci.baseline.txt
-systems = ["arm64-windows", "arm-uwp", "x64-linux", "x64-osx", "x64-uwp",
-           "x64-windows", "x64-windows-static", "x86-windows"]
+#systems found in ci.baseline.txt
+systems = ["arm64-windows", "arm-uwp", "x64-linux", "x64-osx", "x64-uwp", "x64-windows", "x64-windows-static", "x86-windows"]
 
 
 ci_dict = {}
-
-
 def gen_ci():
     ci_file = open('ci.baseline.txt')
     for line in ci_file:
@@ -39,44 +32,74 @@ def gen_ci():
         idx_equal = line.find("=")
         if line[0] == '#' or line.find(":") == -1 or line.find("=") == -1:
             continue
-        else:
+        else: 
             name = line[:idx_colon]
             if name not in ci_dict:
                 ci_dict[name] = {}
-            system = line[idx_colon+1:idx_equal]
-            status = line[idx_equal+1:]
+            system = line[idx_colon + 1 : idx_equal]
+            status = line[idx_equal + 1 :]
             ci_dict[name][system] = status.strip()
-
-
+            
 gen_ci()
 
 
-# generate the json for all files
+#generate the json for all files
 def gen_all_files():
     for filename in files:
-        f = open(path+"/"+filename+"/CONTROL")  # opening each CONTROL file
+        mode = "control"
+        try:
+            f = open(path+"/"+filename+"/CONTROL") #opening each CONTROL file
+        except FileNotFoundError:
+            print("No CONTROL file for " + filename)
+            print("Using manifest mode")
+            f = open(path+"/"+filename+"/vcpkg.json")
+            mode = "manifest"
         prev = ""
         jsonf = {}
         jsonf["Name"] = filename
-        for x in f:
-            if x.strip() == "" or x.strip()[0] == "#":
-                continue
-            idx = x.find(":")  # colon delimiter for properties
-            if idx == -1 and prev != "" and x[idx+1] == " ":
-                jsonf[prev] = jsonf[prev] + x.strip()
-            else:  # no colon, multi line property
-                if x[:idx] not in jsonf:
-                    jsonf[x[:idx]] = x[idx+1:].strip()
-                prev = x[:idx]
-        # constructing all the ci information for all systems.
-        for system in systems:
+        jsonf["Features"] = []
+        feature_dict = {}
+        if mode == "control":
+            for line in f:
+                if line.strip() == "" or line.strip()[0] == "#":
+                    if mode == "feature":
+                        jsonf["Features"].append(feature_dict)
+                        feature_dict = {}
+                        mode = "control"
+                    continue
+                idx = line.strip().find(":") # colon delimiter for properties
+                if idx == -1 and prev != "":
+                    jsonf[prev] = jsonf[prev] + line.strip()
+                else: #no colon, multi line property
+                    if line[:idx] == "Feature":
+                        mode = "feature"
+                        feature_dict["Name"] = line[idx+1:].strip()
+                    else:
+                        if mode == "feature":
+                            feature_dict[line[:idx]] = line[idx+1:].strip()
+                        elif line[:idx] not in jsonf:
+                            jsonf[line[:idx]] = line[idx+1:].strip()
+                            prev = line[:idx]
+            if mode == "feature":
+                jsonf["Features"].append(feature_dict)
+                feature_dict = {}
+                mode = "control"
+        else:
+            manifest = json.load(f)
+            for keys in manifest.keys():
+                if keys == 'version-string':
+                    jsonf["Version"] = manifest[keys]
+                elif keys == 'description':
+                    jsonf["Description"] = ' '.join(manifest[keys]) if type(manifest[keys]) is list else manifest[keys]
+                else:
+                    jsonf[keys.capitalize()] = manifest[keys]
+        for system in systems: #constructing all the ci information for all systems. 
             if filename in ci_dict and system in ci_dict[filename]:
                 jsonf[system] = ci_dict[filename][system]
             else:
                 jsonf[system] = 'pass'
         jsonlist.append(jsonf)
         f.close()
-
 
 gen_all_files()
 jsonlist.sort(key=lambda item: item["Name"])
@@ -93,8 +116,7 @@ def get_stars(data):
         print("Loading " + str(count) + " out of " + str(data["Size"]))
         count += 1
         if "Homepage" in port and port["Homepage"].find("github.com") >= 0:
-            url = base+port["Homepage"][port["Homepage"].find("github.com")
-                                        + length:]
+            url = base+port["Homepage"][port["Homepage"].find("github.com")+length :]
             github = requests.get(url, headers={"Authorization": token}).text
             github_json = json.loads(github)
             if "stargazers_count" in github_json:
@@ -125,6 +147,6 @@ def get_all_files(data):
 
 get_all_files(data)
 out = json.dumps(data, sort_keys=True, indent=4)
-output = open("output.json", mode='w')
+output = open("output.json", mode = 'w')
 output.write(out)
 output.close()
