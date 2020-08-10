@@ -381,6 +381,7 @@ function searchAndRenderPackages() {
     query = (<HTMLInputElement>(
         document.getElementById('pkg-search')
     )).value.trim();
+    window.history.pushState({}, null, '?query=' + query);
     if (query === '') {
         currentPackages = allPackages;
     } else {

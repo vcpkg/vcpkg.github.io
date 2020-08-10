@@ -117,15 +117,15 @@ var renderCompability = function (pkg, packageDiv) {
         switch (simplifiedStatus) {
             case 'pass':
                 statusIcon = '✓';
-                alt_text = "Compatible with " + t;
+                alt_text = 'Compatible with ' + t;
                 break;
             case 'fail':
                 statusIcon = '!';
-                alt_text = "Not Compatible with " + t;
+                alt_text = 'Not Compatible with ' + t;
                 break;
             default:
                 statusIcon = '?';
-                alt_text = "Compatibility unknown on " + t;
+                alt_text = 'Compatibility unknown on ' + t;
         }
         procStatusDiv.textContent = statusIcon + ' ' + t;
         var spanTip = document.createElement('span');
@@ -304,6 +304,7 @@ function searchPackages(query) {
 }
 function searchAndRenderPackages() {
     query = (document.getElementById('pkg-search')).value.trim();
+    window.history.pushState({}, null, '?query=' + query);
     if (query === '') {
         currentPackages = allPackages;
     }
