@@ -1,28 +1,31 @@
 {
-    "name": "vcpkg_web",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "dependencies": {
-        "@types/jquery": "^3.5.1",
-        "detect-os": "^1.1.1",
-        "fuse.js": "^6.4.0",
-        "typescript": "^3.9.6"
-    },
-    "devDependencies": {
-        "prettier": "2.0.5"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/yaoleo34/vcpkg_web.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/yaoleo34/vcpkg_web/issues"
-    },
-    "homepage": "https://github.com/yaoleo34/vcpkg_web#readme"
+  "name": "vcpkg_web",
+  "version": "0.1.0",
+  "description": "The official website for the vcpkg package manager",
+  "main": "index.js",
+  "dependencies": {
+    "@types/jquery": "^3.5.1",
+    "detect-os": "^1.1.1",
+    "fuse.js": "^6.4.0",
+    "typescript": "^3.9.6"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "prettier": "2.0.5"
+  },
+  "scripts": {
+    "prepare": "tsc",
+    "start": "npx http-server -p 8080 -a localhost",
+    "prettier": "npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcpkg/vcpkg.github.io"
+  },
+  "author": "The vcpkg team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vcpkg/vcpkg.github.io"
+  },
+  "homepage": "https://vcpkg.github.io"
 }

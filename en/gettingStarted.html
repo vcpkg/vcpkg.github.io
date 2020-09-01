@@ -1,463 +1,386 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
-    <head>
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-            crossorigin="anonymous"
-        />
-        <link href="../css/gettingStarted.css" rel="stylesheet" />
-        <link href="../css/common.css" rel="stylesheet" />
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"
-        ></script>
-        <script src="../dist/common.js"></script>
-        <script src="../dist/gettingStarted.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#loadNavBar').load('header.html');
-                $('#loadFooter').load('footer.html');
-            });
-        </script>
-    </head>
+  <head>
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="icon" href="/assets/favicon.svg" />
+    <link rel="mask-icon" href="/assets/favicon-mask-icon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="../css/gettingStarted.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../dist/common.js"></script>
+    <script src="../dist/gettingStarted.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#loadNavBar').load('header.html');
+        $('#loadFooter').load('footer.html');
+      });
+    </script>
+  </head>
 
-    <div id="loadNavBar"></div>
+  <div id="loadNavBar"></div>
 
-    <body>
-        <div class="header-text">
-            <h1>Getting Started</h1>
-        </div>
-        <div class="tablist col-md-10 offset-md-1 centered" role="tablist">
-            <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-windows">
-                Windows
-            </button>
-            <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-linux">
-                Linux
-            </button>
+  <body>
+    <div class="header-text">
+      <h1>Getting Started</h1>
+    </div>
+    <div class="tablist col-md-10 offset-md-1 centered" role="tablist">
+      <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-windows">
+        Windows
+      </button>
+      <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-linux">
+        Linux
+      </button>
 
-            <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-mac">
-                MacOS
-            </button>
-        </div>
-        <section id="get-started">
-            <div id="prerequisite" class="container-fluid">
-                <div class="row">
-                    <h4
-                        class="section-title col-md-11 offset-md-1 space windows"
-                    >
-                        Windows Prerequisites
-                    </h4>
-                    <h4 class="section-title col-md-11 offset-md-1 space linux">
-                        Linux Prerequisites
-                    </h4>
-                    <h4 class="section-title col-md-11 offset-md-1 space mac">
-                        MacOS Prerequisites
-                    </h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="col-md-11 offset-md-1 windows">
-                            <li>Windows 7 or newer</li>
-                            <li>Git</li>
-                            <li>Visual Studio 2015 Update 3 or newer</li>
-                        </ul>
-                        <ul class="col-md-11 offset-md-1 linux">
-                            <li>Git</li>
-                            <li>g++ >= 6</li>
-                        </ul>
-                        <ul class="col-md-11 offset-md-1 mac">
-                            <li>Apple Developer Tools</li>
-                            <li>
-                                On macOS 10.14 or below, you will also need:
-                            </li>
-                            <ul>
-                                <li>Homebrew</li>
-                                <li>g++ >= 6 from Homebrew</li>
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="dl-vcpkg" class="container-fluid">
-                <div class="row">
-                    <h4 class="section-title col-md-11 offset-md-1 space">
-                        Download vcpkg
-                    </h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <p class="text-desc windows">
-                            First, download vcpkg itself with the CLI command
-                            below; it can be installed anywhere, but generally
-                            we recommend using vcpkg as a submodule for CMake
-                            projects, and installing it globally for Visual
-                            Studio projects. We recommend somewhere like
-                            <code>C:\src\vcpkg</code> or
-                            <code>C:\dev\vcpkg</code>, since otherwise you may
-                            run into path issues for some port build systems.
-                        </p>
-                        <p class="text-desc unix">
-                            First, download vcpkg itself with the CLI command
-                            below; it can be installed anywhere, but generally
-                            we recommend using vcpkg as a submodule for CMake
-                            projects.
-                        </p>
-                        <div id="tab-container" class="tabs">
-                            <div class="tablist" role="tablist">
-                                <div class="copy">
-                                    <svg
-                                        id="step1a"
-                                        viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn gs-copy-btn"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                                        />
-                                        <path
-                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                                        />
-                                    </svg>
-                                    <span id="tip-text1a" class="tip-text"
-                                        >Copy to Clipboard</span
-                                    >
-                                </div>
-                            </div>
-                            <textarea
-                                id="windows-step1a"
-                                class="tab-panel windows"
-                                readonly
-                            >
-git clone https://github.com/Microsoft/vcpkg.git</textarea
-                            >
-                            <textarea
-                                id="unix-step1a"
-                                class="tab-panel unix"
-                                readonly
-                            >
-git clone https://github.com/Microsoft/vcpkg.git</textarea
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <p class="text-desc">
-                            Then, run the bootstrap script to build vcpkg.
-                        </p>
-                        <div id="tab-container" class="tabs">
-                            <div class="tablist" role="tablist">
-                                <div class="copy">
-                                    <svg
-                                        id="step1b"
-                                        viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn gs-copy-btn"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                                        />
-                                        <path
-                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                                        />
-                                    </svg>
-                                    <span id="tip-text1b" class="tip-text"
-                                        >Copy to Clipboard</span
-                                    >
-                                </div>
-                            </div>
-                            <textarea
-                                id="windows-step1b"
-                                class="tab-panel windows"
-                                readonly
-                            >
-.\vcpkg\bootstrap-vcpkg.bat</textarea
-                            >
-                            <textarea
-                                id="unix-step1b"
-                                class="tab-panel unix"
-                                readonly
-                            >
-./vcpkg/bootstrap-vcpkg.sh</textarea
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="build" class="container-fluid">
-                <div class="row">
-                    <h4 class="section-title col-md-11 offset-md-1 space">
-                        Install Libraries for Your Project
-                    </h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div id="tab-container" class="tabs">
-                            <div class="tablist" role="tablist">
-                                <div class="copy">
-                                    <svg
-                                        id="step2"
-                                        viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn gs-copy-btn"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                                        />
-                                        <path
-                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                                        />
-                                    </svg>
-                                    <span id="tip-text2" class="tip-text"
-                                        >Copy to Clipboard</span
-                                    >
-                                </div>
-                            </div>
-                            <textarea
-                                id="windows-step2"
-                                class="tab-panel windows"
-                                readonly
-                            >
-.\vcpkg\vcpkg install [packages to install]</textarea
-                            >
-                            <textarea
-                                id="unix-step2"
-                                class="tab-panel unix"
-                                readonly
-                            >
-./vcpkg/vcpkg install [packages to install]</textarea
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="install" class="container-fluid windows">
-                <div class="row">
-                    <h4 class="section-title col-md-11 offset-md-1 space">
-                        Integrate with Visual Studio (may require administrator
-                        elevation)
-                    </h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div id="tab-container" class="tabs">
-                            <div class="tablist" role="tablist">
-                                <div class="copy">
-                                    <svg
-                                        id="step4"
-                                        viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn gs-copy-btn"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                                        />
-                                        <path
-                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                                        />
-                                    </svg>
-
-                                    <span id="tip-text4" class="tip-text"
-                                        >Copy to Clipboard</span
-                                    >
-                                </div>
-                            </div>
-                            <textarea
-                                id="windows-step4"
-                                class="tab-panel"
-                                readonly
-                            >
-.\vcpkg\vcpkg integrate install</textarea
-                            >
-                            <p class="text-desc">
-                                After this, you can now create a New non-CMake
-                                Project (or open an existing one). All installed
-                                libraries are immediately ready to be
-                                <code>#include</code>'d and used in your project
-                                without additional configuration.
-                            </p>
-                            <p class="text-desc">
-                                If you're using CMake with Visual Studio,
-                                continue here.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="cmake" class="container-fluid">
-                <div class="row">
-                    <h4
-                        class="section-title col-md-11 offset-md-1 space windows"
-                    >
-                        Using CMake Outside of an IDE
-                    </h4>
-                    <h4 class="section-title col-md-11 offset-md-1 space unix">
-                        Using CMake
-                    </h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <p class="text-desc windows">
-                            In order to use vcpkg with CMake outside of an IDE,
-                            you can use the toolchain file:
-                        </p>
-                        <p class="text-desc unix">
-                            In order to use vcpkg with CMake, you can use the
-                            toolchain file:
-                        </p>
-                        <div id="tab-container" class="tabs">
-                            <div class="tablist" role="tablist">
-                                <div class="copy">
-                                    <svg
-                                        id="step5a"
-                                        viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn gs-copy-btn"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                                        />
-                                        <path
-                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                                        />
-                                    </svg>
-                                    <span id="tip-text5a" class="tip-text"
-                                        >Copy to Clipboard</span
-                                    >
-                                </div>
-                            </div>
-                            <textarea
-                                id="windows-step5a"
-                                class="tab-panel windows"
-                                readonly
-                            >
-cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake</textarea
-                            >
-                            <textarea
-                                id="unix-step5a"
-                                class="tab-panel unix"
-                                readonly
-                            >
-cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake</textarea
-                            >
-                        </div>
-                        <p class="text-desc">
-                            And then build with:
-                        </p>
-                        <div id="tab-container" class="tabs">
-                            <div class="tablist" role="tablist">
-                                <div class="copy">
-                                    <svg
-                                        id="step5b"
-                                        viewBox="0 0 16 16"
-                                        class="bi bi-files copy-btn gs-copy-btn"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                                        />
-                                        <path
-                                            d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                                        />
-                                    </svg>
-                                    <span id="tip-text5b" class="tip-text"
-                                        >Copy to Clipboard</span
-                                    >
-                                </div>
-                            </div>
-                            <textarea
-                                id="windows-step5b"
-                                class="tab-panel windows"
-                                readonly
-                            >
-cmake --build [build directory]</textarea
-                            >
-                            <textarea
-                                id="unix-step5b"
-                                class="tab-panel unix"
-                                readonly
-                            >
-cmake --build [build directory]</textarea
-                            >
-                        </div>
-                        <p class="text-desc windows">
-                            With CMake, you will still need to
-                            <code>find_package</code>
-                            and the like to use the libraries. Check out the
-                            CMake section for more information, including on
-                            using CMake with an IDE.
-                        </p>
-                        <p class="text-desc unix">
-                            With CMake, you will still need to
-                            <code>find_package</code>
-                            and the like to use the libraries. Check out the
-                            CMake section for more information on how best to
-                            use vcpkg with CMake, and CMake Tools for VSCode.
-                        </p>
-                        <p class="text-desc">
-                            For any other tools, including Visual Studio Code,
-                            check out the integration guide.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="cmake" class="bottom-border" class="container-fluid">
-            <div class="row">
-                <h4 class="section-title col-md-11 offset-md-1 space">
-                    Visit Our
-                    <a
-                        class="section-title link"
-                        href="https://vcpkg.readthedocs.io/en/latest/"
-                        >Documentation</a
-                    >
-                    For More Information
-                </h4>
-            </div>
-        </div>
-    </body>
-    <footer role="contentinfo">
+      <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-mac">
+        MacOS
+      </button>
+    </div>
+    <section id="get-started">
+      <div id="prerequisite" class="container-fluid">
         <div class="row">
-            <div class="col-md-5 offset-md-1 col-sm-5 col-5">
-                <p class="footer-text no-marg">Made with ♥ in Redmond</p>
-            </div>
-            <div class="col-md-4 text-nowrap right-align col-sm-4 col-4">
-                <div class="no-marg">
-                    <p class="footer-text inline no-marg">
-                        <a
-                            class="privacy"
-                            href="https://go.microsoft.com/fwlink/?LinkId=521839"
-                            data-mscc-ic="false"
-                            >Privacy</a
-                        >
-                    </p>
-                    <p class="footer-text left-marg inline no-marg">
-                        © 2020 Microsoft
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-2 col-3">
-                <img
-                    class="ms-logo-footer"
-                    src="../assets/Microsoft-logo.svg"
-                    alt="Microsoft logo"
-                />
-            </div>
+          <h4 class="section-title col-md-11 offset-md-1 space windows">
+            Windows Prerequisites
+          </h4>
+          <h4 class="section-title col-md-11 offset-md-1 space linux">
+            Linux Prerequisites
+          </h4>
+          <h4 class="section-title col-md-11 offset-md-1 space mac">
+            MacOS Prerequisites
+          </h4>
         </div>
-    </footer>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="col-md-11 offset-md-1 windows">
+              <li>Windows 7 or newer</li>
+              <li>Git</li>
+              <li>Visual Studio 2015 Update 3 or newer</li>
+            </ul>
+            <ul class="col-md-11 offset-md-1 linux">
+              <li>Git</li>
+              <li>g++ >= 6</li>
+            </ul>
+            <ul class="col-md-11 offset-md-1 mac">
+              <li>Apple Developer Tools</li>
+              <li>
+                On macOS 10.14 or below, you will also need:
+              </li>
+              <ul>
+                <li>Homebrew</li>
+                <li>g++ >= 6 from Homebrew</li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="dl-vcpkg" class="container-fluid">
+        <div class="row">
+          <h4 class="section-title col-md-11 offset-md-1 space">
+            Download vcpkg
+          </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-desc windows">
+              First, download vcpkg itself with the CLI command below; it can be installed anywhere,
+              but generally we recommend using vcpkg as a submodule for CMake projects, and
+              installing it globally for Visual Studio projects. We recommend somewhere like
+              <code>C:\src\vcpkg</code> or <code>C:\dev\vcpkg</code>, since otherwise you may run
+              into path issues for some port build systems.
+            </p>
+            <p class="text-desc unix">
+              First, download vcpkg itself with the CLI command below; it can be installed anywhere,
+              but generally we recommend using vcpkg as a submodule for CMake projects.
+            </p>
+            <div id="tab-container" class="tabs">
+              <div class="tablist" role="tablist">
+                <div class="copy">
+                  <svg
+                    id="step1a"
+                    viewBox="0 0 16 16"
+                    class="bi bi-files copy-btn gs-copy-btn"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
+                    />
+                    <path
+                      d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+                  <span id="tip-text1a" class="tip-text">Copy to Clipboard</span>
+                </div>
+              </div>
+              <textarea id="windows-step1a" class="tab-panel windows" readonly>
+git clone https://github.com/Microsoft/vcpkg.git</textarea
+              >
+              <textarea id="unix-step1a" class="tab-panel unix" readonly>
+git clone https://github.com/Microsoft/vcpkg.git</textarea
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-desc">
+              Then, run the bootstrap script to build vcpkg.
+            </p>
+            <div id="tab-container" class="tabs">
+              <div class="tablist" role="tablist">
+                <div class="copy">
+                  <svg
+                    id="step1b"
+                    viewBox="0 0 16 16"
+                    class="bi bi-files copy-btn gs-copy-btn"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
+                    />
+                    <path
+                      d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+                  <span id="tip-text1b" class="tip-text">Copy to Clipboard</span>
+                </div>
+              </div>
+              <textarea id="windows-step1b" class="tab-panel windows" readonly>
+.\vcpkg\bootstrap-vcpkg.bat</textarea
+              >
+              <textarea id="unix-step1b" class="tab-panel unix" readonly>
+./vcpkg/bootstrap-vcpkg.sh</textarea
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="build" class="container-fluid">
+        <div class="row">
+          <h4 class="section-title col-md-11 offset-md-1 space">
+            Install Libraries for Your Project
+          </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div id="tab-container" class="tabs">
+              <div class="tablist" role="tablist">
+                <div class="copy">
+                  <svg
+                    id="step2"
+                    viewBox="0 0 16 16"
+                    class="bi bi-files copy-btn gs-copy-btn"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
+                    />
+                    <path
+                      d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+                  <span id="tip-text2" class="tip-text">Copy to Clipboard</span>
+                </div>
+              </div>
+              <textarea id="windows-step2" class="tab-panel windows" readonly>
+.\vcpkg\vcpkg install [packages to install]</textarea
+              >
+              <textarea id="unix-step2" class="tab-panel unix" readonly>
+./vcpkg/vcpkg install [packages to install]</textarea
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="install" class="container-fluid windows">
+        <div class="row">
+          <h4 class="section-title col-md-11 offset-md-1 space">
+            Integrate with Visual Studio (may require administrator elevation)
+          </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div id="tab-container" class="tabs">
+              <div class="tablist" role="tablist">
+                <div class="copy">
+                  <svg
+                    id="step4"
+                    viewBox="0 0 16 16"
+                    class="bi bi-files copy-btn gs-copy-btn"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
+                    />
+                    <path
+                      d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+
+                  <span id="tip-text4" class="tip-text">Copy to Clipboard</span>
+                </div>
+              </div>
+              <textarea id="windows-step4" class="tab-panel" readonly>
+.\vcpkg\vcpkg integrate install</textarea
+              >
+              <p class="text-desc">
+                After this, you can now create a New non-CMake Project (or open an existing one).
+                All installed libraries are immediately ready to be
+                <code>#include</code>'d and used in your project without additional configuration.
+              </p>
+              <p class="text-desc">
+                If you're using CMake with Visual Studio, continue here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cmake" class="container-fluid">
+        <div class="row">
+          <h4 class="section-title col-md-11 offset-md-1 space windows">
+            Using CMake Outside of an IDE
+          </h4>
+          <h4 class="section-title col-md-11 offset-md-1 space unix">
+            Using CMake
+          </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <p class="text-desc windows">
+              In order to use vcpkg with CMake outside of an IDE, you can use the toolchain file:
+            </p>
+            <p class="text-desc unix">
+              In order to use vcpkg with CMake, you can use the toolchain file:
+            </p>
+            <div id="tab-container" class="tabs">
+              <div class="tablist" role="tablist">
+                <div class="copy">
+                  <svg
+                    id="step5a"
+                    viewBox="0 0 16 16"
+                    class="bi bi-files copy-btn gs-copy-btn"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
+                    />
+                    <path
+                      d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+                  <span id="tip-text5a" class="tip-text">Copy to Clipboard</span>
+                </div>
+              </div>
+              <textarea id="windows-step5a" class="tab-panel windows" readonly>
+cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake</textarea
+              >
+              <textarea id="unix-step5a" class="tab-panel unix" readonly>
+cmake -B [build directory] -S . -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake</textarea
+              >
+            </div>
+            <p class="text-desc">
+              And then build with:
+            </p>
+            <div id="tab-container" class="tabs">
+              <div class="tablist" role="tablist">
+                <div class="copy">
+                  <svg
+                    id="step5b"
+                    viewBox="0 0 16 16"
+                    class="bi bi-files copy-btn gs-copy-btn"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
+                    />
+                    <path
+                      d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                    />
+                  </svg>
+                  <span id="tip-text5b" class="tip-text">Copy to Clipboard</span>
+                </div>
+              </div>
+              <textarea id="windows-step5b" class="tab-panel windows" readonly>
+cmake --build [build directory]</textarea
+              >
+              <textarea id="unix-step5b" class="tab-panel unix" readonly>
+cmake --build [build directory]</textarea
+              >
+            </div>
+            <p class="text-desc windows">
+              With CMake, you will still need to
+              <code>find_package</code>
+              and the like to use the libraries. Check out the CMake section for more information,
+              including on using CMake with an IDE.
+            </p>
+            <p class="text-desc unix">
+              With CMake, you will still need to
+              <code>find_package</code>
+              and the like to use the libraries. Check out the CMake section for more information on
+              how best to use vcpkg with CMake, and CMake Tools for VSCode.
+            </p>
+            <p class="text-desc">
+              For any other tools, including Visual Studio Code, check out the integration guide.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="cmake" class="bottom-border" class="container-fluid">
+      <div class="row">
+        <h4 class="section-title col-md-11 offset-md-1 space">
+          Visit Our
+          <a class="section-title link" href="https://vcpkg.readthedocs.io/en/latest/"
+            >Documentation</a
+          >
+          For More Information
+        </h4>
+      </div>
+    </div>
+  </body>
+  <footer role="contentinfo">
+    <div class="row">
+      <div class="col-md-5 offset-md-1 col-sm-5 col-5">
+        <p class="footer-text no-marg">Made with ♥ in Redmond</p>
+      </div>
+      <div class="col-md-4 text-nowrap right-align col-sm-4 col-4">
+        <div class="no-marg">
+          <p class="footer-text inline no-marg">
+            <a
+              class="privacy"
+              href="https://go.microsoft.com/fwlink/?LinkId=521839"
+              data-mscc-ic="false"
+              >Privacy</a
+            >
+          </p>
+          <p class="footer-text left-marg inline no-marg">
+            © 2020 Microsoft
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1 col-sm-2 col-3">
+        <img class="ms-logo-footer" src="../assets/Microsoft-logo.svg" alt="Microsoft logo" />
+      </div>
+    </div>
+  </footer>
 </html>
