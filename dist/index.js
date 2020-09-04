@@ -5,8 +5,7 @@ function checkEnter(e) {
     if (e.keyCode === 13) {
         // redirect query to packages.html
         window.location.href =
-            'packages.html?query=' +
-                document.getElementById('idx-search').value;
+            'packages.html?query=' + document.getElementById('idx-search').value;
     }
     return false;
 }
