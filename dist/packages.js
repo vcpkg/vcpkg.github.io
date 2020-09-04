@@ -1,15 +1,15 @@
 var wording = {
-    'en': {
-        'version': 'Version: ',
-        'more': ' More...',
-        'compat': 'Compatibility:',
-        'website': 'Website',
-        'star': 'Star',
+    en: {
+        version: 'Version: ',
+        more: ' More...',
+        compat: 'Compatibility:',
+        website: 'Website',
+        star: 'Star',
         'total-pkgs': 'Total Packages: ',
         'no-results': 'No results for ',
     },
-    'zh': {
-        'version': 'zh-filler',
+    zh: {
+        version: 'zh-filler',
     },
 };
 var allPackages, currentPackages, cancellationToken, hiddenCount, selectedPackage;
@@ -40,9 +40,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
     for (i = 0; i < sURLVariables.length; i++) {
         sParameterName = sURLVariables[i].split('=');
         if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined
-                ? true
-                : decodeURIComponent(sParameterName[1]);
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
         }
     }
     return true;
@@ -107,9 +105,7 @@ var renderCompability = function (pkg, packageDiv) {
         var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
         procStatusDiv.classList.add(simplifiedStatus);
         // hide card if it doesn't pass the compatibility filter
-        if (packageDiv &&
-            simplifiedStatus === 'fail' &&
-            compatFilter.indexOf(t) !== -1) {
+        if (packageDiv && simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
             packageDiv.classList.add('hide');
         }
         var statusIcon = void 0;
@@ -241,8 +237,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     return detailFrag;
 }
 function renderCard(package, mainDiv, oldCancellationToken) {
-    if (oldCancellationToken !== null &&
-        oldCancellationToken !== cancellationToken)
+    if (oldCancellationToken !== null && oldCancellationToken !== cancellationToken)
         return; //don't render old packages
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
@@ -270,8 +265,7 @@ var renderPackages = function () {
     else {
         var noResultDiv = document.createElement('div');
         noResultDiv.className = 'card package-card';
-        noResultDiv.innerHTML =
-            wording[lang]['no-results'] + '<b>' + query + '</b>';
+        noResultDiv.innerHTML = wording[lang]['no-results'] + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
     loadTotalPackages();
@@ -303,7 +297,7 @@ function searchPackages(query) {
     currentPackages = newPackagesList;
 }
 function searchAndRenderPackages() {
-    query = (document.getElementById('pkg-search')).value.trim();
+    query = document.getElementById('pkg-search').value.trim();
     window.history.pushState({}, null, '?query=' + query);
     if (query === '') {
         currentPackages = allPackages;
@@ -311,8 +305,7 @@ function searchAndRenderPackages() {
     else {
         searchPackages(query);
     }
-    if (document.getElementById('sortBtn').value !==
-        'Best Match') {
+    if (document.getElementById('sortBtn').value !== 'Best Match') {
         sortPackages();
     }
     renderPackages();
@@ -348,8 +341,7 @@ function filterCompat() {
 function updateModal(pkg) {
     selectedPackage = pkg;
     // Package name
-    document.getElementById('pkg-modal-title').textContent =
-        selectedPackage.Name;
+    document.getElementById('pkg-modal-title').textContent = selectedPackage.Name;
     // Package details
     var modalDetails = document.getElementById('pkg-modal-details');
     var newDetails = document.createElement('div');
@@ -383,14 +375,12 @@ function clickInstallTab(platform) {
     var windowsTab = document.getElementById('install-tab-windows');
     var unixTab = document.getElementById('install-tab-unix');
     if (platform === 'windows') {
-        installCode.textContent =
-            '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
+        installCode.textContent = '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
         windowsTab.classList.add('selected');
         unixTab.classList.remove('selected');
     }
     else {
-        installCode.textContent =
-            './vcpkg/vcpkg install ' + selectedPackage.Name;
+        installCode.textContent = './vcpkg/vcpkg install ' + selectedPackage.Name;
         windowsTab.classList.remove('selected');
         unixTab.classList.add('selected');
     }
@@ -410,6 +400,5 @@ function loadTotalPackages() {
         }
     }
     totalPackages.textContent =
-        wording[lang]['total-pkgs'] +
-            (currentPackages.length - hiddenPackages.size);
+        wording[lang]['total-pkgs'] + (currentPackages.length - hiddenPackages.size);
 }
