@@ -1,0 +1,331 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > users > triplets.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/modify-baseline-to-pin-old-boost.html">Modify Baseline To Pin Old Boost</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/manifest-files.html">Manifest Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_make.html">vcpkg_configure_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><span id="currentPath">triplets</span></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="triplet-files">Triplet files</h1>
+<p>Triplet is a standard term used in cross compiling as a way to completely capture the target environment (cpu, os, compiler, runtime, etc) in a single convenient name.</p>
+<p>In vcpkg, we use triplets to describe an imaginary "target configuration set" for every library. Within a triplet, libraries are generally built with the same configuration, but it is not a requirement. For example, you could have one triplet that builds <code>openssl</code> statically and <code>zlib</code> dynamically, one that builds them both statically, and one that builds them both dynamically (all for the same target OS and architecture). A single build will consume files from a single triplet.</p>
+<p>We currently provide many triplets by default (run <code>vcpkg help triplet</code>). However, you can easily add your own by creating a new file in the <code>triplets</code> directory. The new triplet will immediately be available for use in commands, such as <code>vcpkg install boost:x86-windows-custom</code>.</p>
+<p>To change the triplet used by your project, such as to enable static linking, see our <a href="integration.html#triplet-selection">Integration Document</a>.</p>
+<h2 id="community-triplets">Community triplets</h2>
+<p>Triplets contained in the <code>triplets\community</code> folder are not tested by continuous integration, but are commonly requested by the community.</p>
+<p>Because we do not have continuous coverage, port updates may break compatibility with community triplets. Because of this, community involvement is paramount!</p>
+<p>We will gladly accept and review contributions that aim to solve issues with these triplets.</p>
+<h3 id="usage">Usage</h3>
+<p>Community Triplets are enabled by default, when using a community triplet a message like the following one will be printed during a package install:</p>
+<pre><code class="no-highlight language-no-highlight">-- Using community triplet x86-uwp. This triplet configuration is not guaranteed to succeed.
+-- [COMMUNITY] Loading triplet configuration from: D:\src\viromer\vcpkg\triplets\community\x86-uwp.cmake</code></pre>
+<h2 id="variables">Variables</h2>
+<h3 id="vcpkg_target_architecture">VCPKG_TARGET_ARCHITECTURE</h3>
+<p>Specifies the target machine architecture.</p>
+<p>Valid options are <code>x86</code>, <code>x64</code>, <code>arm</code>, <code>arm64</code> and <code>wasm32</code>.</p>
+<h3 id="vcpkg_crt_linkage">VCPKG_CRT_LINKAGE</h3>
+<p>Specifies the desired CRT linkage (for MSVC).</p>
+<p>Valid options are <code>dynamic</code> and <code>static</code>.</p>
+<h3 id="vcpkg_library_linkage">VCPKG_LIBRARY_LINKAGE</h3>
+<p>Specifies the preferred library linkage.</p>
+<p>Valid options are <code>dynamic</code> and <code>static</code>. Note that libraries can ignore this setting if they do not support the preferred linkage type.</p>
+<h3 id="vcpkg_cmake_system_name">VCPKG_CMAKE_SYSTEM_NAME</h3>
+<p>Specifies the target platform.</p>
+<p>Valid options include any CMake system name, such as:</p>
+<ul>
+<li>Empty (Windows Desktop for legacy reasons)</li>
+<li><code>WindowsStore</code> (Universal Windows Platform)</li>
+<li><code>MinGW</code> (Minimalist GNU for Windows)</li>
+<li><code>Darwin</code> (Mac OSX)</li>
+<li><code>iOS</code> (iOS)</li>
+<li><code>Linux</code> (Linux)</li>
+<li><code>Emscripten</code> (WebAssembly)</li>
+</ul>
+<h3 id="vcpkg_cmake_system_version">VCPKG_CMAKE_SYSTEM_VERSION</h3>
+<p>Specifies the target platform system version.</p>
+<p>This field is optional and, if present, will be passed into the build as <code>CMAKE_SYSTEM_VERSION</code>.</p>
+<p>See also the CMake documentation for <code>CMAKE_SYSTEM_VERSION</code>: <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_VERSION.html">https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_VERSION.html</a>.</p>
+<h3 id="vcpkg_chainload_toolchain_file">VCPKG_CHAINLOAD_TOOLCHAIN_FILE</h3>
+<p>Specifies an alternate CMake Toolchain file to use.</p>
+<p>This (if set) will override all other compiler detection logic. By default, a toolchain file is selected from <code>scripts/toolchains/</code> appropriate to the platform.</p>
+<p>See also the CMake documentation for toolchain files: <a href="https://cmake.org/cmake/help/v3.11/manual/cmake-toolchains.7.html">https://cmake.org/cmake/help/v3.11/manual/cmake-toolchains.7.html</a>.</p>
+<h3 id="vcpkg_cxx_flags">VCPKG_CXX_FLAGS</h3>
+<p>Sets additional compiler flags to be used when not using <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code>.</p>
+<p>This option also has forms for configuration-specific and C flags:</p>
+<ul>
+<li><code>VCPKG_CXX_FLAGS</code></li>
+<li><code>VCPKG_CXX_FLAGS_DEBUG</code></li>
+<li><code>VCPKG_CXX_FLAGS_RELEASE</code></li>
+<li><code>VCPKG_C_FLAGS</code></li>
+<li><code>VCPKG_C_FLAGS_DEBUG</code></li>
+<li><code>VCPKG_C_FLAGS_RELEASE</code></li>
+</ul>
+<h3 id="vcpkg_linker_flags">VCPKG_LINKER_FLAGS</h3>
+<p>Sets additional linker flags to be used while building dynamic libraries and 
+executables in the absence of <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code>.</p>
+<p>This option also has forms for configuration-specific flags:</p>
+<ul>
+<li><code>VCPKG_LINKER_FLAGS</code></li>
+<li><code>VCPKG_LINKER_FLAGS_DEBUG</code></li>
+<li><code>VCPKG_LINKER_FLAGS_RELEASE</code></li>
+</ul>
+<p><a name="VCPKG_DEP_INFO_OVERRIDE_VARS"></a></p>
+<h3 id="vcpkg_dep_info_override_vars">VCPKG_DEP_INFO_OVERRIDE_VARS</h3>
+<p>Replaces the default computed list of triplet "Supports" terms.</p>
+<p>This option (if set) will override the default set of terms used for qualified dependency resolution and "Supports" field evaluation.</p>
+<p>See the <a href="../maintainers/manifest-files.html#supports"><code>"supports"</code></a> manifest file field documentation for more details.</p>
+<blockquote>
+  <p>Implementers' Note: this list is extracted via the <code>vcpkg_get_dep_info</code> mechanism.</p>
+</blockquote>
+<h2 id="windows-variables">Windows Variables</h2>
+<h3 id="vcpkg_env_passthrough">VCPKG_ENV_PASSTHROUGH</h3>
+<p>Instructs vcpkg to allow additional environment variables into the build process.</p>
+<p>On Windows, vcpkg builds packages in a special clean environment that is isolated from the current command prompt to 
+ensure build reliability and consistency. This triplet option can be set to a list of additional environment variables 
+that will be added to the clean environment. The values of these environment variables will be hashed into the package 
+abi -- to pass through environment variables without abi tracking, see <code>VCPKG_ENV_PASSTHROUGH_UNTRACKED</code>.</p>
+<p>See also the <code>vcpkg env</code> command for how you can inspect the precise environment that will be used.</p>
+<blockquote>
+  <p>Implementers' Note: this list is extracted via the <code>vcpkg_get_tags</code> mechanism.</p>
+</blockquote>
+<h3 id="vcpkg_env_passthrough_untracked">VCPKG_ENV_PASSTHROUGH_UNTRACKED</h3>
+<p>Instructs vcpkg to allow additional environment variables into the build process without abi tracking.</p>
+<p>See <code>VCPKG_ENV_PASSTHROUGH</code>.</p>
+<p><a name="VCPKG_VISUAL_STUDIO_PATH"></a></p>
+<h3 id="vcpkg_visual_studio_path">VCPKG_VISUAL_STUDIO_PATH</h3>
+<p>Specifies the Visual Studio installation to use.</p>
+<p>To select the precise combination of Visual Studio instance and toolset version, we walk through the following algorithm:</p>
+<ol>
+<li>Determine the setting for <code>VCPKG_VISUAL_STUDIO_PATH</code> from the triplet, or the environment variable <code>VCPKG_VISUAL_STUDIO_PATH</code>, or consider it unset</li>
+<li>Determine the setting for <code>VCPKG_PLATFORM_TOOLSET</code> from the triplet or consider it unset</li>
+<li>Gather a list of all pairs of Visual Studio Instances with all toolsets available in those instances<ol>
+<li>This is ordered first by instance type (Stable, Prerelease, Legacy) and then by toolset version (v142, v141, v140)</li></ol></li>
+<li>Filter the list based on the settings for <code>VCPKG_VISUAL_STUDIO_PATH</code> and <code>VCPKG_PLATFORM_TOOLSET</code>.</li>
+<li>Select the best remaining option</li>
+</ol>
+<p>The path should be absolute, formatted with backslashes, and have no trailing slash:</p>
+<pre><code class="cmake language-cmake">set(VCPKG_VISUAL_STUDIO_PATH "C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Community")</code></pre>
+<h3 id="vcpkg_platform_toolset">VCPKG_PLATFORM_TOOLSET</h3>
+<p>Specifies the VS-based C/C++ compiler toolchain to use.</p>
+<p>See <a href="#VCPKG_VISUAL_STUDIO_PATH"><code>VCPKG_VISUAL_STUDIO_PATH</code></a> for the full selection algorithm.</p>
+<p>Valid settings:</p>
+<ul>
+<li>The Visual Studio 2019 platform toolset is <code>v142</code>.</li>
+<li>The Visual Studio 2017 platform toolset is <code>v141</code>.</li>
+<li>The Visual Studio 2015 platform toolset is <code>v140</code>.</li>
+</ul>
+<h3 id="vcpkg_load_vcvars_env">VCPKG_LOAD_VCVARS_ENV</h3>
+<p>If <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code> is used, VCPKG will not setup the Visual Studio environment. 
+Setting <code>VCPKG_LOAD_VCVARS_ENV</code> to (true|1|on) changes this behavior so that the Visual Studio environment is setup following the same rules as if <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code> was not set.</p>
+<h2 id="macos-variables">MacOS Variables</h2>
+<h3 id="vcpkg_install_name_dir">VCPKG_INSTALL_NAME_DIR</h3>
+<p>Sets the install name used when building macOS dynamic libraries. Default value is <code>@rpath</code>. See the CMake documentation for <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_NAME_DIR.html">CMAKE_INSTALL_NAME_DIR</a> for more information.</p>
+<h3 id="vcpkg_osx_deployment_target">VCPKG_OSX_DEPLOYMENT_TARGET</h3>
+<p>Sets the minimum macOS version for compiled binaries. This also changes what versions of the macOS platform SDK that CMake will search for. See the CMake documentation for <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_DEPLOYMENT_TARGET.html">CMAKE_OSX_DEPLOYMENT_TARGET</a> for more information.</p>
+<h3 id="vcpkg_osx_sysroot">VCPKG_OSX_SYSROOT</h3>
+<p>Set the name or path of the macOS platform SDK that will be used by CMake. See the CMake documentation for <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_SYSROOT.html">CMAKE_OSX_SYSROOT</a> for more information.</p>
+<h3 id="vcpkg_osx_architectures">VCPKG_OSX_ARCHITECTURES</h3>
+<p>Set the macOS / iOS target architecture which will be used by CMake. See the CMake documentation for <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_ARCHITECTURES.html">CMAKE_OSX_ARCHITECTURES</a> for more information.</p>
+<h2 id="per-port-customization">Per-port customization</h2>
+<p>The CMake Macro <code>PORT</code> will be set when interpreting the triplet file and can be used to change settings (such as <code>VCPKG_LIBRARY_LINKAGE</code>) on a per-port basis.</p>
+<p>Example:</p>
+<pre><code class="cmake language-cmake">set(VCPKG_LIBRARY_LINKAGE static)
+if(PORT MATCHES "qt5-")
+    set(VCPKG_LIBRARY_LINKAGE dynamic)
+endif()</code></pre>
+<p>This will build all the <code>qt5-*</code> libraries as DLLs, but every other library as a static library.</p>
+<p>For an example in a real project, see <a href="https://github.com/Intelight/vcpkg/blob/master/triplets/x86-windows-mixed.cmake">https://github.com/Intelight/vcpkg/blob/master/triplets/x86-windows-mixed.cmake</a>.</p>
+<h2 id="additional-remarks">Additional Remarks</h2>
+<p>The default triplet when running any vcpkg command is <code>%VCPKG_DEFAULT_TRIPLET%</code> or a platform-specific choice if that environment variable is undefined.</p>
+<ul>
+<li>Windows: <code>x86-windows</code></li>
+<li>Linux: <code>x64-linux</code></li>
+<li>OSX: <code>x64-osx</code></li>
+</ul>
+<p>We recommend using a systematic naming scheme when creating new triplets. The Android toolchain naming scheme is a good source of inspiration: <a href="https://developer.android.com/ndk/guides/standalone_toolchain.html">https://developer.android.com/ndk/guides/standalone_toolchain.html</a>.</p>
+<h2 id="android-triplets">Android triplets</h2>
+<p>See <a href="android.html">android.md</a></p>
+</div></div><div id="loadFooter"></div></html>

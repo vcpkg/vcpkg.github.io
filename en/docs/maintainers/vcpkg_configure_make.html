@@ -1,0 +1,262 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > maintainers > vcpkg_configure_make.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/modify-baseline-to-pin-old-boost.html">Modify Baseline To Pin Old Boost</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/manifest-files.html">Manifest Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><span id="currentPath">vcpkg_configure_make</span></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="vcpkg_configure_make">vcpkg_configure_make</h1>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/maintainers/vcpkg_configure_make.md">vcpkg repo</a>.</p>
+<p>Configure configure for Debug and Release builds of a project.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="cmake language-cmake">vcpkg_configure_make(
+    SOURCE_PATH &lt;${SOURCE_PATH}&gt;
+    [AUTOCONFIG]
+    [USE_WRAPPERS]
+    [DETERMINE_BUILD_TRIPLET]
+    [BUILD_TRIPLET "--host=x64 --build=i686-unknown-pc"]
+    [NO_ADDITIONAL_PATHS]
+    [CONFIG_DEPENDENT_ENVIRONMENT &lt;SOME_VAR&gt;...]
+    [CONFIGURE_ENVIRONMENT_VARIABLES &lt;SOME_ENVVAR&gt;...]
+    [ADD_BIN_TO_PATH]
+    [NO_DEBUG]
+    [SKIP_CONFIGURE]
+    [PROJECT_SUBPATH &lt;${PROJ_SUBPATH}&gt;]
+    [PRERUN_SHELL &lt;${SHELL_PATH}&gt;]
+    [OPTIONS &lt;-DUSE_THIS_IN_ALL_BUILDS=1&gt;...]
+    [OPTIONS_RELEASE &lt;-DOPTIMIZE=1&gt;...]
+    [OPTIONS_DEBUG &lt;-DDEBUGGABLE=1&gt;...]
+)</code></pre>
+<h2 id="parameters">Parameters</h2>
+<h3 id="source_path">SOURCE_PATH</h3>
+<p>Specifies the directory containing the <code>configure</code>/<code>configure.ac</code>. 
+By convention, this is usually set in the portfile as the variable <code>SOURCE_PATH</code>.</p>
+<h3 id="project_subpath">PROJECT_SUBPATH</h3>
+<p>Specifies the directory containing the <code>`configure</code>/<code>configure.ac</code>. 
+By convention, this is usually set in the portfile as the variable <code>SOURCE_PATH</code>.</p>
+<h3 id="skip_configure">SKIP_CONFIGURE</h3>
+<p>Skip configure process</p>
+<h3 id="use_wrappers">USE_WRAPPERS</h3>
+<p>Use autotools ar-lib and compile wrappers (only applies to windows cl and lib)</p>
+<h3 id="build_triplet">BUILD_TRIPLET</h3>
+<p>Used to pass custom --build/--target/--host to configure. Can be globally overwritten by VCPKG_MAKE_BUILD_TRIPLET</p>
+<h3 id="determine_build_triplet">DETERMINE_BUILD_TRIPLET</h3>
+<p>For ports having a configure script following the autotools rules for selecting the triplet</p>
+<h3 id="no_additional_paths">NO_ADDITIONAL_PATHS</h3>
+<p>Don't pass any additional paths except for --prefix to the configure call</p>
+<h3 id="autoconfig">AUTOCONFIG</h3>
+<p>Need to use autoconfig to generate configure file.</p>
+<h3 id="prerun_shell">PRERUN_SHELL</h3>
+<p>Script that needs to be called before configuration (do not use for batch files which simply call autoconf or configure)</p>
+<h3 id="add_bin_to_path">ADD_BIN_TO_PATH</h3>
+<p>Adds the appropriate Release and Debug <code>bin</code> directories to the path during configure such that executables can run against the in-tree DLLs.</p>
+<h2 id="disable_verbose_flags">DISABLE_VERBOSE_FLAGS</h2>
+<p>do not pass '--disable-silent-rules --verbose' to configure</p>
+<h3 id="options">OPTIONS</h3>
+<p>Additional options passed to configure during the configuration.</p>
+<h3 id="options_release">OPTIONS_RELEASE</h3>
+<p>Additional options passed to configure during the Release configuration. These are in addition to <code>OPTIONS</code>.</p>
+<h3 id="options_debug">OPTIONS_DEBUG</h3>
+<p>Additional options passed to configure during the Debug configuration. These are in addition to <code>OPTIONS</code>.</p>
+<h3 id="config_dependent_environment">CONFIG_DEPENDENT_ENVIRONMENT</h3>
+<p>List of additional configuration dependent environment variables to set.  
+Pass SOMEVAR to set the environment and have SOMEVAR_(DEBUG|RELEASE) set in the portfile to the appropriate values 
+General environment variables can be set from within the portfile itself. </p>
+<h3 id="configure_environment_variables">CONFIGURE_ENVIRONMENT_VARIABLES</h3>
+<p>List of additional environment variables to pass via the configure call. </p>
+<h2 id="notes">Notes</h2>
+<p>This command supplies many common arguments to configure. To see the full list, examine the source.</p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/x264/portfile.cmake">x264</a></li>
+<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/tcl/portfile.cmake">tcl</a></li>
+<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/freexl/portfile.cmake">freexl</a></li>
+<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/libosip2/portfile.cmake">libosip2</a></li>
+</ul>
+<h2 id="source">Source</h2>
+<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_configure_make.cmake">scripts/cmake/vcpkg_configure_make.cmake</a></p>
+</div></div><div id="loadFooter"></div></html>

@@ -1,0 +1,530 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > maintainers > manifest-files.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/modify-baseline-to-pin-old-boost.html">Modify Baseline To Pin Old Boost</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><span id="currentPath">Manifest Files</span></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_make.html">vcpkg_configure_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="manifest-files---vcpkgjson">Manifest files - <code>vcpkg.json</code></h1>
+<p>The <code>vcpkg.json</code> file contains metadata about the port. 
+It's a JSON file, and replaces the existing CONTROL file metadata structure. 
+It must have a top level object, and all fields are case sensitive.</p>
+<h2 id="examples">Examples:</h2>
+<p>The most important fields in a manifest, the ones which are required for all ports, 
+are the <code>"name"</code> field, and a version field (for now, just <code>"version-string"</code>). 
+There's more information about these fields below.</p>
+<pre><code class="json language-json">{
+  "name": "ace",
+  "version-string": "6.5.5"
+}</code></pre>
+<pre><code class="json language-json">{
+  "name": "vtk",
+  "version-string": "8.2.0",
+  "port-version": 2,
+  "description": "Software system for 3D computer graphics, image processing, and visualization",
+  "dependencies": [
+    {
+      "name": "atlmfc",
+      "platform": "windows"
+    },
+    "double-conversion",
+    "eigen3",
+    "expat",
+    "freetype",
+    "glew",
+    "hdf5",
+    "jsoncpp",
+    "libharu",
+    "libjpeg-turbo",
+    "libpng",
+    "libtheora",
+    "libxml2",
+    "lz4",
+    "netcdf-c",
+    "proj4",
+    "pugixml",
+    "sqlite3",
+    "tiff",
+    "zlib"
+  ]
+}</code></pre>
+<h2 id="fields">Fields</h2>
+<h3 id="name"><code>"name"</code></h3>
+<p>The name of the port.</p>
+<p>When adding new ports be aware that the name may conflict with other projects that are not a part of vcpkg.  For example <code>json</code> conflicts with too many other projects so you should add a scope to the name such as <code>taocpp-json</code> to make it unique.  Verify there are no conflicts on a search engine as well as on other package collections.</p>
+<p>Package collections to check for conflicts:</p>
+<ul>
+<li><a href="https://repology.org/projects/">Repology</a></li>
+<li><a href="https://www.debian.org/distrib/packages">Debian packages</a></li>
+<li><a href="https://pkgs.org/">Packages search</a></li>
+</ul>
+<p>A name must be an identifier: i.e., it must only consist of lowercase ascii alphabetic characters, 
+numbers, and hyphens, and it must not begin nor end with a hyphen.</p>
+<h3 id="version-fields">Version fields</h3>
+<p>The library version. There is currently only one kind of version, a <code>"version-string"</code> - 
+however, more version kinds will be added later. Additionally, 
+<code>"port-version"</code> is used to differentiate between port changes that don't change the underlying library version.</p>
+<h4 id="version-string"><code>"version-string"</code></h4>
+<p>This field is an ascii string, and may contain alphanumeric characters, <code>.</code>, <code>_</code>, or <code>-</code>. No attempt at ordering versions is made; all versions are treated as byte strings and are only evaluated for equality.</p>
+<p>For tagged-release ports, we follow the following convention:</p>
+<ol>
+<li>If the library follows a scheme like <code>va.b.c</code>, we remove the leading <code>v</code>. In this case, it becomes <code>a.b.c</code>.</li>
+<li>If the library includes its own name in the version like <code>curl-7_65_1</code>, we remove the leading name: <code>7_65_1</code></li>
+<li>If the library is versioned by dates, format the resulting version string just like the upstream library; 
+for example, Abseil formats their dates <code>lts_2020_02_25</code>, so the <code>"version-string"</code> should be <code>"lts_2020_02_25"</code>.</li>
+</ol>
+<p>For rolling-release ports, we use the date that the <em>commit was accessed by you</em>, formatted as <code>YYYY-MM-DD</code>. Stated another way: if someone had a time machine and went to that date, they would see this commit as the latest master.</p>
+<p>For example, given:</p>
+<ol>
+<li>The latest commit was made on 2019-04-19</li>
+<li>The current version string is <code>2019-02-14</code></li>
+<li>Today's date is 2019-06-01.</li>
+</ol>
+<p>Then if you update the source version today, you should give it version <code>2019-06-01</code>.</p>
+<h4 id="port-version"><code>"port-version"</code></h4>
+<p>The version of the port, aside from the library version.</p>
+<p>This field is a non-negative integer. 
+It allows one to version the port file separately from the version of the underlying library; 
+if you make a change to a port, without changing the underlying version of the library, 
+you should increment this field by one (starting at <code>0</code>, which is equivalent to no <code>"port-version"</code> field). 
+When the version of the underlying library is upgraded, 
+this field should be set back to <code>0</code> (i.e., delete the <code>"port-version"</code> field).</p>
+<h4 id="examples-1">Examples:</h4>
+<pre><code class="json language-json">{
+  "version": "1.0.5",
+  "port-version": 2
+}</code></pre>
+<pre><code class="json language-json">{
+  "version": "2019-03-21"
+}</code></pre>
+<h3 id="description"><code>"description"</code></h3>
+<p>A description of the library.</p>
+<p>This field can either be a single string, which should be a summary of the library, 
+or can be an array, with the first line being a summary and the remaining lines being the detailed description - 
+one string per line.</p>
+<h4 id="examples-2">Examples:</h4>
+<pre><code class="json language-json">{
+  "description": "C++ header-only JSON library"
+}</code></pre>
+<pre><code class="json language-json">{
+  "description": [
+    "Mosquitto is an open source message broker that implements the MQ Telemetry Transport protocol versions 3.1 and 3.1.1.",
+    "MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model."
+    "This makes it suitable for 'machine to machine' messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino."
+  ]
+}</code></pre>
+<h3 id="homepage"><code>"homepage"</code></h3>
+<p>The URL of the homepage for the library where a user is able to find additional documentation or the original source code.</p>
+<h3 id="documentation"><code>"documentation"</code></h3>
+<p>The URL where a user would be able to find official documentation for the library. Optional.</p>
+<h3 id="maintainers"><code>"maintainers"</code></h3>
+<p>A list of strings that define the set of maintainers of a package. 
+It's recommended that these take the form of <code>Givenname Surname &lt;email&gt;</code>, 
+but this field is not checked for consistency.</p>
+<p>Optional.</p>
+<h4 id="example">Example:</h4>
+<pre><code class="json language-json">{
+  "homepage": "https://github.com/microsoft/vcpkg"
+}</code></pre>
+<h3 id="dependencies"><code>"dependencies"</code></h3>
+<p>An array of ports the library has a dependency on.</p>
+<p>vcpkg does not distinguish between build-only dependencies and runtime dependencies. 
+The complete list of dependencies needed to successfully use the library should be specified.</p>
+<p>For example: websocketpp is a header only library, and thus does not require any dependencies at install time. 
+However, downstream users need boost and openssl to make use of the library. 
+Therefore, websocketpp lists boost and openssl as dependencies.</p>
+<p>Each dependency may be either an identifier, or an object. 
+For many dependencies, just listing the name of the library should be fine; 
+however, if one needs to add extra information to that dependency, one may use the dependency object. 
+For a dependency object, the <code>"name"</code> field is used to designate the library; 
+for example the dependency object <code>{ "name": "zlib" }</code> is equivalent to just writing <code>"zlib"</code>.</p>
+<p>If the port is dependent on optional features of another library, 
+those can be specified using the <code>"features"</code> field of the dependency object. 
+If the port does not require any features from the dependency, 
+this should be specifed with the <code>"default-features"</code> fields set to <code>false</code>.</p>
+<p>Dependencies can also be filtered based on the target triplet to support differing requirements. 
+These filters use the same syntax as the <code>"supports"</code> field below, 
+and are specified in the <code>"platform"</code> field.</p>
+<h4 id="example-1">Example:</h4>
+<pre><code class="json language-json">{
+  "dependencies": [
+    {
+      "name": "curl",
+      "default-features": false,
+      "features": [
+        "winssl"
+      ],
+      "platform": "windows"
+    },
+    {
+      "name": "curl",
+      "default-features": false,
+      "features": [
+        "openssl"
+      ],
+      "platform": "!windows"
+    },
+    "rapidjson"
+  ]
+}</code></pre>
+<h3 id="features"><code>"features"</code></h3>
+<p>Multiple optional features can be specified in manifest files, in the <code>"features"</code> object field. 
+This field is a map from the feature name, to the feature's information. 
+Each one must have a <code>"description"</code> field, and may also optionally have a <code>"dependencies"</code> field.</p>
+<p>A feature's name must be an identifier - 
+in other words, lowercase alphabetic characters, digits, and hyphens, 
+neither starting nor ending with a hyphen.</p>
+<p>A feature's <code>"description"</code> is a description of the feature, 
+and is the same kind of thing as the port <code>"description"</code> field.</p>
+<p>A feature's <code>"dependencies"</code> field contains the list of extra dependencies required to build and use this feature; 
+this field isn't required if the feature doesn't require any extra dependencies. 
+On installation the dependencies from all selected features are combined to produce the full dependency list for the build.</p>
+<h4 id="example-2">Example:</h4>
+<pre><code class="json language-json">{
+  "name": "vtk",
+  "version-string": "8.2.0",
+  "port-version": 2,
+  "description": "Software system for 3D computer graphics, image processing, and visualization",
+  "dependencies": [
+    {
+      "name": "atlmfc",
+      "platform": "windows"
+    },
+    "double-conversion",
+    "eigen3",
+    "expat",
+    "freetype",
+    "glew",
+    "hdf5",
+    "jsoncpp",
+    "libharu",
+    "libjpeg-turbo",
+    "libpng",
+    "libtheora",
+    "libxml2",
+    "lz4",
+    "netcdf-c",
+    "proj4",
+    "pugixml",
+    "sqlite3",
+    "tiff",
+    "zlib"
+  ],
+  "features": {
+    "mpi": {
+      "description": "MPI functionality for VTK",
+      "dependencies": [
+        {
+          "name": "hdf5",
+          "features": [
+            "parallel"
+          ]
+        },
+        "mpi"
+      ]
+    },
+    "openvr": {
+      "description": "OpenVR functionality for VTK",
+      "dependencies": [
+        "openvr",
+        "sdl2"
+      ]
+    },
+    "python": {
+      "description": "Python functionality for VTK",
+      "dependencies": [
+        "python3"
+      ]
+    },
+    "qt": {
+      "description": "Qt functionality for VTK",
+      "dependencies": [
+        "qt5"
+      ]
+    }
+  }
+}</code></pre>
+<h3 id="default-features"><code>"default-features"</code></h3>
+<p>An array of feature names that the library uses by default, if nothing else is specified.</p>
+<h4 id="example-3">Example:</h4>
+<pre><code class="json language-json">{
+  "default-features": [
+    "kinesis"
+  ],
+  "features": {
+    "dynamodb": {
+      "description": "Build dynamodb support",
+      "dependencies": [
+        "dynamodb"
+      ]
+    },
+    "kinesis": {
+      "description": "build kinesis support"
+    }
+  }
+}</code></pre>
+<h3 id="supports"><code>"supports"</code></h3>
+<p>A string, formatted as a platform expression, 
+that evaluates to true when the port should build successfully for a triplet.</p>
+<p>This field is used in the CI testing to skip ports, 
+and warns users in advance that a given install tree is not expected to succeed. 
+Therefore, this field should be used optimistically; 
+in cases where a port is expected to succeed 10% of the time, it should still be marked "supported".</p>
+<p>The grammar for this top-level platform expression, in <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a>, is as follows:</p>
+<pre><code class="ebnf language-ebnf">whitespace-character =
+| ? U+0009 "CHARACTER TABULATION" ?
+| ? U+000A "LINE FEED" ?
+| ? U+000D "CARRIAGE RETURN" ?
+| ? U+0020 "SPACE" ? ;
+optional-whitespace = { whitespace-character } ;
+
+lowercase-alpha =
+| "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m"
+| "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" ;
+digit =
+| "0" | "1" | "2" | "3" | "4"
+| "5" | "6" | "7" | "8" | "9" ;
+identifier-character =
+| lowercase-alpha
+| digit ;
+
+platform-expression =
+| platform-expression-not
+| platform-expression-and
+| platform-expression-or ;
+
+platform-expression-identifier = 
+| identifier-character, { identifier-character }, optional-whitespace ;
+
+platform-expression-simple =
+| platform-expression-identifier
+| "(", optional-whitespace, platform-expression, ")", optional-whitespace ;
+
+platform-expression-not =
+| platform-expression-simple
+| "!", optional-whitespace, platform-expression-simple ;
+
+platform-expression-and =
+| platform-expression-not, { "&amp;", optional-whitespace, platform-expression-not } ;
+
+platform-expression-or =
+| platform-expression-not, { "|", optional-whitespace, platform-expression-not } ;
+
+top-level-platform-expression = optional-whitespace, platform-expression ;</code></pre>
+<p>Basically, there are four kinds of expressions -- identifiers, negations, ands, and ors. 
+Negations may only negate an identifier or a grouped expression. 
+Ands and ors are a list of <code>&amp;</code> or <code>|</code> separated identifiers, negated expressions, and grouped expressions. 
+One may not mix <code>&amp;</code> and <code>|</code> without parentheses for grouping.</p>
+<p>These predefined identifier expressions are computed from standard triplet settings:</p>
+<ul>
+<li><code>x64</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"x64"</code></li>
+<li><code>x86</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"x86"</code></li>
+<li><code>arm</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"arm"</code> or <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"arm64"</code></li>
+<li><code>arm64</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"arm64"</code></li>
+<li><code>windows</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>""</code> or <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"WindowsStore"</code></li>
+<li><code>mingw</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"MinGW"</code></li>
+<li><code>uwp</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"WindowsStore"</code></li>
+<li><code>linux</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"Linux"</code></li>
+<li><code>osx</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"Darwin"</code></li>
+<li><code>android</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"Android"</code></li>
+<li><code>static</code> - <code>VCPKG_LIBRARY_LINKAGE</code> == <code>"static"</code></li>
+<li><code>wasm32</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"wasm32"</code></li>
+<li><code>emscripten</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"Emscripten"</code></li>
+</ul>
+<p>These predefined identifier expressions can be overridden in the triplet file, 
+via the <a href="../users/triplets.html"><code>VCPKG_DEP_INFO_OVERRIDE_VARS</code></a> option, 
+and new identifier expressions can be added via the same mechanism.</p>
+<p>This field is optional and defaults to true.</p>
+<blockquote>
+  <p>Implementers' Note: these terms are computed from the triplet via the <code>vcpkg_get_dep_info</code> mechanism.</p>
+</blockquote>
+<h4 id="example-4">Example:</h4>
+<pre><code class="json language-json">{
+  "supports": "!uwp &amp; !(arm &amp; !arm64)"
+}</code></pre>
+<p>This means "doesn't support uwp, nor arm32 (but does support arm64)".</p>
+</div></div><div id="loadFooter"></div></html>

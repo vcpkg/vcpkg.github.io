@@ -1,0 +1,415 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > users > versioning.getting-started.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/modify-baseline-to-pin-old-boost.html">Modify Baseline To Pin Old Boost</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/manifest-files.html">Manifest Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_make.html">vcpkg_configure_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
+<li class="list-can-expand"><span id="currentPath">Get Started with Versioning</span></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="getting-started-with-versioning">Getting started with versioning</h1>
+<p>vcpkg lets you take control of which version of packages to install in your projects using manifests. </p>
+<h2 id="enabling-versions">Enabling versions</h2>
+<p>To start using the versioning feature, first you need to enable the <code>versions</code> feature flag in any of the following manners:</p>
+<ul>
+<li>Setting the <code>VCPKG_FEATURE_FLAGS</code> environment variable.</li>
+</ul>
+<pre><code class="PowerShell language-PowerShell"># Example for PowerShell
+$env:VCPKG_FEATURE_FLAGS="versions"
+./vcpkg install</code></pre>
+<ul>
+<li>Passing the feature flags in the vcpkg command line.</li>
+</ul>
+<pre><code class="PowerShell language-PowerShell">./vcpkg --feature-flags="versions" install</code></pre>
+<h2 id="using-versions-with-manifests">Using versions with manifests</h2>
+<p>With the <code>versions</code> feature flag enabled you can start addding version constraints to your dependencies.</p>
+<p>Let's start with creating a simple CMake project that depends on <code>fmt</code> and <code>zlib</code>.</p>
+<p>Create a folder with the following files:</p>
+<p><strong>vcpkg.json</strong></p>
+<pre><code>{
+    "name": "versions-test",
+    "version": "1.0.0",
+    "dependencies": [
+        {
+            "name": "fmt",
+            "version&gt;=": "7.1.3"
+        }, 
+        "zlib"
+    ],
+    "builtin-baseline": "b60f003ccf5fe8613d029f49f835c8929a66eb61"
+}</code></pre>
+<p><strong>main.cpp</strong></p>
+<pre><code class="c++ language-c++">#include &lt;fmt/core.h&gt;
+#include &lt;zlib.h&gt;
+
+int main()
+{
+    fmt::print("fmt version is {}\n"
+               "zlib version is {}\n", 
+               FMT_VERSION, ZLIB_VERSION);
+    return 0;
+}</code></pre>
+<p><strong>CMakeLists.txt</strong></p>
+<pre><code class="CMake language-CMake">cmake_minimum_required(VERSION 3.18)
+
+project(versions-test CXX)
+
+add_executable(main main.cpp)
+
+find_package(ZLIB REQUIRED)
+find_package(fmt CONFIG REQUIRED)
+target_link_libraries(main PRIVATE ZLIB::ZLIB fmt::fmt)</code></pre>
+<p>And now we build and run our project with CMake:</p>
+<ol>
+<li>Create the build directory for the project.</li>
+</ol>
+<pre><code>PS D:\versions-test&gt; mkdir build
+PS D:\versions-test&gt; cd build</code></pre>
+<ol start="2">
+<li>Configure CMake.  </li>
+</ol>
+<pre><code>PS D:\versions-test\build&gt; cmake -G Ninja -DCMAKE_TOOLCHAIN_FILE=D:/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+-- Running vcpkg install
+Detecting compiler hash for triplet x86-windows...
+The following packages will be built and installed:
+    fmt[core]:x86-windows -&gt; 7.1.3 -- D:\vcpkg\buildtrees\versioning\versions\fmt\dd8cf5e1a2dce2680189a0744102d4b0f1cfb8b6
+    zlib[core]:x86-windows -&gt; 1.2.11#9 -- D:\vcpkg\buildtrees\versioning\versions\zlib\827111046e37c98153d9d82bb6fa4183b6d728e4
+...</code></pre>
+<ol start="3">
+<li>Build the project.</li>
+</ol>
+<pre><code>PS D:\versions-test\build&gt; cmake --build .
+[2/2] Linking CXX executable main.exe</code></pre>
+<ol start="4">
+<li>Run it!</li>
+</ol>
+<pre><code>PS D:\versions-test\build&gt; ./main.exe
+fmt version is 70103
+zlib version is 1.2.11</code></pre>
+<p>Take a look at the output:</p>
+<pre><code>fmt[core]:x86-windows -&gt; 7.1.3 -- D:\vcpkg\buildtrees\versioning\versions\fmt\dd8cf5e1a2dce2680189a0744102d4b0f1cfb8b6
+zlib[core]:x86-windows -&gt; 1.2.11#9 -- D:\vcpkg\buildtrees\versioning\versions\zlib\827111046e37c98153d9d82bb6fa4183b6d728e4</code></pre>
+<p>Instead of using the portfiles in <code>ports/</code>; vcpkg is checking out the files for each version in <code>buildtrees/versioning/versions/</code>.  The files in <code>ports/</code> are still used when running vcpkg in classic mode or when the <code>versions</code> feature flag is disabled. </p>
+<p><em>NOTE: Output from the vcpkg while configuring CMake is only available when using CMake version <code>3.18</code> or newer. If you're using an older CMake you can check the <code>vcpkg-manifest-install.log</code> file in your build directory instead.</em></p>
+<p>Read our <a href="https://devblogs.microsoft.com/cppblog/vcpkg-accelerate-your-team-development-environment-with-binary-caching-and-manifests/#using-manifests-with-msbuild-projects">manifests announcement blog post</a> to learn how to use manifests with MSBuild.</p>
+<h3 id="manifest-changes">Manifest changes</h3>
+<p>If you have used manifests before you will notice that there are some new JSON properties. Let's review these changes:</p>
+<ul>
+<li><strong><code>version</code></strong></li>
+</ul>
+<pre><code>{
+    "name": "versions-test",
+    "version": "1.0.0",
+    ...
+}</code></pre>
+<p>This is your project's version declaration. Previously, you could only declare versions for your projects using the <code>version-string</code> property. Now that versioning has come around, vcpkg is aware of some new versioning schemes.</p>
+<table>
+<thead>
+<tr>
+<th id="version_scheme">Version scheme</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>Dot-separated numerics: <code>1.0.0</code>.</td>
+</tr>
+<tr>
+<td><code>version-semver</code></td>
+<td>Compliant <a href="https://semver.org">semantic versions</a>: <code>1.2.0</code> and <code>1.2.0-rc</code>.</td>
+</tr>
+<tr>
+<td><code>version-date</code></td>
+<td>Dates in <code>YYYY-MM-DD</code> format: <code>2021-01-01</code></td>
+</tr>
+<tr>
+<td><code>version-string</code></td>
+<td>Arbitrary strings: <code>vista</code>, <code>candy</code>.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><code>version&gt;=</code></strong> </li>
+</ul>
+<pre><code>"dependencies": [
+    {
+        "name": "fmt",
+        "version&gt;=": "7.1.3"
+    }, 
+    "zlib"
+],</code></pre>
+<p>This property is used to express minimum version constraints, it is allowed only as part of the <code>"dependencies"</code> declarations. In our example we set an explicit constraint on version <code>7.1.3</code> of <code>fmt</code>. </p>
+<p>vcpkg is allowed to upgrade this constraint if a transitive dependency requires a newer version. For example, if <code>zlib</code> were to declare a dependency on <code>fmt</code> version <code>7.1.4</code> then vcpkg would install <code>7.1.4</code> instead.</p>
+<p>vcpkg uses a minimum version approach, in our example, even if <code>fmt</code> version <code>8.0.0</code> were to be released, vcpkg would still install version <code>7.1.3</code> as that is the minimum version that satisfies the constraint. The advantages of this approach are that you don't get unexpected dependency upgrades when you update vcpkg and you get reproducible builds (in terms of version used) as long as you use the same manifest. </p>
+<p>If you want to upgrade your dependencies, you can bump the minimum version constraint or use a newer baseline.</p>
+<ul>
+<li><strong><code>builtin-baseline</code></strong></li>
+</ul>
+<pre><code>"builtin-baseline": "b60f003ccf5fe8613d029f49f835c8929a66eb61"</code></pre>
+<p>This field declares the versioning baseline for all ports. Setting a baseline is required to enable versioning, otherwise you will get the current versions on the ports directory. You can run 'git rev-parse HEAD' to get the current commit of vcpkg and set it as the builtin-baseline. But what is a baseline? What does it do? Why is the value a SHA?</p>
+<p>From the <a href="versioning.html">versioning documentation</a>:</p>
+<blockquote>
+  <p>The baseline references a commit within the vcpkg repository that 
+  establishes a minimum version on every dependency in the graph. If 
+  no other constraints are specified (directly or transitively), 
+  then the version from the baseline of the top level manifest will 
+  be used.</p>
+</blockquote>
+<p>In our example, you can notice that we do not declare a version constraint for <code>zlib</code>; instead, the version is taken from the baseline. Internally, vcpkg will look in commit <code>b60f003ccf5fe8613d029f49f835c8929a66eb61</code> to find out what version of <code>zlib</code> was the latest at that point in time (in our case it was <code>1.2.11#9</code>).</p>
+<p>During version resolution, baseline versions are treated as minimum version constraints. If you declare an explicit constraint that is lower than a baseline version, the explicit constraint will be upgraded to the baseline version. </p>
+<p>For example, if we modified our dependencies like this:</p>
+<pre><code>"dependencies": [
+    {
+        "name": "fmt",
+        "version&gt;=": "7.1.3"
+    },
+    {
+        "name": "zlib",
+        "version&gt;=": "1.2.11#7"
+    }
+]</code></pre>
+<p><em>NOTE: The value <code>1.2.11#7</code> represents version <code>1.2.11</code>, port version <code>7</code>.</em></p>
+<p>Since the baseline introduces a minimum version constraint for <code>zlib</code> at <code>1.2.11#9</code> and a higher version does satisfy the minimum version constraint for <code>1.2.11#7</code>, vcpkg is allowed to upgrade it. </p>
+<p>Baselines are also a convenient mechanism to upgrade multiple versions at a time, for example, if you wanted to depend on multiple <code>boost</code> libraries, it is more convenient to set the <code>baseline</code> once than declaring a version constraint on each package.</p>
+<p>But what if you want to pin a version older than the baseline? </p>
+<ul>
+<li><strong><code>overrides</code></strong></li>
+</ul>
+<p>Since baselines establish a version floor for all packages and explicit constraints get upgraded when they are lower than the baseline, we need another mechanism to downgrade versions past the baseline.</p>
+<p>The mechanism vcpkg provides for that scenario is <code>overrides</code>. When an override is declared on a package, vcpkg will ignore all other version constraints either directly declared in the manifest or from transitive dependencies. In short, <code>overrides</code> will force vcpkg to use the exact version declared, period.</p>
+<p>Let's modify our example once more, this time to force vcpkg to use version <code>6.0.0</code> of <code>fmt</code>.</p>
+<pre><code>{
+    "name": "versions-test",
+    "version": "1.0.0",
+    "dependencies": [
+        {
+            "name": "fmt",
+            "version&gt;=": "7.1.3"
+        },
+        {
+            "name": "zlib",
+            "version&gt;=": "1.2.11#7"
+        }
+    ],
+    "builtin-baseline": "b60f003ccf5fe8613d029f49f835c8929a66eb61",
+    "overrides": [
+        {
+            "name": "fmt",
+            "version": "6.0.0"
+        }
+    ]
+}</code></pre>
+<p>Rebuild our project:</p>
+<pre><code>PS D:\versions-test\build&gt; rm ./CMakeCache.txt
+PS D:\versions-test\build&gt; rm -r ./vcpkg_installed
+PS D:\versions-test\build&gt; cmake -G Ninja -DCMAKE_TOOLCHAIN_FILE=D:/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+-- Running vcpkg install
+Detecting compiler hash for triplet x86-windows...
+The following packages will be built and installed:
+    fmt[core]:x86-windows -&gt; 6.0.0 -- D:\vcpkg\buildtrees\versioning\versions\fmt\d99b6a35e1406ba6b6e09d719bebd086f83ed5f3
+    zlib[core]:x86-windows -&gt; 1.2.11#9 -- D:\vcpkg\buildtrees\versioning\versions\zlib\827111046e37c98153d9d82bb6fa4183b6d728e4
+...
+PS D:\versions-test\build&gt; cmake --build .
+[2/2] Linking CXX executable main.exe</code></pre>
+<p>And run it!</p>
+<pre><code>PS D:\versions-test\build&gt; .\main.exe
+fmt version is 60000
+zlib version is 1.2.11</code></pre>
+<p>Notice how the <code>fmt</code> is now at version <code>6.0.0</code> just like we wanted.</p>
+<h2 id="versions-and-custom-ports">Versions and custom ports</h2>
+<p>The last thing to discuss is how overlay ports interact with versioning resolution. The answer is: they don't. </p>
+<p>Going into more detail, when you provide an overlay for a port, vcpkg will always use the overlay port without caring what version is contained in it. The reasons are two-fold: (1) it is consistent with the existing behavior of overlay ports of completely masking the existing port, and (2) overlay ports do not (and are not expected to) provide enough information to power vcpkg's versioning feature.</p>
+<p>If you want to have flexible port customization along with versioning features, you should consider making your own custom registry. See our <a href="../specifications/registries.html">registries specification for more details</a>.</p>
+<h2 id="further-reading">Further reading</h2>
+<p>If you're interested in delving deeper into the details of how versioning works we recommended that you read the <a href="../specifications/versioning.html">original versioning specification</a> and the <a href="versioning.implementation-details.html">implementation details</a>.</p>
+<p>See also:</p>
+<ul>
+<li><a href="versioning.html">Versioning docs</a></li>
+<li><a href="../specifications/versioning.html">Original specification</a></li>
+<li><a href="versioning.reference.html">Versioning reference</a></li>
+<li><a href="versioning.implementation-details.html">Versioning implementation details</a></li>
+</ul>
+</div></div><div id="loadFooter"></div></html>

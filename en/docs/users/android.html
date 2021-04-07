@@ -1,0 +1,330 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > users > android.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/modify-baseline-to-pin-old-boost.html">Modify Baseline To Pin Old Boost</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/manifest-files.html">Manifest Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_make.html">vcpkg_configure_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><span id="currentPath">android</span></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="vcpkg-and-android">vcpkg and Android</h1>
+<p>Android is not officialy supported, and there are no official android triplets at the moment.</p>
+<p>However, some packages can compile to Android, and the situation is improving: see the list of <a href="https://github.com/Microsoft/vcpkg/pulls?q=+android+">PR related to Android</a>.</p>
+<h2 id="android-build-requirements">Android build requirements</h2>
+<ol>
+<li><p>Download the <a href="https://developer.android.com/ndk/downloads/">android ndk</a></p></li>
+<li><p>Set environment variable <code>ANDROID_NDK_HOME</code> to your android ndk installation.  
+For example:</p></li>
+</ol>
+<pre><code class="bash language-bash">export ANDROID_NDK_HOME=/home/your-account/Android/Sdk/ndk-bundle</code></pre>
+<p>Or:</p>
+<pre><code class="bash language-bash">export ANDROID_NDK_HOME=/home/your-account/Android/android-ndk-r21b</code></pre>
+<ol start="3">
+<li><p>Install <a href="https://github.com/microsoft/vcpkg">vcpkg</a></p></li>
+<li><p>Set environment variable <code>VCPKG_ROOT</code> to your vcpkg installation.</p></li>
+</ol>
+<pre><code class="bash language-bash">export VCPKG_ROOT=/path/to/vcpkg</code></pre>
+<h2 id="create-the-android-triplets">Create the android triplets</h2>
+<h3 id="android-abi-and-corresponding-vcpkg-triplets">Android ABI and corresponding vcpkg triplets</h3>
+<p>There are four different Android ABI, each of which maps to  
+a vcpkg triplet. The following table outlines the mapping from vcpkg architectures to android architectures</p>
+<table>
+<thead>
+<tr>
+<th id="vcpkg_target_triplet">VCPKG_TARGET_TRIPLET</th>
+<th id="android_abi">ANDROID_ABI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arm64-android</td>
+<td>arm64-v8a</td>
+</tr>
+<tr>
+<td>arm-android</td>
+<td>armeabi-v7a</td>
+</tr>
+<tr>
+<td>x64-android</td>
+<td>x86_64</td>
+</tr>
+<tr>
+<td>x86-android</td>
+<td>x86</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-the-android-triplets-1">Create the android triplets</h3>
+<p>You can copy-paste the script below to populate them, and adjust them to your needs if required.</p>
+<pre><code class="bash language-bash">cd $VCPKG_ROOT
+
+echo "
+set(VCPKG_TARGET_ARCHITECTURE arm)
+set(VCPKG_CRT_LINKAGE dynamic)
+set(VCPKG_LIBRARY_LINKAGE dynamic)
+set(VCPKG_CMAKE_SYSTEM_NAME Android)
+" &gt; triplets/community/arm-android.cmake
+
+echo "
+set(VCPKG_TARGET_ARCHITECTURE arm64)
+set(VCPKG_CRT_LINKAGE dynamic)
+set(VCPKG_LIBRARY_LINKAGE dynamic)
+set(VCPKG_CMAKE_SYSTEM_NAME Android)
+" &gt; triplets/community/arm64-android.cmake
+
+echo "
+set(VCPKG_TARGET_ARCHITECTURE x86)
+set(VCPKG_CRT_LINKAGE dynamic)
+set(VCPKG_LIBRARY_LINKAGE dynamic)
+set(VCPKG_CMAKE_SYSTEM_NAME Android)
+" &gt; triplets/community/x86-android.cmake
+
+echo "
+set(VCPKG_TARGET_ARCHITECTURE x64)
+set(VCPKG_CRT_LINKAGE dynamic)
+set(VCPKG_LIBRARY_LINKAGE dynamic)
+set(VCPKG_CMAKE_SYSTEM_NAME Android)
+" &gt; triplets/community/x64-android.cmake</code></pre>
+<h2 id="install-libraries-for-android-using-vcpkg">Install libraries for Android using vcpkg</h2>
+<p>Example for jsoncpp:</p>
+<pre><code class="bash language-bash">cd $VCPKG_ROOT
+
+# specify the triplet like this
+./vcpkg install jsoncpp --triplet arm-android   
+# or like this
+./vcpkg install jsoncpp:arm64-android           
+./vcpkg install jsoncpp:x86-android
+./vcpkg install jsoncpp:x64-android</code></pre>
+<h2 id="consume-libraries-using-vpckg-cmake-and-the-android-toolchain">Consume libraries using vpckg, cmake and the android toolchain</h2>
+<ol>
+<li>Combine vcpkg and Android toolchains</li>
+</ol>
+<p>vcpkg and android both provide dedicated toolchains:</p>
+<pre><code class="bash language-bash">vcpkg_toolchain_file=$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake
+android_toolchain_file=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake</code></pre>
+<p>When using vcpkg, the vcpkg toolchain shall be specified first. </p>
+<p>However, vcpkg provides a way to preload and additional toolchain, with the VCPKG_CHAINLOAD_TOOLCHAIN_FILE option. </p>
+<pre><code class="bash language-bash">cmake \
+  -DCMAKE_TOOLCHAIN_FILE=$vcpkg_toolchain_file \
+  -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=$android_toolchain_file \
+  ...</code></pre>
+<ol start="2">
+<li>Specifiy the android abi and vcpkg triplet</li>
+</ol>
+<p>When compiling for android, you need to select a matching "android abi" / "vcpkg triplet" pair.</p>
+<p>For example:</p>
+<pre><code class="bash language-bash">android_abi=armeabi-v7a
+vcpkg_target_triplet=arm-android
+
+cmake 
+  ...
+  -DVCPKG_TARGET_TRIPLET=$vcpkg_target_triplet \
+  -DANDROID_ABI=$android_abi</code></pre>
+<h3 id="test-on-an-example">Test on an example</h3>
+<p>The folder <a href="../examples/vcpkg_android_example_cmake">docs/examples/vcpkg_android_example_cmake</a> provides a working example, with an android library that consumes the jsoncpp library:</p>
+<p><em>Details</em></p>
+<ul>
+<li><p>The <a href="../examples/vcpkg_android_example_cmake/CMakeLists.txt">CMakeLists</a> simply uses <code>find_package</code> and <code>target_link_library</code></p></li>
+<li><p>The <a href="../examples/vcpkg_android_example_cmake/compile.sh">compile.sh</a> script enables you to select any matching pair of "android abi" /  "vcpkg triplet" and to test the compilation</p></li>
+<li><p>The dummy <a href="../examples/vcpkg_android_example_cmake/my_lib.cpp">my_lib.cpp</a> file uses the jsoncpp library</p></li>
+</ul>
+<p><em>Note</em>: this example only compiles an Android library, as the compilation of a full fledged Android App is beyond the scope of this document.</p>
+<h3 id="test-on-an-example-using-vcpkg_androidcmakeexamplesvcpkg_android_example_cmake_scriptcmakevcpkg_androidcmake">Test on an example, using <a href="../examples/vcpkg_android_example_cmake_script/cmake/vcpkg_android.cmake">vcpkg_android.cmake</a></h3>
+<p>The folder <a href="../examples/vcpkg_android_example_cmake_script">docs/examples/vcpkg_android_example_cmake_script</a> provides the same example, and uses a cmake script in order to simplify the usage.</p>
+<p><em>Details</em></p>
+<ul>
+<li>The main <a href="../examples/vcpkg_android_example_cmake_script/CMakeLists.txt">CMakeLists</a> loads <a href="../examples/vcpkg_android_example_cmake_script/cmake/vcpkg_android.cmake">vcpkg_android.cmake</a> if the flag <code>VCPKG_TARGET_ANDROID</code> is set:</li>
+</ul>
+<pre><code class="cmake language-cmake">if (VCPKG_TARGET_ANDROID)
+    include("cmake/vcpkg_android.cmake")
+endif()</code></pre>
+<p><em>Important: place these lines before calling project() !</em></p>
+<ul>
+<li>The <a href="../examples/vcpkg_android_example_cmake_script/compile.sh">compile.sh</a> script shows that it is then possible to compile for android using a simple cmake invocation, for example:</li>
+</ul>
+<pre><code class="bash language-bash">cmake .. -DVCPKG_TARGET_ANDROID=ON -DANDROID_ABI=armeabi-v7a</code></pre>
+<h2 id="consume-libraries-using-vpckg-and-android-prefab-archives-aar-files">Consume libraries using vpckg, and Android prefab Archives (AAR files)</h2>
+<p>See <a href="../specifications/prefab.html">prefab.md</a></p>
+</div></div><div id="loadFooter"></div></html>

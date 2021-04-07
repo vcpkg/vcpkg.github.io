@@ -1,0 +1,327 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > examples > modify-baseline-to-pin-old-boost.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><span id="currentPath">Modify Baseline To Pin Old Boost</span></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/manifest-files.html">Manifest Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_make.html">vcpkg_configure_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="pin-old-boost-versions">Pin old Boost versions</h1>
+<p>This document will teach you how to set versions of meta-packages like <code>boost</code> or <code>qt5</code>. </p>
+<p><strong>What is a meta-package?</strong>   
+In vcpkg we call meta-packages to ports that by themselves don't install anything but that instead forward installation to another port or ports. The reasons for these meta-packages to exist are plenty: to install different versions of a library depending on platform (like the old OpenSSL port did), to allow for multiple versions to exist in the vcpkg registry at the same time (OpenCV), or to conveniently install/uninstall a catalog of related packages (Boost and Qt).  </p>
+<p>In the case of Boost, it is unlikely that a user requires all of the 140+ Boost libraries in their project. For the sake of convenience, vcpkg splits Boost into multiple sub-packages broken down to individual libraries. By doing so, users can limit the subset of Boost libraries that they depend on. </p>
+<p>If a user wants to install all of the Boost libraries available in vcpkg, they can do so by installing the <code>boost</code> meta-package. </p>
+<p>Due to the nature of meta-packages, some unexpected issues arise when trying to use them with versioning. If a user writes the following manifest file:</p>
+<p><code>vcpkg.json</code></p>
+<pre><code class="json language-json">{
+    "name": "demo",
+    "version": "1.0.0",
+    "builtin-baseline": "787fe1418ea968913cc6daf11855ffd8b0b5e9d4",
+    "dependencies": [ "boost-tuple" ],
+    "overrides": [ 
+        { "name": "boost", "version": "1.72.0" }
+    ]
+}</code></pre>
+<p>The resulting installation plan is:</p>
+<pre><code>The following packages will be built and installed:
+    boost-assert[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-assert\3393715b4ebe30fe1c3b68acf7f84363e611f156
+    boost-compatibility[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-compatibility\cda5675366367789659c59aca65fc57d03c51deb
+    boost-config[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-config\ca82ca1b9c1739c91f3cf42c68cee56c896ae6bd
+    boost-container-hash[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-container-hash\bf472c23d29c3d80b562c43471eb92cea998f372
+    boost-core[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-core\20a19f6ece37686a02eed33e1f58add8b7a2582a
+    boost-detail[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-detail\96744251f025f9b3c856a275dfc338031876777b
+    boost-integer[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-integer\de70ce0d1500df1eda3496c4f98f42f5db256b4a
+    boost-io[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-io\7bf3407372f8fc2a99321d24a0e952d44fe25bf3
+    boost-preprocessor[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-preprocessor\8d78b8ba2e9f54cb00137115ddd2ffec1c63c149
+    boost-static-assert[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-static-assert\2a41c4703c7122de25b1c60510c43edc9371f63d
+    boost-throw-exception[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-throw-exception\b13bdf32a20786a0165cc20205ef63765cac0627
+    boost-tuple[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-tuple\22e3d000a178a88992c430d8ae8a0244c7dea674
+    boost-type-traits[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-type-traits\8829793f6c6c913257314caa317599f8d253a5ca
+    boost-uninstall[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-uninstall\08933bad27b6d41caef0940c31e2069ecb6a079c
+    boost-utility[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-utility\47572946bf6a63c731b9c4142eecb8bef3d3b270
+    boost-vcpkg-helpers[core]:x64-windows -&gt; 7#2 -- D:\vcpkg\buildtrees\versioning\versions\boost-vcpkg-helpers\2a21e5ab45d1ce41c185faf85dff0670ea6def1d</code></pre>
+<p>It is reasonable to expect that overriding <code>boost</code> to version 1.72.0 results in all Boost packages being pinned to version 1.72.0. <strong>However, vcpkg does not treat the <code>boost</code> meta-package any differently that any other port.</strong> In other words, vcpkg has no notion that <code>boost</code> is related to all the other <code>boost-*</code> libraries, other than it depends on all of them. For this reason, all the other boost packages are installed at version 1.75.0, which is the baseline version.</p>
+<p>Below, we describe two methods to pin down Boost versions effectively.</p>
+<h2 id="method-1-pin-specific-packages">Method 1: Pin specific packages</h2>
+<p>Use <code>"overrides"</code> to force specific versions in a package-by-package basis. </p>
+<p><code>vcpkg.json</code></p>
+<pre><code class="json language-json">{
+    "name": "demo",
+    "version": "1.0.0",
+    "builtin-baseline": "787fe1418ea968913cc6daf11855ffd8b0b5e9d4",
+    "dependencies": [ "boost-tuple" ],
+    "overrides": [
+        { "name": "boost-core", "version": "1.72" },
+        { "name": "boost-integer", "version": "1.72" },
+        { "name": "boost-io", "version": "1.72" },
+        { "name": "boost-tuple", "version": "1.72" }     
+    ]
+}</code></pre>
+<p>This method allows you to quickly set the specific versions you want, but you will need to write an override for each package. Boost libraries are also heavily interdependent, which means that you may end up writing a lot of override lines.</p>
+<p>The second method makes it easy to pin the entire Boost collection and end up with a very simple manifest file.</p>
+<h2 id="method-2-modify-baseline">Method 2: Modify baseline</h2>
+<p>An easy way to set the version for the entirety of boost is to use the <code>"builtin-baseline"</code> property. </p>
+<p>As of right now, it is only possible to go back to Boost version <code>1.75.0</code> using a baseline. Since that was the contemporary Boost version when the versioning feature was merged. <strong>But, it is possible to modify the baseline to whatever you like and use that instead.</strong></p>
+<h3 id="step-1-create-a-new-branch">Step 1: Create a new branch</h3>
+<p>As described in the versioning documentation. The value that goes in <code>"builtin-baseline"</code> is a Git commit in the vcpkg repository's history. Then it stands to reason, that if you want to customize the baseline you should be able to create a new commit with said custom baseline. </p>
+<p>Let's start by creating a new branch to hold our modified baseline.   
+In the directory containing your clone of the vcpkg Git repository run:</p>
+<pre><code>git checkout -b custom-boost-baseline</code></pre>
+<p>This will create a new branch named <code>custom-boost-baseline</code> and check it out immediately.</p>
+<h3 id="step-2-modify-the-baseline">Step 2: Modify the baseline</h3>
+<p>The next step is to modify the baseline file, open the file in your editor of choice and modify the entries for the Boost libraries.</p>
+<p>Change the <code>"baseline"</code> version to your desired version.   
+<em>NOTE: Remember to also set the port versions to 0 (or your desired version).</em></p>
+<p><code>${vcpkg-root}/versions/baseline.json</code></p>
+<pre><code class="diff language-diff">...
+     "boost": {
+-      "baseline": "1.75.0",
++      "baseline": "1.72.0",
+       "port-version": 0
+     },
+     "boost-accumulators": {
+-      "baseline": "1.75.0",
+-      "port-version": 1
++      "baseline": "1.72.0",
++      "port-version": 0
+     },
+     "boost-algorithm": {
+-      "baseline": "1.75.0",
++      "baseline": "1.72.0",
+       "port-version": 0
+     },
+     "boost-align": {
+-      "baseline": "1.75.0",
++      "baseline": "1.72.0",
+       "port-version": 0
+     },
+...
+    "boost-uninstall: {
+        "baseline": "1.75.0",
+        "port-version": 0
+    },
+...</code></pre>
+<p>Some <code>boost-</code> packages are helpers used by vcpkg and are not part of Boost. For example, <code>"boost-uninstall"</code> is a vcpkg helper to conveniently uninstall all Boost libraries, but it didn't exist for Boost version <code>1.72.0</code>, in this case it is fine to leave it at <code>1.75.0</code> to avoid baseline errors (since all versions in <code>baseline.json</code> must have existed). </p>
+<h3 id="step-3-commit-your-changes">Step 3: Commit your changes</h3>
+<p>After saving your modified file, run these commands to commit your changes:</p>
+<pre><code>git add versions/baseline.json
+git commit -m "Baseline Boost 1.72.0"</code></pre>
+<p>You can set the commit message to whatever you want, just make it useful for you.</p>
+<h3 id="step-4-get-your-baseline-commit-sha">Step 4: Get your baseline commit SHA</h3>
+<p>Once all your changes are ready, you can get the commit SHA by running:</p>
+<pre><code>git rev-parse HEAD</code></pre>
+<p>The output of that command will be the commit SHA you need to put as the <code>"builtin-baseline"</code> in your project's manifest file. Copy the 40-hex digits and save them to use later in your manifest file.</p>
+<h3 id="step-5-optional-go-back-to-the-main-repository-branch">Step 5: (Optional) Go back to the main repository branch</h3>
+<p>Once your changes have been commited locally, you can refer to the commit SHA regardless of the repository branch you're working on. So, let's go back to the main vcpkg repository branch.</p>
+<pre><code>git checkout master</code></pre>
+<h3 id="step-6-create-your-manifest-file-with-your-custom-baseline">Step 6: Create your manifest file with your custom baseline</h3>
+<pre><code class="json language-json">{
+    "name": "demo",
+    "version": "1.0.0",
+    "builtin-baseline": "9b5cf7c3d9376ddf43429671282972ec4f99aa85",
+    "dependencies": [ "boost-tuple" ]
+}</code></pre>
+<p>In this example, commit SHA <code>9b5cf7c3d9376ddf43429671282972ec4f99aa85</code> is the commit ID with the modified baseline. Even when a different branch (<code>master</code> in this case) is checked out, Git is able to find the commit as long as the branch with the modified baseline exists (the <code>custom-boost-baseline</code> branch we created in step 1).</p>
+<p>We run <code>vcpkg --feature-flags="manifests,versions" install</code> in the directory containing our manifest file and the output looks like this:</p>
+<pre><code>The following packages will be built and installed:
+    boost-assert[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-assert\6754398591f48435b28014ca0d60e5375a4c04d1
+    boost-compatibility[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-compatibility\9893ff3c554575bc712df4108a949e07b269f401
+    boost-config[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-config\de2784767046b06ec31eb718f10df512e51f2aad
+    boost-container-hash[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-container-hash\cc19fb0154bbef188f309f49b2664ec7623b96b6
+    boost-core[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-core\0eb5e20df9e267e9eca325be946f52ceb8a60229
+    boost-detail[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-detail\759d7c6a3f9dbaed0b0c69fa0bb764f7606bb02d
+    boost-integer[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-integer\173956c61a26e83b0f8b58b0baf60f06aeee637c
+    boost-preprocessor[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-preprocessor\86eb3938b7875f124feb845331dbe84cbab5d1c6
+    boost-static-assert[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-static-assert\e82d8f7f3ee07e927dc374f5a08ed6d6f4ef81f4
+    boost-throw-exception[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-throw-exception\64df295f7df41de4fcb219834889b126b5020def
+    boost-tuple[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-tuple\b3e1b01ffce6e367e4fed0a5538a8546abacb6b2
+    boost-type-traits[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-type-traits\5e44ec657660eccf4d3b2710b092dd238e1e7a2d
+    boost-uninstall[core]:x64-windows -&gt; 1.75.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-uninstall\08933bad27b6d41caef0940c31e2069ecb6a079c
+    boost-utility[core]:x64-windows -&gt; 1.72.0 -- D:\vcpkg\buildtrees\versioning\versions\boost-utility\7d721b2458d5d595ac341eb54883274f38a4b8c2
+    boost-vcpkg-helpers[core]:x64-windows -&gt; 7#2 -- D:\vcpkg\buildtrees\versioning\versions\boost-vcpkg-helpers\2a21e5ab45d1ce41c185faf85dff0670ea6def1d</code></pre>
+<p>Notice how simple our manifest file has become, instead of having a multitude of <code>"overrides"</code> you can pin down all Boost packages just by setting the <code>"builtin-baseline"</code> to be your modified baseline commit SHA.</p>
+</div></div><div id="loadFooter"></div></html>

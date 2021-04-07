@@ -1,0 +1,376 @@
+﻿<head>
+
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          $('#loadNavBar').load('/en/navbar.html');
+          $('#loadFooter').load('/en/footer.html');
+          handleDefaultTreeViewExpand(" > docs > users > versioning.reference.md");
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <div class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search Packages"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/about/faq.html">faq</a></li>
+<li class="list-can-expand"><a href="/en/docs/about/privacy.html">privacy</a></li>
+</ul>
+<li class="list-can-expand">examples</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/examples/installing-and-using-packages.html">Installing And Using Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/manifest-mode-cmake.html">Manifest Mode Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/modify-baseline-to-pin-old-boost.html">Modify Baseline To Pin Old Boost</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/overlay-triplets-linux-dynamic.html">Overlay Triplets Linux Dynamic</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+</ul>
+<li class="list-can-expand">maintainers</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">internal</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html">vcpkg_internal_get_cmake_vars</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html">z_vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html">z_vcpkg_function_arguments</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html">z_vcpkg_prettify_command_line</a></li>
+</ul>
+<li class="list-can-expand">ports</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand">vcpkg Cmake</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a></li>
+</ul>
+<li class="list-can-expand">vcpkg Cmake Config</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/maintainer-guide.html">Maintainer Guide</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/manifest-files.html">Manifest Files</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/pr-review-checklist.html">Pr Review Checklist</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_apply_patches.html">vcpkg_apply_patches</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html">vcpkg_buildpath_length_warning</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_cmake.html">vcpkg_build_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_gn.html">vcpkg_build_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_make.html">vcpkg_build_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_ninja.html">vcpkg_build_ninja</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_nmake.html">vcpkg_build_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_build_qmake.html">vcpkg_build_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_features.html">vcpkg_check_features</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_check_linkage.html">vcpkg_check_linkage</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html">vcpkg_clean_executables_in_bin</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_cmake.html">vcpkg_configure_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_make.html">vcpkg_configure_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_pdbs.html">vcpkg_copy_pdbs</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tools.html">vcpkg_copy_tools</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html">vcpkg_copy_tool_dependencies</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_download_distfile.html">vcpkg_download_distfile</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_build_process.html">vcpkg_execute_build_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html">vcpkg_execute_in_download_mode</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process.html">vcpkg_execute_required_process</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html">vcpkg_fixup_pkgconfig</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_cmake.html">vcpkg_install_cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_make.html">vcpkg_install_make</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_meson.html">vcpkg_install_meson</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_nmake.html">vcpkg_install_nmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_install_qmake.html">vcpkg_install_qmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_minimum_required.html">vcpkg_minimum_required</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_replace_string.html">vcpkg_replace_string</a></li>
+</ul>
+<li class="list-can-expand">specifications</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/specifications/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/export-command.html">Export Command</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/feature-packages.html">Feature Packages</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/ports-overlay.html">Ports Overlay</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/prefab.html">prefab</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries-2.html">Registries 2</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/registries.html">registries</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/scripts-extraction.html">Scripts Extraction</a></li>
+<li class="list-can-expand"><a href="/en/docs/specifications/versioning.html">versioning</a></li>
+</ul>
+<li class="list-can-expand">users</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
+<li class="list-can-expand"><span id="currentPath">versioning.reference</span></li>
+</ul>
+<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+</ul>
+</div><div class="right-side">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="versioning-reference">Versioning reference</h1>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#version-schemes">Version schemes</a></li>
+<li><a href="#version-files">Version files</a></li>
+<li><a href="#version-constraints">Version constraints</a></li>
+</ul>
+<h2 id="version-schemes">Version schemes</h2>
+<p>Ports in vcpkg should attempt to follow the versioning conventions used by the packageâ€™s authors. For that reason, when declaring a packageâ€™s version the appropriate scheme should be used.</p>
+<p>Each versioning scheme defines its own rules on what is a valid version string and more importantly the rules for how to sort versions using the same scheme.</p>
+<p>The versioning schemes understood by vcpkg are:</p>
+<table>
+<thead>
+<tr>
+<th id="manifest_property">Manifest property</th>
+<th id="versioning_scheme">Versioning scheme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>For dot-separated numeric versions</td>
+</tr>
+<tr>
+<td><code>version-semver</code></td>
+<td>For SemVer compliant versions</td>
+</tr>
+<tr>
+<td><code>version-date</code></td>
+<td>For dates in the format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td><code>version-string</code></td>
+<td>For arbitrary strings</td>
+</tr>
+</tbody>
+</table>
+<p>A manifest must contain only one version declaration.</p>
+<h4 id="version"><code>version</code></h4>
+<p>Accepts version strings that follow a relaxed, dot-separated-, semver-like scheme.</p>
+<p>The version is logically composed of dot-separated (<code>.</code>) numeric sections. Each section must contain an integer positive number with no leading zeroes.</p>
+<p>The regex pattern for this versioning scheme is: <code>(0|[1-9]\d*)(\.(0|[1-9]\d*))*</code></p>
+<p><em>Sorting behavior</em>: When comparing two versions, each section is compared from left to right by their numeric value, until the first difference is found. A version with the smallest set of sections takes precedence over another with a larger set of sections, given that all their preceding sections compare equally.</p>
+<p>Example:   
+<code>0</code> &lt; <code>0.1</code> &lt; <code>0.1.0</code> &lt; <code>1</code> &lt; <code>1.0.0</code> &lt; <code>1.0.1</code> &lt; <code>1.1</code>&lt; <code>2.0.0</code></p>
+<h4 id="version-semver"><code>version-semver</code></h4>
+<p>Accepts version strings that follow semantic versioning conventions as described in the <a href="https://semver.org/#semantic-versioning-specification-semver">semantic versioning specification</a>.</p>
+<p><em>Sorting behavior</em>: Strings are sorted following the rules described in the semantic versioning specification.</p>
+<p>Example:  
+<code>1.0.0-1</code> &lt; <code>1.0.0-alpha</code> &lt; <code>1.0.0-beta</code> &lt; <code>1.0.0</code> &lt; <code>1.0.1</code> &lt; <code>1.1.0</code></p>
+<h4 id="version-date"><code>version-date</code></h4>
+<p>Accepts version strings that can be parsed to a date following the ISO-8601 format <code>YYYY-MM-DD</code>. Disambiguation identifiers are allowed in the form of dot-separated-, positive-, integer-numbers with no leading zeroes.</p>
+<p>The regex pattern for this versioning scheme is: <code>\d{4}-\d{2}-\d{2}(\.(0|[1-9]\d*))*</code></p>
+<p><em>Sorting behavior</em>: Strings are sorted first by their date part, then by numeric comparison of their disambiguation identifiers. Disambiguation identifiers follow the rules of the relaxed (<code>version</code>) scheme.</p>
+<p>Examples: 
+<code>2021-01-01</code> &lt; <code>2021-01-01.1</code> &lt; <code>2021-02-01.1.2</code> &lt; <code>2021-02-01.1.3</code> &lt; <code>2021-02-01</code></p>
+<h4 id="version-string"><code>version-string</code></h4>
+<p>For packages using version strings that do not fit any of the other schemes, it accepts most arbitrary strings.  The <code>#</code> which is used to denote port versions is disallowed.</p>
+<p><em>Sorting behavior</em>: No sorting is attempted on the version string itself. However, if the strings match exactly, their port versions can be compared and sorted.</p>
+<p>Examples: </p>
+<ul>
+<li><code>apple</code> &lt;&gt; <code>orange</code> &lt;&gt; <code>orange.2</code> &lt;&gt; <code>orange2</code>  </li>
+<li><code>watermelon#0</code>&lt; <code>watermelon#1</code></li>
+</ul>
+<h4 id="port-version"><code>port-version</code></h4>
+<p>A positive integer value that increases each time a vcpkg-specific change is made to the port.  </p>
+<p>The rules for port versions are:</p>
+<ul>
+<li>Start at 0 for the original version of the port,</li>
+<li>increase by 1 each time a vcpkg-specific change is made to the port that does not increase the version of the package,</li>
+<li>and reset to 0 each time the version of the package is updated.</li>
+</ul>
+<p><em>NOTE: Whenever vcpkg output a version it follows the format <code>&lt;version&gt;#&lt;port version&gt;</code>. For example <code>1.2.0#2</code> means version <code>1.2.0</code> port version <code>2</code>. When the port version is <code>0</code> the <code>#0</code> suffix is omitted (<code>1.2.0</code> implies version <code>1.2.0</code> port version <code>0</code>).</em></p>
+<p><em>Sorting behavior</em>: If two versions compare equally, their port versions are compared by their numeric value, lower port versions take precedence.</p>
+<p>Examples:</p>
+<ul>
+<li><code>1.2.0</code> &lt; <code>1.2.0#1</code> &lt; <code>1.2.0#2</code> &lt; <code>1.2.0#10</code></li>
+<li><code>2021-01-01#20</code> &lt; <code>2021-01-01.1</code></li>
+<li><code>windows#7</code> &lt; <code>windows#8</code></li>
+</ul>
+<h2 id="version-files">Version files</h2>
+<p>vcpkg uses a set of metadata files to power its versioning feature.</p>
+<p>These files are located in the following locations:</p>
+<ul>
+<li><code>${VCPKG_ROOT}/versions/baseline.json</code>, (this file is common to all ports) and</li>
+<li><code>${VCPKG_ROOT}/versions/${first-letter-of-portname}-/${portname}.json</code> (one per port).</li>
+</ul>
+<p>For example, for <code>zlib</code> the relevant files are:</p>
+<ul>
+<li><code>${VCPKG_ROOT}/versions/baseline.json</code></li>
+<li><code>${VCPKG_ROOT}/versions/z-/zlib.json</code></li>
+</ul>
+<p>CI checks validate that each time a port is added or updated, its respective version files are also updated. </p>
+<h3 id="baseline-file">Baseline file</h3>
+<p>The baseline file located in <code>${VCPKG_ROOT}/versions/baseline.json</code> is used to declared the current baseline versions of all packages. </p>
+<p>A small section of the contents of this file is presented below:</p>
+<pre><code>{
+  "default": {
+    "3fd": { "baseline": "2.6.3", "port-version": 0 },
+    "7zip": { "baseline": "19.00", "port-version": 2 },
+    "abseil": { "baseline": "2020-09-23", "port-version": 1 }
+    ...
+  }
+}</code></pre>
+<p>Provided that there are no local modifications to the ports, the versions of all packages in the baseline file should map to the version of their corresponding portfiles in the <code>ports/</code> directory.</p>
+<h3 id="versions-file">Versions file</h3>
+<p>Each port in vcpkg has a corresponding versions file, the location of a port's versions file follows the pattern: </p>
+<pre><code>${VCPKG_ROOT}/versions/${first-letter-of-portname}-/${portname}.json</code></pre>
+<p>`</p>
+<p>For example, for <code>zlib</code> the corresponding versions file is:</p>
+<pre><code>${VCPKG_ROOT}/versions/z-/zlib.json</code></pre>
+<p>These files contain an array of all the versions available for a given port. 
+For example, the contents of <code>versions/z-/zlib.json</code> declare the following versions:</p>
+<pre><code>{
+  "versions": [
+    {
+      "git-tree": "827111046e37c98153d9d82bb6fa4183b6d728e4",
+      "version-string": "1.2.11",
+      "port-version": 9
+    },
+    {
+      "git-tree": "068430e3e24fa228c302c808ba99f8a48d126557",
+      "version-string": "1.2.11",
+      "port-version": 8
+    },
+    ...
+  ]
+}</code></pre>
+<p>Each version declared in this file uses the same syntax used in manifest files, but adds an extra <code>git-tree</code> property. The value of <code>git-tree</code> is the SHA hash, as calculated by Git, of the directory containing the portfiles for the declared version.</p>
+<h3 id="updating-the-version-files">Updating the version files</h3>
+<p>The recommended method to update these files is to run the <code>x-add-version</code> command.</p>
+<p>For example, if you have made changes to <code>zlib</code>:</p>
+<pre><code>vcpkg x-add-version zlib</code></pre>
+<p>If you're updating multiple ports at the same time, instead you can run:</p>
+<pre><code>vcpkg x-add-version --all</code></pre>
+<p>To update the files for all modified ports at once.</p>
+<p><em>NOTE: These commands require you to have committed your changes to the ports before running them. The reason is that the Git SHA of the port directory is required in these version files. But don't worry, the <code>x-add-version</code> command will warn you if you have local changes that haven't been committed.</em></p>
+<h2 id="version-constraints">Version constraints</h2>
+<h3 id="builtin-baseline"><code>builtin-baseline</code></h3>
+<p>Accepts a Git commit ID. vcpkg will try to find a baseline file in the given commit ID and use that to set the baseline versions (lower bound versions) of all declared dependencies.</p>
+<p>When resolving version constraints for a package, vcpkg will look for a baseline version:</p>
+<ul>
+<li>First by looking at the baseline file in the given commit ID.</li>
+<li>If the given commit ID does not contain a baseline file, vcpkg will fallback to use the local baseline file instead.</li>
+<li>If thereâ€™s no local baseline file, vcpkg will use the version currently available in the ports directory.</li>
+</ul>
+<p><em>NOTE: If a baseline file is found, but it does not contain an entry for the package, the vcpkg invocation will fail.</em></p>
+<p>Example:</p>
+<pre><code>{
+  "name": "project", 
+  "version": "1.0.0",
+  "dependencies": ["zlib", "fmt"],
+  "builtin-baseline":"9fd3bd594f41afb8747e20f6ac9619f26f333cbe"
+}</code></pre>
+<p>Baselines can be used without any other version constraints to obtain behavior close to using â€œclassicâ€ mode. </p>
+<h3 id="version-1"><code>version&gt;=</code></h3>
+<p>Expresses a minimum version requirement, <code>version&gt;=</code> declarations put a lower boundary on the versions that can be used to satisfy a dependency.</p>
+<p>Example:</p>
+<pre><code>{
+  "name": "project",
+  "version-semver": "1.0.0",
+  "dependencies": [
+    { "name": "zlib", "version&gt;=": "1.2.11#9" },
+    { "name": "fmt", "version&gt;=": "7.1.3" }
+  ],
+  "builtin-baseline":"9fd3bd594f41afb8747e20f6ac9619f26f333cbe"
+}</code></pre>
+<p>As part of a version constraint declaration, a port version can be specified by adding the suffix <code>#&lt;port-veresion&gt;</code>, in the previous example <code>1.2.11#9</code> refers to version <code>1.2.11</code> port version <code>9</code>. </p>
+<h3 id="overrides"><code>overrides</code></h3>
+<p>Declaring an override forces vcpkg to ignore all other version constraints, both top-level and transitive constraints, and use the version specified in the override. This is useful for pinning exact versions and for resolving version conflicts.</p>
+<p>Overrides are declared as an array of package version declarations.</p>
+<p>For an override to take effect, the overridden package must form part of the dependency graph. That means that a dependency must be declared either by the top-level manifest or be part of a transitive dependency.</p>
+<pre><code>{
+  "name": "project",
+  "version-semver": "1.0.0",
+  "dependencies": [
+    { "name": "zlib", "version&gt;=": "1.2.11#9" },
+    "fmt"
+  ],
+  "builtin-baseline":"9fd3bd594f41afb8747e20f6ac9619f26f333cbe",
+  "overrides": [
+    { "name": "fmt", "version": "6.0.0" }
+  ]
+}</code></pre>
+</div></div><div id="loadFooter"></div></html>
