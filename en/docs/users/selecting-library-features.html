@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,44 +182,41 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><span id="currentPath">Selecting Library Features</span></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="selecting-library-features">Selecting library features</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/selecting-library-features.md">GitHub</a>.</strong></p>
 <h2 id="installing-a-library">Installing a library</h2>
-<p>We will look at <a href="https://llvm.org/">llvm</a> as an example. 
-LLVM is a compiler infrasture. It supports optimizing llvm-ir and generating machine code. 
-You could install it using:</p>
-<pre><code class="powershell language-powershell">&gt; .\vcpkg install llvm</code></pre>
-<p>On Windows, this will install the 32-bit x86 LLVM, since that's the default triplet on Windows. 
-If you are building for 64-bit Windows instead, you can use the following command to change the default triplet:</p>
-<pre><code class="powershell language-powershell">&gt; .\vcpkg install --triplet x64-windows llvm</code></pre>
-<p>We have more documentation on triplets <a href="triplets.html">here</a>. 
-Currently we can't choose build type <code>debug</code> or <code>release</code> using command line switches.</p>
+<p>We will look at <a href="https://llvm.org/">llvm</a> as an example. You could install it using:</p>
+<pre><code class="powershell language-powershell">&gt; vcpkg install llvm</code></pre>
+<p>or via a manifest with</p>
+<pre><code class="json language-json">{
+  "dependencies": ["llvm"]
+}</code></pre>
 <p>With llvm now installed, we can execute:</p>
-<pre><code class="powershell language-powershell">&gt; # llc takes llvm IR and generates machine code
-&gt; .\installed\x86-windows\bin\llc.exe --version # or x86-windows, or replace with the actual triplet</code></pre>
+<pre><code class="powershell language-powershell">&gt; installed\x86-windows\bin\llc.exe --version</code></pre>
 <p>we see:</p>
 <pre><code class="powershell language-powershell">  Registered Targets:
     x86    - 32-bit X86: Pentium-Pro and above
     x86-64 - 64-bit X86: EM64T and AMD64</code></pre>
 <h2 id="installing-additional-features">Installing additional features</h2>
-<p>But <a href="https://llvm.org/docs/GettingStarted.html#local-llvm-configuration">llvm supports many more targets</a>, from ARM to SPARC to SystemZ. 
-However, clearly our current installation doesn't include ARM as a target; 
-thus, we need to learn how vcpkg allows us to install other LLVM targets. 
+<p>But <a href="https://llvm.org/docs/GettingStarted.html#local-llvm-configuration">llvm supports many more targets</a>, from ARM to SPARC to SystemZ.
+However, clearly our current installation doesn't include ARM as a target;
+thus, we need to learn how vcpkg allows us to install other LLVM targets.
 The llvm port allows this via the "target-*" features.</p>
 <p>If we do:</p>
-<pre><code class="powershell language-powershell">.\vcpkg search llvm</code></pre>
+<pre><code class="powershell language-powershell">&gt; vcpkg search llvm</code></pre>
 <p>We can see:</p>
 <pre><code>llvm                 10.0.0#6         The LLVM Compiler Infrastructure
 llvm[clang]                           Build C Language Family Front-end.
@@ -224,14 +227,25 @@ llvm[target-amdgpu]                   Build with AMDGPU backend.
 llvm[target-arm]                      Build with ARM backend.
 ...</code></pre>
 <p>We can install any of these targets by using the install-feature syntax:</p>
-<pre><code class="powershell language-powershell">&gt; .\vcpkg install llvm[target-arm] # Installs LLVM with the ARM target</code></pre>
-<h2 id="opting-out-of-default-feature">Opting out of default feature</h2>
-<p>The llvm port includes a few default features that you as a user may not want: for example, 
-the <code>clang</code> feature is default, which means that <code>vcpkg install llvm</code> will also build and install clang. 
-If you are writing a compiler that uses LLVM as a backend, 
-you're likely not interested in installing clang as well, 
+<pre><code class="powershell language-powershell">&gt; vcpkg install llvm[target-arm] # Installs LLVM with the ARM target</code></pre>
+<pre><code class="json language-json">{
+  "dependencies": [{ "name": "llvm", "features": ["target-arm"] }]
+}</code></pre>
+<h2 id="opting-out-of-default-features">Opting out of default features</h2>
+<p>The llvm port includes a few default features that you as a user may not want: for example,
+the <code>clang</code> feature is default, which means that <code>vcpkg install llvm</code> will also build and install clang.
+If you are writing a compiler that uses LLVM as a backend,
+you're likely not interested in installing clang as well,
 and we can do that by disabling default features with the special <code>core</code> "feature":</p>
-<pre><code class="powershell language-powershell">&gt; .\vcpkg install llvm[core,default-targets] # removing the default-feature with "core" also removes all of the default targets you get</code></pre>
+<pre><code class="powershell language-powershell">&gt; vcpkg install llvm[core,target-arm] # removing the default-feature with "core" also removes all of the default targets you get</code></pre>
+<p>or in manifest files:</p>
+<pre><code class="json language-json">{
+  "dependencies": [{
+    "name": "llvm",
+    "default-features": false,
+    "features": ["target-arm"]
+  }]
+}</code></pre>
 <h1 id="further-reading">Further reading</h1>
 <ul>
 <li>The <a href="specifications/feature-packages.html">Feature Packages</a> specification was the initial design for features.</li>

@@ -372,7 +372,6 @@ function searchPackages(query) {
 }
 function searchAndRenderPackages() {
     query = document.getElementById('pkg-search').value.trim();
-    window.history.pushState({}, null, '?query=' + query);
     if (query === '') {
         currentPackages = allPackages;
     }
@@ -383,6 +382,7 @@ function searchAndRenderPackages() {
         sortPackages();
     }
     renderPackages();
+    window.history.pushState({}, null, '?query=' + query);
 }
 var sortAlphabetical = function (a, b) {
     var pkgA = a.Name.toUpperCase();

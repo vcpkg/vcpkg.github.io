@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,24 +182,25 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><span id="currentPath">versioning</span></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="versioning">Versioning</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/versioning.md">GitHub</a>.</strong></p>
 <p><strong>This feature is experimental and requires <code>--feature-flags=versions</code></strong></p>
-<p>Versioning allows you to deterministically control the precise revisions of dependencies used by 
+<p>Versioning allows you to deterministically control the precise revisions of dependencies used by
 your project from within your manifest file.</p>
-<p>See our guide to <a href="versioning.getting-started.html">getting started with versioning</a>.</p>
+<p>See our guide to <a href="../examples/versioning.getting-started.html">getting started with versioning</a>.</p>
 <h2 id="version-schemes">Version schemes</h2>
 <h3 id="schemes">Schemes</h3>
 <p>Versions in vcpkg come in four primary flavors:</p>
@@ -207,31 +214,31 @@ your project from within your manifest file.</p>
 <h4 id="version-string">version-string</h4>
 <p>An exact, incomparable version (Vista)</p>
 <h3 id="port-versions">Port Versions</h3>
-<p>Each version additionally has a "port-version" which is a nonnegative integer. When rendered as text, the 
-port version (if nonzero) is added as a suffix to the primary version text separated by a hash (#). 
+<p>Each version additionally has a "port-version" which is a nonnegative integer. When rendered as text, the
+port version (if nonzero) is added as a suffix to the primary version text separated by a hash (#).
 Port-versions are sorted lexographically after the primary version text, for example:</p>
 <pre><code>1.0.0 &lt; 1.0.0#1 &lt; 1.0.1 &lt; 1.0.1#5 &lt; 2.0.0</code></pre>
 <h2 id="constraints">Constraints</h2>
 <p>Manifests can place three kinds of constraints upon the versions used:</p>
 <h3 id="builtin-baseline">builtin-baseline</h3>
-<p>The baseline references a commit within the vcpkg repository that 
-establishes a minimum version on every dependency in the graph. If 
-no other constraints are specified (directly or transitively), 
-then the version from the baseline of the top level manifest will 
+<p>The baseline references a commit within the vcpkg repository that
+establishes a minimum version on every dependency in the graph. If
+no other constraints are specified (directly or transitively),
+then the version from the baseline of the top level manifest will
 be used.</p>
 <p>You can get the current commit of your vcpkg instance either by adding an empty <code>"builtin-baseline"</code> field, installing, and examining the error message or by running <code>git rev-parse HEAD</code> in the root of the vcpkg instance.</p>
 <p>Baselines provide stability and ease of development for top-level manifest files. They are not considered from ports consumed as a dependency. If a minimum version constraint is required during transitive version resolution, the port should use <code>version&gt;=</code>.</p>
 <h3 id="version-1">version&gt;=</h3>
-<p>Within the "dependencies" field, each dependency can have a 
-minimum constraint listed. These minimum constraints will be used 
-when transitively depending upon this library. A minimum 
+<p>Within the "dependencies" field, each dependency can have a
+minimum constraint listed. These minimum constraints will be used
+when transitively depending upon this library. A minimum
 port-version can additionally be specified with a '#' suffix.</p>
 <p>This constraint must refer to an existing, valid version (including port-version).</p>
 <h3 id="overrides">overrides</h3>
 <p>When used as the top-level manifest (such as when running <code>vcpkg
-install</code> in the directory), overrides allow a manifest to 
-short-circuit dependency resolution and specify exactly the 
-version to use. These can be used to handle version conflicts, 
+install</code> in the directory), overrides allow a manifest to
+short-circuit dependency resolution and specify exactly the
+version to use. These can be used to handle version conflicts,
 such as with <code>version-string</code> dependencies.</p>
 <p>Overrides are not considered from ports consumed as a dependency.</p>
 <h2 id="example-top-level-manifest">Example top-level manifest:</h2>

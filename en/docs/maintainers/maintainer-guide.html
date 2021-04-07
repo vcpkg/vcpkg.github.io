@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,41 +182,41 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="maintainer-guidelines-and-policies">Maintainer Guidelines and Policies</h1>
-<p>This document lists a set of policies that you should apply when adding or updating a port recipe. 
-It is intended to serve the role of 
-<a href="https://www.debian.org/doc/debian-policy/">Debian's Policy Manual</a>, 
-<a href="https://docs.brew.sh/Maintainer-Guidelines">Homebrew's Maintainer Guidelines</a>, and 
+<p>This document lists a set of policies that you should apply when adding or updating a port recipe.
+It is intended to serve the role of
+<a href="https://www.debian.org/doc/debian-policy/">Debian's Policy Manual</a>,
+<a href="https://docs.brew.sh/Maintainer-Guidelines">Homebrew's Maintainer Guidelines</a>, and
 <a href="https://docs.brew.sh/Formula-Cookbook">Homebrew's Formula Cookbook</a>.</p>
 <h2 id="pr-structure">PR Structure</h2>
 <h3 id="make-separate-pull-requests-per-port">Make separate Pull Requests per port</h3>
-<p>Whenever possible, separate changes into multiple PRs. 
+<p>Whenever possible, separate changes into multiple PRs.
 This makes them significantly easier to review and prevents issues with one set of changes from holding up every other change.</p>
 <h3 id="avoid-trivial-changes-in-untouched-files">Avoid trivial changes in untouched files</h3>
-<p>For example, avoid reformatting or renaming variables in portfiles that otherwise have no reason to be modified for the issue at hand. 
-However, if you need to modify the file for the primary purpose of the PR (updating the library), 
+<p>For example, avoid reformatting or renaming variables in portfiles that otherwise have no reason to be modified for the issue at hand.
+However, if you need to modify the file for the primary purpose of the PR (updating the library),
 then obviously beneficial changes like fixing typos are appreciated!</p>
 <h3 id="check-names-against-other-repositories">Check names against other repositories</h3>
-<p>A good service to check many at once is <a href="https://repology.org/">Repology</a>. 
-If the library you are adding could be confused with another one, 
+<p>A good service to check many at once is <a href="https://repology.org/">Repology</a>.
+If the library you are adding could be confused with another one,
 consider renaming to make it clear.</p>
 <h3 id="use-github-draft-prs">Use GitHub Draft PRs</h3>
-<p>GitHub Draft PRs are a great way to get CI or human feedback on work that isn't yet ready to merge. 
+<p>GitHub Draft PRs are a great way to get CI or human feedback on work that isn't yet ready to merge.
 Most new PRs should be opened as drafts and converted to normal PRs once the CI passes.</p>
-<p>More information about GitHub Draft PRs: 
+<p>More information about GitHub Draft PRs:
 <a href="https://github.blog/2019-02-14-introducing-draft-pull-requests/">https://github.blog/2019-02-14-introducing-draft-pull-requests/</a></p>
 <h2 id="portfiles">Portfiles</h2>
 <h3 id="avoid-deprecated-helper-functions">Avoid deprecated helper functions</h3>
@@ -222,7 +228,7 @@ Most new PRs should be opened as drafts and converted to normal PRs once the CI 
 <li><code>vcpkg_copy_tool_dependencies()</code> should be replaced by <a href="vcpkg_copy_tools.html"><code>vcpkg_copy_tools()</code></a></li>
 </ol>
 <h3 id="avoid-excessive-comments-in-portfiles">Avoid excessive comments in portfiles</h3>
-<p>Ideally, portfiles should be short, simple, and as declarative as possible. 
+<p>Ideally, portfiles should be short, simple, and as declarative as possible.
 Remove any boiler plate comments introduced by the <code>create</code> command before submitting a PR.</p>
 <h2 id="features">Features</h2>
 <h3 id="do-not-use-features-to-implement-alternatives">Do not use features to implement alternatives</h3>
@@ -240,6 +246,10 @@ Remove any boiler plate comments introduced by the <code>create</code> command b
 <li>The Azure SDKs (of the form <code>azure-Xxx</code>) have a <code>public-preview</code> feature.</li>
 <li><code>imgui</code> has an <code>experimental-docking</code> feature which engages their preview docking branch which uses a merge commit attached to each of their public numbered releases.</li>
 </ul>
+<h3 id="default-features-should-enable-behaviors-not-apis">Default features should enable behaviors, not APIs</h3>
+<p>If a consumer is depending directly upon a library, they can list out any desired features easily (<code>library[feature1,feature2]</code>). However, if a consumer <em>does not know</em> they are using a library, they cannot list out those features. If that hidden library is like <code>libarchive</code> where features are adding additional compression algorithms (and thus behaviors) to an existing generic interface, default features offer a way to ensure a reasonably functional transitive library is built even if the final consumer doesn't name it directly.</p>
+<p>If the feature adds additional APIs (or executables, or library binaries) and doesn't modify the behavior of existing APIs, it should be left off by default. This is because any consumer which might want to use those APIs can easily require it via their direct reference.</p>
+<p>If in doubt, do not mark a feature as default.</p>
 <h3 id="do-not-use-features-to-control-alternatives-in-published-interfaces">Do not use features to control alternatives in published interfaces</h3>
 <p>If a consumer of a port depends on only the core functionality of that port, with high probability they must not be broken by turning on the feature. This is even more important when the alternative is not directly controlled by the consumer, but by compiler settings like <code>/std:c++17</code> / <code>-std=c++17</code>.</p>
 <p>Existing examples we would not accept today retained for backwards compatibility:</p>
@@ -256,7 +266,7 @@ Remove any boiler plate comments introduced by the <code>create</code> command b
 </ol>
 <p>Example:</p>
 <ul>
-<li><code>abseil[cxx17]</code> changes <code>absl::string_view</code> to a replacement or <code>std::string_view</code>; the patch 
+<li><code>abseil[cxx17]</code> changes <code>absl::string_view</code> to a replacement or <code>std::string_view</code>; the patch
 <a href="https://github.com/microsoft/vcpkg/blob/981e65ce0ac1f6c86e5a5ded7824db8780173c76/ports/abseil/fix-cxx-standard.patch">https://github.com/microsoft/vcpkg/blob/981e65ce0ac1f6c86e5a5ded7824db8780173c76/ports/abseil/fix-cxx-standard.patch</a> implements the baking requirement</li>
 </ul>
 <h3 id="recommended-solutions">Recommended solutions</h3>
@@ -267,14 +277,14 @@ message(STATUS "This recipe is at ${CMAKE_CURRENT_LIST_DIR}")
 message(STATUS "See the overlay ports documentation at https://github.com/microsoft/vcpkg/blob/master/docs/specifications/ports-overlay.md")</code></pre>
 <h2 id="build-techniques">Build Techniques</h2>
 <h3 id="do-not-use-vendored-dependencies">Do not use vendored dependencies</h3>
-<p>Do not use embedded copies of libraries. 
+<p>Do not use embedded copies of libraries.
 All dependencies should be split out and packaged separately so they can be updated and maintained.</p>
 <h3 id="prefer-using-cmake">Prefer using CMake</h3>
-<p>When multiple buildsystems are available, prefer using CMake. 
+<p>When multiple buildsystems are available, prefer using CMake.
 Additionally, when appropriate, it can be easier and more maintainable to rewrite alternative buildsystems into CMake using <code>file(GLOB)</code> directives.</p>
 <p>Examples: <a href="../../ports/abseil/portfile.cmake">abseil</a></p>
 <h3 id="choose-either-static-or-shared-binaries">Choose either static or shared binaries</h3>
-<p>By default, <code>vcpkg_configure_cmake()</code> will pass in the appropriate setting for <code>BUILD_SHARED_LIBS</code>, 
+<p>By default, <code>vcpkg_configure_cmake()</code> will pass in the appropriate setting for <code>BUILD_SHARED_LIBS</code>,
 however for libraries that don't respect that variable, you can switch on <code>VCPKG_LIBRARY_LINKAGE</code>:</p>
 <pre><code class="cmake language-cmake">string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "static" KEYSTONE_BUILD_STATIC)
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" KEYSTONE_BUILD_SHARED)
@@ -287,7 +297,7 @@ vcpkg_configure_cmake(
         -DKEYSTONE_BUILD_SHARED=${KEYSTONE_BUILD_SHARED}
 )</code></pre>
 <h3 id="when-defining-features-explicitly-control-dependencies">When defining features, explicitly control dependencies</h3>
-<p>When defining a feature that captures an optional dependency, 
+<p>When defining a feature that captures an optional dependency,
 ensure that the dependency will not be used accidentally when the feature is not explicitly enabled.</p>
 <pre><code class="cmake language-cmake">if ("zlib" IN_LIST FEATURES)
   set(CMAKE_DISABLE_FIND_PACKAGE_ZLIB OFF)
@@ -323,13 +333,13 @@ vcpkg_configure_cmake(
 </ul>
 <p>Conflicting libs are typically by design and not considered a defect.  Because some build systems link against everything in the lib directory, these should be moved into a subdirectory named <code>manual-link</code>.</p>
 <h2 id="manifests-and-control-files">Manifests and CONTROL files</h2>
-<p>When adding a new port, use the new manifest syntax for defining a port; 
-you may also change over to manifests when modifying an existing port. 
-You may do so easily by running the <code>vcpkg format-manifest</code> command, which will convert existing CONTROL 
+<p>When adding a new port, use the new manifest syntax for defining a port;
+you may also change over to manifests when modifying an existing port.
+You may do so easily by running the <code>vcpkg format-manifest</code> command, which will convert existing CONTROL
 files into manifest files. Do not convert CONTROL files that have not been modified.</p>
 <h2 id="versioning">Versioning</h2>
 <h3 id="follow-common-conventions-for-the-version-field">Follow common conventions for the <code>"version"</code> field</h3>
-<p>See our <a href="manifest-files.html#version-fields">manifest files document</a> for a full explanation of our conventions.</p>
+<p>See our <a href="../users/versioning.html#version-schemes">versioning documentation</a> for a full explanation of our conventions.</p>
 <h3 id="update-the-port-version-field-in-the-manifest-file-of-any-modified-ports">Update the <code>"port-version"</code> field in the manifest file of any modified ports</h3>
 <p>vcpkg uses this field to determine whether a given port is out-of-date and should be changed whenever the port's behavior changes.</p>
 <p>Our convention is to use the <code>"port-version"</code> field for changes to the port that don't change the upstream version, and to reset the <code>"port-version"</code> back to zero when an update to the upstream version is made.</p>
@@ -341,7 +351,7 @@ files into manifest files. Do not convert CONTROL files that have not been modif
 </ul>
 <p>See our <a href="manifest-files.html#port-version">manifest files document</a> for a full explanation of our conventions.</p>
 <h3 id="update-the-version-files-in-versions-of-any-modified-ports">Update the version files in <code>versions/</code> of any modified ports</h3>
-<p>vcpkg uses a set of metadata files to power its versioning feature. 
+<p>vcpkg uses a set of metadata files to power its versioning feature.
 These files are located in the following locations:</p>
 <ul>
 <li><code>${VCPKG_ROOT}/versions/baseline.json</code>, (this file is common to all ports) and</li>
@@ -370,7 +380,7 @@ These files are located in the following locations:</p>
 <li>[CMAKE] Cache variables (declared as <code>set(VAR "value" CACHE STRING "Documentation")</code> or <code>option(VAR "Documentation" "Default Value")</code>) can be overridden by just passing them in on the command line as <code>-DVAR:STRING=Foo</code>. One notable exception is if the <code>FORCE</code> parameter is passed to <code>set()</code>. See also the <a href="https://cmake.org/cmake/help/v3.15/command/set.html">CMake <code>set</code> documentation</a></li>
 </ol>
 <h3 id="prefer-patching-over-overriding-vcpkg_variable-values">Prefer patching over overriding <code>VCPKG_&lt;VARIABLE&gt;</code> values</h3>
-<p>Some variables prefixed with <code>VCPKG_&lt;VARIABLE&gt;</code> have an equivalent <code>CMAKE_&lt;VARIABLE&gt;</code>. 
+<p>Some variables prefixed with <code>VCPKG_&lt;VARIABLE&gt;</code> have an equivalent <code>CMAKE_&lt;VARIABLE&gt;</code>.
 However, not all of them are passed to the internal package build <a href="../../scripts/toolchains/windows.cmake">(see implementation: Windows toolchain)</a>.</p>
 <p>Consider the following example:</p>
 <pre><code class="cmake language-cmake">set(VCPKG_C_FLAGS "-O2 ${VCPKG_C_FLAGS}")

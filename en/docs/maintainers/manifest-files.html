@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,26 +182,26 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="manifest-files---vcpkgjson">Manifest files - <code>vcpkg.json</code></h1>
-<p>The <code>vcpkg.json</code> file contains metadata about the port. 
-It's a JSON file, and replaces the existing CONTROL file metadata structure. 
+<p>The <code>vcpkg.json</code> file contains metadata about the port.
+It's a JSON file, and replaces the existing CONTROL file metadata structure.
 It must have a top level object, and all fields are case sensitive.</p>
 <h2 id="examples">Examples:</h2>
-<p>The most important fields in a manifest, the ones which are required for all ports, 
-are the <code>"name"</code> field, and a version field (for now, just <code>"version-string"</code>). 
+<p>The most important fields in a manifest, the ones which are required for all ports,
+are the <code>"name"</code> field, and a version field (for now, just <code>"version-string"</code>).
 There's more information about these fields below.</p>
 <pre><code class="json language-json">{
   "name": "ace",
@@ -242,11 +248,11 @@ There's more information about these fields below.</p>
 <li><a href="https://www.debian.org/distrib/packages">Debian packages</a></li>
 <li><a href="https://pkgs.org/">Packages search</a></li>
 </ul>
-<p>A name must be an identifier: i.e., it must only consist of lowercase ascii alphabetic characters, 
+<p>A name must be an identifier: i.e., it must only consist of lowercase ascii alphabetic characters,
 numbers, and hyphens, and it must not begin nor end with a hyphen.</p>
 <h3 id="version-fields">Version fields</h3>
-<p>The library version. There is currently only one kind of version, a <code>"version-string"</code> - 
-however, more version kinds will be added later. Additionally, 
+<p>The library version. There is currently only one kind of version, a <code>"version-string"</code> -
+however, more version kinds will be added later. Additionally,
 <code>"port-version"</code> is used to differentiate between port changes that don't change the underlying library version.</p>
 <h4 id="version-string"><code>"version-string"</code></h4>
 <p>This field is an ascii string, and may contain alphanumeric characters, <code>.</code>, <code>_</code>, or <code>-</code>. No attempt at ordering versions is made; all versions are treated as byte strings and are only evaluated for equality.</p>
@@ -254,7 +260,7 @@ however, more version kinds will be added later. Additionally,
 <ol>
 <li>If the library follows a scheme like <code>va.b.c</code>, we remove the leading <code>v</code>. In this case, it becomes <code>a.b.c</code>.</li>
 <li>If the library includes its own name in the version like <code>curl-7_65_1</code>, we remove the leading name: <code>7_65_1</code></li>
-<li>If the library is versioned by dates, format the resulting version string just like the upstream library; 
+<li>If the library is versioned by dates, format the resulting version string just like the upstream library;
 for example, Abseil formats their dates <code>lts_2020_02_25</code>, so the <code>"version-string"</code> should be <code>"lts_2020_02_25"</code>.</li>
 </ol>
 <p>For rolling-release ports, we use the date that the <em>commit was accessed by you</em>, formatted as <code>YYYY-MM-DD</code>. Stated another way: if someone had a time machine and went to that date, they would see this commit as the latest master.</p>
@@ -267,11 +273,11 @@ for example, Abseil formats their dates <code>lts_2020_02_25</code>, so the <cod
 <p>Then if you update the source version today, you should give it version <code>2019-06-01</code>.</p>
 <h4 id="port-version"><code>"port-version"</code></h4>
 <p>The version of the port, aside from the library version.</p>
-<p>This field is a non-negative integer. 
-It allows one to version the port file separately from the version of the underlying library; 
-if you make a change to a port, without changing the underlying version of the library, 
-you should increment this field by one (starting at <code>0</code>, which is equivalent to no <code>"port-version"</code> field). 
-When the version of the underlying library is upgraded, 
+<p>This field is a non-negative integer.
+It allows one to version the port file separately from the version of the underlying library;
+if you make a change to a port, without changing the underlying version of the library,
+you should increment this field by one (starting at <code>0</code>, which is equivalent to no <code>"port-version"</code> field).
+When the version of the underlying library is upgraded,
 this field should be set back to <code>0</code> (i.e., delete the <code>"port-version"</code> field).</p>
 <h4 id="examples-1">Examples:</h4>
 <pre><code class="json language-json">{
@@ -283,8 +289,8 @@ this field should be set back to <code>0</code> (i.e., delete the <code>"port-ve
 }</code></pre>
 <h3 id="description"><code>"description"</code></h3>
 <p>A description of the library.</p>
-<p>This field can either be a single string, which should be a summary of the library, 
-or can be an array, with the first line being a summary and the remaining lines being the detailed description - 
+<p>This field can either be a single string, which should be a summary of the library,
+or can be an array, with the first line being a summary and the remaining lines being the detailed description -
 one string per line.</p>
 <h4 id="examples-2">Examples:</h4>
 <pre><code class="json language-json">{
@@ -302,8 +308,8 @@ one string per line.</p>
 <h3 id="documentation"><code>"documentation"</code></h3>
 <p>The URL where a user would be able to find official documentation for the library. Optional.</p>
 <h3 id="maintainers"><code>"maintainers"</code></h3>
-<p>A list of strings that define the set of maintainers of a package. 
-It's recommended that these take the form of <code>Givenname Surname &lt;email&gt;</code>, 
+<p>A list of strings that define the set of maintainers of a package.
+It's recommended that these take the form of <code>Givenname Surname &lt;email&gt;</code>,
 but this field is not checked for consistency.</p>
 <p>Optional.</p>
 <h4 id="example">Example:</h4>
@@ -312,22 +318,22 @@ but this field is not checked for consistency.</p>
 }</code></pre>
 <h3 id="dependencies"><code>"dependencies"</code></h3>
 <p>An array of ports the library has a dependency on.</p>
-<p>vcpkg does not distinguish between build-only dependencies and runtime dependencies. 
+<p>vcpkg does not distinguish between build-only dependencies and runtime dependencies.
 The complete list of dependencies needed to successfully use the library should be specified.</p>
-<p>For example: websocketpp is a header only library, and thus does not require any dependencies at install time. 
-However, downstream users need boost and openssl to make use of the library. 
+<p>For example: websocketpp is a header only library, and thus does not require any dependencies at install time.
+However, downstream users need boost and openssl to make use of the library.
 Therefore, websocketpp lists boost and openssl as dependencies.</p>
-<p>Each dependency may be either an identifier, or an object. 
-For many dependencies, just listing the name of the library should be fine; 
-however, if one needs to add extra information to that dependency, one may use the dependency object. 
-For a dependency object, the <code>"name"</code> field is used to designate the library; 
+<p>Each dependency may be either an identifier, or an object.
+For many dependencies, just listing the name of the library should be fine;
+however, if one needs to add extra information to that dependency, one may use the dependency object.
+For a dependency object, the <code>"name"</code> field is used to designate the library;
 for example the dependency object <code>{ "name": "zlib" }</code> is equivalent to just writing <code>"zlib"</code>.</p>
-<p>If the port is dependent on optional features of another library, 
-those can be specified using the <code>"features"</code> field of the dependency object. 
-If the port does not require any features from the dependency, 
+<p>If the port is dependent on optional features of another library,
+those can be specified using the <code>"features"</code> field of the dependency object.
+If the port does not require any features from the dependency,
 this should be specifed with the <code>"default-features"</code> fields set to <code>false</code>.</p>
-<p>Dependencies can also be filtered based on the target triplet to support differing requirements. 
-These filters use the same syntax as the <code>"supports"</code> field below, 
+<p>Dependencies can also be filtered based on the target triplet to support differing requirements.
+These filters use the same syntax as the <code>"supports"</code> field below,
 and are specified in the <code>"platform"</code> field.</p>
 <h4 id="example-1">Example:</h4>
 <pre><code class="json language-json">{
@@ -352,16 +358,16 @@ and are specified in the <code>"platform"</code> field.</p>
   ]
 }</code></pre>
 <h3 id="features"><code>"features"</code></h3>
-<p>Multiple optional features can be specified in manifest files, in the <code>"features"</code> object field. 
-This field is a map from the feature name, to the feature's information. 
+<p>Multiple optional features can be specified in manifest files, in the <code>"features"</code> object field.
+This field is a map from the feature name, to the feature's information.
 Each one must have a <code>"description"</code> field, and may also optionally have a <code>"dependencies"</code> field.</p>
-<p>A feature's name must be an identifier - 
-in other words, lowercase alphabetic characters, digits, and hyphens, 
+<p>A feature's name must be an identifier -
+in other words, lowercase alphabetic characters, digits, and hyphens,
 neither starting nor ending with a hyphen.</p>
-<p>A feature's <code>"description"</code> is a description of the feature, 
+<p>A feature's <code>"description"</code> is a description of the feature,
 and is the same kind of thing as the port <code>"description"</code> field.</p>
-<p>A feature's <code>"dependencies"</code> field contains the list of extra dependencies required to build and use this feature; 
-this field isn't required if the feature doesn't require any extra dependencies. 
+<p>A feature's <code>"dependencies"</code> field contains the list of extra dependencies required to build and use this feature;
+this field isn't required if the feature doesn't require any extra dependencies.
 On installation the dependencies from all selected features are combined to produce the full dependency list for the build.</p>
 <h4 id="example-2">Example:</h4>
 <pre><code class="json language-json">{
@@ -448,11 +454,11 @@ On installation the dependencies from all selected features are combined to prod
   }
 }</code></pre>
 <h3 id="supports"><code>"supports"</code></h3>
-<p>A string, formatted as a platform expression, 
+<p>A string, formatted as a platform expression,
 that evaluates to true when the port should build successfully for a triplet.</p>
-<p>This field is used in the CI testing to skip ports, 
-and warns users in advance that a given install tree is not expected to succeed. 
-Therefore, this field should be used optimistically; 
+<p>This field is used in the CI testing to skip ports,
+and warns users in advance that a given install tree is not expected to succeed.
+Therefore, this field should be used optimistically;
 in cases where a port is expected to succeed 10% of the time, it should still be marked "supported".</p>
 <p>The grammar for this top-level platform expression, in <a href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a>, is as follows:</p>
 <pre><code class="ebnf language-ebnf">whitespace-character =
@@ -495,9 +501,9 @@ platform-expression-or =
 | platform-expression-not, { "|", optional-whitespace, platform-expression-not } ;
 
 top-level-platform-expression = optional-whitespace, platform-expression ;</code></pre>
-<p>Basically, there are four kinds of expressions -- identifiers, negations, ands, and ors. 
-Negations may only negate an identifier or a grouped expression. 
-Ands and ors are a list of <code>&amp;</code> or <code>|</code> separated identifiers, negated expressions, and grouped expressions. 
+<p>Basically, there are four kinds of expressions -- identifiers, negations, ands, and ors.
+Negations may only negate an identifier or a grouped expression.
+Ands and ors are a list of <code>&amp;</code> or <code>|</code> separated identifiers, negated expressions, and grouped expressions.
 One may not mix <code>&amp;</code> and <code>|</code> without parentheses for grouping.</p>
 <p>These predefined identifier expressions are computed from standard triplet settings:</p>
 <ul>
@@ -515,8 +521,8 @@ One may not mix <code>&amp;</code> and <code>|</code> without parentheses for gr
 <li><code>wasm32</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"wasm32"</code></li>
 <li><code>emscripten</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"Emscripten"</code></li>
 </ul>
-<p>These predefined identifier expressions can be overridden in the triplet file, 
-via the <a href="../users/triplets.html"><code>VCPKG_DEP_INFO_OVERRIDE_VARS</code></a> option, 
+<p>These predefined identifier expressions can be overridden in the triplet file,
+via the <a href="../users/triplets.html"><code>VCPKG_DEP_INFO_OVERRIDE_VARS</code></a> option,
 and new identifier expressions can be added via the same mechanism.</p>
 <p>This field is optional and defaults to true.</p>
 <blockquote>

@@ -37,7 +37,7 @@
         $(document).ready(function () {
           $('#loadNavBar').load('/en/navbar.html');
           $('#loadFooter').load('/en/footer.html');
-          handleDefaultTreeViewExpand(" > docs > maintainers > vcpkg_from_gitlab.md");
+          handleDefaultTreeViewExpand(" > docs > maintainers > ports > vcpkg-pkgconfig-get-modules.md");
         });
       </script>
     
@@ -103,7 +103,7 @@
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
-<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
+<li class="list-can-expand"><span id="currentPath">vcpkg Pkgconfig Get Modules</span></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -150,7 +150,7 @@
 <li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_bitbucket.html">vcpkg_from_bitbucket</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_git.html">vcpkg_from_git</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_github.html">vcpkg_from_github</a></li>
-<li class="list-can-expand"><span id="currentPath">vcpkg_from_gitlab</span></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_gitlab.html">vcpkg_from_gitlab</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
@@ -195,53 +195,8 @@
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_from_gitlab">vcpkg_from_gitlab</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_from_gitlab.md">vcpkg repo</a>.</p>
-<p>Download and extract a project from Gitlab instances. Enables support for <code>install --head</code>.</p>
-<h2 id="usage">Usage:</h2>
-<pre><code class="cmake language-cmake">vcpkg_from_gitlab(
-    GITLAB_URL &lt;https://gitlab.com&gt;
-    OUT_SOURCE_PATH &lt;SOURCE_PATH&gt;
-    REPO &lt;gitlab-org/gitlab-ce&gt;
-    [REF &lt;v10.7.3&gt;]
-    [SHA512 &lt;45d0d7f8cc350...&gt;]
-    [HEAD_REF &lt;master&gt;]
-    [PATCHES &lt;patch1.patch&gt; &lt;patch2.patch&gt;...]
-    [FILE_DISAMBIGUATOR &lt;N&gt;]
-)</code></pre>
-<h2 id="parameters">Parameters:</h2>
-<h3 id="gitlab_url">GITLAB_URL</h3>
-<p>The URL of the Gitlab instance to use.</p>
-<h3 id="out_source_path">OUT_SOURCE_PATH</h3>
-<p>Specifies the out-variable that will contain the extracted location.</p>
-<p>This should be set to <code>SOURCE_PATH</code> by convention.</p>
-<h3 id="repo">REPO</h3>
-<p>The organization or user plus the repository name on the Gitlab instance.</p>
-<h3 id="ref">REF</h3>
-<p>A stable git commit-ish (ideally a tag) that will not change contents. <strong>This should not be a branch.</strong></p>
-<p>For repositories without official releases, this can be set to the full commit id of the current latest master.</p>
-<p>If <code>REF</code> is specified, <code>SHA512</code> must also be specified.</p>
-<h3 id="sha512">SHA512</h3>
-<p>The SHA512 hash that should match the archive (${GITLAB_URL}/${REPO}/-/archive/${REF}/${REPO_NAME}-${REF}.tar.gz).
-The REPO_NAME variable is parsed from the value of REPO.</p>
-<p>This is most easily determined by first setting it to <code>1</code>, then trying to build the port. The error message will contain the full hash, which can be copied back into the portfile.</p>
-<h3 id="head_ref">HEAD_REF</h3>
-<p>The unstable git commit-ish (ideally a branch) to pull for <code>--head</code> builds.</p>
-<p>For most projects, this should be <code>master</code>. The chosen branch should be one that is expected to be always buildable on all supported platforms.</p>
-<h3 id="patches">PATCHES</h3>
-<p>A list of patches to be applied to the extracted sources.</p>
-<p>Relative paths are based on the port directory.</p>
-<h3 id="file_disambiguator">FILE_DISAMBIGUATOR</h3>
-<p>A token to uniquely identify the resulting filename if the SHA512 changes even though a git ref does not, to avoid stepping on the same file name.</p>
-<h2 id="notes">Notes:</h2>
-<p>At least one of <code>REF</code> and <code>HEAD_REF</code> must be specified, however it is preferable for both to be present.</p>
-<p>This exports the <code>VCPKG_HEAD_VERSION</code> variable during head builds.</p>
-<h2 id="examples">Examples:</h2>
-<ul>
-<li>[curl][<a href="https://github.com/Microsoft/vcpkg/blob/master/ports/curl/portfile.cmake#L75">https://github.com/Microsoft/vcpkg/blob/master/ports/curl/portfile.cmake#L75</a>]</li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/folly/portfile.cmake#L15">folly</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/z3/portfile.cmake#L13">z3</a></li>
-</ul>
-<h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_from_gitlab.cmake">scripts/cmake/vcpkg_from_gitlab.cmake</a></p>
+<h1 id="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</h1>
+<p><strong>Experimental: will change or be removed at any time</strong></p>
+<p><code>vcpkg-pkgconfig-get-modules</code> provides <code>x_vcpkg_pkgconfig_get_modules()</code>, a function which simplifies calling
+<code>pkg-config</code> in portfiles in order to gather dependencies for exotic buildsystems.</p>
 </div></div><div id="loadFooter"></div></html>

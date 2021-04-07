@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,28 +182,28 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="vcpkg_add_to_path">vcpkg_add_to_path</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/maintainers/vcpkg_add_to_path.md">vcpkg repo</a>.</p>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_add_to_path.md">vcpkg repo</a>.</p>
 <p>Add a directory or directories to the PATH environment variable</p>
 <pre><code class="cmake language-cmake">vcpkg_add_to_path([PREPEND] [&lt;path&gt;...])</code></pre>
-<p><code>vcpkg_add_to_path</code> adds all of the paths passed to it to the PATH environment variable. 
-If PREPEND is passed, then those paths are prepended to the PATH environment variable, 
-so that they are searched first; otherwise, those paths are appended, so they are 
+<p><code>vcpkg_add_to_path</code> adds all of the paths passed to it to the PATH environment variable.
+If PREPEND is passed, then those paths are prepended to the PATH environment variable,
+so that they are searched first; otherwise, those paths are appended, so they are
 searched after the paths which are already in the environment variable.</p>
-<p>The paths are added in the order received, so that the first path is always searched 
+<p>The paths are added in the order received, so that the first path is always searched
 before a later path.</p>
 <p>If no paths are passed, then nothing will be done.</p>
 <h2 id="examples">Examples:</h2>

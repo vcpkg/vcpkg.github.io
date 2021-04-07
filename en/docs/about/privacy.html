@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,21 +182,21 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="vcpkg-telemetry-and-privacy">vcpkg telemetry and privacy</h1>
-<p>vcpkg collects telemetry data to understand usage issues, such as failing packages, and to guide tool improvements. The collected data is anonymous. 
+<p>vcpkg collects telemetry data to understand usage issues, such as failing packages, and to guide tool improvements. The collected data is anonymous.
 For more information about how Microsoft protects your privacy, see <a href="https://privacy.microsoft.com/en-US/privacystatement#mainenterprisedeveloperproductsmodule">https://privacy.microsoft.com/en-US/privacystatement#mainenterprisedeveloperproductsmodule</a></p>
 <h2 id="scope">Scope</h2>
 <p>We explicitly ONLY collect information from invocations of the tool itself; we do NOT add any tracking information into the produced libraries. Telemetry is collected when using any of the <code>vcpkg</code> commands.</p>
@@ -211,12 +217,12 @@ or by setting the VCPKG_DISABLE_METRICS environment variable.
 Read more about vcpkg telemetry at docs/about/privacy.md</code></pre>
 <h2 id="data-collected">Data Collected</h2>
 <p>The telemetry feature doesn't collect personal data, such as usernames or email addresses. It doesn't scan your code and doesn't extract project-level data, such as name, repository, or author. The data is sent securely to Microsoft servers and held under restricted access.</p>
-<p>Protecting your privacy is important to us. If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the Microsoft/vcpkg repository or send an email to <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#118;&#99;&#112;&#107;g&#64;&#x6d;i&#99;&#x72;&#111;&#x73;&#111;&#102;&#x74;&#x2e;&#x63;&#111;&#x6d;">&#x76;&#99;&#x70;&#x6b;g&#x40;&#x6d;&#105;&#x63;&#114;&#x6f;&#115;&#x6f;&#x66;&#x74;&#x2e;&#99;&#111;&#x6d;</a> for investigation.</p>
+<p>Protecting your privacy is important to us. If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the Microsoft/vcpkg repository or send an email to <a href="&#x6d;&#97;&#105;&#108;t&#111;&#58;&#118;&#99;&#x70;&#107;&#103;&#x40;&#x6d;&#105;c&#114;&#x6f;&#x73;&#111;&#x66;&#x74;&#x2e;&#99;&#111;&#x6d;">v&#x63;&#112;&#x6b;&#103;&#64;&#109;&#x69;&#99;&#114;&#x6f;&#x73;&#x6f;&#x66;&#116;&#46;&#x63;&#x6f;m</a> for investigation.</p>
 <p>We collect various telemetry events such as the command line used, the time of invocation, and how long execution took. Some commands also add additional calculated information (such as the full set of libraries to install). We generate a completely random UUID on first use and attach it to each event.</p>
 <p>You can see the telemetry events any command by appending <code>--printmetrics</code> after the vcpkg command line.</p>
-<p>In the source code (included at <a href="https://github.com/microsoft/vcpkg-tool/">https://github.com/microsoft/vcpkg-tool/</a> ), you can search for calls to the functions <code>track_property()</code>, <code>track_feature()</code>, <code>track_metric()</code>, and <code>track_buildtime()</code> 
+<p>In the source code (included at <a href="https://github.com/microsoft/vcpkg-tool/">https://github.com/microsoft/vcpkg-tool/</a> ), you can search for calls to the functions <code>track_property()</code>, <code>track_feature()</code>, <code>track_metric()</code>, and <code>track_buildtime()</code>
 to see every specific data point we collect.</p>
 <h2 id="avoid-inadvertent-disclosure-information">Avoid inadvertent disclosure information</h2>
-<p>vcpkg contributors and anyone else running a version of vcpkg that they built themselves should consider the path to their source code. If a crash occurs when using vcpkg, the file path from the build machine is collected as part of the stack trace and isn't hashed. 
+<p>vcpkg contributors and anyone else running a version of vcpkg that they built themselves should consider the path to their source code. If a crash occurs when using vcpkg, the file path from the build machine is collected as part of the stack trace and isn't hashed.
 Because of this, builds of vcpkg shouldn't be located in directories whose path names expose personal or sensitive information.</p>
 </div></div><div id="loadFooter"></div></html>

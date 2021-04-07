@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,26 +182,27 @@
 <li class="list-can-expand"><span id="currentPath">android</span></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="vcpkg-and-android">vcpkg and Android</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/android.md">GitHub</a>.</strong></p>
 <p>Android is not officialy supported, and there are no official android triplets at the moment.</p>
 <p>However, some packages can compile to Android, and the situation is improving: see the list of <a href="https://github.com/Microsoft/vcpkg/pulls?q=+android+">PR related to Android</a>.</p>
 <h2 id="android-build-requirements">Android build requirements</h2>
 <ol>
 <li><p>Download the <a href="https://developer.android.com/ndk/downloads/">android ndk</a></p></li>
-<li><p>Set environment variable <code>ANDROID_NDK_HOME</code> to your android ndk installation.  
+<li><p>Set environment variable <code>ANDROID_NDK_HOME</code> to your android ndk installation. 
 For example:</p></li>
 </ol>
 <pre><code class="bash language-bash">export ANDROID_NDK_HOME=/home/your-account/Android/Sdk/ndk-bundle</code></pre>
@@ -208,7 +215,7 @@ For example:</p></li>
 <pre><code class="bash language-bash">export VCPKG_ROOT=/path/to/vcpkg</code></pre>
 <h2 id="create-the-android-triplets">Create the android triplets</h2>
 <h3 id="android-abi-and-corresponding-vcpkg-triplets">Android ABI and corresponding vcpkg triplets</h3>
-<p>There are four different Android ABI, each of which maps to  
+<p>There are four different Android ABI, each of which maps to 
 a vcpkg triplet. The following table outlines the mapping from vcpkg architectures to android architectures</p>
 <table>
 <thead>
@@ -277,6 +284,75 @@ set(VCPKG_CMAKE_SYSTEM_NAME Android)
 ./vcpkg install jsoncpp:arm64-android           
 ./vcpkg install jsoncpp:x86-android
 ./vcpkg install jsoncpp:x64-android</code></pre>
+<h3 id="using-vulkan-sdk">Using Vulkan SDK</h3>
+<p>vcpkg has a <a href="https://github.com/microsoft/vcpkg/blob/master/ports/vulkan/portfile.cmake"><code>vulkan</code> package</a> which allows you to <code>find_package(Vulkan)</code>. To use it you have to provide <code>VULKAN_SDK</code> environment variable.</p>
+<pre><code class="bash language-bash">export VULKAN_SDK=/usr/local
+./vcpkg install vulkan</code></pre>
+<p>NDK already contains <a href="https://developer.android.com/ndk/guides/graphics/getting-started">Vulkan</a> headers and <code>libvulkan.so</code> binaries for each of its architecture. 
+To expose them to VcPkg, you can consider <code>export VULKAN_SDK=...</code> for each installation. 
+But by placing <code>set(ENV{VULKAN_SDK} ...)</code> in the triplet files, you can skip the tedious work.</p>
+<p>If you are using NDK 21.3.6528147 or earlier version, it will be like the following.</p>
+<pre><code class="cmake language-cmake"># In android triplets... (e.g. arm64-android.cmake)
+set(VCPKG_CMAKE_SYSTEM_NAME Android)
+# ...
+# If your API level is 30, libvulkan.so is at $ENV{ANDROID_NDK_HOME}/platforms/android-30/arch-arm64/usr/lib
+set(ENV{VULKAN_SDK} $ENV{ANDROID_NDK_HOME}/sysroot/usr)</code></pre>
+<p>Notice that <strong>the location of the sysroot has changed since NDK 22</strong>. (see <a href="https://github.com/android/ndk/issues/1407">https://github.com/android/ndk/issues/1407</a>) 
+If you prefer using <a href="https://developer.android.com/studio/projects/install-ndk#default-ndk-per-agp">the latest version</a>, check the <a href="https://android.googlesource.com/platform/ndk/+/master/docs/BuildSystemMaintainers.md#sysroot">BuildSystemMaintainers.md of the NDK document</a> and then put appropriate path for your system.</p>
+<p>For example, Mac OS users will use the path like this.</p>
+<pre><code class="cmake language-cmake"># In android triplets... (e.g. arm64-android.cmake)
+set(VCPKG_CMAKE_SYSTEM_NAME Android)
+# ...
+# If your API level is 30, libvulkan.so is at $ENV{ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/30
+set(ENV{VULKAN_SDK} $ENV{ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr)</code></pre>
+<p>By doing this for all android triplets, you can install <code>vulkan</code> and the packages that require it. (e.g. <code>vulkan-hpp</code>)</p>
+<p><details>
+  <summary markdown="span"><code>vcpkg install vulkan-hpp:arm64-android</code></summary></p>
+<pre><code class="console language-console">user@host$ ./vcpkg install vulkan-hpp:arm64-android
+Computing installation plan...
+The following packages will be built and installed:
+  * vulkan[core]:arm64-android -&gt; 1.1.82.1-1
+    vulkan-hpp[core]:arm64-android -&gt; 2019-05-11-1
+Additional packages (*) will be modified to complete this operation.
+Detecting compiler hash for triplet arm64-android...
+...
+Starting package 1/2: vulkan:arm64-android
+Building package vulkan[core]:arm64-android...
+-- Using community triplet arm64-android. This triplet configuration is not guaranteed to succeed.
+-- [COMMUNITY] Loading triplet configuration from: /.../vcpkg/triplets/community/arm64-android.cmake
+-- Querying VULKAN_SDK Enviroment variable
+-- Searching /.../Library/Android/sdk/ndk/22.1.7171670/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/vulkan/ for vulkan.h
+-- Found vulkan.h
+-- Performing post-build validation
+-- Performing post-build validation done
+...
+Building package vulkan[core]:arm64-android... done
+Installing package vulkan[core]:arm64-android...
+Installing package vulkan[core]:arm64-android... done
+Elapsed time for package vulkan:arm64-android: 35.9 ms
+Starting package 2/2: vulkan-hpp:arm64-android
+Building package vulkan-hpp[core]:arm64-android...
+-- Using community triplet arm64-android. This triplet configuration is not guaranteed to succeed.
+-- [COMMUNITY] Loading triplet configuration from: /.../vcpkg/triplets/community/arm64-android.cmake
+-- Using cached /.../vcpkg/downloads/KhronosGroup-Vulkan-Hpp-5ce8ae7fd0d9c0543d02f33cfa8a66e6a43e2150.tar.gz
+-- Cleaning sources at /.../vcpkg/buildtrees/vulkan-hpp/src/e6a43e2150-4f344cd911.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /.../vcpkg/downloads/KhronosGroup-Vulkan-Hpp-5ce8ae7fd0d9c0543d02f33cfa8a66e6a43e2150.tar.gz
+-- Using source at /.../vcpkg/buildtrees/vulkan-hpp/src/e6a43e2150-4f344cd911.clean
+-- Performing post-build validation
+-- Performing post-build validation done
+...
+Building package vulkan-hpp[core]:arm64-android... done
+Installing package vulkan-hpp[core]:arm64-android...
+Installing package vulkan-hpp[core]:arm64-android... done
+Elapsed time for package vulkan-hpp:arm64-android: 144.5 ms
+
+Total elapsed time: 1.013 s
+
+The package vulkan-hpp:arm64-android is header only and can be used from CMake via:
+
+    find_path(VULKAN_HPP_INCLUDE_DIRS "vulkan/vulkan.hpp")
+    target_include_directories(main PRIVATE ${VULKAN_HPP_INCLUDE_DIRS})</code></pre>
+<p></details></p>
 <h2 id="consume-libraries-using-vpckg-cmake-and-the-android-toolchain">Consume libraries using vpckg, cmake and the android toolchain</h2>
 <ol>
 <li>Combine vcpkg and Android toolchains</li>

@@ -53,7 +53,7 @@
                   id="pkg-search"
                   type="search"
                   name="search"
-                  placeholder="Search Packages"
+                  placeholder="Search"
                   autocomplete="off"
                   oninput=""
                 />
@@ -74,6 +74,7 @@
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-github-repos.html">Packaging Github Repos</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/packaging-zipfiles.html">Packaging Zipfiles</a></li>
 <li class="list-can-expand"><a href="/en/docs/examples/patching.html">patching</a></li>
+<li class="list-can-expand"><a href="/en/docs/examples/versioning.getting-started.html">Get Started with Versioning</a></li>
 </ul>
 <li class="list-can-expand">maintainers</li>
 <ul class="collapse standard-padding">
@@ -96,8 +97,13 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a></li>
 </ul>
+<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html">x_vcpkg_pkgconfig_get_modules</a></li>
+</ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake-config.html">vcpkg Cmake Config</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-cmake.html">vcpkg Cmake</a></li>
+<li class="list-can-expand"><a href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html">vcpkg Pkgconfig Get Modules</a></li>
 </ul>
 <li class="list-can-expand"><a href="/en/docs/maintainers/control-files.html">Control Files</a></li>
 <li class="list-can-expand"><a href="/en/docs/maintainers/execute_process.html">execute_process</a></li>
@@ -176,33 +182,33 @@
 <li class="list-can-expand"><a href="/en/docs/users/android.html">android</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/binarycaching.html">binarycaching</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/config-environment.html">Config Environment</a></li>
+<li class="list-can-expand"><a href="/en/docs/users/host-dependencies.html">Host Dependencies</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/integration.html">integration</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/manifests.html">manifests</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/selecting-library-features.html">Selecting Library Features</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/triplets.html">triplets</a></li>
-<li class="list-can-expand"><a href="/en/docs/users/versioning.getting-started.html">Get Started with Versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.implementation-details.html">Versioning.implementation Details</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.html">versioning</a></li>
 <li class="list-can-expand"><a href="/en/docs/users/versioning.reference.html">versioning.reference</a></li>
 </ul>
-<li class="list-can-expand"><a href="/en/docs/index.html">index</a></li>
+<li class="list-can-expand"><a href="/en/docs/README.html">README</a></li>
 </ul>
 </div><div class="right-side">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 <h2 id="can-i-contribute-a-new-library">Can I contribute a new library?</h2>
-<p>Yes! Start out by reading our <a href="https://github.com/Microsoft/vcpkg/blob/master/CONTRIBUTING.md">contribution guidelines</a>. 
-If you want to contribute but don't have a particular library in mind then take a look at the list 
+<p>Yes! Start out by reading our <a href="https://github.com/Microsoft/vcpkg/blob/master/CONTRIBUTING.md">contribution guidelines</a>.
+If you want to contribute but don't have a particular library in mind then take a look at the list
 of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+label%3Acategory%3Anew-port">new port requests</a>.</p>
 <h2 id="can-vcpkg-create-pre-built-binary-packages-what-is-the-binary-format-used-by-vcpkg">Can vcpkg create pre-built binary packages? What is the binary format used by vcpkg?</h2>
 <p>Yes! See <a href="../users/integration.html#export">the <code>export</code> command</a>.</p>
 <h2 id="how-do-i-update-libraries">How do I update libraries?</h2>
 <p>The <code>vcpkg update</code> command lists all packages which are out-of-sync with your current portfiles. To update a package, follow the instructions in the command.</p>
 <h2 id="how-do-i-get-more-libraries">How do I get more libraries?</h2>
-<p>The list of libraries is enumerated from the <a href="https://github.com/Microsoft/vcpkg/blob/master/ports"><code>ports</code></a> directory. By design, you can add and remove libraries from this directory as you see fit for yourself or your company -- see our examples on packaging <a href="../examples/packaging-zipfiles.html">zipfiles</a> and <a href="../examples/packaging-github-repos.html">GitHub repos</a>.</p>
+<p>The list of libraries is enumerated from the <a href="https://github.com/Microsoft/vcpkg/blob/master/ports"><code>ports\</code></a> directory. By design, you can add and remove libraries from this directory as you see fit for yourself or your company -- see our examples on packaging <a href="../examples/packaging-zipfiles.html">zipfiles</a> and <a href="../examples/packaging-github-repos.html">GitHub repos</a>.</p>
 <p>We recommend cloning directly from <a href="https://github.com/microsoft/vcpkg">GitHub</a> and using <code>git pull</code> to update the list of portfiles. Once you've updated your portfiles, <code>vcpkg update</code> will indicate any installed libraries that are now out of date.</p>
 <h2 id="can-i-build-a-private-library-with-this-tool">Can I build a private library with this tool?</h2>
-<p>Yes. Follow <a href="../examples/packaging-zipfiles.html">our packaging zlib Example</a> for creating a portfile using a fake URL. Then, either pre-seed the <code>downloads</code> folder with a zip containing your private sources or replace the normal calls to <code>vcpkg_download_distfile</code> and <code>vcpkg_extract_source_archive</code> with functions that unpack your source code.</p>
+<p>Yes. Follow <a href="../examples/packaging-zipfiles.html">our packaging zlib Example</a> for creating a portfile using a fake URL. Then, either pre-seed the <code>downloads\</code> folder with a zip containing your private sources or replace the normal calls to <code>vcpkg_download_distfile</code> and <code>vcpkg_extract_source_archive</code> with functions that unpack your source code.</p>
 <h2 id="can-i-use-a-prebuilt-private-library-with-this-tool">Can I use a prebuilt private library with this tool?</h2>
 <p>Yes. The <code>portfile.cmake</code> for a library is fundamentally a script that places the headers and binaries into the correct arrangement in the <code>${CURRENT_PACKAGES_DIR}</code>, so to pull in prebuilt binaries you can write a portfile which directly downloads and arranges the files.</p>
 <p>To see an example of this, look at <a href="https://github.com/microsoft/vcpkg/blob/master/ports/opengl/portfile.cmake"><code>ports\opengl\portfile.cmake</code></a> which simply copies files out of the Windows SDK.</p>
@@ -211,8 +217,8 @@ of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+lab
 <h2 id="does-vcpkg-run-on-linuxosx">Does vcpkg run on Linux/OSX?</h2>
 <p>Yes! We continuously test on OSX and Ubuntu 16.04, however we know users have been successful with Arch, Fedora, and FreeBSD. If you have trouble with your favorite Linux distribution, let us know in an issue and we'd be happy to help!</p>
 <h2 id="how-do-i-use-different-versions-of-a-library-on-one-machine">How do I use different versions of a library on one machine?</h2>
-<p>Within a single instance of vcpkg (e.g. one set of <code>installed</code>, <code>packages</code>, <code>ports</code> and so forth), you can only have one version of a library installed (otherwise, the headers would conflict with each other!). For those with experience with system-wide package managers, packages in vcpkg correspond to the <code>X-dev</code> or <code>X-devel</code> packages.</p>
-<p>To use different versions of a library for different projects, we recommend making separate instances of vcpkg and using the <a href="../users/integration.html">per-project integration mechanisms</a>. The versions of each library are specified by the files in <code>ports</code>, so they are easily manipulated using standard <code>git</code> commands. This makes it very easy to roll back the entire set of libraries to a consistent set of older versions which all work with each other. If you need to then pin a specific library forward, that is as easy as checking out the appropriate version of <code>ports&amp;lt;package&amp;gt;</code>.</p>
+<p>Within a single instance of vcpkg (e.g. one set of <code>installed\</code>, <code>packages\</code>, <code>ports\</code> and so forth), you can only have one version of a library installed (otherwise, the headers would conflict with each other!). For those with experience with system-wide package managers, packages in vcpkg correspond to the <code>X-dev</code> or <code>X-devel</code> packages.</p>
+<p>To use different versions of a library for different projects, we recommend making separate instances of vcpkg and using the <a href="../users/integration.html">per-project integration mechanisms</a>. The versions of each library are specified by the files in <code>ports\</code>, so they are easily manipulated using standard <code>git</code> commands. This makes it very easy to roll back the entire set of libraries to a consistent set of older versions which all work with each other. If you need to then pin a specific library forward, that is as easy as checking out the appropriate version of <code>ports&amp;lt;package&amp;gt;\</code>.</p>
 <p>If your application is very sensitive to the versions of libraries, we recommend checking in the specific set of portfiles you need into your source control along with your project sources and using the <code>--vcpkg-root</code> option to redirect the working directory of <code>vcpkg.exe</code>.</p>
 <h2 id="how-does-vcpkg-protect-my-privacy">How does vcpkg protect my privacy?</h2>
 <p>See the <a href="privacy.html">Privacy document</a> for all information regarding privacy.</p>
@@ -236,7 +242,7 @@ of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+lab
 <p>A lower level mechanism to achieve the same as the <code>vcpkg integrate project</code> NuGet package is via the <code>&lt;vcpkg_root&gt;\scripts\buildsystems\msbuild\vcpkg.targets</code> file. All you need is to import it in your .vcxproj file, replacing <code>&lt;vcpkg_root&gt;</code> with the path where you installed vcpkg:</p>
 <pre><code>&lt;Import Project="&lt;vcpkg_root&gt;\scripts\buildsystems\msbuild\vcpkg.targets" /&gt;</code></pre>
 <h2 id="how-can-i-remove-temporary-files">How can I remove temporary files?</h2>
-<p>You can save some disk space by completely removing the <code>packages</code>, <code>buildtrees</code>, and <code>downloads</code> folders.</p>
+<p>You can save some disk space by completely removing the <code>packages\</code>, <code>buildtrees\</code>, and <code>downloads\</code> folders.</p>
 <h2 id="how-is-cmake-used-internally-by-vcpkg">How is CMake used internally by vcpkg?</h2>
 <p>vcpkg uses CMake internally as a build scripting language. This is because CMake is already an extremely common build system for cross-platform open source libraries and is becoming very popular for C++ projects in general. It is easy to acquire on Windows, does not require system-wide installation, and legible for unfamiliar users.</p>
 <h2 id="will-vcpkg-support-downloading-compiled-binaries-from-a-public-or-private-server">Will vcpkg support downloading compiled binaries from a public or private server?</h2>

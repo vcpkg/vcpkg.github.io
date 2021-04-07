@@ -1,4 +1,15 @@
 @media screen and (min-width: 0px) and (max-width: 991px) {
+  .search {
+    height: 200px;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffff;
+    padding-left: 0px;
+    border: 1px solid grey;
+    width: 24.5%;
+  }
+
   a.navbar-brand {
     font-size: x-large;
     margin-left: 12%;
@@ -42,6 +53,17 @@
 }
 
 @media screen and (min-width: 992px) {
+  .search {
+    height: 200px;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffff;
+    padding-left: 0px;
+    border: 1px solid grey;
+    width: 16%;
+  }
+
   a.navbar-brand {
     font-size: x-large;
     margin-left: 8%;
@@ -83,6 +105,17 @@ h2 {
   height: 100%;
 }
 
+.header-text-getting-started {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  color: #222222;
+  margin-left: 8%;
+  margin-top: 70px;
+}
+
 .header-text {
   font-family: Source Sans Pro;
   font-style: normal;
@@ -90,14 +123,15 @@ h2 {
   font-size: 34px;
   line-height: 40px;
   color: #222222;
-  margin-left: 7%;
+  margin-left: 7.5%;
   margin-top: 70px;
 }
 
 .selected {
   font-weight: bolder;
-  border-bottom: 2px solid blue;
-  border-bottom-width: medium;
+  text-decoration: underline;
+  text-decoration-color: #005bff;
+  text-underline-offset: 2px;
 }
 
 .copy-btn {
@@ -301,20 +335,8 @@ a.section-selected {
 }
 
 .search-item:hover {
-  box-shadow: 0px 6.4px 14.4px rgba(0, 0, 0, 0.13), 0px 1.2px 3.6px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  background: #ffffff;
-}
+  background: #F3F3F3
 
-.search {
-  height: 200px;
-  overflow-y: auto;
-  position: fixed;
-  z-index: 2;
-  background-color: #ffffff;
-  padding-left: 0px;
-  border: 1px solid grey;
-  width: 20%;
 }
 
 .docs-navigation {
@@ -404,8 +426,8 @@ a.footer-link {
 
 .docs-flex {
   display: flex;
-  margin-left: 6%;
-  margin-right: 5%;
+  margin-left: 14%;
+  margin-right: 14%;
   margin-top: 45px;
 }
 
@@ -429,7 +451,7 @@ li.docs-col-bold {
 }
 
 .docs-nav-link:hover {
-  color: #222222;
+  color: blue;
   text-decoration: none;
 }
 
@@ -503,6 +525,7 @@ span.navbar-close {
   display: inline;
   float: right;
   margin-right: 5%;
+  cursor: pointer;
 }
 
 .docs-mobile-outline {
@@ -559,4 +582,10 @@ span.navbar-close {
 
 .spec-only {
   height: 500px;
+}
+
+.search-item-docs,
+.search-item-docs:hover {
+  text-decoration: none;
+  color:rgb(0, 0, 0);
 }

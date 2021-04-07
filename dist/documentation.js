@@ -26,7 +26,7 @@ function handleDocumentationSearch(searchQuery) {
         } else {
             for(let i=0;i<searchResult.length;i++) {
                 var link = document.createElement('a');
-                link.className = '';
+                link.className = 'search-item-docs';
                 link.href = searchResult[i].item.Path
 
                 var searchHeading = document.createElement('div');
