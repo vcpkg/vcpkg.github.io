@@ -1,17 +1,17 @@
 var os = detectOS();
 $(document).ready(function () {
     clickGetStartedTab(os); //initialized to user's current platform
-    $('.gs-copy-btn').click(function () {
-        var step = $(this).attr('id');
-        if (os === 'windows')
-            copyCodePanel('windows-' + step);
-        else
-            copyCodePanel('unix-' + step);
-    });
     $('.gs-tab-btn').click(function () {
         var id = $(this).attr('id');
         clickGetStartedTab(id.split('-')[2]);
     });
+
+    var res = getUrlParameter('platform');
+    if(res != '') {
+        if(res === 'mac' || res === 'linux' || res === 'windows') {
+            clickGetStartedTab(res);
+        }
+    }
 });
 function clickGetStartedTab(platform) {
     os = platform;

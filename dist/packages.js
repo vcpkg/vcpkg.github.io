@@ -1,3 +1,4 @@
+var maxPackageLength = 10;
 var wording = {
     en: {
         version: 'Version: ',
@@ -25,27 +26,12 @@ var triplets = [
 ];
 var compatFilter = [];
 $(document).ready(function () {
-    $('.install-tab-btn').click(function () {
-        clickInstallTab($(this).attr('id').substring(12));
-    });
-    $('#install-copy').click(function () {
-        copyCodePanel('install-code');
+    $(".load-results").on("click", function(e) {
+        maxPackageLength += 10
+        renderPackages();
     });
 });
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    var sParameterName;
-    var i;
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
-    }
-    return true;
-};
-// initialize query to result from index.html or blank
+
 var res = getUrlParameter('query');
 var query = res === true ? '' : res;
 $.getJSON('../output.json', function (responseObject) {
@@ -98,39 +84,16 @@ var renderCompability = function (pkg, packageDiv) {
     var statusDiv = document.createElement('div');
     statusDiv.className = 'processor-status';
     var compatRowFrag = document.createDocumentFragment();
+    var platformPassesString = "";
     for (var _i = 0, triplets_1 = triplets; _i < triplets_1.length; _i++) {
         var t = triplets_1[_i];
-        var procStatusDiv = statusDiv.cloneNode(true);
         var status = pkg[t];
-        var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
-        procStatusDiv.classList.add(simplifiedStatus);
-        // hide card if it doesn't pass the compatibility filter
-        if (packageDiv && simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
-            packageDiv.classList.add('hide');
+        if(status === 'pass') {
+            platformPassesString += ", " + triplets_1[_i]
         }
-        var statusIcon = void 0;
-        var alt_text = void 0;
-        switch (simplifiedStatus) {
-            case 'pass':
-                statusIcon = '✓';
-                alt_text = 'Compatible with ' + t;
-                break;
-            case 'fail':
-                statusIcon = '!';
-                alt_text = 'Not Compatible with ' + t;
-                break;
-            default:
-                statusIcon = '?';
-                alt_text = 'Compatibility unknown on ' + t;
-        }
-        procStatusDiv.textContent = statusIcon + ' ' + t;
-        var spanTip = document.createElement('span');
-        var text = void 0;
-        spanTip.textContent = alt_text;
-        procStatusDiv.appendChild(spanTip);
-        procStatusDiv.classList.add('tip');
-        compatRowFrag.appendChild(procStatusDiv);
     }
+    statusDiv.textContent = platformPassesString.substring(2);
+    compatRowFrag.appendChild(statusDiv);
     compatRowDiv.appendChild(compatRowFrag);
     return compatRowDiv;
 };
@@ -142,8 +105,6 @@ function expandText(moreDescSpan, extraDescSpan) {
 var mainPackageFrag = document.createDocumentFragment();
 var parentPackageDiv = document.createElement('div');
 parentPackageDiv.className = 'card package-card';
-parentPackageDiv.setAttribute('data-toggle', 'modal');
-parentPackageDiv.setAttribute('data-target', '#pkg-modal');
 var parentCardHeaderDiv = document.createElement('div');
 parentCardHeaderDiv.className = 'package-card-header';
 var parentNameDiv = document.createElement('div');
@@ -178,14 +139,21 @@ parentGitHubCount.target = '_blank';
 parentGitHubCount.style.display = 'block';
 var parentVersionDiv = document.createElement('div');
 parentVersionDiv.className = 'package-version';
+
+var vcpkgPackagePage = document.createElement('div');
+vcpkgPackagePage.className = 'vcpkg-page-link';
+vcpkgPackagePage.textContent = "View Details";
+
 function renderPackageDetails(package, packageDiv, isCard) {
+
+    var vcpkgPage = vcpkgPackagePage.cloneNode(true);
     if (isCard === void 0) { isCard = true; }
     var detailFrag = document.createDocumentFragment();
     if (isCard) {
         var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
         // Package Name
         var nameDiv = parentNameDiv.cloneNode(true);
-        nameDiv.textContent = package.Name;
+        nameDiv.textContent = package.Name + " |";
         cardHeaderDiv.appendChild(nameDiv);
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
@@ -203,7 +171,118 @@ function renderPackageDetails(package, packageDiv, isCard) {
     }
     // Package Processor Compatibilities
     detailFrag.appendChild(renderCompability(package, packageDiv));
+
+    detailFrag.appendChild(vcpkgPage);
+
+    vcpkgPage.addEventListener("click", function() {
+        if(this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
+            this.textContent = "Hide Details"
+            this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden");
+            this.parentNode.getElementsByClassName("instructions")[0].classList.remove("hidden");
+            this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
+        } else {
+            this.textContent = "View Details"
+            this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("instructions")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
+            this.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
+            this.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
+        }
+    })
+
+    var inst = document.createElement('div');
+    inst.className = 'instructions hidden';
+    var windowsInst = document.createElement('span');
+    windowsInst.className = 'instructions-windows bold-text';
+    windowsInst.textContent = "Windows";
+    var linuxInst = document.createElement('span');
+    linuxInst.className = 'instructions-linux';
+    linuxInst.textContent = "MacOS/Linux";
+    var featureInst = document.createElement('span');
+    featureInst.className = 'instructions-features';
+    featureInst.textContent = "Feature List";
+    inst.appendChild(windowsInst);
+    inst.appendChild(linuxInst);
+    inst.appendChild(featureInst);
+
+    windowsInst.addEventListener("click", function() {
+        windowsInst.parentNode.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden")
+        windowsInst.parentNode.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden")
+        windowsInst.parentNode.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden")
+        this.classList.add("bold-text");
+        windowsInst.parentNode.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
+        windowsInst.parentNode.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
+
+    })
+
+    linuxInst.addEventListener("click", function() {
+        windowsInst.parentNode.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden")
+        windowsInst.parentNode.parentNode.getElementsByClassName("linuxText")[0].classList.remove("hidden")
+        windowsInst.parentNode.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden")
+        this.classList.add("bold-text");
+        windowsInst.parentNode.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
+        windowsInst.parentNode.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
+    })
+
+    featureInst.addEventListener("click", function() {
+        windowsInst.parentNode.parentNode.getElementsByClassName("featureText")[0].classList.remove("hidden")
+        windowsInst.parentNode.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden")
+        windowsInst.parentNode.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden")
+        this.classList.add("bold-text");
+        windowsInst.parentNode.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
+        windowsInst.parentNode.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
+    })
+
+    var windowsText = document.createElement('div');
+    windowsText.className = "windowsText hidden";
+    windowsText.textContent = ".\\vcpkg install " + package.Name;
+
+    var linuxText = document.createElement('div');
+    linuxText.textContent = "vcpkg install " + package.Name;
+    linuxText.className = "linuxText hidden";
+
+    var featureText = document.createElement('div');
+    featureText.className = "featureText hidden";
+
+    for(let i=0; i< package.Features.length; i++) {
+        var div = document.createElement('div');
+        div.className = "div-action-list";
+        var group = document.createElement("ul");
+        group.className = "feature-list";
+
+        var name = document.createElement("li");
+        var desc = document.createElement("li");
+        var depends = document.createElement("li");
+
+        name.append("Feature Name: ");
+        desc.append("Description: ")
+        depends.append("Build-Depends: ")
+
+        name.textContent += package.Features[i]["name"] || package.Features[i]["Name"] || ""
+        desc.textContent += package.Features[i]["description"] || package.Features[i]["Description"] || ""
+        depends.textContent += package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || ""
+
+        group.appendChild(name);
+        group.appendChild(desc);
+        group.appendChild(depends);
+        div.appendChild(group)
+        featureText.appendChild(div);
+    }
+
+    if(package.Features.length == 0) {
+        featureText.append("No features for this library.")
+    }
+
+    detailFrag.appendChild(inst);
+    detailFrag.appendChild(windowsText);
+    detailFrag.appendChild(linuxText);
+    detailFrag.appendChild(featureText);
     // Package Version for modal
+
     if (!isCard) {
         var versionDiv = parentDescriptionDiv.cloneNode(true);
         versionDiv.textContent = wording[lang]['version'] + package.Version;
@@ -212,10 +291,9 @@ function renderPackageDetails(package, packageDiv, isCard) {
     // Website link (with clause)
     var homepageURL = package.Homepage;
     if (homepageURL) {
-        var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
+        //var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
         var websiteLink = parentWebsiteLink.cloneNode(true);
         websiteLink.href = homepageURL;
-        cardFooterDiv.appendChild(websiteLink);
         if (package.Stars) {
             var fullBtnSpan = parentFullBtnSpan.cloneNode(true);
             var btnSpan = parentGitHub.cloneNode(true);
@@ -230,9 +308,9 @@ function renderPackageDetails(package, packageDiv, isCard) {
             ghCount.setAttribute('aria-label', package.Stars);
             ghCount.href = homepageURL;
             fullBtnSpan.appendChild(ghCount);
-            cardFooterDiv.appendChild(fullBtnSpan);
+            cardHeaderDiv.appendChild(fullBtnSpan);
         }
-        detailFrag.appendChild(cardFooterDiv);
+        //detailFrag.appendChild(cardFooterDiv);
     }
     return detailFrag;
 }
@@ -241,8 +319,6 @@ function renderCard(package, mainDiv, oldCancellationToken) {
         return; //don't render old packages
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
-    packageDiv.addEventListener('click', updateModal.bind(this, package));
-    packageDiv.setAttribute('data-details', package);
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, compatibility, website)
     cardFrag.appendChild(renderPackageDetails(package, packageDiv));
@@ -257,7 +333,7 @@ var renderPackages = function () {
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName('package-results')[0];
     if (currentPackages.length > 0) {
-        for (var _i = 0, currentPackages_1 = currentPackages; _i < currentPackages_1.length; _i++) {
+        for (var _i = 0, currentPackages_1 = currentPackages; _i < maxPackageLength; _i++) {
             var package = currentPackages_1[_i];
             setTimeout(renderCard.bind(this, package, mainDiv, cancellationToken), 0);
         }
@@ -275,8 +351,6 @@ function clearPackages() {
     while (mainDiv.firstChild) {
         mainDiv.removeChild(mainDiv.firstChild);
     }
-    var totalPackages = document.getElementsByClassName('total-packages')[0];
-    totalPackages.textContent = '';
 }
 function searchPackages(query) {
     var options = {
@@ -338,54 +412,7 @@ function filterCompat() {
     compatFilter = Array.from(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map(function (e) { return e.value; });
     renderPackages();
 }
-function updateModal(pkg) {
-    selectedPackage = pkg;
-    // Package name
-    document.getElementById('pkg-modal-title').textContent = selectedPackage.Name;
-    // Package details
-    var modalDetails = document.getElementById('pkg-modal-details');
-    var newDetails = document.createElement('div');
-    newDetails.appendChild(renderPackageDetails(selectedPackage, null, false));
-    newDetails.id = 'pkg-modal-details';
-    modalDetails.replaceWith(newDetails);
-    //Package installation code
-    var os = detectOS();
-    clickInstallTab(os); //default to platform that user is on
-    var fileDiv = document.createElement('div');
-    fileDiv.id = 'pkg-modal-files';
-    // Package files
-    var fileList = selectedPackage.Files;
-    if (fileList !== undefined) {
-        var fileTitle = document.createElement('p');
-        fileTitle.textContent = 'Files';
-        fileTitle.className = 'pkg-modal-file-title';
-        fileDiv.appendChild(fileTitle);
-        for (var _i = 0, fileList_1 = fileList; _i < fileList_1.length; _i++) {
-            var file = fileList_1[_i];
-            var listItem = document.createElement('li');
-            listItem.textContent = file;
-            fileDiv.appendChild(listItem);
-        }
-    }
-    document.getElementById('pkg-modal-files').replaceWith(fileDiv);
-}
-function clickInstallTab(platform) {
-    var installCode = document.getElementById('install-code');
-    installCode.setAttribute('readonly', 'false');
-    var windowsTab = document.getElementById('install-tab-windows');
-    var unixTab = document.getElementById('install-tab-unix');
-    if (platform === 'windows') {
-        installCode.textContent = '.\\vcpkg\\vcpkg install ' + selectedPackage.Name;
-        windowsTab.classList.add('selected');
-        unixTab.classList.remove('selected');
-    }
-    else {
-        installCode.textContent = './vcpkg/vcpkg install ' + selectedPackage.Name;
-        windowsTab.classList.remove('selected');
-        unixTab.classList.add('selected');
-    }
-    installCode.setAttribute('readonly', 'true');
-}
+
 function loadTotalPackages() {
     var totalPackages = document.getElementsByClassName('total-packages')[0];
     var hiddenPackages = new Set();
@@ -399,6 +426,7 @@ function loadTotalPackages() {
             }
         }
     }
-    totalPackages.textContent =
-        wording[lang]['total-pkgs'] + (currentPackages.length - hiddenPackages.size);
+
+    let packagesFound = currentPackages.length - hiddenPackages.size;
+    totalPackages.textContent = 'Showing 1-' + maxPackageLength + ' of ' + packagesFound + ' packages';
 }

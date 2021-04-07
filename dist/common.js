@@ -24,3 +24,49 @@ function detectOS() {
     }
     return 'linux';
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    var sParameterName;
+    var i;
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if(sParameterName[0].indexOf("<") != -1
+        || sParameterName[0].indexOf(">") != -1
+        || sParameterName[0].indexOf("(") != -1
+        || sParameterName[0].indexOf(")") != -1
+        || sParameterName[0].indexOf("'") != -1
+        || sParameterName[0].indexOf(";") != -1)
+        {
+            return true;
+        }
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return true;
+};
+
+function addMouseOverNavigation() {
+    $(".docs-nav").css("display", "block");
+}
+
+function addMouseLeave() {
+    $(".docs-nav").css("display", "none");
+}
+
+function toggleNavIcon() {
+    document.getElementsByClassName("navbar-close")[0].classList.toggle("hidden");
+    document.getElementsByClassName("navbar-toggler-icon")[0].classList.toggle("hidden");
+    document.getElementsByClassName("navbar-close")[0].parentElement.classList.toggle("hidden");
+    document.getElementsByClassName("navbar-toggler-icon")[0].parentElement.classList.toggle("hidden");
+    document.getElementsByClassName("mobile-nav")[0].classList.toggle("hidden");
+    document.getElementById("vcpkg-nav-logo").classList.toggle("vcpkg-nav-color");
+}
+
+function toggleDocsOutlineMobile() {
+    document.getElementsByClassName("left-side")[0].classList.toggle("show");
+    document.getElementsByClassName("docs-mobile-heading")[0].classList.toggle("hidden");
+    document.getElementsByClassName("docs-mobile-exit")[0].classList.toggle("hidden");
+}
