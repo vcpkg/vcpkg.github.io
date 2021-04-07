@@ -21,9 +21,10 @@
     />
     <link href="/css/common.css" rel="stylesheet" />
     <link href="/css/packages.css" rel="stylesheet" />
+    <link href="/css/githubBtn.css" rel="stylesheet" />
 
     <!-- bootstrap scripts -->
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
@@ -34,9 +35,11 @@
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
+
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- our scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
     <script src="/dist/common.js"></script>
     <script src="/dist/packages.js"></script>
 
@@ -51,171 +54,39 @@
   <div id="loadNavBar"></div>
 
   <body>
-    <div class="header-text">
-      <h1>Browse Packages</h1>
-    </div>
-    <div class="search-bar">
-      <input
-        class="search-box"
-        id="pkg-search"
-        type="search"
-        name="search"
-        placeholder="Search Packages"
-        autocomplete="off"
-        oninput="searchAndRenderPackages()"
-      />
-      <span class="search-icon"></span>
-    </div>
+    <div class="header-text">Browse packages</div>
+
     <div class="package-body">
-      <div class="side-bar">
-        <div class="filter-sort-text">Compatibility</div>
-        <div class="card compat-card">
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="arm-uwp" onchange="filterCompat();" /> arm-uwp</label
-            >
+      <div class="sort-bar">
+        <div class="side-bar">
+          <div class="search-bar">
+            <input
+              class="search-box"
+              id="pkg-search"
+              type="search"
+              name="search"
+              placeholder="Search Packages"
+              autocomplete="off"
+              oninput="searchAndRenderPackages()"
+            />
+            <span class="search-icon"></span>
           </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="arm64-windows" onchange="filterCompat();" />
-              arm64-windows</label
-            >
-          </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="x64-linux" onchange="filterCompat();" />
-              x64-linux</label
-            >
-          </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="x64-osx" onchange="filterCompat();" /> x64-osx</label
-            >
-          </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="x64-uwp" onchange="filterCompat();" /> x64-uwp</label
-            >
-          </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="x64-windows" onchange="filterCompat();" />
-              x64-windows</label
-            >
-          </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="x64-windows-static" onchange="filterCompat();" />
-              x64-windows-static</label
-            >
-          </div>
-          <div class="checkbox">
-            <label
-              ><input type="checkbox" value="x86-windows" onchange="filterCompat();" />
-              x86-windows</label
-            >
-          </div>
+          <div class="show-package-results-number total-packages"></div>
         </div>
-      </div>
-      <div class="main-content">
-        <div class="sort-bar">
-          <p class="total-packages filter-sort-text"></p>
-          <select class="card dropdown" id="sortBtn" onChange="sortPackages()">
+        <div class="">
+          <select class="dropdown" id="sortBtn" onChange="sortPackages()">
             <option value="Best Match" selected>Best Match</option>
             <option value="Alphabetical">Alphabetical</option>
             <option value="GitHub Stars">GitHub Stars</option>
           </select>
-          <span class="sort-text filter-sort-text">Sort By:</span>
+          <span class="filter-right-sort-text">Sort By:</span>
         </div>
-
-        <div
-          class="modal fade"
-          id="pkg-modal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="pkg-modal-title"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="pkg-modal-title"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-
-              <div class="modal-body" id="pkg-modal-body">
-                <div id="pkg-modal-details"></div>
-                <p class="installation-header">Installation:</p>
-                <div id="tab-container" class="tabs">
-                  <div class="tablist" role="tablist">
-                    <button role="tab" id="install-tab-windows" class="tab-btn install-tab-btn">
-                      Windows
-                    </button>
-                    <button role="tab" id="install-tab-unix" class="tab-btn install-tab-btn">
-                      MacOS/Linux
-                    </button>
-                    <div class="copy">
-                      <svg
-                        id="install-copy"
-                        viewBox="0 0 16 16"
-                        class="bi bi-files copy-btn"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M3 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3z"
-                        />
-                        <path
-                          d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
-                        />
-                      </svg>
-                      <span id="tip-text" class="tip-text">Copy to Clipboard</span>
-                    </div>
-                  </div>
-                  <textarea
-                    id="install-code"
-                    tabindex="0"
-                    role="tabpanel"
-                    aria-labelledby="install-code"
-                    class="tab-panel"
-                    readonly
-                  >
-                  </textarea>
-                </div>
-                <div id="pkg-modal-files"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="main-content">
         <div class="package-results bottom-border"></div>
+        <div class="load-results">Load more packages</div>
       </div>
     </div>
+    <div id="loadFooter"></div>
   </body>
-  <footer role="contentinfo">
-    <div class="row">
-      <div class="col-md-3 offset-md-1 col-sm-5 col-5">
-        <p class="footer-text no-marg">Made with ♥ in Redmond</p>
-      </div>
-      <div class="col-md-4 offset-md-2 text-nowrap right-align col-sm-4 col-4">
-        <div class="no-marg">
-          <p class="footer-text inline no-marg">
-            <a
-              class="privacy"
-              href="https://go.microsoft.com/fwlink/?LinkId=521839"
-              data-mscc-ic="false"
-              >Privacy</a
-            >
-          </p>
-          <p class="footer-text left-marg inline no-marg">
-            © 2020 Microsoft
-          </p>
-        </div>
-      </div>
-      <div class="col-md-1 col-sm-2 col-3">
-        <img class="ms-logo-footer" src="/assets/external-icons/microsoft.svg" alt="Microsoft logo" />
-      </div>
-    </div>
-  </footer>
 </html>

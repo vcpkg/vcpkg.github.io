@@ -1,46 +1,180 @@
-<div class="alert alert-warning" role="alert">
-  <span class="text-center"
-    >This website is currently in development. Anything you see is subject to change.
-  </span>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand align-baseline" href="index.html">
-    <h3><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" /> vcpkg</h3>
+<nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
   </a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarResponsive"
-    aria-controls="navbarResponsive"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse align-items-center" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="gettingStarted.html">Get Started </a>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link" href="/en/getting-started.html">Get Started </a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="packages.html">Packages</a>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link" href="/en/packages.html">Packages</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="https://vcpkg.readthedocs.io/en/latest/">
-          Documentation
-        </a>
+      <li class="nav-item active" onmouseover="addMouseOverNavigation()">
+        <a class="nav-link docs-upper-nav-link" href="/en/docs/"
+          ><span>
+            Documentation
+            <img src="/assets/misc/docs.svg" width="10px" height="10px" alt="" class="" /></span
+        ></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
         <a class="nav-link" href="https://github.com/microsoft/vcpkg">GitHub</a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
         <a class="nav-link" href="https://devblogs.microsoft.com/cppblog/?s=vcpkg">Blog</a>
       </li>
     </ul>
   </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started.html">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages.html">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/">Documentation</a></li>
+        <ul class="mobile-docs-list">
+          <li><a class="navbar-mobile" href="/en/docs/index.html">Quick Start</a></li>
+          <li><a class="navbar-mobile" href="/en/docs/about/faq.html">About</a></li>
+          <li>
+            <a class="navbar-mobile" href="/en/docs/examples/installing-and-using-packages.html"
+              >Examples</a
+            >
+          </li>
+          <li>
+            <a class="navbar-mobile" href="/en/docs/maintainers/control-files.html">Maintainers</a>
+          </li>
+          <li><a class="navbar-mobile" href="/en/docs/users/binarycaching.html">Users</a></li>
+        </ul>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/cppblog/?s=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/index.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"
+            >vcpkg_configure_cmake</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Specifications</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/specifications/binarycaching.html"
+            >Binary Caching</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/specifications/registries.html">Registries</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/specifications/versioning.html">Versioning</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/specifications/manifests.html">Manifests</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.getting-started.html"
+            >Verioning: Getting Started</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

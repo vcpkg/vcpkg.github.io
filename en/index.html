@@ -50,19 +50,17 @@
   <body>
     <div id="loadNavBar"></div>
 
-    <header class="masthead">
-      <div class="col-md-6 title-container">
+    <header class="">
+      <div class="col-md-6 title-container hide">
         <img
           class="hide logo-img"
           src="/assets/mark/mark.svg"
           alt="vcpkg logo"
           title="vcpkg logo"
         />
-        <div class="title-text">
+        <div class="title-text hide">
           <h3 class="vcpkg-title">vcpkg</h3>
-          <p class="subtitle">
-            Over 1300 C++ libraries built from source
-          </p>
+          <p class="subtitle">Over 1300 C++ libraries built from source</p>
           <a
             class="github-button"
             href="https://github.com/microsoft/vcpkg"
@@ -75,7 +73,54 @@
           >
         </div>
       </div>
-      <div class="col-md-8 offset-md-2">
+      <div class="header-block">
+        <img
+          class="logo-design-first-upper"
+          src="/assets/mark/logo-upper.svg"
+          alt="vcpkg logo"
+          title="vcpkg logo"
+        />
+        <img
+          class="logo-design-first-lower"
+          src="/assets/mark/logo-lower.svg"
+          alt="vcpkg logo"
+          title="vcpkg logo"
+        />
+        <div class="header-text-block">
+          <div class="vcpkg-name">vcpkg</div>
+          <div class="vcpkg-description">
+            Fully-featured package manager
+            <p><span>Any platform, Any buildsystem, Any workflow</span></p>
+          </div>
+
+          <a role="button" class="btn-lg vcpkg-btn-left text-nowrap" href="gettingStarted.html"
+            >Get started</a
+          >
+
+          <a role="button" class="btn-lg vcpkg-btn-right text-nowrap" href="gettingStarted.html"
+            >Browse Packages</a
+          >
+        </div>
+
+        <div class="vcpkg-center-block">
+          <div class="vcpkg-center-heading">What is vcpkg?</div>
+          <div class="vcpkg-center-description">
+            Vcpkg is an open sourced MIT License C++ package and library manager. We have stable
+            support for Windows, Mac OS, Linux and community support for iOS, Android, and other
+            architectures. We designed vcpkg to work with CMake, MSBuild, Make, and other
+            buildsystems.
+          </div>
+        </div>
+
+        <img
+          class="logo-design-second-upper"
+          src="/assets/mark/logo-right.svg"
+          alt="vcpkg logo"
+          title="vcpkg logo"
+        />
+      </div>
+
+      <div class="col-md-8 offset-md-2 hide">
         <div class="row title-buttons">
           <div class="col-md-6 offset-md-3">
             <a
@@ -87,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="search-bar">
+      <div class="search-bar hide">
         <input
           class="idx-search-box"
           id="idx-search"
@@ -101,142 +146,46 @@
       </div>
     </header>
     <div class="questions">
-      <h1>What is vcpkg?</h1>
-      <p class="what-is">
-        vcpkg is a C/C++ package manager that builds libraries from source for you and works on
-        Windows, Linux, and macOS.
-      </p>
-      <img class="gif" src="/assets/misc/install.gif" alt="gif of installing a package using vcpkg" />
-      <h1 class="questions2">Why vcpkg?</h1>
+      <p class="questions2">Why vcpkg?</p>
     </div>
-    <div class="why-us">
-      <div class="row why-us-row">
-        <div class="col-md-3 border-custom why-us-box">
-          <div class="title">
-            <p id="left" class="examples text-center">
-              vcpkg is easy to use
-            </p>
-          </div>
-          <div class="why-us-text">
-            <p class="padding">
-              You don’t have to look up build instructions for every dependency; just run
-              <code>vcpkg install &lt;library name&gt;</code> and you’re good to go.
-            </p>
-          </div>
+    <div class="why-us-box-shadow">
+      <div class="why-us-flexbox">
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/flexible.svg" />
+          <div class="why-us-heading">Flexible</div>
+          <p class="why-us-description">
+            We have everything you might expect in a package manager tool (versioning, manifests)
+            and more (enterprise CI/CD features, binary caching).
+          </p>
         </div>
-
-        <div class="col-md-1 blank-space"></div>
-        <div class="col-md-3 border-custom why-us-box">
-          <div class="title">
-            <p id="right" class="examples text-center">
-              vcpkg is cross-platform and architecture-agnostic
-            </p>
-          </div>
-          <div class="why-us-text">
-            <p class="padding">
-              vcpkg runs on Windows, Linux, and macOS and builds libraries for these platforms.
-              Support for a variety of architectures by default, or you can define your own custom
-              builds.
-            </p>
-          </div>
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/reliable.svg" />
+          <div class="why-us-heading">Reliable</div>
+          <p class="why-us-description">
+            We designed vcpkg to be easy to use and easy to integrate with any existing build
+            environment.
+          </p>
         </div>
       </div>
-
-      <div class="row why-us-row">
-        <div class="col-md-3 border-custom why-us-box">
-          <div class="title">
-            <p id="left2" class="examples text-center">
-              vcpkg has a high-quality, curated library catalog
-            </p>
-          </div>
-
-          <div class="why-us-text">
-            <p class="padding">
-              vcpkg has over 1300 libraries that are routinely built against each other in our CI
-              process. This keeps the catalog working all the time, ensuring reliability and build
-              reproducibility.
-            </p>
-          </div>
+      <div class="why-us-flexbox">
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/secure.svg" />
+          <div class="why-us-heading">Secure</div>
+          <p class="why-us-description">
+            Vcpkg tries to take build times to the next level through all sorts of caching,
+            parallelism, and other methods.
+          </p>
         </div>
-
-        <div class="col-md-1 blank-space"></div>
-        <div class="col-md-3 border-custom why-us-box">
-          <div class="title">
-            <p id="right2" class="examples text-center">
-              vcpkg is an open source project
-            </p>
-          </div>
-          <div class="why-us-text">
-            <p class="padding">
-              You can view, fork, or contribute to our source code and build recipes on GitHub.
-            </p>
-          </div>
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/open.svg" />
+          <div class="why-us-heading">Open</div>
+          <p class="why-us-description">
+            Vcpkg aims to provide consistent and stable builds across developer and CI/CD workflows.
+          </p>
         </div>
       </div>
     </div>
-    <div class="container-fluid bottom-border" id="stay-in-touch">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h1 class="stay">Stay in Touch</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
-          <div class="row justify-content-center">
-            <ul class="media-link">
-              <li class="media-link-item">
-                <a href="#stay-in-touch" onclick="start_email()"
-                  ><img class="media-link-img-big" src="/assets/external-icons/email.png" alt="email us"
-                /></a>
-                <p class="text-center">Email</p>
-              </li>
-              <li class="media-link-item">
-                <a href="https://cppalliance.org/slack/"
-                  ><img class="media-link-img-small" src="/assets/external-icons/slack.png" alt="vcpkg slack"
-                /></a>
-                <p class="text-center">Slack</p>
-              </li>
-              <li class="media-link-item">
-                <a href="https://discord.com/invite/ZPErMGW"
-                  ><img class="media-link-img" src="/assets/external-icons/discord.png" alt="vcpkg discord"
-                /></a>
-                <p class="text-center">Discord</p>
-              </li>
-              <li class="media-link-item">
-                <a href="https://github.com/microsoft/vcpkg"
-                  ><img class="media-link-img" src="/assets/external-icons/github.png" alt="vcpkg github"
-                /></a>
-                <p class="text-center">GitHub</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <div id="loadFooter"></div>
   </body>
-  <footer role="contentinfo">
-    <div class="row">
-      <div class="col-lg-4 offset-lg-1 col-md-4 offset-md-1 col-sm-5 col-5">
-        <p class="footer-text no-marg">Made with ♥ in Redmond</p>
-      </div>
-      <div class="col-lg-4 offset-lg-1 col-md-3 offset-md-1 text-nowrap right-align col-sm-4 col-4">
-        <div class="no-marg">
-          <p class="footer-text inline no-marg">
-            <a
-              class="privacy"
-              href="https://go.microsoft.com/fwlink/?LinkId=521839"
-              data-mscc-ic="false"
-              >Privacy</a
-            >
-          </p>
-          <p class="footer-text left-marg inline no-marg">
-            © 2020 Microsoft
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2 col-3">
-        <img class="ms-logo-footer" src="/assets/external-icons/microsoft.svg" alt="Microsoft logo" />
-      </div>
-    </div>
-  </footer>
 </html>
