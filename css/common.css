@@ -61,7 +61,7 @@
     background-color: #ffffff;
     padding-left: 0px;
     border: 1px solid grey;
-    width: 16%;
+    width: 18%;
   }
 
   a.navbar-brand {
@@ -90,10 +90,13 @@ code {
   font-family: 'Source Code Pro', monospace;
   color: rgb(0, 0, 0);
   background: #f1f1f2;
+  word-break: break-all;
 }
 
 pre {
   background: #f1f1f2;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 h1,
@@ -331,7 +334,7 @@ a.section-selected {
 .search-item-no-results {
   list-style: none;
   z-index: 2;
-  width: 200px;
+  width: 220px;
 }
 
 .search-item:hover {
@@ -368,10 +371,12 @@ a.section-selected {
 
 .list-expanded {
   list-style-image: url('/assets/misc/Shape.svg');
+  cursor: pointer;
 }
 
 .list-can-expand {
   list-style-image: url('/assets/misc/Arrow.svg');
+  cursor: pointer;
 }
 
 .list-no-icon {

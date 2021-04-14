@@ -255,4 +255,9 @@ $(document).ready(function () {
     document.getElementsByClassName("docs-mobile-show")[0].addEventListener("click", function() {
         toggleDocsOutlineMobile();
     })
+
+    hljs.configure({
+        languages: ["cmake", "json", "powershell"]
+    })
+    hljs.highlightAll();
 });

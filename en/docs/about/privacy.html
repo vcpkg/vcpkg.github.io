@@ -1,5 +1,4 @@
 ﻿<head>
-
     <link rel="icon" href="/assets/mark/mark.svg" />
         <link rel="icon" href="/assets/mark/favicon.png" />
         <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
@@ -11,6 +10,7 @@
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/styles/default.min.css">
     
         <!-- our style sheet and fonts -->
         <link
@@ -28,6 +28,9 @@
           integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
           crossorigin="anonymous"
         ></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/cmake.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/powershell.min.js"></script>
     
         <!-- our scripts -->
         <script src="/dist/documentation.js"></script>
@@ -217,7 +220,7 @@ or by setting the VCPKG_DISABLE_METRICS environment variable.
 Read more about vcpkg telemetry at docs/about/privacy.md</code></pre>
 <h2 id="data-collected">Data Collected</h2>
 <p>The telemetry feature doesn't collect personal data, such as usernames or email addresses. It doesn't scan your code and doesn't extract project-level data, such as name, repository, or author. The data is sent securely to Microsoft servers and held under restricted access.</p>
-<p>Protecting your privacy is important to us. If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the Microsoft/vcpkg repository or send an email to <a href="&#x6d;&#97;&#105;&#108;t&#111;&#58;&#118;&#99;&#x70;&#107;&#103;&#x40;&#x6d;&#105;c&#114;&#x6f;&#x73;&#111;&#x66;&#x74;&#x2e;&#99;&#111;&#x6d;">v&#x63;&#112;&#x6b;&#103;&#64;&#109;&#x69;&#99;&#114;&#x6f;&#x73;&#x6f;&#x66;&#116;&#46;&#x63;&#x6f;m</a> for investigation.</p>
+<p>Protecting your privacy is important to us. If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the Microsoft/vcpkg repository or send an email to <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#118;&#99;p&#107;&#103;&#x40;&#109;&#x69;cr&#x6f;s&#x6f;&#102;&#116;&#46;&#x63;o&#x6d;">&#x76;&#x63;&#112;&#x6b;&#x67;&#x40;&#109;&#105;&#99;&#x72;o&#115;&#111;&#102;&#x74;&#x2e;c&#x6f;&#109;</a> for investigation.</p>
 <p>We collect various telemetry events such as the command line used, the time of invocation, and how long execution took. Some commands also add additional calculated information (such as the full set of libraries to install). We generate a completely random UUID on first use and attach it to each event.</p>
 <p>You can see the telemetry events any command by appending <code>--printmetrics</code> after the vcpkg command line.</p>
 <p>In the source code (included at <a href="https://github.com/microsoft/vcpkg-tool/">https://github.com/microsoft/vcpkg-tool/</a> ), you can search for calls to the functions <code>track_property()</code>, <code>track_feature()</code>, <code>track_metric()</code>, and <code>track_buildtime()</code>
