@@ -371,6 +371,15 @@ function searchPackages(query) {
     currentPackages = newPackagesList;
     currentPackages.sort(searchRank)
 }
+
+var timeoutID = undefined;
+function handlePackageInput() {
+    if(timeoutID) {
+        clearTimeout(timeoutID)
+    }
+    timeoutID = setTimeout(searchAndRenderPackages, 500);
+}
+
 function searchAndRenderPackages() {
     query = document.getElementById('pkg-search').value.trim();
     if (query === '') {
@@ -383,6 +392,7 @@ function searchAndRenderPackages() {
         sortPackages();
     }
     renderPackages();
+    timeoutID = undefined;
 }
 var sortAlphabetical = function (a, b) {
     var pkgA = a.Name.toUpperCase();
