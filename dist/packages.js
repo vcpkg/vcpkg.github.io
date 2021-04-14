@@ -369,6 +369,7 @@ function searchPackages(query) {
         newPackagesList.push(rslt.item);
     }
     currentPackages = newPackagesList;
+    currentPackages.sort(searchRank)
 }
 function searchAndRenderPackages() {
     query = document.getElementById('pkg-search').value.trim();
@@ -382,7 +383,6 @@ function searchAndRenderPackages() {
         sortPackages();
     }
     renderPackages();
-    window.history.pushState({}, null, '?query=' + query);
 }
 var sortAlphabetical = function (a, b) {
     var pkgA = a.Name.toUpperCase();
@@ -392,6 +392,40 @@ var sortAlphabetical = function (a, b) {
 var sortStars = function (a, b) {
     return (b.Stars || 0) - (a.Stars || 0);
 };
+
+function searchRank(a, b) {
+    let query = document.getElementById('pkg-search').value.trim();
+    let packages = [a, b];
+    let scores = [0, 0];
+
+    for(let i = 0; i < 2; i++) {
+        let score = 0;
+        let pkg = packages[i];
+
+        // Exact match
+        if(pkg.Name === query) {
+            score += 1000;
+        }
+
+        // Prefix match
+        if(pkg.Name.indexOf(query) == 0) {
+            score += 500;
+        }
+
+        // Substring
+        if(pkg.Name.indexOf(query) != -1) {
+            score += 100;
+        }
+
+        //Description
+        if(pkg.Description && pkg.Description.indexOf(query) != -1) {
+            score += 50;
+        }
+        scores[i] = score;
+    }
+    return scores[1] - scores[0];
+}
+
 function sortPackages() {
     var val = document.getElementById('sortBtn').value;
     switch (val) {
