@@ -7,12 +7,12 @@
     background-color: #ffffff;
     padding-left: 0px;
     border: 1px solid grey;
-    width: 24.5%;
+    width: 34%;
   }
 
   a.navbar-brand {
     font-size: x-large;
-    margin-left: 12%;
+    margin-left: 6%;
     z-index: 10;
     color: #ffffff;
   }
@@ -45,10 +45,42 @@
 
   .docs-mobile-show-table {
     padding: 5px;
+    vertical-align: text-bottom;
   }
 
   .nav-vcpkg-bar {
     background: blue;
+  }
+
+  .search-box {
+    background: #ffffff;
+    border: 1px solid #8a8886;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 90%;
+    padding: 3px 8px;
+  }
+
+  .docs-mobile-heading {
+    display: inline-block;
+    margin-bottom: 12%;
+    margin-left: 7%;
+  }
+
+  .docs-mobile-exit {
+    display: inline;
+    float: right;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #002359;
+    z-index: 5;
   }
 }
 
@@ -66,7 +98,7 @@
 
   a.navbar-brand {
     font-size: x-large;
-    margin-left: 8%;
+    margin-left: 6.5%;
     z-index: 10;
   }
   .navbar-toggler {
@@ -77,6 +109,27 @@
   }
 
   .docs-mobile-show {
+    display: none;
+  }
+
+  .search-box {
+    background: #ffffff;
+    border: 1px solid #8a8886;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 75%;
+    padding: 3px 8px;
+  }
+
+  .docs-mobile-heading {
+    display: none;
+  }
+
+  .docs-mobile-exit {
+    display: none;
+  }
+
+  .mobile-nav {
     display: none;
   }
 }
@@ -91,6 +144,7 @@ code {
   color: rgb(0, 0, 0);
   background: #f1f1f2;
   word-break: break-all;
+  font-size: 15px;
 }
 
 pre {
@@ -111,7 +165,7 @@ h2 {
   font-size: 34px;
   line-height: 40px;
   color: #222222;
-  margin-left: 8%;
+  margin-left: 7.5%;
   margin-top: 70px;
 }
 
@@ -330,7 +384,7 @@ a.section-selected {
 .search-item-no-results {
   list-style: none;
   z-index: 2;
-  width: 220px;
+  width: 100%;
 }
 
 .search-item:hover {
@@ -368,15 +422,18 @@ a.section-selected {
 .list-expanded {
   list-style-image: url('/assets/misc/Shape.svg');
   cursor: pointer;
+  padding: 2px;
 }
 
 .list-can-expand {
   list-style-image: url('/assets/misc/Arrow.svg');
   cursor: pointer;
+  padding: 2px;
 }
 
 .list-no-icon {
   list-style: none;
+  padding: 2px;
 }
 
 #currentPath {
@@ -388,17 +445,15 @@ a.section-selected {
   color: #222222;
 }
 
-.search-box {
-  background: #ffffff;
-  border: 1px solid #8a8886;
-  box-sizing: border-box;
-  border-radius: 2px;
-  width: 75%;
+.treeview-link:hover {
+  color: #222222;
+  text-decoration: none;
 }
 
 .search-bar {
   margin-left: 7%;
   margin-bottom: 3%;
+  width: 100%;
 }
 
 .footer-left {
@@ -470,7 +525,7 @@ li.docs-col-bold {
   margin-top: 10%;
   margin-bottom: 10%;
   margin-right: 10%;
-  margin-left: 10%;
+  margin-left: 2%;
 }
 
 .mobile-nav-list {
@@ -516,19 +571,6 @@ span.navbar-close {
   background-size: 100% 100%;
 }
 
-.docs-mobile-heading {
-  display: inline-block;
-  margin-bottom: 12%;
-  margin-left: 7%;
-}
-
-.docs-mobile-exit {
-  display: inline;
-  float: right;
-  margin-right: 5%;
-  cursor: pointer;
-}
-
 .docs-mobile-outline {
   margin: 10%;
 }
@@ -536,12 +578,21 @@ span.navbar-close {
 .instructions-windows,
 .instructions-linux,
 .instructions-features {
-  margin-right: 5px;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+.instructions-features:hover,
+.instructions-windows:hover,
+.instructions-linux:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: #005bff;
+  text-underline-offset: 2px;
 }
 
 .instructions {
-  margin: 5px;
+  margin: 0px;
 }
 
 .windowsText,
@@ -566,6 +617,7 @@ span.navbar-close {
   font-size: 16px;
   line-height: 24px;
   cursor: auto;
+  text-decoration: none!important;
 }
 
 .feature-list {
@@ -589,4 +641,12 @@ span.navbar-close {
 .search-item-docs:hover {
   text-decoration: none;
   color:rgb(0, 0, 0);
+}
+
+.doc-outline-link {
+  color: #222222;
+}
+.doc-outline-link:hover {
+  text-decoration: none;
+  color:#222222;
 }

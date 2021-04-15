@@ -79,7 +79,7 @@ function handleDefaultTreeViewExpand(treeViewPosition) {
             }
         }
     }
-    addMouseOverNavigation();
+    document.getElementById("currentPath").scrollIntoView();
 }
 
 function generateTreeViewHeaderOutline() {
@@ -146,9 +146,8 @@ function generateTreeViewHeaderOutline() {
         document.getElementById("currentPath").parentElement.classList.remove("list-can-expand")
         document.getElementById("currentPath").parentElement.classList.add("list-expanded")
         document.getElementById("currentPath").parentElement.insertAdjacentElement('afterend', outlineList)
-
-        document.getElementById("currentPath").addEventListener("click", function(e) {
-            handleExpandCollapse(this.parentElement.nextElementSibling);
+        document.getElementById("currentPath").parentElement.addEventListener("click", function(e) {
+            handleExpandCollapse(this.nextElementSibling);
         });
 
     }
@@ -240,6 +239,9 @@ $(document).ready(function () {
     });
 
     document.getElementsByClassName("search-box")[0].addEventListener("focusin", function(e) {
+        // Handle search result width bug
+        $(".search").css("width", $(".search-box").css("width"));
+
         document.getElementsByClassName("search")[0].classList.remove("hidden");
         handleDocumentationSearch(this.value);
     });
