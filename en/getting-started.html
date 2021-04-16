@@ -82,30 +82,36 @@
       </div>
       <div class="right-side-getting-started">
         <div class="windows">
-          <div class="text-heading">Download Vcpkg</div>
+          <div class="text-heading">Install vcpkg</div>
           <div class="text-desc">
             <p>
-              First, download vcpkg itself with the CLI command below; it can be installed anywhere,
-              but generally we recommend using vcpkg as a submodule for CMake projects, and
-              installing it globally for Visual Studio projects. We recommend somewhere like
+              Installing vcpkg is a two-step process: first, clone the repo, then run the bootstrapping script
+              to produce the vcpkg binary. The repo can be cloned anywhere, and will include the vcpkg binary
+              after bootstrapping as well as any libraries that are installed from the command line. It is recommended
+              to clone vcpkg as a submodule for CMake projects, but to install it globally for MSBuild projects. If
+              installing globally, we recommend a short install path like: 
               <span class="code-inline">C:\src\vcpkg</span> or
               <span class="code-inline">C:\dev\vcpkg</span>, since otherwise you may run into path
               issues for some port build systems.
             </p>
+
+            <b>Step 1: Clone the vcpkg repo</b>
             <p class="code">git clone https://github.com/Microsoft/vcpkg.git</p>
-            <p>Run the bootstrap script to build vcpkg</p>
+            Make sure you are in the directory you want the tool installed to before doing this. 
+
+            <b>Step 2: Run the bootstrap script to build vcpkg</b>
             <p class="code">.\vcpkg\bootstrap-vcpkg.bat</p>
           </div>
-          <div class="text-heading">Install Libraries for your project</div>
+          <div class="text-heading">Install libraries for your project</div>
           <div class="text-desc">
             <p class="code">vcpkg install [packages to install]</p>
           </div>
-          <div class="text-heading">Integrate with Visual Studio (may require elevation)</div>
+          <div class="text-heading">Using vcpkg with MSBuild / Visual Studio (may require elevation)</div>
           <div class="text-desc">
             <p class="code">vcpkg integrate install</p>
             <p>
-              After this, you can now create a New non-CMake Project (or open an existing one). All
-              installed libraries are immediately ready to be #include'd and used in your project
+              After this, you can create a new project or open an existing one in the IDE. All
+              installed libraries should already be discoverable by IntelliSense and usable in code
               without additional configuration.
             </p>
           </div>
@@ -120,29 +126,27 @@
             <p>Then build with:</p>
             <p class="code">cmake --build [build directory]</p>
             <p>
-              With CMake, you will still need to
-              <span class="code-inline">find_package</span>
-              and the like to use the libraries. Check out the CMake section for more information,
-              including on using CMake with an IDE.
+              With CMake, you will need to use
+              <span class="code-inline">find_package()</span>
+              to reference the libraries in your Cmakelists.txt files. 
             </p>
           </div>
         </div>
         <div class="linux">
-          <div class="text-heading">Download Vcpkg</div>
+          <div class="text-heading">Install vcpkg</div>
           <div class="text-desc">
             <p>
-              First, download vcpkg itself with the CLI command below; it can be installed anywhere,
-              but generally we recommend using vcpkg as a submodule for CMake projects, and
-              installing it globally for Visual Studio projects. We recommend somewhere like
-              <span class="code-inline">C:\src\vcpkg</span> or
-              <span class="code-inline">C:\dev\vcpkg</span>, since otherwise you may run into path
-              issues for some port build systems.
+              Installing vcpkg is a two-step process: first, clone the repo, then run the bootstrapping script
+              to produce the vcpkg binary. The repo can be cloned anywhere, and will include the vcpkg binary
+              after bootstrapping as well as any libraries that are installed from the command line. It is recommended
+              to clone vcpkg as a submodule to an existing project if possible for greater flexibility. 
             </p>
+            <b>Step 1: Clone the vcpkg repo</b>
             <p class="code">git clone https://github.com/Microsoft/vcpkg.git</p>
-            <p>Run the bootstrap script to build vcpkg</p>
+            <b>Step 2: Run the bootstrap script to build vcpkg</b>
             <p class="code">./vcpkg/bootstrap-vcpkg.sh</p>
           </div>
-          <div class="text-heading">Install Libraries for your project</div>
+          <div class="text-heading">Install libraries for your project</div>
           <div class="text-desc">
             <p class="code">vcpkg install [packages to install]</p>
           </div>
@@ -157,29 +161,27 @@
             <p>Then build with:</p>
             <p class="code">cmake --build [build directory]</p>
             <p>
-              With CMake, you will still need to
-              <span class="code-inline">find_package</span>
-              and the like to use the libraries. Check out the CMake section for more information,
-              including on using CMake with an IDE.
+              With CMake, you will need to
+              <span class="code-inline">find_package()</span>
+              to reference the libraries in your Cmakelists.txt files.
             </p>
           </div>
         </div>
         <div class="mac">
-          <div class="text-heading">Download Vcpkg</div>
+          <div class="text-heading">Install vcpkg</div>
           <div class="text-desc">
             <p>
-              First, download vcpkg itself with the CLI command below; it can be installed anywhere,
-              but generally we recommend using vcpkg as a submodule for CMake projects, and
-              installing it globally for Visual Studio projects. We recommend somewhere like
-              <span class="code-inline">C:\src\vcpkg</span> or
-              <span class="code-inline">C:\dev\vcpkg</span>, since otherwise you may run into path
-              issues for some port build systems.
+              Installing vcpkg is a two-step process: first, clone the repo, then run the bootstrapping script
+              to produce the vcpkg binary. The repo can be cloned anywhere, and will include the vcpkg binary
+              after bootstrapping as well as any libraries that are installed from the command line. It is recommended
+              to clone vcpkg as a submodule to an existing project if possible for greater flexibility. 
             </p>
+            <b>Step 1: Clone the vcpkg repo</b>
             <p class="code">git clone https://github.com/Microsoft/vcpkg.git</p>
-            <p>Run the bootstrap script to build vcpkg</p>
+            <b>Step 2: Run the bootstrap script to build vcpkg</b>
             <p class="code">./vcpkg/bootstrap-vcpkg.sh</p>
           </div>
-          <div class="text-heading">Install Libraries for your project</div>
+          <div class="text-heading">Install libraries for your project</div>
           <div class="text-desc">
             <p class="code">vcpkg install [packages to install]</p>
           </div>
@@ -194,17 +196,16 @@
             <p>Then build with:</p>
             <p class="code">cmake --build [build directory]</p>
             <p>
-              With CMake, you will still need to
+              With CMake, you will need to
               <span class="code-inline">find_package</span>
-              and the like to use the libraries. Check out the CMake section for more information,
-              including on using CMake with an IDE.
+              to reference the libraries in your Cmakelists.txt files.
             </p>
           </div>
         </div>
         <div class="text-desc">
-          Visit Our
-          <a class="link" href="docs/README.html">Documentation</a>
-          For More Information
+          Browse the 
+          <a class="link" href="docs/README.html">vcpkg documentation</a>
+          to learn more about how to enable different workflows. 
         </div>
       </div>
     </div>
