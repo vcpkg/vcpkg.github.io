@@ -70,3 +70,38 @@ function toggleDocsOutlineMobile() {
     document.getElementsByClassName("docs-mobile-heading")[0].classList.toggle("hidden");
     document.getElementsByClassName("docs-mobile-exit")[0].classList.toggle("hidden");
 }
+
+$(document).ready(function(){
+
+    //Analytics
+    var siteConsent = null;
+    WcpConsent.init("en-US", "banner", function (err, _siteConsent) {
+        if (err != undefined) {
+            throw "error";
+        } else {
+            siteConsent = _siteConsent;
+        }
+    });
+    const analytics = new oneDS.ApplicationInsights();
+    var config = {
+    instrumentationKey: "60f2563fd77547d6bb8e99a31494ecad-f2c1f61d-fc5e-482f-a560-647ca0865b27-7409",
+    propertyConfiguration: {
+        callback: {
+            userConsentDetails: siteConsent ? siteConsent.getConsent : null
+        },
+    },
+    webAnalyticsConfiguration:{
+        autoCapture: {
+            scroll: true,
+            pageView: true,
+            onLoad: true,
+            onUnload: true,
+            click: true,
+            scroll: true,
+            resize: true,
+            jsError: true
+        }
+    }
+    };
+    analytics.initialize(config, []);
+})
