@@ -157,7 +157,8 @@ function renderPackageDetails(package, packageDiv, isCard) {
         cardHeaderDiv.appendChild(nameDiv);
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
-        versionDiv.textContent = wording[lang]['version'] + package.Version;
+        let versionStr = package.Version || package["Version-semver"] || package["Version-date"];
+        versionDiv.textContent = wording[lang]['version'] + versionStr;
         cardHeaderDiv.appendChild(versionDiv);
         detailFrag.appendChild(cardHeaderDiv);
     }
