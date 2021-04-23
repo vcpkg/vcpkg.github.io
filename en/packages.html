@@ -4,6 +4,8 @@
     <title>Browse public vcpkg packages</title>
     <meta name="description" content="Explore vcpkg libraries to install">
     <meta name="keywords" content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- favicons -->
     <link rel="icon" href="/assets/mark/mark.svg" />
     <link rel="icon" href="/assets/mark/favicon.png" />
@@ -53,7 +55,7 @@
     <script>
       $(document).ready(function () {
         $('#loadNavBar').load('navbar.html');
-        $('#loadFooter').load('footer.html');
+        $('#loadFooter').load('footer.html', adjustFooterCSS);
       });
     </script>
   </head>

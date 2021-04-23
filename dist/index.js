@@ -12,18 +12,20 @@ function checkEnter(e) {
 
 // Adjust CSS of second vector
 function adjustCSSLeftLogo (){
-    if(window.innerWidth < 1350 && window.innerWidth > 750) {
-        var diff = (window.innerWidth - 750)/( 1350 - 750);
-        var cssPercent = diff * (59 - 30) + 30
+    if(window.innerWidth < 1500 && window.innerWidth > 670) {
+        var diff = (window.innerWidth - 670)/( 1500 - 670);
+        var cssPercent = diff * (59 - 20) + 20
         var cssString = "" + cssPercent + "%";
         $(".logo-design-second-upper").css("left", cssString)
     }
-    else if(window.innerWidth >= 1350){
+    else if(window.innerWidth >= 1500){
         $(".logo-design-second-upper").css("left", "59%")
     } else {
-        $(".logo-design-second-upper").css("left", "30%")
+        $(".logo-design-second-upper").css("left")
     }
 }
+
+
 
 $(document).ready(function () {
     $(window).on("resize", adjustCSSLeftLogo);

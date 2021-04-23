@@ -1,4 +1,4 @@
-@media screen and (min-width: 0px) and (max-width: 991px) {
+@media screen and (min-width: 0px) and (max-width: 499px) {
   .search {
     height: 200px;
     overflow-y: auto;
@@ -82,6 +82,152 @@
     background: #002359;
     z-index: 5;
   }
+  
+  .logo-footer {
+    position: relative;
+    z-index: -1;
+    width: 500px;
+    /* height: 100%; */
+    top: -100px;
+    transform: scaleY(3);
+    margin-left: -175px;
+  }
+  .footer-info {
+    position: absolute;
+    display: flex;
+    margin-top: 200px;
+    width: 100%;
+  }
+  .footer-right {
+    display: flex;
+    margin-right: 0%;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  .footer-group-logo {
+    display: none;
+  }
+  .mobile-margin {
+    margin-top: 15%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 991px) {
+  .search {
+    height: 200px;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffff;
+    padding-left: 0px;
+    border: 1px solid grey;
+    width: 34%;
+  }
+
+  a.navbar-brand {
+    font-size: x-large;
+    margin-left: 6%;
+    z-index: 10;
+    color: #ffffff;
+  }
+  .navbar-toggler {
+    z-index: 10;
+  }
+  .vcpkg-nav-color {
+    color: #f3f3f3;
+  }
+
+  .docs-left-scroll {
+    position: 'fixed';
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1005;
+  }
+
+  .docs-mobile-show {
+    display: block;
+    border: 1px solid #8a8886;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-bottom: 30px;
+  }
+
+  .docs-mobile-show:hover {
+    cursor: pointer;
+  }
+
+  .docs-mobile-show-table {
+    padding: 5px;
+    vertical-align: text-bottom;
+  }
+
+  .nav-vcpkg-bar {
+    background: blue;
+  }
+
+  .search-box {
+    background: #ffffff;
+    border: 1px solid #8a8886;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 90%;
+    padding: 3px 8px;
+  }
+
+  .docs-mobile-heading {
+    display: inline-block;
+    margin-bottom: 12%;
+    margin-left: 7%;
+  }
+
+  .docs-mobile-exit {
+    display: inline;
+    float: right;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #002359;
+    z-index: 5;
+  }
+  .logo-footer {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: fit-content;
+    transform: scaleY(1.5);
+  }
+  .footer-info {
+    position: absolute;
+    display: flex;
+    margin-top: 550px;
+    width: 100%;
+  }
+  .footer-right {
+    display: flex;
+    margin-right: 7%;
+    width: 40%;
+    flex-direction: row-reverse;
+  }
+  .footer-group-logo {
+    margin-right: 5px;
+  }
+
+  .mobile-margin {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 2%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -131,6 +277,34 @@
 
   .mobile-nav {
     display: none;
+  }
+  .logo-footer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: fit-content;
+  }
+  .footer-info {
+    position: absolute;
+    display: flex;
+    margin-top: 550px;
+    width: 100%;
+  }
+  .footer-right {
+    display: flex;
+    margin-right: 7%;
+    width: 40%;
+    flex-direction: row-reverse;
+  }
+  .footer-group-logo {
+    margin-right: 5px;
+  }
+
+  .mobile-margin {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: 10%;
+    margin-left: 2%;
   }
 }
 
@@ -304,38 +478,19 @@ footer p {
   display: inline;
 }
 
-.logo-footer {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: fit-content;
-}
-
 .footer-info-group {
   margin-left: 6%;
   position: relative;
   z-index: 1;
   width: 100px;
-  margin-right: 6%;
+  margin-right: 0%;
 }
 
-.footer-group-logo {
-  margin-right: 5px;
-}
 
-.footer-info {
-  position: absolute;
-  display: flex;
-  margin-top: 550px;
-  width: 100%;
-}
 
-.footer-right {
-  display: flex;
-  margin-right: 7%;
-  width: 40%;
-  flex-direction: row-reverse;
-}
+
+
+
 
 .footer-list {
   display: flex;
@@ -521,12 +676,7 @@ li.docs-col-bold {
   z-index: 5;
 }
 
-.mobile-margin {
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-right: 10%;
-  margin-left: 2%;
-}
+
 
 .mobile-nav-list {
   font-family: Source Sans Pro;
@@ -553,6 +703,7 @@ li.docs-col-bold {
   margin-top: -8%;
   list-style: none;
   padding-left: 0px;
+  padding-top: 10px;
 }
 
 .navbar-mobile {

@@ -1,4 +1,5 @@
 ﻿<head>
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" href="/assets/mark/mark.svg" />
         <link rel="icon" href="/assets/mark/favicon.png" />
         <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
@@ -21,6 +22,10 @@
         <link href="/css/getting-started.css" rel="stylesheet" />
     
         <!-- bootstrap scripts -->
+        <script type="text/javascript"
+          src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+        </script>
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
         <script
@@ -39,7 +44,7 @@
     <script>
         $(document).ready(function () {
           $('#loadNavBar').load('/en/navbar.html');
-          $('#loadFooter').load('/en/footer.html');
+          $('#loadFooter').load('/en/footer.html', adjustFooterCSS);
           handleDefaultTreeViewExpand(" > docs > maintainers > internal > vcpkg_internal_get_cmake_vars.md");
         });
       </script>

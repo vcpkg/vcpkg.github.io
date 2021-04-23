@@ -5,8 +5,8 @@
     <meta name="description" content="vcpkg product homepage for C and C++ developers. Download, build, and manage C and C++ libraries for all platforms, buildsystems, and workflows.">
     <meta name="keywords" content="vcpkg, C, C++, cpp, Microsoft, library, libraries, package manager, library manager">
     <!-- Bing Webmaster Tools integration -->
+    <meta name="viewport" content="width=device-width">
 	  <meta name="msvalidate.01" content="5704D9CB14CCA7C4612DC0FE14669DD1" />
-	
 	<!-- favicons -->
     <link rel="icon" href="/assets/mark/mark.svg" />
     <link rel="icon" href="/assets/mark/favicon.png" />
@@ -54,7 +54,7 @@
     <script>
       $(document).ready(function () {
         $('#loadNavBar').load('navbar.html');
-        $('#loadFooter').load('footer.html');
+        $('#loadFooter').load('footer.html', adjustFooterCSS);
       });
     </script>
   </head>
@@ -169,53 +169,47 @@
       <p class="questions2">Simplicity and flexibility are central to vcpkg.</p>
     </div>
     <div class="why-us-box-shadow">
-      <table class="table-center">
-        <tbody>
-            <tr class="table-row">
-                <td><img class="why-us-icon" src="/assets/mark/flexible.svg" /></td>
-                <td><img class="why-us-icon" src="/assets/mark/reliable.svg" /></td>
-            </tr>
-            <tr class="table-row">
-                <td><div class="why-us-heading">Easy to use</div></td>
-                <td><div class="why-us-heading">Universal</div></td>
-            </tr>
-            <tr class="table-row">
-                <td class="why-us-description">Download and build popular libraries in a single step. 
-                  Never worry about upstream dependencies or version conflicts.
-                  Declare dependencies with commandline actions or in a manifest that can live with your repo. 
-                  Get support from the development team, documentation, and an active community. 
-
-                </td>
-                <td class="why-us-description"> vcpkg works with your preferred OS, 
-                  buildsystem, target architectures, IDE, editor, and continuous integration 
-                  process. Libraries are built how you want them from source. </td>
-            </tr>
-            <tr></tr>
-            <tr class="table-row">
-                <td><img class="why-us-icon" src="/assets/mark/open.svg" /></td>
-                <td><img class="why-us-icon" src="/assets/mark/secure.svg" /></td>
-            </tr>
-            <tr class="table-row">
-                <td><div class="why-us-heading">Reliable</div></td>
-                <td><div class="why-us-heading">For Everyone</div></td>
-            </tr>
-            <tr class="table-row">
-                <td class="why-us-description">Maintain consistency between local developer and CI/CD workflows.
-                  Stay on your preferred library versions. Sync your dependency ecosystem with the rest of your team.
-
-                </td>
-                <td class="why-us-description">
-                    Whether you are a one-person team on a small open source project or a large 
-                    enterprise with complex build and security needs, take advantage of the latest 
-                    vcpkg features for your workflow. Cache binaries for faster consumption, 
-                    avoid diamond dependency resolution issues, reproduce identical builds for all developers,  
-                    CI machines, and containers. Bring your own libraries or consume popular public ones. 
-                    Take advantage of existing Visual Studio and Visual Studio Code integration. 
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+      <div class="why-us-flexbox">
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/flexible.svg" />
+          <div class="why-us-heading">Easy To Use</div>
+          <p class="why-us-description">
+              Download and build popular libraries in a single step. 
+              Never worry about upstream dependencies or version conflicts.
+              Declare dependencies with commandline actions or in a manifest that can live with your repo. 
+              Get support from the development team, documentation, and an active community.
+          </p>
+        </div>
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/secure.svg" />
+          <div class="why-us-heading">Universal</div>
+          <p class="why-us-description">
+              vcpkg works with your preferred OS, 
+              buildsystem, target architectures, IDE, editor, and continuous integration 
+              process. Libraries are built how you want them from source.
+          </p>
+        </div>
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/reliable.svg" />
+          <div class="why-us-heading">Reliable</div>
+          <p class="why-us-description">
+              Maintain consistency between local developer and CI/CD workflows.
+              Stay on your preferred library versions. Sync your dependency ecosystem with the rest of your team.
+          </p>
+        </div>
+        <div class="why-us-group">
+          <img class="why-us-icon" src="/assets/mark/open.svg" />
+          <div class="why-us-heading">For Everyone</div>
+          <p class="why-us-description">
+              Whether you are a one-person team on a small open source project or a large 
+              enterprise with complex build and security needs, take advantage of the latest 
+              vcpkg features for your workflow. Cache binaries for faster consumption, 
+              avoid diamond dependency resolution issues, reproduce identical builds for all developers,  
+              CI machines, and containers. Bring your own libraries or consume popular public ones. 
+              Take advantage of existing Visual Studio and Visual Studio Code integration.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div id="loadFooter"></div>
