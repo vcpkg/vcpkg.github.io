@@ -1,4 +1,5 @@
-var maxPackageLength = 10;
+var maxPackageLength = 0;
+var standardPkgLength = 10;
 var wording = {
     en: {
         version: 'Version: ',
@@ -27,10 +28,32 @@ var triplets = [
 var compatFilter = [];
 $(document).ready(function () {
     $(".load-results").on("click", function(e) {
-        maxPackageLength += 10
-        renderPackages();
+        renderMorePackages();
+        handleLoadPkgMessage();
+        loadTotalPackages();
     });
 });
+
+function handleLoadPkgMessage() {
+    if(maxPackageLength < currentPackages.length) {
+        $(".load-results").html("Load more packages")
+    } else {
+        $(".load-results").html("")
+    }
+}
+
+var renderMorePackages = function () {
+    var mainDiv = document.getElementsByClassName('package-results')[0];
+    var currPkgLen = maxPackageLength;
+    maxPackageLength = Math.min(maxPackageLength + standardPkgLength, currentPackages.length);
+
+    if (currentPackages.length > 0) {
+        for (var _i = currPkgLen, currentPackages_1 = currentPackages; _i < maxPackageLength; _i++) {
+            var package = currentPackages_1[_i];
+            setTimeout(renderCard.bind(this, package, mainDiv, cancellationToken), 0);
+        }
+    }
+}
 
 var res = getUrlParameter('query');
 var query = res === true ? '' : res;
@@ -333,6 +356,7 @@ var renderPackages = function () {
     clearPackages();
     // Parent div to hold all the package cards
     var mainDiv = document.getElementsByClassName('package-results')[0];
+    maxPackageLength = Math.min(standardPkgLength, currentPackages.length);
     if (currentPackages.length > 0) {
         for (var _i = 0, currentPackages_1 = currentPackages; _i < maxPackageLength; _i++) {
             var package = currentPackages_1[_i];
@@ -345,6 +369,7 @@ var renderPackages = function () {
         noResultDiv.innerHTML = wording[lang]['no-results'] + '<b>' + query + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
+    handleLoadPkgMessage();
     loadTotalPackages();
 };
 function clearPackages() {

@@ -189,11 +189,10 @@ function generateTreeViewHeaderOutline() {
     })
 }
 
-$(document).ready(function () {
-    generateTreeViewHeaderOutline()
-    document.addEventListener("scroll", function(event) {
-        var currentPos = window.scrollY;
+function adjustHeaderOutline() {
+    var currentPos = window.scrollY;
         var footerPos = $("#loadFooter").offset().top
+        var rightPos = document.getElementsByClassName("right-side")[0].getBoundingClientRect().top;
         var height = $(".left-side").height()
         if(window.innerWidth < 992) {
             $(".left-side").css("position", "")
@@ -201,17 +200,30 @@ $(document).ready(function () {
             $(".left-side").css("height", "")
             return;
         }
-        if(currentPos + height > footerPos) {
+        if(currentPos + height + 50 > footerPos) {
             $(".left-side").css("position", "absolute")
             $(".left-side").css("height", height)
-            $(".left-side").css("top", footerPos - height)
+            $(".left-side").css("top", Math.max(0, footerPos - height - 50));
         }
 
-        if(currentPos + height <= footerPos) {
-            $(".left-side").css("position", "fixed")
-            $(".left-side").css("top", "10%")
-            $(".left-side").css("height", "auto")
+        if(currentPos + height + 50  <= footerPos) {
+            if(rightPos > 0 ) {
+                $(".left-side").css("position", "fixed")
+                $(".left-side").css("top", Math.max(rightPos, 100))
+                $(".left-side").css("height", "auto")
+            } else {
+                $(".left-side").css("position", "fixed")
+                $(".left-side").css("top", "100")
+                $(".left-side").css("height", "auto")
+            }
         }
+}
+
+$(document).ready(function () {
+    generateTreeViewHeaderOutline()
+    adjustHeaderOutline();
+    document.addEventListener("scroll", function(event) {
+        adjustHeaderOutline();
     });
 
     var docsListElement = document.getElementsByClassName("docs-navigation")[0];

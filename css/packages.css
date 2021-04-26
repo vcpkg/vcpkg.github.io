@@ -25,7 +25,6 @@
     /* padding: 4px; */
     font-size: 20px;
     margin-left: 5px;
-    display: none;
   }
 
   .github-btn {
@@ -43,6 +42,41 @@
     margin-top: 50px;
     flex-direction: column;
     margin-left: 7%;
+  }
+
+  .main-content {
+    margin-left: 20px;
+    width: 100%;
+  }
+  .side-bar {
+    width: 100%;
+    padding-right: 10px;
+    z-index: 1;
+    float: left;
+    margin-left: -1%;
+  }
+
+  .package-version {
+    float: left;
+    text-align: right;
+    /* padding: 4px; */
+    font-size: 20px;
+    margin-left: 5px;
+  }
+
+  .github-btn {
+    float: right;
+    text-align: right;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .package-body {
+    display: flex;
+    margin: 30px 80px;
+    min-height: 44vh;
+    flex-direction: column;
+    margin: 70px auto;
+    max-width: 1500px;
   }
 
   .main-content {
@@ -69,9 +103,19 @@
     float: right;
     text-align: right;
   }
-}
 
-@media screen and (min-width: 991px) {
+  .header-text {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 40px;
+    color: #222222;
+    margin: 70px auto;
+    max-width: 1500px;
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 1299px){
   .package-body {
     display: flex;
     margin: 30px 80px;
@@ -263,6 +307,7 @@ footer {
 
 .load-results {
   color: blue;
+  cursor: pointer;
 }
 
 .show-package-results-number {

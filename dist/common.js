@@ -72,17 +72,7 @@ function toggleDocsOutlineMobile() {
 }
 
 function adjustFooterCSS (){
-    if(window.innerWidth < 500 && window.innerWidth > 320) {
-        var diff = (window.innerWidth - 320)/( 499 - 320);
-        var cssPercent = (1 - diff) * 175
-        var cssString = "-" + cssPercent + "px";
-        $(".logo-footer").css("margin-left", cssString)
-    }
-    else if(window.innerWidth < 320){
-        $(".logo-footer").css("margin-left", "-175px")
-    } else {
-        $(".logo-footer").css("margin-left")
-    }
+    return;
 }
 
 $(document).ready(function(){

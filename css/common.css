@@ -1,3 +1,66 @@
+
+
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  .logo-footer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-image: url(/assets/mark/logo-footer.svg);
+    background-size: 200% 100%;
+    margin-top: -350px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  .logo-footer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-image: url(/assets/mark/logo-footer.svg);
+    background-size: 150% 100%;
+    margin-top: -25px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1299px) {
+  .logo-footer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-image: url(/assets/mark/logo-footer.svg);
+    background-size: 130% 100%;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 2499px) {
+  .logo-footer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-image: url(/assets/mark/logo-footer.svg);
+    background-size: 100% 100%;
+    margin-top: -50px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .logo-footer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    background-image: url(/assets/mark/logo-footer.svg);
+    background-size: 130% 100%;
+    margin-top: -50px;
+  }
+}
+
+
+
+
 @media screen and (min-width: 0px) and (max-width: 499px) {
   .search {
     height: 200px;
@@ -83,15 +146,7 @@
     z-index: 5;
   }
   
-  .logo-footer {
-    position: relative;
-    z-index: -1;
-    width: 500px;
-    /* height: 100%; */
-    top: -100px;
-    transform: scaleY(3);
-    margin-left: -175px;
-  }
+  
   .footer-info {
     position: absolute;
     display: flex;
@@ -199,13 +254,7 @@
     background: #002359;
     z-index: 5;
   }
-  .logo-footer {
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    height: fit-content;
-    transform: scaleY(1.5);
-  }
+  
   .footer-info {
     position: absolute;
     display: flex;
@@ -278,12 +327,7 @@
   .mobile-nav {
     display: none;
   }
-  .logo-footer {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: fit-content;
-  }
+
   .footer-info {
     position: absolute;
     display: flex;
@@ -332,27 +376,7 @@ h2 {
   font-weight: bold;
 }
 
-.header-text-getting-started {
-  font-family: Source Sans Pro;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 40px;
-  color: #222222;
-  margin-left: 7.5%;
-  margin-top: 70px;
-}
 
-.header-text {
-  font-family: Source Sans Pro;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 40px;
-  color: #222222;
-  margin-left: 7.5%;
-  margin-top: 70px;
-}
 
 .selected {
   font-weight: bolder;
@@ -526,6 +550,10 @@ a.section-selected {
   color: #005bff;
 }
 
+a.section-selected:hover {
+  color: #005bff;
+}
+
 .absolute-top {
   position: absolute;
 }
@@ -611,6 +639,13 @@ a.section-selected {
   width: 100%;
 }
 
+.pkg-search-bar {
+  margin-left: 7%;
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+
 .footer-left {
   display: flex;
   width: 50%;
@@ -629,7 +664,7 @@ a.footer-link {
   display: none;
   position: fixed;
   top: 50px;
-  height: 300px;
+  height: fit-content;
   width: 100%;
   background: #f3f3f3;
   z-index: 10;
