@@ -250,6 +250,10 @@ $(document).ready(function () {
         document.getElementsByClassName("search")[0].classList.add("hidden");
     });
 
+    $(window).on("resize", function() {
+        $(".search").css("width", $(".search-box").css("width"));
+    });
+
     document.getElementsByClassName("search-box")[0].addEventListener("focusin", function(e) {
         // Handle search result width bug
         $(".search").css("width", $(".search-box").css("width"));

@@ -272,7 +272,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     var featureText = document.createElement('div');
     featureText.className = "featureText hidden";
 
-    for(let i=0; i< package.Features.length; i++) {
+    for(let i in package.Features) {
         var div = document.createElement('div');
         div.className = "div-action-list";
         var group = document.createElement("ul");
@@ -284,12 +284,18 @@ function renderPackageDetails(package, packageDiv, isCard) {
 
         name.append("Feature Name: ");
         desc.append("Description: ")
-        depends.append("Build-Depends: ")
 
-        name.textContent += package.Features[i]["name"] || package.Features[i]["Name"] || ""
+        if(Array.isArray(package.Features)) {
+            name.textContent += package.Features[i]["name"] || package.Features[i]["Name"] || ""
+        } else {
+            name.textContent += i;
+        }
         desc.textContent += package.Features[i]["description"] || package.Features[i]["Description"] || ""
-        depends.textContent += package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || ""
 
+        if(package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || package.Features[i]["dependencies"]) {
+            depends.append("Build-Depends: ")
+            depends.textContent += package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || package.Features[i]["dependencies"];
+        }
         group.appendChild(name);
         group.appendChild(desc);
         group.appendChild(depends);
