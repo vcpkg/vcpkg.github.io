@@ -1,4 +1,5 @@
 <nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
   <a class="navbar-brand align-baseline" href="/en/index.html">
     <span id="vcpkg-nav-logo" class=""
       ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
@@ -15,23 +16,25 @@
   <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
     <ul class="navbar-nav ml-auto navbar-right-margin">
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link" href="/en/getting-started.html">Get Started </a>
+        <a class="nav-link nav-link-hover" href="/en/getting-started.html">Get Started </a>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link" href="/en/packages.html">Packages</a>
+        <a class="nav-link nav-link-hover" href="/en/packages.html">Packages</a>
       </li>
-      <li class="nav-item active" onmouseover="addMouseOverNavigation()">
-        <a class="nav-link docs-upper-nav-link" href="/en/docs/README.html"
-          ><span>
-            Documentation
-            <img src="/assets/misc/docs.svg" width="10px" height="10px" alt="" class="" /></span
-        ></a>
+      <li class="nav-item active">
+        <div class="nav-link">
+        <div style="display: inline-block" onmouseover="addMouseOverNavigation()"><a class="doc-outline-link docs-upper-nav-link" href="/en/docs/README.html"
+          >Documentation</a></div>
+        <div style="display: inline-block" onclick="docsNavButton()">
+        <button class="doc-nav-button">
+          <img src="/assets/misc/docs.svg" width="10px" height="10px" alt="" class="" /></button></div>
+      </div>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link" href="https://github.com/microsoft/vcpkg">GitHub</a>
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link" href="https://devblogs.microsoft.com/cppblog/?s=vcpkg">Blog</a>
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/cppblog/?s=vcpkg">Blog</a>
       </li>
     </ul>
   </div>

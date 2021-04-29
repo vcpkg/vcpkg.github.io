@@ -54,7 +54,7 @@
     <script>
       $(document).ready(function () {
         $('#loadNavBar').load('navbar.html');
-        $('#loadFooter').load('footer.html', adjustFooterCSS);
+        $('#loadFooter').load('footer.html');
       });
     </script>
   </head>
@@ -93,7 +93,7 @@
         >
       </div>
       <div style="position: relative">
-        <div class="vcpkg-center-block">
+        <main class="vcpkg-center-block" id="main">
           <div class="vcpkg-center-heading">About vcpkg</div>
           <div class="vcpkg-center-description">
             vcpkg is a free C/C++ package manager for acquiring and managing libraries. 
@@ -101,7 +101,7 @@
             your own private libraries to simplify your build process. Maintained by the Microsoft 
             C++ team and open source contributors.  
           </div>
-        </div>
+        </main>
       </div>
 
       <div style="position: relative">

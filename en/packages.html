@@ -55,7 +55,7 @@
     <script>
       $(document).ready(function () {
         $('#loadNavBar').load('navbar.html');
-        $('#loadFooter').load('footer.html', adjustFooterCSS);
+        $('#loadFooter').load('footer.html');
       });
     </script>
   </head>
@@ -65,7 +65,7 @@
   <body>
     <div class="header-text">Browse packages</div>
 
-    <div class="package-body">
+    <main class="package-body" id="main">
       <div class="sort-bar">
         <div class="side-bar">
           <div class="pkg-search-bar">
@@ -95,7 +95,7 @@
         <div class="package-results bottom-border"></div>
         <div class="load-results"></div>
       </div>
-    </div>
+    </main>
     <div id="loadFooter"></div>
   </body>
 </html>

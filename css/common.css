@@ -1,5 +1,3 @@
-
-
 @media screen and (min-width: 0px) and (max-width: 499px) {
   .logo-footer {
     position: absolute;
@@ -57,9 +55,6 @@
     margin-top: -50px;
   }
 }
-
-
-
 
 @media screen and (min-width: 0px) and (max-width: 499px) {
   .search {
@@ -145,8 +140,7 @@
     background: #002359;
     z-index: 5;
   }
-  
-  
+
   .footer-info {
     position: absolute;
     display: flex;
@@ -254,7 +248,7 @@
     background: #002359;
     z-index: 5;
   }
-  
+
   .footer-info {
     position: absolute;
     display: flex;
@@ -376,8 +370,6 @@ h2 {
   font-weight: bold;
 }
 
-
-
 .selected {
   font-weight: bolder;
   text-decoration: underline;
@@ -409,7 +401,7 @@ h2 {
   line-height: 140%;
 }
 
-.nav-link:hover {
+.nav-link-hover:hover {
   text-decoration: underline;
   text-decoration-color: #005bff;
   text-underline-offset: 2px;
@@ -510,12 +502,6 @@ footer p {
   margin-right: 0%;
 }
 
-
-
-
-
-
-
 .footer-list {
   display: flex;
   flex-direction: column;
@@ -571,8 +557,7 @@ a.section-selected:hover {
 }
 
 .search-item:hover {
-  background: #F3F3F3
-
+  background: #f3f3f3;
 }
 
 .docs-navigation {
@@ -614,6 +599,13 @@ a.section-selected:hover {
   padding: 2px;
 }
 
+.button-list-can-expand {
+  border: none;
+  background: none;
+  color: none;
+  margin-left: -5px;
+}
+
 .list-no-icon {
   list-style: none;
   padding: 2px;
@@ -645,7 +637,6 @@ a.section-selected:hover {
   width: 100%;
 }
 
-
 .footer-left {
   display: flex;
   width: 50%;
@@ -673,7 +664,7 @@ a.footer-link {
 .docs-flex {
   display: flex;
   margin: 30px auto;
-  width: 50%;
+  width: 60%;
 }
 
 .docs-column {
@@ -709,8 +700,6 @@ li.docs-col-bold {
   background: #002359;
   z-index: 5;
 }
-
-
 
 .mobile-nav-list {
   font-family: Source Sans Pro;
@@ -802,7 +791,7 @@ span.navbar-close {
   font-size: 16px;
   line-height: 24px;
   cursor: auto;
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 .feature-list {
@@ -825,7 +814,7 @@ span.navbar-close {
 .search-item-docs,
 .search-item-docs:hover {
   text-decoration: none;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .doc-outline-link {
@@ -833,5 +822,26 @@ span.navbar-close {
 }
 .doc-outline-link:hover {
   text-decoration: none;
-  color:#222222;
+  color: #222222;
+}
+
+.doc-nav-button {
+  background: none;
+  border: none;
+  margin-left: -4px;
+}
+
+.main-link {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  transform: translate(-200px);
+}
+
+.main-link:focus {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  transform: translate(0);
+  top: 50px;
 }

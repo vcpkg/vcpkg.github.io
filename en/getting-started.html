@@ -53,7 +53,7 @@
     <script>
       $(document).ready(function () {
         $('#loadNavBar').load('navbar.html');
-        $('#loadFooter').load('footer.html', adjustFooterCSS);
+        $('#loadFooter').load('footer.html');
       });
     </script>
   </head>
@@ -62,7 +62,7 @@
     <div id="banner"></div>
     <div class="header-text-getting-started">Get started with vcpkg</div>
     <div class="page">
-      <div class="left-side-getting-started">
+      <nav class="left-side-getting-started">
         <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-windows">Windows</button>
         <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-linux">Linux</button>
 
@@ -90,8 +90,8 @@
             </ul>
           </ul>
         </div>
-      </div>
-      <div class="right-side-getting-started">
+      </nav>
+      <main class="right-side-getting-started" id="main">
         <div class="windows">
           <div class="text-heading">Install vcpkg</div>
           <div class="text-desc">
@@ -221,7 +221,7 @@
           <a class="link" href="docs/README.html">vcpkg documentation</a>
           to learn more about how to enable different workflows. 
         </div>
-      </div>
+      </main>
     </div>
     <div id="loadFooter"></div>
   </body>

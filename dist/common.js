@@ -56,6 +56,14 @@ function addMouseLeave() {
     $(".docs-nav").css("display", "none");
 }
 
+function docsNavButton() {
+    if(document.getElementsByClassName("docs-nav")[0].style.display == "none") {
+        addMouseOverNavigation();
+    } else {
+        addMouseLeave();
+    }
+}
+
 function toggleNavIcon() {
     document.getElementsByClassName("navbar-close")[0].classList.toggle("hidden");
     document.getElementsByClassName("navbar-toggler-icon")[0].classList.toggle("hidden");
@@ -71,13 +79,12 @@ function toggleDocsOutlineMobile() {
     document.getElementsByClassName("docs-mobile-exit")[0].classList.toggle("hidden");
 }
 
-function adjustFooterCSS (){
-    return;
+function setScrollFocus (){
+    document.getElementById("currentPath").scrollIntoView();
+    document.getElementsByClassName("navbar")[0].scrollIntoView();
 }
 
 $(document).ready(function(){
-    $(window).on("resize", adjustFooterCSS);
-
     //Analytics
     var siteConsent = null;
     WcpConsent.init("en-US", "banner", function (err, _siteConsent) {

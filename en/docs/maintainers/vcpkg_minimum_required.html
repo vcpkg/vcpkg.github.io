@@ -43,16 +43,17 @@
         <script src="/dist/getting-started.js"></script>
     <script>
         $(document).ready(function () {
-          $('#loadNavBar').load('/en/navbar.html');
-          $('#loadFooter').load('/en/footer.html', adjustFooterCSS);
           handleDefaultTreeViewExpand(" > docs > maintainers > vcpkg_minimum_required.md");
+          $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
+          $('#loadFooter').load('/en/footer.html');
+          
         });
       </script>
     
     </head>
     <div id="loadNavBar"></div>
     <div class="page">
-    <div class="left-side">
+    <nav class="left-side">
       <div class="docs-mobile-heading hidden">Table of Contents</div>
       <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
       <div class="search-bar">
@@ -68,12 +69,12 @@
         <ul class="search hidden">
         </ul>
       </div>
-<ul class=docs-navigation><li class="list-can-expand">about</li>
+<ul class=docs-navigation><li class="list-can-expand"><button class="button-list-can-expand">about</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">faq</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">privacy</li></a>
 </ul>
-<li class="list-can-expand">examples</li>
+<li class="list-can-expand"><button class="button-list-can-expand">examples</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing And Using Packages</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode Cmake</li></a>
@@ -84,28 +85,28 @@
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">patching</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/versioning.getting-started.html"><li class="list-can-expand">Get Started with Versioning</li></a>
 </ul>
-<li class="list-can-expand">maintainers</li>
+<li class="list-can-expand"><button class="button-list-can-expand">maintainers</button></li>
 <ul class="collapse standard-padding">
-<li class="list-can-expand">internal</li>
+<li class="list-can-expand"><button class="button-list-can-expand">internal</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html"><li class="list-can-expand">vcpkg_internal_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
 </ul>
-<li class="list-can-expand">ports</li>
+<li class="list-can-expand"><button class="button-list-can-expand">ports</button></li>
 <ul class="collapse standard-padding">
-<li class="list-can-expand">vcpkg Cmake</li>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
-<li class="list-can-expand">vcpkg Cmake Config</li>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake Config</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
 </ul>
-<li class="list-can-expand">vcpkg Pkgconfig Get Modules</li>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Pkgconfig Get Modules</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
@@ -172,7 +173,7 @@
 <li class="list-can-expand"><span id="currentPath">vcpkg_minimum_required</span></li>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_replace_string.html"><li class="list-can-expand">vcpkg_replace_string</li></a>
 </ul>
-<li class="list-can-expand">specifications</li>
+<li class="list-can-expand"><button class="button-list-can-expand">specifications</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/specifications/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
 <a class="doc-outline-link" href="/en/docs/specifications/export-command.html"><li class="list-can-expand">Export Command</li></a>
@@ -185,7 +186,7 @@
 <a class="doc-outline-link" href="/en/docs/specifications/scripts-extraction.html"><li class="list-can-expand">Scripts Extraction</li></a>
 <a class="doc-outline-link" href="/en/docs/specifications/versioning.html"><li class="list-can-expand">versioning</li></a>
 </ul>
-<li class="list-can-expand">users</li>
+<li class="list-can-expand"><button class="button-list-can-expand">users</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
@@ -201,7 +202,7 @@
 </ul>
 <a class="doc-outline-link" href="/en/docs/README.html"><li class="list-can-expand">README</li></a>
 </ul>
-</div><div class="right-side">
+</nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="vcpkg_minimum_required">vcpkg_minimum_required</h1>
 <p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_minimum_required.md">vcpkg repo</a>.</p>
@@ -213,4 +214,4 @@
 <p>The date-version to check against.</p>
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_minimum_required.cmake">scripts/cmake/vcpkg_minimum_required.cmake</a></p>
-</div></div><div id="loadFooter"></div></html>
+</main></div><div id="loadFooter"></div></html>

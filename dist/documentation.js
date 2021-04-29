@@ -79,7 +79,6 @@ function handleDefaultTreeViewExpand(treeViewPosition) {
             }
         }
     }
-    document.getElementById("currentPath").scrollIntoView();
 }
 
 function generateTreeViewHeaderOutline() {
