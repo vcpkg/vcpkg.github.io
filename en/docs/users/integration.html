@@ -212,7 +212,7 @@
 <li><a href="#export"><code>export</code> command</a></li>
 </ul>
 <p>Each integration style has heuristics to deduce the correct <a href="triplets.html">triplet</a>. This can be overridden using <a href="#triplet-selection">a common method</a> based on your buildsystem.</p>
-<p><a name="integrate"></a></p>
+<p><a name="integrate-command"></a></p>
 <h3 id="integrate-command">Integrate Command</h3>
 <p>These link your project(s) to a specific copy of vcpkg on your machine so any updates or new package installations will be instantly available for the next build of your project.</p>
 <p><a name="user-wide-msbuild"></a></p>
@@ -269,7 +269,7 @@ With a project open, go to Tools-&gt;NuGet Package Manager-&gt;Package Manager C
 </ul>
 <p>See your build system specific documentation for how to use prebuilt binaries.</p>
 <p>Generally, to run any produced executables you will also need to either copy the needed DLL files to the same folder as your executable or <em>prepend</em> the correct <code>bin\</code> directory to your path.</p>
-<p><a name="export"></a></p>
+<p><a name="export-command"></a></p>
 <h3 id="export-command">Export Command</h3>
 <p>This command creates a shrinkwrapped archive containing a specific set of libraries (and their dependencies) that can be quickly and reliably shared with build servers or other users in your organization.</p>
 <ul>

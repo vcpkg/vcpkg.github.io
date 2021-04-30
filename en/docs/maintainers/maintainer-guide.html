@@ -291,7 +291,7 @@ All dependencies should be split out and packaged separately so they can be upda
 <h3 id="prefer-using-cmake">Prefer using CMake</h3>
 <p>When multiple buildsystems are available, prefer using CMake.
 Additionally, when appropriate, it can be easier and more maintainable to rewrite alternative buildsystems into CMake using <code>file(GLOB)</code> directives.</p>
-<p>Examples: <a href="../../ports/abseil/portfile.cmake">abseil</a></p>
+<p>Examples: <a href="https://github.com/microsoft/vcpkg/blob/master/docs\maintainers\maintainer-guide.md/../../../ports/abseil/portfile.cmake">abseil</a></p>
 <h3 id="choose-either-static-or-shared-binaries">Choose either static or shared binaries</h3>
 <p>By default, <code>vcpkg_configure_cmake()</code> will pass in the appropriate setting for <code>BUILD_SHARED_LIBS</code>,
 however for libraries that don't respect that variable, you can switch on <code>VCPKG_LIBRARY_LINKAGE</code>:</p>
@@ -390,7 +390,7 @@ These files are located in the following locations:</p>
 </ol>
 <h3 id="prefer-patching-over-overriding-vcpkg_variable-values">Prefer patching over overriding <code>VCPKG_&lt;VARIABLE&gt;</code> values</h3>
 <p>Some variables prefixed with <code>VCPKG_&lt;VARIABLE&gt;</code> have an equivalent <code>CMAKE_&lt;VARIABLE&gt;</code>.
-However, not all of them are passed to the internal package build <a href="../../scripts/toolchains/windows.cmake">(see implementation: Windows toolchain)</a>.</p>
+However, not all of them are passed to the internal package build <a href="https://github.com/microsoft/vcpkg/blob/master/docs\maintainers\maintainer-guide.md/../../../scripts/toolchains/windows.cmake">(see implementation: Windows toolchain)</a>.</p>
 <p>Consider the following example:</p>
 <pre><code class="cmake language-cmake">set(VCPKG_C_FLAGS "-O2 ${VCPKG_C_FLAGS}")
 set(VCPKG_CXX_FLAGS "-O2 ${VCPKG_CXX_FLAGS}")</code></pre>

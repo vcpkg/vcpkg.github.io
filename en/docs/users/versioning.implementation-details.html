@@ -281,7 +281,7 @@
 <li>If there is a previous version selected:<ul>
 <li>If the versioning scheme of the new constraint does not match that of the previously selected version:<ul>
 <li>Add a version conflict.</li></ul></li>
-<li>If the constraintâ€™s version is not comparable to the previously selected version. For example, comparing â€œversion-string: appleâ€ to â€œversion-string: orangeâ€:<ul>
+<li>If the constraint's version is not comparable to the previously selected version. For example, comparing "version-string: apple" to "version-string: orange":<ul>
 <li>Add a version conflict.</li></ul></li>
 <li>If the constraints version is higher than the previously selected version:<ul>
 <li>Select the highest version.</li></ul></li>
@@ -297,7 +297,7 @@
 <p>Although the concept of package versions has always been present in vcpkg, the concept of version constraints has been not.</p>
 <p>With the introduction of versioning constraints, it is now possible that a package depends on a port version that does not match the one available locally. This raises a problem as vcpkg needs to know how to acquire the port files for the requested version.</p>
 <p>To solve this problem, a new set of metadata files was introduced. These files are located in the <code>versions/</code> directory at the root level of the vcpkg repository.</p>
-<p>The <code>versions/</code> directory, will contain JSON files for each one of the ports available in the registry. Each file will list all the versions available for a package and contain a Git tree-ish object that vcpkg can check out to obtain that versionâ€™s portfiles.</p>
+<p>The <code>versions/</code> directory, will contain JSON files for each one of the ports available in the registry. Each file will list all the versions available for a package and contain a Git tree-ish object that vcpkg can check out to obtain that version's portfiles.</p>
 <p>Example: <code>zlib.json</code></p>
 <pre><code>{
   "versions": [
@@ -319,5 +319,5 @@
     }
   ]
 }</code></pre>
-<p>For each port, its corresponding versions file should be located in <code>versions/{first letter of port name}-/{port name}.json</code>. For example, zlibâ€™s version file will be located in <code>versions/z-/zlib.json</code>. Aside from port version files, the current baseline file is located in <code>versions/baseline.json</code>.</p>
+<p>For each port, its corresponding versions file should be located in <code>versions/{first letter of port name}-/{port name}.json</code>. For example, zlib's version file will be located in <code>versions/z-/zlib.json</code>. Aside from port version files, the current baseline file is located in <code>versions/baseline.json</code>.</p>
 </main></div><div id="loadFooter"></div></html>

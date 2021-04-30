@@ -388,26 +388,26 @@ cmake
   -DVCPKG_TARGET_TRIPLET=$vcpkg_target_triplet \
   -DANDROID_ABI=$android_abi</code></pre>
 <h3 id="test-on-an-example">Test on an example</h3>
-<p>The folder <a href="../examples/vcpkg_android_example_cmake">docs/examples/vcpkg_android_example_cmake</a> provides a working example, with an android library that consumes the jsoncpp library:</p>
+<p>The folder <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake">docs/examples/vcpkg_android_example_cmake</a> provides a working example, with an android library that consumes the jsoncpp library:</p>
 <p><em>Details</em></p>
 <ul>
-<li><p>The <a href="../examples/vcpkg_android_example_cmake/CMakeLists.txt">CMakeLists</a> simply uses <code>find_package</code> and <code>target_link_library</code></p></li>
-<li><p>The <a href="../examples/vcpkg_android_example_cmake/compile.sh">compile.sh</a> script enables you to select any matching pair of "android abi" /  "vcpkg triplet" and to test the compilation</p></li>
-<li><p>The dummy <a href="../examples/vcpkg_android_example_cmake/my_lib.cpp">my_lib.cpp</a> file uses the jsoncpp library</p></li>
+<li><p>The <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake/CMakeLists.txt">CMakeLists</a> simply uses <code>find_package</code> and <code>target_link_library</code></p></li>
+<li><p>The <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake/compile.sh">compile.sh</a> script enables you to select any matching pair of "android abi" /  "vcpkg triplet" and to test the compilation</p></li>
+<li><p>The dummy <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake/my_lib.cpp">my_lib.cpp</a> file uses the jsoncpp library</p></li>
 </ul>
 <p><em>Note</em>: this example only compiles an Android library, as the compilation of a full fledged Android App is beyond the scope of this document.</p>
-<h3 id="test-on-an-example-using-vcpkg_androidcmakeexamplesvcpkg_android_example_cmake_scriptcmakevcpkg_androidcmake">Test on an example, using <a href="../examples/vcpkg_android_example_cmake_script/cmake/vcpkg_android.cmake">vcpkg_android.cmake</a></h3>
-<p>The folder <a href="../examples/vcpkg_android_example_cmake_script">docs/examples/vcpkg_android_example_cmake_script</a> provides the same example, and uses a cmake script in order to simplify the usage.</p>
+<h3 id="test-on-an-example-using-vcpkg_androidcmakeexamplesvcpkg_android_example_cmake_scriptcmakevcpkg_androidcmake">Test on an example, using <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake_script/cmake/vcpkg_android.cmake">vcpkg_android.cmake</a></h3>
+<p>The folder <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake_script">docs/examples/vcpkg_android_example_cmake_script</a> provides the same example, and uses a cmake script in order to simplify the usage.</p>
 <p><em>Details</em></p>
 <ul>
-<li>The main <a href="../examples/vcpkg_android_example_cmake_script/CMakeLists.txt">CMakeLists</a> loads <a href="../examples/vcpkg_android_example_cmake_script/cmake/vcpkg_android.cmake">vcpkg_android.cmake</a> if the flag <code>VCPKG_TARGET_ANDROID</code> is set:</li>
+<li>The main <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake_script/CMakeLists.txt">CMakeLists</a> loads <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake_script/cmake/vcpkg_android.cmake">vcpkg_android.cmake</a> if the flag <code>VCPKG_TARGET_ANDROID</code> is set:</li>
 </ul>
 <pre><code class="cmake language-cmake">if (VCPKG_TARGET_ANDROID)
     include("cmake/vcpkg_android.cmake")
 endif()</code></pre>
 <p><em>Important: place these lines before calling project() !</em></p>
 <ul>
-<li>The <a href="../examples/vcpkg_android_example_cmake_script/compile.sh">compile.sh</a> script shows that it is then possible to compile for android using a simple cmake invocation, for example:</li>
+<li>The <a href="https://github.com/microsoft/vcpkg/blob/master/docs\users\android.md/../../examples/vcpkg_android_example_cmake_script/compile.sh">compile.sh</a> script shows that it is then possible to compile for android using a simple cmake invocation, for example:</li>
 </ul>
 <pre><code class="bash language-bash">cmake .. -DVCPKG_TARGET_ANDROID=ON -DANDROID_ABI=armeabi-v7a</code></pre>
 <h2 id="consume-libraries-using-vpckg-and-android-prefab-archives-aar-files">Consume libraries using vpckg, and Android prefab Archives (AAR files)</h2>

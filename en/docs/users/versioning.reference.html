@@ -213,7 +213,7 @@
 <li><a href="#version-constraints">Version constraints</a></li>
 </ul>
 <h2 id="version-schemes">Version schemes</h2>
-<p>Ports in vcpkg should attempt to follow the versioning conventions used by the packageâ€™s authors. For that reason, when declaring a packageâ€™s version the appropriate scheme should be used.</p>
+<p>Ports in vcpkg should attempt to follow the versioning conventions used by the package's authors. For that reason, when declaring a package's version the appropriate scheme should be used.</p>
 <p>Each versioning scheme defines its own rules on what is a valid version string and more importantly the rules for how to sort versions using the same scheme.</p>
 <p>The versioning schemes understood by vcpkg are:</p>
 <table>
@@ -348,7 +348,7 @@ For example, the contents of <code>versions/z-/zlib.json</code> declare the foll
 <ul>
 <li>First by looking at the baseline file in the given commit ID.</li>
 <li>If the given commit ID does not contain a baseline file, vcpkg will fallback to use the local baseline file instead.</li>
-<li>If thereâ€™s no local baseline file, vcpkg will use the version currently available in the ports directory.</li>
+<li>If there's no local baseline file, vcpkg will use the version currently available in the ports directory.</li>
 </ul>
 <p><em>NOTE: If a baseline file is found, but it does not contain an entry for the package, the vcpkg invocation will fail.</em></p>
 <p>Example:</p>
@@ -358,7 +358,7 @@ For example, the contents of <code>versions/z-/zlib.json</code> declare the foll
   "dependencies": ["zlib", "fmt"],
   "builtin-baseline":"9fd3bd594f41afb8747e20f6ac9619f26f333cbe"
 }</code></pre>
-<p>Baselines can be used without any other version constraints to obtain behavior close to using â€œclassicâ€ mode. </p>
+<p>Baselines can be used without any other version constraints to obtain behavior close to using "classic" mode.</p>
 <h3 id="version-1"><code>version&gt;=</code></h3>
 <p>Expresses a minimum version requirement, <code>version&gt;=</code> declarations put a lower boundary on the versions that can be used to satisfy a dependency.</p>
 <p>Example:</p>
