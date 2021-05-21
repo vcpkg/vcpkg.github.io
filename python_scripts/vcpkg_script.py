@@ -1,20 +1,40 @@
-#TO USE THIS SCRIPT, HAVE A FOLDER CALLED PORTS AT THE SAME LEVEL OF DIRECTORY AS THIS FILE
-
+#!/usr/bin/env python3
 
 import os
 import os.path
 import json
 import requests
+import subprocess
+import sys
 from datetime import datetime
 
-# modidy this to be your own token or environmental variable for github repo api access
-token = ""
+cwd = os.path.dirname(os.path.realpath(__file__))
+os.chdir(cwd)
+vcpkg_dir = os.path.join(cwd, "vcpkg.git")
+
+def cloneAndUpdate():
+    print(vcpkg_dir)
+    if os.path.exists(vcpkg_dir):
+        command = subprocess.run(['git', 'pull'], capture_output=True, cwd=vcpkg_dir)
+        if(command.returncode != 0):
+            sys.stdout.buffer.write(command.stdout)
+            sys.stderr.buffer.write(command.stderr)
+            exit(command.returncode)
+    else:
+        print("Cloning vcpkg.git")
+        command = subprocess.run(['git', 'clone', 'git@github.com:microsoft/vcpkg.git', 'vcpkg.git'], capture_output=True)
+        if(command.returncode != 0):
+            sys.stdout.buffer.write(command.stdout)
+            sys.stderr.buffer.write(command.stderr)
+            exit(command.returncode)
+
 
 def getFiles(path):
     files = os.listdir(path)
     return list(filter(lambda x: x[0] != '.', files))
 
-path = "ports"
+cloneAndUpdate()
+path = "vcpkg.git/ports"
 data = {}
 data["Generated On"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 files = getFiles(path)
@@ -26,7 +46,7 @@ systems = ["arm64-windows", "arm-uwp", "x64-linux", "x64-osx", "x64-uwp", "x64-w
 
 ci_dict = {}
 def gen_ci():
-    ci_file = open('ci.baseline.txt')
+    ci_file = open(os.path.join(vcpkg_dir, 'scripts', 'ci.baseline.txt'))
     for line in ci_file:
         idx_colon = line.find(":")
         idx_equal = line.find("=")
@@ -117,7 +137,7 @@ def get_stars(data):
         count += 1
         if "Homepage" in port and port["Homepage"].find("github.com") >= 0:
             url = base+port["Homepage"][port["Homepage"].find("github.com")+length :]
-            github = requests.get(url, headers={"Authorization": token}).text
+            github = requests.get(url).text
             github_json = json.loads(github)
             if "stargazers_count" in github_json:
                 stars = github_json["stargazers_count"]
@@ -125,28 +145,7 @@ def get_stars(data):
 
 get_stars(data)
 
-def index_of(lst, name):
-    for i in range(len(lst)):
-        if lst[i]["Name"] == name:
-            return i
-    return -1
-
-def get_all_files(data):
-    jsonlist = data["Source"]
-    file = open('VCPKGHeadersDatabase.txt')
-    for line in file:
-        idx = line.strip().find(":")
-        package = line.strip()[:idx]
-        file_name = line.strip()[idx+1:]
-        pos = index_of(jsonlist, package)
-        if "Files" in jsonlist[pos]:
-            jsonlist[pos]["Files"].append(file_name)
-        else:
-            jsonlist[pos]["Files"] = [file_name]
-    file.close()
-
-get_all_files(data)
 out = json.dumps(data, sort_keys=True, indent=4)
-output = open("output.json", mode = 'w')
+output = open(os.path.join(cwd, "..", "output.json"), mode = 'w')
 output.write(out)
 output.close()
