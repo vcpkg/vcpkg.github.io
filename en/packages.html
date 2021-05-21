@@ -47,6 +47,9 @@
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
+
     <!-- our scripts -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
     <script src="/dist/common.js"></script>
@@ -69,22 +72,16 @@
       <div class="sort-bar">
         <div class="side-bar">
           <div class="pkg-search-bar">
-            <input
-              class="search-box"
-              id="pkg-search"
-              type="search"
-              name="search"
-              placeholder="Search Packages"
-              autocomplete="off"
-              oninput="handlePackageInput()"
-            />
+            <input class="search-box" type="search" name="search" placeholder="Search Packages" autocomplete="off" v-model="searchQuery" />
             <span class="search-icon"></span>
           </div>
-          <div class="show-package-results-number total-packages"></div>
+          <div class="show-package-results-number total-packages">
+            Showing {{ truncatedList.length > 0 ? '1-' : '' }}{{ truncatedList.length }} of {{ filteredPackages.length }} packages
+          </div>
         </div>
         <div class="">
-          <select class="dropdown" id="sortBtn" onChange="sortPackages()">
-            <option value="Best Match" selected>Best Match</option>
+          <select class="dropdown" id="sortBtn" v-model="sortBy">
+            <option value="Best Match">Best Match</option>
             <option value="Alphabetical">Alphabetical</option>
             <!--<option value="GitHub Stars">GitHub Stars</option>-->
           </select>
@@ -92,10 +89,116 @@
         </div>
       </div>
       <div class="main-content">
-        <div class="package-results bottom-border"></div>
-        <div class="load-results"></div>
+        <div class="package-results bottom-border">
+          <div class="card package-card" v-for="package in truncatedList">
+            <div class="package-card-header">
+              <div class="package-name">{{ package.Name }} |</div>
+              <div class="package-version">Version: {{ package.version }}</div>
+            </div>
+            <div class="package-text"><span class="package-description-short">{{ package.Description }}</span></div>
+            <div class="package-compatibility"><span class="package-compatibility-text">Compatibility:</span>
+              <div class="processor-status">{{ package.compatibility }}</div>
+            </div>
+            <div class="vcpkg-page-link" v-on:click="package.showDetails = !package.showDetails">{{ package.showDetails ? "Hide" : "View" }} Details</div>
+            <template v-if="package.showDetails">
+              <div class="instructions">
+                <span class="instructions-windows" :class="{'bold-text': package.tab === 'windows'}" v-on:click="package.tab = 'windows'">Windows</span>
+                <span class="instructions-linux" :class="{'bold-text': package.tab === 'linux'}" v-on:click="package.tab = 'linux'">MacOS/Linux</span>
+                <span class="instructions-features" :class="{'bold-text': package.tab === 'features'}" v-on:click="package.tab = 'features'">Feature List</span>
+              </div>
+              <div class="windowsText" v-show="package.tab === 'windows'">.\vcpkg install {{ package.Name }}</div>
+              <div class="linuxText" v-show="package.tab === 'linux'">vcpkg install {{ package.Name }}</div>
+              <div class="featureText" v-show="package.tab === 'features'">
+                <template v-if="package.Features.length === 0">No features for this library.</template>
+                <template v-else>
+                  <ul class="feature-list" v-for="feature in package.Features">
+                    <li>Feature Name: {{ Array.isArray(package.Features) ? feature.name || feature.Name || "" : feature }}</li>
+                    <li>Description: {{ feature.description || feature.Description || "" }}</li>
+                    <li v-if="feature['build-depends'] || feature['Build-Depends'] || feature['dependencies']">
+                      Build-Depends: {{ feature['build-depends'] || feature['Build-Depends'] || feature['dependencies'] }}
+                    </li>
+                  </ul>
+                </template>
+              </div>
+            </template>
+          </div>
+          <div class="card package-card" v-if="filteredPackages.length === 0">No results for <b>{{ searchQuery }}</b></div>
+        </div>
+        <div v-if="sortedPackages.length !== truncatedList.length" class="load-results" v-on:click="loadMore">Load more packages</div>
       </div>
     </main>
+    <script>
+      const PackagesSite = {
+        data() {
+          return {
+            searchQuery: "",
+            sortBy: "Best Match",
+            packages: [],
+            truncatedList: []
+          }
+        },
+        computed: {
+          filteredPackages() {
+            if (this.searchQuery.length === 0)
+              return this.packages;
+            let options = {
+              findAllMatches: true,
+              ignoreLocation: true,
+              threshold: 0.1,
+              maxPatternLength: 50,
+              minMatchCharLength: 1,
+              keys: ['Name', 'Description', 'Files'],
+            };
+            let fuse = new Fuse(this.packages, options);
+            let searchResult = fuse.search(this.searchQuery).map(i => i.item);
+            return searchResult.sort(searchRankFor(this.searchQuery));
+          },
+          sortedPackages() {
+            switch (this.sortBy) {
+              case 'Alphabetical':
+                return this.filteredPackages.slice().sort(sortAlphabetical);
+              case 'GitHub Stars':
+                return this.filteredPackages.slice().sort(sortStars);
+            }
+            return this.filteredPackages;
+          },
+        },
+        watch: {
+          sortedPackages(val) {
+            this.truncatedList = val.slice(0, 20);
+          },
+          searchQuery(val) {
+            window.history.pushState({}, null, '?query=' + this.searchQuery);
+          }
+        },
+        methods: {
+          loadMore() {
+            this.truncatedList = this.sortedPackages.slice(0, this.truncatedList.length + 20);
+          },
+        },
+        mounted() {
+          this.searchQuery = getUrlParameter('query');
+          $.getJSON('../output.json', responseObject => {
+            let packages = responseObject.Source;
+            for (let package of packages) {
+              package.version = package.Version || package["Version-semver"] || package["Version-date"];
+              let platformPassesString = "";
+              for (let triplet of triplets) {
+                if (package[triplet] === 'pass') {
+                  platformPassesString += ", " + triplet;
+                }
+              }
+              package.compatibility = platformPassesString.substring(2);
+              package.showDetails = false;
+              package.tab = 'features';
+            }
+            this.packages = packages;
+          });
+        }
+      }
+      Vue.createApp(PackagesSite).mount('#main')
+
+    </script>
     <div id="loadFooter"></div>
   </body>
 </html>
