@@ -111,11 +111,11 @@
               <div class="featureText" v-show="package.tab === 'features'">
                 <template v-if="package.Features.length === 0">No features for this library.</template>
                 <template v-else>
-                  <ul class="feature-list" v-for="feature in package.Features">
-                    <li>Feature Name: {{ Array.isArray(package.Features) ? feature.name || feature.Name || "" : feature }}</li>
+                  <ul class="feature-list" v-for="(feature, name) in package.Features">
+                    <li>Feature Name: {{ Array.isArray(package.Features) ? feature.name || feature.Name || "" : name }}</li>
                     <li>Description: {{ feature.description || feature.Description || "" }}</li>
                     <li v-if="feature['build-depends'] || feature['Build-Depends'] || feature['dependencies']">
-                      Build-Depends: {{ feature['build-depends'] || feature['Build-Depends'] || feature['dependencies'] }}
+                      Build-Depends: {{ dependenciesAsString(feature['build-depends'] || feature['Build-Depends'] || feature['dependencies']) }}
                     </li>
                   </ul>
                 </template>
@@ -175,6 +175,29 @@
           loadMore() {
             this.truncatedList = this.sortedPackages.slice(0, this.truncatedList.length + 20);
           },
+          dependenciesAsString(dependencies) {
+            if (typeof dependencies === "string")
+              return dependencies;
+            let s = "";
+            for (let d of dependencies) {
+              if (typeof d === "string") {
+                s += ", " + d;
+              } else {
+                s += ", " + d.name;
+                let features = []
+
+                if (d["default-features"] === false)
+                  features.push("core");
+                if (d["features"])
+                  features = features.concat(d["features"]);
+                if (features.length > 0)
+                  s += "[" + features.join(", ") + "]";
+                if (d["platform"])
+                  s += " (" + d["platform"] + ")"
+              }
+            }
+            return s.substring(2);
+          }
         },
         mounted() {
           this.searchQuery = getUrlParameter('query');
