@@ -131,6 +131,7 @@
       const PackagesSite = {
         data() {
           return {
+            queryFromHistory: false,
             searchQuery: "",
             sortBy: "Best Match",
             packages: [],
@@ -167,9 +168,20 @@
           sortedPackages(val) {
             this.truncatedList = val.slice(0, 20);
           },
-          searchQuery(val) {
-            window.history.pushState({}, null, '?query=' + this.searchQuery);
-          }
+          searchQuery(query, oldQuery) {
+            if (!this.queryFromHistory) {
+              const growing = query.length === oldQuery.length + 1;
+              // state is true if it was growing, and delete should only be true if we delete subsequent characters
+              const deleting = window.history.state === false && query.length === oldQuery.length - 1
+              if (growing || deleting) {
+                window.history.replaceState(growing, query, '?query=' + query);
+              } else {
+                window.history.pushState(false, query, '?query=' + query);
+              }
+            } else {
+              this.queryFromHistory = false;
+            }
+          },
         },
         methods: {
           loadMore() {
@@ -201,6 +213,10 @@
         },
         mounted() {
           this.searchQuery = getUrlParameter('query');
+          window.onpopstate = (event) => {
+            this.queryFromHistory = true;
+            this.searchQuery = getUrlParameter('query');
+          };
           $.getJSON('../output.json', responseObject => {
             let packages = responseObject.Source;
             for (let package of packages) {
