@@ -122,7 +122,8 @@
               </div>
             </template>
           </div>
-          <div class="card package-card" v-if="filteredPackages.length === 0">No results for <b>{{ searchQuery }}</b></div>
+          <div class="card package-card" v-if="packages.length === 0">Loading ...</div>
+          <div class="card package-card" v-else-if="filteredPackages.length === 0">No results for <b>{{ searchQuery }}</b></div>
         </div>
         <div v-if="sortedPackages.length !== truncatedList.length" class="load-results" v-on:click="loadMore">Load more packages</div>
       </div>
