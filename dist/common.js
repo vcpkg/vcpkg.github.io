@@ -39,13 +39,13 @@ var getUrlParameter = function getUrlParameter(sParam) {
         || sParameterName[0].indexOf("'") != -1
         || sParameterName[0].indexOf(";") != -1)
         {
-            return true;
+            return "";
         }
         if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            return sParameterName[1] === undefined ? "" : decodeURIComponent(sParameterName[1]);
         }
     }
-    return true;
+    return "";
 };
 
 function addMouseOverNavigation() {
