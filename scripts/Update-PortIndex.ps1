@@ -17,6 +17,8 @@ Param(
     [Parameter(Mandatory, ParameterSetName='UseLocalVcpkg')]
     [Switch]$UseLocalVcpkg,
 
+    [Switch]$SkipStars,
+
     [String[]]$Triplets = @(
         'arm64-windows'
         'arm-uwp'
@@ -29,7 +31,7 @@ Param(
     )
 )
 
-$KnownManifestKeys = @{
+$KnownManifestKeys = [Ordered]@{
     'name' = 'Name'
     'version-string' = 'Version'
     'version' = 'Version'
@@ -69,17 +71,58 @@ if (-not $UseLocalVcpkg) {
 }
 
 $Data = [Ordered]@{}
-$Data.Add('Generated On', (Get-Date -AsUtc).ToString("yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"))
+# This is the UniversalSortableDateTime (i.e., ISO 8601 extended format)
+$Data.Add('Generated On', (Get-Date -AsUtc).ToString("yyyy'-'MM'-'dd HH':'mm':'ss'Z'"))
+
+$CiData = @{}
+Get-Content "$Directory/scripts/ci.baseline.txt" | % {
+    if ($_.StartsWith('#') -or $_.Trim() -eq '') {
+        return
+    }
+
+    if ($_ -match '^([-a-z0-9]+):([-a-z0-9]+)\s*=\s*([a-z]+)\s*$') {
+        $portName = $Matches[1]
+        $triplet = $Matches[2].Trim()
+        $mode = $Matches[3].Trim()
+        $CiData.Add("${portName}:${triplet}", $mode)
+    } else {
+        Write-Warning "Invalid ci.baseline.txt line: '$_'"
+    }
+}
+
+if (-not $SkipStars) {
+    $cred = Get-Credential -Title 'GitHub Username and PAT' `
+        -Message 'In order to avoid rate-limiting from GitHub, you will need to enter a personal access token from https://github.com/settings/tokens :'
+    $encodedCred = "$($cred.UserName):$(ConvertFrom-SecureString $cred.Password -AsPlainText)"
+    $encodedCred = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($encodedCred))
+    $GithubAuthorization = "Basic $encodedCred"
+
+    $checkAuthorizationRequest = Invoke-WebRequest `
+        -Uri 'https://api.github.com/rate_limit' `
+        -Header @{'Authorization' = $GithubAuthorization}
+    $checkAuthorizationContent = $checkAuthorizationRequest.Content | ConvertFrom-Json -AsHashtable
+    if ($checkAuthorizationContent['rate']['limit'] -lt 1000) {
+        Write-Error "Authorization failed for user $($cred.UserName); did you enter a PAT?"
+        throw
+    }
+}
 
 # these type annotations ensure that $Ports and $PortsData are arrays no matter what
 $PortsDirectory = "$Directory/ports"
 [Array]$Ports = Get-ChildItem -LiteralPath $PortsDirectory
 $Data.Add('Size', $Ports.Length)
 
+$currentPort = 0
 [Array]$PortsData = $Ports | % {
     $portData = [Ordered]@{}
     $portDirectory = $_.FullName
     $portName = $_.Name
+
+    $currentPort += 1
+    # try to avoid colliding with Invoke-WebRequest with -Id
+    Write-Progress -Id $Ports.Length -Activity "Generating port data" `
+        -Status "Port $portName ($currentPort/$($Ports.Length))" `
+        -PercentComplete (100 * $currentPort / $Ports.Length)
 
     $controlPath = "$portDirectory/CONTROL"
     $manifestPath = "$portDirectory/vcpkg.json"
@@ -171,8 +214,33 @@ $Data.Add('Size', $Ports.Length)
         }
     }
 
+    $Triplets | % {
+        if ($CiData.Contains("${portName}:$_")) {
+            $portData.Add($_, $CiData["${portName}:$_"])
+        } else {
+            $portData.Add($_, 'pass')
+        }
+    }
+
+    if (-not $SkipStars -and $portData.Contains('Homepage')) {
+        if ($portData['Homepage'] -match 'github.com/(?<username>[-_.a-zA-Z0-9]+)/(?<repo>[-_.a-zA-Z0-9]+)') {
+            $url = "https://api.github.com/repos/$($Matches['username'])/$($Matches['repo'])"
+            try {
+                $request = Invoke-WebRequest -Uri $url -Header @{'Authorization' = $GithubAuthorization}
+                $repoData = $request.Content | ConvertFrom-Json -AsHashtable
+            } catch {
+                Write-Warning "Failed to GET URL: ${url}:`n    $_"
+                $repoData = $null
+            }
+            if ($null -ne $repoData) {
+                $portData.Add('Stars', $repoData["stargazers_count"])
+            }
+        }
+    }
+
     $portData
 }
+Write-Progress -Completed -Id $Ports.Length -Activity "Generating port data"
 
 $Data.Add('Source', $PortsData)
 Set-Content -Path $OutFile -Value ($Data | ConvertTo-Json -Depth 10)
