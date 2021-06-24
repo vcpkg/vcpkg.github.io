@@ -95,6 +95,59 @@ var renderCardDescription = function (fullDesc) {
     descriptionDiv.appendChild(shortDescSpan);
     return descriptionDiv;
 };
+var renderCompatibility = function (pkg, packageDiv) {
+  var compatRowDiv = document.createElement('div');
+  compatRowDiv.className = 'package-compatibility';
+
+  // Compatibility text
+  var compatDiv = document.createElement('span');
+  compatDiv.className = 'package-compatibility-text';
+  compatDiv.textContent = wording[lang]['compat'];
+  compatRowDiv.appendChild(compatDiv);
+
+  // Display processor statuses
+  let statusDiv = document.createElement('div');
+  statusDiv.className = 'processor-status';
+
+  let compatRowFrag = document.createDocumentFragment();
+  for (var t of triplets) {
+    var procStatusDiv = statusDiv.cloneNode(true);
+    var status = pkg[t];
+    var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
+    procStatusDiv.classList.add(simplifiedStatus);
+
+    // hide card if it doesn't pass the compatibility filter
+    if (packageDiv && simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
+      packageDiv.classList.add('hide');
+    }
+
+    let statusIcon;
+    let alt_text;
+    switch (simplifiedStatus) {
+      case 'pass':
+        statusIcon = '✓';
+        alt_text = 'Compatible with ' + t;
+        break;
+      case 'fail':
+        statusIcon = '!';
+        alt_text = 'Not Compatible with ' + t;
+        break;
+      default:
+        statusIcon = '?';
+        alt_text = 'Compatibility unknown on ' + t;
+    }
+
+    procStatusDiv.textContent = statusIcon + ' ' + t;
+    let spanTip = document.createElement('span');
+
+    spanTip.textContent = alt_text;
+    procStatusDiv.appendChild(spanTip);
+    procStatusDiv.classList.add('tip');
+    compatRowFrag.appendChild(procStatusDiv);
+  }
+  compatRowDiv.appendChild(compatRowFrag);
+  return compatRowDiv;
+};
 var renderCompability = function (pkg, packageDiv) {
     var compatRowDiv = document.createElement('div');
     compatRowDiv.className = 'package-compatibility';
@@ -194,7 +247,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
         detailFrag.appendChild(descriptionDiv);
     }
     // Package Processor Compatibilities
-    detailFrag.appendChild(renderCompability(package, packageDiv));
+    detailFrag.appendChild(renderCompatibility(package, packageDiv));
 
     detailFrag.appendChild(vcpkgPage);
 
