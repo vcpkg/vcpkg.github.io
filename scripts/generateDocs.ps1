@@ -21,7 +21,7 @@ $mapTable = @{
     "versioning.getting-started.md" = "Get Started with Versioning"
 }
 
-$searchTable = [System.Collections.Generic.List[System.Object]]::new()
+$searchTable = [System.Collections.ArrayList]::new()
 
 function convertToReadableFormat {
     param(
@@ -157,7 +157,7 @@ function processTreeViewLayer {
         [string]$currentFile
     )
     $treeViewHTML = ""
-    $listLayer = gci -Path $treeViewDir
+    $listLayer = gci -Path $treeViewDir | Sort-Object -Property @{Expression={$_.GetType()}},@{Expression={$_.FullName -replace "_","zz"}}
     ForEach($File in $listLayer) {
         if($mapTable.ContainsKey($File.Name)) {
             if($mapTable[$File.Name] -eq "") {
@@ -209,7 +209,7 @@ function templateLinks {
         [System.Collections.Generic.List[System.Object]] $html,
         [string] $relativeDocsDir
     )
-    $text = $relativeDocsDir.Split("\")
+    $text = $relativeDocsDir.replace('\', '/').Split('/')
     $defaultTreeExpand = ""
     ForEach($line in $text) {
         $defaultTreeExpand += " > " + $line
@@ -306,14 +306,16 @@ function generateHTMLFromMarkdown {
     # Handle search table JSON
     $relativePath = relativeToRootDomain -fileFullName $markdownFile
 
-    $searchResult = @{}
-    $searchResult["Path"] = markdownToHTMLExtension -name $relativePath
-    $searchResult["Source"] = $simpleSearch.ToString()
-    $searchResult["Nav"] = generateNavSearchResult -fileFullName $markdownFile
-    $searchResult["Name"] = convertToReadableFormat -name $baseName
-    $searchTable.Add($searchResult)
+    [void]$searchTable.Add(@"
 
-    
+    {
+        "Path":  $(markdownToHTMLExtension -name $relativePath | ConvertTo-Json),
+        "Name":  $(convertToReadableFormat -name $baseName | ConvertTo-Json),
+        "Source":  $($simpleSearch.ToString() | ConvertTo-Json),
+        "Nav":  $(generateNavSearchResult -fileFullName $markdownFile | ConvertTo-Json)
+    }
+"@)
+
     if($markdownFile.Contains("specifications")) {
         Out-File -FilePath $pathToWrite -InputObject '</nav><main class="right-side spec-only" id="main">' -Append -Encoding UTF8
         Out-File -FilePath $pathToWrite -InputObject '<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>' -Append -Encoding UTF8
@@ -322,7 +324,7 @@ function generateHTMLFromMarkdown {
         Out-File -FilePath $pathToWrite -InputObject $linkTag -Append -Encoding UTF8
         Out-File -FilePath $pathToWrite -InputObject '</main></div><div id="loadFooter"></div></html>' -Append -Encoding UTF8
     } else {
-        $generatedMarkdown = node ..\generateMarkdown.js $markdownFile
+        $generatedMarkdown = node $PSScriptRoot/generateMarkdown.js $markdownFile
         $firstPass = handleLinks -html $generatedMarkdown -currentPath $markdownFile
         $secondPass = handleMarkdownIssues -html $firstPass
         Out-File -FilePath $pathToWrite -InputObject '</nav><main class="right-side" id="main">' -Append -Encoding UTF8
@@ -343,27 +345,26 @@ ForEach($file in $currentListDirRecursive) {
 
     $index = $file.FullName.indexOf("docs")
     $relativeDocsDir = $file.FullName.substring($index)
-    $pathToWrite = markdownToHTMLExtension -name "$destDir\en\$relativeDocsDir"
+    $pathToWrite = markdownToHTMLExtension -name "$destDir/en/$relativeDocsDir"
     $path = $rootDocsDomain + $relativeDocsDir
     $serverPath = markdownToHTMLExtension -name $path
     $serverPath = $serverPath.replace("\", "/");
     $treeViewHTML = generateTreeView -treeViewDir $sourceDir -currentFile $serverPath
 
-    $indexFolder = "$destDir\en\$relativeDocsDir".IndexOf($file.Name)
-    $folder = "$destDir\en\$relativeDocsDir".Substring(0, $indexFolder)
-    mkdir $folder -Force
+    $indexFolder = "$destDir/en/$relativeDocsDir".IndexOf($file.Name)
+    $folder = "$destDir/en/$relativeDocsDir".Substring(0, $indexFolder)
+    New-Item -Force -ItemType Directory $folder | Out-Null
 
     $htmlTemplate = Get-Content -Path .\docs\html-doc-template.txt -Encoding UTF8
 
     $htmlTemplate = templateLinks -html $htmlTemplate -relativeDocsDir $relativeDocsDir -Encoding UTF8
-    Out-File -FilePath $pathToWrite -InputObject $htmlTemplate -Encoding UTF8
+    Out-File -FilePath $pathToWrite -InputObject $htmlTemplate -Encoding UTF8Bom
     Out-File -FilePath $pathToWrite -InputObject $treeViewHTML -Append -Encoding utf8
 
     generateHTMLFromMarkdown -markdownFile $file.FullName -baseName $file.Name -pathToWrite $pathToWrite
 
+    "generated $pathToWrite"
 }
 
-$searchJSON = ConvertTo-Json -InputObject $searchTable
-Out-File -FilePath "$destDir\en\docs\vcpkg-docs.json" -InputObject $searchJSON -Encoding UTF8
-
-
+$searchJSON = "[" + $($searchTable -Join ",") + "`n]"
+Out-File -FilePath "$destDir/en/docs/vcpkg-docs.json" -InputObject $searchJSON -Encoding UTF8Bom

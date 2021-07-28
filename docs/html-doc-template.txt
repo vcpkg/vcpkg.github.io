@@ -1,0 +1,71 @@
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/styles/default.min.css">
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script type="text/javascript"
+          src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+        </script>
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/cmake.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/powershell.min.js"></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          handleDefaultTreeViewExpand();
+          $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
+          $('#loadFooter').load('/en/footer.html');
+          
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <nav class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
