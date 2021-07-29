@@ -2,7 +2,7 @@
 
 [CmdletBinding(PositionalBinding=$False)]
 Param(
-    [Parameter(Mandatory, ParameterSetName='UseLocalVcpkg')]
+    [Parameter(ParameterSetName='UseLocalVcpkg')]
     [Parameter(ParameterSetName='GetVcpkgUpstream')]
     [String]$Directory = "$PSScriptRoot/../vcpkg",
 
@@ -27,6 +27,7 @@ Param(
         'x64-uwp'
         'x64-windows'
         'x64-windows-static'
+        'x64-windows-static-md'
         'x86-windows'
     )
 )
@@ -47,6 +48,7 @@ $KnownManifestKeys = [Ordered]@{
     'dependencies' = 'Dependencies'
     'default-features' = 'Default-Features'
     'features' = 'Features'
+    'builtin-baseline' = 'Builtin-Baseline'
 }
 $ManifestKeysToUseAsIs = @('dependencies', 'default-features', 'features')
 
@@ -80,7 +82,7 @@ Get-Content "$Directory/scripts/ci.baseline.txt" | % {
         return
     }
 
-    if ($_ -match '^([-a-z0-9]+):([-a-z0-9]+)\s*=\s*([a-z]+)\s*$') {
+    if ($_ -match '^([-a-z0-9]+):+([-a-z0-9]+)\s*=\s*([a-z]+)\s*$') {
         $portName = $Matches[1]
         $triplet = $Matches[2].Trim()
         $mode = $Matches[3].Trim()
