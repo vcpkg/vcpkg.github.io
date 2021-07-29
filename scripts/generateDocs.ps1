@@ -178,6 +178,18 @@ function processTreeViewLayer {
             if(-Not $File.Name.Contains(".md")) {
                 continue;
             }
+
+            if ($mapTable.ContainsKey($File.Name)) {
+                $readable = $mapTable[$File.Name]
+            } else {
+                $firstLine = Get-Content $File -TotalCount 1
+                if($firstLine -match "^#+ (.*)") {
+                    $readable = $Matches.1 -replace "``(.*)``",'<code>$1</code>'
+                } else {
+                    $readable = convertToReadableFormat -name $File.Name
+                }
+            }
+
             $relativePath = relativeToRootDomain -fileFullName $File.FullName
             $relativeHTMLPath = markdownToHTMLExtension -name $relativePath
             
@@ -185,14 +197,14 @@ function processTreeViewLayer {
                 $treeViewHTML += '<li class="list-can-expand">'
                 $treeViewHTML += '<span id="currentPath'
                 $treeViewHTML += '">'
-                $treeViewHTML += convertToReadableFormat -name $File.Name
+                $treeViewHTML += $readable
                 $treeViewHTML += '</span></li>'
             } else {
                 $treeViewHTML += '<a class="doc-outline-link" href="'
                 $treeViewHTML += $relativeHTMLPath
                 $treeViewHTML += '">'
                 $treeViewHTML += '<li class="list-can-expand">'
-                $treeViewHTML += convertToReadableFormat -name $File.Name
+                $treeViewHTML += $readable
                 $treeViewHTML += "</li></a>"
             }
             $treeViewHTML += "`n"

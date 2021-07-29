@@ -1,7 +1,7 @@
 #/bin/bash
 
 cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")"
-if [ ! -f ../vcpkg ]
+if [ ! -e ../vcpkg ]
 then
     vcpkg_commit=8dddc6c899ce6fdbeab38b525a31e7f23cb2d5bb
     git init ../vcpkg
