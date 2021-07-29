@@ -355,7 +355,7 @@ ForEach($file in $currentListDirRecursive) {
     $folder = "$destDir/en/$relativeDocsDir".Substring(0, $indexFolder)
     New-Item -Force -ItemType Directory $folder | Out-Null
 
-    $htmlTemplate = Get-Content -Path .\docs\html-doc-template.txt -Encoding UTF8
+    $htmlTemplate = Get-Content -Path $PSScriptRoot/html-doc-template.txt -Encoding UTF8
 
     $htmlTemplate = templateLinks -html $htmlTemplate -relativeDocsDir $relativeDocsDir -Encoding UTF8
     Out-File -FilePath $pathToWrite -InputObject $htmlTemplate -Encoding UTF8Bom
