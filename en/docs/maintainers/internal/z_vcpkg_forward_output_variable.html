@@ -1,0 +1,236 @@
+﻿<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/styles/default.min.css">
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script type="text/javascript"
+          src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+        </script>
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/cmake.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/powershell.min.js"></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          handleDefaultTreeViewExpand(" > docs > maintainers > internal > z_vcpkg_forward_output_variable.md");
+          $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
+          $('#loadFooter').load('/en/footer.html');
+          
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <nav class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand"><button class="button-list-can-expand">about</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">faq</li></a>
+<a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">privacy</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">examples</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing And Using Packages</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode Cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Modify Baseline To Pin Old Boost</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay Triplets Linux Dynamic</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging Zipfiles</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">patching</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/versioning.getting-started.html"><li class="list-can-expand">Get Started with Versioning</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">maintainers</button></li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><button class="button-list-can-expand">internal</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html"><li class="list-can-expand">vcpkg_internal_get_cmake_vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
+<li class="list-can-expand"><span id="currentPath">z_vcpkg_forward_output_variable</span></li>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">ports</button></li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake Config</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Pkgconfig Get Modules</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg Cmake Config</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg Cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg Pkgconfig Get Modules</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">Cmake Guidelines</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">Control Files</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guide</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest Files</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Functions</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">Pr Review Checklist</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/registries.html"><li class="list-can-expand">registries</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_msbuild.html"><li class="list-can-expand">vcpkg_build_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_ninja.html"><li class="list-can-expand">vcpkg_build_ninja</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_nmake.html"><li class="list-can-expand">vcpkg_build_nmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_qmake.html"><li class="list-can-expand">vcpkg_build_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_features.html"><li class="list-can-expand">vcpkg_check_features</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_make.html"><li class="list-can-expand">vcpkg_configure_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_meson.html"><li class="list-can-expand">vcpkg_configure_meson</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_qmake.html"><li class="list-can-expand">vcpkg_configure_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_pdbs.html"><li class="list-can-expand">vcpkg_copy_pdbs</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_tools.html"><li class="list-can-expand">vcpkg_copy_tools</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html"><li class="list-can-expand">vcpkg_copy_tool_dependencies</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_download_distfile.html"><li class="list-can-expand">vcpkg_download_distfile</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_build_process.html"><li class="list-can-expand">vcpkg_execute_build_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html"><li class="list-can-expand">vcpkg_execute_in_download_mode</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_required_process.html"><li class="list-can-expand">vcpkg_execute_required_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html"><li class="list-can-expand">vcpkg_execute_required_process_repeat</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_extract_source_archive.html"><li class="list-can-expand">vcpkg_extract_source_archive</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html"><li class="list-can-expand">vcpkg_extract_source_archive_ex</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fail_port_install.html"><li class="list-can-expand">vcpkg_fail_port_install</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_find_acquire_program.html"><li class="list-can-expand">vcpkg_find_acquire_program</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_find_fortran.html"><li class="list-can-expand">vcpkg_find_fortran</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html"><li class="list-can-expand">vcpkg_fixup_cmake_targets</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html"><li class="list-can-expand">vcpkg_fixup_pkgconfig</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_bitbucket.html"><li class="list-can-expand">vcpkg_from_bitbucket</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_git.html"><li class="list-can-expand">vcpkg_from_git</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_github.html"><li class="list-can-expand">vcpkg_from_github</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_gitlab.html"><li class="list-can-expand">vcpkg_from_gitlab</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_msbuild.html"><li class="list-can-expand">vcpkg_install_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_nmake.html"><li class="list-can-expand">vcpkg_install_nmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_qmake.html"><li class="list-can-expand">vcpkg_install_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_list.html"><li class="list-can-expand">vcpkg_list</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_minimum_required.html"><li class="list-can-expand">vcpkg_minimum_required</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_replace_string.html"><li class="list-can-expand">vcpkg_replace_string</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">specifications</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/specifications/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/export-command.html"><li class="list-can-expand">Export Command</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/feature-packages.html"><li class="list-can-expand">Feature Packages</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/manifests.html"><li class="list-can-expand">manifests</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/ports-overlay.html"><li class="list-can-expand">Ports Overlay</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/prefab.html"><li class="list-can-expand">prefab</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/registries-2.html"><li class="list-can-expand">Registries 2</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/registries.html"><li class="list-can-expand">registries</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/scripts-extraction.html"><li class="list-can-expand">Scripts Extraction</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/versioning.html"><li class="list-can-expand">versioning</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">users</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">android</li></a>
+<a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">assetcaching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Config Environment</li></a>
+<a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
+<a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">manifests</li></a>
+<a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">mingw</li></a>
+<a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">registries</li></a>
+<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
+<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">triplets</li></a>
+<a class="doc-outline-link" href="/en/docs/users/versioning.implementation-details.html"><li class="list-can-expand">Versioning.implementation Details</li></a>
+<a class="doc-outline-link" href="/en/docs/users/versioning.html"><li class="list-can-expand">versioning</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/README.html"><li class="list-can-expand">README</li></a>
+</ul>
+</nav><main class="right-side" id="main">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="z_vcpkg_forward_output_variable">z_vcpkg_forward_output_variable</h1>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/">vcpkg repo</a>.</p>
+<p>This macro helps with forwarding values from inner function calls,
+through a local function scope, into pointer out parameters.</p>
+<pre><code class="cmake language-cmake">z_vcpkg_forward_output_variable(ptr_to_parent_var var_to_forward)</code></pre>
+<p>is equivalent to</p>
+<pre><code class="cmake language-cmake">if(DEFINED ptr_to_parent_var)
+    if(DEFINED value_var)
+        set("${ptr_to_parent_var}" "${value_var}" PARENT_SCOPE)
+    else()
+        unset("${ptr_to_parent_var}" PARENT_SCOPE)
+    endif()
+endif()</code></pre>
+<p>Take note that the first argument should be a local variable that has a value of the parent variable name.
+Most commonly, this local is the result of a pointer-out parameter to a function.
+If the variable in the first parameter is not defined, this function does nothing,
+simplifying functions with optional out parameters.
+Most commonly, this should be used in cases like:</p>
+<pre><code class="cmake language-cmake">function(my_function out_var)
+    file(SHA512 "somefile.txt" local_var)
+    z_vcpkg_forward_output_variable(out_var local_var)
+endfunction()</code></pre>
+<h2 id="source">Source</h2>
+<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/z_vcpkg_forward_output_variable.cmake">scripts/cmake/z_vcpkg_forward_output_variable.cmake</a></p>
+</main></div><div id="loadFooter"></div></html>

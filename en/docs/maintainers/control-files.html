@@ -91,6 +91,7 @@
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html"><li class="list-can-expand">vcpkg_internal_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
 </ul>
@@ -114,18 +115,19 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg Cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg Pkgconfig Get Modules</li></a>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">Cmake Guidelines</li></a>
 <li class="list-can-expand"><span id="currentPath">Control Files</span></li>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guide</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest Files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Functions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">Pr Review Checklist</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/registries.html"><li class="list-can-expand">registries</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_gn.html"><li class="list-can-expand">vcpkg_build_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_msbuild.html"><li class="list-can-expand">vcpkg_build_msbuild</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_ninja.html"><li class="list-can-expand">vcpkg_build_ninja</li></a>
@@ -170,6 +172,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_msbuild.html"><li class="list-can-expand">vcpkg_install_msbuild</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_nmake.html"><li class="list-can-expand">vcpkg_install_nmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_qmake.html"><li class="list-can-expand">vcpkg_install_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_list.html"><li class="list-can-expand">vcpkg_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_minimum_required.html"><li class="list-can-expand">vcpkg_minimum_required</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_replace_string.html"><li class="list-can-expand">vcpkg_replace_string</li></a>
 </ul>
@@ -189,16 +192,18 @@
 <li class="list-can-expand"><button class="button-list-can-expand">users</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">android</li></a>
+<a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">assetcaching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Config Environment</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
 <a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">integration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">manifests</li></a>
+<a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">mingw</li></a>
+<a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">registries</li></a>
 <a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
 <a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/users/versioning.implementation-details.html"><li class="list-can-expand">Versioning.implementation Details</li></a>
 <a class="doc-outline-link" href="/en/docs/users/versioning.html"><li class="list-can-expand">versioning</li></a>
-<a class="doc-outline-link" href="/en/docs/users/versioning.reference.html"><li class="list-can-expand">versioning.reference</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/README.html"><li class="list-can-expand">README</li></a>
 </ul>
@@ -206,7 +211,8 @@
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="control-files">CONTROL files</h1>
 <p><strong>CONTROL files are retained for backwards compatibility with earlier versions of vcpkg;
-all new features are added only to <a href="manifests.html">vcpkg.json</a>, and we recommend using vcpkg.json for any newly authored port.</strong></p>
+all new features are added only to <a href="manifest-files.html">vcpkg.json manifest files</a>, and we recommend using vcpkg.json for any newly authored port.
+Use <code>./vcpkg format-manifest ports/&lt;portname&gt;/CONTROL</code> to convert an existing CONTROL file to a vcpkg.json file.</strong></p>
 <p>The <code>CONTROL</code> file contains metadata about the port.  The syntax is based on <a href="https://www.debian.org/doc/debian-policy/ch-controlfields.html">the Debian <code>control</code> format</a> although we only support the subset of fields documented here.</p>
 <p>Field names are case-sensitive and start the line without leading whitespace.  Paragraphs are separated by one or more empty lines.</p>
 <h2 id="source-paragraph">Source Paragraph</h2>
@@ -269,7 +275,7 @@ Port-Version: 2</code></pre>
 <p>Comma separated list of vcpkg ports the library has a dependency on.</p>
 <p>vcpkg does not distinguish between build-only dependencies and runtime dependencies. The complete list of dependencies needed to successfully use the library should be specified.</p>
 <p><em>For example: websocketpp is a header only library, and thus does not require any dependencies at install time. However, downstream users need boost and openssl to make use of the library. Therefore, websocketpp lists boost and openssl as dependencies</em></p>
-<p>If the port is dependent on optional features of another library those can be specified using the <code>portname[featurelist]</code> syntax. If the port does not require any features from the dependency, this should be specifed as <code>portname[core]</code>.</p>
+<p>If the port is dependent on optional features of another library those can be specified using the <code>portname[featurelist]</code> syntax. If the port does not require any features from the dependency, this should be specified as <code>portname[core]</code>.</p>
 <p>Dependencies can be filtered based on the target triplet to support differing requirements. These filters use the same syntax as the Supports field below and are surrounded in parentheses following the portname and feature list.</p>
 <h5 id="example">Example:</h5>
 <pre><code class="no-highlight language-no-highlight">Build-Depends: rapidjson, curl[core,openssl] (!windows), curl[core,winssl] (windows)</code></pre>
@@ -291,6 +297,7 @@ Port-Version: 2</code></pre>
 </ul>
 <p>The predefined expressions are computed from standard triplet settings:</p>
 <ul>
+<li><code>native</code> - <code>TARGET_TRIPLET</code> == <code>HOST_TRIPLET</code></li>
 <li><code>x64</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"x64"</code></li>
 <li><code>x86</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"x86"</code></li>
 <li><code>arm</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"arm"</code> or <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"arm64"</code></li>

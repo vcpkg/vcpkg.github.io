@@ -1,0 +1,496 @@
+﻿<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/styles/default.min.css">
+    
+        <!-- our style sheet and fonts -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script type="text/javascript"
+          src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+        </script>
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/cmake.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/powershell.min.js"></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/documentation.js"></script>
+        <script src="/dist/common.js"></script>
+        <script src="/dist/getting-started.js"></script>
+    <script>
+        $(document).ready(function () {
+          handleDefaultTreeViewExpand(" > docs > maintainers > registries.md");
+          $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
+          $('#loadFooter').load('/en/footer.html');
+          
+        });
+      </script>
+    
+    </head>
+    <div id="loadNavBar"></div>
+    <div class="page">
+    <nav class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+<ul class=docs-navigation><li class="list-can-expand"><button class="button-list-can-expand">about</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">faq</li></a>
+<a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">privacy</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">examples</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing And Using Packages</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode Cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Modify Baseline To Pin Old Boost</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay Triplets Linux Dynamic</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging Zipfiles</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">patching</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/versioning.getting-started.html"><li class="list-can-expand">Get Started with Versioning</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">maintainers</button></li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><button class="button-list-can-expand">internal</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html"><li class="list-can-expand">vcpkg_internal_get_cmake_vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">ports</button></li>
+<ul class="collapse standard-padding">
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake Config</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">vcpkg Pkgconfig Get Modules</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg Cmake Config</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg Cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg Pkgconfig Get Modules</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">Cmake Guidelines</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">Control Files</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guide</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest Files</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Functions</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">Pr Review Checklist</li></a>
+<li class="list-can-expand"><span id="currentPath">registries</span></li>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_msbuild.html"><li class="list-can-expand">vcpkg_build_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_ninja.html"><li class="list-can-expand">vcpkg_build_ninja</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_nmake.html"><li class="list-can-expand">vcpkg_build_nmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_qmake.html"><li class="list-can-expand">vcpkg_build_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_features.html"><li class="list-can-expand">vcpkg_check_features</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_make.html"><li class="list-can-expand">vcpkg_configure_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_meson.html"><li class="list-can-expand">vcpkg_configure_meson</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_qmake.html"><li class="list-can-expand">vcpkg_configure_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_pdbs.html"><li class="list-can-expand">vcpkg_copy_pdbs</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_tools.html"><li class="list-can-expand">vcpkg_copy_tools</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html"><li class="list-can-expand">vcpkg_copy_tool_dependencies</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_download_distfile.html"><li class="list-can-expand">vcpkg_download_distfile</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_build_process.html"><li class="list-can-expand">vcpkg_execute_build_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html"><li class="list-can-expand">vcpkg_execute_in_download_mode</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_required_process.html"><li class="list-can-expand">vcpkg_execute_required_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html"><li class="list-can-expand">vcpkg_execute_required_process_repeat</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_extract_source_archive.html"><li class="list-can-expand">vcpkg_extract_source_archive</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html"><li class="list-can-expand">vcpkg_extract_source_archive_ex</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fail_port_install.html"><li class="list-can-expand">vcpkg_fail_port_install</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_find_acquire_program.html"><li class="list-can-expand">vcpkg_find_acquire_program</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_find_fortran.html"><li class="list-can-expand">vcpkg_find_fortran</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html"><li class="list-can-expand">vcpkg_fixup_cmake_targets</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html"><li class="list-can-expand">vcpkg_fixup_pkgconfig</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_bitbucket.html"><li class="list-can-expand">vcpkg_from_bitbucket</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_git.html"><li class="list-can-expand">vcpkg_from_git</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_github.html"><li class="list-can-expand">vcpkg_from_github</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_gitlab.html"><li class="list-can-expand">vcpkg_from_gitlab</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_msbuild.html"><li class="list-can-expand">vcpkg_install_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_nmake.html"><li class="list-can-expand">vcpkg_install_nmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_qmake.html"><li class="list-can-expand">vcpkg_install_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_list.html"><li class="list-can-expand">vcpkg_list</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_minimum_required.html"><li class="list-can-expand">vcpkg_minimum_required</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_replace_string.html"><li class="list-can-expand">vcpkg_replace_string</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">specifications</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/specifications/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/export-command.html"><li class="list-can-expand">Export Command</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/feature-packages.html"><li class="list-can-expand">Feature Packages</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/manifests.html"><li class="list-can-expand">manifests</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/ports-overlay.html"><li class="list-can-expand">Ports Overlay</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/prefab.html"><li class="list-can-expand">prefab</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/registries-2.html"><li class="list-can-expand">Registries 2</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/registries.html"><li class="list-can-expand">registries</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/scripts-extraction.html"><li class="list-can-expand">Scripts Extraction</li></a>
+<a class="doc-outline-link" href="/en/docs/specifications/versioning.html"><li class="list-can-expand">versioning</li></a>
+</ul>
+<li class="list-can-expand"><button class="button-list-can-expand">users</button></li>
+<ul class="collapse standard-padding">
+<a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">android</li></a>
+<a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">assetcaching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">binarycaching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Config Environment</li></a>
+<a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
+<a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">manifests</li></a>
+<a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">mingw</li></a>
+<a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">registries</li></a>
+<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
+<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">triplets</li></a>
+<a class="doc-outline-link" href="/en/docs/users/versioning.implementation-details.html"><li class="list-can-expand">Versioning.implementation Details</li></a>
+<a class="doc-outline-link" href="/en/docs/users/versioning.html"><li class="list-can-expand">versioning</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/README.html"><li class="list-can-expand">README</li></a>
+</ul>
+</nav><main class="right-side" id="main">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="creating-registries">Creating Registries</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/maintainers/registries.md">GitHub</a>.</strong></p>
+<p>There are two parts to using registries; this documents the creation side of
+the relationship. In order to learn more about using registries that others
+have created, please read <a href="../users/registries.html">this documentation</a>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#creating-registries">Creating Registries</a><ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#git-registries">Git Registries</a><ul>
+<li><a href="#adding-a-new-version">Adding a New Version</a></li></ul></li>
+<li><a href="#filesystem-registries">Filesystem Registries</a><ul>
+<li><a href="#adding-a-new-version-1">Adding a New Version</a></li></ul></li></ul></li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>Registries are collections of ports and their versions. There are two major
+choices of implementation for registries, if you want to create your own -
+git registries, and filesystem registries.</p>
+<p>Git registries are simple git repositories, and can be shared publicly or
+privately via normal mechanisms for git repositories. The vcpkg repository at
+<a href="https://github.com/microsoft/vcpkg">https://github.com/microsoft/vcpkg</a>, for example, is a git registry.</p>
+<p>Filesystem registries are designed as more of a testing ground. Given that they
+literally live on your filesystem, the only way to share them is via shared
+directories. However, filesystem registries can be useful as a way to represent
+registries held in non-git version control systems, assuming one has some way
+to get the registry onto the disk.</p>
+<p>Note that we expect the set of registry types to grow over time; if you would
+like support for registries built in your favorite public version control
+system, don't hesitate to open a PR.</p>
+<p>The basic structure of a registry is:</p>
+<ul>
+<li>The set of versions that are considered "latest" at certain times in history,
+known as the "baseline".</li>
+<li>The set of all the versions of all the ports, and where to find each of
+these in the registry.</li>
+</ul>
+<h3 id="git-registries">Git Registries</h3>
+<p>As you're following along with this documentation, it may be helpful to have
+a working example to refer to. We've written one and put it here:
+<a href="https://github.com/northwindtraders/vcpkg-registry">https://github.com/northwindtraders/vcpkg-registry</a>.</p>
+<p>All git registries must have a <code>versions/baseline.json</code> file. This file
+contains the set of "latest versions" at a certain commit. It is laid out as
+a top-level object containing only the <code>"default"</code> field. This field should
+contain an object mapping port names to the version which is currently the
+latest.</p>
+<p>Here's an example of a valid baseline.json:</p>
+<pre><code class="json language-json">{
+  "default": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  }
+}</code></pre>
+<p>The <code>versions</code> directory contains all the information about which versions of
+which packages are contained in the registry, along with where those versions
+are stored. The rest of the registry just acts as a backing store, as far as
+vcpkg is concerned: only things inside the <code>versions</code> directory will be used
+to direct how your registry is seen by vcpkg.</p>
+<p>Each port in a registry should exist in the versions directory as
+<code>&lt;first letter of port&gt;-/&lt;name of port&gt;.json</code>; in other words, the
+information about the <code>kitten</code> port would be located in
+<code>versions/k-/kitten.json</code>. This should be a top-level object with only a
+single field: <code>"versions"</code>. This field should contain an array of version 
+objects:</p>
+<ul>
+<li>The version of the port in question; should be exactly the same as the
+<code>vcpkg.json</code> file, including the version fields and <code>"port-version"</code>.</li>
+<li>The <code>"git-tree"</code> field, which is a git tree; in other words, what you get
+when you write <code>git rev-parse COMMIT-ID:path/to/port</code>.</li>
+</ul>
+<p>Note that the version fields for ports with <code>CONTROL</code> files, is 
+<code>"version-string"</code>; we do not recommend using <code>CONTROL</code> files in new
+registries, however.</p>
+<p><em>WARNING</em>: One very important part of registries is that versions should
+<em>never</em> be changed. Updating to a later ref should never remove or change an
+existing version. It must always be safe to update a registry.</p>
+<p>Here's an example of a valid version database for a <code>kitten</code> port with one 
+version:</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "git-tree": "67d60699c271b7716279fdea5a5c6543929eb90e"
+    }
+  ]
+}</code></pre>
+<p>In general, it's not important where you place port directories. However, the
+idiom in vcpkg is to follow what the built in vcpkg registry does: your 
+<code>kitten</code> port should be placed in <code>ports/kitten</code>.</p>
+<p><em>WARNING</em>: One other thing to keep in mind is that when you update a registry,
+all previous versions should also be accessible. Since your user will set their
+baseline to a commit ID, that commit ID must always exist, and be accessible
+from your HEAD commit, which is what is actually fetched. This means that your
+HEAD commit should be a child of all previous HEAD commits.</p>
+<h4 id="adding-a-new-version">Adding a New Version</h4>
+<p>There is some git trickery involved in creating a new version of a port. The
+first thing to do is make some changes, update the <code>"port-version"</code> and regular
+version field as you need to, and then test with <code>overlay-ports</code>:
+<code>vcpkg install kitten --overlay-ports=ports/kitten</code>.</p>
+<p>Once you've finished your testing, you'll need to make sure that the directory
+as it is is under git's purview. You'll do this by creating a temporary commit:</p>
+<pre><code class="pwsh language-pwsh">&gt; git add ports/kitten
+&gt; git commit -m 'temporary commit'</code></pre>
+<p>Then, get the git tree ID of the directory:</p>
+<pre><code class="pwsh language-pwsh">&gt; git rev-parse HEAD:ports/kitten
+73ad3c823ef701c37421b450a34271d6beaf7b07</code></pre>
+<p>Then, you can add this version to the versions database. At the top of your
+<code>versions/k-/kitten.json</code>, you can add (assuming you're adding version
+<code>2.6.3#0</code>):</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.3",
+      "port-version": 0,
+      "git-tree": "73ad3c823ef701c37421b450a34271d6beaf7b07"
+    },
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "git-tree": "67d60699c271b7716279fdea5a5c6543929eb90e"
+    }
+  ]
+}</code></pre>
+<p>then, you'll want to modify your <code>versions/baseline.json</code> with your new version 
+as well:</p>
+<pre><code class="json language-json">{
+  "default": {
+    "kitten": {
+      "baseline": "2.6.3",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  }
+}</code></pre>
+<p>and amend your current commit:</p>
+<pre><code class="pwsh language-pwsh">&gt; git commit --amend</code></pre>
+<p>then share away!</p>
+<h3 id="filesystem-registries">Filesystem Registries</h3>
+<p>As you're following along with this documentation, it may be helpful to have
+a working example to refer to. We've written one and put it here:
+<a href="https://github.com/vcpkg/example-filesystem-registry">https://github.com/vcpkg/example-filesystem-registry</a>.</p>
+<p>All filesystem registries must have a <code>versions/baseline.json</code> file. This file
+contains the set of "latest versions" for a certain version of the registry.
+It is laid out as a top-level object containing a map from version name to
+"baseline objects", which map port names to the version which is considered
+"latest" for that version of the registry.</p>
+<p>Filesystem registries need to decide on a versioning scheme. Unlike git 
+registries, which have the implicit versioning scheme of refs, filesystem
+registries can't rely on the version control system here. One possible option
+is to do a daily release, and have your "versions" be dates.</p>
+<p><em>WARNING</em>: A baseline must always refer to the same set of versions. If you
+want to add new versions, you need to create a new version of the registry in
+the <code>baseline.json</code> file.</p>
+<p>Here's an example of a valid <code>baseline.json</code>, for a registry that has decided
+upon dates for their versions:</p>
+<pre><code class="json language-json">{
+  "2021-04-16": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  },
+  "2021-04-15": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 1
+    }
+  }
+}</code></pre>
+<p>The <code>versions</code> directory contains all the information about which versions of
+which packages are contained in the registry, along with where those versions
+are stored. The rest of the registry just acts as a backing store, as far as
+vcpkg is concerned: only things inside the <code>versions</code> directory will be used
+to direct how your registry is seen by vcpkg.</p>
+<p>Each port in a registry should exist in the versions directory as
+<code>&lt;first letter of port&gt;-/&lt;name of port&gt;.json</code>; in other words, the
+information about the <code>kitten</code> port would be located in
+<code>versions/k-/kitten.json</code>. This should be a top-level object with only a
+single field: <code>"versions"</code>. This field should contain an array of version 
+objects:</p>
+<ul>
+<li>The version of the port in question; should be exactly the same as the
+<code>vcpkg.json</code> file, including the version fields and <code>"port-version"</code>.</li>
+<li>The <code>"path"</code> field: a relative directory, rooted at the base of the registry
+(in other words, the directory where <code>versions</code> is located), to the port 
+directory. It should look something like <code>"$/path/to/port/dir</code>"</li>
+</ul>
+<p>Note that the version fields for ports with <code>CONTROL</code> files, is 
+<code>"version-string"</code>; we do not recommend using <code>CONTROL</code> files in new
+registries, however.</p>
+<p>In general, it's not important where you place port directories. However, the
+idiom in vcpkg is to follow somewhat closely to what the built in vcpkg
+registry does: your <code>kitten</code> port at version <code>x.y.z</code> should be placed in
+<code>ports/kitten/x.y.z</code>, with port versions appended as you see fit (although
+since <code>#</code> is not a good character to use for file names, perhaps use <code>_</code>).</p>
+<p><em>WARNING</em>: One very important part of registries is that versions should
+<em>never</em> be changed. One should never remove or change an existing version.
+Your changes to your registry shouldn't change behavior to downstream users.</p>
+<p>Here's an example of a valid version database for a <code>kitten</code> port with one 
+version:</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "path": "$/ports/kitten/2.6.2_0"
+    }
+  ]
+}</code></pre>
+<h4 id="adding-a-new-version-1">Adding a New Version</h4>
+<p>Unlike git registries, adding a new version to a filesystem registry mostly
+involves a lot of copying. The first thing to do is to copy the latest
+version of your port into a new version directory, update the version and
+<code>"port-version"</code> fields as you need to, and then test with <code>overlay-ports</code>:
+<code>vcpkg install kitten --overlay-ports=ports/kitten/new-version</code>.</p>
+<p>Once you've finished your testing, you can add this new version to the top of
+your <code>versions/k-/kitten.json</code>:</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.3",
+      "port-version": 0,
+      "path": "$/ports/kitten/2.6.3_0"
+    },
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "path": "$/ports/kitten/2.6.2_0"
+    }
+  ]
+}</code></pre>
+<p>then, you'll want to modify your <code>versions/baseline.json</code> with your new version 
+as well (remember not to modify existing baselines):</p>
+<pre><code class="json language-json">{
+  "2021-04-17": {
+    "kitten": {
+      "baseline": "2.6.3",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  },
+  "2021-04-16": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  },
+  "2021-04-15": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 1
+    }
+  }
+}</code></pre>
+<p>and you're done!</p>
+</main></div><div id="loadFooter"></div></html>
