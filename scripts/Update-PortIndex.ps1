@@ -2,7 +2,7 @@
 
 [CmdletBinding(PositionalBinding=$False)]
 Param(
-    [Parameter(ParameterSetName='UseLocalVcpkg')]
+    [Parameter(Mandatory, ParameterSetName='UseLocalVcpkg')]
     [Parameter(ParameterSetName='GetVcpkgUpstream')]
     [String]$Directory = "$PSScriptRoot/../vcpkg",
 
