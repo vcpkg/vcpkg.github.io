@@ -43,7 +43,7 @@
         <script src="/dist/getting-started.js"></script>
     <script>
         $(document).ready(function () {
-          handleDefaultTreeViewExpand(" > docs > maintainers > pr-review-checklist.md");
+          handleDefaultTreeViewExpand(" > docs > users > mingw.md");
           $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
           $('#loadFooter').load('/en/footer.html');
           
@@ -121,7 +121,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guide</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest Files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Functions</li></a>
-<li class="list-can-expand"><span id="currentPath">Pr Review Checklist</span></li>
+<a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">Pr Review Checklist</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/registries.html"><li class="list-can-expand">registries</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
@@ -198,7 +198,7 @@
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
 <a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">integration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">manifests</li></a>
-<a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">mingw</li></a>
+<li class="list-can-expand"><span id="currentPath">mingw</span></li>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">registries</li></a>
 <a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
 <a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">triplets</li></a>
@@ -209,72 +209,153 @@
 </ul>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg-pr-checklist">vcpkg PR Checklist</h1>
-<p>Revision: 1</p>
-<h2 id="overview">Overview</h2>
-<p>This document provides an annotated checklist which vcpkg team members use to apply the "reviewed" label on incoming pull requests. If a pull request violates any of these points, we may ask contributors to make necessary changes before we can merge the changeset.</p>
-<p>Feel free to create an issue or pull request if you feel that this checklist can be improved. Please increment the revision number when modifying the checklist content.</p>
-<h2 id="checklist">Checklist</h2>
-<p>You can link any of these checklist items in a GitHub comment by copying the link address attached to each item code.</p>
-<p><details id="c000001">
-<summary><a href="#c000001">c000001</a>: No deprecated helper functions are used</summary></p>
-<p>See our <a href="maintainer-guide.html#Avoid-deprecated-helper-functions">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000002">
-<summary><a href="#c000002">c000002</a>: <code>"port-version"</code> field is updated</summary></p>
-<p>See our <a href="maintainer-guide.html#versioning">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000003">
-<summary><a href="#c000003">c000003</a>: New ports contain a <code>"description"</code> field written in English</summary></p>
-<p>A description only one or a few sentences long is helpful. Consider using the library's official description from their <code>README.md</code> or similar if possible. Automatic translations are acceptable and we are happy to clean up translations to English for our contributors.</p>
-<p>See our <a href="manifest-files.html#description">manifest file documentation</a> for more information.</p>
-<p></details></p>
-<p><details id="c000004">
-<summary><a href="#c000004">c000004</a>: No unnecessary comments are present in the changeset</summary></p>
-<p>See our <a href="maintainer-guide.html#Avoid-excessive-comments-in-portfiles">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000005">
-<summary><a href="#c000005">c000005</a>: Downloaded archives are versioned if available&lt;/summary</p>
-<p>To ensure archive content does not change, archives downloaded preferably have an associated version tag that can be incremented alongside the port's <code>"version"</code>.</p>
-<p></details></p>
-<p><details id="c000006">
-<summary><a href="#c000006">c000006</a>: New ports pass CI checks for triplets that the library officially supports</summary></p>
-<p>To ensure vcpkg ports are of a high quality, we ask that incoming ports support the official platforms for the library in question.</p>
-<p></details></p>
-<p><details id="c000007">
-<summary><a href="#c000007">c000007</a>: Patches fix issues that are vcpkg-specific only</summary></p>
-<p>If possible, patches to the library source code should be upstreamed to the library's official repository. Opening up a pull request on the library's repository will help to improve the library for everyone, not just vcpkg users.</p>
-<p></details></p>
-<p><details id="c000008">
-<summary><a href="#c000008">c000008</a>: New ports download source code from the official source if available</summary></p>
-<p>To respect library authors and keep code secure, please have ports download source code from the official source. We may make exceptions if the original source code is not available and there is substantial community interest in maintaining the library in question.</p>
-<p></details></p>
-<p><details id="c000009">
-<summary><a href="#c000009">c000009</a>: Ports and port features are named correctly</summary></p>
-<p>For user accessibility, we prefer names of ports and port features to be intuitive and close to their counterparts in official sources and other package managers. If you are unsure about the naming of a port or port feature, we recommend checking repology.org, packages.ubuntu.com, or searching for additional information using a search engine. We can also help our contributors with this, so feel free to ask for naming suggestions if you are unsure.</p>
-<p></details></p>
-<p><details id="c000010">
-<summary><a href="#c000010">c000010</a>: Library targets are exported when appropriate</summary></p>
-<p>To provide users with a seamless build system integration, please be sure to export and provide a means of finding the library targets intended to be used downstream. Targets not meant to be exported should be be marked private and not exported.</p>
-<p></details></p>
-<p><details id="c000011">
-<summary><a href="#c000011">c000011</a>: Ports do not use applications which modify the user's system</summary></p>
-<p>Ports should uphold vcpkg's contract of not modifying the user's system by avoiding applications which do so. Examples of these applications are <code>sudo</code>, <code>apt</code>, <code>brew</code>, or <code>pip</code>. Please use an alternative to these types of programs wherever possible.</p>
-<p></details></p>
-<p><details id="c000012">
-<summary><a href="#c000012">c000012</a>: Ports with system dependencies include an information message during installation</summary></p>
-<p>Some ports have library and tool dependencies that do not exist within vcpkg. For these missing dependencies, we ask that contributors add a message to the top of the port's <code>portfile.cmake</code> stating the missing dependencies and how to acquire them. We ask that the message is displayed before any major work is done to ensure that users can "early out" of the installation process as soon as possible in case they are missing the dependency.</p>
-<p>Example:</p>
-<pre><code class="cmake language-cmake">message(
-"${PORT} currently requires the following libraries from the system package manager:
-    autoconf libtool
-These can be installed on Ubuntu systems via sudo apt install autoconf libtool"
-)</code></pre>
-<p></details></p>
-<p><details id="c000013">
-<summary><a href="#c000013">c000013</a>: Manifest files are used instead of CONTROL files for new ports</summary></p>
-<p>Many existing ports use the CONTROL file syntax; while this syntax will be supported for some time to come,
-new ports should not use these. Any newly added port <em>must</em> use the manifest files.</p>
-<p>We also recommend, when significant modifications are made to ports, that one switches to manifest files;
-however, this is not required. You may find <code>vcpkg format-manifest</code> useful.</p>
+<h1 id="vcpkg-and-mingw-w64">vcpkg and Mingw-w64</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/mingw.md">GitHub</a>.</strong></p>
+<p><em>MinGW is community-supported and not tested as part of vcpkg repository's CI process.</em></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#Mingw-w64-community-triplets">Mingw-w64 community triplets</a></li>
+<li><a href="#Using-Mingw-w64-natively-on-Windows">Using Mingw-w64 natively on Windows</a><ul>
+<li><a href="#How-to-avoid-mixing-different-installations">How to avoid mixing different installations</a></li></ul></li>
+<li><a href="#Using-Mingw-w64-to-build-Windows-programs-on-other-systems">Using Mingw-w64 to build Windows programs on other systems</a></li>
+</ul>
+<h2 id="mingw-w64-community-triplets">Mingw-w64 community triplets</h2>
+<p>vcpkg includes
+<a href="https://github.com/microsoft/vcpkg/tree/master/triplets/community">x64, x86, arm64 and arm community triplets</a>
+for <a href="http://mingw-w64.org/">Mingw-w64</a>. They don't depend on Visual Studio and
+can be used natively on Windows as well as for cross-compiling on
+other operating systems. There are two variants of each triplet,
+selecting between static and dynamic linking. The actual tools
+(g++ etc.) are expected to be named with particular prefixes.</p>
+<table>
+<thead>
+<tr>
+<th id="architecture">architecture</th>
+<th id="vcpkg_community_triplets">vcpkg community triplets</th>
+<th id="tool_name_prefix">tool name prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x64</td>
+<td>x64-mingw-dynamic, x64-mingw-static</td>
+<td>x86_64-w64-mingw32-</td>
+</tr>
+<tr>
+<td>x86</td>
+<td>x86-mingw-dynamic, x86-mingw-static</td>
+<td>i686-w64-mingw32-</td>
+</tr>
+<tr>
+<td>arm64</td>
+<td>arm64-mingw-dynamic, arm64-mingw-static</td>
+<td>aarch64-w64-mingw32-</td>
+</tr>
+<tr>
+<td>arm</td>
+<td>arm-mingw-dynamic, arm-mingw-static</td>
+<td>armv7-w64-mingw32-</td>
+</tr>
+</tbody>
+</table>
+<p>These triplets are not tested by continuous integration, so many ports
+do not build, and even existing ports may break on port updates.
+Because of this, community involvement is paramount!</p>
+<ul>
+<li><a href="https://github.com/microsoft/vcpkg/discussions?discussions_q=mingw">Discussions</a></li>
+<li><a href="https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+mingw">Open issues</a></li>
+<li><a href="https://github.com/microsoft/vcpkg/pulls?q=is%3Apr+is%3Aopen+mingw">Open pull requests</a></li>
+</ul>
+<h2 id="using-mingw-w64-natively-on-windows">Using Mingw-w64 natively on Windows</h2>
+<p>With <a href="https://www.msys2.org/">MSYS2</a>, it is possible to easily create
+a full environment for building ports with Mingw-w64 on a Windows PC.</p>
+<p>Note that for building software for native windows environments, you
+must use a mingw subsystem of MSYS2, and install some packages 
+(with a specific prefix) for this subsystem.</p>
+<table>
+<thead>
+<tr>
+<th id="architecture">architecture</th>
+<th id="vcpkg_triplets">vcpkg triplets</th>
+<th id="subsystem">subsystem</th>
+<th id="package_prefix">package prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x64</td>
+<td>x64-mingw-dynamic, x64-mingw-static</td>
+<td>mingw64</td>
+<td>mingw-w64-x86_64-</td>
+</tr>
+<tr>
+<td>x86</td>
+<td>x86-mingw-dynamic, x86-mingw-static</td>
+<td>mingw32</td>
+<td>mingw-w64-i686-</td>
+</tr>
+</tbody>
+</table>
+<p>After the basic installation of MSYS2, you will need to install a few
+additional packages for software development, e.g. for x64:</p>
+<pre><code class="bash language-bash">pacman -S --needed git base-devel mingw-w64-x86_64-toolchain</code></pre>
+<p>The active subsystem is selected by running the MSYS2 MinGW app, or
+changed in a running terminal by</p>
+<pre><code class="bash language-bash">source shell mingw64   # for x64, or "mingw32" for x86</code></pre>
+<p>The bootstrapping of vcpkg shall be done by running bootstrap-vcpkg.bat.
+This will download the official vcpkg.exe.</p>
+<pre><code class="bash language-bash">git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.bat</code></pre>
+<p>For building packages, you need to tell vcpkg that you want to use the
+mingw triplet. This can be done in different ways. When Visual Studio
+is not installed, you must also set the host triplet to mingw. This is
+needed to resolve host dependencies. For convenience, you can use
+environment variables to set both triplets:</p>
+<pre><code class="bash language-bash">export VCPKG_DEFAULT_TRIPLET=x64-mingw-dynamic
+export VCPKG_DEFAULT_HOST_TRIPLET=x64-mingw-dynamic</code></pre>
+<p>Now you can test your setup:</p>
+<pre><code class="bash language-bash">./vcpkg install zlib</code></pre>
+<h3 id="how-to-avoid-mixing-different-installations">How to avoid mixing different installations</h3>
+<p><a href="https://www.msys2.org/wiki/MSYS2-introduction/#path">The MSYS2 project explicitly warns</a>
+that "mixing in programs from other MSYS2 installations, Cygwin installations,
+compiler toolchains or even various other programs is not supported and will
+probably break things in unexpected ways." For example, the proper passing of
+command line arguments with quoting and escaping may fail.</p>
+<p>But vcpkg ports implicitly create MSYS2 installations, e.g. for <code>pkg-config</code>
+and for various other build tools needed to deal with packages based on
+autoconf. In particular, when ports prepend the directory of tools to the
+<code>PATH</code> environment variable, this may change which tool with a particular
+name is actually invoked, and how arguments are passed between tools.</p>
+<p>To mitigate such issues when working with a full MSYS2 installation,
+try to keep the directories of the msys subsystem (<code>/usr/bin</code>, <code>bin</code>)
+out of the <code>PATH</code> environment variable as found by vcpkg. In bash, you
+may modify the <code>PATH</code> just for a single call of vcpkg:</p>
+<pre><code class="bash language-bash">PATH="${PATH/:\/usr\/bin:\/bin:/:}" ./vcpkg install libpq</code></pre>
+<p>Alternatively, you may run vcpkg from a regular Command Prompt, after
+adding <em>only</em> the desired mingw directory (e.g. <code>C:\msys64\mingw64\bin</code>)
+to the <code>PATH</code>.</p>
+<p>When using vcpkg for CI with standard images on Azure Pipelines, Github Actions
+or similar, note that the default <code>PATH</code> might contain more directories
+which create a mix of MSYS2 programs from different installations. You may
+want to set the desired <code>PATH</code> manually, or remove directories which contain
+<code>sh.exe</code>, <code>bash.exe</code>, <code>msys-2.0.dll</code> or <code>cygwin1.dll</code>.</p>
+<h2 id="using-mingw-w64-to-build-windows-programs-on-other-systems">Using Mingw-w64 to build Windows programs on other systems</h2>
+<p>You can use the vcpkg mingw community triplets with toolchains on
+non-Windows computers to cross-compile software to be run on Windows.
+Many Linux distributions offer such toolchains in optional packages
+with a mingw-w64 <a href="https://repology.org/projects/?search=-mingw-w64">suffix</a>
+or <a href="https://repology.org/projects/?search=mingw-w64-">prefix</a>.
+As an example, for Debian-based distributions, you would start with
+this installation command for the x64 toolchain:</p>
+<pre><code>sudo apt-get install gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64</code></pre>
+<p>Note that the packaged versions of Mingw-w64 toolchains on Linux distributions
+might be older releases which lack some useful features or bug fixes.
+An alternative independent toolchain is offered by <a href="https://mxe.cc/">MXE</a>.</p>
+<p>For vcpkg bootstrapping, clone the github repository and run the
+<code>bootstrap-vcpkg.sh</code> script:</p>
+<pre><code class="bash language-bash">git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.sh
+./vcpkg install zlib:x64-mingw-dynamic</code></pre>
 </main></div><div id="loadFooter"></div></html>

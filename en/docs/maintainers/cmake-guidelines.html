@@ -43,7 +43,7 @@
         <script src="/dist/getting-started.js"></script>
     <script>
         $(document).ready(function () {
-          handleDefaultTreeViewExpand(" > docs > maintainers > pr-review-checklist.md");
+          handleDefaultTreeViewExpand(" > docs > maintainers > cmake-guidelines.md");
           $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
           $('#loadFooter').load('/en/footer.html');
           
@@ -115,13 +115,13 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg Cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg Pkgconfig Get Modules</li></a>
 </ul>
-<a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">Cmake Guidelines</li></a>
+<li class="list-can-expand"><span id="currentPath">Cmake Guidelines</span></li>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">Control Files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guide</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest Files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Functions</li></a>
-<li class="list-can-expand"><span id="currentPath">Pr Review Checklist</span></li>
+<a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">Pr Review Checklist</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/registries.html"><li class="list-can-expand">registries</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
@@ -209,72 +209,128 @@
 </ul>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg-pr-checklist">vcpkg PR Checklist</h1>
-<p>Revision: 1</p>
-<h2 id="overview">Overview</h2>
-<p>This document provides an annotated checklist which vcpkg team members use to apply the "reviewed" label on incoming pull requests. If a pull request violates any of these points, we may ask contributors to make necessary changes before we can merge the changeset.</p>
-<p>Feel free to create an issue or pull request if you feel that this checklist can be improved. Please increment the revision number when modifying the checklist content.</p>
-<h2 id="checklist">Checklist</h2>
-<p>You can link any of these checklist items in a GitHub comment by copying the link address attached to each item code.</p>
-<p><details id="c000001">
-<summary><a href="#c000001">c000001</a>: No deprecated helper functions are used</summary></p>
-<p>See our <a href="maintainer-guide.html#Avoid-deprecated-helper-functions">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000002">
-<summary><a href="#c000002">c000002</a>: <code>"port-version"</code> field is updated</summary></p>
-<p>See our <a href="maintainer-guide.html#versioning">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000003">
-<summary><a href="#c000003">c000003</a>: New ports contain a <code>"description"</code> field written in English</summary></p>
-<p>A description only one or a few sentences long is helpful. Consider using the library's official description from their <code>README.md</code> or similar if possible. Automatic translations are acceptable and we are happy to clean up translations to English for our contributors.</p>
-<p>See our <a href="manifest-files.html#description">manifest file documentation</a> for more information.</p>
-<p></details></p>
-<p><details id="c000004">
-<summary><a href="#c000004">c000004</a>: No unnecessary comments are present in the changeset</summary></p>
-<p>See our <a href="maintainer-guide.html#Avoid-excessive-comments-in-portfiles">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000005">
-<summary><a href="#c000005">c000005</a>: Downloaded archives are versioned if available&lt;/summary</p>
-<p>To ensure archive content does not change, archives downloaded preferably have an associated version tag that can be incremented alongside the port's <code>"version"</code>.</p>
-<p></details></p>
-<p><details id="c000006">
-<summary><a href="#c000006">c000006</a>: New ports pass CI checks for triplets that the library officially supports</summary></p>
-<p>To ensure vcpkg ports are of a high quality, we ask that incoming ports support the official platforms for the library in question.</p>
-<p></details></p>
-<p><details id="c000007">
-<summary><a href="#c000007">c000007</a>: Patches fix issues that are vcpkg-specific only</summary></p>
-<p>If possible, patches to the library source code should be upstreamed to the library's official repository. Opening up a pull request on the library's repository will help to improve the library for everyone, not just vcpkg users.</p>
-<p></details></p>
-<p><details id="c000008">
-<summary><a href="#c000008">c000008</a>: New ports download source code from the official source if available</summary></p>
-<p>To respect library authors and keep code secure, please have ports download source code from the official source. We may make exceptions if the original source code is not available and there is substantial community interest in maintaining the library in question.</p>
-<p></details></p>
-<p><details id="c000009">
-<summary><a href="#c000009">c000009</a>: Ports and port features are named correctly</summary></p>
-<p>For user accessibility, we prefer names of ports and port features to be intuitive and close to their counterparts in official sources and other package managers. If you are unsure about the naming of a port or port feature, we recommend checking repology.org, packages.ubuntu.com, or searching for additional information using a search engine. We can also help our contributors with this, so feel free to ask for naming suggestions if you are unsure.</p>
-<p></details></p>
-<p><details id="c000010">
-<summary><a href="#c000010">c000010</a>: Library targets are exported when appropriate</summary></p>
-<p>To provide users with a seamless build system integration, please be sure to export and provide a means of finding the library targets intended to be used downstream. Targets not meant to be exported should be be marked private and not exported.</p>
-<p></details></p>
-<p><details id="c000011">
-<summary><a href="#c000011">c000011</a>: Ports do not use applications which modify the user's system</summary></p>
-<p>Ports should uphold vcpkg's contract of not modifying the user's system by avoiding applications which do so. Examples of these applications are <code>sudo</code>, <code>apt</code>, <code>brew</code>, or <code>pip</code>. Please use an alternative to these types of programs wherever possible.</p>
-<p></details></p>
-<p><details id="c000012">
-<summary><a href="#c000012">c000012</a>: Ports with system dependencies include an information message during installation</summary></p>
-<p>Some ports have library and tool dependencies that do not exist within vcpkg. For these missing dependencies, we ask that contributors add a message to the top of the port's <code>portfile.cmake</code> stating the missing dependencies and how to acquire them. We ask that the message is displayed before any major work is done to ensure that users can "early out" of the installation process as soon as possible in case they are missing the dependency.</p>
-<p>Example:</p>
-<pre><code class="cmake language-cmake">message(
-"${PORT} currently requires the following libraries from the system package manager:
-    autoconf libtool
-These can be installed on Ubuntu systems via sudo apt install autoconf libtool"
-)</code></pre>
-<p></details></p>
-<p><details id="c000013">
-<summary><a href="#c000013">c000013</a>: Manifest files are used instead of CONTROL files for new ports</summary></p>
-<p>Many existing ports use the CONTROL file syntax; while this syntax will be supported for some time to come,
-new ports should not use these. Any newly added port <em>must</em> use the manifest files.</p>
-<p>We also recommend, when significant modifications are made to ports, that one switches to manifest files;
-however, this is not required. You may find <code>vcpkg format-manifest</code> useful.</p>
+<h1 id="cmake-guidelines">CMake Guidelines</h1>
+<p>We expect that all CMake scripts that are either:</p>
+<ul>
+<li>In the <code>scripts/</code> directory, or</li>
+<li>In a <code>vcpkg-*</code> port</li>
+</ul>
+<p>should follow the guidelines laid out in this document.
+Existing scripts may not follow these guidelines yet;
+it is expected that we will continue to update old scripts
+to fall in line with these guidelines.</p>
+<p>These guidelines are intended to create stability in our scripts.
+We hope that they will make both forwards and backwards compatibility easier.</p>
+<h2 id="the-guidelines">The Guidelines</h2>
+<ul>
+<li>Except for out-parameters, we always use <code>cmake_parse_arguments()</code>
+rather than function parameters or referring to <code>${ARG&lt;N&gt;}</code>.<ul>
+<li>This doesn't necessarily need to be followed for "script-local helper functions"</li>
+<li>In this case, positional parameters should be put in the function
+declaration (rather than using <code>${ARG&lt;N&gt;}</code>),
+and should be named according to local rules (i.e. <code>snake_case</code>).</li>
+<li>Exception: positional parameters that are optional should be
+given a name via <code>set(argument_name "${ARG&lt;N&gt;}")</code>, after checking <code>ARGC</code>.</li>
+<li>Out-parameters should be the first parameter to a function. Example:</li></ul></li>
+</ul>
+<pre><code class="cmake language-cmake">  function(format out_var)
+    cmake_parse_arguments(PARSE_ARGV 1 "arg" ...)
+    # ... set(buffer "output")
+    set("${out_var}" "${buffer}" PARENT_SCOPE)
+  endfunction()</code></pre>
+<ul>
+<li>There are no unparsed or unused arguments.
+Always check for <code>ARGN</code> or <code>arg_UNPARSED_ARGUMENTS</code>.
+<code>FATAL_ERROR</code> when possible, <code>WARNING</code> if necessary for backwards compatibility.</li>
+<li>All <code>cmake_parse_arguments</code> must use <code>PARSE_ARGV</code>.</li>
+<li>All <code>foreach</code> loops must use <code>IN LISTS</code> and <code>IN ITEMS</code>.</li>
+<li>The variables <code>${ARGV}</code> and <code>${ARGN}</code> are unreferenced,
+except in helpful messages to the user.<ul>
+<li>(i.e., <code>message(FATAL_ERROR "blah was passed extra arguments: ${ARGN}")</code>)</li></ul></li>
+<li>We always use functions, not macros or top level code.<ul>
+<li>Exception: "script-local helper macros". It is sometimes helpful to define a small macro.
+This should be done sparingly, and functions should be preferred.</li>
+<li>Exception: <code>vcpkg.cmake</code>'s <code>find_package</code>.</li></ul></li>
+<li>Scripts in the scripts tree should not be expected to need observable changes
+as part of normal operation.<ul>
+<li>Example violation: <code>vcpkg_acquire_msys()</code> has hard-coded packages and versions that need updating over time due to the MSYS project dropping old packages.</li>
+<li>Example exception: <code>vcpkg_from_sourceforge()</code> has a list of mirrors which needs maintenance but does not have an observable behavior impact on the callers.</li></ul></li>
+<li>All variable expansions are in quotes <code>""</code>,
+except those which are intended to be passed as multiple arguments.<ul>
+<li>Example:</li></ul></li>
+</ul>
+<pre><code class="cmake language-cmake">  set(working_directory "")
+  if(DEFINED arg_WORKING_DIRECTORY)
+    set(working_directory "WORKING_DIRECTORY" "${arg_WORKING_DIRECTORY}")
+  endif()
+  # calls do_the_thing() if NOT DEFINED arg_WORKING_DIRECTORY,
+  # else calls do_the_thing(WORKING_DIRECTORY "${arg_WORKING_DIRECTORY}")
+  do_the_thing(${working_directory})</code></pre>
+<ul>
+<li>There are no "pointer" or "in-out" parameters
+(where a user passes a variable name rather than the contents),
+except for simple out-parameters.</li>
+<li>Variables are not assumed to be empty.
+If the variable is intended to be used locally,
+it must be explicitly initialized to empty with <code>set(foo "")</code>.</li>
+<li>All variables expected to be inherited from the parent scope across an API boundary (i.e. not a file-local function) should be documented. Note that all variables mentioned in triplets.md are considered documented.</li>
+<li>Out parameters are only set in <code>PARENT_SCOPE</code> and are never read.
+See also the helper <code>z_vcpkg_forward_output_variable()</code> to forward out parameters through a function scope.</li>
+<li><code>CACHE</code> variables are used only for global variables which are shared internally among strongly coupled
+functions and for internal state within a single function to avoid duplicating work.
+These should be used extremely sparingly and should use the <code>Z_VCPKG_</code> prefix to avoid
+colliding with any local variables that would be defined by any other code.<ul>
+<li>Examples:</li>
+<li><code>vcpkg_cmake_configure</code>'s <code>Z_VCPKG_CMAKE_GENERATOR</code></li>
+<li><code>z_vcpkg_get_cmake_vars</code>'s <code>Z_VCPKG_GET_CMAKE_VARS_FILE</code></li></ul></li>
+<li><code>include()</code>s are only allowed in <code>ports.cmake</code> or <code>vcpkg-port-config.cmake</code>.</li>
+<li><code>foreach(RANGE)</code>'s arguments <em>must always be</em> natural numbers,
+and <code>&lt;start&gt;</code> <em>must always be</em> less than or equal to <code>&lt;stop&gt;</code>.<ul>
+<li>This must be checked by something like:</li></ul></li>
+</ul>
+<pre><code class="cmake language-cmake">  if(start LESS_EQUAL end)
+    foreach(RANGE start end)
+      ...
+    endforeach()
+  endif()</code></pre>
+<ul>
+<li>All port-based scripts must use <code>include_guard(GLOBAL)</code>
+to avoid being included multiple times.</li>
+<li><code>set(var)</code> should not be used. Use <code>unset(var)</code> to unset a variable,
+and <code>set(var "")</code> to set it to the empty value. <em>Note: this works for use as a list and as a string</em></li>
+</ul>
+<h3 id="cmake-versions-to-require">CMake Versions to Require</h3>
+<ul>
+<li>All CMake scripts, except for <code>vcpkg.cmake</code>,
+may assume the version of CMake that is present in the
+<code>cmake_minimum_required</code> of <code>ports.cmake</code>.<ul>
+<li>This <code>cmake_minimum_required</code> should be bumped every time a new version
+of CMake is added to <code>vcpkgTools.xml</code>, as should the
+<code>cmake_minimum_required</code> in all of the helper <code>CMakeLists.txt</code> files.</li></ul></li>
+<li><code>vcpkg.cmake</code> must assume a version of CMake back to 3.1 in general<ul>
+<li>Specific functions and options may assume a greater CMake version;
+if they do, make sure to comment that function or option
+with the required CMake version.</li></ul></li>
+</ul>
+<h3 id="changing-existing-functions">Changing Existing Functions</h3>
+<ul>
+<li>Never remove arguments in non-internal functions;
+if they should no longer do anything, just take them as normal and warn on use.</li>
+<li>Never add a new mandatory argument.</li>
+</ul>
+<h3 id="naming-variables">Naming Variables</h3>
+<ul>
+<li><p><code>cmake_parse_arguments</code>: set prefix to <code>"arg"</code></p></li>
+<li><p>Local variables are named with <code>snake_case</code></p></li>
+<li><p>Internal global variable names are prefixed with <code>Z_VCPKG_</code>.</p></li>
+<li><p>External experimental global variable names are prefixed with <code>X_VCPKG_</code>.</p></li>
+<li><p>Internal functions are prefixed with <code>z_vcpkg_</code></p>
+<ul>
+<li>Functions which are internal to a single function (i.e., helper functions)
+are named <code>[z_]&lt;func&gt;_&lt;name&gt;</code>, where <code>&lt;func&gt;</code> is the name of the function they are
+a helper to, and <code>&lt;name&gt;</code> is what the helper function does.</li>
+<li><code>z_</code> should be added to the front if <code>&lt;func&gt;</code> doesn't have a <code>z_</code>,
+but don't name a helper function <code>z_z_foo_bar</code>.</li></ul></li>
+<li><p>Public global variables are named <code>VCPKG_</code>.</p></li>
+</ul>
 </main></div><div id="loadFooter"></div></html>

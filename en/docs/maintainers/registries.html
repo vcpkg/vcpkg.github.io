@@ -43,7 +43,7 @@
         <script src="/dist/getting-started.js"></script>
     <script>
         $(document).ready(function () {
-          handleDefaultTreeViewExpand(" > docs > maintainers > pr-review-checklist.md");
+          handleDefaultTreeViewExpand(" > docs > maintainers > registries.md");
           $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
           $('#loadFooter').load('/en/footer.html');
           
@@ -121,8 +121,8 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guide</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest Files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Functions</li></a>
-<li class="list-can-expand"><span id="currentPath">Pr Review Checklist</span></li>
-<a class="doc-outline-link" href="/en/docs/maintainers/registries.html"><li class="list-can-expand">registries</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">Pr Review Checklist</li></a>
+<li class="list-can-expand"><span id="currentPath">registries</span></li>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
@@ -209,72 +209,288 @@
 </ul>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg-pr-checklist">vcpkg PR Checklist</h1>
-<p>Revision: 1</p>
+<h1 id="creating-registries">Creating Registries</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/maintainers/registries.md">GitHub</a>.</strong></p>
+<p>There are two parts to using registries; this documents the creation side of
+the relationship. In order to learn more about using registries that others
+have created, please read <a href="../users/registries.html">this documentation</a>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#creating-registries">Creating Registries</a><ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#git-registries">Git Registries</a><ul>
+<li><a href="#adding-a-new-version">Adding a New Version</a></li></ul></li>
+<li><a href="#filesystem-registries">Filesystem Registries</a><ul>
+<li><a href="#adding-a-new-version-1">Adding a New Version</a></li></ul></li></ul></li>
+</ul>
 <h2 id="overview">Overview</h2>
-<p>This document provides an annotated checklist which vcpkg team members use to apply the "reviewed" label on incoming pull requests. If a pull request violates any of these points, we may ask contributors to make necessary changes before we can merge the changeset.</p>
-<p>Feel free to create an issue or pull request if you feel that this checklist can be improved. Please increment the revision number when modifying the checklist content.</p>
-<h2 id="checklist">Checklist</h2>
-<p>You can link any of these checklist items in a GitHub comment by copying the link address attached to each item code.</p>
-<p><details id="c000001">
-<summary><a href="#c000001">c000001</a>: No deprecated helper functions are used</summary></p>
-<p>See our <a href="maintainer-guide.html#Avoid-deprecated-helper-functions">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000002">
-<summary><a href="#c000002">c000002</a>: <code>"port-version"</code> field is updated</summary></p>
-<p>See our <a href="maintainer-guide.html#versioning">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000003">
-<summary><a href="#c000003">c000003</a>: New ports contain a <code>"description"</code> field written in English</summary></p>
-<p>A description only one or a few sentences long is helpful. Consider using the library's official description from their <code>README.md</code> or similar if possible. Automatic translations are acceptable and we are happy to clean up translations to English for our contributors.</p>
-<p>See our <a href="manifest-files.html#description">manifest file documentation</a> for more information.</p>
-<p></details></p>
-<p><details id="c000004">
-<summary><a href="#c000004">c000004</a>: No unnecessary comments are present in the changeset</summary></p>
-<p>See our <a href="maintainer-guide.html#Avoid-excessive-comments-in-portfiles">Maintainer Guidelines and Policies</a> for more information.</p>
-<p></details></p>
-<p><details id="c000005">
-<summary><a href="#c000005">c000005</a>: Downloaded archives are versioned if available&lt;/summary</p>
-<p>To ensure archive content does not change, archives downloaded preferably have an associated version tag that can be incremented alongside the port's <code>"version"</code>.</p>
-<p></details></p>
-<p><details id="c000006">
-<summary><a href="#c000006">c000006</a>: New ports pass CI checks for triplets that the library officially supports</summary></p>
-<p>To ensure vcpkg ports are of a high quality, we ask that incoming ports support the official platforms for the library in question.</p>
-<p></details></p>
-<p><details id="c000007">
-<summary><a href="#c000007">c000007</a>: Patches fix issues that are vcpkg-specific only</summary></p>
-<p>If possible, patches to the library source code should be upstreamed to the library's official repository. Opening up a pull request on the library's repository will help to improve the library for everyone, not just vcpkg users.</p>
-<p></details></p>
-<p><details id="c000008">
-<summary><a href="#c000008">c000008</a>: New ports download source code from the official source if available</summary></p>
-<p>To respect library authors and keep code secure, please have ports download source code from the official source. We may make exceptions if the original source code is not available and there is substantial community interest in maintaining the library in question.</p>
-<p></details></p>
-<p><details id="c000009">
-<summary><a href="#c000009">c000009</a>: Ports and port features are named correctly</summary></p>
-<p>For user accessibility, we prefer names of ports and port features to be intuitive and close to their counterparts in official sources and other package managers. If you are unsure about the naming of a port or port feature, we recommend checking repology.org, packages.ubuntu.com, or searching for additional information using a search engine. We can also help our contributors with this, so feel free to ask for naming suggestions if you are unsure.</p>
-<p></details></p>
-<p><details id="c000010">
-<summary><a href="#c000010">c000010</a>: Library targets are exported when appropriate</summary></p>
-<p>To provide users with a seamless build system integration, please be sure to export and provide a means of finding the library targets intended to be used downstream. Targets not meant to be exported should be be marked private and not exported.</p>
-<p></details></p>
-<p><details id="c000011">
-<summary><a href="#c000011">c000011</a>: Ports do not use applications which modify the user's system</summary></p>
-<p>Ports should uphold vcpkg's contract of not modifying the user's system by avoiding applications which do so. Examples of these applications are <code>sudo</code>, <code>apt</code>, <code>brew</code>, or <code>pip</code>. Please use an alternative to these types of programs wherever possible.</p>
-<p></details></p>
-<p><details id="c000012">
-<summary><a href="#c000012">c000012</a>: Ports with system dependencies include an information message during installation</summary></p>
-<p>Some ports have library and tool dependencies that do not exist within vcpkg. For these missing dependencies, we ask that contributors add a message to the top of the port's <code>portfile.cmake</code> stating the missing dependencies and how to acquire them. We ask that the message is displayed before any major work is done to ensure that users can "early out" of the installation process as soon as possible in case they are missing the dependency.</p>
-<p>Example:</p>
-<pre><code class="cmake language-cmake">message(
-"${PORT} currently requires the following libraries from the system package manager:
-    autoconf libtool
-These can be installed on Ubuntu systems via sudo apt install autoconf libtool"
-)</code></pre>
-<p></details></p>
-<p><details id="c000013">
-<summary><a href="#c000013">c000013</a>: Manifest files are used instead of CONTROL files for new ports</summary></p>
-<p>Many existing ports use the CONTROL file syntax; while this syntax will be supported for some time to come,
-new ports should not use these. Any newly added port <em>must</em> use the manifest files.</p>
-<p>We also recommend, when significant modifications are made to ports, that one switches to manifest files;
-however, this is not required. You may find <code>vcpkg format-manifest</code> useful.</p>
+<p>Registries are collections of ports and their versions. There are two major
+choices of implementation for registries, if you want to create your own -
+git registries, and filesystem registries.</p>
+<p>Git registries are simple git repositories, and can be shared publicly or
+privately via normal mechanisms for git repositories. The vcpkg repository at
+<a href="https://github.com/microsoft/vcpkg">https://github.com/microsoft/vcpkg</a>, for example, is a git registry.</p>
+<p>Filesystem registries are designed as more of a testing ground. Given that they
+literally live on your filesystem, the only way to share them is via shared
+directories. However, filesystem registries can be useful as a way to represent
+registries held in non-git version control systems, assuming one has some way
+to get the registry onto the disk.</p>
+<p>Note that we expect the set of registry types to grow over time; if you would
+like support for registries built in your favorite public version control
+system, don't hesitate to open a PR.</p>
+<p>The basic structure of a registry is:</p>
+<ul>
+<li>The set of versions that are considered "latest" at certain times in history,
+known as the "baseline".</li>
+<li>The set of all the versions of all the ports, and where to find each of
+these in the registry.</li>
+</ul>
+<h3 id="git-registries">Git Registries</h3>
+<p>As you're following along with this documentation, it may be helpful to have
+a working example to refer to. We've written one and put it here:
+<a href="https://github.com/northwindtraders/vcpkg-registry">https://github.com/northwindtraders/vcpkg-registry</a>.</p>
+<p>All git registries must have a <code>versions/baseline.json</code> file. This file
+contains the set of "latest versions" at a certain commit. It is laid out as
+a top-level object containing only the <code>"default"</code> field. This field should
+contain an object mapping port names to the version which is currently the
+latest.</p>
+<p>Here's an example of a valid baseline.json:</p>
+<pre><code class="json language-json">{
+  "default": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  }
+}</code></pre>
+<p>The <code>versions</code> directory contains all the information about which versions of
+which packages are contained in the registry, along with where those versions
+are stored. The rest of the registry just acts as a backing store, as far as
+vcpkg is concerned: only things inside the <code>versions</code> directory will be used
+to direct how your registry is seen by vcpkg.</p>
+<p>Each port in a registry should exist in the versions directory as
+<code>&lt;first letter of port&gt;-/&lt;name of port&gt;.json</code>; in other words, the
+information about the <code>kitten</code> port would be located in
+<code>versions/k-/kitten.json</code>. This should be a top-level object with only a
+single field: <code>"versions"</code>. This field should contain an array of version 
+objects:</p>
+<ul>
+<li>The version of the port in question; should be exactly the same as the
+<code>vcpkg.json</code> file, including the version fields and <code>"port-version"</code>.</li>
+<li>The <code>"git-tree"</code> field, which is a git tree; in other words, what you get
+when you write <code>git rev-parse COMMIT-ID:path/to/port</code>.</li>
+</ul>
+<p>Note that the version fields for ports with <code>CONTROL</code> files, is 
+<code>"version-string"</code>; we do not recommend using <code>CONTROL</code> files in new
+registries, however.</p>
+<p><em>WARNING</em>: One very important part of registries is that versions should
+<em>never</em> be changed. Updating to a later ref should never remove or change an
+existing version. It must always be safe to update a registry.</p>
+<p>Here's an example of a valid version database for a <code>kitten</code> port with one 
+version:</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "git-tree": "67d60699c271b7716279fdea5a5c6543929eb90e"
+    }
+  ]
+}</code></pre>
+<p>In general, it's not important where you place port directories. However, the
+idiom in vcpkg is to follow what the built in vcpkg registry does: your 
+<code>kitten</code> port should be placed in <code>ports/kitten</code>.</p>
+<p><em>WARNING</em>: One other thing to keep in mind is that when you update a registry,
+all previous versions should also be accessible. Since your user will set their
+baseline to a commit ID, that commit ID must always exist, and be accessible
+from your HEAD commit, which is what is actually fetched. This means that your
+HEAD commit should be a child of all previous HEAD commits.</p>
+<h4 id="adding-a-new-version">Adding a New Version</h4>
+<p>There is some git trickery involved in creating a new version of a port. The
+first thing to do is make some changes, update the <code>"port-version"</code> and regular
+version field as you need to, and then test with <code>overlay-ports</code>:
+<code>vcpkg install kitten --overlay-ports=ports/kitten</code>.</p>
+<p>Once you've finished your testing, you'll need to make sure that the directory
+as it is is under git's purview. You'll do this by creating a temporary commit:</p>
+<pre><code class="pwsh language-pwsh">&gt; git add ports/kitten
+&gt; git commit -m 'temporary commit'</code></pre>
+<p>Then, get the git tree ID of the directory:</p>
+<pre><code class="pwsh language-pwsh">&gt; git rev-parse HEAD:ports/kitten
+73ad3c823ef701c37421b450a34271d6beaf7b07</code></pre>
+<p>Then, you can add this version to the versions database. At the top of your
+<code>versions/k-/kitten.json</code>, you can add (assuming you're adding version
+<code>2.6.3#0</code>):</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.3",
+      "port-version": 0,
+      "git-tree": "73ad3c823ef701c37421b450a34271d6beaf7b07"
+    },
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "git-tree": "67d60699c271b7716279fdea5a5c6543929eb90e"
+    }
+  ]
+}</code></pre>
+<p>then, you'll want to modify your <code>versions/baseline.json</code> with your new version 
+as well:</p>
+<pre><code class="json language-json">{
+  "default": {
+    "kitten": {
+      "baseline": "2.6.3",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  }
+}</code></pre>
+<p>and amend your current commit:</p>
+<pre><code class="pwsh language-pwsh">&gt; git commit --amend</code></pre>
+<p>then share away!</p>
+<h3 id="filesystem-registries">Filesystem Registries</h3>
+<p>As you're following along with this documentation, it may be helpful to have
+a working example to refer to. We've written one and put it here:
+<a href="https://github.com/vcpkg/example-filesystem-registry">https://github.com/vcpkg/example-filesystem-registry</a>.</p>
+<p>All filesystem registries must have a <code>versions/baseline.json</code> file. This file
+contains the set of "latest versions" for a certain version of the registry.
+It is laid out as a top-level object containing a map from version name to
+"baseline objects", which map port names to the version which is considered
+"latest" for that version of the registry.</p>
+<p>Filesystem registries need to decide on a versioning scheme. Unlike git 
+registries, which have the implicit versioning scheme of refs, filesystem
+registries can't rely on the version control system here. One possible option
+is to do a daily release, and have your "versions" be dates.</p>
+<p><em>WARNING</em>: A baseline must always refer to the same set of versions. If you
+want to add new versions, you need to create a new version of the registry in
+the <code>baseline.json</code> file.</p>
+<p>Here's an example of a valid <code>baseline.json</code>, for a registry that has decided
+upon dates for their versions:</p>
+<pre><code class="json language-json">{
+  "2021-04-16": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  },
+  "2021-04-15": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 1
+    }
+  }
+}</code></pre>
+<p>The <code>versions</code> directory contains all the information about which versions of
+which packages are contained in the registry, along with where those versions
+are stored. The rest of the registry just acts as a backing store, as far as
+vcpkg is concerned: only things inside the <code>versions</code> directory will be used
+to direct how your registry is seen by vcpkg.</p>
+<p>Each port in a registry should exist in the versions directory as
+<code>&lt;first letter of port&gt;-/&lt;name of port&gt;.json</code>; in other words, the
+information about the <code>kitten</code> port would be located in
+<code>versions/k-/kitten.json</code>. This should be a top-level object with only a
+single field: <code>"versions"</code>. This field should contain an array of version 
+objects:</p>
+<ul>
+<li>The version of the port in question; should be exactly the same as the
+<code>vcpkg.json</code> file, including the version fields and <code>"port-version"</code>.</li>
+<li>The <code>"path"</code> field: a relative directory, rooted at the base of the registry
+(in other words, the directory where <code>versions</code> is located), to the port 
+directory. It should look something like <code>"$/path/to/port/dir</code>"</li>
+</ul>
+<p>Note that the version fields for ports with <code>CONTROL</code> files, is 
+<code>"version-string"</code>; we do not recommend using <code>CONTROL</code> files in new
+registries, however.</p>
+<p>In general, it's not important where you place port directories. However, the
+idiom in vcpkg is to follow somewhat closely to what the built in vcpkg
+registry does: your <code>kitten</code> port at version <code>x.y.z</code> should be placed in
+<code>ports/kitten/x.y.z</code>, with port versions appended as you see fit (although
+since <code>#</code> is not a good character to use for file names, perhaps use <code>_</code>).</p>
+<p><em>WARNING</em>: One very important part of registries is that versions should
+<em>never</em> be changed. One should never remove or change an existing version.
+Your changes to your registry shouldn't change behavior to downstream users.</p>
+<p>Here's an example of a valid version database for a <code>kitten</code> port with one 
+version:</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "path": "$/ports/kitten/2.6.2_0"
+    }
+  ]
+}</code></pre>
+<h4 id="adding-a-new-version-1">Adding a New Version</h4>
+<p>Unlike git registries, adding a new version to a filesystem registry mostly
+involves a lot of copying. The first thing to do is to copy the latest
+version of your port into a new version directory, update the version and
+<code>"port-version"</code> fields as you need to, and then test with <code>overlay-ports</code>:
+<code>vcpkg install kitten --overlay-ports=ports/kitten/new-version</code>.</p>
+<p>Once you've finished your testing, you can add this new version to the top of
+your <code>versions/k-/kitten.json</code>:</p>
+<pre><code class="json language-json">{
+  "versions": [
+    {
+      "version": "2.6.3",
+      "port-version": 0,
+      "path": "$/ports/kitten/2.6.3_0"
+    },
+    {
+      "version": "2.6.2",
+      "port-version": 0,
+      "path": "$/ports/kitten/2.6.2_0"
+    }
+  ]
+}</code></pre>
+<p>then, you'll want to modify your <code>versions/baseline.json</code> with your new version 
+as well (remember not to modify existing baselines):</p>
+<pre><code class="json language-json">{
+  "2021-04-17": {
+    "kitten": {
+      "baseline": "2.6.3",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  },
+  "2021-04-16": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 2
+    }
+  },
+  "2021-04-15": {
+    "kitten": {
+      "baseline": "2.6.2",
+      "port-version": 0
+    },
+    "port-b": {
+      "baseline": "19.00",
+      "port-version": 1
+    }
+  }
+}</code></pre>
+<p>and you're done!</p>
 </main></div><div id="loadFooter"></div></html>
