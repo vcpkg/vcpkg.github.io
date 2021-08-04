@@ -43,7 +43,7 @@
         <script src="/dist/getting-started.js"></script>
     <script>
         $(document).ready(function () {
-          handleDefaultTreeViewExpand(" > docs > specifications > feature-packages.md");
+          handleDefaultTreeViewExpand(" > docs > maintainers > internal > z_vcpkg_get_cmake_vars.md");
           $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
           $('#loadFooter').load('/en/footer.html');
           
@@ -92,7 +92,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
+<li class="list-can-expand"><span id="currentPath">z_vcpkg_get_cmake_vars</span></li>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">ports</button></li>
@@ -181,7 +181,7 @@
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/specifications/binarycaching.html"><li class="list-can-expand">Binary Caching v1.1 (Jul 14, 2020)</li></a>
 <a class="doc-outline-link" href="/en/docs/specifications/export-command.html"><li class="list-can-expand">Binary Export (Apr 28, 2017)</li></a>
-<li class="list-can-expand"><span id="currentPath">Proposal: Features / Feature packages (Feb 23 2017)</span></li>
+<a class="doc-outline-link" href="/en/docs/specifications/feature-packages.html"><li class="list-can-expand">Proposal: Features / Feature packages (Feb 23 2017)</li></a>
 <a class="doc-outline-link" href="/en/docs/specifications/manifests.html"><li class="list-can-expand">Manifests -- <code>vcpkg.json</code></li></a>
 <a class="doc-outline-link" href="/en/docs/specifications/ports-overlay.html"><li class="list-can-expand">Ports Overlay (Jun 19, 2019)</li></a>
 <a class="doc-outline-link" href="/en/docs/specifications/prefab.html"><li class="list-can-expand">Vcpkg: export Android prefab Archives (AAR files)</li></a>
@@ -208,7 +208,29 @@
 </ul>
 <a class="doc-outline-link" href="/en/docs/README.html"><li class="list-can-expand">Quick Start</li></a>
 </ul>
-</nav><main class="right-side spec-only" id="main">
+</nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-See <a href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/feature-packages.md" class="spec-link">https://github.com/microsoft/vcpkg/tree/master/docs/specifications/feature-packages.md</a>
+<h1 id="z_vcpkg_get_cmake_vars">z_vcpkg_get_cmake_vars</h1>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/">vcpkg repo</a>.</p>
+<p><strong>Only for internal use in vcpkg helpers. Behavior and arguments will change without notice.</strong>
+Runs a cmake configure with a dummy project to extract certain cmake variables</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="cmake language-cmake">z_vcpkg_get_cmake_vars(&lt;out-var&gt;)</code></pre>
+<p><code>z_vcpkg_get_cmake_vars(cmake_vars_file)</code> sets <code>&lt;out-var&gt;</code> to
+a path to a generated CMake file, with the detected <code>CMAKE_*</code> variables
+re-exported as <code>VCPKG_DETECTED_*</code>.</p>
+<h2 id="notes">Notes</h2>
+<p>Avoid usage in portfiles. </p>
+<p>All calls to <code>z_vcpkg_get_cmake_vars</code> will result in the same output file;
+the output file is not generated multiple times.</p>
+<h2 id="examples">Examples</h2>
+<ul>
+<li><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_configure_make.cmake">vcpkg_configure_make</a></li>
+</ul>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="cmake language-cmake">z_vcpkg_get_cmake_vars(cmake_vars_file)
+include("${cmake_vars_file}")
+message(STATUS "detected CXX flags: ${VCPKG_DETECTED_CXX_FLAGS}")</code></pre>
+<h2 id="source">Source</h2>
+<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/z_vcpkg_get_cmake_vars.cmake">scripts/cmake/z_vcpkg_get_cmake_vars.cmake</a></p>
 </main></div><div id="loadFooter"></div></html>
