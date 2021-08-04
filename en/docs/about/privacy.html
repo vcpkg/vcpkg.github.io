@@ -72,7 +72,7 @@
 <ul class=docs-navigation><li class="list-can-expand"><button class="button-list-can-expand">about</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
-<li class="list-can-expand"><span id="currentPath">Vcpkg telemetry and privacy</span></li>
+<li class="list-can-expand"><span id="currentPath">Vcpkg Telemetry and Privacy</span></li>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">examples</button></li>
 <ul class="collapse standard-padding">
@@ -81,7 +81,7 @@
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging Zipfiles Example: zlib</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/versioning.getting-started.html"><li class="list-can-expand">Get Started with Versioning</li></a>
 </ul>
@@ -89,10 +89,10 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><button class="button-list-can-expand">internal</button></li>
 <ul class="collapse standard-padding">
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html"><li class="list-can-expand">vcpkg_internal_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">ports</button></li>
@@ -101,6 +101,7 @@
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake Config</button></li>
@@ -200,8 +201,8 @@
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
 <a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
-<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting library features</li></a>
-<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">Triplet files</li></a>
+<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
+<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">Triplet Files</li></a>
 <a class="doc-outline-link" href="/en/docs/users/versioning.implementation-details.html"><li class="list-can-expand">Versioning: Implementation details</li></a>
 <a class="doc-outline-link" href="/en/docs/users/versioning.html"><li class="list-can-expand">Versioning</li></a>
 </ul>
@@ -209,7 +210,7 @@
 </ul>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg-telemetry-and-privacy">vcpkg telemetry and privacy</h1>
+<h1 id="vcpkg-telemetry-and-privacy">vcpkg Telemetry and Privacy</h1>
 <p>vcpkg collects telemetry data to understand usage issues, such as failing packages, and to guide tool improvements. The collected data is anonymous.
 For more information about how Microsoft protects your privacy, see <a href="https://privacy.microsoft.com/en-US/privacystatement#mainenterprisedeveloperproductsmodule">https://privacy.microsoft.com/en-US/privacystatement#mainenterprisedeveloperproductsmodule</a></p>
 <h2 id="scope">Scope</h2>
@@ -231,7 +232,7 @@ or by setting the VCPKG_DISABLE_METRICS environment variable.
 Read more about vcpkg telemetry at docs/about/privacy.md</code></pre>
 <h2 id="data-collected">Data Collected</h2>
 <p>The telemetry feature doesn't collect personal data, such as usernames or email addresses. It doesn't scan your code and doesn't extract project-level data, such as name, repository, or author. The data is sent securely to Microsoft servers and held under restricted access.</p>
-<p>Protecting your privacy is important to us. If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the Microsoft/vcpkg repository or send an email to <a href="m&#97;&#x69;&#x6c;&#x74;&#111;&#58;v&#x63;&#112;&#x6b;&#103;&#x40;&#109;&#x69;cr&#x6f;&#x73;&#x6f;&#102;&#x74;&#46;&#99;om">&#x76;&#99;&#x70;&#x6b;&#x67;&#64;&#x6d;&#105;&#99;&#x72;&#x6f;s&#111;&#102;&#x74;.&#99;o&#109;</a> for investigation.</p>
+<p>Protecting your privacy is important to us. If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the Microsoft/vcpkg repository or send an email to <a href="&#x6d;&#x61;i&#108;&#116;&#111;:&#x76;&#x63;&#112;&#x6b;&#103;&#x40;&#x6d;&#105;&#99;&#x72;&#x6f;&#x73;&#111;&#x66;&#116;&#46;c&#x6f;&#x6d;">v&#99;&#112;&#107;&#x67;&#64;&#109;&#105;&#x63;&#114;&#111;&#x73;&#111;&#102;&#x74;&#x2e;&#x63;&#111;&#x6d;</a> for investigation.</p>
 <p>We collect various telemetry events such as the command line used, the time of invocation, and how long execution took. Some commands also add additional calculated information (such as the full set of libraries to install). We generate a completely random UUID on first use and attach it to each event.</p>
 <p>You can see the telemetry events any command by appending <code>--printmetrics</code> after the vcpkg command line.</p>
 <p>In the source code (included at <a href="https://github.com/microsoft/vcpkg-tool/">https://github.com/microsoft/vcpkg-tool/</a> ), you can search for calls to the functions <code>track_property()</code>, <code>track_feature()</code>, <code>track_metric()</code>, and <code>track_buildtime()</code>

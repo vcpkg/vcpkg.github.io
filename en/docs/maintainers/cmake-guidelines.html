@@ -72,7 +72,7 @@
 <ul class=docs-navigation><li class="list-can-expand"><button class="button-list-can-expand">about</button></li>
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
-<a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg telemetry and privacy</li></a>
+<a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">examples</button></li>
 <ul class="collapse standard-padding">
@@ -81,7 +81,7 @@
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging Zipfiles Example: zlib</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/versioning.getting-started.html"><li class="list-can-expand">Get Started with Versioning</li></a>
 </ul>
@@ -89,10 +89,10 @@
 <ul class="collapse standard-padding">
 <li class="list-can-expand"><button class="button-list-can-expand">internal</button></li>
 <ul class="collapse standard-padding">
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_internal_get_cmake_vars.html"><li class="list-can-expand">vcpkg_internal_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">ports</button></li>
@@ -101,6 +101,7 @@
 <ul class="collapse standard-padding">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
 <li class="list-can-expand"><button class="button-list-can-expand">vcpkg Cmake Config</button></li>
@@ -200,8 +201,8 @@
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
 <a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
-<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting library features</li></a>
-<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">Triplet files</li></a>
+<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
+<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">Triplet Files</li></a>
 <a class="doc-outline-link" href="/en/docs/users/versioning.implementation-details.html"><li class="list-can-expand">Versioning: Implementation details</li></a>
 <a class="doc-outline-link" href="/en/docs/users/versioning.html"><li class="list-can-expand">Versioning</li></a>
 </ul>
@@ -243,7 +244,7 @@ given a name via <code>set(argument_name "${ARG&lt;N&gt;}")</code>, after checki
 Always check for <code>ARGN</code> or <code>arg_UNPARSED_ARGUMENTS</code>.
 <code>FATAL_ERROR</code> when possible, <code>WARNING</code> if necessary for backwards compatibility.</li>
 <li>All <code>cmake_parse_arguments</code> must use <code>PARSE_ARGV</code>.</li>
-<li>All <code>foreach</code> loops must use <code>IN LISTS</code> and <code>IN ITEMS</code>.</li>
+<li>All <code>foreach</code> loops must use <code>IN LISTS</code>, <code>IN ITEMS</code>, or <code>RANGE</code>.</li>
 <li>The variables <code>${ARGV}</code> and <code>${ARGN}</code> are unreferenced,
 except in helpful messages to the user.<ul>
 <li>(i.e., <code>message(FATAL_ERROR "blah was passed extra arguments: ${ARGN}")</code>)</li></ul></li>
@@ -253,27 +254,68 @@ This should be done sparingly, and functions should be preferred.</li>
 <li>Exception: <code>vcpkg.cmake</code>'s <code>find_package</code>.</li></ul></li>
 <li>Scripts in the scripts tree should not be expected to need observable changes
 as part of normal operation.<ul>
-<li>Example violation: <code>vcpkg_acquire_msys()</code> has hard-coded packages and versions that need updating over time due to the MSYS project dropping old packages.</li>
-<li>Example exception: <code>vcpkg_from_sourceforge()</code> has a list of mirrors which needs maintenance but does not have an observable behavior impact on the callers.</li></ul></li>
-<li>All variable expansions are in quotes <code>""</code>,
-except those which are intended to be passed as multiple arguments.<ul>
-<li>Example:</li></ul></li>
-</ul>
-<pre><code class="cmake language-cmake">  set(working_directory "")
-  if(DEFINED arg_WORKING_DIRECTORY)
-    set(working_directory "WORKING_DIRECTORY" "${arg_WORKING_DIRECTORY}")
-  endif()
-  # calls do_the_thing() if NOT DEFINED arg_WORKING_DIRECTORY,
-  # else calls do_the_thing(WORKING_DIRECTORY "${arg_WORKING_DIRECTORY}")
-  do_the_thing(${working_directory})</code></pre>
-<ul>
+<li>Example violation: <code>vcpkg_acquire_msys()</code> has hard-coded packages and versions
+that need updating over time due to the MSYS project dropping old packages.</li>
+<li>Example exception: <code>vcpkg_from_sourceforge()</code> has a list of mirrors which
+needs maintenance, but does not have an observable behavior impact on the callers.</li></ul></li>
+<li>Rules for quoting: there are three kinds of arguments in CMake -
+unquoted (<code>foo(BAR)</code>), quoted (<code>foo("BAR")</code>), and bracketed (<code>foo([[BAR]])</code>).
+Follow these rules to quote correctly:<ul>
+<li>If an argument contains a variable expansion <code>${...}</code>,
+it must be quoted.</li>
+<li>Exception: a "splat" variable expansion, when one variable will be
+passed to a function as multiple arguments. In this case, the argument
+should simply be <code>${foo}</code>:
+<code>cmake
+vcpkg_list(SET working_directory)
+if(DEFINED "arg_WORKING_DIRECTORY")
+vcpkg_list(SET working_directory WORKING_DIRECTORY "${arg_WORKING_DIRECTORY}")
+endif()
+# calls do_the_thing() if NOT DEFINED arg_WORKING_DIRECTORY,
+# else calls do_the_thing(WORKING_DIRECTORY "${arg_WORKING_DIRECTORY}")
+do_the_thing(${working_directory})
+</code></li>
+<li>Otherwise, if the argument contains any escape sequences that are not
+<code>\\</code>, <code>\"</code>, or <code>\$</code>, that argument must be a quoted argument.</li>
+<li>For example: <code>"foo\nbar"</code> must be quoted.</li>
+<li>Otherwise, if the argument contains a <code>\</code>, a <code>"</code>, or a <code>$</code>,
+that argument should be bracketed.</li>
+<li>Example:
+<code>cmake
+set(x [[foo\bar]])
+set(y [=[foo([[bar\baz]])]=])
+</code></li>
+<li>Otherwise, if the argument contains characters that are
+not alphanumeric or <code>_</code>, that argument should be quoted.</li>
+<li>Otherwise, the argument should be unquoted.</li>
+<li>Exception: arguments to <code>if()</code> of type <code>&lt;variable|string&gt;</code> should always be quoted:</li>
+<li>Both arguments to the comparison operators -
+<code>EQUAL</code>, <code>STREQUAL</code>, <code>VERSION_LESS</code>, etc.</li>
+<li>The first argument to <code>MATCHES</code> and <code>IN_LIST</code></li>
+<li>Example:
+<code>cmake
+if("${FOO}" STREQUAL "BAR") # ...
+if("${BAZ}" EQUAL "0") # ...
+if("FOO" IN_LIST list_variable) # ...
+if("${bar}" MATCHES [[a[bcd]+\.[bcd]+]]) # ...
+</code></li>
+<li>For single expressions and for other types of predicates that do not
+take <code>&lt;variable|string&gt;</code>, use the normal rules.</li></ul></li>
 <li>There are no "pointer" or "in-out" parameters
 (where a user passes a variable name rather than the contents),
 except for simple out-parameters.</li>
 <li>Variables are not assumed to be empty.
 If the variable is intended to be used locally,
-it must be explicitly initialized to empty with <code>set(foo "")</code>.</li>
-<li>All variables expected to be inherited from the parent scope across an API boundary (i.e. not a file-local function) should be documented. Note that all variables mentioned in triplets.md are considered documented.</li>
+it must be explicitly initialized to empty with <code>set(foo "")</code> if it is a string variable,
+and <code>vcpkg_list(SET foo)</code> if it is a list variable.</li>
+<li><code>set(var)</code> should not be used. Use <code>unset(var)</code> to unset a variable,
+<code>set(var "")</code> to set it to the empty string,
+and <code>vcpkg_list(SET var)</code> to set it to the empty list.
+<em>Note: the empty string and the empty list are the same value;</em>
+<em>this is a notational difference rather than a difference in result</em></li>
+<li>All variables expected to be inherited from the parent scope across an API boundary
+(i.e. not a file-local function) should be documented.
+Note that all variables mentioned in triplets.md are considered documented.</li>
 <li>Out parameters are only set in <code>PARENT_SCOPE</code> and are never read.
 See also the helper <code>z_vcpkg_forward_output_variable()</code> to forward out parameters through a function scope.</li>
 <li><code>CACHE</code> variables are used only for global variables which are shared internally among strongly coupled
@@ -288,16 +330,14 @@ colliding with any local variables that would be defined by any other code.<ul>
 and <code>&lt;start&gt;</code> <em>must always be</em> less than or equal to <code>&lt;stop&gt;</code>.<ul>
 <li>This must be checked by something like:</li></ul></li>
 </ul>
-<pre><code class="cmake language-cmake">  if(start LESS_EQUAL end)
-    foreach(RANGE start end)
+<pre><code class="cmake language-cmake">  if("${start}" LESS_EQUAL "${end}")
+    foreach(RANGE "${start}" "${end}")
       ...
     endforeach()
   endif()</code></pre>
 <ul>
 <li>All port-based scripts must use <code>include_guard(GLOBAL)</code>
 to avoid being included multiple times.</li>
-<li><code>set(var)</code> should not be used. Use <code>unset(var)</code> to unset a variable,
-and <code>set(var "")</code> to set it to the empty value. <em>Note: this works for use as a list and as a string</em></li>
 </ul>
 <h3 id="cmake-versions-to-require">CMake Versions to Require</h3>
 <ul>
