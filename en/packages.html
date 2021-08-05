@@ -94,6 +94,13 @@
             <div class="package-card-header">
               <div class="package-name">{{ package.Name }} |</div>
               <div class="package-version">Version: {{ package.version }}</div>
+              <span class="github-btn" v-if="package.Stars">
+                <a class="gh-btn" target="_blank" :href="package.Homepage">
+                  <span class="gh-ico"></span>
+                  <span class="gh-text">Github</span>
+                </a>
+                <a class="gh-count" target="_blank" style="display: block;" :aria-label="package.Stars" :href="package.Homepage">{{ package.Stars }}</a>
+              </span>
             </div>
             <div class="package-text"><span class="package-description-short">{{ package.Description }}</span></div>
             <div class="package-compatibility">
