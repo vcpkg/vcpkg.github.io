@@ -19,6 +19,8 @@ $mapTable = @{
     "vcpkg_android_example_cmake" = ""
     "vcpkg_android_example_cmake_script" = ""
     "versioning.getting-started.md" = "Get Started with Versioning"
+    "portfile-functions.md" = "Portfile Helper Functions"
+    "pr-review-checklist.md" = "PR Checklist"
 }
 
 $searchTable = [System.Collections.ArrayList]::new()
@@ -35,28 +37,13 @@ function convertToReadableFormat {
         $name = $name.Substring(0, $name.Length - 3)
     }
 
-    if($name.contains("-")) {
-        $replaceString = $name -Split "[-]"
-        $newName = ""
-        ForEach($word in $replaceString) {
-            $upperCaseFirstLetter = ""
-            
-            if($word -ne "vcpkg") {
-                $upperCaseFirstLetter = $word[0].ToString().ToUpper()
-            } else {
-                $upperCaseFirstLetter = "v"
-            }
-            $newName += $upperCaseFirstLetter + $word.Substring(1) + " "
-        }
-
-        # Handle space at end of name
-        if($newName.substring($newName.Length - 1) -eq " ") {
-            return $newName.Substring(0, $newName.Length -1)
-        }
-
-        return $newName;
+    if($name.StartsWith("cmake")) {
+        $name = "CMake" + $name.substring(5)
     }
-    
+    elseif (!$name.StartsWith("vcpkg")) {
+        $name = $name[0].ToString().ToUpper() + $name.substring(1)
+    }
+
     return $name;
 }
 
@@ -153,11 +140,13 @@ function generateNavSearchResult {
 
 function processTreeViewLayer {
     param(
-        [string]$treeViewDir,
-        [string]$currentFile
+        [string]$treeViewDir
     )
     $treeViewHTML = ""
     $listLayer = gci -Path $treeViewDir | Sort-Object -Property @{Expression={$_.GetType()}},@{Expression={$_.FullName -replace "_","zz"}}
+    if (Test-Path -Path "$treeViewDir.md" -PathType Leaf) {
+        $listLayer = @(Get-Item "$treeViewDir.md") + $listLayer
+    }
     ForEach($File in $listLayer) {
         if($mapTable.ContainsKey($File.Name)) {
             if($mapTable[$File.Name] -eq "") {
@@ -171,11 +160,16 @@ function processTreeViewLayer {
             $treeViewHTML += "</button></li>`n"
 
             $treeViewHTML += '<ul class="collapse standard-padding">' + "`n"
-            $treeViewHTML += processTreeViewLayer -treeViewDir $File.FullName -currentFile $currentFile
+            $treeViewHTML += processTreeViewLayer -treeViewDir $File.FullName
             $treeViewHTML += "</ul>`n"
         }
         if(Test-Path -Path $File.FullName -PathType Leaf) {
             if(-Not $File.Name.Contains(".md")) {
+                continue;
+            }
+            $without_md = $File.FullName -replace ".md",""
+            if(($without_md -ne $treeViewDir) -and (Test-Path -Path $without_md -PathType Container)) {
+                # Skip pages that have a sibling folder of the same name -- that folder will include the file at the top
                 continue;
             }
 
@@ -192,28 +186,17 @@ function processTreeViewLayer {
 
             $relativePath = relativeToRootDomain -fileFullName $File.FullName
             $relativeHTMLPath = markdownToHTMLExtension -name $relativePath
-            
-            if($relativeHTMLPath -eq $currentFile) {
-                $treeViewHTML += '<li class="list-can-expand">'
-                $treeViewHTML += '<span id="currentPath'
-                $treeViewHTML += '">'
-                $treeViewHTML += $readable
-                $treeViewHTML += '</span></li>'
-            } else {
-                $treeViewHTML += '<a class="doc-outline-link" href="'
-                $treeViewHTML += $relativeHTMLPath
-                $treeViewHTML += '">'
-                $treeViewHTML += '<li class="list-can-expand">'
-                $treeViewHTML += $readable
-                $treeViewHTML += "</li></a>"
-            }
+
+            $treeViewHTML += '<a class="doc-outline-link" href="'
+            $treeViewHTML += $relativeHTMLPath
+            $treeViewHTML += '">'
+            $treeViewHTML += '<li class="list-can-expand">'
+            $treeViewHTML += $readable
+            $treeViewHTML += "</li></a>"
             $treeViewHTML += "`n"
-            
-            
         }
     }
     return $treeViewHTML
-
 }
 
 function templateLinks {
@@ -227,22 +210,16 @@ function templateLinks {
         $defaultTreeExpand += " > " + $line
     }
 
-    $list = [System.Collections.Generic.List[System.Object]]::new()
-    ForEach($line in $html) {
-        $genTreeView = 'handleDefaultTreeViewExpand("' + $defaultTreeExpand + '")'
-        $list.Add($line.replace("handleDefaultTreeViewExpand()", $genTreeView))
-    }
-    return $list
+    return $html
 }
 
 function generateTreeView {
     param(
         #relative dir OK
-        [string]$treeViewDir,
-        [string]$currentFile
+        [string]$treeViewDir
     )
     $treeViewHTML = "<ul class=docs-navigation>"
-    $treeViewHTML += processTreeViewLayer -treeViewDir $treeViewDir -currentFile $currentFile
+    $treeViewHTML += processTreeViewLayer -treeViewDir $treeViewDir
     $treeViewHTML += "</ul>"
 
     return $treeViewHTML
@@ -347,7 +324,11 @@ function generateHTMLFromMarkdown {
     return
 }
 
-$treeViewHTML = ""
+$treeViewHTML = generateTreeView -treeViewDir $sourceDir
+New-Item -Force -ItemType Directory "$destDir/en/docs" | Out-Null
+Out-File -FilePath "$destDir/en/docs/navpane.html" -InputObject $treeViewHTML -Encoding UTF8NoBom
+
+$htmlTemplate = Get-Content -Path $PSScriptRoot/html-doc-template.txt -Encoding UTF8
 
 $currentListDirRecursive = gci -Recurse -Path $sourceDir
 ForEach($file in $currentListDirRecursive) {
@@ -361,17 +342,13 @@ ForEach($file in $currentListDirRecursive) {
     $path = $rootDocsDomain + $relativeDocsDir
     $serverPath = markdownToHTMLExtension -name $path
     $serverPath = $serverPath.replace("\", "/");
-    $treeViewHTML = generateTreeView -treeViewDir $sourceDir -currentFile $serverPath
 
     $indexFolder = "$destDir/en/$relativeDocsDir".IndexOf($file.Name)
     $folder = "$destDir/en/$relativeDocsDir".Substring(0, $indexFolder)
     New-Item -Force -ItemType Directory $folder | Out-Null
 
-    $htmlTemplate = Get-Content -Path $PSScriptRoot/html-doc-template.txt -Encoding UTF8
-
-    $htmlTemplate = templateLinks -html $htmlTemplate -relativeDocsDir $relativeDocsDir -Encoding UTF8
-    Out-File -FilePath $pathToWrite -InputObject $htmlTemplate -Encoding UTF8Bom
-    Out-File -FilePath $pathToWrite -InputObject $treeViewHTML -Append -Encoding utf8
+    $htmlTemplate2 = templateLinks -html $htmlTemplate -relativeDocsDir $relativeDocsDir -Encoding UTF8
+    Out-File -FilePath $pathToWrite -InputObject $htmlTemplate2 -Encoding UTF8Bom
 
     generateHTMLFromMarkdown -markdownFile $file.FullName -baseName $file.Name -pathToWrite $pathToWrite
 

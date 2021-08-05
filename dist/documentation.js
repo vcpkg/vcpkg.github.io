@@ -62,25 +62,6 @@ function handleExpandCollapse(currentElement) {
     currentElement.previousElementSibling.classList.toggle("list-expanded");
 }
 
-
-function handleDefaultTreeViewExpand(treeViewPosition) {
-    var tokens = treeViewPosition.split(" > ");
-    var collapsibleList = document.getElementsByClassName("docs-navigation")[0];
-    for(let i=0; i < tokens.length; i++) {
-        if(collapsibleList) {
-            var listElements = collapsibleList.getElementsByClassName("collapse");
-            for(let listIndex = 0; listIndex < listElements.length; listIndex++) {
-                let prev = listElements[listIndex].previousElementSibling;
-                if(tokens[i] === prev.textContent) {
-                    collapsibleList = listElements[listIndex];
-                    handleExpandCollapse(listElements[listIndex]);
-                    break;
-                }
-            }
-        }
-    }
-}
-
 function generateTreeViewHeaderOutline() {
 
     var tagSize= [$("h1").length, $("h2").length, $("h3").length,
@@ -142,13 +123,13 @@ function generateTreeViewHeaderOutline() {
                 outlineList.appendChild(listItem);
             }
         }
-        document.getElementById("currentPath").parentElement.classList.remove("list-can-expand")
-        document.getElementById("currentPath").parentElement.classList.add("list-expanded")
-        document.getElementById("currentPath").parentElement.insertAdjacentElement('afterend', outlineList)
-        document.getElementById("currentPath").parentElement.addEventListener("click", function(e) {
+        var el = document.getElementById("currentPath").parentElement;
+        el.classList.remove("list-can-expand")
+        el.classList.add("list-expanded")
+        el.insertAdjacentElement('afterend', outlineList)
+        el.addEventListener("click", function(e) {
             handleExpandCollapse(this.nextElementSibling);
         });
-
     }
 
     document.addEventListener("scroll", function(event) {
@@ -183,8 +164,10 @@ function generateTreeViewHeaderOutline() {
         if(selectedElement < 0) {
             selectedElement = 0;
         }
-        sideBarElements[selectedElement].classList.add("section-selected");
-        sideBarElements[selectedElement].childNodes[0].classList.add("section-selected");
+        if(selectedElement < sideBarElements.length) {
+            sideBarElements[selectedElement].classList.add("section-selected");
+            sideBarElements[selectedElement].childNodes[0].classList.add("section-selected");
+        }
     })
 }
 
@@ -218,7 +201,18 @@ function adjustHeaderOutline() {
         }
 }
 
-$(document).ready(function () {
+function initDocumentation() {
+    var curpath = $('#docsNavPane a.doc-outline-link[href="'+window.location.pathname+'"]');
+    var li = document.createElement('li');
+    li.classList.add('list-can-expand');
+    var span = document.createElement('span');
+    span.id = "currentPath";
+    li.appendChild(span);
+    span.innerText = curpath[0].children[0].innerText;
+    var ul = curpath[0].parentElement;
+    ul.replaceChild(li, curpath[0]);
+    span.scrollIntoView();
+
     generateTreeViewHeaderOutline()
     adjustHeaderOutline();
     document.addEventListener("scroll", function(event) {
@@ -238,6 +232,14 @@ $(document).ready(function () {
         })
         previousElement.addEventListener("click", handleExpandCollapse.bind(this, currElement));
     }
+
+    // Expand parents of currentPath
+    var curpath_parent = ul;
+    while (!curpath_parent.classList.contains('docs-navigation')) {
+        handleExpandCollapse(curpath_parent);
+        curpath_parent = curpath_parent.parentElement;
+    }
+
     document.getElementsByClassName("search-bar")[0].addEventListener("focusout", function(e) {
         if(e.relatedTarget) {
             if(e.relatedTarget.parentElement){
@@ -277,4 +279,4 @@ $(document).ready(function () {
         languages: ["cmake", "json", "powershell"]
     })
     hljs.highlightAll();
-});
+}

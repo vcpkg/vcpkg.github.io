@@ -80,7 +80,6 @@ function toggleDocsOutlineMobile() {
 }
 
 function setScrollFocus (){
-    document.getElementById("currentPath").scrollIntoView();
     document.getElementsByClassName("navbar")[0].scrollIntoView();
 }
 
@@ -89,7 +88,7 @@ $(document).ready(function(){
     var siteConsent = null;
     WcpConsent.init("en-US", "banner", function (err, _siteConsent) {
         if (err != undefined) {
-            throw "error";
+            throw err;
         } else {
             siteConsent = _siteConsent;
         }

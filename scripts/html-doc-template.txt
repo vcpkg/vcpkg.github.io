@@ -38,20 +38,16 @@
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/powershell.min.js"></script>
     
         <!-- our scripts -->
-        <script src="/dist/documentation.js"></script>
         <script src="/dist/common.js"></script>
-        <script src="/dist/getting-started.js"></script>
+        <script src="/dist/documentation.js"></script>
     <script>
-        $(document).ready(function () {
-          handleDefaultTreeViewExpand();
-          $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
+        $(function () {
           $('#loadFooter').load('/en/footer.html');
-          
         });
       </script>
-    
     </head>
     <div id="loadNavBar"></div>
+    <div id="banner"></div>
     <div class="page">
     <nav class="left-side">
       <div class="docs-mobile-heading hidden">Table of Contents</div>
@@ -69,3 +65,12 @@
         <ul class="search hidden">
         </ul>
       </div>
+      <div id="docsNavPane"></div>
+      <script>
+        $('#loadNavBar').load('/en/navbar.html', setScrollFocus);
+        $('#docsNavPane').load('/en/docs/navpane.html', function () {
+          $(function () {
+            initDocumentation();
+          });
+        });
+      </script>
