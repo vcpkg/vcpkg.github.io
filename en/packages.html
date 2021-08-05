@@ -96,8 +96,11 @@
               <div class="package-version">Version: {{ package.version }}</div>
             </div>
             <div class="package-text"><span class="package-description-short">{{ package.Description }}</span></div>
-            <div class="package-compatibility"><span class="package-compatibility-text">Compatibility:</span>
-              <div class="processor-status">{{ package.compatibility }}</div>
+            <div class="package-compatibility">
+              <span class="package-compatibility-text">Compatibility:</span>
+              <div class="processor-status pass tip" v-for="t in package.tripletSupport" :class="t.class">
+                {{t.text}}<span>{{t.altText}}</span>
+              </div>
             </div>
             <div class="vcpkg-page-link" v-on:click="package.showDetails = !package.showDetails">{{ package.showDetails ? "Hide" : "View" }} Details</div>
             <template v-if="package.showDetails">
@@ -223,12 +226,31 @@
             for (let package of packages) {
               package.version = package.Version || package["Version-semver"] || package["Version-date"];
               let platformPassesString = "";
+              package.tripletSupport = [];
               for (let triplet of triplets) {
-                if (package[triplet] === 'pass') {
-                  platformPassesString += ", " + triplet;
+                const status = package[triplet];
+                const simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
+                switch (simplifiedStatus) {
+                  case 'pass':
+                    package.tripletSupport.push({
+                      text: '✓ ' + triplet,
+                      altText: 'Compatible with ' + triplet
+                    })
+                    break;
+                  case 'fail':
+                    package.tripletSupport.push({
+                      text: '! ' + triplet,
+                      altText: 'Not Compatible with ' + triplet
+                    })
+                    break;
+                  default:
+                    package.tripletSupport.push({
+                      text: '? ' + triplet,
+                      altText: 'Compatibility unknown on ' + triplet
+                    })
                 }
+                package.tripletSupport[package.tripletSupport.length - 1].class = simplifiedStatus;
               }
-              package.compatibility = platformPassesString.substring(2);
               package.showDetails = false;
               package.tab = 'features';
             }
