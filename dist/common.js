@@ -85,13 +85,15 @@ function setScrollFocus (){
 
 $(document).ready(function(){
     //Analytics
+    if (typeof oneDS === 'undefined') {
+        return;
+    }
     var siteConsent = null;
     WcpConsent.init("en-US", "banner", function (err, _siteConsent) {
         if (err != undefined) {
             throw err;
-        } else {
-            siteConsent = _siteConsent;
         }
+        siteConsent = _siteConsent;
     });
     const analytics = new oneDS.ApplicationInsights();
     var config = {
