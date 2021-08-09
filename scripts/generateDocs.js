@@ -4,6 +4,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const { exit } = require('process');
 const showdown = require('showdown');
+const Mustache = require('mustache');
 
 if (process.argv.length != 3) {
     console.log("Usage: node generateDocs.js <path/to/source/docs>")
@@ -129,7 +130,7 @@ function generateNavSearchResult(fileFullName) {
  * @param {string} treeViewDir
  */
 async function processTreeViewLayer(treeViewDir) {
-    var treeViewHTML = ""
+    const is_specs_dir = path.basename(treeViewDir) == "specifications";
     var dirents = await fs.readdir(treeViewDir, { encoding: 'utf-8', withFileTypes: true });
     dirents.sort((a, b) => {
         if (a.isDirectory() && !b.isDirectory()) { return -1; }
@@ -142,12 +143,14 @@ async function processTreeViewLayer(treeViewDir) {
     var html = [];
     var directories = [];
 
-    async function handleFile(filename, fullName) {
-        const relativePath = relativeToRootDomain(fullName);
-        const relativeHTMLPath = markdownToHTMLExtension(relativePath);
+    async function handleFile(filename, fullName, href) {
+        if (typeof href == 'undefined') {
+            const relativePath = relativeToRootDomain(fullName);
+            href = markdownToHTMLExtension(relativePath);
+        }
 
         html.push('<a class="doc-outline-link" href="');
-        html.push(relativeHTMLPath);
+        html.push(href);
         html.push('">');
         html.push('<li class="list-can-expand">');
         if (filename in mapTable) {
@@ -182,10 +185,10 @@ async function processTreeViewLayer(treeViewDir) {
 
         if (file.isDirectory()) {
             directories.push(file.name);
-            html.push('<li class="list-can-expand"><button class="button-list-can-expand">');
+            html.push('<li class="list-expanded"><button class="button-list-can-expand">');
             html.push(convertToReadableFormat(file.name));
             html.push("</button></li>\n");
-            html.push('<ul class="collapse standard-padding">\n');
+            html.push('<ul class="standard-padding collapsable">\n');
             html.push(await processTreeViewLayer(fullName));
             html.push("</ul>\n");
         } else if (file.isFile()) {
@@ -194,7 +197,11 @@ async function processTreeViewLayer(treeViewDir) {
             } else if (directories.includes(file.name.substr(0, file.name.length - 3))) {
                 continue;
             }
-            await handleFile(file.name, fullName);
+            if (is_specs_dir) {
+                await handleFile(file.name, fullName, relativeToRootDomain(fullName, "https://github.com/microsoft/vcpkg/tree/master/"));
+            } else {
+                await handleFile(file.name, fullName);
+            }
         }
     }
 
@@ -224,6 +231,7 @@ function callshowdown(data, currentPath) {
         .replace(/<br \/>/g, " ")
         .replace(/Vcpkg/g, "vcpkg")
         .replace('<a href="mailto:vcpkg@microsoft.com">vcpkg@microsoft.com</a>', '<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;v&#99;&#x70;&#107;&#x67;&#64;&#109;&#x69;&#x63;&#114;&#x6f;&#x73;&#x6f;&#102;&#x74;&#x2e;&#x63;&#x6f;&#x6d;">&#118;&#x63;&#x70;&#x6b;&#103;&#x40;&#109;&#x69;&#x63;&#114;&#111;&#x73;&#111;&#102;&#x74;&#x2e;&#99;&#x6f;&#x6d;</a>')
+        .replace(/<a name="([^"]*)"><\/a>/g, '<a name="$1" class="docs-anchor"></a>');
 
     html = html.replace(/<a href="([^"]*)"/g, (match, href) => {
         return '<a href="' + markdownToHTMLExtension(handleRelativeLink(href, currentPath)) + '"';
@@ -232,52 +240,46 @@ function callshowdown(data, currentPath) {
     return html;
 }
 
-/**
- * @param {string} markdownFile
- * @param {fs.FileHandle} fd
- */
-async function generateHTMLFromMarkdown(markdownFile, fd) {
-    const file = await fs.readFile(markdownFile, 'utf-8');
-
-    // Handle search table JSON
-    var relativePath = relativeToRootDomain(markdownFile)
-
-    searchTable.push({
-        Path: markdownToHTMLExtension(relativePath),
-        Name: convertToReadableFormat(path.basename(markdownFile)),
-        Source: file,
-        Nav: generateNavSearchResult(markdownFile)
-    });
-
-    if (markdownFile.indexOf("specifications") != -1) {
-        const specLink = relativeToRootDomain(markdownFile, "https://github.com/microsoft/vcpkg/tree/master/")
-        await fd.write('</nav><main class="right-side spec-only" id="main">\n'
-            + '<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>\n'
-            + 'See <a href="' + specLink + '" class="spec-link">' + specLink + '</a>\n'
-            + '</main></div><div id="loadFooter"></div></html>\n');
-    } else {
-        await fd.write('</nav><main class="right-side" id="main">\n'
-            + '<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>\n'
-            + callshowdown(file, markdownFile)
-            + '\n</main></div><div id="loadFooter"></div></html>\n');
-    }
-}
-
 async function main() {
-    const tvhtml = await generateTreeView(sourceDir);
+    const navpanehtml = await generateTreeView(sourceDir);
     await fs.mkdir(destDir + rootDocsDomain + 'docs', { recursive: true });
-    await fs.writeFile(destDir + rootDocsDomain + 'docs/navpane.html', tvhtml, 'utf-8');
+    await fs.writeFile(destDir + rootDocsDomain + 'docs/navpane.html', navpanehtml, 'utf-8');
 
-    const template = await fs.readFile(__dirname + "/html-doc-template.txt", 'utf-8');
+    const template = await fs.readFile(__dirname + "/docpage.template.html", 'utf-8');
+    const footertemplate = await fs.readFile(destDir + rootDocsDomain + "footer.html", 'utf-8');
+    const navbartemplate = await fs.readFile(destDir + rootDocsDomain + "navbar.html", 'utf-8');
 
     async function generateForFile(relSourcePath) {
         const destFullPath = destDir + rootDocsDomain + 'docs' + relSourcePath;
         const pathToWrite = markdownToHTMLExtension(destFullPath);
 
-        var fd = await fs.open(pathToWrite, 'w');
-        await fd.write(template);
-        await generateHTMLFromMarkdown(sourceDir + relSourcePath, fd);
-        await fd.close();
+        const markdownFile = sourceDir + relSourcePath;
+        const file = await fs.readFile(markdownFile, 'utf-8');
+
+        // Handle search table JSON
+        var relativePath = relativeToRootDomain(markdownFile)
+
+        searchTable.push({
+            Path: markdownToHTMLExtension(relativePath),
+            Name: convertToReadableFormat(path.basename(markdownFile)),
+            Source: file,
+            Nav: generateNavSearchResult(markdownFile)
+        });
+
+        var view = {
+            footer: footertemplate,
+            navbar: navbartemplate,
+            docsnav: navpanehtml
+        };
+
+        if (markdownFile.indexOf("specifications") != -1) {
+            view.mainClasses = " spec-only";
+            const specLink = relativeToRootDomain(markdownFile, "https://github.com/microsoft/vcpkg/tree/master/")
+            view.body = 'See <a href="' + specLink + '" class="spec-link">' + specLink + '</a>';
+        } else {
+            view.body = callshowdown(file, markdownFile);
+        }
+        await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
 
         console.log("generated " + pathToWrite);
     }

@@ -370,6 +370,15 @@ h2 {
   font-weight: bold;
 }
 
+.docs-anchor::before,h2::before,h3::before,h4::before {
+    display: block;
+    content: " ";
+    margin-top: -62px;
+    height: 62px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .selected {
   font-weight: bolder;
   text-decoration: underline;

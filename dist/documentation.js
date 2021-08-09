@@ -211,7 +211,6 @@ function initDocumentation() {
     span.innerText = curpath[0].children[0].innerText;
     var ul = curpath[0].parentElement;
     ul.replaceChild(li, curpath[0]);
-    span.scrollIntoView();
 
     generateTreeViewHeaderOutline()
     adjustHeaderOutline();
@@ -279,4 +278,6 @@ function initDocumentation() {
         languages: ["cmake", "json", "powershell"]
     })
     hljs.highlightAll();
+    
+    span.scrollIntoView();
 }
