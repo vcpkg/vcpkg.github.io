@@ -56,6 +56,11 @@ function handleRelativeLink(link, currentPath) {
     }
 
     if (link.endsWith(".md") || link.indexOf(".md") != -1) {
+        if (link.startsWith("../specifications")) {
+            const skip_prefix = "../specifications".length;
+            return "https://github.com/microsoft/vcpkg/blob/master/docs/specifications" + link.substring(skip_prefix);
+        }
+
         return link;
     }
 
@@ -250,10 +255,14 @@ async function main() {
     const navbartemplate = await fs.readFile(destDir + rootDocsDomain + "navbar.html", 'utf-8');
 
     async function generateForFile(relSourcePath) {
+        const markdownFile = sourceDir + relSourcePath;
+        if (markdownFile.indexOf("specifications") != -1) {
+            return;
+        }
+
         const destFullPath = destDir + rootDocsDomain + 'docs' + relSourcePath;
         const pathToWrite = markdownToHTMLExtension(destFullPath);
 
-        const markdownFile = sourceDir + relSourcePath;
         const file = await fs.readFile(markdownFile, 'utf-8');
 
         // Handle search table JSON
@@ -272,13 +281,7 @@ async function main() {
             docsnav: navpanehtml
         };
 
-        if (markdownFile.indexOf("specifications") != -1) {
-            view.mainClasses = " spec-only";
-            const specLink = relativeToRootDomain(markdownFile, "https://github.com/microsoft/vcpkg/tree/master/")
-            view.body = 'See <a href="' + specLink + '" class="spec-link">' + specLink + '</a>';
-        } else {
-            view.body = callshowdown(file, markdownFile);
-        }
+        view.body = callshowdown(file, markdownFile);
         await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
 
         console.log("generated " + pathToWrite);

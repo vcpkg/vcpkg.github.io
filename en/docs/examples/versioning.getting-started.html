@@ -578,13 +578,13 @@ zlib version is 1.2.11</code></pre>
 <h2 id="versions-and-custom-ports">Versions and custom ports</h2>
 <p>The last thing to discuss is how overlay ports interact with versioning resolution. The answer is: they don't. </p>
 <p>Going into more detail, when you provide an overlay for a port, vcpkg will always use the overlay port without caring what version is contained in it. The reasons are two-fold: (1) it is consistent with the existing behavior of overlay ports of completely masking the existing port, and (2) overlay ports do not (and are not expected to) provide enough information to power vcpkg's versioning feature.</p>
-<p>If you want to have flexible port customization along with versioning features, you should consider making your own custom registry. See our <a href="../specifications/registries.html">registries specification for more details</a>.</p>
+<p>If you want to have flexible port customization along with versioning features, you should consider making your own custom registry. See our <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/registries.md">registries specification for more details</a>.</p>
 <h2 id="further-reading">Further reading</h2>
-<p>If you're interested in delving deeper into the details of how versioning works we recommended that you read the <a href="../specifications/versioning.html">original versioning specification</a> and the <a href="../users/versioning.implementation-details.html">implementation details</a>.</p>
+<p>If you're interested in delving deeper into the details of how versioning works we recommended that you read the <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/versioning.md">original versioning specification</a> and the <a href="../users/versioning.implementation-details.html">implementation details</a>.</p>
 <p>See also:</p>
 <ul>
 <li><a href="../users/versioning.html">Versioning docs</a></li>
-<li><a href="../specifications/versioning.html">Original specification</a></li>
+<li><a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/versioning.md">Original specification</a></li>
 <li><a href="../users/versioning.implementation-details.html">Versioning implementation details</a></li>
 </ul>
 </main></div><div id="loadFooter"><footer class="footer">

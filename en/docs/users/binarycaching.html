@@ -519,7 +519,7 @@ steps:
     shell: 'bash'
     run: &gt;
       ./vcpkg/vcpkg install sqlite3 cpprestsdk --triplet ${{ matrix.triplet }}</code></pre>
-<p>If you're using <a href="../specifications/manifests.html">manifests</a>, you can omit the <code>vcpkg package restore</code> step: it will be run automatically as part of your build.</p>
+<p>If you're using <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/manifests.md">manifests</a>, you can omit the <code>vcpkg package restore</code> step: it will be run automatically as part of your build.</p>
 <p>More information about GitHub Packages' NuGet support is available on <a href="https://docs.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-dotnet-cli-for-use-with-github-packages">GitHub Docs</a>.</p>
 <h3 id="azure-devops-artifacts">Azure DevOps Artifacts</h3>
 <p>To use vcpkg with Azure DevOps Artifacts, we recommend using the <code>NuGet</code> backend.</p>
@@ -625,7 +625,7 @@ PS&gt; $env:VCPKG_BINARY_SOURCES="nuget,ADO,readwrite"</code></pre>
 </ul>
 <p>Despite this extensive list, it is possible to defeat the cache and introduce nondeterminism. If you have additional details that you'd like to be tracked, the easiest resolution is to generate a triplet file with your additional information in a comment. That additional information will be included in the package's input set and ensure a unique universe of binaries.</p>
 <p>The hashes used are stored in the package and in the current installed directory at <code>/share/&lt;port&gt;/vcpkg_abi_info.txt</code>.</p>
-<p>The original specification for binary caching is available <a href="../specifications/binarycaching.html">here</a>.</p>
+<p>The original specification for binary caching is available <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/binarycaching.md">here</a>.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

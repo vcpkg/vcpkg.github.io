@@ -565,7 +565,7 @@ These files are located in the following locations:</p>
 <pre><code>vcpkg x-add-version --all</code></pre>
 <p>To update the files for all modified ports at once.</p>
 <p><em>NOTE: These commands require you to have committed your changes to the ports before running them. The reason is that the Git SHA of the port directory is required in these version files. But don't worry, the <code>x-add-version</code> command will warn you if you have local changes that haven't been committed.</em></p>
-<p>See our <a href="../specifications/versioning.html">versioning specification</a> and <a href="../specifications/registries-2.html">registries specification</a> to learn how vcpkg interacts with these files.</p>
+<p>See our <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/versioning.md">versioning specification</a> and <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/registries-2.md">registries specification</a> to learn how vcpkg interacts with these files.</p>
 <h2 id="patching">Patching</h2>
 <h3 id="prefer-options-over-patching">Prefer options over patching</h3>
 <p>It is preferable to set options in a call to <code>vcpkg_configure_xyz()</code> over patching the settings directly.</p>

@@ -9,4 +9,4 @@ then
     git -C ../vcpkg checkout FETCH_HEAD
 fi
 npm install
-node generateDocs.js .. ../vcpkg/docs
+node generateDocs.js ../vcpkg/docs
