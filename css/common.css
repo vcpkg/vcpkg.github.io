@@ -348,11 +348,11 @@
 
 body {
   padding-top: 75px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro',var(--font-family-sans-serif);
 }
 
 code {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro',var(--font-family-monospace);
   color: rgb(0, 0, 0);
   background: #f1f1f2;
   word-break: break-all;
@@ -368,6 +368,15 @@ pre {
 h1,
 h2 {
   font-weight: bold;
+}
+
+.docs-anchor::before,h2::before,h3::before,h4::before {
+    display: block;
+    content: " ";
+    margin-top: -62px;
+    height: 62px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .selected {
@@ -394,7 +403,6 @@ h2 {
 .nav-link {
   font-size: 1.2rem;
   margin-right: 1vw;
-  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -508,7 +516,6 @@ footer p {
 }
 
 .footer-heading {
-  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -517,7 +524,6 @@ footer p {
 }
 
 .footer-description {
-  font-family: Source Sans Pro;
   font-style: normal;
   font-size: 14px;
   line-height: 160%;
@@ -562,6 +568,7 @@ a.section-selected:hover {
 
 .docs-navigation {
   z-index: -1;
+  font-size: 14px;
 }
 
 .docs-section {
@@ -603,6 +610,7 @@ a.section-selected:hover {
   border: none;
   background: none;
   color: none;
+  text-align: left;
   margin-left: -5px;
 }
 
@@ -702,7 +710,6 @@ li.docs-col-bold {
 }
 
 .mobile-nav-list {
-  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 34px;
@@ -717,7 +724,6 @@ li.docs-col-bold {
 }
 
 .mobile-docs-list {
-  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -775,7 +781,7 @@ span.navbar-close {
   background: #f1f1f2;
   width: 100%;
   padding: 10px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro',var(--font-family-monospace);
   margin: 10px;
 }
 
@@ -785,7 +791,6 @@ span.navbar-close {
 }
 
 .bold-text {
-  font-family: Source Sans Pro;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -821,7 +826,6 @@ span.navbar-close {
   color: #222222;
 }
 .doc-outline-link:hover {
-  text-decoration: none;
   color: #222222;
 }
 

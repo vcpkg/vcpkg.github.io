@@ -9,4 +9,4 @@ then
     git -C ../vcpkg checkout FETCH_HEAD
 fi
 npm install
-pwsh generateDocs.ps1 -destDir .. -sourceDir ../vcpkg/docs
+node generateDocs.js ../vcpkg/docs

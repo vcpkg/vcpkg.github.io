@@ -80,19 +80,20 @@ function toggleDocsOutlineMobile() {
 }
 
 function setScrollFocus (){
-    document.getElementById("currentPath").scrollIntoView();
     document.getElementsByClassName("navbar")[0].scrollIntoView();
 }
 
 $(document).ready(function(){
     //Analytics
+    if (typeof oneDS === 'undefined') {
+        return;
+    }
     var siteConsent = null;
     WcpConsent.init("en-US", "banner", function (err, _siteConsent) {
         if (err != undefined) {
-            throw "error";
-        } else {
-            siteConsent = _siteConsent;
+            throw err;
         }
+        siteConsent = _siteConsent;
     });
     const analytics = new oneDS.ApplicationInsights();
     var config = {
