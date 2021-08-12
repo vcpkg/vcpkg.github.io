@@ -9,4 +9,5 @@ then
     git -C ../vcpkg checkout FETCH_HEAD
 fi
 npm install
+node generatePages.js
 node generateDocs.js ../vcpkg/docs
