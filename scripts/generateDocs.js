@@ -252,7 +252,6 @@ const outDocsDir = destDir + rootDocsDomain + 'docs';
 async function main() {
     const navpanehtml = await generateTreeView(sourceDir);
     await fs.mkdir(outDocsDir, { recursive: true });
-    await fs.writeFile(outDocsDir + '/navpane.html', navpanehtml, 'utf-8');
 
     const template = await fs.readFile(templatesDir + "/docpage.template.html", 'utf-8');
     const footertemplate = await fs.readFile(templatesDir + "/footer.html", 'utf-8');
