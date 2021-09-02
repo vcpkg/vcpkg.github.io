@@ -410,7 +410,20 @@ list of source strings. Characters can be escaped using backtick (`).</p>
 <p>Syntax: <code>x-azurl,&lt;url&gt;[,&lt;sas&gt;[,&lt;rw&gt;]]</code></p>
 <p>Adds an Azure Blob Storage source, optionally using Shared Access Signature validation. URL should include the container
 path and be terminated with a trailing <code>/</code>. SAS, if defined, should be prefixed with a <code>?</code>. Non-Azure servers will also
-work if they respond to GET and PUT requests of the form: <code>&lt;url&gt;&lt;sha512&gt;&lt;sas&gt;</code>.</p>
+work if they respond to GET and PUT requests of the form: <code>&lt;url&gt;&lt;sha512&gt;&lt;sas&gt;</code>. As an example, if you set
+<code>X_VCPKG_ASSET_SOURCES</code> to <code>x-azurl,https://mydomain.com/vcpkg/,token=abc123,readwrite</code> your server should respond to
+<code>GET</code> and <code>PUT</code> requests of the form <code>https://mydomain.com/vcpkg/&lt;sha512&gt;?token=abc123</code>.</p>
+<p>You can also use the filesystem (e.g. a network drive) via <code>file://</code> as asset cache. For example you then set
+<code>X_VCPKG_ASSET_SOURCES</code> to <code>x-azurl,file:///Z:/vcpkg/assetcache/,,readwrite</code> when you have a network folder mounted at
+<code>Z:/</code>.</p>
+<p>The workflow of this asset source is:</p>
+<ol>
+<li>Attemp to read from the mirror</li>
+<li>(If step 1 failed) Read from the original url</li>
+<li>(If step 2 succeeded) Write back to the mirror</li>
+</ol>
+<p>You can enable/disable steps 1 and 3 via the <a href="#valid-source-strings"><code>&lt;rw&gt;</code></a> specifier and you can disable step 2 via
+<code>x-block-origin</code> below.</p>
 <p>See also the <a href="binarycaching.html#azure-blob-storage-experimental">binary caching documentation for Azure Blob Storage</a> for
 more information on how to set up an <code>x-azurl</code> source.</p>
 <h4 id="x-block-origin"><code>x-block-origin</code></h4>

@@ -394,8 +394,8 @@
 <h1 id="vcpkg_common_definitions">vcpkg_common_definitions</h1>
 <p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_common_definitions.md">vcpkg repo</a>.</p>
 <p>This file defines the following variables which are commonly needed or used in portfiles:</p>
-<pre><code class="cmake language-cmake">VCPKG_TARGET_IS_&lt;target&gt;                 with &lt;target&gt; being one of the following: WINDOWS, UWP, LINUX, OSX, ANDROID, FREEBSD, OPENBSD. only defined if &lt;target&gt;
-VCPKG_HOST_IS_&lt;target&gt;                   with &lt;host&gt; being one of the following: WINDOWS, LINUX, OSX, FREEBSD, OPENBSD. only defined if &lt;host&gt;
+<pre><code class="cmake language-cmake">VCPKG_TARGET_IS_&lt;target&gt;                 with &lt;target&gt; being one of the following: WINDOWS, UWP, MINGW, LINUX, OSX, ANDROID, FREEBSD, OPENBSD. only defined if &lt;target&gt;
+VCPKG_HOST_IS_&lt;host&gt;                     with &lt;host&gt; being one of the following: WINDOWS, LINUX, OSX, FREEBSD, OPENBSD. only defined if &lt;host&gt;
 VCPKG_HOST_PATH_SEPARATOR                Host specific path separator (USAGE: "&lt;something&gt;${VCPKG_HOST_PATH_SEPARATOR}&lt;something&gt;"; only use and pass variables with VCPKG_HOST_PATH_SEPARATOR within "")
 VCPKG_HOST_EXECUTABLE_SUFFIX             executable suffix of the host
 VCPKG_TARGET_EXECUTABLE_SUFFIX           executable suffix of the target

@@ -410,6 +410,10 @@
 <p>The url of the git repository.</p>
 <h3 id="ref">REF</h3>
 <p>The git sha of the commit to download.</p>
+<h3 id="fetch_ref">FETCH_REF</h3>
+<p>The git branch to fetch in non-HEAD mode. After this is fetched,
+then <code>REF</code> is checked out. This is useful in cases where the git server
+does not allow checking out non-advertised objects.</p>
 <h3 id="head_ref">HEAD_REF</h3>
 <p>The git branch to use when the package is requested to be built from the latest sources.</p>
 <p>Example: <code>main</code>, <code>develop</code>, <code>HEAD</code></p>
