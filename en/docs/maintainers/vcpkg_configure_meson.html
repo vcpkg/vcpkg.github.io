@@ -338,6 +338,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
@@ -397,6 +398,7 @@
 <h2 id="usage">Usage</h2>
 <pre><code class="cmake language-cmake">vcpkg_configure_meson(
     SOURCE_PATH &lt;${SOURCE_PATH}&gt;
+    [NO_PKG_CONFIG]
     [OPTIONS &lt;-DUSE_THIS_IN_ALL_BUILDS=1&gt;...]
     [OPTIONS_RELEASE &lt;-DOPTIMIZE=1&gt;...]
     [OPTIONS_DEBUG &lt;-DDEBUGGABLE=1&gt;...]
@@ -411,6 +413,8 @@ By convention, this is usually set in the portfile as the variable <code>SOURCE_
 <p>Additional options passed to Meson during the Release configuration. These are in addition to <code>OPTIONS</code>.</p>
 <h3 id="options_debug">OPTIONS_DEBUG</h3>
 <p>Additional options passed to Meson during the Debug configuration. These are in addition to <code>OPTIONS</code>.</p>
+<h3 id="no_pkg_config">NO_PKG_CONFIG</h3>
+<p>Disable pkg-config setup </p>
 <h2 id="notes">Notes</h2>
 <p>This command supplies many common arguments to Meson. To see the full list, examine the source.</p>
 <h2 id="examples">Examples</h2>
