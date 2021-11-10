@@ -338,6 +338,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
@@ -398,6 +399,7 @@
 <pre><code class="cmake language-cmake">vcpkg_build_nmake(
     SOURCE_PATH &lt;${SOURCE_PATH}&gt;
     [NO_DEBUG]
+    [ENABLE_INSTALL]
     [TARGET &lt;all&gt;]
     [PROJECT_SUBPATH &lt;${SUBPATH}&gt;]
     [PROJECT_NAME &lt;${MAKEFILE_NAME}&gt;]
@@ -439,8 +441,7 @@ be passed.</p>
 <h3 id="add_bin_to_path">ADD_BIN_TO_PATH</h3>
 <p>Adds the appropriate Release and Debug <code>bin\</code> directories to the path during the build such that executables can run against the in-tree DLLs.</p>
 <h2 id="notes">Notes:</h2>
-<p>This command should be preceded by a call to <a href="vcpkg_configure_nmake.html"><code>vcpkg_configure_nmake()</code></a>.
-You can use the alias <a href="vcpkg_install_nmake.html"><code>vcpkg_install_nmake()</code></a> function if your makefile supports the
+<p>You can use the alias <a href="vcpkg_install_nmake.html"><code>vcpkg_install_nmake()</code></a> function if your makefile supports the
 "install" target</p>
 <h2 id="examples">Examples</h2>
 <ul>

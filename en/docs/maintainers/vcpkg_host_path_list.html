@@ -392,46 +392,22 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_from_bitbucket">vcpkg_from_bitbucket</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_from_bitbucket.md">vcpkg repo</a>.</p>
-<p>Download and extract a project from Bitbucket.</p>
-<h2 id="usage">Usage:</h2>
-<pre><code class="cmake language-cmake">vcpkg_from_bitbucket(
-    OUT_SOURCE_PATH &lt;SOURCE_PATH&gt;
-    REPO &lt;Microsoft/cpprestsdk&gt;
-    [REF &lt;v2.0.0&gt;]
-    [SHA512 &lt;45d0d7f8cc350...&gt;]
-    [HEAD_REF &lt;master&gt;]
-    [PATCHES &lt;patch1.patch&gt; &lt;patch2.patch&gt;...]
-)</code></pre>
-<h2 id="parameters">Parameters:</h2>
-<h3 id="out_source_path">OUT_SOURCE_PATH</h3>
-<p>Specifies the out-variable that will contain the extracted location.</p>
-<p>This should be set to <code>SOURCE_PATH</code> by convention.</p>
-<h3 id="repo">REPO</h3>
-<p>The organization or user and repository on GitHub.</p>
-<h3 id="ref">REF</h3>
-<p>A stable git commit-ish (ideally a tag) that will not change contents. <strong>This should not be a branch.</strong></p>
-<p>For repositories without official releases, this can be set to the full commit id of the current latest master.</p>
-<p>If <code>REF</code> is specified, <code>SHA512</code> must also be specified.</p>
-<h3 id="sha512">SHA512</h3>
-<p>The SHA512 hash that should match the archive (<a href="https://bitbucket.com/${REPO}/get/${REF}.tar.gz)">https://bitbucket.com/${REPO}/get/${REF}.tar.gz)</a>.</p>
-<p>This is most easily determined by first setting it to <code>0</code>, then trying to build the port. The error message will contain the full hash, which can be copied back into the portfile.</p>
-<h3 id="head_ref">HEAD_REF</h3>
-<p>The unstable git commit-ish (ideally a branch) to pull for <code>--head</code> builds.</p>
-<p>For most projects, this should be <code>master</code>. The chosen branch should be one that is expected to be always buildable on all supported platforms.</p>
-<h3 id="patches">PATCHES</h3>
-<p>A list of patches to be applied to the extracted sources.</p>
-<p>Relative paths are based on the port directory.</p>
-<h2 id="notes">Notes:</h2>
-<p>At least one of <code>REF</code> and <code>HEAD_REF</code> must be specified, however it is preferable for both to be present.</p>
-<p>This exports the <code>VCPKG_HEAD_VERSION</code> variable during head builds.</p>
-<h2 id="examples">Examples:</h2>
-<ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/blaze/portfile.cmake">blaze</a></li>
-</ul>
+<h1 id="vcpkg_host_path_list">vcpkg_host_path_list</h1>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_host_path_list.md">vcpkg repo</a>.</p>
+<p>Modify a host path list variable (PATH, INCLUDE, LIBPATH, etc.)</p>
+<pre><code class="cmake language-cmake">vcpkg_host_path_list(PREPEND &lt;list-var&gt; [&lt;path&gt;...])
+vcpkg_host_path_list(APPEND &lt;list-var&gt; [&lt;path&gt;...])</code></pre>
+<p><code>&lt;list-var&gt;</code> may be either a regular variable name, or <code>ENV{variable-name}</code>,
+in which case <code>vcpkg_host_path_list</code> will modify the environment.</p>
+<p><code>vcpkg_host_path_list</code> adds all of the paths passed to it to <code>&lt;list-var&gt;</code>;
+<code>PREPEND</code> puts them before the existing list, so that they are searched first;
+<code>APPEND</code> places them after the existing list,
+so they would be searched after the paths which are already in the variable.</p>
+<p>For both <code>APPEND</code> and <code>PREPEND</code>,
+the paths are added (and thus searched) in the order received.</p>
+<p>If no paths are passed, then nothing will be done.</p>
 <h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_from_bitbucket.cmake">scripts/cmake/vcpkg_from_bitbucket.cmake</a></p>
+<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_host_path_list.cmake">scripts/cmake/vcpkg_host_path_list.cmake</a></p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">
