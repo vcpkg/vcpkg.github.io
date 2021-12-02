@@ -299,6 +299,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -367,6 +368,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -690,6 +692,7 @@ in cases where a port is expected to succeed 10% of the time, it should still be
 | ? U+000D "CARRIAGE RETURN" ?
 | ? U+0020 "SPACE" ? ;
 optional-whitespace = { whitespace-character } ;
+required-whitespace = whitespace-character, { optional-whitespace } ;
 
 lowercase-alpha =
 | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m"
@@ -701,6 +704,9 @@ identifier-character =
 | lowercase-alpha
 | digit ;
 
+platform-expression-list =
+| platform-expression { ",", optional-whitespace, platform-expression } ;
+
 platform-expression =
 | platform-expression-not
 | platform-expression-and
@@ -709,21 +715,39 @@ platform-expression =
 platform-expression-identifier =
 | identifier-character, { identifier-character }, optional-whitespace ;
 
+platform-expression-grouped =
+| "(", optional-whitespace, platform-expression, ")", optional-whitespace ;
+
 platform-expression-simple =
 | platform-expression-identifier
-| "(", optional-whitespace, platform-expression, ")", optional-whitespace ;
+| platform-expression-grouped ;
+
+platform-expression-unary-keyword-operand =
+| required-whitespace, platform-expression-simple
+| optional-whitespace, platform-expression-grouped ;
 
 platform-expression-not =
 | platform-expression-simple
-| "!", optional-whitespace, platform-expression-simple ;
+| "!", optional-whitespace, platform-expression-simple
+| "not", platform-expression-unary-keyword-operand ;
+
+platform-expression-binary-keyword-first-operand =
+| platform-expression-not, required-whitespace
+| platform-expression-grouped ;
+
+platform-expression-binary-keyword-second-operand =
+| required-whitespace, platform-expression-not
+| platform-expression-grouped ;
 
 platform-expression-and =
-| platform-expression-not, { "&amp;", optional-whitespace, platform-expression-not } ;
+| platform-expression-not, { "&amp;", optional-whitespace, platform-expression-not }
+| platform-expression-binary-keyword-first-operand, { "and", platform-expression-binary-keyword-second-operand } ;
 
 platform-expression-or =
-| platform-expression-not, { "|", optional-whitespace, platform-expression-not } ;
+| platform-expression-not, { "|", optional-whitespace, platform-expression-not }
+| platform-expression-binary-keyword-first-operand, { "or", platform-expression-binary-keyword-second-operand } (* to allow for future extension *) ;
 
-top-level-platform-expression = optional-whitespace, platform-expression ;</code></pre>
+top-level-platform-expression = optional-whitespace, platform-expression-list ;</code></pre>
 <p>Basically, there are four kinds of expressions -- identifiers, negations, ands, and ors.
 Negations may only negate an identifier or a grouped expression.
 Ands and ors are a list of <code>&amp;</code> or <code>|</code> separated identifiers, negated expressions, and grouped expressions.

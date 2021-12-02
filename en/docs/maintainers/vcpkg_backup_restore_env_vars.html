@@ -394,37 +394,23 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_fail_port_install">vcpkg_fail_port_install</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_fail_port_install.md">vcpkg repo</a>.</p>
-<p>Checks common requirements and fails the current portfile with a (default) error message</p>
-<h2 id="usage">Usage</h2>
-<pre><code class="cmake language-cmake">vcpkg_fail_port_install(
-    [ALWAYS]
-    [MESSAGE &lt;"Reason for failure"&gt;]
-    [ON_TARGET &lt;Windows&gt; [&lt;OSX&gt; ...]]
-    [ON_ARCH &lt;x64&gt; [&lt;arm&gt; ...]]
-    [ON_CRT_LINKAGE &lt;static&gt; [&lt;dynamic&gt; ...]])
-    [ON_LIBRARY_LINKAGE &lt;static&gt; [&lt;dynamic&gt; ...]]
-)</code></pre>
-<h2 id="parameters">Parameters</h2>
-<h3 id="message">MESSAGE</h3>
-<p>Additional failure message. If none is given, a default message will be displayed depending on the failure condition.</p>
-<h3 id="always">ALWAYS</h3>
-<p>Will always fail early</p>
-<h3 id="on_target">ON_TARGET</h3>
-<p>Targets for which the build should fail early. Valid targets are <code>&lt;target&gt;</code> from <code>VCPKG_IS_TARGET_&lt;target&gt;</code> (see <code>vcpkg_common_definitions.cmake</code>).</p>
-<h3 id="on_arch">ON_ARCH</h3>
-<p>Architecture for which the build should fail early.</p>
-<h3 id="on_crt_linkage">ON_CRT_LINKAGE</h3>
-<p>CRT linkage for which the build should fail early.</p>
-<h3 id="on_library_linkage">ON_LIBRARY_LINKAGE</h3>
-<p>Library linkage for which the build should fail early.</p>
-<h2 id="examples">Examples</h2>
-<ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/aws-lambda-cpp/portfile.cmake">aws-lambda-cpp</a></li>
-</ul>
+<h1 id="vcpkg_backup_restore_env_vars">vcpkg_backup_restore_env_vars</h1>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_backup_restore_env_vars.md">vcpkg repo</a>.</p>
+<p>Backup or restore the environment variables</p>
+<h2 id="usage">Usage:</h2>
+<pre><code class="cmake language-cmake">vcpkg_backup_env_variables(VARS [&lt;environment-variable&gt;...])
+vcpkg_restore_env_variables(VARS [&lt;environment-variable&gt;...])</code></pre>
+<h3 id="vars">VARS</h3>
+<p>The variables to back up or restore.
+These are placed in the parent scope, so you must backup and restore
+from the same scope.</p>
+<h2 id="notes">Notes</h2>
+<p>One must always call <code>vcpkg_backup_env_variables</code> before
+<code>vcpkg_restore_env_variables</code>; however, <code>vcpkg_restore_env_variables</code>
+does not change the back up variables, and so you may call <code>restore</code>
+multiple times for one <code>backup</code>.</p>
 <h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_fail_port_install.cmake">scripts/cmake/vcpkg_fail_port_install.cmake</a></p>
+<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_backup_restore_env_vars.cmake">scripts/cmake/vcpkg_backup_restore_env_vars.cmake</a></p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

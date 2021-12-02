@@ -299,6 +299,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -367,6 +368,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -396,16 +398,19 @@
 <p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_host_path_list.md">vcpkg repo</a>.</p>
 <p>Modify a host path list variable (PATH, INCLUDE, LIBPATH, etc.)</p>
 <pre><code class="cmake language-cmake">vcpkg_host_path_list(PREPEND &lt;list-var&gt; [&lt;path&gt;...])
-vcpkg_host_path_list(APPEND &lt;list-var&gt; [&lt;path&gt;...])</code></pre>
+vcpkg_host_path_list(APPEND &lt;list-var&gt; [&lt;path&gt;...])
+vcpkg_host_path_list(SET &lt;list-var&gt; [&lt;path&gt;...])</code></pre>
 <p><code>&lt;list-var&gt;</code> may be either a regular variable name, or <code>ENV{variable-name}</code>,
 in which case <code>vcpkg_host_path_list</code> will modify the environment.</p>
 <p><code>vcpkg_host_path_list</code> adds all of the paths passed to it to <code>&lt;list-var&gt;</code>;
 <code>PREPEND</code> puts them before the existing list, so that they are searched first;
 <code>APPEND</code> places them after the existing list,
-so they would be searched after the paths which are already in the variable.</p>
-<p>For both <code>APPEND</code> and <code>PREPEND</code>,
+so they would be searched after the paths which are already in the variable,
+and <code>SET</code> replaces the value of the existing list.</p>
+<p>For all of <code>APPEND</code>, <code>PREPEND</code>, and <code>SET</code>,
 the paths are added (and thus searched) in the order received.</p>
-<p>If no paths are passed, then nothing will be done.</p>
+<p>If no paths are passed to <code>APPEND</code> or <code>PREPEND</code>, nothing will be done;
+for <code>SET</code>, the variable will be set to the empty string.</p>
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_host_path_list.cmake">scripts/cmake/vcpkg_host_path_list.cmake</a></p>
 </main></div><div id="loadFooter"><footer class="footer">

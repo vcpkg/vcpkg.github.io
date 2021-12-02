@@ -299,6 +299,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -367,6 +368,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -416,6 +418,8 @@
 <h3 id="vcpkg_library_linkage">VCPKG_LIBRARY_LINKAGE</h3>
 <p>Specifies the preferred library linkage.</p>
 <p>Valid options are <code>dynamic</code> and <code>static</code>. Note that libraries can ignore this setting if they do not support the preferred linkage type.</p>
+<h3 id="vcpkg_build_type">VCPKG_BUILD_TYPE</h3>
+<p>You can set this value to <code>release</code> to only build release versions of the ports. By default this value is empty and release and debug versions of a port are built.</p>
 <h3 id="vcpkg_cmake_system_name">VCPKG_CMAKE_SYSTEM_NAME</h3>
 <p>Specifies the target platform.</p>
 <p>Valid options include any CMake system name, such as:</p>
@@ -477,6 +481,7 @@ executables in the absence of <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code>.</p>
 <h3 id="vcpkg_disable_compiler_tracking">VCPKG_DISABLE_COMPILER_TRACKING</h3>
 <p>When this option is set to (true|1|on), the compiler is ignored in the abi tracking.</p>
 <h2 id="windows-variables">Windows Variables</h2>
+<p><a name="VCPKG_ENV_PASSTHROUGH" class="docs-anchor"></a></p>
 <h3 id="vcpkg_env_passthrough">VCPKG_ENV_PASSTHROUGH</h3>
 <p>Instructs vcpkg to allow additional environment variables into the build process.</p>
 <p>On Windows, vcpkg builds packages in a special clean environment that is isolated from the current command prompt to
@@ -513,6 +518,11 @@ abi -- to pass through environment variables without abi tracking, see <code>VCP
 <li>The Visual Studio 2017 platform toolset is <code>v141</code>.</li>
 <li>The Visual Studio 2015 platform toolset is <code>v140</code>.</li>
 </ul>
+<h3 id="vcpkg_platform_toolset_version">VCPKG_PLATFORM_TOOLSET_VERSION</h3>
+<p>Specifies the detailed MSVC C/C++ compiler toolchain to use.</p>
+<p>By default, [<code>VCPKG_PLATFORM_TOOLSET</code>] always chooses the latest installed minor version of the selected toolset.
+If you need more granularity, you can use this variable.
+Valid values are, for example, <code>14.25</code> or <code>14.27.29110</code>.</p>
 <h3 id="vcpkg_load_vcvars_env">VCPKG_LOAD_VCVARS_ENV</h3>
 <p>If <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code> is used, VCPKG will not setup the Visual Studio environment.
 Setting <code>VCPKG_LOAD_VCVARS_ENV</code> to (true|1|on) changes this behavior so that the Visual Studio environment is setup following the same rules as if <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code> was not set.</p>
