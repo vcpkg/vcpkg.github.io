@@ -394,37 +394,56 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_fail_port_install">vcpkg_fail_port_install</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_fail_port_install.md">vcpkg repo</a>.</p>
-<p>Checks common requirements and fails the current portfile with a (default) error message</p>
-<h2 id="usage">Usage</h2>
-<pre><code class="cmake language-cmake">vcpkg_fail_port_install(
-    [ALWAYS]
-    [MESSAGE &lt;"Reason for failure"&gt;]
-    [ON_TARGET &lt;Windows&gt; [&lt;OSX&gt; ...]]
-    [ON_ARCH &lt;x64&gt; [&lt;arm&gt; ...]]
-    [ON_CRT_LINKAGE &lt;static&gt; [&lt;dynamic&gt; ...]])
-    [ON_LIBRARY_LINKAGE &lt;static&gt; [&lt;dynamic&gt; ...]]
+<h1 id="authentication-for-source-code">Authentication for Source Code</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/authentication.md">GitHub</a>.</strong></p>
+<p>Registries and <code>vcpkg_from_git()</code> directly use the git command line tools to fetch remote resources. Some of these resources may be protected from anonymous access and need authentication or credentials.</p>
+<p>The strategies below all seek to achieve the same fundamental goal: <code>git clone https://....</code> should succeed without interaction. This enables vcpkg to be separated from the specifics of your authentication scheme, ensuring forwards compatibility with any additional security improvements in the future.</p>
+<h2 id="pre-seed-git-credentials">Pre-seed git credentials</h2>
+<p>You can pre-seed git credentials via <code>git credential approve</code>:</p>
+<p>Powershell:</p>
+<pre><code class="powershell language-powershell">"url=https://github.com`npath=Microsoft/vcpkg`nusername=unused`npassword=$MY_PAT`n" | git credential approve</code></pre>
+<p>Bash:</p>
+<pre><code class="sh language-sh">echo "url=https://github.com"$'\n'"path=Microsoft/vcpkg"$'\n'"username=unused"$'\n'"password=$MY_PAT"$'\n' | git credential approve</code></pre>
+<h2 id="bearer-auth">Bearer auth</h2>
+<p>For systems which need bearer auth, you can use <code>git config</code>:</p>
+<p><strong>Note: you must make these config changes with <code>--global</code></strong></p>
+<pre><code>git config --global --unset-all http.&lt;uri&gt;.extraheader
+git config --global http.&lt;uri&gt;.extraheader "AUTHORIZATION: bearer &lt;System_AccessToken&gt;"</code></pre>
+<p>The <code>&lt;uri&gt;</code> can be filled in with a variety of options, documented in <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-httplturlgt">https://git-scm.com/docs/git-config#Documentation/git-config.txt-httplturlgt</a>. For example, <code>https://dev.azure.com/MYORG/</code>.</p>
+<p>(Original Source: <a href="https://github.com/Microsoft/azure-pipelines-agent/issues/1601#issuecomment-394511048)">https://github.com/Microsoft/azure-pipelines-agent/issues/1601#issuecomment-394511048)</a>.</p>
+<p><strong>Note for Azure DevOps users:</strong> You may need to enable access via Job authorization scope <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml#job-authorization-scope">https://docs.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml#job-authorization-scope</a>. You may also need to "reference" the repo in your yaml via:</p>
+<pre><code class="yaml language-yaml">resources: 
+  repositories:
+    - repository: &lt;FRIENDLYNAME&gt;
+      type: git
+      name: &lt;ORG&gt;/&lt;REPO&gt;
+      tag: tags/&lt;TAG&gt;
+
+...
+
+jobs:
+ - job: Build
+   uses:
+     repositories: [&lt;FRIENDLYNAME&gt;]</code></pre>
+<h2 id="pass-credentials-in-an-environment-variable-not-recommended">Pass credentials in an environment variable (not recommended)</h2>
+<p>Using <code>VCPKG_KEEP_ENV_VARS</code> or <code>VCPKG_ENV_PASSTHROUGH_UNTRACKED</code>, we can smuggle credential info via another var like <code>MY_TOKEN_VAR</code>.</p>
+<pre><code class="sh language-sh">export VCPKG_KEEP_ENV_VARS=MY_TOKEN_VAR
+export MY_TOKEN_VAR=abc123</code></pre>
+<p>This can then be used in your private ports:</p>
+<pre><code class="cmake language-cmake"># some/private/portfile.cmake
+set(MY_TOKEN_VAR "")
+if(DEFINED ENV{MY_TOKEN_VAR})
+    set(MY_TOKEN_VAR "$ENV{MY_TOKEN_VAR}@")
+endif()
+vcpkg_from_git(
+    URLS "https://${MY_TOKEN_VAR}host.com/normal/url/path"
+    ...
 )</code></pre>
-<h2 id="parameters">Parameters</h2>
-<h3 id="message">MESSAGE</h3>
-<p>Additional failure message. If none is given, a default message will be displayed depending on the failure condition.</p>
-<h3 id="always">ALWAYS</h3>
-<p>Will always fail early</p>
-<h3 id="on_target">ON_TARGET</h3>
-<p>Targets for which the build should fail early. Valid targets are <code>&lt;target&gt;</code> from <code>VCPKG_IS_TARGET_&lt;target&gt;</code> (see <code>vcpkg_common_definitions.cmake</code>).</p>
-<h3 id="on_arch">ON_ARCH</h3>
-<p>Architecture for which the build should fail early.</p>
-<h3 id="on_crt_linkage">ON_CRT_LINKAGE</h3>
-<p>CRT linkage for which the build should fail early.</p>
-<h3 id="on_library_linkage">ON_LIBRARY_LINKAGE</h3>
-<p>Library linkage for which the build should fail early.</p>
-<h2 id="examples">Examples</h2>
-<ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/aws-lambda-cpp/portfile.cmake">aws-lambda-cpp</a></li>
-</ul>
-<h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_fail_port_install.cmake">scripts/cmake/vcpkg_fail_port_install.cmake</a></p>
+<pre><code class="cmake language-cmake"># some/other/private/portfile.cmake
+vcpkg_from_github(
+    AUTHORIZATION_TOKEN "$ENV{MY_TOKEN_VAR}"
+)</code></pre>
+<p>For private ports, we recommend using <code>vcpkg_from_git()</code> instead of <code>vcpkg_from_github()</code> and the pre-seeding method above.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

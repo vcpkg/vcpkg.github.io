@@ -299,6 +299,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -367,6 +368,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -400,11 +402,16 @@
     [OPTIONS arg1 [arg2 ...]]
     [OPTIONS_RELEASE arg1 [arg2 ...]]
     [OPTIONS_DEBUG arg1 [arg2 ...]]
+    [BUILD_OPTIONS arg1 [arg2 ...]]
+    [BUILD_OPTIONS_RELEASE arg1 [arg2 ...]]
+    [BUILD_OPTIONS_DEBUG arg1 [arg2 ...]]
 )</code></pre>
 <h3 id="source_path">SOURCE_PATH</h3>
 <p>The path to the *.pro qmake project file.</p>
 <h3 id="options-options_release-options_debug">OPTIONS, OPTIONS_RELEASE, OPTIONS_DEBUG</h3>
-<p>The options passed to qmake.</p>
+<p>The options passed to qmake to the configure step.</p>
+<h3 id="build_options-build_options_release-build_options_debug">BUILD_OPTIONS, BUILD_OPTIONS_RELEASE, BUILD_OPTIONS_DEBUG</h3>
+<p>The options passed to qmake to the build step.</p>
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_configure_qmake.cmake">scripts/cmake/vcpkg_configure_qmake.cmake</a></p>
 </main></div><div id="loadFooter"><footer class="footer">
