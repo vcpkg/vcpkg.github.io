@@ -450,27 +450,37 @@ it must be lowercase alphabetic characters, digits, and hyphens, and it must not
 For example, <code>Boost.Asio</code> might be given the name <code>boost-asio</code>.</p>
 <p>This is a required field.</p>
 <h3 id="version-fields">Version fields</h3>
-<p>There is, at this point, only one version field - <code>"version-string"</code>. However, more will be added in the future.
-You must have one (and only one) version field. There are different reasons to use each version field:</p>
+<p>There are four version field options, depending on how the port orders its
+releases.</p>
 <ul>
-<li><code>"version-string"</code> - used for packages that don't have orderable versions. This is pretty uncommon,
-but since we don't have any versioning constraints yet, this is the only one that you can use.</li>
+<li><a href="versioning.html#version"><code>"version"</code></a> - Generic, dot-separated numeric
+sequence.</li>
+<li><a href="versioning.html#version-semver"><code>"version-semver"</code></a> - <a href="https://semver.org/#semantic-versioning-specification-semver">Semantic Version
+2.0.0</a></li>
+<li><a href="versioning.html#version-date"><code>"version-date"</code></a> - Used for packages which do
+not have numeric releases (for example, Live-at-HEAD). Matches <code>YYYY-MM-DD</code>
+with optional trailing dot-separated numeric sequence.</li>
+<li><a href="versioning.html#version-string"><code>"version-string"</code></a> - Used for packages that
+don't have orderable versions. This should be rarely used, however all ports
+created before the other version fields were introduced use this scheme.</li>
 </ul>
-<p>Additionally, the <code>"port-version"</code> field is used by registries of packages,
-as a way to version "the package gotten from <code>vcpkg install</code>" differently from the upstream package version.
-You shouldn't need to worry about this at all.</p>
-<h4 id="additional-version-fields">Additional version fields</h4>
-<p><strong>Experimental behind the <code>versions</code> feature flag</strong></p>
-<p>See <a href="versioning.html#version-schemes">versioning</a> for additional version types.</p>
+<p>Additionally, the optional <code>"port-version"</code> field is used to indicate revisions
+to the port with the same upstream source version. For pure consumers, this
+field should not be used.</p>
+<p>See <a href="versioning.html#version-schemes">versioning</a> for more details.</p>
 <h3 id="description"><code>"description"</code></h3>
 <p>This is where you describe your project. Give it a good description to help in searching for it!
 This can be a single string, or it can be an array of strings;
 in the latter case, the first string is treated as a summary,
 while the remaining strings are treated as the full description.</p>
 <h3 id="builtin-baseline"><code>"builtin-baseline"</code></h3>
-<p><strong>Experimental behind the <code>versions</code> feature flag</strong></p>
-<p>This field indicates the commit of vcpkg which provides global minimum version information for your manifest. It is required for top-level manifest files using versioning.</p>
-<p>See also <a href="versioning.html#builtin-baseline">versioning</a> for more semantic details.</p>
+<p>This field indicates the commit of vcpkg which provides global minimum version
+information for your manifest. It is required for top-level manifest files using
+versioning.</p>
+<p>This is a convenience field that has the same semantic as replacing your default
+registry in
+<a href="registries.html#configuration-default-registry"><code>vcpkg-configuration.json</code></a>.</p>
+<p>See <a href="versioning.html#builtin-baseline">versioning</a> for more semantic details.</p>
 <h3 id="dependencies"><code>"dependencies"</code></h3>
 <p>This field lists all the dependencies you'll need to build your library (as well as any your dependents might need,
 if they were to use you). It's an array of strings and objects:</p>
@@ -528,13 +538,13 @@ and on Linux on x64, would be written <code>(windows &amp; arm64) | (linux &amp;
 </ul>
 <p>although one can define their own.</p>
 <h4 id="version-field"><code>"version&gt;="</code> Field</h4>
-<p><strong>Experimental behind the <code>versions</code> feature flag</strong></p>
 <p>A minimum version constraint on the dependency.</p>
-<p>This field specifies the minimum version of the dependency using a '#' suffix to denote port-version if non-zero.</p>
+<p>This field specifies the minimum version of the dependency, optionally using a
+<code>#N</code> suffix to denote port-version if non-zero.</p>
 <p>See also <a href="versioning.html#version-1">versioning</a> for more semantic details.</p>
 <h3 id="overrides"><code>"overrides"</code></h3>
-<p><strong>Experimental behind the <code>versions</code> feature flag</strong></p>
-<p>This field enables version resolution to be ignored for certain dependencies and to use specific versions instead.</p>
+<p>This field pins exact versions for individual dependencies.</p>
+<p><code>"overrides"</code> from transitive manifests (i.e. from dependencies) are ignored.</p>
 <p>See also <a href="versioning.html#overrides">versioning</a> for more semantic details.</p>
 <h4 id="example-1">Example:</h4>
 <pre><code class="json language-json">  "overrides": [
@@ -597,7 +607,6 @@ and that's the <code>"default-features"</code> field, which is an array of featu
   }
 }</code></pre>
 <h2 id="command-line-interface">Command Line Interface</h2>
-<p><strong>Experimental behind the <code>manifests</code> feature flag</strong></p>
 <p>When invoked from any subdirectory of the directory containing <code>vcpkg.json</code>, <code>vcpkg install</code> with no package arguments
 will install all manifest dependencies into <code>&lt;directory containing vcpkg.json&gt;/vcpkg_installed/</code>. Most of <code>vcpkg
 install</code>'s classic mode parameters function the same in manifest mode.</p>
@@ -712,7 +721,7 @@ not respond to changes unless a <code>.cpp</code> is edited.</li>
 </ul>
 <h3 id="msbuild-properties">MSBuild Properties</h3>
 <p>When using Visual Studio 2015 integration, these properties can be set in your project file before the</p>
-<pre><code>&lt;Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" /&gt;</code></pre>
+<pre><code class="xml language-xml">&lt;Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" /&gt;</code></pre>
 <p>line, which unfortunately requires manual editing of the <code>.vcxproj</code> or passing on the msbuild command line with <code>/p:</code>.
 With 2017 or later integration, These properties can additionally be set via the Visual Studio GUI under
 <code>Project Properties -&gt; vcpkg</code> or via a common <code>.props</code> file imported between <code>Microsoft.Cpp.props</code> and

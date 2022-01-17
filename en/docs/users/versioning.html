@@ -488,8 +488,13 @@ conversion seems obvious.</em></p>
 </ul>
 <h2 id="version-constraints">Version constraints</h2>
 <h3 id="builtin-baseline"><code>builtin-baseline</code></h3>
-<p>Accepts a Git commit ID. vcpkg will try to find a baseline file in the given commit ID and use that to set the baseline versions (lower bounds) of all dependencies.</p>
-<p>Baselines provide stability and ease of development for top-level manifest files. They are not considered from ports consumed as a dependency. If a minimum version constraint is required during transitive version resolution, the port should use <code>version&gt;=</code>.</p>
+<p>Accepts a Git commit ID. vcpkg will try to find a baseline file in the given
+commit ID and use that to set the baseline versions (lower bounds) of all
+dependencies.</p>
+<p>Baselines provide stability and ease of development for top-level manifest
+files. They are not considered from ports consumed as a dependency. If a minimum
+version constraint is required during transitive version resolution, the port
+should use <code>version&gt;=</code>.</p>
 <p>Example:</p>
 <pre><code class="json language-json">{
   "name": "project",
@@ -497,11 +502,23 @@ conversion seems obvious.</em></p>
   "dependencies": ["zlib", "fmt"],
   "builtin-baseline":"9fd3bd594f41afb8747e20f6ac9619f26f333cbe"
 }</code></pre>
-<p>You can get the current commit of your vcpkg instance either by adding an empty <code>"builtin-baseline"</code> field, installing, and examining the error message or by running <code>git rev-parse HEAD</code> in the root of the vcpkg instance.</p>
-<p>When resolving version constraints for a package, vcpkg will look for a baseline version by looking
-at the baseline file in the given commit ID.
-If the given commit ID doesn't have a <code>versions/baseline.json</code> file or if the baseline file exists
-but it does not declare a baseline version for the package the invocation will fail.</p>
+<p>You can get the current commit of your vcpkg instance either by adding an empty
+<code>"builtin-baseline"</code> field, installing, and examining the error message or by
+running <code>git rev-parse HEAD</code> in the root of the vcpkg instance.</p>
+<p>When resolving version constraints for a package, vcpkg will look for a baseline
+version by looking at the baseline file in the given commit ID. If the given
+commit ID doesn't have a <code>versions/baseline.json</code> file or if the baseline file
+exists but it does not declare a baseline version for the package the invocation
+will fail.</p>
+<p>This field is a convenience field that has the same semantic as replacing your
+default registry in
+<a href="registries.html#configuration-default-registry"><code>vcpkg-configuration.json</code></a>.</p>
+<pre><code class="json language-json">{
+  "default-registry": {
+    "kind": "builtin",
+    "baseline": "&lt;baseline&gt;"
+  }
+}</code></pre>
 <h3 id="version-1"><code>version&gt;=</code></h3>
 <p>Expresses a minimum version requirement, <code>version&gt;=</code> declarations put a lower boundary on the versions that can be used to satisfy a dependency.</p>
 <p><strong>Note: vcpkg selects the lowest version that matches all constraints, so a less-than constraint is not required.</strong></p>
@@ -532,64 +549,6 @@ but it does not declare a baseline version for the package the invocation will f
     { "name": "fmt", "version": "6.0.0" }
   ]
 }</code></pre>
-<h2 id="version-files">Version files</h2>
-<p>vcpkg uses a set of metadata files to power its versioning feature.</p>
-<p>These files are located in the following locations:</p>
-<ul>
-<li><code>${VCPKG_ROOT}/versions/baseline.json</code>, (this file is common to all ports) and</li>
-<li><code>${VCPKG_ROOT}/versions/${first-letter-of-portname}-/${portname}.json</code> (one per port).</li>
-</ul>
-<p>For example, for <code>zlib</code> the relevant files are:</p>
-<ul>
-<li><code>${VCPKG_ROOT}/versions/baseline.json</code></li>
-<li><code>${VCPKG_ROOT}/versions/z-/zlib.json</code></li>
-</ul>
-<p>The vcpkg public CI checks validate that each time a port is added or updated its respective version files are also updated.</p>
-<h3 id="baseline-file">Baseline file</h3>
-<p>The baseline file located in <code>${VCPKG_ROOT}/versions/baseline.json</code> is used to declared the current baseline versions of all packages.</p>
-<p>For example:</p>
-<pre><code class="json language-json">{
-  "default": {
-    "3fd": { "baseline": "2.6.3", "port-version": 0 },
-    "7zip": { "baseline": "19.00", "port-version": 2 },
-    "abseil": { "baseline": "2020-09-23", "port-version": 1 }
-  }
-}</code></pre>
-<p>Provided that there are no local modifications to the ports, the versions of all packages in the baseline file should map to the version of their corresponding portfiles in the <code>ports/</code> directory.</p>
-<h3 id="versions-file">Versions file</h3>
-<p>Each port in vcpkg has a corresponding versions file, the location of a port's versions file follows the pattern:</p>
-<pre><code class="sh language-sh">${VCPKG_ROOT}/versions/${first-letter-of-portname}-/${portname}.json</code></pre>
-<p>For example, for <code>zlib</code> the corresponding versions file is:</p>
-<pre><code class="sh language-sh">${VCPKG_ROOT}/versions/z-/zlib.json</code></pre>
-<p>These files contain an array of all the versions available for a given port.
-For example, the contents of <code>versions/z-/zlib.json</code> declare the following versions:</p>
-<pre><code class="json language-json">{
-  "versions": [
-    {
-      "git-tree": "827111046e37c98153d9d82bb6fa4183b6d728e4",
-      "version-string": "1.2.11",
-      "port-version": 9
-    },
-    {
-      "git-tree": "068430e3e24fa228c302c808ba99f8a48d126557",
-      "version-string": "1.2.11",
-      "port-version": 8
-    },
-    ...
-  ]
-}</code></pre>
-<p>Each version declared in this file uses the same syntax used in manifest files, but adds an extra <code>git-tree</code> property. The value of <code>git-tree</code> is the SHA hash, as calculated by Git, of the directory containing the portfiles for the declared version. You can ask Git for the object SHA via the syntax:</p>
-<pre><code>git rev-parse &lt;commit&gt;:&lt;path&gt;</code></pre>
-<p>For example,</p>
-<pre><code>git rev-parse HEAD:ports/zlib</code></pre>
-<h3 id="updating-the-version-files">Updating the version files</h3>
-<p>The recommended method to update these files is to run the <code>x-add-version</code> command.</p>
-<p>For example, if you have made changes to <code>zlib</code>:</p>
-<pre><code>vcpkg x-add-version zlib</code></pre>
-<p>If you're updating multiple ports at the same time, instead you can run:</p>
-<pre><code>vcpkg x-add-version --all</code></pre>
-<p>To update the files for all modified ports at once.</p>
-<p><em>NOTE: These commands require you to have committed your changes to the ports before running them. The reason is that the Git SHA of the port directory is required in these version files. But don't worry, the <code>x-add-version</code> command will warn you if you have local changes that haven't been committed.</em></p>
 <h2 id="see-also">See Also</h2>
 <ul>
 <li>The <a href="versioning.implementation-details.html">implementation details</a></li>
