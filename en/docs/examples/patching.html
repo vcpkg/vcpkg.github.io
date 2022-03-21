@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -514,7 +515,7 @@ vcpkg_extract_source_archive_ex(
     "use-abort-on-all-platforms.patch"
 )
 
-vcpkg_configure_cmake(
+vcpkg_cmake_configure(
 ...</code></pre>
 <h3 id="verification">Verification</h3>
 <p>To be completely sure this works from scratch, we need to remove the package and rebuild it:</p>

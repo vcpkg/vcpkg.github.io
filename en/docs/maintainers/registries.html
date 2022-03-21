@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -407,7 +408,8 @@ have created, please read <a href="../users/registries.html">this documentation<
 <li><a href="#git-registries">Git Registries</a><ul>
 <li><a href="#adding-a-new-version">Adding a New Version</a></li></ul></li>
 <li><a href="#filesystem-registries">Filesystem Registries</a><ul>
-<li><a href="#adding-a-new-version-1">Adding a New Version</a></li></ul></li></ul></li>
+<li><a href="#adding-a-new-version-1">Adding a New Version</a></li></ul></li>
+<li><a href="#builtin-registries">Builtin Registries</a></li></ul></li>
 </ul>
 <h2 id="overview">Overview</h2>
 <p>Registries are collections of ports and their versions. There are two major
@@ -495,6 +497,11 @@ all previous versions should also be accessible. Since your user will set their
 baseline to a commit ID, that commit ID must always exist, and be accessible
 from your HEAD commit, which is what is actually fetched. This means that your
 HEAD commit should be a child of all previous HEAD commits.</p>
+<h3 id="builtin-registries">Builtin Registries</h3>
+<p>Builtin registries are treated as special Git registries. Instead of fetching
+from a remote url, builtin registries consult the <code>$VCPKG_ROOT/.git</code> directory
+of the vcpkg clone. They use the currently checked out <code>$VCPKG_ROOT/versions</code>
+directory as the source for versioning information.</p>
 <h4 id="adding-a-new-version">Adding a New Version</h4>
 <p>There is some git trickery involved in creating a new version of a port. The
 first thing to do is make some changes, update the <code>"port-version"</code> and regular

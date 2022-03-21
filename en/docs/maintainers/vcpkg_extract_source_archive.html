@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -405,6 +406,7 @@
 <pre><code class="cmake language-cmake">vcpkg_extract_source_archive(&lt;out-var&gt;
     ARCHIVE &lt;path&gt;
     [NO_REMOVE_ONE_LEVEL]
+    [SKIP_PATCH_CHECK]
     [PATCHES &lt;patch&gt;...]
     [SOURCE_BASE &lt;base&gt;]
     [BASE_DIRECTORY &lt;relative-path&gt; | WORKING_DIRECTORY &lt;absolute-path&gt;]
@@ -433,7 +435,11 @@ when there is exactly one item in the top level of an archive.
 Otherwise, you'll have to pass the <code>NO_REMOVE_ONE_LEVEL</code> argument to
 prevent <code>vcpkg_extract_source_archive</code> from performing this transformation.</p>
 <p>If the source needs to be patched in some way, the <code>PATCHES</code> argument
-allows one to do this, just like other <code>vcpkg_from_*</code> functions.</p>
+allows one to do this, just like other <code>vcpkg_from_*</code> functions.
+Additionally, the <code>SKIP_PATCH_CHECK</code> is provided for <code>--head</code> mode -
+this allows patches to fail to apply silently.
+This argument should <em>only</em> be used when installing a <code>--head</code> library,
+since otherwise we want a patch failing to appply to be a hard error.</p>
 <p><code>vcpkg_extract_source_archive</code> extracts the files to
 <code>${CURRENT_BUILDTREES_DIR}/&lt;base-directory&gt;/&lt;source-base&gt;-&lt;hash&gt;.clean</code>.
 When in editable mode, no <code>.clean</code> is appended,

@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -444,6 +445,14 @@ vcpkg_from_github(
     AUTHORIZATION_TOKEN "$ENV{MY_TOKEN_VAR}"
 )</code></pre>
 <p>For private ports, we recommend using <code>vcpkg_from_git()</code> instead of <code>vcpkg_from_github()</code> and the pre-seeding method above.</p>
+<h2 id="pass-jenkins-gitusernamepassword-credentials">Pass Jenkins gitUsernamePassword credentials</h2>
+<p>The simplest and most secure option to Git authentication to GitHub from Jenkins is using <a href="https://github.com/jenkinsci/github-branch-source-plugin/blob/master/docs/github-app.adoc">GitHub App</a> and the following:</p>
+<pre><code class="groovy language-groovy">withCredentials([gitUsernamePassword(credentialsId: 'jenkins-github-app')]) {
+  withEnv(['VCPKG_KEEP_ENV_VARS=GIT_ASKPASS']) {
+    bat 'cmake'
+  }
+}</code></pre>
+<p>This sets the GIT_ASKPASS with a path to helper script which responds with git credentials query and instructs <code>vcpkg</code> to keep this environment variable. The password is a <a href="https://github.blog/2021-04-05-behind-githubs-new-authentication-token-formats/">GitHub App token</a> with 1 hour lifetime.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">
