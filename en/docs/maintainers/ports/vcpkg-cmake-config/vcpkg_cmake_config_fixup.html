@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -401,6 +402,7 @@
 <pre><code class="cmake language-cmake">vcpkg_cmake_config_fixup(
     [PACKAGE_NAME &lt;name&gt;]
     [CONFIG_PATH &lt;config-directory&gt;]
+    [TOOLS_PATH &lt;tools/${PORT}&gt;]
     [DO_NOT_DELETE_PARENT_CONFIG_PATH]
     [NO_PREFIX_CORRECTION]
 )</code></pre>
@@ -421,11 +423,13 @@ and applies a rather simply correction which in some cases will yield the wrong 
 <h2 id="how-it-works">How it Works</h2>
 <ol>
 <li>Moves <code>/debug/&lt;CONFIG_PATH&gt;/*targets-debug.cmake</code> to <code>/share/${PACKAGE_NAME}</code>.</li>
-<li>Removes <code>/debug/&lt;CONFIG_PATH&gt;/*config.cmake</code>.</li>
-<li>Transform all references matching <code>/bin/*.exe</code> to <code>/tools/&lt;port&gt;/*.exe</code> on Windows.</li>
-<li>Transform all references matching <code>/bin/*</code> to <code>/tools/&lt;port&gt;/*</code> on other platforms.</li>
+<li>Transforms all references matching <code>/bin/*.exe</code> to <code>/${TOOLS_PATH}/*.exe</code> on Windows.</li>
+<li>Transforms all references matching <code>/bin/*</code> to <code>/${TOOLS_PATH}/*</code> on other platforms.</li>
 <li>Fixes <code>${_IMPORT_PREFIX}</code> in auto generated targets.</li>
-<li>Replace <code>${CURRENT_INSTALLED_DIR}</code> with <code>${_IMPORT_PREFIX}</code> in configs and targets.</li>
+<li>Replaces <code>${CURRENT_INSTALLED_DIR}</code> with <code>${_IMPORT_PREFIX}</code> in configs.</li>
+<li>Merges INTERFACE_LINK_LIBRARIES of release and debug configurations.</li>
+<li>Replaces <code>${CURRENT_INSTALLED_DIR}</code> with <code>${VCPKG_IMPORT_PREFIX}</code> in targets.</li>
+<li>Removes <code>/debug/&lt;CONFIG_PATH&gt;/*config.cmake</code>.</li>
 </ol>
 <h2 id="examples">Examples</h2>
 <ul>

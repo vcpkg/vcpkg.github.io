@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -769,6 +770,7 @@ useful for ports which depend on their own built binaries in their build.</li>
 <li><code>static</code> - <code>VCPKG_LIBRARY_LINKAGE</code> == <code>"static"</code></li>
 <li><code>wasm32</code> - <code>VCPKG_TARGET_ARCHITECTURE</code> == <code>"wasm32"</code></li>
 <li><code>emscripten</code> - <code>VCPKG_CMAKE_SYSTEM_NAME</code> == <code>"Emscripten"</code></li>
+<li><code>staticcrt</code> - <code>VCPKG_CRT_LINKAGE</code> == <code>"static"</code></li>
 </ul>
 <p>These predefined identifier expressions can be overridden in the triplet file,
 via the <a href="../users/triplets.html"><code>VCPKG_DEP_INFO_OVERRIDE_VARS</code></a> option,
@@ -782,6 +784,72 @@ and new identifier expressions can be added via the same mechanism.</p>
   "supports": "!uwp &amp; !(arm &amp; !arm64)"
 }</code></pre>
 <p>This means "doesn't support uwp, nor arm32 (but does support arm64)".</p>
+<h3 id="license"><code>"license"</code></h3>
+<p>The license of the port. This is an <a href="https://spdx.dev/ids/#how">SPDX license expression</a>,
+or <code>null</code> for proprietary licenses and other licenses for which
+one should "just read the <code>copyright</code> file" (e.g., Qt).</p>
+<p>Additionally, you can find the list of <a href="https://spdx.github.io/spdx-spec/SPDX-license-list/#a1-licenses-with-short-identifiers">recognized license IDs</a>
+and <a href="https://spdx.github.io/spdx-spec/SPDX-license-list/#a2-exceptions-list">recognized license exception IDs</a> in Annex A of the SPDX specification.</p>
+<p>The following is an EBNF conversion of the ABNF located at
+<a href="https://spdx.github.io/spdx-spec/SPDX-license-expressions/">https://spdx.github.io/spdx-spec/SPDX-license-expressions/</a>,
+and this is what we actually parse in vcpkg.
+Note that vcpkg does not support DocumentRefs.</p>
+<pre><code class="ebnf language-ebnf">idchar = ? regex /[-.a-zA-Z0-9]/ ?
+idstring = ( idchar ), { idchar } ;
+
+(* note that unrecognized license and license exception IDs will be warned against *)
+license-id = idstring ;
+license-exception-id = idstring ;
+(* note that DocumentRefs are unsupported by this implementation *)
+license-ref = "LicenseRef-", idstring ;
+
+with = [ whitespace ], "WITH", [ whitespace ] ;
+and = [ whitespace ], "AND", [ whitespace ] ;
+or = [ whitespace ], "OR", [ whitespace ] ;
+
+simple-expression = [ whitespace ], (
+  | license-id
+  | license-id, "+"
+  | license-ref
+  ), [ whitespace ] ;
+
+(* the following are split up from compound-expression to make precedence obvious *)
+parenthesized-expression =
+  | simple-expression
+  | [ whitespace ], "(", or-expression, ")", [ whitespace ] ;
+
+with-expression =
+  | parenthesized-expression
+  | simple-expression, with, license-exception-id, [ whitespace ] ;
+
+(* note: "a AND b OR c" gets parsed as "(a AND b) OR c" *)
+and-expression = with-expression, { and, with-expression } ;
+or-expression = and-expression, { or, and-exression } ;
+
+license-expression = or-expression ;</code></pre>
+<h4 id="examples-3">Examples</h4>
+<p>For libraries with simple licensing,
+only one license identifier may be needed;</p>
+<p>vcpkg, for example, would use this since it uses the MIT license:</p>
+<pre><code class="json language-json">{
+  "license": "MIT"
+}</code></pre>
+<p>Many GPL'd projects allow either the GPL 2 or any later versions:</p>
+<pre><code class="json language-json">{
+  "license": "GPL-2.0-or-later"
+}</code></pre>
+<p>Many Rust projects, in order to make certain they're useable with GPL,
+but also desiring the MIT license, will allow licensing under either
+the MIT license or Apache 2.0:</p>
+<pre><code class="json language-json">{
+  "license": "Apache-2.0 OR MIT"
+}</code></pre>
+<p>Some major projects include exceptions;
+the Microsoft C++ standard library, and the LLVM project,
+are licensed under Apache 2.0 with the LLVM exception:</p>
+<pre><code class="json language-json">{
+  "license": "Apache-2.0 WITH LLVM-exception"
+}</code></pre>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

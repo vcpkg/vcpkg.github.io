@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -431,18 +432,18 @@ vcpkg_add_to_path(${CURRENT_HOST_INSTALLED_DIR}/tools/contoso-code-generator)</c
 </ol>
 <h2 id="producing">Producing</h2>
 <p>Producing a tool has no special requirements; tools should be authored as a standard port, following all the normal policies and practices. Notably, they should build against <code>TARGET_TRIPLET</code>, not <code>HOST_TRIPLET</code> within the context of their portfile.</p>
-<p>Sometimes, it can be useful to determine whether the current context is a cross-compiling one or not. This should be done by comparing the strings <code>TARGET_TRIPLET</code> and <code>HOST_TRIPLET</code>. For example:</p>
-<pre><code class="cmake language-cmake">string(COMPARE EQUAL "${TARGET_TRIPLET}" "${HOST_TRIPLET}" I_AM_NOT_CROSSCOMPILING)
-
-if(TARGET_TRIPLET STREQUAL HOST_TRIPLET)
+<p>If the current context is cross-compiling (<code>TARGET_TRIPLET</code> is not <code>HOST_TRIPLET</code>), then <code>VCPKG_CROSSCOMPILING</code> will be set to a truthy value.</p>
+<pre><code class="cmake language-cmake">if(VCPKG_CROSSCOMPILING)
     # This is a native build
 else()
     # This is a cross build
 endif()</code></pre>
 <h2 id="host-only-ports">Host-only ports</h2>
-<p>Some ports are host-only: script ports and tool ports are common examples.
-In this case, you can use the <code>"native"</code> supports expression to describe this.
-This supports expression is true when <code>TARGET_TRIPLET == HOST_TRIPLET</code>.</p>
+<p>Some ports should only be depended upon via a host dependency; script ports and
+tool ports are common examples. In this case, you can use the <code>"native"</code>
+supports expression to describe this. This supports expression is true when
+<code>VCPKG_CROSSCOMPILING</code> is false (implying that <code>TARGET_TRIPLET ==
+HOST_TRIPLET</code>).</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

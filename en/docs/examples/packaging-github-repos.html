@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -415,13 +416,10 @@
 )</code></pre>
 <p>The important parts to update are <code>REPO</code> for the GitHub repository path, <code>REF</code> for a stable tag/commit to use, and <code>SHA512</code> with the checksum of the downloaded zipfile (you can get this easily by setting it to <code>0</code>, trying to install the package, and copying the checksum).</p>
 <p>Finally, we configure the project with CMake, install the package, and copy over the license file:</p>
-<pre><code class="cmake language-cmake">vcpkg_configure_cmake(
-    SOURCE_PATH ${SOURCE_PATH}
-    PREFER_NINJA
-)
-vcpkg_install_cmake()
-file(INSTALL ${SOURCE_PATH}/COPYING DESTINATION ${CURRENT_PACKAGES_DIR}/share/libogg RENAME copyright)</code></pre>
-<p>Check the documentation for <a href="../maintainers/vcpkg_configure_cmake.html"><code>vcpkg_configure_cmake</code></a> and <a href="../maintainers/vcpkg_install_cmake.html"><code>vcpkg_install_cmake</code></a> if your package needs additional options. </p>
+<pre><code class="cmake language-cmake">vcpkg_cmake_configure(SOURCE_PATH ${SOURCE_PATH})
+vcpkg_cmake_install()
+file(INSTALL "${SOURCE_PATH}/COPYING" DESTINATION "${CURRENT_PACKAGES_DIR}/share/libogg" RENAME copyright)</code></pre>
+<p>Check the documentation for <a href="../maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><code>vcpkg_cmake_configure</code></a> and <a href="../maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><code>vcpkg_cmake_install</code></a> if your package needs additional options. </p>
 <p>Now you can run <code>vcpkg install libogg</code> to build and install the package.</p>
 <h3 id="suggested-example-portfiles">Suggested example portfiles</h3>
 <p>In the <code>ports/</code> directory are many libraries that can be used as examples, including many that are not based on CMake.</p>
