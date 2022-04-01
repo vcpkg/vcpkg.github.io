@@ -1,25 +1,28 @@
 {
   "name": "update",
-  "version": "0.0.0",
+  "version": "0.0.0-dev",
   "type": "module",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "node --loader ts-node/esm index.ts"
+    "start": "ts-node-esm index.ts"
   },
   "dependencies": {
-    "@tsconfig/node16": "1.0.1",
-    "@types/fs-extra": "9.0.11",
-    "@types/node": "14.17.4",
-    "fdir": "5.1.0",
-    "fs-extra": "10.0.0",
-    "picomatch": "2.3.0",
-    "prettier": "2.3.2",
-    "ts-node": "^10.0.0",
-    "typescript": "4.3.4"
+    "@octokit/request-error": "^2.1.0",
+    "@octokit/types": "^6.34.0",
+    "@tsconfig/node16": "1.0.2",
+    "@types/fs-extra": "9.0.13",
+    "@types/node": "16.11.26",
+    "fdir": "5.2.0",
+    "fs-extra": "10.0.1",
+    "octokit": "1.7.1",
+    "picomatch": "2.3.1",
+    "prettier": "2.6.1",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.3"
   },
   "devDependencies": {
-    "ts-node": "10.4.0"
+    "ts-node": "10.7.0"
   }
 }

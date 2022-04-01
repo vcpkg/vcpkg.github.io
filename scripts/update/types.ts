@@ -119,3 +119,6 @@ export type Version = {
    */
   'port-version': number;
 };
+
+export type ManifestWithVersions = Manifest & Versions;
+export type ManifestWithVersionsAndStars = ManifestWithVersions & { stars?: number };
