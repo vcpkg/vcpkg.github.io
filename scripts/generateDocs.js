@@ -245,14 +245,17 @@ function callshowdown(data, currentPath) {
     return html;
 }
 
+const rootDir = path.dirname(__dirname);
+const templatesDir = rootDir + "/templates"
+const outDocsDir = destDir + rootDocsDomain + 'docs';
+
 async function main() {
     const navpanehtml = await generateTreeView(sourceDir);
-    await fs.mkdir(destDir + rootDocsDomain + 'docs', { recursive: true });
-    await fs.writeFile(destDir + rootDocsDomain + 'docs/navpane.html', navpanehtml, 'utf-8');
+    await fs.mkdir(outDocsDir, { recursive: true });
 
-    const template = await fs.readFile(__dirname + "/docpage.template.html", 'utf-8');
-    const footertemplate = await fs.readFile(destDir + rootDocsDomain + "footer.html", 'utf-8');
-    const navbartemplate = await fs.readFile(destDir + rootDocsDomain + "navbar.html", 'utf-8');
+    const template = await fs.readFile(templatesDir + "/docpage.template.html", 'utf-8');
+    const footertemplate = await fs.readFile(templatesDir + "/footer.html", 'utf-8');
+    const navbartemplate = await fs.readFile(templatesDir + "/navbar.html", 'utf-8');
 
     async function generateForFile(relSourcePath) {
         const markdownFile = sourceDir + relSourcePath;
@@ -260,7 +263,7 @@ async function main() {
             return;
         }
 
-        const destFullPath = destDir + rootDocsDomain + 'docs' + relSourcePath;
+        const destFullPath = outDocsDir + relSourcePath;
         const pathToWrite = markdownToHTMLExtension(destFullPath);
 
         const file = await fs.readFile(markdownFile, 'utf-8');
@@ -282,6 +285,7 @@ async function main() {
         };
 
         view.body = callshowdown(file, markdownFile);
+        await fs.mkdir(path.dirname(pathToWrite), { recursive: true });
         await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
 
         console.log("generated " + pathToWrite);
@@ -300,7 +304,7 @@ async function main() {
     }
 
     await generateForDir("");
-    await fs.writeFile(destDir + rootDocsDomain + "docs/vcpkg-docs.json", JSON.stringify(searchTable), 'utf-8');
+    await fs.writeFile(outDocsDir + "/vcpkg-docs.json", JSON.stringify(searchTable), 'utf-8');
 }
 
 main();

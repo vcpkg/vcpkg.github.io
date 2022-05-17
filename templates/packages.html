@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+  <head>
+    <title>Browse public vcpkg packages</title>
+    <meta name="description" content="Explore vcpkg libraries to install">
+    <meta name="keywords" content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- additional stylesheets and fonts -->
+    <link href="/css/packages.css" rel="stylesheet" />
+    <link href="/css/githubBtn.css" rel="stylesheet" />
+
+    {{{commonhead}}}
+
+    <!-- additional scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+      integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/dist/packages.js"></script>
+  </head>
+
+  <div id="loadNavBar">{{{navbar}}}</div>
+  <div id="banner"></div>
+  <body>
+    <div class="header-text">Browse packages</div>
+    <main class="package-body" id="main">
+      <div class="sort-bar">
+        <div class="side-bar">
+          <div class="pkg-search-bar">
+            <input
+              class="search-box"
+              id="pkg-search"
+              type="search"
+              name="search"
+              placeholder="Search Packages"
+              autocomplete="off"
+              oninput="handlePackageInput()"
+            />
+            <span class="search-icon"></span>
+          </div>
+          <div class="show-package-results-number total-packages"></div>
+        </div>
+        <div class="">
+          <select class="dropdown" id="sortBtn" onChange="sortPackages()">
+            <option value="Best Match" selected>Best Match</option>
+            <option value="Alphabetical">Alphabetical</option>
+            <!--<option value="GitHub Stars">GitHub Stars</option>-->
+          </select>
+          <span class="filter-right-sort-text">Sort By:</span>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="package-results bottom-border"></div>
+        <div class="load-results"></div>
+      </div>
+    </main>
+    <div id="loadFooter">{{{footer}}}</div>
+  </body>
+</html>
