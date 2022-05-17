@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -299,6 +300,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -338,6 +340,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
@@ -366,6 +369,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -398,6 +402,7 @@
 <li><a href="vcpkg_acquire_msys.html">vcpkg_acquire_msys</a></li>
 <li><a href="vcpkg_add_to_path.html">vcpkg_add_to_path</a></li>
 <li><a href="vcpkg_apply_patches.html">vcpkg_apply_patches</a> (deprecated)</li>
+<li><a href="vcpkg_backup_restore_env_vars.html">vcpkg_backup_restore_env_vars</a></li>
 <li><a href="vcpkg_build_cmake.html">vcpkg_build_cmake</a> (deprecated, use <a href="ports/vcpkg-cmake/vcpkg_cmake_build.html">vcpkg_cmake_build</a>)</li>
 <li><a href="vcpkg_build_make.html">vcpkg_build_make</a></li>
 <li><a href="vcpkg_build_msbuild.html">vcpkg_build_msbuild</a></li>
@@ -411,7 +416,7 @@
 <li><a href="vcpkg_clean_msbuild.html">vcpkg_clean_msbuild</a></li>
 <li><a href="vcpkg_common_definitions.html">vcpkg_common_definitions</a></li>
 <li><a href="vcpkg_configure_cmake.html">vcpkg_configure_cmake</a> (deprecated, use <a href="ports/vcpkg-cmake/vcpkg_cmake_configure.html">vcpkg_cmake_configure</a>)</li>
-<li><a href="vcpkg_configure_gn.html">vcpkg_configure_gn</a></li>
+<li><a href="vcpkg_configure_gn.html">vcpkg_configure_gn</a> (deprecated, use <a href="ports/vcpkg-gn/vcpkg_gn_configure.html">vcpkg_gn_configure</a>)</li>
 <li><a href="vcpkg_configure_make.html">vcpkg_configure_make</a></li>
 <li><a href="vcpkg_configure_meson.html">vcpkg_configure_meson</a></li>
 <li><a href="vcpkg_configure_qmake.html">vcpkg_configure_qmake</a></li>
@@ -425,7 +430,7 @@
 <li><a href="vcpkg_execute_required_process_repeat.html">vcpkg_execute_required_process_repeat</a></li>
 <li><a href="vcpkg_extract_source_archive.html">vcpkg_extract_source_archive</a></li>
 <li><a href="vcpkg_extract_source_archive_ex.html">vcpkg_extract_source_archive_ex</a></li>
-<li><a href="vcpkg_fail_port_install.html">vcpkg_fail_port_install</a></li>
+<li><a href="vcpkg_fail_port_install.html">vcpkg_fail_port_install</a> (deprecated)</li>
 <li><a href="vcpkg_find_acquire_program.html">vcpkg_find_acquire_program</a></li>
 <li><a href="vcpkg_find_fortran.html">vcpkg_find_fortran</a></li>
 <li><a href="vcpkg_fixup_cmake_targets.html">vcpkg_fixup_cmake_targets</a> (deprecated, use <a href="ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html">vcpkg_cmake_config_fixup</a>)</li>
@@ -437,8 +442,9 @@
 <li><a href="vcpkg_from_sourceforge.html">vcpkg_from_sourceforge</a></li>
 <li><a href="vcpkg_get_program_files_platform_bitness.html">vcpkg_get_program_files_platform_bitness</a></li>
 <li><a href="vcpkg_get_windows_sdk.html">vcpkg_get_windows_sdk</a></li>
+<li><a href="vcpkg_host_path_list.html">vcpkg_host_path_list</a></li>
 <li><a href="vcpkg_install_cmake.html">vcpkg_install_cmake</a> (deprecated, use <a href="ports/vcpkg-cmake/vcpkg_cmake_install.html">vcpkg_cmake_install</a>)</li>
-<li><a href="vcpkg_install_gn.html">vcpkg_install_gn</a></li>
+<li><a href="vcpkg_install_gn.html">vcpkg_install_gn</a> (deprecated, use <a href="ports/vcpkg-gn/vcpkg_gn_install.html">vcpkg_gn_install</a>)</li>
 <li><a href="vcpkg_install_make.html">vcpkg_install_make</a></li>
 <li><a href="vcpkg_install_meson.html">vcpkg_install_meson</a></li>
 <li><a href="vcpkg_install_msbuild.html">vcpkg_install_msbuild</a></li>

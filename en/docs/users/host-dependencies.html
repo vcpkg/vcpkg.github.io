@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -299,6 +300,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -338,6 +340,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
@@ -366,6 +369,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -428,18 +432,18 @@ vcpkg_add_to_path(${CURRENT_HOST_INSTALLED_DIR}/tools/contoso-code-generator)</c
 </ol>
 <h2 id="producing">Producing</h2>
 <p>Producing a tool has no special requirements; tools should be authored as a standard port, following all the normal policies and practices. Notably, they should build against <code>TARGET_TRIPLET</code>, not <code>HOST_TRIPLET</code> within the context of their portfile.</p>
-<p>Sometimes, it can be useful to determine whether the current context is a cross-compiling one or not. This should be done by comparing the strings <code>TARGET_TRIPLET</code> and <code>HOST_TRIPLET</code>. For example:</p>
-<pre><code class="cmake language-cmake">string(COMPARE EQUAL "${TARGET_TRIPLET}" "${HOST_TRIPLET}" I_AM_NOT_CROSSCOMPILING)
-
-if(TARGET_TRIPLET STREQUAL HOST_TRIPLET)
+<p>If the current context is cross-compiling (<code>TARGET_TRIPLET</code> is not <code>HOST_TRIPLET</code>), then <code>VCPKG_CROSSCOMPILING</code> will be set to a truthy value.</p>
+<pre><code class="cmake language-cmake">if(VCPKG_CROSSCOMPILING)
     # This is a native build
 else()
     # This is a cross build
 endif()</code></pre>
 <h2 id="host-only-ports">Host-only ports</h2>
-<p>Some ports are host-only: script ports and tool ports are common examples.
-In this case, you can use the <code>"native"</code> supports expression to describe this.
-This supports expression is true when <code>TARGET_TRIPLET == HOST_TRIPLET</code>.</p>
+<p>Some ports should only be depended upon via a host dependency; script ports and
+tool ports are common examples. In this case, you can use the <code>"native"</code>
+supports expression to describe this. This supports expression is true when
+<code>VCPKG_CROSSCOMPILING</code> is false (implying that <code>TARGET_TRIPLET ==
+HOST_TRIPLET</code>).</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

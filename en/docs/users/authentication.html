@@ -395,143 +395,64 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h2 id="installing-and-using-packages-example-sqlite">Installing and Using Packages Example: SQLite</h2>
-<ul>
-<li><a href="#install">Step 1: Install</a></li>
-<li><a href="#use">Step 2: Use</a><ul>
-<li><a href="#msbuild">VS/MSBuild Project (User-wide integration)</a></li>
-<li><a href="#cmake">CMake (Toolchain file)</a></li>
-<li><a href="../users/integration.html">Other integration options</a></li></ul></li>
-</ul>
-<hr />
-<p><a name="install" class="docs-anchor"></a></p>
-<h2 id="step-1-install">Step 1: Install</h2>
-<p>First, we need to know what name <a href="https://sqlite.org">SQLite</a> goes by in the ports tree. To do that, we'll run the <code>search</code> command and inspect the output:</p>
-<pre><code class="no-highlight language-no-highlight">PS D:\src\vcpkg&gt; .\vcpkg search sqlite
-libodb-sqlite        2.4.0            Sqlite support for the ODB ORM library
-sqlite3              3.32.1           SQLite is a software library that implements a se...
+<h1 id="authentication-for-source-code">Authentication for Source Code</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/authentication.md">GitHub</a>.</strong></p>
+<p>Registries and <code>vcpkg_from_git()</code> directly use the git command line tools to fetch remote resources. Some of these resources may be protected from anonymous access and need authentication or credentials.</p>
+<p>The strategies below all seek to achieve the same fundamental goal: <code>git clone https://....</code> should succeed without interaction. This enables vcpkg to be separated from the specifics of your authentication scheme, ensuring forwards compatibility with any additional security improvements in the future.</p>
+<h2 id="pre-seed-git-credentials">Pre-seed git credentials</h2>
+<p>You can pre-seed git credentials via <code>git credential approve</code>:</p>
+<p>Powershell:</p>
+<pre><code class="powershell language-powershell">"url=https://github.com`npath=Microsoft/vcpkg`nusername=unused`npassword=$MY_PAT`n" | git credential approve</code></pre>
+<p>Bash:</p>
+<pre><code class="sh language-sh">echo "url=https://github.com"$'\n'"path=Microsoft/vcpkg"$'\n'"username=unused"$'\n'"password=$MY_PAT"$'\n' | git credential approve</code></pre>
+<h2 id="bearer-auth">Bearer auth</h2>
+<p>For systems which need bearer auth, you can use <code>git config</code>:</p>
+<p><strong>Note: you must make these config changes with <code>--global</code></strong></p>
+<pre><code>git config --global --unset-all http.&lt;uri&gt;.extraheader
+git config --global http.&lt;uri&gt;.extraheader "AUTHORIZATION: bearer &lt;System_AccessToken&gt;"</code></pre>
+<p>The <code>&lt;uri&gt;</code> can be filled in with a variety of options, documented in <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-httplturlgt">https://git-scm.com/docs/git-config#Documentation/git-config.txt-httplturlgt</a>. For example, <code>https://dev.azure.com/MYORG/</code>.</p>
+<p>(Original Source: <a href="https://github.com/Microsoft/azure-pipelines-agent/issues/1601#issuecomment-394511048)">https://github.com/Microsoft/azure-pipelines-agent/issues/1601#issuecomment-394511048)</a>.</p>
+<p><strong>Note for Azure DevOps users:</strong> You may need to enable access via Job authorization scope <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml#job-authorization-scope">https://docs.microsoft.com/en-us/azure/devops/pipelines/process/access-tokens?view=azure-devops&tabs=yaml#job-authorization-scope</a>. You may also need to "reference" the repo in your yaml via:</p>
+<pre><code class="yaml language-yaml">resources: 
+  repositories:
+    - repository: &lt;FRIENDLYNAME&gt;
+      type: git
+      name: &lt;ORG&gt;/&lt;REPO&gt;
+      tag: tags/&lt;TAG&gt;
 
-If your library is not listed, please open an issue at:
-    https://github.com/Microsoft/vcpkg/issues</code></pre>
-<p>Looking at the list, we can see that the port is named "sqlite3". You can also run the <code>search</code> command without arguments to see the full list of packages.</p>
-<p>Installing is then as simple as using the <code>install</code> command.</p>
-<pre><code class="no-highlight language-no-highlight">PS D:\src\vcpkg&gt; .\vcpkg install sqlite3
-Computing installation plan...
-The following packages will be built and installed:
-    sqlite3[core]:x86-windows
-Starting package 1/1: sqlite3:x86-windows
-Building package sqlite3[core]:x86-windows...
--- Downloading https://sqlite.org/2020/sqlite-amalgamation-3320100.zip...
--- Extracting source C:/src/vcpkg/downloads/sqlite-amalgamation-3320100.zip
--- Applying patch fix-arm-uwp.patch
--- Using source at C:/src/vcpkg/buildtrees/sqlite3/src/3320100-15aeda126a.clean
--- Configuring x86-windows
--- Building x86-windows-dbg
--- Building x86-windows-rel
--- Performing post-build validation
--- Performing post-build validation done
-Building package sqlite3[core]:x86-windows... done
-Installing package sqlite3[core]:x86-windows...
-Installing package sqlite3[core]:x86-windows... done
-Elapsed time for package sqlite3:x86-windows: 12 s
+...
 
-Total elapsed time: 12.04 s
-
-The package sqlite3:x86-windows provides CMake targets:
-
-    find_package(unofficial-sqlite3 CONFIG REQUIRED)
-    target_link_libraries(main PRIVATE unofficial::sqlite3::sqlite3))</code></pre>
-<p>We can check that sqlite3 was successfully installed for x86 Windows desktop by running the <code>list</code> command.</p>
-<pre><code class="no-highlight language-no-highlight">PS D:\src\vcpkg&gt; .\vcpkg list
-sqlite3:x86-windows         3.32.1           SQLite is a software library that implements a se...</code></pre>
-<p>To install for other architectures and platforms such as Universal Windows Platform or x64 Desktop, you can suffix the package name with <code>:&lt;target&gt;</code>.</p>
-<pre><code class="no-highlight language-no-highlight">PS D:\src\vcpkg&gt; .\vcpkg install sqlite3:x86-uwp zlib:x64-windows</code></pre>
-<p>See <code>.\vcpkg help triplet</code> for all supported targets.</p>
-<hr />
-<p><a name="use" class="docs-anchor"></a></p>
-<h2 id="step-2-use">Step 2: Use</h2>
-<p><a name="msbuild" class="docs-anchor"></a></p>
-<h4 id="vsmsbuild-project-user-wide-integration">VS/MSBuild Project (User-wide integration)</h4>
-<p>The recommended and most productive way to use vcpkg is via user-wide integration, making the system available for all projects you build. The user-wide integration will prompt for administrator access the first time it is used on a given machine, but afterwards is no longer required and the integration is configured on a per-user basis.</p>
-<pre><code class="no-highlight language-no-highlight">PS D:\src\vcpkg&gt; .\vcpkg integrate install
-Applied user-wide integration for this vcpkg root.
-
-All C++ projects can now #include any installed libraries.
-Linking will be handled automatically.
-Installing new libraries will make them instantly available.</code></pre>
-<p><em>Note: You will need to restart Visual Studio or perform a Build to update intellisense with the changes.</em> </p>
-<p>You can now simply use File -&gt; New Project in Visual Studio and the library will be automatically available. For SQLite, you can try out their <a href="https://sqlite.org/quickstart.html">C/C++ sample</a>.</p>
-<p>To remove the integration for your user, you can use <code>.\vcpkg integrate remove</code>.</p>
-<p><a name="cmake" class="docs-anchor"></a></p>
-<h4 id="cmake-toolchain-file">CMake (Toolchain File)</h4>
-<p>The best way to use installed libraries with cmake is via the toolchain file <code>scripts\buildsystems\vcpkg.cmake</code>. To use this file, you simply need to add it onto your CMake command line as: 
-<code>-DCMAKE_TOOLCHAIN_FILE=D:\src\vcpkg\scripts\buildsystems\vcpkg.cmake</code>.</p>
-<p>If you are using CMake through Open Folder with Visual Studio you can define <code>CMAKE_TOOLCHAIN_FILE</code> by adding a "variables" section to each of your <code>CMakeSettings.json</code> configurations:</p>
-<pre><code class="json language-json">{
-  "configurations": [{
-    "name": "x86-Debug",
-    "generator": "Visual Studio 15 2017",
-    "configurationType" : "Debug",
-    "buildRoot":  "${env.LOCALAPPDATA}\\CMakeBuild\\${workspaceHash}\\build\\${name}",
-    "cmakeCommandArgs": "",
-    "buildCommandArgs": "-m -v:minimal",
-    "variables": [{
-      "name": "CMAKE_TOOLCHAIN_FILE",
-      "value": "D:\\src\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
-    }]
-  }]
+jobs:
+ - job: Build
+   uses:
+     repositories: [&lt;FRIENDLYNAME&gt;]</code></pre>
+<h2 id="pass-credentials-in-an-environment-variable-not-recommended">Pass credentials in an environment variable (not recommended)</h2>
+<p>Using <code>VCPKG_KEEP_ENV_VARS</code> or <code>VCPKG_ENV_PASSTHROUGH_UNTRACKED</code>, we can smuggle credential info via another var like <code>MY_TOKEN_VAR</code>.</p>
+<pre><code class="sh language-sh">export VCPKG_KEEP_ENV_VARS=MY_TOKEN_VAR
+export MY_TOKEN_VAR=abc123</code></pre>
+<p>This can then be used in your private ports:</p>
+<pre><code class="cmake language-cmake"># some/private/portfile.cmake
+set(MY_TOKEN_VAR "")
+if(DEFINED ENV{MY_TOKEN_VAR})
+    set(MY_TOKEN_VAR "$ENV{MY_TOKEN_VAR}@")
+endif()
+vcpkg_from_git(
+    URLS "https://${MY_TOKEN_VAR}host.com/normal/url/path"
+    ...
+)</code></pre>
+<pre><code class="cmake language-cmake"># some/other/private/portfile.cmake
+vcpkg_from_github(
+    AUTHORIZATION_TOKEN "$ENV{MY_TOKEN_VAR}"
+)</code></pre>
+<p>For private ports, we recommend using <code>vcpkg_from_git()</code> instead of <code>vcpkg_from_github()</code> and the pre-seeding method above.</p>
+<h2 id="pass-jenkins-gitusernamepassword-credentials">Pass Jenkins gitUsernamePassword credentials</h2>
+<p>The simplest and most secure option to Git authentication to GitHub from Jenkins is using <a href="https://github.com/jenkinsci/github-branch-source-plugin/blob/master/docs/github-app.adoc">GitHub App</a> and the following:</p>
+<pre><code class="groovy language-groovy">withCredentials([gitUsernamePassword(credentialsId: 'jenkins-github-app')]) {
+  withEnv(['VCPKG_KEEP_ENV_VARS=GIT_ASKPASS']) {
+    bat 'cmake'
+  }
 }</code></pre>
-<p><em>Note: It might be necessary to delete the CMake cache folder of each modified configuration, to force a full regeneration. In the <code>CMake</code> menu, under <code>Cache (&lt;configuration name&gt;)</code> you'll find <code>Delete Cache Folders</code>.</em></p>
-<p>Now let's make a simple CMake project with a main file.</p>
-<pre><code class="cmake language-cmake"># CMakeLists.txt
-cmake_minimum_required(VERSION 3.0)
-project(test)
-
-find_package(unofficial-sqlite3 CONFIG REQUIRED)
-
-add_executable(main main.cpp)
-
-target_link_libraries(main PRIVATE unofficial::sqlite3::sqlite3)</code></pre>
-<pre><code class="cpp language-cpp">// main.cpp
-#include &lt;sqlite3.h&gt;
-#include &lt;stdio.h&gt;
-
-int main()
-{
-    printf("%s\n", sqlite3_libversion());
-    return 0;
-}</code></pre>
-<p>Then, we build our project in the normal CMake way:</p>
-<pre><code class="no-highlight language-no-highlight">PS D:\src\cmake-test&gt; mkdir build 
-PS D:\src\cmake-test&gt; cd build
-PS D:\src\cmake-test\build&gt; cmake .. "-DCMAKE_TOOLCHAIN_FILE=D:\src\vcpkg\scripts\buildsystems\vcpkg.cmake"
-    // omitted CMake output here //
--- Build files have been written to: D:/src/cmake-test/build
-PS D:\src\cmake-test\build&gt; cmake --build .
-    // omitted MSBuild output here //
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.38
-PS D:\src\cmake-test\build&gt; .\Debug\main.exe
-3.15.0</code></pre>
-<p><em>Note: The correct sqlite3.dll is automatically copied to the output folder when building for x86-windows. You will need to distribute this along with your application.</em></p>
-<h5 id="handling-libraries-without-native-cmake-support">Handling libraries without native cmake support</h5>
-<p>Unlike other platforms, we do not automatically add the <code>include\</code> directory to your compilation line by default. If you're using a library that does not provide CMake integration, you will need to explicitly search for the files and add them yourself using <a href="https://cmake.org/cmake/help/latest/command/find_path.html"><code>find_path()</code></a> and <a href="https://cmake.org/cmake/help/latest/command/find_library.html"><code>find_library()</code></a>.</p>
-<pre><code class="cmake language-cmake"># To find and use catch
-find_path(CATCH_INCLUDE_DIR catch.hpp)
-include_directories(${CATCH_INCLUDE_DIR})
-
-# To find and use azure-storage-cpp
-find_path(WASTORAGE_INCLUDE_DIR was/blob.h)
-find_library(WASTORAGE_LIBRARY wastorage)
-include_directories(${WASTORAGE_INCLUDE_DIR})
-link_libraries(${WASTORAGE_LIBRARY})
-
-# Note that we recommend using the target-specific directives for a cleaner cmake:
-#     target_include_directories(main ${LIBRARY})
-#     target_link_libraries(main PRIVATE ${LIBRARY})</code></pre>
+<p>This sets the GIT_ASKPASS with a path to helper script which responds with git credentials query and instructs <code>vcpkg</code> to keep this environment variable. The password is a <a href="https://github.blog/2021-04-05-behind-githubs-new-authentication-token-formats/">GitHub App token</a> with 1 hour lifetime.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

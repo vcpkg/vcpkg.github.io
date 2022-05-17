@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -299,6 +300,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -338,6 +340,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
@@ -366,6 +369,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -408,7 +412,10 @@ then obviously beneficial changes like fixing typos are appreciated!</p>
 <h3 id="check-names-against-other-repositories">Check names against other repositories</h3>
 <p>A good service to check many at once is <a href="https://repology.org/">Repology</a>.
 If the library you are adding could be confused with another one,
-consider renaming to make it clear.</p>
+consider renaming to make it clear. We prefer when names are longer and/or
+unlikely to conflict with any future use of the same name. If the port refers
+to a library on GitHub, a good practice is to prefix the name with the organization
+if there is any chance of confusion.</p>
 <h3 id="use-github-draft-prs">Use GitHub Draft PRs</h3>
 <p>GitHub Draft PRs are a great way to get CI or human feedback on work that isn't yet ready to merge.
 Most new PRs should be opened as drafts and converted to normal PRs once the CI passes.</p>
@@ -422,10 +429,47 @@ Most new PRs should be opened as drafts and converted to normal PRs once the CI 
 <li><code>vcpkg_apply_patches()</code> should be replaced by the <code>PATCHES</code> arguments to the "extract" helpers (e.g. <a href="vcpkg_from_github.html"><code>vcpkg_from_github()</code></a>)</li>
 <li><code>vcpkg_build_msbuild()</code> should be replaced by <a href="vcpkg_install_msbuild.html"><code>vcpkg_install_msbuild()</code></a></li>
 <li><code>vcpkg_copy_tool_dependencies()</code> should be replaced by <a href="vcpkg_copy_tools.html"><code>vcpkg_copy_tools()</code></a></li>
+<li><code>vcpkg_configure_cmake</code> should be replaced by <a href="ports/vcpkg-cmake/vcpkg_cmake_configure.html#vcpkg_cmake_configure"><code>vcpkg_cmake_configure()</code></a> after removing <code>PREFER_NINJA</code> (from port <a href="ports/vcpkg-cmake.html#vcpkg-cmake"><code>vcpkg-cmake</code></a>)</li>
+<li><code>vcpkg_build_cmake</code> should be replaced by <a href="ports/vcpkg-cmake/vcpkg_cmake_build.html#vcpkg_cmake_build"><code>vcpkg_cmake_build()</code></a> (from port <a href="ports/vcpkg-cmake.html#vcpkg-cmake"><code>vcpkg-cmake</code></a>)</li>
+<li><code>vcpkg_install_cmake</code> should be replaced by <a href="ports/vcpkg-cmake/vcpkg_cmake_install.html#vcpkg_cmake_install"><code>vcpkg_cmake_install()</code></a> (from port <a href="ports/vcpkg-cmake.html#vcpkg-cmake"><code>vcpkg-cmake</code></a>)</li>
+<li><code>vcpkg_fixup_cmake_targets</code> should be replaced by <a href="ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html#vcpkg_cmake_config_fixup"><code>vcpkg_cmake_config_fixup</code></a> (from port <a href="ports/vcpkg-cmake-config.html#vcpkg-cmake-config"><code>vcpkg-cmake-config</code></a>)</li>
 </ol>
+<p>Some of the replacement helper functions are in "tools ports" to allow consumers to pin their
+behavior at specific versions, to allow locking the behavior of the helpers at a particular
+version. Tools ports need to be added to your port's <code>"dependencies"</code>, like so:</p>
+<pre><code class="json language-json">{
+  "name": "vcpkg-cmake",
+  "host": true
+},
+{
+  "name": "vcpkg-cmake-config",
+  "host": true
+}</code></pre>
 <h3 id="avoid-excessive-comments-in-portfiles">Avoid excessive comments in portfiles</h3>
 <p>Ideally, portfiles should be short, simple, and as declarative as possible.
 Remove any boiler plate comments introduced by the <code>create</code> command before submitting a PR.</p>
+<h3 id="ports-must-not-be-path-dependent">Ports must not be path dependent</h3>
+<p>Ports must not change their behavior based on which ports are already installed in a form that would change which contents that port installs. For example, given:</p>
+<pre><code>&gt; vcpkg install a
+&gt; vcpkg install b
+&gt; vcpkg remove a</code></pre>
+<p>and</p>
+<pre><code>&gt; vcpkg install b</code></pre>
+<p>the files installed by <code>b</code> must be the same, regardless of influence by the previous installation of <code>a</code>. This means that ports must not try to detect whether something is provided in the installed tree by another port before taking some action. A specific and common cause of such "path dependent" behavior is described below in "When defining features, explicitly control dependencies."</p>
+<h3 id="unique-port-attribution-rule">Unique port attribution rule</h3>
+<p>In the entire vcpkg system, no two ports a user is expected to use concurrently may provide the same file. If a port tries to install a file already provided by another file, installation will fail. If a port wants to use an extremely common name for a header, for example, it should place those headers in a subdirectory rather than in <code>include</code>.</p>
+<h3 id="add-cmake-exports-in-an-unofficial--namespace">Add CMake exports in an unofficial- namespace</h3>
+<p>A core design ideal of vcpkg is to not create "lock-in" for customers. In the build system, there should be no difference between depending on a library from the system, and depending on a library from vcpkg. To that end, we avoid adding CMake exports or targets to existing libraries with "the obvious name", to allow upstreams to add their own official CMake exports without conflicting with vcpkg.</p>
+<p>To that end, any CMake configs that the port exports, which are not in the upstream library, should have <code>unofficial-</code> as a prefix. Any additional targets should be in the <code>unofficial::&lt;port&gt;::</code> namespace.</p>
+<p>This means that the user should see:</p>
+<ul>
+<li><code>find_package(unofficial-&lt;port&gt; CONFIG)</code> as the way to get at the unique-to-vcpkg package</li>
+<li><code>unofficial::&lt;port&gt;::&lt;target&gt;</code> as an exported target from that port.</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><a href="https://github.com/microsoft/vcpkg/blob/4f0a640e4c5b74166b759a862d7527c930eff32e/ports/brotli/install.patch"><code>brotli</code></a> creates the <code>unofficial-brotli</code> package, producing target <code>unofficial::brotli::brotli</code>.</li>
+</ul>
 <h2 id="features">Features</h2>
 <h3 id="do-not-use-features-to-implement-alternatives">Do not use features to implement alternatives</h3>
 <p>Features must be treated as additive functionality. If port[featureA] installs and port[featureB] installs, then port[featureA,featureB] must install. Moreover, if a second port depends on [featureA] and a third port depends on [featureB], installing both the second and third ports should have their dependencies satisfied.</p>
@@ -480,14 +524,13 @@ All dependencies should be split out and packaged separately so they can be upda
 Additionally, when appropriate, it can be easier and more maintainable to rewrite alternative buildsystems into CMake using <code>file(GLOB)</code> directives.</p>
 <p>Examples: <a href="https://github.com/microsoft/vcpkg/blob/master/docs/maintainers/maintainer-guide.md/../../../ports/abseil/portfile.cmake">abseil</a></p>
 <h3 id="choose-either-static-or-shared-binaries">Choose either static or shared binaries</h3>
-<p>By default, <code>vcpkg_configure_cmake()</code> will pass in the appropriate setting for <code>BUILD_SHARED_LIBS</code>,
+<p>By default, <code>vcpkg_cmake_configure()</code> will pass in the appropriate setting for <code>BUILD_SHARED_LIBS</code>,
 however for libraries that don't respect that variable, you can switch on <code>VCPKG_LIBRARY_LINKAGE</code>:</p>
 <pre><code class="cmake language-cmake">string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "static" KEYSTONE_BUILD_STATIC)
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" KEYSTONE_BUILD_SHARED)
 
-vcpkg_configure_cmake(
+vcpkg_cmake_configure(
     SOURCE_PATH ${SOURCE_PATH}
-    PREFER_NINJA
     OPTIONS
         -DKEYSTONE_BUILD_STATIC=${KEYSTONE_BUILD_STATIC}
         -DKEYSTONE_BUILD_SHARED=${KEYSTONE_BUILD_SHARED}
@@ -495,31 +538,33 @@ vcpkg_configure_cmake(
 <h3 id="when-defining-features-explicitly-control-dependencies">When defining features, explicitly control dependencies</h3>
 <p>When defining a feature that captures an optional dependency,
 ensure that the dependency will not be used accidentally when the feature is not explicitly enabled.</p>
-<pre><code class="cmake language-cmake">if ("zlib" IN_LIST FEATURES)
+<pre><code class="cmake language-cmake">set(CMAKE_DISABLE_FIND_PACKAGE_ZLIB ON)
+set(CMAKE_REQUIRE_FIND_PACKAGE_ZLIB OFF)
+if ("zlib" IN_LIST FEATURES)
   set(CMAKE_DISABLE_FIND_PACKAGE_ZLIB OFF)
-else()
-  set(CMAKE_DISABLE_FIND_PACKAGE_ZLIB ON)
+  set(CMAKE_REQUIRE_FIND_PACKAGE_ZLIB ON)
 endif()
 
-vcpkg_configure_cmake(
+vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
-  PREFER_NINJA
   OPTIONS
-    -CMAKE_DISABLE_FIND_PACKAGE_ZLIB=${CMAKE_DISABLE_FIND_PACKAGE_ZLIB}
+    -DCMAKE_DISABLE_FIND_PACKAGE_ZLIB=${CMAKE_DISABLE_FIND_PACKAGE_ZLIB}
+    -DCMAKE_REQUIRE_FIND_PACKAGE_ZLIB=${CMAKE_REQUIRE_FIND_PACKAGE_ZLIB}
 )</code></pre>
 <p>The snippet below using <code>vcpkg_check_features()</code> is equivalent,  <a href="vcpkg_check_features.html">see the documentation</a>.</p>
 <pre><code class="cmake language-cmake">vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+  FEATURES
+    "zlib"    CMAKE_REQUIRE_FIND_PACKAGE_ZLIB
   INVERTED_FEATURES
     "zlib"    CMAKE_DISABLE_FIND_PACKAGE_ZLIB
 )
 
-vcpkg_configure_cmake(
+vcpkg_cmake_configure(
     SOURCE_PATH ${SOURCE_PATH}
-    PREFER_NINJA
     OPTIONS
       ${FEATURE_OPTIONS}
 )</code></pre>
-<p>Note that <code>ZLIB</code> in the above is case-sensitive. See the <a href="https://cmake.org/cmake/help/v3.15/variable/CMAKE_DISABLE_FIND_PACKAGE_PackageName.html">cmake documentation</a> for more details.</p>
+<p>Note that <code>ZLIB</code> in the above is case-sensitive. See the <a href="https://cmake.org/cmake/help/v3.22/variable/CMAKE_DISABLE_FIND_PACKAGE_PackageName.html">CMAKE_DISABLE_FIND_PACKAGE_PackageName</a> and <a href="https://cmake.org/cmake/help/v3.22/variable/CMAKE_REQUIRE_FIND_PACKAGE_PackageName.html">CMAKE_REQUIRE_FIND_PACKAGE_PackageName</a> documnetation for more details.</p>
 <h3 id="place-conflicting-libs-in-a-manual-link-directory">Place conflicting libs in a <code>manual-link</code> directory</h3>
 <p>A lib is considered conflicting if it does any of the following:</p>
 <ul>
@@ -585,6 +630,7 @@ set(VCPKG_CXX_FLAGS "-O2 ${VCPKG_CXX_FLAGS}")</code></pre>
 <p>Because of this, it is preferable to patch the buildsystem directly when setting <code>CMAKE_&lt;LANG&gt;_FLAGS</code>.</p>
 <h3 id="minimize-patches">Minimize patches</h3>
 <p>When making changes to a library, strive to minimize the final diff. This means you should <em>not</em> reformat the upstream source code when making changes that affect a region. Also, when disabling a conditional, it is better to add a <code>AND FALSE</code> or <code>&amp;&amp; 0</code> to the condition than to delete every line of the conditional.</p>
+<p>Don't add patches if the port is outdated and updating the port to a newer released version would solve the same issue. vcpkg prefers updating ports over patching outdated versions unless the version bump breaks a considerable amount of dependent ports.</p>
 <p>This helps to keep the size of the vcpkg repository down as well as improves the likelihood that the patch will apply to future code versions.</p>
 <h3 id="do-not-implement-features-in-patches">Do not implement features in patches</h3>
 <p>The purpose of patching in vcpkg is to enable compatibility with compilers, libraries, and platforms. It is not to implement new features in lieu of following proper Open Source procedure (submitting an Issue/PR/etc).</p>

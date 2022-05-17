@@ -288,6 +288,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
 </ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
@@ -299,6 +300,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
@@ -338,6 +340,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
@@ -366,6 +369,7 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
@@ -404,11 +408,13 @@
 </ul>
 <h3 id="user-help">User Help</h3>
 <ul>
-<li><a href="users/integration.html">Integration with build systems</a></li>
+<li><a href="users/integration.html">Buildsystem Integration</a></li>
 <li><a href="users/triplets.html">Triplet files</a></li>
 <li><a href="users/config-environment.html">Configuration and Environment</a></li>
+<li><a href="users/authentication.html">Authentication</a></li>
 <li><a href="users/manifests.html">Manifest Mode</a></li>
 <li><a href="users/binarycaching.html">Binary Caching</a></li>
+<li><a href="users/assetcaching.html">Asset Caching</a></li>
 <li><a href="users/versioning.html">Versioning</a></li>
 <li><a href="users/android.html">Usage with Android</a></li>
 <li><a href="users/mingw.html">Usage with Mingw-w64</a></li>
@@ -417,10 +423,11 @@
 </ul>
 <h3 id="maintainer-help">Maintainer Help</h3>
 <ul>
-<li><a href="maintainers/manifest-files.html">Manifest files - vcpkg.json</a></li>
-<li><a href="maintainers/control-files.html">Control files</a></li>
-<li><a href="maintainers/portfile-functions.html">Portfile functions</a></li>
-<li><a href="maintainers/vcpkg_common_definitions.html">Common CMake definitions</a></li>
+<li><a href="maintainers/manifest-files.html">Manifest Files - vcpkg.json</a></li>
+<li><a href="maintainers/control-files.html">Control Files</a></li>
+<li><a href="maintainers/portfile-functions.html">Portfile Functions</a></li>
+<li><a href="maintainers/authoring-script-ports.html">Authoring Script Ports</a></li>
+<li><a href="maintainers/vcpkg_common_definitions.html">Common CMake Definitions</a></li>
 <li><a href="maintainers/maintainer-guide.html">Maintainer Guidelines</a></li>
 <li><a href="maintainers/registries.html">Creating Registries</a></li>
 <li><a href="maintainers/cmake-guidelines.html">CMake Guidelines</a></li>
