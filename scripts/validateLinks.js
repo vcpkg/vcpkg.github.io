@@ -34,10 +34,17 @@ async function get_pages_recursive(docs_set, path) {
  * @param {string} page
  * @returns {{links: [string,string][], fragments: {string}}}
  */
-async function load_page_info(page, relative_dir) {
+async function load_page_info(page, relative_path) {
     const ret = { links: [], fragments: {} };
     const content = await fs.readFile(page, 'utf-8');
-    for (const match of content.matchAll(/ href="([^"?#]+)(#([^"?]*))?([^"]*)?"/g)) {
+    for (const match of content.matchAll(/ href="([^"?#]*)(#([^"?]*))?([^"]*)?"/g)) {
+        if (match[1].length == 0) {
+            if (match[3].length > 0) {
+                // reference to self anchor
+                ret.links.push([relative_path, match[3]]);
+            }
+            continue;
+        }
         // skip external links
         if (match[1].startsWith("https://") || match[1].startsWith("http://")) continue;
         // skip mailto
@@ -50,7 +57,7 @@ async function load_page_info(page, relative_dir) {
             // Link is already relative to doc root
             ret.links.push([match[1], match[3]]);
         } else {
-            var dir = relative_dir;
+            var dir = dirname(relative_path);
             var subpath = match[1];
             while (subpath.startsWith("../")) {
                 dir = dirname(dir);
@@ -68,22 +75,25 @@ async function load_page_info(page, relative_dir) {
     return ret;
 }
 /**
+ * @param {string} filepath
  * @param {string} page
  * @param {{[index: string]: {links: [string,string][], fragments: {string}}}} pages_info
  * @returns {boolean} true if errors were found
  */
 function validate_page(page, pages_info) {
     var rc = false;
+    const relpath = page.substring(1);
     const page_info = pages_info[page];
     for (const link of page_info.links) {
         if (!(link[0] in pages_info)) {
-            console.log(`Broken internal link ${page} -> ${link[0]}`);
+            console.log(`::error file=${relpath}::Broken internal link from ${relpath} -> ${link[0]}`);
             rc = true;
         } else if (link[1] !== undefined && !(link[1] in pages_info[link[0]].fragments)) {
-            console.log(`Broken fragment link ${page} -> ${link[0]}#${link[1]}`);
+            console.log(`::error file=${relpath}::Broken fragment link from ${relpath} -> ${link[0]}#${link[1]}`);
             rc = true;
         }
     }
+    return rc;
 }
 
 /** @returns {boolean} true if an error occurred */
@@ -94,18 +104,23 @@ async function main() {
     var pages_info = {};
     for (var page of pages) {
         var relative = page.substring(destDir.length);
-        pages_info[relative] = load_page_info(page, dirname(relative));
+        pages_info[relative] = load_page_info(page, relative);
     }
 
     for (var page in pages_info) {
         pages_info[page] = await pages_info[page];
     }
 
+    var only_docs = !!process.env.VCPKG_VALIDATE_LINKS_ONLY_DOCS;
+
     var rc = false;
     for (var page in pages_info) {
-        rc ||= validate_page(page, pages_info);
+        if (!page.startsWith("/en/docs") && only_docs) {
+            continue;
+        }
+        rc |= validate_page(page, pages_info);
     }
-    return rc;
+    exit(rc ? 1 : 0);
 }
 
-return main() ? 1 : 0;
+main()
