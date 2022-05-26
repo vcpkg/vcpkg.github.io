@@ -196,11 +196,6 @@
             >Portfile Functions</a
           >
         </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"
-            >vcpkg_configure_cmake</a
-          >
-        </li>
       </ul>
     </div>
     <div class="docs-column">
@@ -211,7 +206,7 @@
           <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
         </li>
         <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/integration.html">Integration</a>
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
         </li>
         <li class="">
           <a class="docs-nav-link" href="/en/docs/users/versioning.html"
@@ -261,11 +256,15 @@
 <ul class="standard-padding collapsable">
 <li class="list-expanded"><button class="button-list-can-expand">Internal</button></li>
 <ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_catalog_release_process.html"><li class="list-can-expand">vcpkg_catalog_release_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_tool_release_process.html"><li class="list-can-expand">vcpkg_tool_release_process</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
@@ -274,13 +273,23 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-get-vars</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn.html"><li class="list-can-expand">vcpkg-gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_configure.html"><li class="list-can-expand">vcpkg_gn_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_install.html"><li class="list-can-expand">vcpkg_gn_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-pkgconfig-get-modules</button></li>
 <ul class="standard-padding collapsable">
@@ -367,13 +376,20 @@
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Users</button></li>
 <ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">Buildsystems</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/cmake-integration.html"><li class="list-can-expand">CMake Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/export-command.html"><li class="list-can-expand"><code>export</code> Command</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/manual-integration.html"><li class="list-can-expand">Manual Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/msbuild-integration.html"><li class="list-can-expand">MSBuild Integration (Visual Studio)</li></a>
+</ul>
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
-<a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
 <a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
@@ -397,8 +413,7 @@
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="vcpkg-and-android">vcpkg and Android</h1>
 <p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/users/android.md">GitHub</a>.</strong></p>
-<p>Android is not officially supported, and there are no official android triplets at the moment.</p>
-<p>However, some packages can compile to Android, and the situation is improving: see the list of <a href="https://github.com/Microsoft/vcpkg/pulls?q=+android+">PR related to Android</a>.</p>
+<p><em>Android is not tested as part of vcpkg repository's CI process, so regressions can occur as part of library updates. PRs improving support are welcome!</em></p>
 <h2 id="android-build-requirements">Android build requirements</h2>
 <ol>
 <li><p>Download the <a href="https://developer.android.com/ndk/downloads/">android ndk</a></p></li>
@@ -413,8 +428,7 @@ For example:</p></li>
 <li><p>Set environment variable <code>VCPKG_ROOT</code> to your vcpkg installation.</p></li>
 </ol>
 <pre><code class="bash language-bash">export VCPKG_ROOT=/path/to/vcpkg</code></pre>
-<h2 id="create-the-android-triplets">Create the android triplets</h2>
-<h3 id="android-abi-and-corresponding-vcpkg-triplets">Android ABI and corresponding vcpkg triplets</h3>
+<h2 id="vcpkg-triplets-and-their-corresponding-android-abi">vcpkg triplets and their corresponding android ABI</h2>
 <p>There are four different Android ABI, each of which maps to 
 a vcpkg triplet. The following table outlines the mapping from vcpkg architectures to android architectures</p>
 <table>
@@ -443,37 +457,6 @@ a vcpkg triplet. The following table outlines the mapping from vcpkg architectur
 </tr>
 </tbody>
 </table>
-<h3 id="create-the-android-triplets-1">Create the android triplets</h3>
-<p>You can copy-paste the script below to populate them, and adjust them to your needs if required.</p>
-<pre><code class="bash language-bash">cd $VCPKG_ROOT
-
-echo "
-set(VCPKG_TARGET_ARCHITECTURE arm)
-set(VCPKG_CRT_LINKAGE dynamic)
-set(VCPKG_LIBRARY_LINKAGE dynamic)
-set(VCPKG_CMAKE_SYSTEM_NAME Android)
-" &gt; triplets/community/arm-android.cmake
-
-echo "
-set(VCPKG_TARGET_ARCHITECTURE arm64)
-set(VCPKG_CRT_LINKAGE dynamic)
-set(VCPKG_LIBRARY_LINKAGE dynamic)
-set(VCPKG_CMAKE_SYSTEM_NAME Android)
-" &gt; triplets/community/arm64-android.cmake
-
-echo "
-set(VCPKG_TARGET_ARCHITECTURE x86)
-set(VCPKG_CRT_LINKAGE dynamic)
-set(VCPKG_LIBRARY_LINKAGE dynamic)
-set(VCPKG_CMAKE_SYSTEM_NAME Android)
-" &gt; triplets/community/x86-android.cmake
-
-echo "
-set(VCPKG_TARGET_ARCHITECTURE x64)
-set(VCPKG_CRT_LINKAGE dynamic)
-set(VCPKG_LIBRARY_LINKAGE dynamic)
-set(VCPKG_CMAKE_SYSTEM_NAME Android)
-" &gt; triplets/community/x64-android.cmake</code></pre>
 <h2 id="install-libraries-for-android-using-vcpkg">Install libraries for Android using vcpkg</h2>
 <p>Example for jsoncpp:</p>
 <pre><code class="bash language-bash">cd $VCPKG_ROOT
