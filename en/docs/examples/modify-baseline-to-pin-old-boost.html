@@ -196,11 +196,6 @@
             >Portfile Functions</a
           >
         </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"
-            >vcpkg_configure_cmake</a
-          >
-        </li>
       </ul>
     </div>
     <div class="docs-column">
@@ -211,7 +206,7 @@
           <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
         </li>
         <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/integration.html">Integration</a>
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
         </li>
         <li class="">
           <a class="docs-nav-link" href="/en/docs/users/versioning.html"
@@ -261,11 +256,15 @@
 <ul class="standard-padding collapsable">
 <li class="list-expanded"><button class="button-list-can-expand">Internal</button></li>
 <ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_catalog_release_process.html"><li class="list-can-expand">vcpkg_catalog_release_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_tool_release_process.html"><li class="list-can-expand">vcpkg_tool_release_process</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
@@ -274,13 +273,23 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-get-vars</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn.html"><li class="list-can-expand">vcpkg-gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_configure.html"><li class="list-can-expand">vcpkg_gn_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_install.html"><li class="list-can-expand">vcpkg_gn_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-pkgconfig-get-modules</button></li>
 <ul class="standard-padding collapsable">
@@ -367,13 +376,20 @@
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Users</button></li>
 <ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">Buildsystems</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/cmake-integration.html"><li class="list-can-expand">CMake Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/export-command.html"><li class="list-can-expand"><code>export</code> Command</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/manual-integration.html"><li class="list-can-expand">Manual Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/msbuild-integration.html"><li class="list-can-expand">MSBuild Integration (Visual Studio)</li></a>
+</ul>
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
-<a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
 <a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
@@ -396,11 +412,11 @@
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="pin-old-boost-versions">Pin old Boost versions</h1>
-<p>This document will teach you how to set versions of meta-packages like <code>boost</code> or <code>qt5</code>. </p>
-<p><strong>What is a meta-package?</strong> 
-In vcpkg we call meta-packages to ports that by themselves don't install anything but that instead forward installation to another port or ports. The reasons for these meta-packages to exist are plenty: to install different versions of a library depending on platform (like the old OpenSSL port did), to allow for multiple versions to exist in the vcpkg registry at the same time (OpenCV), or to conveniently install/uninstall a catalog of related packages (Boost and Qt).  </p>
-<p>In the case of Boost, it is unlikely that a user requires all of the 140+ Boost libraries in their project. For the sake of convenience, vcpkg splits Boost into multiple sub-packages broken down to individual libraries. By doing so, users can limit the subset of Boost libraries that they depend on. </p>
-<p>If a user wants to install all of the Boost libraries available in vcpkg, they can do so by installing the <code>boost</code> meta-package. </p>
+<p>This document will teach you how to set versions of meta-packages like <code>boost</code> or <code>qt5</code>.</p>
+<p><strong>What is a meta-package?</strong>
+In vcpkg we call meta-packages to ports that by themselves don't install anything but that instead forward installation to another port or ports. The reasons for these meta-packages to exist are plenty: to install different versions of a library depending on platform or to conveniently install/uninstall a catalog of related packages (Boost and Qt).</p>
+<p>In the case of Boost, it is unlikely that a user requires all of the 140+ Boost libraries in their project. For the sake of convenience, vcpkg splits Boost into multiple sub-packages broken down to individual libraries. By doing so, users can limit the subset of Boost libraries that they depend on.</p>
+<p>If a user wants to install all of the Boost libraries available in vcpkg, they can do so by installing the <code>boost</code> meta-package.</p>
 <p>Due to the nature of meta-packages, some unexpected issues arise when trying to use them with versioning. If a user writes the following manifest file:</p>
 <p><code>vcpkg.json</code></p>
 <pre><code class="json language-json">{
@@ -408,7 +424,7 @@ In vcpkg we call meta-packages to ports that by themselves don't install anythin
     "version": "1.0.0",
     "builtin-baseline": "787fe1418ea968913cc6daf11855ffd8b0b5e9d4",
     "dependencies": [ "boost-tuple" ],
-    "overrides": [ 
+    "overrides": [
         { "name": "boost", "version": "1.72.0" }
     ]
 }</code></pre>
@@ -433,7 +449,7 @@ In vcpkg we call meta-packages to ports that by themselves don't install anythin
 <p>It is reasonable to expect that overriding <code>boost</code> to version 1.72.0 results in all Boost packages being pinned to version 1.72.0. <strong>However, vcpkg does not treat the <code>boost</code> meta-package any differently that any other port.</strong> In other words, vcpkg has no notion that <code>boost</code> is related to all the other <code>boost-*</code> libraries, other than it depends on all of them. For this reason, all the other boost packages are installed at version 1.75.0, which is the baseline version.</p>
 <p>Below, we describe two methods to pin down Boost versions effectively.</p>
 <h2 id="method-1-pin-specific-packages">Method 1: Pin specific packages</h2>
-<p>Use <code>"overrides"</code> to force specific versions in a package-by-package basis. </p>
+<p>Use <code>"overrides"</code> to force specific versions in a package-by-package basis.</p>
 <p><code>vcpkg.json</code></p>
 <pre><code class="json language-json">{
     "name": "demo",
@@ -450,17 +466,17 @@ In vcpkg we call meta-packages to ports that by themselves don't install anythin
 <p>This method allows you to quickly set the specific versions you want, but you will need to write an override for each package. Boost libraries are also heavily interdependent, which means that you may end up writing a lot of override lines.</p>
 <p>The second method makes it easy to pin the entire Boost collection and end up with a very simple manifest file.</p>
 <h2 id="method-2-modify-baseline">Method 2: Modify baseline</h2>
-<p>An easy way to set the version for the entirety of boost is to use the <code>"builtin-baseline"</code> property. </p>
-<p>As of right now, it is only possible to go back to Boost version <code>1.75.0</code> using a baseline. Since that was the contemporary Boost version when the versioning feature was merged. <strong>But, it is possible to modify the baseline to whatever you like and use that instead.</strong></p>
+<p>An easy way to set the version for the entirety of boost is to use the <code>"builtin-baseline"</code> property.</p>
+<p>As of right now, it is only possible to go back to Boost version <code>1.75.0</code> using a baseline, since that was the contemporary Boost version when the versioning feature was merged. <strong>But, it is possible to modify the baseline to whatever you like and use that instead.</strong></p>
 <h3 id="step-1-create-a-new-branch">Step 1: Create a new branch</h3>
-<p>As described in the versioning documentation. The value that goes in <code>"builtin-baseline"</code> is a Git commit in the vcpkg repository's history. Then it stands to reason, that if you want to customize the baseline you should be able to create a new commit with said custom baseline. </p>
-<p>Let's start by creating a new branch to hold our modified baseline. 
-In the directory containing your clone of the vcpkg Git repository run:</p>
+<p>As described in the versioning documentation. The value that goes in <code>"builtin-baseline"</code> is a git commit in the microsoft/vcpkg repository's history. If you want to customize the baseline and have control over the vcpkg instance, you can create a new commit with said custom baseline.</p>
+<p>Let's start by creating a new branch to hold our modified baseline.</p>
+<p>In the directory containing your clone of the vcpkg Git repository run:</p>
 <pre><code>git checkout -b custom-boost-baseline</code></pre>
 <p>This will create a new branch named <code>custom-boost-baseline</code> and check it out immediately.</p>
 <h3 id="step-2-modify-the-baseline">Step 2: Modify the baseline</h3>
 <p>The next step is to modify the baseline file, open the file in your editor of choice and modify the entries for the Boost libraries.</p>
-<p>Change the <code>"baseline"</code> version to your desired version. 
+<p>Change the <code>"baseline"</code> version to your desired version.
 <em>NOTE: Remember to also set the port versions to 0 (or your desired version).</em></p>
 <p><code>${vcpkg-root}/versions/baseline.json</code></p>
 <pre><code class="diff language-diff">...
@@ -491,7 +507,7 @@ In the directory containing your clone of the vcpkg Git repository run:</p>
         "port-version": 0
     },
 ...</code></pre>
-<p>Some <code>boost-</code> packages are helpers used by vcpkg and are not part of Boost. For example, <code>"boost-uninstall"</code> is a vcpkg helper to conveniently uninstall all Boost libraries, but it didn't exist for Boost version <code>1.72.0</code>, in this case it is fine to leave it at <code>1.75.0</code> to avoid baseline errors (since all versions in <code>baseline.json</code> must have existed). </p>
+<p>Some <code>boost-</code> packages are helpers used by vcpkg and are not part of Boost. For example, <code>"boost-uninstall"</code> is a vcpkg helper to conveniently uninstall all Boost libraries, but it didn't exist for Boost version <code>1.72.0</code>, in this case it is fine to leave it at <code>1.75.0</code> to avoid baseline errors (since all versions in <code>baseline.json</code> must have existed).</p>
 <h3 id="step-3-commit-your-changes">Step 3: Commit your changes</h3>
 <p>After saving your modified file, run these commands to commit your changes:</p>
 <pre><code>git add versions/baseline.json

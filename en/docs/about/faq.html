@@ -196,11 +196,6 @@
             >Portfile Functions</a
           >
         </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"
-            >vcpkg_configure_cmake</a
-          >
-        </li>
       </ul>
     </div>
     <div class="docs-column">
@@ -211,7 +206,7 @@
           <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
         </li>
         <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/integration.html">Integration</a>
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
         </li>
         <li class="">
           <a class="docs-nav-link" href="/en/docs/users/versioning.html"
@@ -261,11 +256,15 @@
 <ul class="standard-padding collapsable">
 <li class="list-expanded"><button class="button-list-can-expand">Internal</button></li>
 <ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_catalog_release_process.html"><li class="list-can-expand">vcpkg_catalog_release_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_tool_release_process.html"><li class="list-can-expand">vcpkg_tool_release_process</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
@@ -274,13 +273,23 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-get-vars</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn.html"><li class="list-can-expand">vcpkg-gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_configure.html"><li class="list-can-expand">vcpkg_gn_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_install.html"><li class="list-can-expand">vcpkg_gn_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-pkgconfig-get-modules</button></li>
 <ul class="standard-padding collapsable">
@@ -367,13 +376,20 @@
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Users</button></li>
 <ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">Buildsystems</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/cmake-integration.html"><li class="list-can-expand">CMake Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/export-command.html"><li class="list-can-expand"><code>export</code> Command</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/manual-integration.html"><li class="list-can-expand">Manual Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/msbuild-integration.html"><li class="list-can-expand">MSBuild Integration (Visual Studio)</li></a>
+</ul>
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
-<a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
 <a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
@@ -401,7 +417,7 @@
 If you want to contribute but don't have a particular library in mind then take a look at the list
 of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+label%3Acategory%3Anew-port">new port requests</a>.</p>
 <h2 id="can-vcpkg-create-pre-built-binary-packages-what-is-the-binary-format-used-by-vcpkg">Can vcpkg create pre-built binary packages? What is the binary format used by vcpkg?</h2>
-<p>Yes! See <a href="../users/integration.html#export-command">the <code>export</code> command</a>.</p>
+<p>Yes! See the <a href="../users/buildsystems/export-command.html"><code>export</code> command</a>.</p>
 <h2 id="how-do-i-update-libraries">How do I update libraries?</h2>
 <p>The <code>vcpkg update</code> command lists all packages which are out-of-sync with your current portfiles. To update a package, follow the instructions in the command.</p>
 <h2 id="how-do-i-get-more-libraries">How do I get more libraries?</h2>
@@ -420,7 +436,7 @@ of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+lab
 <p>Execute <code>git pull</code> to get the latest sources, then run <code>bootstrap-vcpkg.bat</code> (Windows) or <code>./bootstrap-vcpkg.sh</code> (Unix) to update vcpkg.</p>
 <h2 id="how-do-i-use-different-versions-of-a-library-on-one-machine">How do I use different versions of a library on one machine?</h2>
 <p>Within a single instance of vcpkg (e.g. one set of <code>installed\</code>, <code>packages\</code>, <code>ports\</code> and so forth), you can only have one version of a library installed (otherwise, the headers would conflict with each other!). For those with experience with system-wide package managers, packages in vcpkg correspond to the <code>X-dev</code> or <code>X-devel</code> packages.</p>
-<p>To use different versions of a library for different projects, we recommend making separate instances of vcpkg and using the <a href="../users/integration.html">per-project integration mechanisms</a>. The versions of each library are specified by the files in <code>ports\</code>, so they are easily manipulated using standard <code>git</code> commands. This makes it very easy to roll back the entire set of libraries to a consistent set of older versions which all work with each other. If you need to then pin a specific library forward, that is as easy as checking out the appropriate version of <code>ports\&lt;package&gt;\</code>.</p>
+<p>To use different versions of a library for different projects, we recommend making separate instances of vcpkg and using the <a href="../users/buildsystems/integration.html">per-project integration mechanisms</a>. The versions of each library are specified by the files in <code>ports\</code>, so they are easily manipulated using standard <code>git</code> commands. This makes it very easy to roll back the entire set of libraries to a consistent set of older versions which all work with each other. If you need to then pin a specific library forward, that is as easy as checking out the appropriate version of <code>ports\&lt;package&gt;\</code>.</p>
 <p>If your application is very sensitive to the versions of libraries, we recommend checking in the specific set of portfiles you need into your source control along with your project sources and using the <code>--vcpkg-root</code> option to redirect the working directory of <code>vcpkg.exe</code>.</p>
 <h2 id="how-does-vcpkg-protect-my-privacy">How does vcpkg protect my privacy?</h2>
 <p>See the <a href="privacy.html">Privacy document</a> for all information regarding privacy.</p>
@@ -449,7 +465,7 @@ of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+lab
 <p>vcpkg uses CMake internally as a build scripting language. This is because CMake is already an extremely common build system for cross-platform open source libraries and is becoming very popular for C++ projects in general. It is easy to acquire on Windows, does not require system-wide installation, and legible for unfamiliar users.</p>
 <h2 id="will-vcpkg-support-downloading-compiled-binaries-from-a-public-or-private-server">Will vcpkg support downloading compiled binaries from a public or private server?</h2>
 <p>We would like to eventually support downloading precompiled binaries, similar to other system package managers.</p>
-<p>In a corporate scenario, we currently recommend building the libraries once and distributing the entire vcpkg root directory to everyone else on the project through some raw file transport such as a network share or HTTP host. See the <a href="../users/integration.html#export"><code>export</code></a> command.</p>
+<p>In a corporate scenario, we currently recommend building the libraries once and distributing the entire vcpkg root directory to everyone else on the project through some raw file transport such as a network share or HTTP host. See the <a href="../users/buildsystems/export-command.html"><code>export</code> command</a>.</p>
 <h2 id="what-visual-c-toolsets-are-supported">What Visual C++ toolsets are supported?</h2>
 <p>We support Visual Studio 2015 Update 3 and above.</p>
 <h2 id="why-does-visual-studio-not-use-my-libraries-with-user-wide-integration-enabled">Why does Visual Studio not use my libraries with user-wide integration enabled?</h2>
