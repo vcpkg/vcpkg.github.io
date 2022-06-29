@@ -25,6 +25,12 @@ async function main() {
         await render(templatesDir + "/" + t, enDir + "/" + t, view);
         console.log("Generated " + enDir + "/" + t);
     }
+
+    // Redirect from https://vcpkg.io/en/docs/ to https://vcpkg.io/en/docs/README.md
+    await fs.copyFile(templatesDir + "/readme-redirect.html", enDir + "/docs/index.html");
+    // Redirect from https://vcpkg.io/docs/ to https://vcpkg.io/en/docs/README.md
+    await fs.mkdir(rootDir + "/docs");
+    await fs.copyFile(templatesDir + "/readme-redirect.html", rootDir + "/docs/index.html");
 }
 
 main();
