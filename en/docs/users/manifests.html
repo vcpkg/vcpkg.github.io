@@ -196,11 +196,6 @@
             >Portfile Functions</a
           >
         </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"
-            >vcpkg_configure_cmake</a
-          >
-        </li>
       </ul>
     </div>
     <div class="docs-column">
@@ -211,7 +206,7 @@
           <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
         </li>
         <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/integration.html">Integration</a>
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
         </li>
         <li class="">
           <a class="docs-nav-link" href="/en/docs/users/versioning.html"
@@ -261,11 +256,15 @@
 <ul class="standard-padding collapsable">
 <li class="list-expanded"><button class="button-list-can-expand">Internal</button></li>
 <ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_catalog_release_process.html"><li class="list-can-expand">vcpkg_catalog_release_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_tool_release_process.html"><li class="list-can-expand">vcpkg_tool_release_process</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
@@ -274,13 +273,23 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-get-vars</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn.html"><li class="list-can-expand">vcpkg-gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_configure.html"><li class="list-can-expand">vcpkg_gn_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_install.html"><li class="list-can-expand">vcpkg_gn_install</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-pkgconfig-get-modules</button></li>
 <ul class="standard-padding collapsable">
@@ -367,13 +376,20 @@
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Users</button></li>
 <ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">Buildsystems</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/cmake-integration.html"><li class="list-can-expand">CMake Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/export-command.html"><li class="list-can-expand"><code>export</code> Command</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/manual-integration.html"><li class="list-can-expand">Manual Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/msbuild-integration.html"><li class="list-can-expand">MSBuild Integration (Visual Studio)</li></a>
+</ul>
 <a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
 <a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
 <a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
 <a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
-<a class="doc-outline-link" href="/en/docs/users/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
 <a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
 <a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
 <a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
@@ -408,8 +424,6 @@ of installed ports is controlled by editing the project's "manifest file", and t
 project directory or build directory. This mode acts more similarly to language package managers like Cargo, or npm. We
 recommend using this manifest mode whenever possible, because it allows one to encode a project's dependencies
 explicitly in a project file, rather than in the documentation, making your project much easier to consume.</p>
-<p>Manifest mode is in beta, but it can be used from the CMake or MSBuild integration, which will be stable when used via
-things like <code>find_package</code>. This is the recommended way to use manifest mode.</p>
 <p>Check out the <a href="../examples/manifest-mode-cmake.html">manifest cmake example</a> for an example project using CMake and
 manifest mode.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
@@ -417,8 +431,6 @@ manifest mode.</p>
 <li><a href="#simple-example-manifest">Simple Example Manifest</a></li>
 <li><a href="#manifest-syntax-reference">Manifest Syntax Reference</a></li>
 <li><a href="#command-line-interface">Command Line Interface</a></li>
-<li><a href="#cmake-integration">CMake Integration</a></li>
-<li><a href="#msbuild-integration">MSBuild Integration</a></li>
 </ul>
 <p>See also <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/manifests.md">the original specification</a> for more low-level details.</p>
 <h2 id="simple-example-manifest">Simple Example Manifest</h2>
@@ -520,6 +532,7 @@ Then, you might just ask for:</p>
   "default-features": false,
   "features": [ "mp3lame" ]
 }</code></pre>
+<p><a id="platform"></a></p>
 <h4 id="platform-field"><code>"platform"</code> Field</h4>
 <p>The <code>"platform"</code> field defines the platforms where the dependency should be installed - for example,
 you might need to use sha256, and so you use platform primitives on Windows, but <code>picosha2</code> on non-Windows platforms.</p>
@@ -627,133 +640,6 @@ install</code>'s classic mode parameters function the same in manifest mode.</p>
 <p><strong>Experimental and may change or be removed at any time</strong></p>
 <p>Specifies the directory containing <code>vcpkg.json</code>.</p>
 <p>Defaults to searching upwards from the current working directory.</p>
-<h2 id="cmake-integration">CMake Integration</h2>
-<p>Our <a href="integration.html#cmake">CMake Integration</a> will automatically detect a <code>vcpkg.json</code> manifest file in the same
-directory as the top-level <code>CMakeLists.txt</code> (<code>${CMAKE_SOURCE_DIR}/vcpkg.json</code>) and activate manifest mode. vcpkg will be
-automatically bootstrapped if missing and invoked to install your dependencies into your local build directory
-(<code>${CMAKE_BINARY_DIR}/vcpkg_installed</code>).</p>
-<h3 id="configuration">Configuration</h3>
-<p>All vcpkg-affecting variables must be defined before the first <code>project()</code> directive, such as via the command line or
-<code>set()</code> statements.</p>
-<h4 id="vcpkg_target_triplet"><code>VCPKG_TARGET_TRIPLET</code></h4>
-<p>This variable controls which triplet dependencies will be installed for.</p>
-<p>If unset, vcpkg will automatically detect an appropriate default triplet given the current compiler settings.</p>
-<h4 id="vcpkg_host_triplet"><code>VCPKG_HOST_TRIPLET</code></h4>
-<p>This variable controls which triplet host dependencies will be installed for.</p>
-<p>If unset, vcpkg will automatically detect an appropriate native triplet (x64-windows, x64-osx, x64-linux).</p>
-<p>See also <a href="host-dependencies.html">Host Dependencies</a>.</p>
-<h3 id="vcpkg_installed_dir"><code>VCPKG_INSTALLED_DIR</code></h3>
-<p>This variable allows one to set the location of the <code>vcpkg_installed</code> directory.
-It defaults to <code>${CMAKE_BINARY_DIR}/vcpkg_installed</code>.</p>
-<h4 id="vcpkg_manifest_mode"><code>VCPKG_MANIFEST_MODE</code></h4>
-<p>This variable controls whether vcpkg operates in manifest mode or in classic mode. To disable manifest mode even with a
-<code>vcpkg.json</code>, set this to <code>OFF</code>.</p>
-<p>Defaults to <code>ON</code> when <code>VCPKG_MANIFEST_DIR</code> is non-empty or <code>${CMAKE_SOURCE_DIR}/vcpkg.json</code> exists.</p>
-<h4 id="vcpkg_manifest_dir"><code>VCPKG_MANIFEST_DIR</code></h4>
-<p>This variable can be defined to specify an alternate folder containing your <code>vcpkg.json</code> manifest.</p>
-<p>Defaults to <code>${CMAKE_SOURCE_DIR}</code> if <code>${CMAKE_SOURCE_DIR}/vcpkg.json</code> exists.</p>
-<h4 id="vcpkg_manifest_install"><code>VCPKG_MANIFEST_INSTALL</code></h4>
-<p>This variable controls whether vcpkg will be automatically run to install your dependencies during your configure step.</p>
-<p>Defaults to <code>ON</code> if <code>VCPKG_MANIFEST_MODE</code> is <code>ON</code>.</p>
-<h4 id="vcpkg_bootstrap_options"><code>VCPKG_BOOTSTRAP_OPTIONS</code></h4>
-<p>This variable can be set to additional command parameters to pass to <code>./bootstrap-vcpkg</code> (run in automatic restore mode
-if the vcpkg tool does not exist).</p>
-<h4 id="vcpkg_overlay_triplets"><code>VCPKG_OVERLAY_TRIPLETS</code></h4>
-<p>This variable can be set to a list of paths to be passed on the command line as <code>--overlay-triplets=...</code></p>
-<h4 id="vcpkg_overlay_ports"><code>VCPKG_OVERLAY_PORTS</code></h4>
-<p>This variable can be set to a list of paths to be passed on the command line as <code>--overlay-ports=...</code></p>
-<h4 id="vcpkg_manifest_features"><code>VCPKG_MANIFEST_FEATURES</code></h4>
-<p>This variable can be set to a list of features to treat as active when installing from your manifest.</p>
-<p>For example, Features can be used by projects to control building with additional dependencies to enable tests or
-samples:</p>
-<pre><code class="json language-json">{
-  "name": "mylibrary",
-  "version": "1.0",
-  "dependencies": [ "curl" ],
-  "features": {
-    "samples": {
-      "description": "Build Samples",
-      "dependencies": [ "fltk" ]
-    },
-    "tests": {
-      "description": "Build Tests",
-      "dependencies": [ "gtest" ]
-    }
-  }
-}</code></pre>
-<pre><code class="cmake language-cmake"># CMakeLists.txt
-
-option(BUILD_TESTING "Build tests" OFF)
-if(BUILD_TESTING)
-  list(APPEND VCPKG_MANIFEST_FEATURES "tests")
-endif()
-
-option(BUILD_SAMPLES "Build samples" OFF)
-if(BUILD_SAMPLES)
-  list(APPEND VCPKG_MANIFEST_FEATURES "samples")
-endif()
-
-project(myapp)
-
-# ...</code></pre>
-<h4 id="vcpkg_manifest_no_default_features"><code>VCPKG_MANIFEST_NO_DEFAULT_FEATURES</code></h4>
-<p>This variable controls whether to automatically activate all default features in addition to those listed in
-<code>VCPKG_MANIFEST_FEATURES</code>. If set to <code>ON</code>, default features will not be automatically activated.</p>
-<p>Defaults to <code>OFF</code>.</p>
-<h4 id="vcpkg_install_options"><code>VCPKG_INSTALL_OPTIONS</code></h4>
-<p>This variable can be set to a list of additional command line parameters to pass to the vcpkg tool during automatic
-installation.</p>
-<h4 id="vcpkg_prefer_system_libs"><code>VCPKG_PREFER_SYSTEM_LIBS</code></h4>
-<p>This variable controls whether vcpkg will appends instead of prepends its paths to <code>CMAKE_PREFIX_PATH</code>, <code>CMAKE_LIBRARY_PATH</code> and <code>CMAKE_FIND_ROOT_PATH</code> so that vcpkg libraries/packages are found after toolchain/system libraries/packages.</p>
-<p>Defaults to <code>OFF</code>.</p>
-<h4 id="vcpkg_feature_flags"><code>VCPKG_FEATURE_FLAGS</code></h4>
-<p>This variable can be set to a list of feature flags to pass to the vcpkg tool during automatic installation to opt-in to
-experimental behavior.</p>
-<p>See the <code>--feature-flags=</code> command line option for more information.</p>
-<h2 id="msbuild-integration">MSBuild Integration</h2>
-<p>To use manifests with MSBuild, first you need to use an <a href="integration.html#with-msbuild">existing integration method</a>.
-Then, add a vcpkg.json above your project file (such as in the root of your source repository) and set the
-property <code>vcpkgEnableManifest</code> to <code>true</code>. You can set this property via the IDE in <code>Project Properties -&gt; vcpkg -&gt; Use
-vcpkg Manifest</code>.</p>
-<p>As part of your project's build, vcpkg automatically be run and install any listed dependencies to <code>vcpkg_installed/$(vcpkgTriplet)/</code>
-adjacent to the <code>vcpkg.json</code> file; these files will then automatically be included in and linked to your MSBuild
-projects.</p>
-<h3 id="known-issues">Known issues</h3>
-<ul>
-<li>Visual Studio 2015 does not correctly track edits to the <code>vcpkg.json</code> and <code>vcpkg-configuration.json</code> files, and will
-not respond to changes unless a <code>.cpp</code> is edited.</li>
-</ul>
-<h3 id="msbuild-properties">MSBuild Properties</h3>
-<p>When using Visual Studio 2015 integration, these properties can be set in your project file before the</p>
-<pre><code class="xml language-xml">&lt;Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" /&gt;</code></pre>
-<p>line, which unfortunately requires manual editing of the <code>.vcxproj</code> or passing on the msbuild command line with <code>/p:</code>.
-With 2017 or later integration, These properties can additionally be set via the Visual Studio GUI under
-<code>Project Properties -&gt; vcpkg</code> or via a common <code>.props</code> file imported between <code>Microsoft.Cpp.props</code> and
-<code>Microsoft.Cpp.targets</code>.</p>
-<h4 id="vcpkgenabled-use-vcpkg"><code>vcpkgEnabled</code> (Use vcpkg)</h4>
-<p>This can be set to "false" to explicitly disable vcpkg integration for the project</p>
-<h4 id="vcpkgtriplet-triplet"><code>vcpkgTriplet</code> (Triplet)</h4>
-<p>This can be set to a custom triplet to use for integration (such as x64-windows-static)</p>
-<h4 id="vcpkghosttriplet-host-triplet"><code>vcpkgHostTriplet</code> (Host Triplet)</h4>
-<p>This can be set to a custom triplet to use for resolving host dependencies.</p>
-<p>If unset, this will default to the "native" triplet (x64-windows, x64-osx, x64-linux).</p>
-<p>See also <a href="host-dependencies.html">Host Dependencies</a>.</p>
-<h4 id="vcpkgadditionalinstalloptions-additional-options"><code>vcpkgAdditionalInstallOptions</code> (Additional Options)</h4>
-<p>When using a manifest, this option specifies additional command line flags to pass to the underlying vcpkg tool
-invocation. This can be used to access features that have not yet been exposed through another option.</p>
-<h4 id="vcpkgconfiguration-vcpkg-configuration"><code>vcpkgConfiguration</code> (vcpkg Configuration)</h4>
-<p>If your configuration names are too complex for vcpkg to guess correctly, you can assign this property to <code>Release</code> or
-<code>Debug</code> to explicitly tell vcpkg what variant of libraries you want to consume.</p>
-<h4 id="vcpkgenablemanifest-use-vcpkg-manifest"><code>vcpkgEnableManifest</code> (Use vcpkg Manifest)</h4>
-<p>This property must be set to true in order to consume from a local vcpkg.json file. If set to false, any local
-vcpkg.json files will be ignored. This will default to true in the future.</p>
-<h4 id="vcpkgmanifestinstall-install-vcpkg-dependencies"><code>vcpkgManifestInstall</code> (Install vcpkg Dependencies)</h4>
-<p><em>(Requires <code>Use vcpkg Manifest</code> set to <code>true</code>)</em></p>
-<p>This property can be set to "false" to disable automatic dependency restoration on project build. Dependencies can be
-manually restored via the vcpkg command line.</p>
-<h4 id="vcpkginstalleddir-installed-directory"><code>vcpkgInstalledDir</code> (Installed Directory)</h4>
-<p>This property defines the location where headers and binaries are consumed from. In manifest mode, this directory is
-created and populated based on your manifest.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

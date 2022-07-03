@@ -1,0 +1,29 @@
+name: Site Validation
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Restore NPM cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Rebuild and validate website
+        run: scripts/rebuild.sh
+
+      - name: Check for differences
+        run: |
+          if ! git diff --quiet; then
+            echo "::error ::Detected changes when regenerating website."
+            git diff --stat
+            exit 1
+          fi
