@@ -120,5 +120,27 @@ export type Version = {
   'port-version': number;
 };
 
+export type StatusValue = 'pass' | 'fail' | 'skip';
+
+export type Status = {
+  'arm64-windows': StatusValue;
+  'arm-uwp': StatusValue;
+  'x64-linux': StatusValue;
+  'x64-osx': StatusValue;
+  'x64-uwp': StatusValue;
+  'x64-windows': StatusValue;
+  'x64-windows-static': StatusValue;
+  'x64-windows-static-md': StatusValue;
+  'x86-windows': StatusValue;
+};
+
+export interface Triplets {
+  'built-in': string[];
+  community: string[];
+}
+
 export type ManifestWithVersions = Manifest & Versions;
-export type ManifestWithVersionsAndStars = ManifestWithVersions & { stars?: number };
+export type ManifestWithVersionsAndStatus = ManifestWithVersions & { status: Status };
+export type ManifestWithVersionsAndStatusAndStars = ManifestWithVersionsAndStatus & {
+  stars?: number;
+};

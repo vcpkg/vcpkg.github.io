@@ -1,15 +1,15 @@
 import { Octokit } from 'octokit';
 import { parseStars } from '../parsers/stars-parser.js';
-import { ManifestWithVersions, ManifestWithVersionsAndStars } from '../types';
+import { ManifestWithVersionsAndStatus, ManifestWithVersionsAndStatusAndStars } from '../types';
 
-const gitHubRegex = new RegExp('github.com/(?<owner>[-_.a-zA-Z0-9]+)/(?<repo>[-_.a-zA-Z0-9]+)');
+const gitHubRegex = new RegExp('github.com/(?<owner>[-_.a-zA-Z\\d]+)/(?<repo>[-_.a-zA-Z\\d]+)');
 
 export async function addStars(
-  manifests: ManifestWithVersions[],
+  manifests: ManifestWithVersionsAndStatus[],
   gitHubToken: string,
-): Promise<ManifestWithVersionsAndStars[]> {
+): Promise<ManifestWithVersionsAndStatusAndStars[]> {
   const octokit = new Octokit({ auth: gitHubToken });
-  const result: ManifestWithVersionsAndStars[] = [];
+  const result: ManifestWithVersionsAndStatusAndStars[] = [];
   for (const manifest of manifests) {
     if (manifest.homepage !== undefined && gitHubRegex.test(manifest.homepage)) {
       const [_, owner, repo] = gitHubRegex.exec(manifest.homepage) ?? [];
