@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -418,11 +434,17 @@ such as <a href="https://github.com/microsoft/vcpkg/pull/23757">https://github.c
 <li>Verify that all tests etc. are passing in the vcpkg-tool repo's <code>main</code> branch, and that the
 contents therein are acceptable for release. (Steps after this will sign code there, so this
 review is responsible gating what has access to code signing.)</li>
-<li>On your machine, in a prompt changed to the vcpkg-tool repo,
-<code>git fetch https://github.com/microsoft/vcpkg-tool main &amp;&amp; git switch -d FETCH_HEAD</code></li>
 <li>Check that the changes there are in fact the changes that we want in that release. (Be aware,
 you are responsible for what is about to be signed with a Microsoft code signing certificate by
 proceeding)</li>
+<li>Submit a new full tree rebuild by <a href="https://dev.azure.com/vcpkg/public/_build?definitionId=29">https://dev.azure.com/vcpkg/public/_build?definitionId=29</a>
+(microsoft.vcpkg.ci as of this writing) and queue a new build with the vcpkg-tool SHA overridden
+to the one you wish to use. Example:
+<a href="https://dev.azure.com/vcpkg/public/_build/results?buildId=73664&view=results">https://dev.azure.com/vcpkg/public/_build/results?buildId=73664&view=results</a></li>
+<li>(Probably the next day) Check over the failures and ensure any differences with the most recent
+full rebuild using the previous tool version are understood.</li>
+<li>On your machine, in a prompt changed to the vcpkg-tool repo,
+<code>git fetch https://github.com/microsoft/vcpkg-tool main &amp;&amp; git switch -d FETCH_HEAD</code></li>
 <li><code>git push https://devdiv.visualstudio.com/DevDiv/_git/vcpkg FETCH_HEAD:main</code></li>
 <li>Monitor the resulting signed build at:
 <a href="https://devdiv.visualstudio.com/DefaultCollection/DevDiv/_build?definitionId=13610">https://devdiv.visualstudio.com/DefaultCollection/DevDiv/_build?definitionId=13610</a>
@@ -433,23 +455,16 @@ has been somewhat unstable at the time of this writing.)</li>
 the "auto generate release notes" button. Manually remove any entries created by the automated
 localization tools which will start with <code>* LEGO: Pull request from juno/</code>.</li>
 <li>Publish that draft release as "pre-release".</li>
-<li>Smoke test the 'one liner' installer: (Where 2022-03-30 is replaced with the right release name)<ul>
+<li>Smoke test the 'one liner' installer: (Where 2022-06-15 is replaced with the right release name)<ul>
 <li>Powershell:
-<code>iex (iwr https://github.com/microsoft/vcpkg-tool/releases/download/2022-03-30/vcpkg-init.ps1)</code></li>
+<code>iex (iwr https://github.com/microsoft/vcpkg-tool/releases/download/2022-06-15/vcpkg-init.ps1)</code></li>
 <li>Batch:
-<code>curl -L -o vcpkg-init.cmd https://github.com/microsoft/vcpkg-tool/releases/download/2022-03-30/vcpkg-init.ps1 &amp;&amp; .\vcpkg-init.cmd</code></li>
+<code>curl -L -o vcpkg-init.cmd https://github.com/microsoft/vcpkg-tool/releases/download/2022-06-15/vcpkg-init.ps1 &amp;&amp; .\vcpkg-init.cmd</code></li>
 <li>Bash:
-<code>. &lt;(curl https://github.com/microsoft/vcpkg-tool/releases/download/2022-03-30/vcpkg-init.sh -L)</code></li></ul></li>
+<code>. &lt;(curl https://github.com/microsoft/vcpkg-tool/releases/download/2022-06-15/vcpkg-init -L)</code></li></ul></li>
 <li>In the vcpkg repo, draft a PR which updates <code>bootstrap-vcpkg.sh</code> and <code>boostrap-vcpkg.ps1</code>
 with the new release date, and update SHAs as appropriate in the .sh script. (For example, see
 <a href="https://github.com/microsoft/vcpkg/pull/23757">https://github.com/microsoft/vcpkg/pull/23757</a>)</li>
-<li>Submit a new full tree rebuild by <a href="https://dev.azure.com/vcpkg/public/_build?definitionId=29">https://dev.azure.com/vcpkg/public/_build?definitionId=29</a>
-(microsoft.vcpkg.ci as of this writing) and queue a new build targeting branch
-<code>refs/pull/ The PR number created in the previous step /head</code> (for example
-<code>refs/pull/24131/head</code>
-<a href="https://dev.azure.com/vcpkg/public/_build/results?buildId=70703&view=results">https://dev.azure.com/vcpkg/public/_build/results?buildId=70703&view=results</a>)</li>
-<li>(Probably the next day) Check over the failures and ensure any differences with the most recent
-full rebuild using the previous tool version are understood.</li>
 <li>Merge the tool update PR.</li>
 <li>Change the github release in vcpkg-tool from "prerelease" to "release". (This automatically
 updates the aka.ms links)</li>

@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -411,80 +427,45 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_cmake_configure">vcpkg_cmake_configure</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.md">vcpkg repo</a>.</p>
-<p>Configure a CMake buildsystem.</p>
-<pre><code class="cmake language-cmake">vcpkg_cmake_configure(
-    SOURCE_PATH &lt;source-path&gt;
-    [LOGFILE_BASE &lt;logname-base&gt;]
-    [DISABLE_PARALLEL_CONFIGURE]
-    [NO_CHARSET_FLAG]
-    [WINDOWS_USE_MSBUILD]
-    [GENERATOR &lt;generator&gt;]
-    [OPTIONS
-        &lt;configure-setting&gt;...]
-    [OPTIONS_RELEASE
-        &lt;configure-setting&gt;...]
-    [OPTIONS_DEBUG
-        &lt;configure-setting&gt;...]
-    [MAYBE_UNUSED_VARIABLES
-        &lt;option-name&gt;...]
-)</code></pre>
-<p><code>vcpkg_cmake_configure</code> configures a CMake build system for use with
-<code>vcpkg_cmake_buildsystem_build</code> and <code>vcpkg_cmake_buildsystem_install</code>.
-<code>source-path</code> is where the source is located; by convention,
-this is usually <code>${SOURCE_PATH}</code>, which is set by one of the <code>vcpkg_from_*</code> functions.
-This function configures the build system for both Debug and Release builds by default,
-assuming that <code>VCPKG_BUILD_TYPE</code> is not set; if it is, then it will only configure for
-that build type.</p>
-<p>Use the <code>OPTIONS</code> argument to set the configure settings for both release and debug,
-and use <code>OPTIONS_RELEASE</code> and <code>OPTIONS_DEBUG</code> to set the configure settings for
-release only and debug only respectively.</p>
-<p>By default, when possible, <code>vcpkg_cmake_configure</code> uses <a href="https://ninja-build.org/">ninja-build</a>
-as its build system. If the <code>WINDOWS_USE_MSBUILD</code> argument is passed, then
-<code>vcpkg_cmake_configure</code> will use a Visual Studio generator on Windows;
-on every other platform, <code>vcpkg_cmake_configure</code> just uses Ninja.</p>
-<p>Additionally, one may pass the specific generator a port should use with <code>GENERATOR</code>.
-This is useful if some project-specific buildsystem
-has been wrapped in a CMake build system that doesn't perform an actual build.
-If used for this purpose, it should be set to <code>"NMake Makefiles"</code>.
-<code>vcpkg_cmake_buildsystem_build</code> and <code>install</code> do not support this being set to anything
-except for NMake.</p>
-<p>For libraries which cannot be configured in parallel,
-pass the <code>DISABLE_PARALLEL_CONFIGURE</code> flag. This is needed, for example,
-if the library's build system writes back into the source directory during configure.
-This also disables the <code>CMAKE_DISABLE_SOURCE_CHANGES</code> option.</p>
-<p>By default, this function adds flags to <code>CMAKE_C_FLAGS</code> and <code>CMAKE_CXX_FLAGS</code>
-which set the default character set to utf-8 for MSVC.
-If the library sets its own code page, pass the <code>NO_CHARSET_FLAG</code> option.</p>
-<p>This function makes certain that all options passed in are used by the
-underlying CMake build system. If there are options that might be unused,
-perhaps on certain platforms, pass those variable names to
-<code>MAYBE_UNUSED_VARIABLES</code>. For example:</p>
-<pre><code class="cmake language-cmake">vcpkg_cmake_configure(
-    ...
-    OPTIONS
-        -DBUILD_EXAMPLE=OFF
-    ...
-    MAYBE_UNUSED_VARIABLES
-        BUILD_EXAMPLE
-)</code></pre>
-<p><code>LOGFILE_BASE</code> is used to set the base of the logfile names;
-by default, this is <code>config</code>, and thus the logfiles end up being something like
-<code>config-x86-windows-dbg.log</code>. You can set it to anything you like;
-if you set it to <code>config-the-first</code>,
-you'll get something like <code>config-the-first-x86-windows.dbg.log</code>.</p>
+<h1 id="vcpkg_install_copyright">vcpkg_install_copyright</h1>
+<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_install_copyright.md">vcpkg repo</a>.</p>
+<p>Merges multiple copyright files into a single file and install it.
+Installs a single copyright file.</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="cmake language-cmake">vcpkg_install_copyright(FILE_LIST &lt;file1&gt; &lt;file2&gt;... [COMMENT])</code></pre>
+<h2 id="parameters">Parameters</h2>
+<h3 id="file_list">FILE_LIST</h3>
+<p>Specifies a list of license files with absolute paths. You must provide at least one file.</p>
+<h3 id="comment">COMMENT</h3>
+<p>This optional parameter adds a comment before at the top of the file. </p>
 <h2 id="notes">Notes</h2>
-<p>This command supplies many common arguments to CMake. To see the full list, examine the source.</p>
+<p>This function creates a file called <code>copyright</code> inside <code>${CURRENT_PACKAGES_DIR}/share/${PORT}</code></p>
+<p>If more than one file is provided, this function concatenates the contents of multiple copyright files to a single file.</p>
+<p>The resulting <code>copyright</code> file looks similar to this:</p>
+<pre><code>LICENSE-LGPL2.txt:
+
+Lorem ipsum dolor...
+
+LICENSE-MIT.txt:
+
+Lorem ipsum dolor sit amet...</code></pre>
+<p>Or with <code>COMMENT</code>:</p>
+<pre><code>A meaningful comment
+
+LICENSE-LGPL2.txt:
+
+Lorem ipsum dolor...
+
+LICENSE-MIT.txt:
+
+Lorem ipsum dolor sit amet...</code></pre>
 <h2 id="examples">Examples</h2>
-<ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/zlib/portfile.cmake">zlib</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/cpprestsdk/portfile.cmake">cpprestsdk</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/poco/portfile.cmake">poco</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/opencv4/portfile.cmake">opencv4</a></li>
-</ul>
+<pre><code class="cmake language-cmake">vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE/license.md" "${SOURCE_PATH}/LICENSE/license_gpl.md" COMMENT "This is a comment")</code></pre>
+<p>You can also collect the required files using a <code>GLOB</code> pattern:</p>
+<pre><code class="cmake language-cmake">file(GLOB LICENSE_FILES "${SOURCE_PATH}/LICENSES/*")
+vcpkg_install_copyright(FILE_LIST ${LICENSE_FILES})</code></pre>
 <h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/vcpkg-cmake/vcpkg_cmake_configure.cmake">ports/vcpkg-cmake/vcpkg_cmake_configure.cmake</a></p>
+<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_install_copyright.cmake">vcpkg_install_copyright.md</a></p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

@@ -1,0 +1,591 @@
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="/assets/mark/mark.svg" />
+        <link rel="icon" href="/assets/mark/favicon.png" />
+        <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+    
+        <!-- boostrap style sheet -->
+        <link
+          rel="stylesheet"
+          href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/styles/default.min.css"
+          integrity="sha384-s4RLYRjGGbVqKOyMGGwfxUTMOO6D7r2eom7hWZQ6BjK2Df4ZyfzLXEkonSm0KLIQ"
+          crossorigin="anonymous"
+        />
+    
+        <!-- our style sheet and fonts -->
+        <link href="/css/common.css" rel="stylesheet" />
+        <link href="/css/getting-started.css" rel="stylesheet" />
+    
+        <!-- bootstrap scripts -->
+        <script type="text/javascript"
+          src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+        </script>
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+          integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/highlight.min.js"
+          integrity="sha384-DmE/PJ3PvpXS92Z4Sn7vSRTqJd0T/2xkGtNgm2JaZFczBOZdCf3XbZOwnRHDgjAA"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/cmake.min.js"
+          integrity="sha384-x//ggWQQKDYM6gkxzOdTUJNX9tNhjYBuM1SkQ3kgwzlFH9cxNW2meFXccjs06ubh"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.1/build/languages/powershell.min.js"
+          integrity="sha384-+05Cp42tk0QutdpySQ0HsmEskItQQcyh04nmNheHuy1epFAdvUC9kpiwJk9lx419"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- our scripts -->
+        <script src="/dist/common.js"></script>
+        <script src="/dist/documentation.js"></script>
+    </head>
+    <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/getting-started.html">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages.html">Packages</a>
+      </li>
+      <li class="nav-item active">
+        <div class="nav-link">
+        <div style="display: inline-block" onmouseover="addMouseOverNavigation()"><a class="doc-outline-link docs-upper-nav-link" href="/en/docs/README.html"
+          >Documentation</a></div>
+        <div style="display: inline-block" onclick="docsNavButton()">
+        <button class="doc-nav-button">
+          <img src="/assets/misc/docs.svg" width="10px" height="10px" alt="" class="" /></button></div>
+      </div>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started.html">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages.html">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <ul class="mobile-docs-list">
+          <li><a class="navbar-mobile" href="/en/docs/README.html">Quick Start</a></li>
+          <li><a class="navbar-mobile" href="/en/docs/about/faq.html">About</a></li>
+          <li>
+            <a class="navbar-mobile" href="/en/docs/examples/installing-and-using-packages.html"
+              >Examples</a
+            >
+          </li>
+          <li>
+            <a class="navbar-mobile" href="/en/docs/maintainers/control-files.html">Maintainers</a>
+          </li>
+          <li><a class="navbar-mobile" href="/en/docs/users/binarycaching.html">Users</a></li>
+        </ul>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+    <div id="banner"></div>
+    <div class="page">
+    <nav class="left-side">
+      <div class="docs-mobile-heading hidden">Table of Contents</div>
+      <div class="docs-mobile-exit hidden"><img class="docs-mobile-exit-icon" src="/assets/misc/exit-docs.svg"></div>
+      <div class="search-bar">
+        <input
+                  class="search-box"
+                  id="pkg-search"
+                  type="search"
+                  name="search"
+                  placeholder="Search"
+                  autocomplete="off"
+                  oninput=""
+                />
+        <ul class="search hidden">
+        </ul>
+      </div>
+      <div id="docsNavPane"><ul class=docs-navigation><li class="list-expanded"><button class="button-list-can-expand">About</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
+<a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/versioning.getting-started.html"><li class="list-can-expand">Get Started with Versioning</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">Maintainers</button></li>
+<ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">Internal</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_catalog_release_process.html"><li class="list-can-expand">vcpkg_catalog_release_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/vcpkg_tool_release_process.html"><li class="list-can-expand">vcpkg_tool_release_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_apply_patches.html"><li class="list-can-expand">z_vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_forward_output_variable.html"><li class="list-can-expand">z_vcpkg_forward_output_variable</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
+<ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html"><li class="list-can-expand">vcpkg_cmake_config_fixup</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-get-vars</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn.html"><li class="list-can-expand">vcpkg-gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_configure.html"><li class="list-can-expand">vcpkg_gn_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-gn/vcpkg_gn_install.html"><li class="list-can-expand">vcpkg_gn_install</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-pkgconfig-get-modules</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/control-files.html"><li class="list-can-expand">CONTROL files</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/execute_process.html"><li class="list-can-expand">execute_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/maintainer-guide.html"><li class="list-can-expand">Maintainer Guidelines and Policies</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/manifest-files.html"><li class="list-can-expand">Manifest files - <code>vcpkg.json</code></li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/portfile-functions.html"><li class="list-can-expand">Portfile Helper Functions</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/pr-review-checklist.html"><li class="list-can-expand">PR Checklist</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/registries.html"><li class="list-can-expand">Creating Registries</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_acquire_msys.html"><li class="list-can-expand">vcpkg_acquire_msys</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_add_to_path.html"><li class="list-can-expand">vcpkg_add_to_path</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_apply_patches.html"><li class="list-can-expand">vcpkg_apply_patches</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_backup_restore_env_vars.html"><li class="list-can-expand">vcpkg_backup_restore_env_vars</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_buildpath_length_warning.html"><li class="list-can-expand">vcpkg_buildpath_length_warning</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_cmake.html"><li class="list-can-expand">vcpkg_build_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_make.html"><li class="list-can-expand">vcpkg_build_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_msbuild.html"><li class="list-can-expand">vcpkg_build_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_ninja.html"><li class="list-can-expand">vcpkg_build_ninja</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_nmake.html"><li class="list-can-expand">vcpkg_build_nmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_build_qmake.html"><li class="list-can-expand">vcpkg_build_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_features.html"><li class="list-can-expand">vcpkg_check_features</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_make.html"><li class="list-can-expand">vcpkg_configure_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_meson.html"><li class="list-can-expand">vcpkg_configure_meson</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_qmake.html"><li class="list-can-expand">vcpkg_configure_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_pdbs.html"><li class="list-can-expand">vcpkg_copy_pdbs</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_tools.html"><li class="list-can-expand">vcpkg_copy_tools</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_copy_tool_dependencies.html"><li class="list-can-expand">vcpkg_copy_tool_dependencies</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_download_distfile.html"><li class="list-can-expand">vcpkg_download_distfile</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_build_process.html"><li class="list-can-expand">vcpkg_execute_build_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_in_download_mode.html"><li class="list-can-expand">vcpkg_execute_in_download_mode</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_required_process.html"><li class="list-can-expand">vcpkg_execute_required_process</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_execute_required_process_repeat.html"><li class="list-can-expand">vcpkg_execute_required_process_repeat</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_extract_source_archive.html"><li class="list-can-expand">vcpkg_extract_source_archive</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_extract_source_archive_ex.html"><li class="list-can-expand">vcpkg_extract_source_archive_ex</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fail_port_install.html"><li class="list-can-expand">vcpkg_fail_port_install</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_find_acquire_program.html"><li class="list-can-expand">vcpkg_find_acquire_program</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_find_fortran.html"><li class="list-can-expand">vcpkg_find_fortran</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fixup_cmake_targets.html"><li class="list-can-expand">vcpkg_fixup_cmake_targets</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_fixup_pkgconfig.html"><li class="list-can-expand">vcpkg_fixup_pkgconfig</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_bitbucket.html"><li class="list-can-expand">vcpkg_from_bitbucket</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_git.html"><li class="list-can-expand">vcpkg_from_git</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_github.html"><li class="list-can-expand">vcpkg_from_github</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_gitlab.html"><li class="list-can-expand">vcpkg_from_gitlab</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_from_sourceforge.html"><li class="list-can-expand">vcpkg_from_sourceforge</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_program_files_platform_bitness.html"><li class="list-can-expand">vcpkg_get_program_files_platform_bitness</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_msbuild.html"><li class="list-can-expand">vcpkg_install_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_nmake.html"><li class="list-can-expand">vcpkg_install_nmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_qmake.html"><li class="list-can-expand">vcpkg_install_qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_list.html"><li class="list-can-expand">vcpkg_list</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_minimum_required.html"><li class="list-can-expand">vcpkg_minimum_required</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_replace_string.html"><li class="list-can-expand">vcpkg_replace_string</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">Specifications</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/binarycaching.md"><li class="list-can-expand">Binary Caching v1.1 (Jul 14, 2020)</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/export-command.md"><li class="list-can-expand">Binary Export (Apr 28, 2017)</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/feature-packages.md"><li class="list-can-expand">Proposal: Features / Feature packages (Feb 23 2017)</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md"><li class="list-can-expand">Manifests -- <code>vcpkg.json</code></li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/ports-overlay.md"><li class="list-can-expand">Ports Overlay (Jun 19, 2019)</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/prefab.md"><li class="list-can-expand">Vcpkg: export Android prefab Archives (AAR files)</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/registries-2.md"><li class="list-can-expand">Registries: Take 2 (including Git Registries)</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/registries.md"><li class="list-can-expand">Package Federation: Custom Registries</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/scripts-extraction.md"><li class="list-can-expand">Scripts Tree Extraction</li></a>
+<a class="doc-outline-link" href="https://github.com/microsoft/vcpkg/tree/master/docs/specifications/versioning.md"><li class="list-can-expand">Versioning Specification </li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">Users</button></li>
+<ul class="standard-padding collapsable">
+<li class="list-expanded"><button class="button-list-can-expand">Buildsystems</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/cmake-integration.html"><li class="list-can-expand">CMake Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/export-command.html"><li class="list-can-expand"><code>export</code> Command</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/integration.html"><li class="list-can-expand">Buildsystem Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/manual-integration.html"><li class="list-can-expand">Manual Integration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/buildsystems/msbuild-integration.html"><li class="list-can-expand">MSBuild Integration (Visual Studio)</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/users/android.html"><li class="list-can-expand">Vcpkg and Android</li></a>
+<a class="doc-outline-link" href="/en/docs/users/assetcaching.html"><li class="list-can-expand">Asset Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/authentication.html"><li class="list-can-expand">Authentication for Source Code</li></a>
+<a class="doc-outline-link" href="/en/docs/users/binarycaching.html"><li class="list-can-expand">Binary Caching</li></a>
+<a class="doc-outline-link" href="/en/docs/users/config-environment.html"><li class="list-can-expand">Environment and Configuration</li></a>
+<a class="doc-outline-link" href="/en/docs/users/host-dependencies.html"><li class="list-can-expand">Host Dependencies</li></a>
+<a class="doc-outline-link" href="/en/docs/users/manifests.html"><li class="list-can-expand">Manifest Mode</li></a>
+<a class="doc-outline-link" href="/en/docs/users/mingw.html"><li class="list-can-expand">Vcpkg and Mingw-w64</li></a>
+<a class="doc-outline-link" href="/en/docs/users/registries.html"><li class="list-can-expand">Using Registries</li></a>
+<a class="doc-outline-link" href="/en/docs/users/selecting-library-features.html"><li class="list-can-expand">Selecting Library Features</li></a>
+<a class="doc-outline-link" href="/en/docs/users/triplets.html"><li class="list-can-expand">Triplet Files</li></a>
+<a class="doc-outline-link" href="/en/docs/users/versioning.implementation-details.html"><li class="list-can-expand">Versioning: Implementation details</li></a>
+<a class="doc-outline-link" href="/en/docs/users/versioning.html"><li class="list-can-expand">Versioning</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/README.html"><li class="list-can-expand">Quick Start</li></a>
+</ul>
+</div>
+      <script>
+        $("#docsNavPane .collapsable").removeClass("collapsable").addClass("collapse");
+        $("#docsNavPane .list-expanded").removeClass("list-expanded").addClass("list-can-expand");
+        $(() => {
+            setScrollFocus();
+            initDocumentation();
+        });
+      </script>
+</nav><main class="right-side" id="main">
+<div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
+<h1 id="vcpkg-install">vcpkg install</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/commands/install.md">GitHub</a>.</strong></p>
+<h2 id="synopsis">Synopsis</h2>
+<p><strong>Classic Mode</strong></p>
+<pre><code class="no-highlight language-no-highlight">vcpkg install [options] &lt;package&gt;...</code></pre>
+<p><strong>Manifest Mode</strong></p>
+<pre><code class="no-highlight language-no-highlight">vcpkg install [options]</code></pre>
+<h2 id="description">Description</h2>
+<p>Build and install port packages.</p>
+<h3 id="classic-mode">Classic Mode</h3>
+<p>In Classic Mode, this verb adds port packages to the existing set in the <a href="common-options.html#install-root">installed directory</a> (defaults to <code>installed/</code> under the vcpkg root). This can require removing and rebuilding existing packages, which can fail.</p>
+<p><a id="package-syntax"></a></p>
+<p><strong>Package Syntax</strong></p>
+<pre><code>portname[feature1,feature2]:triplet</code></pre>
+<p>Package references without a triplet are automatically qualified by the <a href="common-options.html#triplet">default target triplet</a>. Package references that do not explicitly list <code>core</code> are considered to imply all default features.</p>
+<h3 id="manifest-mode">Manifest Mode</h3>
+<p>In <a href="../users/manifests.html">Manifest Mode</a>, this verb sets the <a href="common-options.html#install-root">installed directory</a> to the state specified by the <code>vcpkg.json</code> manifest file, adding, removing, or rebuilding packages as needed.</p>
+<h2 id="options">Options</h2>
+<p>All vcpkg commands support a set of <a href="common-options.html">common options</a>.</p>
+<h3 id="--allow-unsupported"><code>--allow-unsupported</code></h3>
+<p>Instead of stopping on an unsupported port, continue with a warning.</p>
+<p>By default, vcpkg refuses to execute an install plan containing a port installation for a triplet outside its [<code>"supports"</code>][] clause. The [<code>"supports"</code>][] clause of a package describes the full set of platforms a package is expected to be buildable on. This flag instructs vcpkg to warn that the build is expected to fail instead of stopping.</p>
+<h3 id="--clean-after-build"><code>--clean-after-build</code></h3>
+<p>Clean buildtrees, packages, and downloads after building each package.</p>
+<p>This option has the same effect as passing <a href="#clean-buildtrees-after-build"><code>--clean-buildtrees-after-build</code></a>, <a href="#clean-downloads-after-build"><code>--clean-downloads-after-build</code></a>, and <a href="#clean-packages-after-build"><code>--clean-packages-after-build</code></a>.</p>
+<p><a id="clean-buildtrees-after-build"></a></p>
+<h3 id="--clean-buildtrees-after-build"><code>--clean-buildtrees-after-build</code></h3>
+<p>Clean all subdirectories from the buildtrees temporary subfolder after building each package.</p>
+<p>All top-level files in the buildtrees subfolder (e.g. <code>buildtrees/zlib/config-x64-windows-out.log</code>) will be kept. All subdirectories will be deleted.</p>
+<p><a id="clean-downloads-after-build"></a></p>
+<h3 id="--clean-downloads-after-build"><code>--clean-downloads-after-build</code></h3>
+<p>Clean all unextracted assets from the <code>downloads/</code> folder after building each package.</p>
+<p>All top level files in the <code>downloads/</code> folder will be deleted. Extracted tools will be kept.</p>
+<p><a id="clean-packages-after-build"></a></p>
+<h3 id="--clean-packages-after-build"><code>--clean-packages-after-build</code></h3>
+<p>Clean the packages temporary subfolder after building each package.</p>
+<p>The packages subfolder for the built package (for example, <code>packages/zlib_x64-windows</code>) will be deleted after installation.</p>
+<h3 id="--dry-run"><code>--dry-run</code></h3>
+<p>Print the install plan, but do not remove or install any packages.</p>
+<p>The install plan lists all packages and features that will be installed, as well as any other packages that need to be removed and rebuilt.</p>
+<p><a id="editable"></a></p>
+<h3 id="--editable"><code>--editable</code></h3>
+<p><strong>Classic Mode Only</strong></p>
+<p>Perform editable builds for all directly referenced packages on the command line.</p>
+<p>When vcpkg builds ports, it purges and re-extracts the source code each time to ensure inputs are accurately. This is necessary for <a href="../users/manifests.html">Manifest Mode</a> to accurately update what is installed and <a href="../users/binarycaching.html">Binary Caching</a> to ensure cached content is correct.</p>
+<p>Passing the <code>--editable</code> flag disables this behavior, preserving edits to the extracted sources in the <code>buildtrees/</code> folder. This helps develop patches quickly by avoiding the need to write a file on each change.</p>
+<p>Sources extracted during an editable build do not have a <code>.clean/</code> suffix on the directory name and will not be cleared by subsequent non-editable builds.</p>
+<h3 id="--enforce-port-checks"><code>--enforce-port-checks</code></h3>
+<p>Fail install if a port has detected problems or attempts to use a deprecated feature.</p>
+<p>By default, vcpkg will run several checks on built packages and emit warnings if any issues are detected. This flag upgrades those warnings to an error.</p>
+<h3 id="--x-featurefeature"><code>--x-feature=&lt;feature&gt;</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p><strong><a href="../users/manifests.html">Manifest Mode</a> Only</strong></p>
+<p>Specify an additional <a href="../users/manifests.html#features">feature</a> from the <code>vcpkg.json</code> to install dependencies for.</p>
+<p>By default, only <a href="../users/manifests.html#dependencies"><code>"dependencies"</code></a> and the dependencies of the <a href="../users/manifests.html#default-features"><code>"default-features"</code></a> will be installed.</p>
+<h3 id="--head"><code>--head</code></h3>
+<p><strong>Classic Mode Only</strong></p>
+<p>Request all packages explicitly referenced on the command line to fetch the latest sources available when building.</p>
+<p>This flag is only intended for temporary testing and is not intended for production or long-term use. This disables <a href="../users/binarycaching.html">Binary Caching</a> for all explicitly referenced packages and their dependents because vcpkg cannot accurately track all inputs.</p>
+<h3 id="--keep-going"><code>--keep-going</code></h3>
+<p>Continue the install plan after the first failure.</p>
+<p>By default, vcpkg will stop at the first package build failure. This flag instructs vcpkg to continue building and installing other parts of the install plan that don't depend upon the failed package.</p>
+<h3 id="--x-no-default-features"><code>--x-no-default-features</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p><strong><a href="../users/manifests.html">Manifest Mode</a> Only</strong></p>
+<p>Don't install the default features from the top-level manifest.</p>
+<p>When using <code>install</code> in Manifest Mode, by default all dependencies of the features listed in [<code>"default-features"</code>][] will be installed. This flag disables that behavior so (without any <code>TODO</code> flags) only the dependencies listed in [<code>"dependencies"</code>][] will be installed.</p>
+<h3 id="--no-downloads"><code>--no-downloads</code></h3>
+<p>When building a package, prevent ports from downloading new assets during the build.</p>
+<p>By default, ports will acquire source code and tools on demand from the internet (subject to <a href="../users/assetcaching.html">Asset Caching</a>). This parameter blocks downloads and restricts ports to only the assets that were previously downloaded and cached on the machine.</p>
+<h3 id="--only-downloads"><code>--only-downloads</code></h3>
+<p>Attempt to download all assets required for an install plan without performing any builds.</p>
+<p>When passed this option, vcpkg will run each build in the plan until it makes its first non-downloading external process call. Most ports perform all downloads before the first external process call (usually to their buildsystem), so this procedure will download all required assets. Ports that do not follow this procedure will not have their assets predownloaded.</p>
+<h3 id="--only-binarycaching"><code>--only-binarycaching</code></h3>
+<p>Refuse to perform any builds. Only restore packages from <a href="../users/binarycaching.html">Binary Caches</a>.</p>
+<p>This flag blocks vcpkg from performing builds on demand and will fail if a package cannot be found in any binary caches.</p>
+<h3 id="--recurse"><code>--recurse</code></h3>
+<p><strong>Classic Mode Only</strong></p>
+<p>Approve an install plan that requires rebuilding packages.</p>
+<p>In order to modify the set of features of an installed package, vcpkg must remove and rebuild that package. Because this has the potential of failing and leaving the install tree with fewer packages than the user started with, the user must approve plans that rebuild packages by passing this flag.</p>
+<h3 id="--x-use-aria2"><code>--x-use-aria2</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p>Use aria2 to perform download tasks.</p>
+<p><a id="write-nuget-packages-config"></a></p>
+<h3 id="--x-write-nuget-packages-config"><code>--x-write-nuget-packages-config</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p>Writes out a NuGet <code>packages.config</code>-formatted file for use with <a href="../users/binarycaching.html">Binary Caching</a>.</p>
+<p>This option can be used in conjunction with <code>--dry-run</code> to obtain the list of NuGet packages required from <a href="../users/binarycaching.html">Binary Caching</a> without building or installing any packages. This enables the NuGet command line to be invoked separately for advanced scenarios, such as using alternate protocols to acquire the <code>.nupkg</code> files.</p>
+<h3 id="--no-print-usage"><code>--no-print-usage</code></h3>
+<p>Suppress generation of usage text printed at the end of installation.</p>
+</main></div><div id="loadFooter"><footer class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" />
+          <img class="" src="/assets/mark/vcpkg.svg" />
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a
+            class="footer-link"
+            href="/en/getting-started.html?platform=windows"
+            >Windows</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started.html?platform=linux"
+            >Linux</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started.html?platform=mac"
+            >Mac</a
+          >
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" />
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group">
+        <div class="footer-description">&#169; Microsoft</div>
+      </div>
+      <div class="footer-info-group">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</footer>
+</div></html>
