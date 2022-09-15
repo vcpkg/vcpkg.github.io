@@ -14,4 +14,5 @@ npm ci
 rm -rf ../en
 node generatePages.js
 node generateDocs.js ../vcpkg/docs
+node generatePackages.js ../vcpkg
 node validateLinks.js
