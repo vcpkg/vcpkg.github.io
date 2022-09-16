@@ -27,10 +27,13 @@ async function main() {
     }
 
     // Redirect from https://vcpkg.io/en/docs/ to https://vcpkg.io/en/docs/README.md
-    await fs.copyFile(templatesDir + "/readme-redirect.html", enDir + "/docs/index.html");
+    const enDocsDir = enDir + "/docs";
+    try { await fs.mkdir(enDocsDir); } catch (e) {}
+    await fs.copyFile(templatesDir + "/readme-redirect.html", enDocsDir + "/index.html");
     // Redirect from https://vcpkg.io/docs/ to https://vcpkg.io/en/docs/README.md
-    await fs.mkdir(rootDir + "/docs");
-    await fs.copyFile(templatesDir + "/readme-redirect.html", rootDir + "/docs/index.html");
+    const docsDir = rootDir + "/docs";
+    try { await fs.mkdir(docsDir); } catch (e) {}
+    await fs.copyFile(templatesDir + "/readme-redirect.html", docsDir + "/index.html");
 }
 
 main();

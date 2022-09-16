@@ -11,7 +11,7 @@ then
     git -C ../vcpkg checkout FETCH_HEAD
 fi
 npm ci
-rm -rf ../en
+rm -rf ../en ../docs
 node generatePages.js
 node generateDocs.js ../vcpkg/docs
 node validateLinks.js
