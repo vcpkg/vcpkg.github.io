@@ -4,6 +4,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const { exit } = require('process');
 const dayjs = require('dayjs');
+const { Octokit } = require("@octokit/rest");
 
 function makeManifestKeyReadable(key) {
     const versionKeys = {
@@ -32,7 +33,7 @@ function makeManifestKeyReadable(key) {
     }).join('-');
 }
 
-async function read_manifest(manifestFile) {
+async function readManifest(manifestFile) {
     let data = await fs.readFile(manifestFile, { encoding: 'utf-8', flag: 'r' });
     let parsed = JSON.parse(data);
     let out = {};
@@ -50,7 +51,7 @@ async function readPorts(vcpkgDir) {
     var results = {};
     for (var ent of dirents) {
         const manifestFile = `${portsDir}/${ent.name}/vcpkg.json`;
-        let temp = await read_manifest(manifestFile, results);
+        let temp = await readManifest(manifestFile, results);
         if (!temp) {
             console.log('Failed to read ' + manifestFile);
             continue;
@@ -103,7 +104,30 @@ async function readBaseline(vcpkgDir) {
     return baseline;
 }
 
-function mergeDataSources(portsData, baselineData, githubData) {
+async function getGitHubStars(portsData, githubToken) {
+    const githubUrl = 'https://github.com/';
+    const regex = /^(?<owner>[a-zA-Z\d][a-zA-Z\d\.\-\_]+)\/(?<repo>[a-zA-Z\d][a-zA-Z\d\.\-\_]+).*$/;
+
+    const octokit = new Octokit({ auth: githubToken });
+    for (var key of Object.keys(portsData)) {
+        console.log(`Generating data for ${key}`);
+        let port = portsData[key];
+        if ('Homepage' in port && port['Homepage'].startsWith(githubUrl)) {
+            const url = port['Homepage'].substr(githubUrl.length);
+            const [_, owner, repo] = regex.exec(url) ?? [];
+            try {
+                const response = await octokit.rest.repos.get({ owner, repo });
+                if (response.status != 200) continue;
+                const stars = response.data.stargazers_count;
+                port['Stars'] = stars;
+            } catch (err) {
+                console.log(`Failed to get stars for ${port['Homepage']}`);
+            }
+        }
+    }
+}
+
+function mergeDataSources(portsData, baselineData) {
     const allTriplets = [
         'arm-uwp',
         'arm64-windows',
@@ -135,7 +159,7 @@ function mergeDataSources(portsData, baselineData, githubData) {
     }
 }
 
-async function main(vcpkgDir, destDir) {
+async function main(vcpkgDir, destDir, githubToken) {
     let outputJson = {};
 
     let today = dayjs();
@@ -143,8 +167,10 @@ async function main(vcpkgDir, destDir) {
 
     let portsData = await readPorts(vcpkgDir);
     let baselineData = await readBaseline(vcpkgDir);
-    let githubData = {};
-    mergeDataSources(portsData, baselineData, githubData);
+    if (githubToken.length > 0) {
+        await getGitHubStars(portsData, githubToken);
+    }
+    mergeDataSources(portsData, baselineData);
 
     let mergedData = Object.values(portsData);
     outputJson['Size'] = mergedData.length;
@@ -154,11 +180,14 @@ async function main(vcpkgDir, destDir) {
 
 
 // arg processing and main loop
-if (process.argv.length != 3) {
-    console.log("Usage: node generatePackages.js <path/to/source/docs>")
+if (process.argv.length < 3) {
+    console.log("Usage: node generatePackages.js <path/to/source/docs> [GITHUB_PAT]");
     exit(1);
 }
 const vcpkgDir = process.argv[2];
-// const vcpkgDir = '../vcpkg';
 const destDir = path.dirname(__dirname);
-main(vcpkgDir, destDir);
+let githubToken = '';
+if (process.argv.length >= 4) {
+    githubToken = process.argv[3];
+}
+main(vcpkgDir, destDir, githubToken);
