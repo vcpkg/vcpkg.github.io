@@ -18,11 +18,11 @@ jobs:
           restore-keys: ${{ runner.os }}-node-
 
       - name: Rebuild and validate website
-        run: scripts/rebuild.sh ${{ secrets.GITHUB_TOKEN }}
+        run: scripts/rebuild.sh
 
       - name: Check for differences
         run: |
-          if ! git diff --quiet -- . ':(exclude)output.json'; then
+          if ! git diff --quiet -- . ':(exclude)stars.json'; then
             echo "::error ::Detected changes when regenerating website."
             git diff --stat
             exit 1

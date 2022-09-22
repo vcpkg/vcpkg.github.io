@@ -2,11 +2,6 @@
 
 set -e
 
-if [[ -z $1 ]]
-then
-    echo "Skipping GitHub stars"
-fi
-
 cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")"
 if [ ! -e ../vcpkg ]
 then
@@ -15,9 +10,12 @@ then
     git -C ../vcpkg fetch --depth 1 https://github.com/Microsoft/vcpkg $vcpkg_commit
     git -C ../vcpkg checkout FETCH_HEAD
 fi
+
 npm ci
 rm -rf ../en
 node generatePages.js
 node generateDocs.js ../vcpkg/docs
-node generatePackages.js ../vcpkg $1
 node validateLinks.js
+node generateGitHubStars.js ../vcpkg $1
+node generatePackages.js ../vcpkg
+
