@@ -19,7 +19,7 @@ async function getGitHubStars(octokit, url) {
 
     const response = await octokit.rest.repos.get({ owner, repo });
     if (response.status != 200) {
-        console.log(`Failed to get stars for ${url}\n${response.body}`);
+        console.log(`Failed to get stars for ${url}`);
         return 0;
     }
 

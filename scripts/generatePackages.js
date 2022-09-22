@@ -135,6 +135,8 @@ function mergeDataSources(portsData, baselineData, githubData) {
             portsData[port]['Features'] = [];
         }
 
+        portsData[port]['Stars'] = githubData[port] ?? 0;
+
         // website expects all known triplets to be listed
         for (let triplet of allTriplets) {
             if (port in baselineData && triplet in baselineData[port]) {
@@ -144,8 +146,6 @@ function mergeDataSources(portsData, baselineData, githubData) {
                 portsData[port][triplet] = 'pass';
             }
         }
-
-        portsData[port]['Stars'] = githubData[port] ?? 0;
     }
 }
 
