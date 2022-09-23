@@ -22,7 +22,7 @@ jobs:
 
       - name: Check for differences
         run: |
-          if ! git diff --quiet -- . ':(exclude)stars.json'; then
+          if ! git diff --quiet; then
             echo "::error ::Detected changes when regenerating website."
             git diff --stat
             exit 1
