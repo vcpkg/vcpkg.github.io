@@ -35,7 +35,7 @@ async function get_pages_recursive(docs_set, path) {
  * @returns {{links: [string,string][], fragments: {string}}}
  */
 async function load_page_info(page, relative_path) {
-    const ret = { links: [], fragments: {} };
+    const ret = { links: [], fragments: {}, other: [] };
     const content = await fs.readFile(page, 'utf-8');
     for (const match of content.matchAll(/ href="([^"?#]*)(#([^"?]*))?([^"]*)?"/g)) {
         if (match[1].length == 0) {
@@ -72,12 +72,15 @@ async function load_page_info(page, relative_path) {
     for (const match of content.matchAll(/ name="([^"]*)"/g)) {
         ret.fragments[match[1]] = true;
     }
+    for (const match of content.matchAll(/.{0,30}\]\[.{0,30}/g)) {
+        ret.other.push(`Incorrect markdown link: ${match[0]}`);
+    }
     return ret;
 }
 /**
  * @param {string} filepath
  * @param {string} page
- * @param {{[index: string]: {links: [string,string][], fragments: {string}}}} pages_info
+ * @param {{[index: string]: {links: [string,string][], fragments: {string}, other: [string]}}} pages_info
  * @returns {boolean} true if errors were found
  */
 function validate_page(page, pages_info) {
@@ -92,6 +95,10 @@ function validate_page(page, pages_info) {
             console.log(`::error file=${relpath}::Broken fragment link from ${relpath} -> ${link[0]}#${link[1]}`);
             rc = true;
         }
+    }
+    for(const other of page_info.other) {
+        console.log(`::error file=${relpath}::${other}`);
+        rc = true;
     }
     return rc;
 }

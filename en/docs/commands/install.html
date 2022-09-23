@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -411,80 +427,97 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_cmake_configure">vcpkg_cmake_configure</h1>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.md">vcpkg repo</a>.</p>
-<p>Configure a CMake buildsystem.</p>
-<pre><code class="cmake language-cmake">vcpkg_cmake_configure(
-    SOURCE_PATH &lt;source-path&gt;
-    [LOGFILE_BASE &lt;logname-base&gt;]
-    [DISABLE_PARALLEL_CONFIGURE]
-    [NO_CHARSET_FLAG]
-    [WINDOWS_USE_MSBUILD]
-    [GENERATOR &lt;generator&gt;]
-    [OPTIONS
-        &lt;configure-setting&gt;...]
-    [OPTIONS_RELEASE
-        &lt;configure-setting&gt;...]
-    [OPTIONS_DEBUG
-        &lt;configure-setting&gt;...]
-    [MAYBE_UNUSED_VARIABLES
-        &lt;option-name&gt;...]
-)</code></pre>
-<p><code>vcpkg_cmake_configure</code> configures a CMake build system for use with
-<code>vcpkg_cmake_buildsystem_build</code> and <code>vcpkg_cmake_buildsystem_install</code>.
-<code>source-path</code> is where the source is located; by convention,
-this is usually <code>${SOURCE_PATH}</code>, which is set by one of the <code>vcpkg_from_*</code> functions.
-This function configures the build system for both Debug and Release builds by default,
-assuming that <code>VCPKG_BUILD_TYPE</code> is not set; if it is, then it will only configure for
-that build type.</p>
-<p>Use the <code>OPTIONS</code> argument to set the configure settings for both release and debug,
-and use <code>OPTIONS_RELEASE</code> and <code>OPTIONS_DEBUG</code> to set the configure settings for
-release only and debug only respectively.</p>
-<p>By default, when possible, <code>vcpkg_cmake_configure</code> uses <a href="https://ninja-build.org/">ninja-build</a>
-as its build system. If the <code>WINDOWS_USE_MSBUILD</code> argument is passed, then
-<code>vcpkg_cmake_configure</code> will use a Visual Studio generator on Windows;
-on every other platform, <code>vcpkg_cmake_configure</code> just uses Ninja.</p>
-<p>Additionally, one may pass the specific generator a port should use with <code>GENERATOR</code>.
-This is useful if some project-specific buildsystem
-has been wrapped in a CMake build system that doesn't perform an actual build.
-If used for this purpose, it should be set to <code>"NMake Makefiles"</code>.
-<code>vcpkg_cmake_buildsystem_build</code> and <code>install</code> do not support this being set to anything
-except for NMake.</p>
-<p>For libraries which cannot be configured in parallel,
-pass the <code>DISABLE_PARALLEL_CONFIGURE</code> flag. This is needed, for example,
-if the library's build system writes back into the source directory during configure.
-This also disables the <code>CMAKE_DISABLE_SOURCE_CHANGES</code> option.</p>
-<p>By default, this function adds flags to <code>CMAKE_C_FLAGS</code> and <code>CMAKE_CXX_FLAGS</code>
-which set the default character set to utf-8 for MSVC.
-If the library sets its own code page, pass the <code>NO_CHARSET_FLAG</code> option.</p>
-<p>This function makes certain that all options passed in are used by the
-underlying CMake build system. If there are options that might be unused,
-perhaps on certain platforms, pass those variable names to
-<code>MAYBE_UNUSED_VARIABLES</code>. For example:</p>
-<pre><code class="cmake language-cmake">vcpkg_cmake_configure(
-    ...
-    OPTIONS
-        -DBUILD_EXAMPLE=OFF
-    ...
-    MAYBE_UNUSED_VARIABLES
-        BUILD_EXAMPLE
-)</code></pre>
-<p><code>LOGFILE_BASE</code> is used to set the base of the logfile names;
-by default, this is <code>config</code>, and thus the logfiles end up being something like
-<code>config-x86-windows-dbg.log</code>. You can set it to anything you like;
-if you set it to <code>config-the-first</code>,
-you'll get something like <code>config-the-first-x86-windows.dbg.log</code>.</p>
-<h2 id="notes">Notes</h2>
-<p>This command supplies many common arguments to CMake. To see the full list, examine the source.</p>
-<h2 id="examples">Examples</h2>
-<ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/zlib/portfile.cmake">zlib</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/cpprestsdk/portfile.cmake">cpprestsdk</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/poco/portfile.cmake">poco</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/opencv4/portfile.cmake">opencv4</a></li>
-</ul>
-<h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/vcpkg-cmake/vcpkg_cmake_configure.cmake">ports/vcpkg-cmake/vcpkg_cmake_configure.cmake</a></p>
+<h1 id="vcpkg-install">vcpkg install</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/commands/install.md">GitHub</a>.</strong></p>
+<h2 id="synopsis">Synopsis</h2>
+<p><strong>Classic Mode</strong></p>
+<pre><code class="no-highlight language-no-highlight">vcpkg install [options] &lt;package&gt;...</code></pre>
+<p><strong>Manifest Mode</strong></p>
+<pre><code class="no-highlight language-no-highlight">vcpkg install [options]</code></pre>
+<h2 id="description">Description</h2>
+<p>Build and install port packages.</p>
+<h3 id="classic-mode">Classic Mode</h3>
+<p>In Classic Mode, this verb adds port packages to the existing set in the <a href="common-options.html#install-root">installed directory</a> (defaults to <code>installed/</code> under the vcpkg root). This can require removing and rebuilding existing packages, which can fail.</p>
+<p><a id="package-syntax"></a></p>
+<p><strong>Package Syntax</strong></p>
+<pre><code>portname[feature1,feature2]:triplet</code></pre>
+<p>Package references without a triplet are automatically qualified by the <a href="common-options.html#triplet">default target triplet</a>. Package references that do not explicitly list <code>core</code> are considered to imply all default features.</p>
+<h3 id="manifest-mode">Manifest Mode</h3>
+<p>In <a href="../users/manifests.html">Manifest Mode</a>, this verb sets the <a href="common-options.html#install-root">installed directory</a> to the state specified by the <code>vcpkg.json</code> manifest file, adding, removing, or rebuilding packages as needed.</p>
+<h2 id="options">Options</h2>
+<p>All vcpkg commands support a set of <a href="common-options.html">common options</a>.</p>
+<h3 id="--allow-unsupported"><code>--allow-unsupported</code></h3>
+<p>Instead of stopping on an unsupported port, continue with a warning.</p>
+<p>By default, vcpkg refuses to execute an install plan containing a port installation for a triplet outside its <a href="../users/manifests.html#supports"><code>"supports"</code></a> clause. The <a href="../users/manifests.html#supports"><code>"supports"</code></a> clause of a package describes the full set of platforms a package is expected to be buildable on. This flag instructs vcpkg to warn that the build is expected to fail instead of stopping.</p>
+<h3 id="--clean-after-build"><code>--clean-after-build</code></h3>
+<p>Clean buildtrees, packages, and downloads after building each package.</p>
+<p>This option has the same effect as passing <a href="#clean-buildtrees-after-build"><code>--clean-buildtrees-after-build</code></a>, <a href="#clean-downloads-after-build"><code>--clean-downloads-after-build</code></a>, and <a href="#clean-packages-after-build"><code>--clean-packages-after-build</code></a>.</p>
+<p><a id="clean-buildtrees-after-build"></a></p>
+<h3 id="--clean-buildtrees-after-build"><code>--clean-buildtrees-after-build</code></h3>
+<p>Clean all subdirectories from the buildtrees temporary subfolder after building each package.</p>
+<p>All top-level files in the buildtrees subfolder (e.g. <code>buildtrees/zlib/config-x64-windows-out.log</code>) will be kept. All subdirectories will be deleted.</p>
+<p><a id="clean-downloads-after-build"></a></p>
+<h3 id="--clean-downloads-after-build"><code>--clean-downloads-after-build</code></h3>
+<p>Clean all unextracted assets from the <code>downloads/</code> folder after building each package.</p>
+<p>All top level files in the <code>downloads/</code> folder will be deleted. Extracted tools will be kept.</p>
+<p><a id="clean-packages-after-build"></a></p>
+<h3 id="--clean-packages-after-build"><code>--clean-packages-after-build</code></h3>
+<p>Clean the packages temporary subfolder after building each package.</p>
+<p>The packages subfolder for the built package (for example, <code>packages/zlib_x64-windows</code>) will be deleted after installation.</p>
+<h3 id="--dry-run"><code>--dry-run</code></h3>
+<p>Print the install plan, but do not remove or install any packages.</p>
+<p>The install plan lists all packages and features that will be installed, as well as any other packages that need to be removed and rebuilt.</p>
+<p><a id="editable"></a></p>
+<h3 id="--editable"><code>--editable</code></h3>
+<p><strong>Classic Mode Only</strong></p>
+<p>Perform editable builds for all directly referenced packages on the command line.</p>
+<p>When vcpkg builds ports, it purges and re-extracts the source code each time to ensure inputs are accurately. This is necessary for <a href="../users/manifests.html">Manifest Mode</a> to accurately update what is installed and <a href="../users/binarycaching.html">Binary Caching</a> to ensure cached content is correct.</p>
+<p>Passing the <code>--editable</code> flag disables this behavior, preserving edits to the extracted sources in the <code>buildtrees/</code> folder. This helps develop patches quickly by avoiding the need to write a file on each change.</p>
+<p>Sources extracted during an editable build do not have a <code>.clean/</code> suffix on the directory name and will not be cleared by subsequent non-editable builds.</p>
+<h3 id="--enforce-port-checks"><code>--enforce-port-checks</code></h3>
+<p>Fail install if a port has detected problems or attempts to use a deprecated feature.</p>
+<p>By default, vcpkg will run several checks on built packages and emit warnings if any issues are detected. This flag upgrades those warnings to an error.</p>
+<p><a name="feature" class="docs-anchor"></a></p>
+<h3 id="--x-featurefeature"><code>--x-feature=&lt;feature&gt;</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p><strong><a href="../users/manifests.html">Manifest Mode</a> Only</strong></p>
+<p>Specify an additional <a href="../users/manifests.html#features">feature</a> from the <code>vcpkg.json</code> to install dependencies for.</p>
+<p>By default, only <a href="../users/manifests.html#dependencies"><code>"dependencies"</code></a> and the dependencies of the <a href="../users/manifests.html#default-features"><code>"default-features"</code></a> will be installed.</p>
+<h3 id="--head"><code>--head</code></h3>
+<p><strong>Classic Mode Only</strong></p>
+<p>Request all packages explicitly referenced on the command line to fetch the latest sources available when building.</p>
+<p>This flag is only intended for temporary testing and is not intended for production or long-term use. This disables <a href="../users/binarycaching.html">Binary Caching</a> for all explicitly referenced packages and their dependents because vcpkg cannot accurately track all inputs.</p>
+<h3 id="--keep-going"><code>--keep-going</code></h3>
+<p>Continue the install plan after the first failure.</p>
+<p>By default, vcpkg will stop at the first package build failure. This flag instructs vcpkg to continue building and installing other parts of the install plan that don't depend upon the failed package.</p>
+<h3 id="--x-no-default-features"><code>--x-no-default-features</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p><strong><a href="../users/manifests.html">Manifest Mode</a> Only</strong></p>
+<p>Don't install the default features from the top-level manifest.</p>
+<p>When using <code>install</code> in Manifest Mode, by default all dependencies of the features listed in <a href="../users/manifests.html#default-features"><code>"default-features"</code></a> will be installed. This flag disables that behavior so only features explicitly enabled by <a href="#feature"><code>--x-feature</code></a> will be installed.</p>
+<h3 id="--no-downloads"><code>--no-downloads</code></h3>
+<p>When building a package, prevent ports from downloading new assets during the build.</p>
+<p>By default, ports will acquire source code and tools on demand from the internet (subject to <a href="../users/assetcaching.html">Asset Caching</a>). This parameter blocks downloads and restricts ports to only the assets that were previously downloaded and cached on the machine.</p>
+<h3 id="--only-downloads"><code>--only-downloads</code></h3>
+<p>Attempt to download all assets required for an install plan without performing any builds.</p>
+<p>When passed this option, vcpkg will run each build in the plan until it makes its first non-downloading external process call. Most ports perform all downloads before the first external process call (usually to their buildsystem), so this procedure will download all required assets. Ports that do not follow this procedure will not have their assets predownloaded.</p>
+<h3 id="--only-binarycaching"><code>--only-binarycaching</code></h3>
+<p>Refuse to perform any builds. Only restore packages from <a href="../users/binarycaching.html">Binary Caches</a>.</p>
+<p>This flag blocks vcpkg from performing builds on demand and will fail if a package cannot be found in any binary caches.</p>
+<h3 id="--recurse"><code>--recurse</code></h3>
+<p><strong>Classic Mode Only</strong></p>
+<p>Approve an install plan that requires rebuilding packages.</p>
+<p>In order to modify the set of features of an installed package, vcpkg must remove and rebuild that package. Because this has the potential of failing and leaving the install tree with fewer packages than the user started with, the user must approve plans that rebuild packages by passing this flag.</p>
+<h3 id="--x-use-aria2"><code>--x-use-aria2</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p>Use aria2 to perform download tasks.</p>
+<p><a id="write-nuget-packages-config"></a></p>
+<h3 id="--x-write-nuget-packages-config"><code>--x-write-nuget-packages-config</code></h3>
+<p><strong>Experimental and may change or be removed at any time</strong></p>
+<p>Writes out a NuGet <code>packages.config</code>-formatted file for use with <a href="../users/binarycaching.html">Binary Caching</a>.</p>
+<p>This option can be used in conjunction with <code>--dry-run</code> to obtain the list of NuGet packages required from <a href="../users/binarycaching.html">Binary Caching</a> without building or installing any packages. This enables the NuGet command line to be invoked separately for advanced scenarios, such as using alternate protocols to acquire the <code>.nupkg</code> files.</p>
+<h3 id="--no-print-usage"><code>--no-print-usage</code></h3>
+<p>Suppress generation of usage text printed at the end of installation.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">
