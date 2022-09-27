@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -413,28 +429,27 @@
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
 <h1 id="vcpkg_extract_source_archive">vcpkg_extract_source_archive</h1>
 <p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_extract_source_archive.md">vcpkg repo</a>.</p>
-<p>Extract an archive into the source directory.</p>
+<p>Extract an archive.</p>
 <h2 id="usage">Usage</h2>
-<p>There are two "overloads" of this function. The first is deprecated:</p>
-<pre><code class="cmake language-cmake">vcpkg_extract_source_archive(&lt;${ARCHIVE}&gt; [&lt;${TARGET_DIRECTORY}&gt;])</code></pre>
-<p>This overload should not be used.</p>
-<p>The latter is suggested to use for all future <code>vcpkg_extract_source_archive</code>s.</p>
-<pre><code class="cmake language-cmake">vcpkg_extract_source_archive(&lt;out-var&gt;
+<pre><code class="cmake language-cmake">vcpkg_extract_source_archive(
+    &lt;out-var&gt;
     ARCHIVE &lt;path&gt;
     [NO_REMOVE_ONE_LEVEL]
     [SKIP_PATCH_CHECK]
     [PATCHES &lt;patch&gt;...]
+    [REF &lt;ref&gt;]
     [SOURCE_BASE &lt;base&gt;]
     [BASE_DIRECTORY &lt;relative-path&gt; | WORKING_DIRECTORY &lt;absolute-path&gt;]
 )</code></pre>
-<p><code>vcpkg_extract_source_archive</code> takes an archive and extracts it.
-It replaces existing uses of <code>vcpkg_extract_source_archive_ex</code>.
-The simplest use of it is:</p>
-<pre><code class="cmake language-cmake">vcpkg_download_distfile(archive ...)
-vcpkg_extract_source_archive(source_path ARCHIVE "${archive}")</code></pre>
-<p>The general expectation is that an archives are laid out with a base directory,
-and all the actual files underneath that directory; in other words, if you
-extract the archive, you'll get something that looks like:</p>
+<h2 id="parameters">Parameters</h2>
+<p><a id="out-var"></a></p>
+<h3 id="out-var"><code>&lt;out-var&gt;</code></h3>
+<p>Name of the variable to set with the directory containing the extracted contents.</p>
+<h3 id="archive">ARCHIVE</h3>
+<p>Full path to the archive to extract.</p>
+<h3 id="no_remove_one_level">NO_REMOVE_ONE_LEVEL</h3>
+<p>Skip removing the top level directory of the archive.</p>
+<p>Most archives contain a single top-level directory, such as:</p>
 <pre><code>zlib-1.2.11/
     doc/
         ...
@@ -445,33 +460,71 @@ extract the archive, you'll get something that looks like:</p>
     README
     zlib.h
     ...</code></pre>
-<p><code>vcpkg_extract_source_archive</code> automatically removes this directory,
-and gives you the items under it directly. However, this only works
-when there is exactly one item in the top level of an archive.
-Otherwise, you'll have to pass the <code>NO_REMOVE_ONE_LEVEL</code> argument to
-prevent <code>vcpkg_extract_source_archive</code> from performing this transformation.</p>
-<p>If the source needs to be patched in some way, the <code>PATCHES</code> argument
-allows one to do this, just like other <code>vcpkg_from_*</code> functions.
-Additionally, the <code>SKIP_PATCH_CHECK</code> is provided for <code>--head</code> mode -
-this allows patches to fail to apply silently.
-This argument should <em>only</em> be used when installing a <code>--head</code> library,
-since otherwise we want a patch failing to appply to be a hard error.</p>
-<p><code>vcpkg_extract_source_archive</code> extracts the files to
-<code>${CURRENT_BUILDTREES_DIR}/&lt;base-directory&gt;/&lt;source-base&gt;-&lt;hash&gt;.clean</code>.
-When in editable mode, no <code>.clean</code> is appended,
-to allow for a user to modify the sources.
-<code>base-directory</code> defaults to <code>src</code>,
-and <code>source-base</code> defaults to the stem of <code>&lt;archive&gt;</code>.
-You can change these via the <code>BASE_DIRECTORY</code> and <code>SOURCE_BASE</code> arguments
-respectively.
-If you need to extract to a location that is not based in <code>CURRENT_BUILDTREES_DIR</code>,
-you can use the <code>WORKING_DIRECTORY</code> argument to do the same.</p>
+<p>By default, <code>vcpkg_extract_source_archive</code> removes this directory and moves all contents into the directory returned in <code>&lt;out-var&gt;</code>. If there is no top-level directory, it is an error.</p>
+<p>With this flag, the top-level directory will be preserved and it is not an error to not have one.</p>
+<h3 id="skip_patch_check">SKIP_PATCH_CHECK</h3>
+<p>Silence and ignore errors when applying patches.</p>
+<p>This option should only be passed when operating in an unstable mode like <code>--head</code>. If the sources are pinned, failing to apply a patch should be considered a fatal error.</p>
+<h3 id="patches">PATCHES</h3>
+<p>List of patches to apply to the extracted source.</p>
+<p>Patches will be applied in order, after any top-level directories are removed (see <a href="#no_remove_one_level"><code>NO_REMOVE_ONE_LEVEL</code></a>). Relative paths are interpreted relative to the current port directory.</p>
+<p>If a patch should be conditionally applied based on target information, you can construct a list and splat it.</p>
+<pre><code class="cmake language-cmake">set(patches "")
+if(VCPKG_TARGET_IS_WINDOWS)
+    list(APPEND patches only-windows.patch)
+endif()
+vcpkg_extract_source_archive(src
+    ARCHIVE "${archive}"
+    PATCHES
+        always-applied.patch
+        ${patches}
+)</code></pre>
+<h3 id="ref">REF</h3>
+<p>Pretty name for the extracted directory.</p>
+<p>Forward slashes (<code>/</code>) will be replaced with <code>-</code>. Otherwise identical to <a href="#source_base"><code>SOURCE_BASE</code></a>.</p>
+<p>See <a href="#working_directory"><code>WORKING_DIRECTORY</code></a> for more details.</p>
+<h3 id="source_base">SOURCE_BASE</h3>
+<p>Pretty name for the extracted directory.</p>
+<p>Must not contain path separators (<code>/</code> or <code>\\</code>).</p>
+<p>See <a href="#working_directory"><code>WORKING_DIRECTORY</code></a> for more details.</p>
+<h3 id="base_directory">BASE_DIRECTORY</h3>
+<p>Root subfolder for the extracted directory.</p>
+<p>Defaults to <code>src</code>. Must be a relative path.</p>
+<p>See <a href="#working_directory"><code>WORKING_DIRECTORY</code></a> for more details.</p>
+<h3 id="working_directory">WORKING_DIRECTORY</h3>
+<p>Root folder for the extracted directory.</p>
+<p>Defaults to <code>${CURRENT_BUILDTREES_DIR}/&lt;BASE_DIRECTORY&gt;</code>. Must be an absolute path.</p>
+<p><code>vcpkg_extract_source_archive</code> extracts the archive into <code>&lt;WORKING_DIRECTORY&gt;/&lt;SOURCE_BASE&gt;-&lt;short-hash&gt;.clean</code>. If the folder exists, it is deleted before extraction. Without specifying <code>REF</code>, <code>SOURCE_BASE</code>, <code>BASE_DIRECTORY</code>, or <code>WORKING_DIRECTORY</code>, this will default to <code>${CURRENT_BUILDTREES_DIR}/src/&lt;archive-stem&gt;-&lt;short-hash&gt;.clean</code>.</p>
+<p>In <a href="../commands/install.html#editable"><code>--editable</code></a> mode:</p>
+<ol>
+<li>No <code>.clean</code> suffix is added to the extracted folder</li>
+<li>The extracted folder is not deleted. If it exists, <code>vcpkg_extract_source_archive</code> does nothing.</li>
+</ol>
 <h2 id="examples">Examples</h2>
+<pre><code class="cmake language-cmake">vcpkg_download_distfile(
+    archive # "archive" is set to the path to the downloaded file
+    URLS "https://nmap.org/dist/nmap-7.70.tar.bz2"
+    FILENAME "nmap-7.70.tar.bz2"
+    SHA512 084c148b022ff6550e269d976d0077f7932a10e2ef218236fe13aa3a70b4eb6506df03329868fc68cb3ce78e4360b200f5a7a491d3145028fed679ef1c9ecae5
+)
+vcpkg_extract_source_archive(
+    src # "src" is set to the path to the extracted files
+    ARCHIVE "${archive}"
+    REF 7.70
+    PATCHES 0001-disable-werror.patch
+)
+vcpkg_cmake_configure(SOURCE_PATH "${src}")</code></pre>
 <ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/libraw/portfile.cmake">libraw</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/protobuf/portfile.cmake">protobuf</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/msgpack/portfile.cmake">msgpack</a></li>
+<li><a href="https://github.com/microsoft/vcpkg/search?q=vcpkg_extract_source_archive+path%3A%2Fports">GitHub Search</a></li>
 </ul>
+<h2 id="remarks">Remarks</h2>
+<p><strong>Deprecated Syntax</strong></p>
+<p>This command also supports a deprecated overload:</p>
+<pre><code class="cmake language-cmake">vcpkg_extract_source_archive(&lt;archive&gt; [&lt;working_directory&gt;])</code></pre>
+<p>The deprecated overload extracts <code>&lt;archive&gt;</code> into <code>${working_directory}/&lt;archive-filename&gt;.extracted</code> if the target does not exist. This incorrect behavior allows patches and other modifications to leak between different builds, resulting in hard-to-debug errors.</p>
+<p>All uses of the deprecated overload should be replaced with the syntax in <a href="#usage">Usage</a> above by adding an explicit <a href="#archive"><code>ARCHIVE</code></a> parameter and replacing direct references to the extracted path with uses of the <a href="#out-var"><code>&lt;out-var&gt;</code></a>.</p>
+<p><strong>Replacement</strong></p>
+<p>This command replaces <a href="vcpkg_extract_source_archive_ex.html"><code>vcpkg_extract_source_archive_ex()</code></a>.</p>
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_extract_source_archive.cmake">scripts/cmake/vcpkg_extract_source_archive.cmake</a></p>
 </main></div><div id="loadFooter"><footer class="footer">

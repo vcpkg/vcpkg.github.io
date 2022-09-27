@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -417,7 +433,8 @@
 If you want to contribute but don't have a particular library in mind then take a look at the list
 of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+label%3Acategory%3Anew-port">new port requests</a>.</p>
 <h2 id="can-vcpkg-create-pre-built-binary-packages-what-is-the-binary-format-used-by-vcpkg">Can vcpkg create pre-built binary packages? What is the binary format used by vcpkg?</h2>
-<p>Yes! See the <a href="../users/buildsystems/export-command.html"><code>export</code> command</a>.</p>
+<p>Yes! See the <a href="../users/buildsystems/export-command.html"><code>export</code> command</a> if you wish to produce binaries for exporting into other environments.</p>
+<p>Alternatively, if your goal is to preserve binaries produced by <code>vcpkg install</code> operations for later re-use, see the <a href="../users/binarycaching.html">Binary Caching feature</a></p>
 <h2 id="how-do-i-update-libraries">How do I update libraries?</h2>
 <p>The <code>vcpkg update</code> command lists all packages which are out-of-sync with your current portfiles. To update a package, follow the instructions in the command.</p>
 <h2 id="how-do-i-get-more-libraries">How do I get more libraries?</h2>
@@ -425,13 +442,23 @@ of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+lab
 <p>We recommend cloning directly from <a href="https://github.com/microsoft/vcpkg">GitHub</a> and using <code>git pull</code> to update the list of portfiles. Once you've updated your portfiles, <code>vcpkg update</code> will indicate any installed libraries that are now out of date.</p>
 <h2 id="can-i-build-a-private-library-with-this-tool">Can I build a private library with this tool?</h2>
 <p>Yes. Follow <a href="../examples/packaging-zipfiles.html">our packaging zlib Example</a> for creating a portfile using a fake URL. Then, either pre-seed the <code>downloads\</code> folder with a zip containing your private sources or replace the normal calls to <code>vcpkg_download_distfile</code> and <code>vcpkg_extract_source_archive</code> with functions that unpack your source code.</p>
+<p>You can take this further by publishing your private libraries into a registry. See the article on <a href="../maintainers/registries.html">Creating Registries</a>. A registry is a catalog of ports, similar to the one provided with vcpkg that contains open source libraries.  </p>
 <h2 id="can-i-use-a-prebuilt-private-library-with-this-tool">Can I use a prebuilt private library with this tool?</h2>
 <p>Yes. The <code>portfile.cmake</code> for a library is fundamentally a script that places the headers and binaries into the correct arrangement in the <code>${CURRENT_PACKAGES_DIR}</code>, so to pull in prebuilt binaries you can write a portfile which directly downloads and arranges the files.</p>
 <p>To see an example of this, look at <a href="https://github.com/microsoft/vcpkg/blob/master/ports/opengl/portfile.cmake"><code>ports\opengl\portfile.cmake</code></a> which simply copies files out of the Windows SDK.</p>
-<h2 id="which-platforms-i-can-target-with-vcpkg">Which platforms I can target with vcpkg?</h2>
-<p>We currently target Windows Desktop (x86 and x64) as well as the Universal Windows Platform (x86, x64, and ARM). See <code>vcpkg help triplet</code> for the current list.</p>
-<h2 id="does-vcpkg-run-on-linuxosx">Does vcpkg run on Linux/OSX?</h2>
-<p>Yes! We continuously test on OSX and Ubuntu 16.04, however we know users have been successful with Arch, Fedora, and FreeBSD. If you have trouble with your favorite Linux distribution, let us know in an issue and we'd be happy to help!</p>
+<h2 id="which-platforms-can-i-target-with-vcpkg">Which platforms can I target with vcpkg?</h2>
+<p>Our built-in, CI-tested triplets are:</p>
+<ul>
+<li>Windows Desktop (x86, x64, x64-static, arm64)</li>
+<li>Universal Windows Platform (x64, and ARM)</li>
+<li>Mac OS X (x64-static)</li>
+<li>Linux (x64-static)</li>
+</ul>
+<p>However, there is an even larger number of community triplets available with more platforms and architectures, including for iOS, Android, MinGW, WebAssembly, freeBSD, and openBSD.</p>
+<p>You can also define your own triplets depending on your needs.</p>
+<p>See <code>vcpkg help triplet</code> for the current list.</p>
+<h2 id="does-vcpkg-run-on-linuxos-x">Does vcpkg run on Linux/OS X?</h2>
+<p>Yes! We continuously test on OS X and Ubuntu 16.04, however we know users have been successful with Arch, Fedora, and FreeBSD. If you have trouble with your favorite Linux distribution, let us know in an issue and we'd be happy to help!</p>
 <h2 id="how-do-i-update-vcpkg">How do I update vcpkg?</h2>
 <p>Execute <code>git pull</code> to get the latest sources, then run <code>bootstrap-vcpkg.bat</code> (Windows) or <code>./bootstrap-vcpkg.sh</code> (Unix) to update vcpkg.</p>
 <h2 id="how-do-i-use-different-versions-of-a-library-on-one-machine">How do I use different versions of a library on one machine?</h2>
@@ -465,7 +492,7 @@ of <a href="https://github.com/Microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+lab
 <p>vcpkg uses CMake internally as a build scripting language. This is because CMake is already an extremely common build system for cross-platform open source libraries and is becoming very popular for C++ projects in general. It is easy to acquire on Windows, does not require system-wide installation, and legible for unfamiliar users.</p>
 <h2 id="will-vcpkg-support-downloading-compiled-binaries-from-a-public-or-private-server">Will vcpkg support downloading compiled binaries from a public or private server?</h2>
 <p>We would like to eventually support downloading precompiled binaries, similar to other system package managers.</p>
-<p>In a corporate scenario, we currently recommend building the libraries once and distributing the entire vcpkg root directory to everyone else on the project through some raw file transport such as a network share or HTTP host. See the <a href="../users/buildsystems/export-command.html"><code>export</code> command</a>.</p>
+<p>In a corporate scenario, we currently recommend building the libraries once and using the <a href="../users/binarycaching.html">Binary Caching</a> feature to re-use binaries across different machines and for local development vs. CI scenarios. </p>
 <h2 id="what-visual-c-toolsets-are-supported">What Visual C++ toolsets are supported?</h2>
 <p>We support Visual Studio 2015 Update 3 and above.</p>
 <h2 id="why-does-visual-studio-not-use-my-libraries-with-user-wide-integration-enabled">Why does Visual Studio not use my libraries with user-wide integration enabled?</h2>
