@@ -1,3 +1,4 @@
+// @ts-check
 'use strict';
 
 const fs = require('fs/promises');
@@ -30,12 +31,15 @@ async function get_pages_recursive(docs_set, path) {
     }
 }
 
+/** @typedef {{links: [string,string][], fragments: {[key: string]: boolean}, errors: string[]}} PageInfo */
+
 /**
  * @param {string} page
- * @returns {{links: [string,string][], fragments: {string}}}
+ * @returns {Promise<PageInfo>}
  */
 async function load_page_info(page, relative_path) {
-    const ret = { links: [], fragments: {}, other: [] };
+    /** @type {PageInfo} */
+    const ret = { links: [], fragments: {}, errors: [] };
     const content = await fs.readFile(page, 'utf-8');
     for (const match of content.matchAll(/ href="([^"?#]*)(#([^"?]*))?([^"]*)?"/g)) {
         if (match[1].length == 0) {
@@ -73,14 +77,13 @@ async function load_page_info(page, relative_path) {
         ret.fragments[match[1]] = true;
     }
     for (const match of content.matchAll(/.{0,30}\]\[.{0,30}/g)) {
-        ret.other.push(`Incorrect markdown link: ${match[0]}`);
+        ret.errors.push(`Incorrect markdown link: ${match[0]}`);
     }
     return ret;
 }
 /**
- * @param {string} filepath
  * @param {string} page
- * @param {{[index: string]: {links: [string,string][], fragments: {string}, other: [string]}}} pages_info
+ * @param {{[index: string]: {links: [string,string][], fragments: {string}, errors: [string]}}} pages_info
  * @returns {boolean} true if errors were found
  */
 function validate_page(page, pages_info) {
@@ -96,15 +99,15 @@ function validate_page(page, pages_info) {
             rc = true;
         }
     }
-    for(const other of page_info.other) {
+    for (const other of page_info.errors) {
         console.log(`::error file=${relpath}::${other}`);
         rc = true;
     }
     return rc;
 }
 
-/** @returns {boolean} true if an error occurred */
 async function main() {
+    /** @type {string[]} */
     var pages = [];
     await get_pages_recursive(pages, destDir + "/en");
 
@@ -125,7 +128,8 @@ async function main() {
         if (!page.startsWith("/en/docs") && only_docs) {
             continue;
         }
-        rc |= validate_page(page, pages_info);
+        /** @ts-ignore */
+        rc ||= validate_page(page, pages_info);
     }
     exit(rc ? 1 : 0);
 }
