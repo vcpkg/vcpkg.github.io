@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -440,16 +456,17 @@ Most new PRs should be opened as drafts and converted to normal PRs once the CI 
 <h2 id="portfiles">Portfiles</h2>
 <h3 id="avoid-deprecated-helper-functions">Avoid deprecated helper functions</h3>
 <p>At this time, the following helpers are deprecated:</p>
-<ol>
-<li><code>vcpkg_extract_source_archive()</code> should be replaced by <a href="vcpkg_extract_source_archive_ex.html"><code>vcpkg_extract_source_archive_ex()</code></a></li>
+<ul>
+<li><a href="vcpkg_extract_source_archive_ex.html"><code>vcpkg_extract_source_archive_ex()</code></a> should be replaced by the supported overload of [<code>vcpkg_extract_source_archive()</code>] (with <code>ARCHIVE</code>)</li>
+<li>The deprecated overload of [<code>vcpkg_extract_source_archive()</code>] without <code>ARCHIVE</code> should be replaced by the supported overload with <code>ARCHIVE</code>.</li>
 <li><code>vcpkg_apply_patches()</code> should be replaced by the <code>PATCHES</code> arguments to the "extract" helpers (e.g. <a href="vcpkg_from_github.html"><code>vcpkg_from_github()</code></a>)</li>
 <li><code>vcpkg_build_msbuild()</code> should be replaced by <a href="vcpkg_install_msbuild.html"><code>vcpkg_install_msbuild()</code></a></li>
 <li><code>vcpkg_copy_tool_dependencies()</code> should be replaced by <a href="vcpkg_copy_tools.html"><code>vcpkg_copy_tools()</code></a></li>
-<li><code>vcpkg_configure_cmake</code> should be replaced by <a href="ports/vcpkg-cmake/vcpkg_cmake_configure.html#vcpkg_cmake_configure"><code>vcpkg_cmake_configure()</code></a> after removing <code>PREFER_NINJA</code> (from port <a href="ports/vcpkg-cmake.html#vcpkg-cmake"><code>vcpkg-cmake</code></a>)</li>
-<li><code>vcpkg_build_cmake</code> should be replaced by <a href="ports/vcpkg-cmake/vcpkg_cmake_build.html#vcpkg_cmake_build"><code>vcpkg_cmake_build()</code></a> (from port <a href="ports/vcpkg-cmake.html#vcpkg-cmake"><code>vcpkg-cmake</code></a>)</li>
-<li><code>vcpkg_install_cmake</code> should be replaced by <a href="ports/vcpkg-cmake/vcpkg_cmake_install.html#vcpkg_cmake_install"><code>vcpkg_cmake_install()</code></a> (from port <a href="ports/vcpkg-cmake.html#vcpkg-cmake"><code>vcpkg-cmake</code></a>)</li>
+<li><code>vcpkg_configure_cmake</code> should be replaced by <a href="vcpkg_cmake_configure.html"><code>vcpkg_cmake_configure()</code></a> after removing <code>PREFER_NINJA</code> (from port <a href="ports/vcpkg-cmake.html"><code>vcpkg-cmake</code></a>)</li>
+<li><code>vcpkg_build_cmake</code> should be replaced by <a href="vcpkg_cmake_build.html"><code>vcpkg_cmake_build()</code></a> (from port <a href="ports/vcpkg-cmake.html"><code>vcpkg-cmake</code></a>)</li>
+<li><code>vcpkg_install_cmake</code> should be replaced by <a href="vcpkg_cmake_install.html"><code>vcpkg_cmake_install()</code></a> (from port <a href="ports/vcpkg-cmake.html"><code>vcpkg-cmake</code></a>)</li>
 <li><code>vcpkg_fixup_cmake_targets</code> should be replaced by <a href="ports/vcpkg-cmake-config/vcpkg_cmake_config_fixup.html#vcpkg_cmake_config_fixup"><code>vcpkg_cmake_config_fixup</code></a> (from port <a href="ports/vcpkg-cmake-config.html#vcpkg-cmake-config"><code>vcpkg-cmake-config</code></a>)</li>
-</ol>
+</ul>
 <p>Some of the replacement helper functions are in "tools ports" to allow consumers to pin their
 behavior at specific versions, to allow locking the behavior of the helpers at a particular
 version. Tools ports need to be added to your port's <code>"dependencies"</code>, like so:</p>
@@ -486,6 +503,12 @@ Remove any boiler plate comments introduced by the <code>create</code> command b
 <ul>
 <li><a href="https://github.com/microsoft/vcpkg/blob/4f0a640e4c5b74166b759a862d7527c930eff32e/ports/brotli/install.patch"><code>brotli</code></a> creates the <code>unofficial-brotli</code> package, producing target <code>unofficial::brotli::brotli</code>.</li>
 </ul>
+<h3 id="install-copyright-file">Install copyright file</h3>
+<p>Each port has to provide a file named <code>copyright</code> in the folder <code>${CURRENT_PACKAGES_DIR}/share/${PORT}</code>.</p>
+<p>Many ports are using this code to install a copyright file:</p>
+<pre><code class="cmake language-cmake">file(INSTALL "${SOURCE_PATH}LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)</code></pre>
+<p>This is discouraged in favour of <a href="vcpkg_install_copyright.html"><code>vcpkg_install_copyright()</code></a>. New ports should use <code>vcpkg_install_copyright()</code> instead. However, it is still valid for existing ports to use something like the code above. You may replace this with <code>vcpkg_install_copyright</code> but you don't have to.</p>
+<p><code>vcpkg_install_copyright</code> also includes the functionallity to handle multiple copyright files. See its <a href="vcpkg_install_copyright.html">documentation</a> for more info.</p>
 <h2 id="features">Features</h2>
 <h3 id="do-not-use-features-to-implement-alternatives">Do not use features to implement alternatives</h3>
 <p>Features must be treated as additive functionality. If port[featureA] installs and port[featureB] installs, then port[featureA,featureB] must install. Moreover, if a second port depends on [featureA] and a third port depends on [featureB], installing both the second and third ports should have their dependencies satisfied.</p>

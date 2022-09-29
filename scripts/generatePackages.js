@@ -3,7 +3,6 @@
 const fs = require('fs/promises');
 const path = require('path');
 const { exit } = require('process');
-const dayjs = require('dayjs');
 
 function makeManifestKeyReadable(key) {
     const versionKeys = {
@@ -152,7 +151,6 @@ function mergeDataSources(portsData, baselineData, githubData) {
 async function main(vcpkgDir, destDir) {
     const starsFile = path.join(destDir, 'stars.json');
     const outputFile = path.join(destDir, 'output.json');
-    const today = dayjs();
 
     let portsData = await readPorts(vcpkgDir);
     let baselineData = await readBaseline(vcpkgDir);
@@ -161,7 +159,7 @@ async function main(vcpkgDir, destDir) {
     let mergedData = Object.values(portsData);
 
     let outputJson = {};
-    outputJson['Generated On'] = today.format();
+    outputJson['Baseline'] = (await fs.readFile(vcpkgDir + "/.git/HEAD", 'utf-8')).trim();
     outputJson['Size'] = mergedData.length;
     outputJson['Source'] = mergedData;
     await fs.writeFile(outputFile, JSON.stringify(outputJson, null, 2), 'utf-8');
