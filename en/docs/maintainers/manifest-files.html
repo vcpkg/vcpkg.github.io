@@ -246,9 +246,11 @@
 <a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/list.html"><li class="list-can-expand">vcpkg list</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/version.html"><li class="list-can-expand">vcpkg version</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
@@ -563,6 +565,10 @@ one string per line.</p>
 }</code></pre>
 <h3 id="homepage"><code>"homepage"</code></h3>
 <p>The URL of the homepage for the library where a user is able to find additional documentation or the original source code.</p>
+<h4 id="example">Example:</h4>
+<pre><code class="json language-json">{
+  "homepage": "https://github.com/microsoft/vcpkg"
+}</code></pre>
 <h3 id="documentation"><code>"documentation"</code></h3>
 <p>The URL where a user would be able to find official documentation for the library. Optional.</p>
 <h3 id="maintainers"><code>"maintainers"</code></h3>
@@ -570,10 +576,6 @@ one string per line.</p>
 It's recommended that these take the form of <code>Givenname Surname &lt;email&gt;</code>,
 but this field is not checked for consistency.</p>
 <p>Optional.</p>
-<h4 id="example">Example:</h4>
-<pre><code class="json language-json">{
-  "homepage": "https://github.com/microsoft/vcpkg"
-}</code></pre>
 <h3 id="dependencies"><code>"dependencies"</code></h3>
 <p>An array of ports the library has a dependency on.</p>
 <p>vcpkg does not distinguish between build-only dependencies and runtime dependencies.

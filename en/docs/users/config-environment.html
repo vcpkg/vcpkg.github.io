@@ -246,9 +246,11 @@
 <a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/list.html"><li class="list-can-expand">vcpkg list</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/version.html"><li class="list-can-expand">vcpkg version</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
@@ -441,8 +443,8 @@ subject to change without notice and should be considered highly unstable.</p>
 <p>This environment variable can be set to the full path of an executable to be used for <code>vcpkg edit</code>. Please see
 <code>vcpkg help edit</code> for command-specific help.</p>
 <h4 id="vcpkg_root">VCPKG_ROOT</h4>
-<p>This environment variable can be set to a directory to use as the root of the vcpkg instance. Note that mixing vcpkg
-repo versions and executable versions can cause issues.</p>
+<p>This environment variable can be set to a directory to use as the root of the vcpkg instance. This will only be used if
+the vcpkg executable is not located within a valid root and the command line switch <code>--vcpkg-root</code> is unused.</p>
 <h4 id="vcpkg_visual_studio_path">VCPKG_VISUAL_STUDIO_PATH</h4>
 <p>This environment variable can be set to the full path to a Visual Studio instance on the machine. This Visual Studio instance
 will be used if the triplet does not override it via the <a href="triplets.html#VCPKG_VISUAL_STUDIO_PATH"><code>VCPKG_VISUAL_STUDIO_PATH</code></a> triplet setting.</p>
@@ -486,6 +488,8 @@ pass in environment variables that should cause rebuilds on change, see <a href=
   <p>Note: This is an experimental feature and may change or be removed at any time</p>
 </blockquote>
 <p>This environment variable allows using a private mirror for all SHA512-tagged assets. See <a href="assetcaching.html">Asset Caching</a> for more details.</p>
+<h4 id="vcpkg_no_ci">VCPKG_NO_CI</h4>
+<p>Setting <code>VCPKG_NO_CI</code> disables vcpkg's CI environment detection heuristics.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">

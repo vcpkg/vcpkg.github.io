@@ -246,9 +246,11 @@
 <a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/list.html"><li class="list-can-expand">vcpkg list</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/version.html"><li class="list-can-expand">vcpkg version</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
@@ -433,51 +435,65 @@
 <h2 id="usage">Usage:</h2>
 <pre><code class="cmake language-cmake">vcpkg_build_nmake(
     SOURCE_PATH &lt;${SOURCE_PATH}&gt;
-    [NO_DEBUG]
-    [ENABLE_INSTALL]
-    [TARGET &lt;all&gt;]
     [PROJECT_SUBPATH &lt;${SUBPATH}&gt;]
     [PROJECT_NAME &lt;${MAKEFILE_NAME}&gt;]
+    [LOGFILE_ROOT &lt;prefix&gt;]
+    [CL_LANGUAGE &lt;language-name&gt;]
+    [PREFER_JOM]
     [PRERUN_SHELL &lt;${SHELL_PATH}&gt;]
     [PRERUN_SHELL_DEBUG &lt;${SHELL_PATH}&gt;]
     [PRERUN_SHELL_RELEASE &lt;${SHELL_PATH}&gt;]
     [OPTIONS &lt;-DUSE_THIS_IN_ALL_BUILDS=1&gt;...]
     [OPTIONS_RELEASE &lt;-DOPTIMIZE=1&gt;...]
     [OPTIONS_DEBUG &lt;-DDEBUGGABLE=1&gt;...]
-    [TARGET &lt;target&gt;])</code></pre>
+    [TARGET &lt;all&gt;...]
+    [ENABLE_INSTALL]
+)</code></pre>
 <h2 id="parameters">Parameters</h2>
 <h3 id="source_path">SOURCE_PATH</h3>
 <p>Specifies the directory containing the source files.
 By convention, this is usually set in the portfile as the variable <code>SOURCE_PATH</code>.</p>
 <h3 id="project_subpath">PROJECT_SUBPATH</h3>
-<p>Specifies the sub directory containing the <code>makefile.vc</code>/<code>makefile.mak</code>/<code>makefile.msvc</code> or other msvc makefile.</p>
+<p>Specifies the sub directory containing the makefile.</p>
 <h3 id="project_name">PROJECT_NAME</h3>
-<p>Specifies the name of msvc makefile name.
+<p>Specifies the name of the makefile.
 Default is <code>makefile.vc</code></p>
-<h3 id="enable_install">ENABLE_INSTALL</h3>
-<p>Install binaries after build.</p>
+<h3 id="logfile_root">LOGFILE_ROOT</h3>
+<p>Specifies a log file prefix.</p>
+<h3 id="cl_language">CL_LANGUAGE</h3>
+<p>Specifies the language for setting up flags in the <code>_CL_</code> environment variable.
+The default language is <code>CXX</code>.
+To disable the modification of <code>_CL_</code>, use <code>NONE</code>.</p>
+<h3 id="prefer_jom">PREFER_JOM</h3>
+<p>Specifies that a parallel build with <code>jom</code> should be attempted.
+This is useful for faster builds of makefiles which process many independent targets
+and which cannot benefit from the <code>/MP</code> cl option.
+To mitigate issues with concurrency-unaware makefiles, a normal <code>nmake</code> build is run after <code>jom</code> errors.</p>
 <h3 id="prerun_shell">PRERUN_SHELL</h3>
-<p>Script that needs to be called before build</p>
+<p>Script that needs to be called before build.</p>
 <h3 id="prerun_shell_debug">PRERUN_SHELL_DEBUG</h3>
-<p>Script that needs to be called before debug build</p>
+<p>Script that needs to be called before debug build.</p>
 <h3 id="prerun_shell_release">PRERUN_SHELL_RELEASE</h3>
-<p>Script that needs to be called before release build</p>
+<p>Script that needs to be called before release build.</p>
 <h3 id="options">OPTIONS</h3>
-<p>Additional options passed to generate during the generation.</p>
+<p>Additional options passed to the build command.</p>
 <h3 id="options_release">OPTIONS_RELEASE</h3>
-<p>Additional options passed to generate during the Release generation. These are in addition to <code>OPTIONS</code>.</p>
+<p>Additional options passed to the build command for the release build. These are in addition to <code>OPTIONS</code>.</p>
 <h3 id="options_debug">OPTIONS_DEBUG</h3>
-<p>Additional options passed to generate during the Debug generation. These are in addition to <code>OPTIONS</code>.</p>
+<p>Additional options passed to the build command for the debug build. These are in addition to <code>OPTIONS</code>.</p>
 <h3 id="target">TARGET</h3>
-<p>The target passed to the nmake build command (<code>nmake/nmake install</code>). If not specified, no target will
-be passed.</p>
+<p>The list of targets passed to the build command.
+If not specified, target <code>all</code> will be passed.</p>
+<h3 id="enable_install">ENABLE_INSTALL</h3>
+<p>Adds <code>install</code> to the list of targets passed to the build command,
+and passes the install prefix in the <code>INSTALLDIR</code> makefile variable.</p>
 <h2 id="notes">Notes:</h2>
 <p>You can use the alias <a href="vcpkg_install_nmake.html"><code>vcpkg_install_nmake()</code></a> function if your makefile supports the
-"install" target</p>
+"install" target.</p>
 <h2 id="examples">Examples</h2>
 <ul>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/tcl/portfile.cmake">tcl</a></li>
-<li><a href="https://github.com/Microsoft/vcpkg/blob/master/ports/freexl/portfile.cmake">freexl</a></li>
+<li><a href="https://github.com/microsoft/vcpkg/blob/master/ports/librttopo/portfile.cmake">librttopo</a></li>
+<li><a href="https://github.com/microsoft/vcpkg/blob/master/ports/openssl/portfile.cmake">openssl</a></li>
 </ul>
 <h2 id="source">Source</h2>
 <p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_build_nmake.cmake">scripts/cmake/vcpkg_build_nmake.cmake</a></p>

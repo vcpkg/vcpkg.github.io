@@ -246,9 +246,11 @@
 <a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/list.html"><li class="list-can-expand">vcpkg list</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/version.html"><li class="list-can-expand">vcpkg version</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
@@ -437,7 +439,6 @@
     [NO_REMOVE_ONE_LEVEL]
     [SKIP_PATCH_CHECK]
     [PATCHES &lt;patch&gt;...]
-    [REF &lt;ref&gt;]
     [SOURCE_BASE &lt;base&gt;]
     [BASE_DIRECTORY &lt;relative-path&gt; | WORKING_DIRECTORY &lt;absolute-path&gt;]
 )</code></pre>
@@ -479,10 +480,6 @@ vcpkg_extract_source_archive(src
         always-applied.patch
         ${patches}
 )</code></pre>
-<h3 id="ref">REF</h3>
-<p>Pretty name for the extracted directory.</p>
-<p>Forward slashes (<code>/</code>) will be replaced with <code>-</code>. Otherwise identical to <a href="#source_base"><code>SOURCE_BASE</code></a>.</p>
-<p>See <a href="#working_directory"><code>WORKING_DIRECTORY</code></a> for more details.</p>
 <h3 id="source_base">SOURCE_BASE</h3>
 <p>Pretty name for the extracted directory.</p>
 <p>Must not contain path separators (<code>/</code> or <code>\\</code>).</p>
@@ -494,12 +491,15 @@ vcpkg_extract_source_archive(src
 <h3 id="working_directory">WORKING_DIRECTORY</h3>
 <p>Root folder for the extracted directory.</p>
 <p>Defaults to <code>${CURRENT_BUILDTREES_DIR}/&lt;BASE_DIRECTORY&gt;</code>. Must be an absolute path.</p>
-<p><code>vcpkg_extract_source_archive</code> extracts the archive into <code>&lt;WORKING_DIRECTORY&gt;/&lt;SOURCE_BASE&gt;-&lt;short-hash&gt;.clean</code>. If the folder exists, it is deleted before extraction. Without specifying <code>REF</code>, <code>SOURCE_BASE</code>, <code>BASE_DIRECTORY</code>, or <code>WORKING_DIRECTORY</code>, this will default to <code>${CURRENT_BUILDTREES_DIR}/src/&lt;archive-stem&gt;-&lt;short-hash&gt;.clean</code>.</p>
+<p><code>vcpkg_extract_source_archive</code> extracts the archive into <code>&lt;WORKING_DIRECTORY&gt;/&lt;SOURCE_BASE&gt;-&lt;short-hash&gt;.clean</code>. If the folder exists, it is deleted before extraction. Without specifying <code>SOURCE_BASE</code>, <code>BASE_DIRECTORY</code>, or <code>WORKING_DIRECTORY</code>, this will default to <code>${CURRENT_BUILDTREES_DIR}/src/&lt;archive-stem&gt;-&lt;short-hash&gt;.clean</code>.</p>
 <p>In <a href="../commands/install.html#editable"><code>--editable</code></a> mode:</p>
 <ol>
 <li>No <code>.clean</code> suffix is added to the extracted folder</li>
 <li>The extracted folder is not deleted. If it exists, <code>vcpkg_extract_source_archive</code> does nothing.</li>
 </ol>
+<p><code>&lt;short-hash&gt;</code> unambiguously identifies a particular set of archive and patch file contents.
+Any modifications to the contents of the working directory after calling this function should be applied unconditionally
+in order to avoid unexpected behavior in editable mode.</p>
 <h2 id="examples">Examples</h2>
 <pre><code class="cmake language-cmake">vcpkg_download_distfile(
     archive # "archive" is set to the path to the downloaded file
@@ -510,8 +510,9 @@ vcpkg_extract_source_archive(src
 vcpkg_extract_source_archive(
     src # "src" is set to the path to the extracted files
     ARCHIVE "${archive}"
-    REF 7.70
-    PATCHES 0001-disable-werror.patch
+    SOURCE_BASE nmap.org-nmap-7.70
+    PATCHES
+        0001-disable-werror.patch
 )
 vcpkg_cmake_configure(SOURCE_PATH "${src}")</code></pre>
 <ul>

@@ -246,9 +246,11 @@
 <a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/list.html"><li class="list-can-expand">vcpkg list</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/version.html"><li class="list-can-expand">vcpkg version</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
@@ -430,7 +432,9 @@
 <h1 id="vcpkg_common_definitions">vcpkg_common_definitions</h1>
 <p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_common_definitions.md">vcpkg repo</a>.</p>
 <p>This file defines the following variables which are commonly needed or used in portfiles:</p>
-<pre><code class="cmake language-cmake">VCPKG_TARGET_IS_&lt;target&gt;                 with &lt;target&gt; being one of the following: WINDOWS, UWP, MINGW, LINUX, OSX, ANDROID, FREEBSD, OPENBSD, EMSCRIPTEN. only defined if &lt;target&gt;
+<pre><code class="cmake language-cmake">PORT                                     The name of the port that is currently being built
+VERSION                                  The version of the port that is currently being built
+VCPKG_TARGET_IS_&lt;target&gt;                 with &lt;target&gt; being one of the following: WINDOWS, UWP, MINGW, LINUX, OSX, ANDROID, FREEBSD, OPENBSD, EMSCRIPTEN. only defined if &lt;target&gt;
 VCPKG_HOST_IS_&lt;host&gt;                     with &lt;host&gt; being one of the following: WINDOWS, LINUX, OSX, FREEBSD, OPENBSD. only defined if &lt;host&gt;
 VCPKG_HOST_PATH_SEPARATOR                Host specific path separator (USAGE: "&lt;something&gt;${VCPKG_HOST_PATH_SEPARATOR}&lt;something&gt;"; only use and pass variables with VCPKG_HOST_PATH_SEPARATOR within "")
 VCPKG_HOST_EXECUTABLE_SUFFIX             executable suffix of the host

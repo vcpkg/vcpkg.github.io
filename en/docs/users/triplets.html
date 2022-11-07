@@ -246,9 +246,11 @@
 <a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/list.html"><li class="list-can-expand">vcpkg list</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
 <a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/version.html"><li class="list-can-expand">vcpkg version</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
@@ -498,6 +500,9 @@ executables in the absence of <code>VCPKG_CHAINLOAD_TOOLCHAIN_FILE</code>.</p>
 <p>Set additional Meson configure options that are appended to the configure command (in <a href="../maintainers/vcpkg_configure_meson.html"><code>vcpkg_configure_meson</code></a>).</p>
 <p>This field is optional.</p>
 <p>Also available as build-type specific <code>VCPKG_MESON_CONFIGURE_OPTIONS_DEBUG</code> and <code>VCPKG_MESON_CONFIGURE_OPTIONS_RELEASE</code> variables.</p>
+<h3 id="vcpkg_meson_crossnative_file_release_debug">VCPKG_MESON_(CROSS|NATIVE)_FILE(_RELEASE|_DEBUG)</h3>
+<p>Provide an additional (configuration dependent) file as a meson cross/native file. Can be used to override settings provided by vcpkg since it will be passed after vcpkg's generated cross/native files are passed.</p>
+<p>Especially usefull to provide your own build_machine and host_machine entries.</p>
 <h3 id="vcpkg_cmake_configure_options">VCPKG_CMAKE_CONFIGURE_OPTIONS</h3>
 <p>Set additional CMake configure options that are appended to the configure command (in <a href="../maintainers/vcpkg_cmake_configure.html"><code>vcpkg_cmake_configure</code></a>).</p>
 <p>This field is optional.</p>

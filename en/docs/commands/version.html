@@ -429,24 +429,19 @@
       </script>
 </nav><main class="right-side" id="main">
 <div class="docs-mobile-show"><img class="docs-mobile-show-table" src="/assets/misc/table-docs.svg">Table of Contents</div>
-<h1 id="vcpkg_install_gn">vcpkg_install_gn</h1>
-<p><strong>This function has been deprecated in favor of <a href="ports/vcpkg-gn/vcpkg_gn_install.html"><code>vcpkg_gn_install</code></a> from the vcpkg-gn port.</strong></p>
-<p>The latest version of this document lives in the <a href="https://github.com/Microsoft/vcpkg/blob/master/docs/maintainers/vcpkg_install_gn.md">vcpkg repo</a>.</p>
-<p>Installs a GN project.</p>
-<p>In order to build a GN project without installing, use [<code>vcpkg_build_ninja()</code>].</p>
-<h2 id="usage">Usage:</h2>
-<pre><code class="cmake language-cmake">vcpkg_install_gn(
-     SOURCE_PATH &lt;SOURCE_PATH&gt;
-     [TARGETS &lt;target&gt;...]
-)</code></pre>
-<h2 id="parameters">Parameters:</h2>
-<h3 id="source_path">SOURCE_PATH</h3>
-<p>The path to the source directory</p>
-<h3 id="targets">TARGETS</h3>
-<p>Only install the specified targets.</p>
-<p>Note: includes must be handled separately</p>
-<h2 id="source">Source</h2>
-<p><a href="https://github.com/Microsoft/vcpkg/blob/master/scripts/cmake/vcpkg_install_gn.cmake">scripts/cmake/vcpkg_install_gn.cmake</a></p>
+<h1 id="vcpkg-version">vcpkg version</h1>
+<p><strong>The latest version of this documentation is available on <a href="https://github.com/Microsoft/vcpkg/tree/master/docs/commands/version.md">GitHub</a>.</strong></p>
+<h2 id="synopsis">Synopsis</h2>
+<pre><code class="no-highlight language-no-highlight">vcpkg version</code></pre>
+<h2 id="description">Description</h2>
+<p>Displays the version of the vcpkg executable.</p>
+<h2 id="example">Example</h2>
+<pre><code class="no-highlight language-no-highlight">$ vcpkg version
+vcpkg package management program version 2022-09-01-dfb82802c8cc562ce3b665a904a65b22314de724
+
+See LICENSE.txt for license information.</code></pre>
+<h2 id="options">Options</h2>
+<p>All vcpkg commands support a set of <a href="common-options.html">common options</a>.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">
