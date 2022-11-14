@@ -241,6 +241,9 @@ function renderPackageDetails(package, packageDiv, isCard) {
     // Package Description (HTML version)
     var fullDesc = package.Description;
     if (fullDesc) {
+        if (Array.isArray(fullDesc)) {
+            fullDesc = fullDesc.join("\n");
+        }
         var descriptionDiv = isCard
             ? renderCardDescription(fullDesc)
             : renderModalDescription(fullDesc);
