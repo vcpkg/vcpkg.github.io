@@ -86,7 +86,7 @@
         <div style="display: inline-block" onmouseover="addMouseOverNavigation()"><a class="doc-outline-link docs-upper-nav-link" href="/en/docs/README.html"
           >Documentation</a></div>
         <div style="display: inline-block" onclick="docsNavButton()">
-        <button class="doc-nav-button">
+        <button class="doc-nav-button"  title="nav action">
           <img src="/assets/misc/docs.svg" width="10px" height="10px" alt="" class="" /></button></div>
       </div>
       </li>
@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -418,8 +434,8 @@
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
-          <img class="" src="/assets/mark/footer-vcpkg.svg" />
-          <img class="" src="/assets/mark/vcpkg.svg" />
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -446,25 +462,25 @@
         <div class="footer-heading">Stay in Touch</div>
         <div class="footer-description">
           <a class="footer-link" href="mailto:vcpkg@microsoft.com">
-            <img class="footer-group-logo" src="/assets/external-icons/email.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
             Email
           </a>
         </div>
         <div class="footer-description hidden">
           <a class="footer-link" href="#">
-            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
             Slack
           </a>
         </div>
         <div class="footer-description">
           <a class="footer-link" href="https://www.includecpp.org/">
-            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
             Discord
           </a>
         </div>
         <div class="footer-description">
           <a class="footer-link" href="https://github.com/microsoft/vcpkg">
-            <img class="footer-group-logo" src="/assets/external-icons/github.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
             Github
           </a>
         </div>

@@ -86,7 +86,7 @@
         <div style="display: inline-block" onmouseover="addMouseOverNavigation()"><a class="doc-outline-link docs-upper-nav-link" href="/en/docs/README.html"
           >Documentation</a></div>
         <div style="display: inline-block" onclick="docsNavButton()">
-        <button class="doc-nav-button">
+        <button class="doc-nav-button"  title="nav action">
           <img src="/assets/misc/docs.svg" width="10px" height="10px" alt="" class="" /></button></div>
       </div>
       </li>
@@ -241,12 +241,21 @@
 <a class="doc-outline-link" href="/en/docs/about/faq.html"><li class="list-can-expand">Frequently Asked Questions</li></a>
 <a class="doc-outline-link" href="/en/docs/about/privacy.html"><li class="list-can-expand">Vcpkg Telemetry and Privacy</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">Commands</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/commands/common-options.html"><li class="list-can-expand">Common Command Options</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/install.html"><li class="list-can-expand">vcpkg install</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/integrate.html"><li class="list-can-expand">vcpkg integrate</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/remove.html"><li class="list-can-expand">vcpkg remove</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/search.html"><li class="list-can-expand">vcpkg search</li></a>
+<a class="doc-outline-link" href="/en/docs/commands/update-baseline.html"><li class="list-can-expand">vcpkg x-update-baseline</li></a>
+</ul>
 <li class="list-expanded"><button class="button-list-can-expand">Examples</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/examples/installing-and-using-packages.html"><li class="list-can-expand">Installing and Using Packages Example: SQLite</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/manifest-mode-cmake.html"><li class="list-can-expand">Manifest Mode: CMake Example</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"><li class="list-can-expand">Pin old Boost versions</li></a>
-<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Overlay triplets example</li></a>
+<a class="doc-outline-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"><li class="list-can-expand">Using Overlay Triplets</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-github-repos.html"><li class="list-can-expand">Packaging Github Repos Example: libogg</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/packaging-zipfiles.html"><li class="list-can-expand">Packaging <code>.zip</code> Files Example: zlib</li></a>
 <a class="doc-outline-link" href="/en/docs/examples/patching.html"><li class="list-can-expand">Patching Example: Patching libpng to work for x64-uwp</li></a>
@@ -263,18 +272,10 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_function_arguments.html"><li class="list-can-expand">z_vcpkg_function_arguments</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_get_cmake_vars.html"><li class="list-can-expand">z_vcpkg_get_cmake_vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_prettify_command_line.html"><li class="list-can-expand">z_vcpkg_prettify_command_line</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.cmake.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/internal/z_vcpkg_setup_pkgconfig_path.html"><li class="list-can-expand">z_vcpkg_setup_pkgconfig_path</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">Ports</button></li>
 <ul class="standard-padding collapsable">
-<li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake</button></li>
-<ul class="standard-padding collapsable">
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
-<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
-</ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-cmake-config</button></li>
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-config.html"><li class="list-can-expand">vcpkg-cmake-config</li></a>
@@ -284,6 +285,11 @@
 <ul class="standard-padding collapsable">
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars.html"><li class="list-can-expand">vcpkg-cmake-get-vars</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.html"><li class="list-can-expand">vcpkg_cmake_get_vars</li></a>
+</ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-get-python-packages</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages.html"><li class="list-can-expand">vcpkg-get-python-packages</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-get-python-packages/x_vcpkg_get_python_packages.html"><li class="list-can-expand">x_vcpkg_get_python_packages</li></a>
 </ul>
 <li class="list-expanded"><button class="button-list-can-expand">vcpkg-gn</button></li>
 <ul class="standard-padding collapsable">
@@ -296,6 +302,12 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules.html"><li class="list-can-expand">vcpkg-pkgconfig-get-modules</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-pkgconfig-get-modules/x_vcpkg_pkgconfig_get_modules.html"><li class="list-can-expand">x_vcpkg_pkgconfig_get_modules</li></a>
 </ul>
+<li class="list-expanded"><button class="button-list-can-expand">vcpkg-qmake</button></li>
+<ul class="standard-padding collapsable">
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake.html"><li class="list-can-expand">vcpkg-qmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-qmake/vcpkg_qmake_configure.html"><li class="list-can-expand">vcpkg_qmake_configure</li></a>
+</ul>
+<a class="doc-outline-link" href="/en/docs/maintainers/ports/vcpkg-cmake.html"><li class="list-can-expand">vcpkg-cmake</li></a>
 </ul>
 <a class="doc-outline-link" href="/en/docs/maintainers/authoring-script-ports.html"><li class="list-can-expand">Authoring Script Ports</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/cmake-guidelines.html"><li class="list-can-expand">CMake Guidelines</li></a>
@@ -321,6 +333,9 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_check_linkage.html"><li class="list-can-expand">vcpkg_check_linkage</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_executables_in_bin.html"><li class="list-can-expand">vcpkg_clean_executables_in_bin</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_clean_msbuild.html"><li class="list-can-expand">vcpkg_clean_msbuild</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_build.html"><li class="list-can-expand">vcpkg_cmake_build</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_configure.html"><li class="list-can-expand">vcpkg_cmake_configure</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_cmake_install.html"><li class="list-can-expand">vcpkg_cmake_install</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_common_definitions.html"><li class="list-can-expand">vcpkg_common_definitions</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_cmake.html"><li class="list-can-expand">vcpkg_configure_cmake</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_configure_gn.html"><li class="list-can-expand">vcpkg_configure_gn</li></a>
@@ -351,6 +366,7 @@
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_get_windows_sdk.html"><li class="list-can-expand">vcpkg_get_windows_sdk</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_host_path_list.html"><li class="list-can-expand">vcpkg_host_path_list</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_cmake.html"><li class="list-can-expand">vcpkg_install_cmake</li></a>
+<a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_copyright.html"><li class="list-can-expand">vcpkg_install_copyright</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_gn.html"><li class="list-can-expand">vcpkg_install_gn</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_make.html"><li class="list-can-expand">vcpkg_install_make</li></a>
 <a class="doc-outline-link" href="/en/docs/maintainers/vcpkg_install_meson.html"><li class="list-can-expand">vcpkg_install_meson</li></a>
@@ -429,10 +445,23 @@ manifest mode.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#simple-example-manifest">Simple Example Manifest</a></li>
-<li><a href="#manifest-syntax-reference">Manifest Syntax Reference</a></li>
-<li><a href="#command-line-interface">Command Line Interface</a></li>
+<li><a href="#manifest-syntax-reference">Manifest Syntax Reference</a><ul>
+<li><a href="#name"><code>"name"</code></a></li>
+<li><a href="#version-fields">Version Fields</a></li>
+<li><a href="#description"><code>"description"</code></a></li>
+<li><a href="#builtin-baseline"><code>"builtin-baseline"</code></a></li>
+<li><a href="#dependencies"><code>"dependencies"</code></a></li>
+<li><a href="#dependencies-name"><code>"name"</code></a></li>
+<li><a href="#dependencies-default-features"><code>"default-features"</code></a></li>
+<li><a href="#dependencies-features"><code>"features"</code></a></li>
+<li><a href="#host"><code>"host"</code></a></li>
+<li><a href="#platform"><code>"platform"</code></a></li>
+<li><a href="#version-gt"><code>"version&gt;="</code></a></li>
+<li><a href="#overrides"><code>"overrides"</code></a></li>
+<li><a href="#supports"><code>"supports"</code></a></li>
+<li><a href="#features"><code>"features"</code></a></li>
+<li><a href="#default-features"><code>"default-features"</code></a></li></ul></li>
 </ul>
-<p>See also <a href="https://github.com/microsoft/vcpkg/blob/master/docs/specifications/manifests.md">the original specification</a> for more low-level details.</p>
 <h2 id="simple-example-manifest">Simple Example Manifest</h2>
 <pre><code class="json language-json">{
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
@@ -455,14 +484,14 @@ as well as all the metadata about your project that a person who depends on you 
 <p>Manifests follow strict JSON: they can't contain C++-style comments (<code>//</code>) nor trailing commas. However
 you can use field names that start with <code>$</code> to write your comments in any object that has a well-defined set of keys.
 These comment fields are not allowed in any objects which permit user-defined keys (such as <code>"features"</code>).</p>
-<p>Each manifest contains a top level object with the fields documented below; the most important ones are
-<a href="#name"><code>"name"</code></a>, the <a href="#version-fields">version fields</a>, and <a href="#dependencies"><code>"dependencies"</code></a>:</p>
+<p>The latest JSON Schema is available at <a href="https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json">https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json</a>. IDEs with JSON Schema support such as Visual Studio and Visual Studio Code can use this file to provide IntelliSense and syntax checking. For most IDEs, you should set <code>"$schema"</code> in your <code>vcpkg.json</code> to this URL (like the above example).</p>
+<p>Each manifest contains a top level object with the following fields:</p>
+<p><a id="name"></a></p>
 <h3 id="name"><code>"name"</code></h3>
 <p>This is the name of your project! It must be formatted in a way that vcpkg understands - in other words,
 it must be lowercase alphabetic characters, digits, and hyphens, and it must not start nor end with a hyphen.
 For example, <code>Boost.Asio</code> might be given the name <code>boost-asio</code>.</p>
-<p>This is a required field.</p>
-<h3 id="version-fields">Version fields</h3>
+<h3 id="version-fields">Version Fields</h3>
 <p>There are four version field options, depending on how the port orders its
 releases.</p>
 <ul>
@@ -481,19 +510,25 @@ created before the other version fields were introduced use this scheme.</li>
 to the port with the same upstream source version. For pure consumers, this
 field should not be used.</p>
 <p>See <a href="versioning.html#version-schemes">versioning</a> for more details.</p>
+<p><a id="description"></a></p>
 <h3 id="description"><code>"description"</code></h3>
 <p>This is where you describe your project. Give it a good description to help in searching for it!
 This can be a single string, or it can be an array of strings;
 in the latter case, the first string is treated as a summary,
 while the remaining strings are treated as the full description.</p>
+<p><a id="builtin-baseline"></a></p>
 <h3 id="builtin-baseline"><code>"builtin-baseline"</code></h3>
 <p>This field indicates the commit of vcpkg which provides global minimum version
-information for your manifest. It is required for top-level manifest files using
-versioning.</p>
-<p>This is a convenience field that has the same semantic as replacing your default
-registry in
-<a href="registries.html#configuration-default-registry"><code>vcpkg-configuration.json</code></a>.</p>
-<p>See <a href="versioning.html#builtin-baseline">versioning</a> for more semantic details.</p>
+information for your manifest.</p>
+<p>It is required for top-level manifest files using versioning without a specified <a href="registries.html#configuration-default-registry"><code>"default-registry"</code></a>. It has the same semantic as defining your default registry to be:</p>
+<pre><code class="json language-json">{
+  "default-registry": {
+    "kind": "builtin",
+    "baseline": "&lt;value&gt;"
+  }
+}</code></pre>
+<p>See <a href="versioning.html#baselines">versioning</a> for more semantic details.</p>
+<p><a id="dependencies"></a></p>
 <h3 id="dependencies"><code>"dependencies"</code></h3>
 <p>This field lists all the dependencies you'll need to build your library (as well as any your dependents might need,
 if they were to use you). It's an array of strings and objects:</p>
@@ -517,8 +552,11 @@ allows you to add that extra information.</li>
     "platform": "!windows"
   }
 ]</code></pre>
+<p><a id="dependencies-name"></a></p>
 <h4 id="name-field"><code>"name"</code> Field</h4>
 <p>The name of the dependency. This follows the same restrictions as the <a href="#name"><code>"name"</code></a> property for a project.</p>
+<p><a id="dependencies-default-features"></a>
+<a id="dependencies-features"></a></p>
 <h4 id="features-and-default-features-fields"><code>"features"</code> and <code>"default-features"</code> Fields</h4>
 <p><code>"features"</code> is an array of feature names which tell you the set of features that the
 dependencies need to have at a minimum,
@@ -532,6 +570,11 @@ Then, you might just ask for:</p>
   "default-features": false,
   "features": [ "mp3lame" ]
 }</code></pre>
+<p><a id="host"></a></p>
+<h4 id="host-field"><code>"host"</code> Field</h4>
+<p>A boolean indicating that the dependency must be built for the <a href="host-dependencies.html">host triplet</a> instead of the current port's triplet. Defaults to <code>false</code>.</p>
+<p>Any dependency that provides tools or scripts which should be "executed" during a build (such as buildsystems, code generators, or helpers) should be marked as <code>"host": true</code>. This enables correct cross-compilation in cases that the target is not executable -- such as when compiling for <code>arm64-android</code>.</p>
+<p>See <a href="host-dependencies.html">Host Dependencies</a> for more information.</p>
 <p><a id="platform"></a></p>
 <h4 id="platform-field"><code>"platform"</code> Field</h4>
 <p>The <code>"platform"</code> field defines the platforms where the dependency should be installed - for example,
@@ -551,11 +594,13 @@ and on Linux on x64, would be written <code>(windows &amp; arm64) | (linux &amp;
 <li>The architecture: <code>x86</code>, <code>x64</code>, <code>wasm32</code>, <code>arm64</code>, <code>arm</code> (includes both arm32 and arm64 due to backwards compatibility)</li>
 </ul>
 <p>although one can define their own.</p>
+<p><a id="version-gt"></a></p>
 <h4 id="version-field"><code>"version&gt;="</code> Field</h4>
 <p>A minimum version constraint on the dependency.</p>
 <p>This field specifies the minimum version of the dependency, optionally using a
 <code>#N</code> suffix to denote port-version if non-zero.</p>
 <p>See also <a href="versioning.html#version-1">versioning</a> for more semantic details.</p>
+<p><a id="overrides"></a></p>
 <h3 id="overrides"><code>"overrides"</code></h3>
 <p>This field pins exact versions for individual dependencies.</p>
 <p><code>"overrides"</code> from transitive manifests (i.e. from dependencies) are ignored.</p>
@@ -566,11 +611,14 @@ and on Linux on x64, would be written <code>(windows &amp; arm64) | (linux &amp;
       "name": "arrow", "version": "1.2.3", "port-version": 7
     }
   ]</code></pre>
+<p><a id="supports"></a></p>
 <h3 id="supports"><code>"supports"</code></h3>
 <p>If your project doesn't support common platforms, you can tell your users this with the <code>"supports"</code> field.
 It uses the same platform expressions as <a href="#platform"><code>"platform"</code></a>, from dependencies, as well as the
 <code>"supports"</code> field of features.
 For example, if your library doesn't support linux, you might write <code>{ "supports": "!linux" }</code>.</p>
+<p><a id="default-features"></a>
+<a id="features"></a></p>
 <h3 id="features-and-default-features"><code>"features"</code> and <code>"default-features"</code></h3>
 <p>The <code>"features"</code> field defines <em>your</em> project's optional features, that others may either depend on or not.
 It's an object, where the keys are the names of the features, and the values are objects describing the feature.
@@ -620,33 +668,13 @@ and that's the <code>"default-features"</code> field, which is an array of featu
     }
   }
 }</code></pre>
-<h2 id="command-line-interface">Command Line Interface</h2>
-<p>When invoked from any subdirectory of the directory containing <code>vcpkg.json</code>, <code>vcpkg install</code> with no package arguments
-will install all manifest dependencies into <code>&lt;directory containing vcpkg.json&gt;/vcpkg_installed/</code>. Most of <code>vcpkg
-install</code>'s classic mode parameters function the same in manifest mode.</p>
-<h3 id="--x-install-rootpath"><code>--x-install-root=&lt;path&gt;</code></h3>
-<p><strong>Experimental and may change or be removed at any time</strong></p>
-<p>Specifies an alternate install location than <code>&lt;directory containing vcpkg.json&gt;/vcpkg_installed/</code>.</p>
-<h3 id="--triplettriplet"><code>--triplet=&lt;triplet&gt;</code></h3>
-<p>Specify the triplet to be used for installation.</p>
-<p>Defaults to the same default triplet as in classic mode.</p>
-<h3 id="--x-featurefeature"><code>--x-feature=&lt;feature&gt;</code></h3>
-<p><strong>Experimental and may change or be removed at any time</strong></p>
-<p>Specify an additional feature from the <code>vcpkg.json</code> to install dependencies from.</p>
-<h3 id="--x-no-default-features"><code>--x-no-default-features</code></h3>
-<p><strong>Experimental and may change or be removed at any time</strong></p>
-<p>Disables automatic activation of all default features listed in the <code>vcpkg.json</code>.</p>
-<h3 id="--x-manifest-rootpath"><code>--x-manifest-root=&lt;path&gt;</code></h3>
-<p><strong>Experimental and may change or be removed at any time</strong></p>
-<p>Specifies the directory containing <code>vcpkg.json</code>.</p>
-<p>Defaults to searching upwards from the current working directory.</p>
 </main></div><div id="loadFooter"><footer class="footer">
   <div class="footer-info">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
-          <img class="" src="/assets/mark/footer-vcpkg.svg" />
-          <img class="" src="/assets/mark/vcpkg.svg" />
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -673,25 +701,25 @@ install</code>'s classic mode parameters function the same in manifest mode.</p>
         <div class="footer-heading">Stay in Touch</div>
         <div class="footer-description">
           <a class="footer-link" href="mailto:vcpkg@microsoft.com">
-            <img class="footer-group-logo" src="/assets/external-icons/email.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
             Email
           </a>
         </div>
         <div class="footer-description hidden">
           <a class="footer-link" href="#">
-            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
             Slack
           </a>
         </div>
         <div class="footer-description">
           <a class="footer-link" href="https://www.includecpp.org/">
-            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
             Discord
           </a>
         </div>
         <div class="footer-description">
           <a class="footer-link" href="https://github.com/microsoft/vcpkg">
-            <img class="footer-group-logo" src="/assets/external-icons/github.svg" />
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
             Github
           </a>
         </div>
