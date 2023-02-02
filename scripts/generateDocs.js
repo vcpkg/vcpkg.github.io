@@ -278,10 +278,15 @@ async function main() {
             Nav: generateNavSearchResult(markdownFile)
         });
 
+        var redirectUrl = urlMapping[relativePath.substring(9)];
+        
         var view = {
             footer: footertemplate,
             navbar: navbartemplate,
-            docsnav: navpanehtml
+            docsnav: navpanehtml,
+            metaTag: redirectUrl ? `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />` : '',
+            redirectJS: redirectUrl ? `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`:'',
+            manualLink: redirectUrl ? `<a href='${redirectUrl}'></a>`: ''
         };
 
         view.body = callshowdown(file, markdownFile);
