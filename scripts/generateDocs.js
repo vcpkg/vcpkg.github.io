@@ -5,6 +5,8 @@ const path = require('path');
 const { exit } = require('process');
 const showdown = require('showdown');
 const Mustache = require('mustache');
+const urlMapping = require('./urlMapping');
+
 
 if (process.argv.length != 3) {
     console.log("Usage: node generateDocs.js <path/to/source/docs>")
@@ -279,7 +281,7 @@ async function main() {
         });
 
         var redirectUrl = urlMapping[relativePath.substring(9)];
-        
+
         var view = {
             footer: footertemplate,
             navbar: navbartemplate,
