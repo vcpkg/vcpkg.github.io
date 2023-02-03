@@ -281,6 +281,7 @@ async function main() {
         });
 
         var redirectUrl = urlMapping[relativePath.substring(9)];
+        if (!redirectUrl) { throw "No mapping for " + relativePath; }
 
         var view = {
             footer: footertemplate,
