@@ -281,17 +281,22 @@ async function main() {
         });
 
         var redirectUrl = urlMapping[relativePath.substring(9)];
-        if (!redirectUrl) { throw "No mapping for " + relativePath; }
 
         var view = {
             footer: footertemplate,
             navbar: navbartemplate,
             docsnav: navpanehtml,
-            metaTag: redirectUrl ? `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />` : '',
-            redirectJS: redirectUrl ? `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`:'',
-            manualLink: redirectUrl ? `<a href='${redirectUrl}'></a>`: ''
+            metaTag: '',
+            redirectJS: '',
+            manualLink: ''
         };
-
+        
+        if (redirectUrl) {
+            view.metaTag = `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />`;
+            view.redirectJS = `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`;
+            view.manualLink = `<a href='${redirectUrl}'></a>`;
+        }
+        
         view.body = callshowdown(file, markdownFile);
         await fs.mkdir(path.dirname(pathToWrite), { recursive: true });
         await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
