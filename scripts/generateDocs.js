@@ -6,6 +6,10 @@ const { exit } = require('process');
 const showdown = require('showdown');
 const Mustache = require('mustache');
 const urlMapping = require('./urlMapping');
+<<<<<<< HEAD
+=======
+
+>>>>>>> d67d2383f3e1622b162fc423e8b4c72ad5728ba8
 
 if (process.argv.length != 3) {
     console.log("Usage: node generateDocs.js <path/to/source/docs>")
@@ -298,7 +302,6 @@ async function main() {
             view.redirectJS = `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`;
             view.manualLink = `<a href='${redirectUrl}'></a>`;
         }
-
         view.body = callshowdown(file, markdownFile);
 
         await fs.mkdir(path.dirname(pathToWrite), { recursive: true });
