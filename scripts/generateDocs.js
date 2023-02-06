@@ -5,6 +5,7 @@ const path = require('path');
 const { exit } = require('process');
 const showdown = require('showdown');
 const Mustache = require('mustache');
+const urlMapping = require('./urlMapping');
 
 if (process.argv.length != 3) {
     console.log("Usage: node generateDocs.js <path/to/source/docs>")
@@ -220,6 +221,7 @@ async function generateTreeView(treeViewDir) {
     return "<ul class=docs-navigation>" + await processTreeViewLayer(treeViewDir) + "</ul>\n";
 }
 
+
 function callshowdown(data, currentPath) {
     var translate = new showdown.Converter();
     translate.setFlavor('github');
@@ -241,7 +243,7 @@ function callshowdown(data, currentPath) {
     html = html.replace(/<a href="([^"]*)"/g, (match, href) => {
         return '<a href="' + markdownToHTMLExtension(handleRelativeLink(href, currentPath)) + '"';
     });
-
+    
     return html;
 }
 
@@ -253,7 +255,7 @@ async function main() {
     const navpanehtml = await generateTreeView(sourceDir);
     await fs.mkdir(outDocsDir, { recursive: true });
 
-    const template = await fs.readFile(templatesDir + "/docpage.template.html", 'utf-8');
+    var template = await fs.readFile(templatesDir + "/docpage.template.html", 'utf-8');
     const footertemplate = await fs.readFile(templatesDir + "/footer.html", 'utf-8');
     const navbartemplate = await fs.readFile(templatesDir + "/navbar.html", 'utf-8');
 
@@ -278,17 +280,30 @@ async function main() {
             Nav: generateNavSearchResult(markdownFile)
         });
 
+        console.log("Map Key: " + relativePath.substring(9));
+        console.log("Redirect URL: " + urlMapping[ relativePath.substring(9)] + "\n");
+        var redirectUrl = urlMapping[relativePath.substring(9)];
+
         var view = {
             footer: footertemplate,
             navbar: navbartemplate,
-            docsnav: navpanehtml
+            docsnav: navpanehtml,
+            metaTag: '',
+            redirectJS:'',
+            manualLink: ''
         };
 
+        if (redirectUrl) {
+            view.metaTag = `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />`;
+            view.redirectJS = `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`;
+            view.manualLink = `<a href='${redirectUrl}'></a>`;
+        }
+
         view.body = callshowdown(file, markdownFile);
+
         await fs.mkdir(path.dirname(pathToWrite), { recursive: true });
         await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
 
-        console.log("generated " + pathToWrite);
     }
 
     async function generateForDir(relSourcePath) {
