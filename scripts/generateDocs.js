@@ -296,11 +296,12 @@ async function main() {
             view.redirectJS = `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`;
             view.manualLink = `<a href='${redirectUrl}'></a>`;
         }
-        
+
         view.body = callshowdown(file, markdownFile);
 
         await fs.mkdir(path.dirname(pathToWrite), { recursive: true });
         await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
+        console.log("generated " + pathToWrite);
 
     }
 
