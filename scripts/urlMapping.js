@@ -43,7 +43,7 @@ const urlMapping = {
     'maintainers/authoring-script-ports.md': 'https://learn.microsoft.com/vcpkg/maintainers/authoring-script-ports',
     'maintainers/cmake-guidelines.md': 'https://learn.microsoft.com/vcpkg/contributing/cmake-guidelines',
     'maintainers/control-files.md': 'https://learn.microsoft.com/vcpkg/maintainers/control-files',
-    'maintainers/execute_process.md': '',
+    'maintainers/execute_process.md': 'https://learn.microsoft.com/vcpkg/',
     'maintainers/maintainer-guide.md': 'https://learn.microsoft.com/vcpkg/contributing/maintainer-guide',
     'maintainers/manifest-files.md': 'https://learn.microsoft.com/vcpkg/reference/vcpkg-json',
     'maintainers/portfile-functions.md': 'https://learn.microsoft.com/vcpkg/maintainers/functions/vcpkg_acquire_msys',
