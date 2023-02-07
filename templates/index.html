@@ -15,22 +15,6 @@
 
     <!-- our scripts -->
     <script src="/dist/index.js"></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', function () {
-        manageCaliforniaPrivacy();
-      });
-      function manageCaliforniaPrivacy() {
-          //Link is required in the footer to comply with the California Privacy Rights Act
-          let tZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-          if (tZone.toLowerCase() == 'america/los_angeles') {
-              document.getElementsByClassName('managePrivacyChoice')[0].style.display = 'inline-block';
-          }
-          else {
-              document.getElementsByClassName('managePrivacyChoice')[0].style.display = 'none';
-          }
-
-      }
-  </script>
   </head>
   <body>
     <div id="loadNavBar">{{{navbar}}}</div>
