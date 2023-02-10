@@ -83,6 +83,21 @@ function setScrollFocus (){
     document.getElementsByClassName("navbar")[0].scrollIntoView();
 }
 
+window.addEventListener('DOMContentLoaded', function () {
+    manageCaliforniaPrivacy();
+  });
+  function manageCaliforniaPrivacy() {
+      //Link is required in the footer to comply with the California Privacy Rights Act
+      let tZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tZone.toLowerCase() == 'america/los_angeles') {
+          document.getElementsByClassName('managePrivacyChoice')[0].style.display = 'inline-block';
+      }
+      else {
+          document.getElementsByClassName('managePrivacyChoice')[0].style.display = 'none';
+      }
+
+  }
+  
 $(document).ready(function(){
     //Analytics
     if (typeof oneDS === 'undefined') {
