@@ -286,16 +286,12 @@ async function main() {
             footer: footertemplate,
             navbar: navbartemplate,
             docsnav: navpanehtml,
-            metaTag: '',
-            redirectJS:'',
-            manualLink: ''
+            metaTag: redirectUrl ? `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />` : '',
+            redirectJS: redirectUrl ? `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`:'',
+            manualLink: redirectUrl ? `<a href='${redirectUrl}'></a>`: ''
         };
 
-        if (redirectUrl) {
-            view.metaTag = `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />`;
-            view.redirectJS = `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`;
-            view.manualLink = `<a href='${redirectUrl}'></a>`;
-        }
+        if (!redirectUrl) { throw "No mapping for " + relativePath; }
 
         view.body = callshowdown(file, markdownFile);
 
