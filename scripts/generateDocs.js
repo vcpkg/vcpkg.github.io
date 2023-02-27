@@ -5,6 +5,7 @@ const path = require('path');
 const { exit } = require('process');
 const showdown = require('showdown');
 const Mustache = require('mustache');
+const urlMapping = require('./urlMapping');
 
 if (process.argv.length != 3) {
     console.log("Usage: node generateDocs.js <path/to/source/docs>")
@@ -220,6 +221,7 @@ async function generateTreeView(treeViewDir) {
     return "<ul class=docs-navigation>" + await processTreeViewLayer(treeViewDir) + "</ul>\n";
 }
 
+
 function callshowdown(data, currentPath) {
     var translate = new showdown.Converter();
     translate.setFlavor('github');
@@ -241,7 +243,7 @@ function callshowdown(data, currentPath) {
     html = html.replace(/<a href="([^"]*)"/g, (match, href) => {
         return '<a href="' + markdownToHTMLExtension(handleRelativeLink(href, currentPath)) + '"';
     });
-
+    
     return html;
 }
 
@@ -278,17 +280,25 @@ async function main() {
             Nav: generateNavSearchResult(markdownFile)
         });
 
+        var redirectUrl = urlMapping[relativePath.substring(9)];
+
         var view = {
             footer: footertemplate,
             navbar: navbartemplate,
-            docsnav: navpanehtml
+            docsnav: navpanehtml,
+            metaTag: redirectUrl ? `<meta http-equiv='refresh' content='0;url=${redirectUrl}' />` : '',
+            redirectJS: redirectUrl ? `<script type="text/javascript"> window.location.href = "${redirectUrl}"</script>`:'',
+            manualLink: redirectUrl ? `<a href='${redirectUrl}'></a>`: ''
         };
 
+        if (!redirectUrl) { throw "No mapping for " + relativePath; }
+
         view.body = callshowdown(file, markdownFile);
+
         await fs.mkdir(path.dirname(pathToWrite), { recursive: true });
         await fs.writeFile(pathToWrite, Mustache.render(template, view), 'utf-8');
-
         console.log("generated " + pathToWrite);
+
     }
 
     async function generateForDir(relSourcePath) {
