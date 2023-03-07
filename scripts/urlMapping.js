@@ -122,7 +122,8 @@ const urlMapping = {
     'users/triplets.md': 'https://learn.microsoft.com/vcpkg/users/triplets',
     'users/versioning.implementation-details.md': 'https://learn.microsoft.com/vcpkg/users/versioning.concepts',
     'users/versioning.md': 'https://learn.microsoft.com/vcpkg/users/versioning',
-    'README.md': 'https://learn.microsoft.com/vcpkg/'
+    'README.md': 'https://learn.microsoft.com/vcpkg/',
+    'index.html': 'https://learn.microsoft.com/vcpkg/'
   };
 
   module.exports = urlMapping;
