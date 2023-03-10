@@ -1,1 +1,1 @@
-window.location.href = lang + '/'; //redirect to the appropriate site
+window.location.href = lang + '/index'; //redirect to the appropriate site
