@@ -11,13 +11,12 @@ then
     git -C ../vcpkg checkout FETCH_HEAD
 fi
 
-githubToken=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
 npm ci
 rm -rf ../en
 node generatePages.js
 node generateDocs.js
 node validateLinks.js
-node generateGitHubStars.js ../vcpkg $1 $githubToken
+node generateGitHubStars.js ../vcpkg $1
 node generatePackages.js ../vcpkg
 
 read -p "Press enter to continue"
