@@ -5,7 +5,8 @@ set -e
 cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")"
 if [ ! -e ../vcpkg ]
 then
-    vcpkg_commit=d10d511f25620ca0f315cd83dcef6485efc63010
+    repo_url=https://github.com/Microsoft/vcpkg
+    vcpkg_commit=$(git ls-remote $repo_url | head -n1 | awk '{ print $1 }')
     git init ../vcpkg
     git -C ../vcpkg fetch --depth 1 https://github.com/Microsoft/vcpkg $vcpkg_commit
     git -C ../vcpkg checkout FETCH_HEAD
