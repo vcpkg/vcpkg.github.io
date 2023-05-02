@@ -23,12 +23,12 @@ then
     echo $vcpkg_commit > commit.txt
 fi
 
-github_token=$github_token
+githubtoken=$github_token
 npm ci
 rm -rf ../en
 node generatePages.js
 node generateDocs.js
 node validateLinks.js
-node generateGitHubStars.js ../vcpkg $1 $github_token
+node generateGitHubStars.js ../vcpkg $1 $githubtoken
 node generatePackages.js ../vcpkg
 
