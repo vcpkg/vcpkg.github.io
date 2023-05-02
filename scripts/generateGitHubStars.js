@@ -6,11 +6,12 @@ const { Octokit } = require('@octokit/rest');
 const { exit } = require('process');
 
 async function getGitHubStars(octokit, url) {
+    try {
     const githubUrl = 'https://github.com/';
     const regex = /^(?<owner>[a-zA-Z\d][a-zA-Z\d\.\-\_]+)\/(?<repo>[a-zA-Z\d][a-zA-Z\d\.\-\_]+).*$/;
 
     if (!url.startsWith(githubUrl)) return 0;
-
+    
     const [_, owner, repo] = regex.exec(url.substr(githubUrl.length)) ?? [];
     if (!owner || !repo) {
         console.log(`Failed to get stars for ${url}\nNot a valid GitHub repository URL.`);
@@ -24,6 +25,9 @@ async function getGitHubStars(octokit, url) {
     }
 
     return response.data.stargazers_count;
+} catch (error) {
+        return 0;
+}
 }
 
 async function readHomepage(manifestFile) {
@@ -33,6 +37,7 @@ async function readHomepage(manifestFile) {
 }
 
 async function main(vcpkgDir, destDir, githubToken) {
+    try {
     if (githubToken.length == 0) {
         console.log('Skipping GitHub stars');
         return;
@@ -43,6 +48,7 @@ async function main(vcpkgDir, destDir, githubToken) {
     const octokit = new Octokit({ auth: githubToken });
 
     let dirents = await fs.readdir(portsDir, { encoding: 'utf-8', withFileTypes: true });
+    console.log("directs ", dirents.length);
     let results = {};
     for (let ent of dirents) {
         const manifestFile = path.join(portsDir, ent.name, 'vcpkg.json');
@@ -52,6 +58,9 @@ async function main(vcpkgDir, destDir, githubToken) {
     }
 
     await fs.writeFile(outputFile, JSON.stringify(results, null, 2), 'utf-8');
+} catch (error) {
+    console.log(error);
+}
 }
 
 
