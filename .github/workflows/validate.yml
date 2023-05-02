@@ -2,6 +2,9 @@ name: Site Validation
 
 on:
   pull_request:
+  
+env:
+   github_token: ${{ secrets.GITHUB_TOKEN }};
 
 jobs:
   validate:
