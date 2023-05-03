@@ -38,6 +38,7 @@ async function readHomepage(manifestFile) {
 
 async function main(vcpkgDir, destDir, githubToken) {
     try {
+    console.log("github token ", githubToken);
     if (githubToken.length == 0) {
         console.log('Skipping GitHub stars');
         return;
