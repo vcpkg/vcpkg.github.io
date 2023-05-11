@@ -40,16 +40,17 @@ async function get_pages_recursive(docs_set, path) {
 async function load_page_info(page, relative_path) {
     /** @type {PageInfo} */
     const ret = { links: [], fragments: {}, errors: [] };
+    var subUrls = ['getting-started', 'packages'];
     const content = await fs.readFile(page, 'utf-8');
     for (const match of content.matchAll(/ href="([^"?#]*)(#([^"?]*))?([^"]*)?"/g)) {
         if (match[1].length == 0) {
             if (match[3].length > 0) {
                 // reference to self anchor
-                if (relative_path.endsWith(".html")) {
-                    ret.links.push([relative_path, match[3]]);
+                if (!relative_path.endsWith(".html") && subUrls.some(subUrl => relative_path.includes(subUrl))) {
+                    ret.links.push([relative_path + ".html", match[3]]);
                 }
                 else {
-                    ret.links.push([relative_path + ".html", match[3]]);
+                    ret.links.push([relative_path, match[3]]);
                 }
             }
             continue;
@@ -64,11 +65,11 @@ async function load_page_info(page, relative_path) {
         if (match[1].startsWith("/css") || match[1].startsWith("/assets")) continue;
         if (match[1].startsWith("/")) {
             // Link is already relative to doc root
-            if (match[1].endsWith(".html")) {
-                ret.links.push([match[1], match[3]]);
+            if (!match[1].endsWith(".html") && subUrls.some(subUrl => match[1].includes(subUrl))) {
+                ret.links.push([match[1] + ".html", match[3]]);
             }
             else {
-                ret.links.push([match[1] + ".html", match[3]]);
+                ret.links.push([match[1], match[3]]);
             }
         } else {
             var dir = dirname(relative_path);
@@ -77,11 +78,11 @@ async function load_page_info(page, relative_path) {
                 dir = dirname(dir);
                 subpath = subpath.substring(3);
             }
-            if (subpath.endsWith(".html")) {
-                ret.links.push([dir + "/" + subpath, match[3]]);
+            if (!subpath.endsWith(".html") && subUrls.some(subUrl => subpath.includes(subUrl))) {
+                ret.links.push([dir + "/" + subpath + ".html", match[3]]);
             }
             else {
-                ret.links.push([dir + "/" + subpath + ".html", match[3]]);
+                ret.links.push([dir + "/" + subpath, match[3]]);
             }
         }
     }
