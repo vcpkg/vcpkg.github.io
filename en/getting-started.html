@@ -197,10 +197,10 @@
     <div class="header-text-getting-started">Get started with vcpkg</div>
     <div class="page">
       <nav class="left-side-getting-started">
-        <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-windows">Windows</button>
-        <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-linux">Linux</button>
+        <button class="tab-btn gs-tab-btn" id="gs-btn-windows" aria-label="Windows tab">Windows</button>
+        <button class="tab-btn gs-tab-btn" id="gs-btn-linux" aria-label="Linux tab">Linux</button>
 
-        <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-mac">MacOS</button>
+        <button class="tab-btn gs-tab-btn" id="gs-btn-mac" aria-label="MacOS tab" >MacOS</button>
 
         <div class="prerequisite-list">
           <div class="text-heading">Prerequisites</div>
@@ -218,10 +218,12 @@
           <ul class="col-md-11 mac">
             <li>Apple Developer Tools</li>
             <li>On macOS 10.14 or below, you will also need:</li>
-            <ul>
-              <li>Homebrew</li>
-              <li>g++ >= 6 from Homebrew</li>
-            </ul>
+            <li style="list-style: none;">
+              <ul>
+                <li>Homebrew</li>
+                <li>g++ >= 6 from Homebrew</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
