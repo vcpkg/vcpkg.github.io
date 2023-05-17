@@ -9,7 +9,7 @@ jobs:
     
     env:
      Codeql.Enabled: true
-     Enable_SyncPackage: false
+     Enable_SyncPackage: true
      
     steps:
       - name: Checkout
@@ -23,7 +23,7 @@ jobs:
           restore-keys: ${{ runner.os }}-node-
 
       - name: Sync Package metadata
-        run: echo ${{ env.Enable_SyncPackage }}
+        run: scripts/syncMetadata.sh
         if: ${{ env.Enable_SyncPackage == 'true' }}
 
       - name: Rebuild and validate website
