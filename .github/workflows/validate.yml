@@ -9,6 +9,7 @@ jobs:
     
     env:
      Codeql.Enabled: true
+     Enable_SyncPackage: true
      
     steps:
       - name: Checkout
@@ -20,6 +21,10 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
+
+      - name: Sync Package metadata
+        run: scripts/syncMetadata.sh
+        if: ${{ env.Enable_SyncPackage == 'true' }}
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
