@@ -70,10 +70,10 @@
   <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
     <ul class="navbar-nav ml-auto navbar-right-margin">
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link nav-link-hover" href="/en/getting-started.html">Get Started </a>
+        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link nav-link-hover" href="/en/packages.html">Packages</a>
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
         <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
@@ -91,10 +91,10 @@
     <div class="mobile-margin">
       <ul class="mobile-nav-list">
         <li class="mobile-nav-item">
-          <a class="navbar-mobile" href="/en/getting-started.html">Get Started</a>
+          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
         </li>
         <li class="mobile-nav-item">
-          <a class="navbar-mobile" href="/en/packages.html">Packages</a>
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
         </li>
         <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
         <li class="mobile-nav-item">
@@ -197,10 +197,10 @@
     <div class="header-text-getting-started">Get started with vcpkg</div>
     <div class="page">
       <nav class="left-side-getting-started">
-        <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-windows">Windows</button>
-        <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-linux">Linux</button>
+        <button class="tab-btn gs-tab-btn" id="gs-btn-windows" aria-label="Windows tab">Windows</button>
+        <button class="tab-btn gs-tab-btn" id="gs-btn-linux" aria-label="Linux tab">Linux</button>
 
-        <button role="tab" class="tab-btn gs-tab-btn" id="gs-btn-mac">MacOS</button>
+        <button class="tab-btn gs-tab-btn" id="gs-btn-mac" aria-label="MacOS tab" >MacOS</button>
 
         <div class="prerequisite-list">
           <div class="text-heading">Prerequisites</div>
@@ -218,10 +218,12 @@
           <ul class="col-md-11 mac">
             <li>Apple Developer Tools</li>
             <li>On macOS 10.14 or below, you will also need:</li>
-            <ul>
-              <li>Homebrew</li>
-              <li>g++ >= 6 from Homebrew</li>
-            </ul>
+            <li style="list-style: none;">
+              <ul>
+                <li>Homebrew</li>
+                <li>g++ >= 6 from Homebrew</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -371,17 +373,17 @@
         <div class="footer-description">
           <a
             class="footer-link"
-            href="/en/getting-started.html?platform=windows"
+            href="/en/getting-started?platform=windows"
             >Windows</a
           >
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started.html?platform=linux"
+          <a class="footer-link" href="/en/getting-started?platform=linux"
             >Linux</a
           >
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started.html?platform=mac"
+          <a class="footer-link" href="/en/getting-started?platform=mac"
             >Mac</a
           >
         </div>
