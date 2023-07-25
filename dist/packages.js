@@ -227,7 +227,8 @@ parentVersionDiv.className = 'package-version';
 var vcpkgPackagePage = document.createElement('div');
 vcpkgPackagePage.className = 'vcpkg-page-link';
 vcpkgPackagePage.textContent = "View Details";
-vcpkgPackagePage.id = "View details";
+vcpkgPackagePage.role = "button";
+vcpkgPackagePage.setAttribute("name","View Details");
 vcpkgPackagePage.tabIndex = "0";
 
 function renderPackageDetails(package, packageDiv, isCard) {
@@ -439,8 +440,8 @@ var renderPackages = function () {
 function showHideViewDetails(){
     if(this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
         this.textContent = "Hide Details"
-        this.name = "Hide Details";
-        this.id = "Hide Details";
+        this.setAttribute("name","Hide Details")
+        this.role = "button";
         this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
         this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
         this.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden");
@@ -448,8 +449,8 @@ function showHideViewDetails(){
         this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
     } else {
         this.textContent = "View Details"
-        this.name = "View Details";
-        this.id = "View Details";
+        this.setAttribute("name","View Details")
+        this.role = "button";
         this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
         this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
         this.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden");
