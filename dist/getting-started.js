@@ -17,11 +17,13 @@ function clickGetStartedTab(platform) {
     os = platform;
     var elems = document.getElementsByClassName(os);
     var e;
+    $('.selected').attr('aria-selected','false');
     $('.show').removeClass('show');
     $('.selected').removeClass('selected');
     var el = document.getElementById('gs-btn-' + os);
     if (el) {
         el.classList.add('selected');
+        el.setAttribute('aria-selected','true');
     }
     for (var i = 0; i < elems.length; i++) {
         e = elems[i];

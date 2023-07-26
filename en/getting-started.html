@@ -197,11 +197,11 @@
     <div class="header-text-getting-started">Get started with vcpkg</div>
     <div class="page">
       <nav class="left-side-getting-started">
-        <button class="tab-btn gs-tab-btn" id="gs-btn-windows" aria-label="Windows tab">Windows</button>
-        <button class="tab-btn gs-tab-btn" id="gs-btn-linux" aria-label="Linux tab">Linux</button>
-
-        <button class="tab-btn gs-tab-btn" id="gs-btn-mac" aria-label="MacOS tab" >MacOS</button>
-
+        <div role="tablist">
+          <button class="tab-btn gs-tab-btn" id="gs-btn-windows" aria-selected="true" aria-label="Windows tab" role="tab">Windows</button>
+          <button class="tab-btn gs-tab-btn" id="gs-btn-linux" aria-selected="false" aria-label="Linux tab" role="tab">Linux</button>
+          <button class="tab-btn gs-tab-btn" id="gs-btn-mac" aria-selected="false" aria-label="MacOS tab" role="tab">MacOS</button>
+        </div>
         <div class="prerequisite-list">
           <div class="text-heading">Prerequisites</div>
           <ul class="col-md-11 windows">

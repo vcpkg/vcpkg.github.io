@@ -228,7 +228,6 @@ var vcpkgPackagePage = document.createElement('div');
 vcpkgPackagePage.className = 'vcpkg-page-link';
 vcpkgPackagePage.textContent = "View Details";
 vcpkgPackagePage.role = "button";
-vcpkgPackagePage.setAttribute("name","View Details");
 vcpkgPackagePage.tabIndex = "0";
 
 function renderPackageDetails(package, packageDiv, isCard) {
@@ -238,6 +237,8 @@ function renderPackageDetails(package, packageDiv, isCard) {
     var detailFrag = document.createDocumentFragment();
     if (isCard) {
         var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
+        let viewpkgDetails = "View Details for ".concat(package.Name);
+        vcpkgPage.setAttribute("name",viewpkgDetails);
         // Package Name
         var nameDiv = parentNameDiv.cloneNode(true);
         nameDiv.textContent = package.Name + " |";
@@ -440,7 +441,9 @@ var renderPackages = function () {
 function showHideViewDetails(){
     if(this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
         this.textContent = "Hide Details"
-        this.setAttribute("name","Hide Details")
+        let nameValue = this.getAttribute("name"); 
+        let filteredText = nameValue.replace("View Details","Hide Details");
+        this.setAttribute("name",filteredText)
         this.role = "button";
         this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
         this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
@@ -448,8 +451,10 @@ function showHideViewDetails(){
         this.parentNode.getElementsByClassName("instructions")[0].classList.remove("hidden");
         this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
     } else {
-        this.textContent = "View Details"
-        this.setAttribute("name","View Details")
+        this.textContent = "View Details";
+        let nameValue = this.getAttribute("name"); 
+        let filteredText = nameValue.replace("Hide Details","View Details");
+        this.setAttribute("name",filteredText)
         this.role = "button";
         this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
         this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
