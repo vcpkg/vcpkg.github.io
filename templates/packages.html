@@ -24,8 +24,8 @@
   <div id="loadNavBar">{{{navbar}}}</div>
   <div id="banner"></div>
   <body>
-    <div class="header-text">Browse packages</div>
-    <main class="package-body" id="main">
+    <div class="header-text" tabindex="-1" role="main" id="main">Browse packages</div>
+    <div class="package-body">
       <div class="sort-bar">
         <div class="side-bar">
           <div class="pkg-search-bar">
@@ -55,7 +55,7 @@
         <div class="package-results bottom-border"></div>
         <div class="load-results" tabindex="0" name="Load more packages" role="button"></div>
       </div>
-    </main>
+    </div>
     <div id="loadFooter">{{{footer}}}</div>
   </body>
 </html>
