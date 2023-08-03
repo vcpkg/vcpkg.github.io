@@ -201,8 +201,8 @@
 </div>
   <div id="banner"></div>
   <body>
-    <div class="header-text">Browse packages</div>
-    <main class="package-body" id="main">
+    <div class="header-text" tabindex="-1" role="main" id="main">Browse packages</div>
+    <div class="package-body">
       <div class="sort-bar">
         <div class="side-bar">
           <div class="pkg-search-bar">
@@ -217,10 +217,10 @@
             />
             <span class="search-icon"></span>
           </div>
-          <div class="show-package-results-number total-packages"></div>
+          <div class="show-package-results-number total-packages" aria-live="polite"></div>
         </div>
         <div class="">
-          <select class="dropdown" id="sortBtn" onChange="sortPackages()" aria-label="option select">
+          <select class="dropdown" id="sortBtn" onChange="sortPackages()" aria-label="Sort by">
             <option value="Best Match" selected>Best Match</option>
             <option value="Alphabetical">Alphabetical</option>
             <!--<option value="GitHub Stars">GitHub Stars</option>-->
@@ -230,10 +230,10 @@
       </div>
       <div class="main-content">
         <div class="package-results bottom-border"></div>
-        <div class="load-results"></div>
+        <div class="load-results" tabindex="0" name="Load more packages" role="button"></div>
       </div>
-    </main>
-    <div id="loadFooter"><footer class="footer">
+    </div>
+    <div id="loadFooter"><div class="footer">
   <div class="footer-info">
     <div class="footer-left">
       <div class="footer-info-group">
@@ -315,7 +315,7 @@
   </div>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
-</footer>
+</div>
 </div>
   </body>
 </html>

@@ -32,6 +32,14 @@ $(document).ready(function () {
         handleLoadPkgMessage();
         loadTotalPackages();
     });
+    $(".load-results").on("keypress", function(event) {
+        if (event.keyCode == 13) {
+        renderMorePackages();
+        handleLoadPkgMessage();
+        loadTotalPackages();
+        return true;
+        }
+    });
 });
 
 function handleLoadPkgMessage() {
@@ -219,6 +227,8 @@ parentVersionDiv.className = 'package-version';
 var vcpkgPackagePage = document.createElement('div');
 vcpkgPackagePage.className = 'vcpkg-page-link';
 vcpkgPackagePage.textContent = "View Details";
+vcpkgPackagePage.role = "button";
+vcpkgPackagePage.tabIndex = "0";
 
 function renderPackageDetails(package, packageDiv, isCard) {
 
@@ -227,6 +237,8 @@ function renderPackageDetails(package, packageDiv, isCard) {
     var detailFrag = document.createDocumentFragment();
     if (isCard) {
         var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
+        let viewpkgDetails = "View Details for ".concat(package.Name);
+        vcpkgPage.setAttribute("name",viewpkgDetails);
         // Package Name
         var nameDiv = parentNameDiv.cloneNode(true);
         nameDiv.textContent = package.Name + " |";
@@ -255,22 +267,13 @@ function renderPackageDetails(package, packageDiv, isCard) {
     detailFrag.appendChild(vcpkgPage);
 
     vcpkgPage.addEventListener("click", function() {
-        if(this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
-            this.textContent = "Hide Details"
-            this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
-            this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
-            this.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden");
-            this.parentNode.getElementsByClassName("instructions")[0].classList.remove("hidden");
-            this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
-        } else {
-            this.textContent = "View Details"
-            this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
-            this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
-            this.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden");
-            this.parentNode.getElementsByClassName("instructions")[0].classList.add("hidden");
-            this.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
-            this.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
-            this.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
+        showHideViewDetails.call(this);
+    })
+
+    vcpkgPage.addEventListener("keypress", function(event) {
+        if (event.keyCode == 13) {
+            showHideViewDetails.call(this);
+            return true;
         }
     })
 
@@ -434,6 +437,35 @@ var renderPackages = function () {
     handleLoadPkgMessage();
     loadTotalPackages();
 };
+
+function showHideViewDetails(){
+    if(this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
+        this.textContent = "Hide Details"
+        let nameValue = this.getAttribute("name"); 
+        let filteredText = nameValue.replace("View Details","Hide Details");
+        this.setAttribute("name",filteredText)
+        this.role = "button";
+        this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
+        this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
+        this.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden");
+        this.parentNode.getElementsByClassName("instructions")[0].classList.remove("hidden");
+        this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
+    } else {
+        this.textContent = "View Details";
+        let nameValue = this.getAttribute("name"); 
+        let filteredText = nameValue.replace("Hide Details","View Details");
+        this.setAttribute("name",filteredText)
+        this.role = "button";
+        this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
+        this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
+        this.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden");
+        this.parentNode.getElementsByClassName("instructions")[0].classList.add("hidden");
+        this.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
+        this.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
+        this.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
+    }
+}
+
 function clearPackages() {
     var mainDiv = document.getElementsByClassName('package-results')[0];
     while (mainDiv.firstChild) {
