@@ -149,10 +149,9 @@ function mergeDataSources(portsData, baselineData, githubData) {
 }
 
 async function main(vcpkgDir, destDir) {
-    try{
     const starsFile = path.join(destDir, 'stars.json');
     const outputFile = path.join(destDir, 'output.json');
-    
+
     let portsData = await readPorts(vcpkgDir);
     let baselineData = await readBaseline(vcpkgDir);
     let githubData = await readStars(starsFile);
@@ -164,10 +163,6 @@ async function main(vcpkgDir, destDir) {
     outputJson['Size'] = mergedData.length;
     outputJson['Source'] = mergedData;
     await fs.writeFile(outputFile, JSON.stringify(outputJson, null, 2), 'utf-8');
-    }
-    catch (e) {
-        console.error(e); 
-      }
 }
 
 
