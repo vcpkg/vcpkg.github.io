@@ -26,7 +26,7 @@ async function getGitHubStars(octokit, url) {
 
     return response.data.stargazers_count;
 } catch (error) {
-        return 0;
+      console.log(error);
 }
 }
 
@@ -37,7 +37,6 @@ async function readHomepage(manifestFile) {
 }
 
 async function main(vcpkgDir, destDir, githubToken) {
-    try {
     if (githubToken.length == 0) {
         console.log('Skipping GitHub stars');
         return;
@@ -58,9 +57,6 @@ async function main(vcpkgDir, destDir, githubToken) {
     }
 
     await fs.writeFile(outputFile, JSON.stringify(results, null, 2), 'utf-8');
-} catch (error) {
-    console.log(error);
-}
 }
 
 
