@@ -23,9 +23,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
 
-      - name: Echo GitHUB Repository details
-        run: |
-            echo "GitHUB information value: $Github_TokenInfo"
       - name: Sync Package metadata
         run: scripts/syncMetadata.sh
         if: ${{ env.Enable_SyncPackage == 'true' }}
