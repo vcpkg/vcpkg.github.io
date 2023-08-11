@@ -5,7 +5,7 @@ set -e
 cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")"
 if [ ! -e ../vcpkg ]
 then
-    vcpkg_commit=d765306b074717dea8dc1c4723e1b025acb61c2d
+    vcpkg_commit=b73601a4616c21923cfb6f3a5263a9788165efbd
     git init ../vcpkg
     git -C ../vcpkg fetch --depth 1 https://github.com/Microsoft/vcpkg $vcpkg_commit
     git -C ../vcpkg checkout FETCH_HEAD
