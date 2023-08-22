@@ -1,8 +1,8 @@
-name: Site Validation
+name: Sync Package Metadata
 
 on:
-  pull_request:
-
+  schedule:
+    - cron: '0 0 * * 6'
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -24,11 +24,18 @@ jobs:
 
       - name: Sync Package metadata
         run: scripts/syncMetadata.sh
-        if: ${{ env.Enable_SyncPackage == 'true' }}
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
 
+      - name: Commit Results
+        run: |
+            git config --local user.email "actions@github.com"
+            git config --local user.name "GitHub Actions"
+            git add commit.txt
+            git commit -m 'Data Updated' || 'No changes to commit'
+            git push origin || echo "No changes to commit"
+            
       - name: Check for differences
         run: |
           if ! git diff --quiet; then

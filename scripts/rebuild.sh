@@ -3,9 +3,15 @@
 set -e
 
 cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")"
-if [ ! -e ../vcpkg ]
-then
-    vcpkg_commit=b73601a4616c21923cfb6f3a5263a9788165efbd
+if [ ! -e ../vcpkg ]; then
+    vcpkg_commit=d5b03c125afee1d9cef38f4cfa77e229400fb48a
+    filename="commit.txt"
+    if [ -f "$filename" ]; then
+        content=$(cat commit.txt)
+        if [ $vcpkg_commit != $content ]; then
+            vcpkg_commit=$content
+        fi
+    fi
     git init ../vcpkg
     git -C ../vcpkg fetch --depth 1 https://github.com/Microsoft/vcpkg $vcpkg_commit
     git -C ../vcpkg checkout FETCH_HEAD
