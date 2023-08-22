@@ -28,7 +28,8 @@ async function getGitHubStars(octokit, url) {
 
         return response.data.stargazers_count;
     } catch (error) {
-console.log(error);
+        console.log(error);
+        return 0;
     }
 }
 
