@@ -28,7 +28,7 @@ async function getGitHubStars(octokit, url) {
 
         return response.data.stargazers_count;
     } catch (error) {
-        console.log(error);
+        console.log("Error fetching stars for repo.");
         return 0;
     }
 }
