@@ -8,9 +8,7 @@ if [ ! -e ../vcpkg ]; then
     filename="commit.txt"
     if [ -f "$filename" ]; then
         content=$(cat commit.txt)
-        if [ "$vcpkg_commit" != "$content" ]; then
-            vcpkg_commit=$content
-        fi
+        vcpkg_commit=$content
     fi
     git init ../vcpkg
     git -C ../vcpkg fetch --depth 1 https://github.com/Microsoft/vcpkg $vcpkg_commit
