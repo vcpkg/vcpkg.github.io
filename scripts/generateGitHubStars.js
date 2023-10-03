@@ -6,24 +6,31 @@ const { Octokit } = require('@octokit/rest');
 const { exit } = require('process');
 
 async function getGitHubStars(octokit, url) {
-    const githubUrl = 'https://github.com/';
-    const regex = /^(?<owner>[a-zA-Z\d][a-zA-Z\d\.\-\_]+)\/(?<repo>[a-zA-Z\d][a-zA-Z\d\.\-\_]+).*$/;
+    try {
 
-    if (!url.startsWith(githubUrl)) return 0;
 
-    const [_, owner, repo] = regex.exec(url.substr(githubUrl.length)) ?? [];
-    if (!owner || !repo) {
-        console.log(`Failed to get stars for ${url}\nNot a valid GitHub repository URL.`);
+        const githubUrl = 'https://github.com/';
+        const regex = /^(?<owner>[a-zA-Z\d][a-zA-Z\d\.\-\_]+)\/(?<repo>[a-zA-Z\d][a-zA-Z\d\.\-\_]+).*$/;
+
+        if (!url.startsWith(githubUrl)) return 0;
+
+        const [_, owner, repo] = regex.exec(url.substr(githubUrl.length)) ?? [];
+        if (!owner || !repo) {
+            console.log(`Failed to get stars for ${url}\nNot a valid GitHub repository URL.`);
+            return 0;
+        }
+
+        const response = await octokit.rest.repos.get({ owner, repo });
+        if (response.status != 200) {
+            console.log(`Failed to get stars for ${url}`);
+            return 0;
+        }
+
+        return response.data.stargazers_count;
+    } catch (error) {
+        console.log("Error fetching stars for repo.");
         return 0;
     }
-
-    const response = await octokit.rest.repos.get({ owner, repo });
-    if (response.status != 200) {
-        console.log(`Failed to get stars for ${url}`);
-        return 0;
-    }
-
-    return response.data.stargazers_count;
 }
 
 async function readHomepage(manifestFile) {
