@@ -71,6 +71,7 @@ function toggleNavIcon() {
     document.getElementsByClassName("navbar-toggler-icon")[0].parentElement.classList.toggle("hidden");
     document.getElementsByClassName("mobile-nav")[0].classList.toggle("hidden");
     document.getElementById("vcpkg-nav-logo").classList.toggle("vcpkg-nav-color");
+    document.getElementsByClassName("navbar-toggler-icon")[0].parentElement.focus();
 }
 
 function toggleDocsOutlineMobile() {
