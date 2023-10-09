@@ -20,9 +20,6 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
-          
-      - name: Sync Package Metadata
-        run: scripts/syncMetadata.sh
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
