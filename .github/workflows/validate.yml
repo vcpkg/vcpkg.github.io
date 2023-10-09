@@ -34,7 +34,7 @@ jobs:
             git add commit.txt
             git commit -m 'Data Updated' ||  echo 'No changes to commit'
             git push origin || echo "No changes to commit"
-
+            
       - name: Check for differences
         run: |
           if ! git diff --quiet; then
