@@ -23,7 +23,7 @@ jobs:
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
-        
+
       - name: Check for differences
         run: |
           if ! git diff --quiet; then
