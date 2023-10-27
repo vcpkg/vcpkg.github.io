@@ -3,12 +3,6 @@ name: Site Validation
 on:
   pull_request:
 
-permissions:
-  pull-requests: write
-  issues: write
-  repository-projects: write
-  contents: write
-  
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -19,11 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          repository: vcpkg/vcpkg.github.io.git
-          ref: main # or the branch you want to work   with
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
 
       - name: Restore NPM cache
         uses: actions/cache@v3

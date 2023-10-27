@@ -3,6 +3,13 @@ name: Sync Package Metadata
 on:
   schedule:
     - cron: '0 9 * * *'
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  contents: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -10,6 +17,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          repository: vcpkg/vcpkg.github.io.git
+          ref: main 
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Restore NPM cache
         uses: actions/cache@v3
@@ -30,5 +41,6 @@ jobs:
             git config --local user.name "GitHub Actions"
             git add scripts/commit.txt
             git commit -m 'Data Updated' ||  echo 'No changes to commit'
-            git push origin || echo "Error While pushing the changes to origin"
+            git fetch origin main
+            git push origin HEAD:main || echo "Error occurred while push to origin"
             
