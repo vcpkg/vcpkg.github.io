@@ -1,8 +1,7 @@
 name: Sync Package Metadata
 
 on:
-  schedule:
-    - cron: '0 9 * * *'
+  workflow_dispatch:
 
 permissions:
   pull-requests: write
@@ -46,7 +45,7 @@ jobs:
             git config --local user.name "GitHub Actions"
             git add .
             git commit -m 'Update package metadata and website content' || echo 'No changes to commit'
-            git push origin HEAD
+            git push origin HEAD  || echo "Error occurred while push to origin"
       
       - name: Open Pull Request
         uses: actions/github-script@v6
