@@ -29,18 +29,36 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
 
+      - name: Create new branch for changes
+        run: |
+            new_branch="update-metadata-${{ github.run_id }}"
+            git checkout -b "$new_branch"
+
       - name: Sync Package metadata
         run: scripts/syncMetadata.sh
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
 
-      - name: Commit Results
+      - name: Commit and Push changes
         run: |
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Actions"
-            git add scripts/commit.txt
-            git commit -m 'Data Updated' ||  echo 'No changes to commit'
-            git fetch origin main
-            git push origin HEAD:main || echo "Error occurred while push to origin"
-            
+            git add .
+            git commit -m 'Update package metadata and website content' || echo 'No changes to commit'
+            git push origin HEAD
+      
+      - name: Open Pull Request
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `
+              {
+                title: "Update Package Metadata",
+                body: "This PR was automatically created by a GitHub Action triggered by a schedule. It updates the package metadata and website content.",
+                head: "${{ github.actor }}:${{ env.new_branch }}",
+                base: "main"
+              }
+            `;
+            github.rest.pulls.create(output);
