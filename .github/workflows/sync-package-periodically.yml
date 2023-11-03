@@ -32,6 +32,7 @@ jobs:
         run: |
             new_branch="update-metadata-${{ github.run_id }}"
             git checkout -b "$new_branch"
+            echo "new_branch=$(git branch --show-current)" >> $GITHUB_ENV
 
       - name: Sync Package metadata
         run: scripts/syncMetadata.sh
@@ -52,12 +53,18 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `
-              {
+            const repositoryFullName = process.env.GITHUB_REPOSITORY; // 'owner/repo'
+            const [owner, repo] = repositoryFullName.split('/');
+            const actor = process.env.GITHUB_ACTOR;
+            const newBranch = process.env.NEW_BRANCH;
+            const output = {
+                owner: owner,
+                repo: repo,
                 title: "Update Package Metadata",
                 body: "This PR was automatically created by a GitHub Action triggered by a schedule. It updates the package metadata and website content.",
-                head: "${{ github.actor }}:${{ env.new_branch }}",
+                head: `${actor}:${newBranch}`,
                 base: "main"
-              }
-            `;
-            github.rest.pulls.create(output);
+              };
+            await github.rest.pulls.create(output);
+        env:
+          NEW_BRANCH:  ${{ env.new_branch }}
