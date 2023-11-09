@@ -411,8 +411,14 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, compatibility, website)
     cardFrag.appendChild(renderPackageDetails(package, packageDiv));
+
+    // Wrap package card in an anchor element to link to the per-package page
+    let cardLink = document.createElement('a');
+    cardLink.setAttribute('href', 'package/' + package.Name);
+    cardLink.appendChild(cardFrag);
+
     // Add the package card to the page
-    packageDiv.appendChild(cardFrag);
+    packageDiv.appendChild(cardLink);
     // Parent div to hold all the package cards
     mainDiv.appendChild(packageDiv);
 }

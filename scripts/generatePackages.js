@@ -2,7 +2,11 @@
 
 const fs = require('fs/promises');
 const path = require('path');
+const Mustache = require('mustache');
 const { exit } = require('process');
+const rootDir = path.dirname(__dirname);
+const packagePagesDir = rootDir + "/en/package"
+const templatesDir = rootDir + "/templates"
 
 function makeManifestKeyReadable(key) {
     const versionKeys = {
@@ -163,6 +167,32 @@ async function main(vcpkgDir, destDir) {
     outputJson['Size'] = mergedData.length;
     outputJson['Source'] = mergedData;
     await fs.writeFile(outputFile, JSON.stringify(outputJson, null, 2), 'utf-8');
+
+    await fs.mkdir(packagePagesDir, { recursive: true });
+
+    let view = {
+        navbar: await fs.readFile(templatesDir + "/navbar.html"),
+        footer: await fs.readFile(templatesDir + "/footer.html"),
+        commonhead: await fs.readFile(templatesDir + "/commonhead.html"),
+    };
+
+    const template = await fs.readFile(templatesDir + "/perpackage.html", 'utf-8');
+
+    var promises = [];
+
+    for (const name in portsData) {
+        const data = portsData[name];
+
+        view.name = name;
+        view.description = data.Description;
+
+        const result = Mustache.render(template, view);
+
+        const dst = packagePagesDir + "/" + name + ".html";
+        promises.push(fs.writeFile(dst, result, 'utf-8'));
+    }
+    await Promise.all(promises);
+    console.log("Generated " + Object.keys(portsData).length + " package pages.");
 }
 
 
