@@ -194,10 +194,56 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package soci</h1></div>
+    <div class="header-text"><h1>Package soci | 4.0.3#1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        SOCI database access library
+        <p><b>Description:</b> SOCI database access library</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>boost - Integration with Boost
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="boost-date-time">boost-date-time</a></li>
+                <li><a href="boost-fusion">boost-fusion</a></li>
+                <li><a href="boost-optional">boost-optional</a></li>
+                <li><a href="boost-preprocessor">boost-preprocessor</a></li>
+                <li><a href="boost-tuple">boost-tuple</a></li>
+              </ul>
+              </li>
+            <li>mysql - Build mysql backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libmysql">libmysql</a></li>
+              </ul>
+              </li>
+            <li>odbc - Build odbc backend <i>(supports: !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>postgresql - Build postgresql backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libpq">libpq</a></li>
+              </ul>
+              </li>
+            <li>sqlite3 - Build sqlite3 backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="sqlite3">sqlite3</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

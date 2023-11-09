@@ -194,10 +194,95 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package skia</h1></div>
+    <div class="header-text"><h1>Package skia | 0.36.0#10</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Skia is an open source 2D graphics library which provides common APIs that work across a variety of hardware and software platforms.,It serves as the graphics engine for Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.,Skia is sponsored and managed by Google, but is available for use by anyone under the BSD Free Software License. While engineering of the core components is done by the Skia development team, we consider contributions from any source.
+        <p><b>Description:</b> Skia is an open source 2D graphics library which provides common APIs that work across a variety of hardware and software platforms.,It serves as the graphics engine for Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.,Skia is sponsored and managed by Google, but is available for use by anyone under the BSD Free Software License. While engineering of the core components is done by the Skia development team, we consider contributions from any source.</p>
+        <p><b>Supports:</b> !(windows &amp; arm &amp; !arm64)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="expat">expat</a></li>
+            <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
+            <li><a href="libpng">libpng</a></li>
+            <li><a href="libwebp">libwebp</a></li>
+            <li><a href="opengl">opengl</a> <i>(platform: windows &amp; !arm64 &amp; !uwp)</i></li>
+            <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-gn">vcpkg-gn</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-tool-gn">vcpkg-tool-gn</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>dawn - dawn support for skia
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="vulkan-headers">vulkan-headers</a></li>
+              </ul>
+              </li>
+            <li>default-features - Default feature configuration
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="skia">skia</a> <i>(platform: uwp)</i></li>
+                <li><a href="skia">skia</a> <i>(platform: linux)</i></li>
+                <li><a href="skia">skia</a> <i>(platform: !uwp)</i></li>
+                <li><a href="skia">skia</a> <i>(platform: !(windows | osx | ios))</i></li>
+              </ul>
+              </li>
+            <li>direct3d - Direct3D support for skia <i>(supports: windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>fontconfig - Fontconfig support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="fontconfig">fontconfig</a></li>
+                <li><a href="skia">skia</a></li>
+              </ul>
+              </li>
+            <li>freetype - Freetype support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="dlfcn-win32">dlfcn-win32</a> <i>(platform: windows)</i></li>
+                <li><a href="freetype">freetype</a></li>
+              </ul>
+              </li>
+            <li>gl - OpenGL support for skia <i>(supports: !(windows &amp; arm) &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opengl-registry">opengl-registry</a></li>
+              </ul>
+              </li>
+            <li>harfbuzz - Harfbuzz support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="harfbuzz">harfbuzz</a></li>
+              </ul>
+              </li>
+            <li>icu - Use icu
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="icu">icu</a></li>
+              </ul>
+              </li>
+            <li>metal - Metal support for skia <i>(supports: ios, osx)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>vulkan - Vulkan support for skia
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="vulkan-headers">vulkan-headers</a></li>
+                <li><a href="vulkan-memory-allocator">vulkan-memory-allocator</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

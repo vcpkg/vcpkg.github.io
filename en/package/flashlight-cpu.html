@@ -194,10 +194,71 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package flashlight-cpu</h1></div>
+    <div class="header-text"><h1>Package flashlight-cpu | 0.3#5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A C++ standalone library for machine learning. CPU backend.
+        <p><b>Description:</b> A C++ standalone library for machine learning. CPU backend.</p>
+        <p><b>Supports:</b> !(windows | osx)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>asr - flashlight asr app
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="flashlight-cpu">flashlight-cpu</a></li>
+                <li><a href="gflags">gflags</a></li>
+                <li><a href="libsndfile">libsndfile</a></li>
+              </ul>
+              </li>
+            <li>fl - flashlight core autograd and neural net library
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="arrayfire">arrayfire</a></li>
+                <li><a href="cereal">cereal</a></li>
+                <li><a href="gloo">gloo</a></li>
+                <li><a href="onednn">onednn</a></li>
+                <li><a href="openmpi">openmpi</a></li>
+                <li><a href="stb">stb</a></li>
+              </ul>
+              </li>
+            <li>imgclass - flashlight image classification app
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="flashlight-cpu">flashlight-cpu</a></li>
+                <li><a href="gflags">gflags</a></li>
+              </ul>
+              </li>
+            <li>lib - flashlight libraries
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="fftw3">fftw3</a></li>
+                <li><a href="intel-mkl">intel-mkl</a></li>
+                <li><a href="kenlm">kenlm</a></li>
+              </ul>
+              </li>
+            <li>lm - flashlight lm app
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="flashlight-cpu">flashlight-cpu</a></li>
+                <li><a href="gflags">gflags</a></li>
+              </ul>
+              </li>
+            <li>objdet - flashlight object detection app
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="flashlight-cpu">flashlight-cpu</a></li>
+                <li><a href="gflags">gflags</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

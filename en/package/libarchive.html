@@ -194,10 +194,72 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package libarchive</h1></div>
+    <div class="header-text"><h1>Package libarchive | 3.6.2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Library for reading and writing streaming archives
+        <p><b>Description:</b> Library for reading and writing streaming archives</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>bzip2 - BZip2 support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="bzip2">bzip2</a></li>
+              </ul>
+              </li>
+            <li>crypto - Support for cryptographic features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mbedtls">mbedtls</a> <i>(platform: osx)</i></li>
+                <li><a href="openssl">openssl</a> <i>(platform: !osx)</i></li>
+              </ul>
+              </li>
+            <li>libxml2 - Libxml2 support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libxml2">libxml2</a></li>
+              </ul>
+              </li>
+            <li>lz4 - Lz4 support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="lz4">lz4</a></li>
+              </ul>
+              </li>
+            <li>lzma - Lzma support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="liblzma">liblzma</a></li>
+              </ul>
+              </li>
+            <li>lzo - Lzo support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="lzo">lzo</a></li>
+              </ul>
+              </li>
+            <li>openssl - Deprecated. Use feature crypto instead.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libarchive">libarchive</a> <i>(platform: !osx)</i></li>
+              </ul>
+              </li>
+            <li>zstd - Zstd support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

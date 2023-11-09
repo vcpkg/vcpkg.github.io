@@ -194,10 +194,41 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package blend2d</h1></div>
+    <div class="header-text"><h1>Package blend2d | 2023-06-16#1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Beta 2D Vector Graphics Powered by a JIT Compiler
+        <p><b>Description:</b> Beta 2D Vector Graphics Powered by a JIT Compiler</p>
+        <p><b>Supports:</b> !uwp &amp; !wasm32</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>jit - Default feature. Enables jit pipeline compilation.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="blend2d">blend2d</a> <i>(platform: windows)</i></li>
+              </ul>
+              </li>
+            <li>logging - Default feature. Enables logging.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="blend2d">blend2d</a></li>
+              </ul>
+              </li>
+            <li>tls - Default feature. Enables use of thread_local feature. Disable for platforms where thread local storage is expensive or not supported.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="blend2d">blend2d</a> <i>(platform: windows)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

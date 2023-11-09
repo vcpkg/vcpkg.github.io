@@ -194,10 +194,39 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package rtaudio</h1></div>
+    <div class="header-text"><h1>Package rtaudio | 2021-11-16#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A set of C++ classes that provide a common API for realtime audio input&#x2F;output across Linux (native ALSA, JACK, PulseAudio and OSS), Macintosh OS X (CoreAudio and JACK), and Windows (DirectSound, ASIO and WASAPI) operating systems.
+        <p><b>Description:</b> A set of C++ classes that provide a common API for realtime audio input&#x2F;output across Linux (native ALSA, JACK, PulseAudio and OSS), Macintosh OS X (CoreAudio and JACK), and Windows (DirectSound, ASIO and WASAPI) operating systems.</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>alsa - Build ALSA API <i>(supports: linux)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="alsa">alsa</a></li>
+              </ul>
+              </li>
+            <li>asio - Build with ASIO backend <i>(supports: windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>pulse - Build with PulseAudio backend <i>(supports: linux)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

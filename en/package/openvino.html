@@ -194,10 +194,94 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package openvino</h1></div>
+    <div class="header-text"><h1>Package openvino | 2023.1.0#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Intel® Distribution of OpenVINO™ toolkit is an open-source toolkit for optimizing ,and deploying AI inference. It can be used to develop applications and solutions based ,on deep learning tasks, such as: emulation of human vision, automatic speech recognition, ,natural language processing, recommendation systems, etc. It provides high-performance ,and rich deployment options, from edge to cloud
+        <p><b>Description:</b> Intel® Distribution of OpenVINO™ toolkit is an open-source toolkit for optimizing ,and deploying AI inference. It can be used to develop applications and solutions based ,on deep learning tasks, such as: emulation of human vision, automatic speech recognition, ,natural language processing, recommendation systems, etc. It provides high-performance ,and rich deployment options, from edge to cloud</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="pkgconf">pkgconf</a> <i>(host: true)</i></li>
+            <li><a href="pugixml">pugixml</a></li>
+            <li><a href="tbb">tbb</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-get-python-packages">vcpkg-get-python-packages</a> <i>(host: true)</i></li>
+            <li><a href="xbyak">xbyak</a> <i>(platform: !(arm | uwp))</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>auto - Enables Auto plugin for inference
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>auto-batch - Enables Auto Batch plugin for inference, useful for throughput mode
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>cpu - Enables CPU plugin for inference <i>(supports: !(windows &amp; arm))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>gpu - Enables GPU plugin for inference <i>(supports: x64 &amp; !(osx | uwp) &amp; !static)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencl">opencl</a></li>
+              </ul>
+              </li>
+            <li>hetero - Enables Hetero plugin for inference
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>ir - Enables IR frontend for reading models in OpenVINO IR format
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>onnx - Enables ONNX frontend for reading models in ONNX format
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="onnx">onnx</a></li>
+                <li><a href="protobuf">protobuf</a></li>
+                <li><a href="protobuf">protobuf</a> <i>(host: true)</i></li>
+              </ul>
+              </li>
+            <li>paddle - Enables PaddlePaddle frontend for reading models in PaddlePaddle format
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="protobuf">protobuf</a></li>
+                <li><a href="protobuf">protobuf</a> <i>(host: true)</i></li>
+              </ul>
+              </li>
+            <li>pytorch - Enables PyTorch frontend to convert models in PyTorch format
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tensorflow - Enables TensorFlow frontend for reading models in TensorFlow format
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="protobuf">protobuf</a></li>
+                <li><a href="protobuf">protobuf</a> <i>(host: true)</i></li>
+                <li><a href="snappy">snappy</a></li>
+              </ul>
+              </li>
+            <li>tensorflow-lite - Enables TensorFlow Lite frontend for reading models in TensorFlow Lite format
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="flatbuffers">flatbuffers</a></li>
+                <li><a href="flatbuffers">flatbuffers</a> <i>(host: true)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

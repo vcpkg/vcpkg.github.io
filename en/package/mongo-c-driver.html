@@ -194,10 +194,51 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package mongo-c-driver</h1></div>
+    <div class="header-text"><h1>Package mongo-c-driver | 1.24.3</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Client library written in C for MongoDB.
+        <p><b>Description:</b> Client library written in C for MongoDB.</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="libbson">libbson</a></li>
+            <li><a href="mongo-c-driver">mongo-c-driver</a> <i>(platform: !windows &amp; !osx &amp; !ios)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>icu - Enable ICU support, necessary to use non-ASCII usernames or passwords
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="icu">icu</a></li>
+              </ul>
+              </li>
+            <li>openssl - Use OpenSSL (even on Windows or Apple systems)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>snappy - Enables snappy compressor support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="snappy">snappy</a></li>
+              </ul>
+              </li>
+            <li>zstd - Enables zstd compressor support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="pkgconf">pkgconf</a> <i>(host: true)</i></li>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

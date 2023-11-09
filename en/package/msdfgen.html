@@ -194,10 +194,49 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package msdfgen</h1></div>
+    <div class="header-text"><h1>Package msdfgen | 1.10.0#1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Multi-channel signed distance field generator
+        <p><b>Description:</b> Multi-channel signed distance field generator</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>extensions - Extended functionality that depends on external libraries - loading fonts and SVG files, generating PNG images.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="freetype">freetype</a></li>
+                <li><a href="libpng">libpng</a></li>
+                <li><a href="tinyxml2">tinyxml2</a></li>
+              </ul>
+              </li>
+            <li>geometry-preprocessing - Preprocessing of non-compliant vector geometry via the Skia library.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="msdfgen">msdfgen</a></li>
+                <li><a href="skia">skia</a></li>
+              </ul>
+              </li>
+            <li>openmp - Build with OpenMP support for multi-threaded code.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tools - Generates an executable inside the tools folder. <i>(supports: !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="msdfgen">msdfgen</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

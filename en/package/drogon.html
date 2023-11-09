@@ -194,10 +194,67 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package drogon</h1></div>
+    <div class="header-text"><h1>Package drogon | 1.8.4#4</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A C++14&#x2F;17 based HTTP web application framework running on Linux&#x2F;macOS&#x2F;Unix&#x2F;Windows
+        <p><b>Description:</b> A C++14&#x2F;17 based HTTP web application framework running on Linux&#x2F;macOS&#x2F;Unix&#x2F;Windows</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="brotli">brotli</a></li>
+            <li><a href="jsoncpp">jsoncpp</a></li>
+            <li><a href="libuuid">libuuid</a> <i>(platform: !windows &amp; !osx)</i></li>
+            <li><a href="trantor">trantor</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>ctl - Build drogon_ctl tool.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>mysql - Support reading and writing from&#x2F;to MySQL databases.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="drogon">drogon</a></li>
+                <li><a href="libmariadb">libmariadb</a> <i>(platform: osx)</i></li>
+                <li><a href="libmariadb">libmariadb</a> <i>(platform: !osx)</i></li>
+              </ul>
+              </li>
+            <li>orm - Build with object-relational mapping support.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>postgres - Support reading and writing from&#x2F;to Postgres databases.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="drogon">drogon</a></li>
+                <li><a href="libpq">libpq</a></li>
+              </ul>
+              </li>
+            <li>redis - Support reading and writing from&#x2F;to Redis databases.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="drogon">drogon</a></li>
+                <li><a href="hiredis">hiredis</a></li>
+              </ul>
+              </li>
+            <li>sqlite3 - Support reading and writing from&#x2F;to SQLite databases.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="drogon">drogon</a></li>
+                <li><a href="sqlite3">sqlite3</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

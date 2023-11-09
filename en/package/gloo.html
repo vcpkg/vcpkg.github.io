@@ -194,10 +194,42 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package gloo</h1></div>
+    <div class="header-text"><h1>Package gloo | 20201203#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Collective communications library with various primitives for multi-machine training.
+        <p><b>Description:</b> Collective communications library with various primitives for multi-machine training.</p>
+        <p><b>Supports:</b> x64 &amp; linux</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cuda - for CUDA aware algorithms
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+                <li><a href="nccl">nccl</a></li>
+              </ul>
+              </li>
+            <li>mpi - for coordinating machine rendezvous through MPI
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openmpi">openmpi</a></li>
+              </ul>
+              </li>
+            <li>redis - for coordinating machine rendezvous through Redis
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="hiredis">hiredis</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

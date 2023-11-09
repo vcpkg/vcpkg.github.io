@@ -194,10 +194,144 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package curl</h1></div>
+    <div class="header-text"><h1>Package curl | 8.3.0</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A library for transferring data with URLs
+        <p><b>Description:</b> A library for transferring data with URLs</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>brotli - brotli support (brotli)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="brotli">brotli</a></li>
+              </ul>
+              </li>
+            <li>c-ares - c-ares support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="c-ares">c-ares</a></li>
+              </ul>
+              </li>
+            <li>http2 - HTTP2 support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+                <li><a href="nghttp2">nghttp2</a></li>
+              </ul>
+              </li>
+            <li>idn - Default IDN support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a> <i>(platform: windows)</i></li>
+                <li><a href="curl">curl</a> <i>(platform: !windows)</i></li>
+              </ul>
+              </li>
+            <li>idn2 - idn2 support (libidn2)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libidn2">libidn2</a></li>
+              </ul>
+              </li>
+            <li>mbedtls - SSL support (mbedTLS)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mbedtls">mbedtls</a></li>
+              </ul>
+              </li>
+            <li>non-http - Enables protocols beyond HTTP&#x2F;HTTPS&#x2F;HTTP2
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>openssl - SSL support (OpenSSL)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>schannel - SSL support (Secure Channel) <i>(supports: windows &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+              </ul>
+              </li>
+            <li>sectransp - SSL support (sectransp) <i>(supports: osx | ios)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>ssh - SSH support via libssh2
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+                <li><a href="curl">curl</a></li>
+                <li><a href="libssh2">libssh2</a></li>
+              </ul>
+              </li>
+            <li>ssl - Default SSL backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a> <i>(platform: osx | ios)</i></li>
+                <li><a href="curl">curl</a> <i>(platform: (windows &amp; !uwp) | mingw)</i></li>
+                <li><a href="curl">curl</a> <i>(platform: (uwp | !windows) &amp; !(osx | ios) &amp; !mingw)</i></li>
+              </ul>
+              </li>
+            <li>sspi - SSPI support <i>(supports: windows &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tool - Builds curl executable <i>(supports: !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>websockets - WebSocket support (experimental)
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>winidn - WinIDN support <i>(supports: windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>winldap - LDAP support (WinLDAP). This feature does not include LDAPS support. <i>(supports: windows &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+              </ul>
+              </li>
+            <li>winssl - Legacy name for schannel <i>(supports: windows &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+              </ul>
+              </li>
+            <li>wolfssl - SSL support (wolfSSL)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="wolfssl">wolfssl</a></li>
+              </ul>
+              </li>
+            <li>zstd - ZStandard support (zstd)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

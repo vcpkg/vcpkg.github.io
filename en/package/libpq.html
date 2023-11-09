@@ -194,10 +194,115 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package libpq</h1></div>
+    <div class="header-text"><h1>Package libpq | 15.3#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        The official database access API of postgresql
+        <p><b>Description:</b> The official database access API of postgresql</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="libpq">libpq</a> <i>(platform: osx)</i></li>
+            <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</a> <i>(host: true)</i> <i>(platform: windows &amp; !mingw)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>all - Build all supported features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libpq">libpq</a></li>
+                <li><a href="libpq">libpq</a> <i>(platform: osx)</i></li>
+                <li><a href="libpq">libpq</a> <i>(platform: !osx)</i></li>
+                <li><a href="libpq">libpq</a> <i>(platform: !windows)</i></li>
+                <li><a href="libpq">libpq</a> <i>(platform: !android &amp; !mingw)</i></li>
+                <li><a href="libpq">libpq</a> <i>(platform: windows &amp; !mingw &amp; !arm)</i></li>
+              </ul>
+              </li>
+            <li>bonjour - Build with Bonjour support <i>(supports: osx)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>client - Build all client tools and libraries
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>icu - Build with support for the ICU library
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="icu">icu</a></li>
+              </ul>
+              </li>
+            <li>lz4 - Use lz4
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="lz4">lz4</a></li>
+              </ul>
+              </li>
+            <li>nls - Native Language Support <i>(supports: !osx)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="gettext">gettext</a></li>
+                <li><a href="gettext">gettext</a> <i>(host: true)</i> <i>(platform: !windows, mingw)</i></li>
+              </ul>
+              </li>
+            <li>openssl - support for encrypted client connections and random number generation on platforms that do not have &quot;&#x2F;dev&#x2F;urandom&quot; (except windows)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>python - build the PL&#x2F;Python server programming language
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libpq">libpq</a></li>
+                <li><a href="python3">python3</a></li>
+              </ul>
+              </li>
+            <li>readline - Use readline <i>(supports: !windows, mingw)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="readline">readline</a></li>
+              </ul>
+              </li>
+            <li>tcl - build the PL&#x2F;Tcl procedural language <i>(supports: windows &amp; !mingw)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libpq">libpq</a></li>
+                <li><a href="tcl">tcl</a></li>
+              </ul>
+              </li>
+            <li>xml - Build with libxml
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libxml2">libxml2</a></li>
+              </ul>
+              </li>
+            <li>xslt - Build with libxslt
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libpq">libpq</a></li>
+                <li><a href="libxslt">libxslt</a></li>
+              </ul>
+              </li>
+            <li>zlib - Use zlib
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zlib">zlib</a></li>
+              </ul>
+              </li>
+            <li>zstd - Use zstd
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

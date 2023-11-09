@@ -194,10 +194,54 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package osgearth</h1></div>
+    <div class="header-text"><h1>Package osgearth | 3.4#1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        osgEarth - Dynamic map generation toolkit for OpenSceneGraph Copyright 2021 Pelican Mapping.
+        <p><b>Description:</b> osgEarth - Dynamic map generation toolkit for OpenSceneGraph Copyright 2021 Pelican Mapping.</p>
+        <p><b>Supports:</b> !(arm | x86 | wasm32 | xbox)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="basisu">basisu</a></li>
+            <li><a href="blosc">blosc</a></li>
+            <li><a href="cfitsio">cfitsio</a></li>
+            <li><a href="draco">draco</a></li>
+            <li><a href="geos">geos</a></li>
+            <li><a href="glew">glew</a></li>
+            <li><a href="libwebp">libwebp</a></li>
+            <li><a href="libzip">libzip</a></li>
+            <li><a href="opengl">opengl</a></li>
+            <li><a href="osg">osg</a></li>
+            <li><a href="protobuf">protobuf</a></li>
+            <li><a href="pthreads">pthreads</a></li>
+            <li><a href="sqlite3">sqlite3</a></li>
+            <li><a href="tinyxml">tinyxml</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>blend2d - Enable Blend2D support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="blend2d">blend2d</a></li>
+              </ul>
+              </li>
+            <li>default-features - Platform-dependent default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="osgearth">osgearth</a> <i>(platform: !(arm &amp; windows) &amp; !uwp &amp; !wasm32)</i></li>
+              </ul>
+              </li>
+            <li>tools - Build tools
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

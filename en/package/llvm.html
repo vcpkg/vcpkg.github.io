@@ -194,10 +194,325 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package llvm</h1></div>
+    <div class="header-text"><h1>Package llvm | 15.0.7#6</h1></div>
     <div class="package-body">
       <div class="main-content">
-        The LLVM Compiler Infrastructure.
+        <p><b>Description:</b> The LLVM Compiler Infrastructure.</p>
+        <p><b>Supports:</b> !uwp &amp; !(arm &amp; windows)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="atlmfc">atlmfc</a> <i>(platform: windows &amp; !mingw)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>bolt - BOLT is a post-link optimizer developed to speed up large applications.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>clang - Include C Language Family Front-end.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>clang-tools-extra - Include Clang tools.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>compiler-rt - Include compiler&#39;s runtime libraries.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>default-options - Build with default options.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>default-targets - Build with platform-specific default targets.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+                <li><a href="llvm">llvm</a> <i>(platform: arm64)</i></li>
+                <li><a href="llvm">llvm</a> <i>(platform: x86 | x64)</i></li>
+                <li><a href="llvm">llvm</a> <i>(platform: arm &amp; !arm64)</i></li>
+                <li><a href="llvm">llvm</a> <i>(platform: !x86 &amp; !x64 &amp; !arm &amp; !arm64)</i></li>
+              </ul>
+              </li>
+            <li>disable-assertions - Build LLVM without assertions.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>disable-clang-static-analyzer - Build without static analyzer.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-abi-breaking-checks - Build LLVM with LLVM_ABI_BREAKING_CHECKS&#x3D;FORCE_ON.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-assertions - Build LLVM with assertions.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-bindings - Build bindings.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-eh - Build LLVM with exception handler.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>enable-ffi - Build LLVM with FFI.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libffi">libffi</a></li>
+              </ul>
+              </li>
+            <li>enable-ios - Build compiler-rt for iOS SDK.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>enable-libxml2 - Build with LibXml2.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libxml2">libxml2</a></li>
+              </ul>
+              </li>
+            <li>enable-mlir-python-bindings - Build MLIR Python bindings. <i>(supports: !(windows &amp; static))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+                <li><a href="pybind11">pybind11</a></li>
+                <li><a href="python3">python3</a></li>
+              </ul>
+              </li>
+            <li>enable-rtti - Build LLVM with run-time type information.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-terminfo - Use terminfo database if available.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-threads - Use threads if available.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>enable-zlib - Build with ZLib.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zlib">zlib</a></li>
+              </ul>
+              </li>
+            <li>enable-zstd - Build with zstd.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+            <li>flang - Include Fortran front end.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>libclc - Include OpenCL library.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>libcxx - Include libcxx library.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>libcxxabi - Include libcxxabi library.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>libunwind - Include libunwind library.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>lld - Include LLVM linker.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>lldb - Include LLVM debugger.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>mlir - Include MLIR (Multi-Level IR Compiler Framework) project.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>openmp - Include LLVM OpenMP libraries.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>polly - Include Polly (Polyhedral optimizations for LLVM) project.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>pstl - Include pstl (Parallel STL) library.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-aarch64 - Build with AArch64 backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-all - Build with all backends.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>target-amdgpu - Build with AMDGPU backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-arm - Build with ARM backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-avr - Build with AVR backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-bpf - Build with BPF backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-hexagon - Build with Hexagon backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-lanai - Build with Lanai backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-mips - Build with Mips backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-msp430 - Build with MSP430 backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-nvptx - Build with NVPTX backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-powerpc - Build with PowerPC backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-riscv - Build with RISC-V backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-sparc - Build with Sparc backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-spirv - Build with Spriv backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-systemz - Build with SystemZ backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-ve - Build with VE backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-webassembly - Build with WebAssembly backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-x86 - Build with X86 backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>target-xcore - Build with XCore backend.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tools - Build LLVM tools.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+              </ul>
+              </li>
+            <li>utils - Build LLVM utils.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

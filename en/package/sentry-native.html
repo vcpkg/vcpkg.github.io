@@ -194,10 +194,35 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package sentry-native</h1></div>
+    <div class="header-text"><h1>Package sentry-native | 0.6.5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Sentry SDK for C, C++ and native applications.
+        <p><b>Description:</b> Sentry SDK for C, C++ and native applications.</p>
+        <p><b>Supports:</b> osx | linux | (!arm &amp; !uwp)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>backend - Enables the platform-specific backend.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zlib">zlib</a> <i>(platform: !android &amp; !ios)</i></li>
+              </ul>
+              </li>
+            <li>transport - Enables the platform-specific network transport.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a> <i>(platform: !windows)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

@@ -194,10 +194,52 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package polyhook2</h1></div>
+    <div class="header-text"><h1>Package polyhook2 | 2023-08-11</h1></div>
     <div class="package-body">
       <div class="main-content">
-        C++17, x86&#x2F;x64 Hooking Library v2.0
+        <p><b>Description:</b> C++17, x86&#x2F;x64 Hooking Library v2.0</p>
+        <p><b>Supports:</b> !(arm | uwp | linux | osx)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zydis">zydis</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>detours - Implement detour functionality
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="asmjit">asmjit</a></li>
+                <li><a href="asmtk">asmtk</a></li>
+              </ul>
+              </li>
+            <li>exception - Implement all exception hooking functionality
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>inlinentd - Support inline hooks without specifying typedefs by generating callback stubs at runtime with AsmJit
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="asmjit">asmjit</a></li>
+              </ul>
+              </li>
+            <li>pe - Implement all win pe hooking functionality
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>virtuals - Implement all virtual table hooking functionality
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

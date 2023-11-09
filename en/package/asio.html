@@ -194,10 +194,41 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package asio</h1></div>
+    <div class="header-text"><h1>Package asio | 1.28.1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Asio is a cross-platform C++ library for network and low-level I&#x2F;O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
+        <p><b>Description:</b> Asio is a cross-platform C++ library for network and low-level I&#x2F;O programming that provides developers with a consistent asynchronous model using a modern C++ approach.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>coroutine - Boost.Coroutine (optional) if you use spawn() to launch coroutines
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="boost-coroutine">boost-coroutine</a></li>
+              </ul>
+              </li>
+            <li>openssl - OpenSSL (optional) if you use Asio&#39;s SSL support.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>regex - Boost.Regex (optional) if you use any of the read_until() or async_read_until() overloads that take a boost::regex parameter.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="boost-regex">boost-regex</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

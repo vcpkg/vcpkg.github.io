@@ -194,10 +194,47 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package infoware</h1></div>
+    <div class="header-text"><h1>Package infoware | 2023-04-12</h1></div>
     <div class="package-body">
       <div class="main-content">
-        C++ Library for pulling system and hardware information, without hitting the command line.
+        <p><b>Description:</b> C++ Library for pulling system and hardware information, without hitting the command line.</p>
+        <p><b>Supports:</b> !android &amp; !uwp &amp; !(windows &amp; arm)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="infoware">infoware</a> <i>(host: true)</i></li>
+            <li><a href="pciids">pciids</a> <i>(platform: native)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>d3d - Use Direct3D for GPU detection.,This choice has priority over opencl and opengl. <i>(supports: windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>opencl - Use OpenCL for GPU detection.,This choice has priority over opengl.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencl">opencl</a></li>
+              </ul>
+              </li>
+            <li>opengl - Use OpenGL for GPU detection. <i>(supports: !osx &amp; !ios)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opengl">opengl</a></li>
+              </ul>
+              </li>
+            <li>x11 - Use X11 for display detection. <i>(supports: !windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

@@ -194,10 +194,66 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package cgns</h1></div>
+    <div class="header-text"><h1>Package cgns | 4.4.0</h1></div>
     <div class="package-body">
       <div class="main-content">
-        The CFD General Notation System (CGNS) provides a standard for recording and recovering computer data associated with the numerical solution of fluid dynamics equations.
+        <p><b>Description:</b> The CFD General Notation System (CGNS) provides a standard for recording and recovering computer data associated with the numerical solution of fluid dynamics equations.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>fortran - Enable fortran support (not yet implemented)
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>hdf5 - Enable hdf5 support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="hdf5">hdf5</a></li>
+              </ul>
+              </li>
+            <li>legacy - Enable legacy support
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>lfs - Enable LFS support
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>lfsselector - Selector for LFS
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cgns">cgns</a> <i>(platform: !osx)</i></li>
+              </ul>
+              </li>
+            <li>mpi - Enable MPI support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="hdf5">hdf5</a></li>
+              </ul>
+              </li>
+            <li>tests - Build tests
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tools - No effects, preserved for upgrade compatibility
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

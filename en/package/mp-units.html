@@ -194,10 +194,42 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package mp-units</h1></div>
+    <div class="header-text"><h1>Package mp-units | 0.8.0</h1></div>
     <div class="package-body">
       <div class="main-content">
-        mp-units - A Units Library for C++
+        <p><b>Description:</b> mp-units - A Units Library for C++</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="gsl-lite">gsl-lite</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>default-features - Platform specific default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mp-units">mp-units</a> <i>(platform: osx)</i></li>
+              </ul>
+              </li>
+            <li>install-range-v3 - Provide range-v3 for compilers not supporting std::ranges
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="range-v3">range-v3</a></li>
+              </ul>
+              </li>
+            <li>use-libfmt - Use libfmt instead of std::format
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="fmt">fmt</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

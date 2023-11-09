@@ -194,10 +194,37 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package jasper</h1></div>
+    <div class="header-text"><h1>Package jasper | 4.0.0#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Open source implementation of the JPEG-2000 Part-1 standard
+        <p><b>Description:</b> Open source implementation of the JPEG-2000 Part-1 standard</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>default-features - Platform-dependent default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="jasper">jasper</a> <i>(platform: !(windows &amp; arm) &amp; !uwp &amp; !ios)</i></li>
+              </ul>
+              </li>
+            <li>opengl - Enable the use of the OpenGL&#x2F;GLUT Library
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="freeglut">freeglut</a> <i>(platform: !osx &amp; !(windows &amp; arm) &amp; !uwp)</i></li>
+                <li><a href="opengl">opengl</a> <i>(platform: !(windows &amp; arm) &amp; !uwp)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

@@ -194,10 +194,45 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package apsi</h1></div>
+    <div class="header-text"><h1>Package apsi | 0.9.0#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        APSI is a research library for asymmetric private set intersection.
+        <p><b>Description:</b> APSI is a research library for asymmetric private set intersection.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="flatbuffers">flatbuffers</a></li>
+            <li><a href="jsoncpp">jsoncpp</a></li>
+            <li><a href="kuku">kuku</a></li>
+            <li><a href="seal">seal</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>hexl - Use Intel® HEXL to accelerate Microsoft SEAL.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="seal">seal</a> <i>(platform: x64)</i></li>
+              </ul>
+              </li>
+            <li>log4cplus - Use log4cplus for logging.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="log4cplus">log4cplus</a></li>
+              </ul>
+              </li>
+            <li>zeromq - Use ZeroMQ for networking.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cppzmq">cppzmq</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

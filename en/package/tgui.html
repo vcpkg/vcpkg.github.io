@@ -194,10 +194,43 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package tgui</h1></div>
+    <div class="header-text"><h1>Package tgui | 0.9.5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        TGUI is an easy to use, cross-platform, C++ GUI for SFML.
+        <p><b>Description:</b> TGUI is an easy to use, cross-platform, C++ GUI for SFML.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="stb">stb</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>sdl2 - Build the SDL backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opengl">opengl</a> <i>(platform: !android &amp; !ios)</i></li>
+                <li><a href="sdl2">sdl2</a></li>
+                <li><a href="sdl2-ttf">sdl2-ttf</a></li>
+              </ul>
+              </li>
+            <li>sfml - Build the SFML backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="sfml">sfml</a></li>
+              </ul>
+              </li>
+            <li>tool - Build GUI builder
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

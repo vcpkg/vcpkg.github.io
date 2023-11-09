@@ -194,10 +194,71 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package mesa</h1></div>
+    <div class="header-text"><h1>Package mesa | 23.0.1#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Mesa - The 3D Graphics Library
+        <p><b>Description:</b> Mesa - The 3D Graphics Library</p>
+        <p><b>Supports:</b> !(windows &amp; arm) &amp; !staticcrt &amp; !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-get-python-packages">vcpkg-get-python-packages</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-tool-meson">vcpkg-tool-meson</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+            <li><a href="zstd">zstd</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>default-features - Platform dependent default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mesa">mesa</a></li>
+                <li><a href="mesa">mesa</a> <i>(platform: x64)</i></li>
+              </ul>
+              </li>
+            <li>egl - Build support for EGL platform
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="egl-registry">egl-registry</a></li>
+              </ul>
+              </li>
+            <li>gles1 - Build support for OpenGL ES 1.x
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mesa">mesa</a></li>
+              </ul>
+              </li>
+            <li>gles2 - Build support for OpenGL ES 2.x and 3.x
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mesa">mesa</a></li>
+              </ul>
+              </li>
+            <li>llvm - Build with llvmpipe
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="llvm">llvm</a></li>
+                <li><a href="llvm">llvm</a> <i>(platform: arm32)</i></li>
+                <li><a href="llvm">llvm</a> <i>(platform: arm64)</i></li>
+                <li><a href="llvm">llvm</a> <i>(platform: x64 | x86)</i></li>
+              </ul>
+              </li>
+            <li>offscreen - Build with support for offscreen rendering (OSMesa)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mesa">mesa</a></li>
+              </ul>
+              </li>
+            <li>opengl - Build support for OpenGL (all versions)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opengl">opengl</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

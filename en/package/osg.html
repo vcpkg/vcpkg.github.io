@@ -194,10 +194,129 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package osg</h1></div>
+    <div class="header-text"><h1>Package osg | 3.6.5#22</h1></div>
     <div class="package-body">
       <div class="main-content">
-        The OpenSceneGraph is an open source high performance 3D graphics toolkit.
+        <p><b>Description:</b> The OpenSceneGraph is an open source high performance 3D graphics toolkit.</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="expat">expat</a> <i>(platform: windows)</i></li>
+            <li><a href="opengl-registry">opengl-registry</a></li>
+            <li><a href="openimageio">openimageio</a> <i>(platform: osx)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>collada - Support for Collada (.dae) files
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="collada-dom">collada-dom</a></li>
+              </ul>
+              </li>
+            <li>default-features - Platform-dependent default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="osg">osg</a> <i>(platform: !uwp)</i></li>
+                <li><a href="osg">osg</a> <i>(platform: !windows)</i></li>
+                <li><a href="osg">osg</a> <i>(platform: !android &amp; !ios &amp; !uwp)</i></li>
+                <li><a href="osg">osg</a> <i>(platform: !x86 &amp; !(windows &amp; arm64) &amp; !uwp)</i></li>
+              </ul>
+              </li>
+            <li>docs - Build OpenSceneGraph reference documentation using doxygen (use: make doc_openscenegraph doc_openthreads
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>examples - Enable to build OSG Examples
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libiconv">libiconv</a> <i>(platform: windows)</i></li>
+                <li><a href="osg">osg</a></li>
+                <li><a href="sdl2">sdl2</a></li>
+              </ul>
+              </li>
+            <li>fontconfig - Enable Fontconfig support for osgText
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="fontconfig">fontconfig</a></li>
+                <li><a href="osg">osg</a></li>
+              </ul>
+              </li>
+            <li>freetype - Enable Freetype support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="freetype">freetype</a></li>
+              </ul>
+              </li>
+            <li>nvtt - Build texture processing tools plugin
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="nvtt">nvtt</a></li>
+              </ul>
+              </li>
+            <li>openexr - Build the exr plugin
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openexr">openexr</a></li>
+              </ul>
+              </li>
+            <li>packages - Set to ON to generate CPack configuration files and packaging targets
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>plugins - Build most OSG plugins
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+                <li><a href="gdal">gdal</a></li>
+                <li><a href="giflib">giflib</a> <i>(platform: windows)</i></li>
+                <li><a href="jasper">jasper</a></li>
+                <li><a href="libgta">libgta</a></li>
+                <li><a href="libiconv">libiconv</a> <i>(platform: windows)</i></li>
+                <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
+                <li><a href="libpng">libpng</a></li>
+                <li><a href="libxml2">libxml2</a> <i>(platform: windows)</i></li>
+                <li><a href="tiff">tiff</a></li>
+              </ul>
+              </li>
+            <li>rest-http-device - Build RestHttpDevice plugin <i>(supports: !windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="boost-array">boost-array</a></li>
+                <li><a href="boost-asio">boost-asio</a></li>
+                <li><a href="boost-bind">boost-bind</a></li>
+                <li><a href="boost-core">boost-core</a></li>
+                <li><a href="boost-lexical-cast">boost-lexical-cast</a></li>
+                <li><a href="boost-logic">boost-logic</a></li>
+                <li><a href="boost-smart-ptr">boost-smart-ptr</a></li>
+                <li><a href="boost-tuple">boost-tuple</a></li>
+              </ul>
+              </li>
+            <li>sdl1 - Build SDL 1 plugin, and enable SDL 1 app features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="sdl1">sdl1</a></li>
+              </ul>
+              </li>
+            <li>tools - Enable to build OSG Applications (e.g. osgviewer)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+                <li><a href="libiconv">libiconv</a> <i>(platform: windows)</i></li>
+                <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
+                <li><a href="libpng">libpng</a></li>
+                <li><a href="osg">osg</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

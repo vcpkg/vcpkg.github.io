@@ -194,10 +194,38 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package triton</h1></div>
+    <div class="header-text"><h1>Package triton | 0.9#5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Triton is a Dynamic Binary Analysis (DBA) framework. It provides internal components like a Dynamic Symbolic Execution (DSE) engine, a dynamic taint engine, AST representations of the x86, x86-64, ARM32 and AArch64 Instructions Set Architecture (ISA), SMT simplification passes, an SMT solver interface and, the last but not least, Python bindings.
+        <p><b>Description:</b> Triton is a Dynamic Binary Analysis (DBA) framework. It provides internal components like a Dynamic Symbolic Execution (DSE) engine, a dynamic taint engine, AST representations of the x86, x86-64, ARM32 and AArch64 Instructions Set Architecture (ISA), SMT simplification passes, an SMT solver interface and, the last but not least, Python bindings.</p>
+        <p><b>Supports:</b> !arm</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="capstone">capstone</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="z3">z3</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>boost - Use Boost as multiprecision library
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="boost-multiprecision">boost-multiprecision</a></li>
+                <li><a href="boost-numeric-conversion">boost-numeric-conversion</a></li>
+              </ul>
+              </li>
+            <li>python - Build Triton with Python bindings
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="python3">python3</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

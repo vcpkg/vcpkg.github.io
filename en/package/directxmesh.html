@@ -194,10 +194,42 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package directxmesh</h1></div>
+    <div class="header-text"><h1>Package directxmesh | 2023-06-13</h1></div>
     <div class="package-body">
       <div class="main-content">
-        DirectXMesh geometry processing library
+        <p><b>Description:</b> DirectXMesh geometry processing library</p>
+        <p><b>Supports:</b> windows | linux</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="directx-headers">directx-headers</a> <i>(platform: mingw | linux)</i></li>
+            <li><a href="directxmath">directxmath</a></li>
+            <li><a href="ms-gdkx">ms-gdkx</a> <i>(platform: xbox)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>dx12 - Build with DirectX12 support for Windows 10&#x2F;Windows 11
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="directx-headers">directx-headers</a> <i>(platform: windows &amp; !xbox)</i></li>
+              </ul>
+              </li>
+            <li>spectre - Build Spectre-mitigated library
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tools - meshconvert command-line tool <i>(supports: windows &amp; !uwp &amp; !xbox)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

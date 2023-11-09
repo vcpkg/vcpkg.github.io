@@ -194,10 +194,40 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package wpilib</h1></div>
+    <div class="header-text"><h1>Package wpilib | 2023-08-24</h1></div>
     <div class="package-body">
       <div class="main-content">
-        WPILib is the software library package for the FIRST Robotics Competition. The core install includes wpiutil, a common utilies library, and ntcore, the base NetworkTables library.
+        <p><b>Description:</b> WPILib is the software library package for the FIRST Robotics Competition. The core install includes wpiutil, a common utilies library, and ntcore, the base NetworkTables library.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="eigen3">eigen3</a></li>
+            <li><a href="fmt">fmt</a></li>
+            <li><a href="libuv">libuv</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-get-python-packages">vcpkg-get-python-packages</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>allwpilib - Enables the simulation HAL, and the high level wpilibc library.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv">opencv</a></li>
+                <li><a href="wpilib">wpilib</a></li>
+              </ul>
+              </li>
+            <li>cameraserver - Enables the CameraServer and CSCore libraries for manipulating USB Cameras and HTTP Camera Streams
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv">opencv</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

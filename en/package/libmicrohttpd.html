@@ -194,10 +194,29 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package libmicrohttpd</h1></div>
+    <div class="header-text"><h1>Package libmicrohttpd | 0.9.77#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        GNU libmicrohttpd is a small C library that is supposed to make it easy to run an HTTP server as part of another application
+        <p><b>Description:</b> GNU libmicrohttpd is a small C library that is supposed to make it easy to run an HTTP server as part of another application</p>
+        <p><b>Supports:</b> !((arm &amp; windows) | uwp)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="gettext">gettext</a> <i>(platform: !windows)</i></li>
+            <li><a href="vcpkg-msbuild">vcpkg-msbuild</a> <i>(host: true)</i> <i>(platform: windows)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>https - Enable HTTPS protocol support <i>(supports: !windows | mingw)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libgnutls">libgnutls</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

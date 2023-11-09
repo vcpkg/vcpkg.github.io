@@ -194,10 +194,31 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package rubberband</h1></div>
+    <div class="header-text"><h1>Package rubberband | 3.3.0</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A high quality software library for audio time-stretching and pitch-shifting.
+        <p><b>Description:</b> A high quality software library for audio time-stretching and pitch-shifting.</p>
+        <p><b>Supports:</b> !uwp &amp; !(windows &amp; static) &amp; !xbox</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="fftw3">fftw3</a> <i>(platform: (arm &amp; windows) | (x86 &amp; windows) | (arm64 &amp; osx))</i></li>
+            <li><a href="libsamplerate">libsamplerate</a></li>
+            <li><a href="sleef">sleef</a> <i>(platform: !(arm &amp; windows) &amp; !(x86 &amp; windows) &amp; !(arm64 &amp; osx))</i></li>
+            <li><a href="vcpkg-tool-meson">vcpkg-tool-meson</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cli - Build the command-line utility
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libsndfile">libsndfile</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

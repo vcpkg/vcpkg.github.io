@@ -194,10 +194,81 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package darknet</h1></div>
+    <div class="header-text"><h1>Package darknet | 2022-03-06#3</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Darknet is an open source neural network framework written in C and CUDA. You only look once (YOLO) is a state-of-the-art, real-time object detection system, best example of darknet functionalities.
+        <p><b>Description:</b> Darknet is an open source neural network framework written in C and CUDA. You only look once (YOLO) is a state-of-the-art, real-time object detection system, best example of darknet functionalities.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="getopt">getopt</a> <i>(platform: windows &amp; !mingw)</i></li>
+            <li><a href="pthreads">pthreads</a></li>
+            <li><a href="stb">stb</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cuda - Build darknet with support for CUDA
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+              </ul>
+              </li>
+            <li>cudnn - Build darknet with support for cuDNN
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+                <li><a href="cudnn">cudnn</a></li>
+              </ul>
+              </li>
+            <li>full - Build darknet fully featured
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="darknet">darknet</a></li>
+              </ul>
+              </li>
+            <li>opencv-base - Build darknet with support for latest version of OpenCV
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv">opencv</a></li>
+              </ul>
+              </li>
+            <li>opencv-cuda - Build darknet with support for latest version of CUDA-enabled OpenCV
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv">opencv</a></li>
+              </ul>
+              </li>
+            <li>opencv2-base - Build darknet with support for OpenCV2
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv2">opencv2</a></li>
+              </ul>
+              </li>
+            <li>opencv2-cuda - Build darknet with support for CUDA-enabled OpenCV2
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv2">opencv2</a></li>
+              </ul>
+              </li>
+            <li>opencv3-base - Build darknet with support for OpenCV3
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv3">opencv3</a></li>
+              </ul>
+              </li>
+            <li>opencv3-cuda - Build darknet with support for CUDA-enabled OpenCV3
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv3">opencv3</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

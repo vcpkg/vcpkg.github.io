@@ -194,10 +194,242 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package opencv4</h1></div>
+    <div class="header-text"><h1>Package opencv4 | 4.8.0#7</h1></div>
     <div class="package-body">
       <div class="main-content">
-        computer vision library
+        <p><b>Description:</b> computer vision library</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-get-python-packages">vcpkg-get-python-packages</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>ade - graph api
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ade">ade</a></li>
+              </ul>
+              </li>
+            <li>contrib - opencv_contrib module
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="hdf5">hdf5</a> <i>(platform: !uwp &amp; !(windows &amp; (arm | arm64)) &amp; !ios)</i></li>
+                <li><a href="tesseract">tesseract</a> <i>(platform: !uwp &amp; !(windows &amp; (arm | arm64)) &amp; !ios)</i></li>
+              </ul>
+              </li>
+            <li>cuda - CUDA support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+              </ul>
+              </li>
+            <li>cudnn - cuDNN support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cudnn">cudnn</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+              </ul>
+              </li>
+            <li>dc1394 - Dc1394 support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libdc1394">libdc1394</a></li>
+              </ul>
+              </li>
+            <li>default-features - Platform-dependent default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv4">opencv4</a></li>
+                <li><a href="opencv4">opencv4</a> <i>(platform: linux)</i></li>
+              </ul>
+              </li>
+            <li>dnn - Enable dnn module
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="flatbuffers">flatbuffers</a></li>
+                <li><a href="flatbuffers">flatbuffers</a> <i>(host: true)</i></li>
+                <li><a href="protobuf">protobuf</a></li>
+              </ul>
+              </li>
+            <li>dnn-cuda - Build dnn module with CUDA support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv4">opencv4</a></li>
+              </ul>
+              </li>
+            <li>eigen - Eigen support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="eigen3">eigen3</a></li>
+              </ul>
+              </li>
+            <li>ffmpeg - ffmpeg support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ffmpeg">ffmpeg</a></li>
+              </ul>
+              </li>
+            <li>freetype - Freetype support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="freetype">freetype</a></li>
+                <li><a href="harfbuzz">harfbuzz</a></li>
+              </ul>
+              </li>
+            <li>gdcm - GDCM support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="gdcm">gdcm</a></li>
+              </ul>
+              </li>
+            <li>gstreamer - gstreamer support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="gstreamer">gstreamer</a></li>
+              </ul>
+              </li>
+            <li>gtk - GTK support for opencv <i>(supports: !windows &amp; !osx &amp; !ios &amp; !android)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="gtk3">gtk3</a></li>
+              </ul>
+              </li>
+            <li>halide - Halide support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="halide">halide</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+              </ul>
+              </li>
+            <li>ipp - Enable Intel Integrated Performance Primitives
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>jasper - JPEG 2000 support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="jasper">jasper</a></li>
+              </ul>
+              </li>
+            <li>jpeg - JPEG support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
+              </ul>
+              </li>
+            <li>lapack - LAPACK support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="blas">blas</a></li>
+                <li><a href="lapack">lapack</a></li>
+              </ul>
+              </li>
+            <li>nonfree - allow nonfree and unredistributable libraries
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>openexr - OpenEXR support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openexr">openexr</a></li>
+              </ul>
+              </li>
+            <li>opengl - opengl support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opengl">opengl</a></li>
+              </ul>
+              </li>
+            <li>openmp - Enable openmp support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>ovis - opencv_ovis module
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ogre">ogre</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+              </ul>
+              </li>
+            <li>png - PNG support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libpng">libpng</a></li>
+              </ul>
+              </li>
+            <li>python - Python wrapper support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="python3">python3</a></li>
+              </ul>
+              </li>
+            <li>qt - Qt GUI support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="qt5compat">qt5compat</a></li>
+                <li><a href="qtbase">qtbase</a></li>
+              </ul>
+              </li>
+            <li>quirc - Enable QR code module
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="quirc">quirc</a></li>
+              </ul>
+              </li>
+            <li>sfm - opencv_sfm module
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ceres">ceres</a></li>
+                <li><a href="gflags">gflags</a></li>
+                <li><a href="glog">glog</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+                <li><a href="opencv4">opencv4</a></li>
+              </ul>
+              </li>
+            <li>tbb - Enable Intel Threading Building Blocks
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="tbb">tbb</a></li>
+              </ul>
+              </li>
+            <li>tiff - TIFF support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="tiff">tiff</a></li>
+              </ul>
+              </li>
+            <li>vtk - vtk support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="opencv4">opencv4</a></li>
+                <li><a href="vtk">vtk</a></li>
+              </ul>
+              </li>
+            <li>webp - WebP support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libwebp">libwebp</a></li>
+              </ul>
+              </li>
+            <li>world - Compile to a single package support for opencv
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

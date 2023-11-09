@@ -194,10 +194,44 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package azure-core-cpp</h1></div>
+    <div class="header-text"><h1>Package azure-core-cpp | 1.10.2#5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Microsoft Azure Core SDK for C++,This library provides shared primitives, abstractions, and helpers for modern Azure SDK client libraries written in the C++.
+        <p><b>Description:</b> Microsoft Azure Core SDK for C++,This library provides shared primitives, abstractions, and helpers for modern Azure SDK client libraries written in the C++.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="openssl">openssl</a> <i>(platform: !windows &amp; !uwp)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="wil">wil</a> <i>(platform: windows)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>curl - Libcurl HTTP transport implementation
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="azure-core-cpp">azure-core-cpp</a></li>
+                <li><a href="curl">curl</a></li>
+              </ul>
+              </li>
+            <li>http - All HTTP transport implementations available on the platform
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="azure-core-cpp">azure-core-cpp</a></li>
+                <li><a href="azure-core-cpp">azure-core-cpp</a> <i>(platform: windows &amp; !uwp)</i></li>
+              </ul>
+              </li>
+            <li>winhttp - WinHTTP HTTP transport implementation <i>(supports: windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

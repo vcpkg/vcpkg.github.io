@@ -194,10 +194,75 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package mnn</h1></div>
+    <div class="header-text"><h1>Package mnn | 1.1.0#5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        MNN is a blazing fast, lightweight deep learning framework, battle-tested by business-critical use cases in Alibaba
+        <p><b>Description:</b> MNN is a blazing fast, lightweight deep learning framework, battle-tested by business-critical use cases in Alibaba</p>
+        <p><b>Supports:</b> !(arm | uwp | ios | android)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="flatbuffers">flatbuffers</a></li>
+            <li><a href="flatbuffers">flatbuffers</a> <i>(host: true)</i></li>
+            <li><a href="rapidjson">rapidjson</a></li>
+            <li><a href="stb">stb</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cuda - Enable CUDA API backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+                <li><a href="cudnn">cudnn</a></li>
+                <li><a href="mnn">mnn</a></li>
+              </ul>
+              </li>
+            <li>gpu - Enable MNN Gpu Debug
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>metal - Enable Metal API backend for Apple platforms
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mnn">mnn</a></li>
+              </ul>
+              </li>
+            <li>opencl - Enable OpenCL API backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mnn">mnn</a></li>
+                <li><a href="opencl">opencl</a></li>
+              </ul>
+              </li>
+            <li>system - For opencl and vulkan, use system lib or use dlopen
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>test - Build MNN test programs
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tools - Build MNN tools
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="protobuf">protobuf</a></li>
+              </ul>
+              </li>
+            <li>vulkan - Enable Vulkan API backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mnn">mnn</a></li>
+                <li><a href="vulkan">vulkan</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

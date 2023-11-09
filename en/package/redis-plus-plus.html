@@ -194,10 +194,47 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package redis-plus-plus</h1></div>
+    <div class="header-text"><h1>Package redis-plus-plus | 1.3.10</h1></div>
     <div class="package-body">
       <div class="main-content">
-        This is a C++ client for Redis. It&#39;s based on hiredis, and written in C++ 11
+        <p><b>Description:</b> This is a C++ client for Redis. It&#39;s based on hiredis, and written in C++ 11</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="hiredis">hiredis</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>async - Build with async
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libuv">libuv</a></li>
+              </ul>
+              </li>
+            <li>async-std - Build async with std::future
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="redis-plus-plus">redis-plus-plus</a></li>
+              </ul>
+              </li>
+            <li>cxx17 - Build redis-plus-plus with cxx 17 standard
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>tls - Build with TLS support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="hiredis">hiredis</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

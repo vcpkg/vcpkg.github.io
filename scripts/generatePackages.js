@@ -180,11 +180,46 @@ async function main(vcpkgDir, destDir) {
 
     var promises = [];
 
+    function obj_map(obj, fn) {
+        var r = [];
+        for (var k in obj) {
+            r.push(fn(obj[k], k));
+        }
+        return r;
+    }
+
+    function transform_dep(dep) {
+        if (typeof(dep) === "string") {
+            return {"name": dep, "host": false};
+        } else {
+            let obj = {"name": dep.name, "host": !!dep.host};
+            if (dep.platform) {
+                obj.platform = dep.platform;
+            }
+            return obj;
+        }
+    }
+
+    function normalize_feature(feature, name) {
+        var r = {"name": name,
+                "description": feature.description,
+                "dependencies": (feature.dependencies || []).map(transform_dep),
+                "supports": feature.supports,
+                };
+        return r;
+    }
+
     for (const name in portsData) {
         const data = portsData[name];
 
         view.name = name;
+        view.version = data.Version;
+        view.port_version = data['Port-Version'] || 0;
+        view.version_text = view.version + (view.port_version ? '#' + view.port_version : '')
         view.description = data.Description;
+        view.features = obj_map(data.Features, normalize_feature);
+        view.supports = data.Supports;
+        view.dependencies = (data.Dependencies || []).map(transform_dep)
 
         const result = Mustache.render(template, view);
 

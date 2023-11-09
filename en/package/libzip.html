@@ -194,10 +194,72 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package libzip</h1></div>
+    <div class="header-text"><h1>Package libzip | 1.9.2#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A library for reading, creating, and modifying zip archives.
+        <p><b>Description:</b> A library for reading, creating, and modifying zip archives.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>bzip2 - Support bzip2-compressed zip archives
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="bzip2">bzip2</a></li>
+              </ul>
+              </li>
+            <li>commoncrypto - AES (encryption) support using Apple&#39;s Common Crypto API
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>default-aes - Use default AES
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libzip">libzip</a> <i>(platform: osx)</i></li>
+                <li><a href="libzip">libzip</a> <i>(platform: windows)</i></li>
+                <li><a href="libzip">libzip</a> <i>(platform: !(windows | osx))</i></li>
+              </ul>
+              </li>
+            <li>liblzma - Support XZ compressed zip archives using liblzma
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="liblzma">liblzma</a></li>
+              </ul>
+              </li>
+            <li>mbedtls - AES (encryption) support using mbedtls
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mbedtls">mbedtls</a></li>
+              </ul>
+              </li>
+            <li>openssl - AES (encryption) support using OpenSSL
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>wincrypto - AES (encryption) support using Windows Crypto API
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>zstd - Support Zstandard-compressed zip archives
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

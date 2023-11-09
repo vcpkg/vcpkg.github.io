@@ -194,10 +194,34 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package pcre2</h1></div>
+    <div class="header-text"><h1>Package pcre2 | 10.42#1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Regular Expression pattern matching using the same syntax and semantics as Perl 5.
+        <p><b>Description:</b> Regular Expression pattern matching using the same syntax and semantics as Perl 5.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>jit - Enable support for Just-In-Time compiling regex matchers <i>(supports: !emscripten)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>platform-default-features - Enable default features
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="pcre2">pcre2</a> <i>(platform: !emscripten)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

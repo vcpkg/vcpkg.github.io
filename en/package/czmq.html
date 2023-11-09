@@ -194,10 +194,58 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package czmq</h1></div>
+    <div class="header-text"><h1>Package czmq | 4.2.1#3</h1></div>
     <div class="package-body">
       <div class="main-content">
-        High-level C binding for ZeroMQ
+        <p><b>Description:</b> High-level C binding for ZeroMQ</p>
+        <p><b>Supports:</b> !xbox</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zeromq">zeromq</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>curl - Build with libcurl
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="curl">curl</a></li>
+              </ul>
+              </li>
+            <li>draft - Build and install draft APIs
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>httpd - Build with HTTP server support (libmicrohttpd)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libmicrohttpd">libmicrohttpd</a></li>
+              </ul>
+              </li>
+            <li>lz4 - Build with lz4
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="lz4">lz4</a></li>
+              </ul>
+              </li>
+            <li>tool - Build and install czmq tools (zmakecert)
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>uuid - Build with libuuid
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libuuid">libuuid</a> <i>(platform: !windows &amp; !uwp &amp; !osx)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

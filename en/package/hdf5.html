@@ -194,10 +194,72 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package hdf5</h1></div>
+    <div class="header-text"><h1>Package hdf5 | 1.14.0#1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        HDF5 is a data model, library, and file format for storing and managing data
+        <p><b>Description:</b> HDF5 is a data model, library, and file format for storing and managing data</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cpp - Builds cpp lib
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>fortran - Build with fortran
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>map - Build the map API
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>parallel - parallel support for HDF5
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mpi">mpi</a></li>
+              </ul>
+              </li>
+            <li>szip - Build with szip
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="szip">szip</a></li>
+              </ul>
+              </li>
+            <li>threadsafe - thread safety for HDF5 <i>(supports: !(static &amp; windows))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="pthreads">pthreads</a> <i>(platform: !windows)</i></li>
+              </ul>
+              </li>
+            <li>tools - Build hdf tools
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>utils - Build HDF5 Utils
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>zlib - Build with zlib
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zlib">zlib</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

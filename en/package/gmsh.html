@@ -194,10 +194,53 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package gmsh</h1></div>
+    <div class="header-text"><h1>Package gmsh | 4.11.1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Gmsh is an open source 3D finite element mesh generator with a built-in CAD engine and post-processor.
+        <p><b>Description:</b> Gmsh is an open source 3D finite element mesh generator with a built-in CAD engine and post-processor.</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="blas">blas</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>graphics - Enable building graphics lib even without GUI (advanced)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
+                <li><a href="libpng">libpng</a></li>
+                <li><a href="opengl">opengl</a></li>
+                <li><a href="zlib">zlib</a></li>
+              </ul>
+              </li>
+            <li>mpi - Enable MPI (experimental, not used for meshing)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openmpi">openmpi</a></li>
+              </ul>
+              </li>
+            <li>occ - Enable OpenCASCADE modules
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="caf">caf</a></li>
+                <li><a href="freetype">freetype</a></li>
+                <li><a href="opencascade">opencascade</a></li>
+                <li><a href="tbb">tbb</a></li>
+              </ul>
+              </li>
+            <li>zipper - Enable Zip file compression&#x2F;decompression
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zlib">zlib</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

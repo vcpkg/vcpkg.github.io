@@ -194,10 +194,65 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package freerdp</h1></div>
+    <div class="header-text"><h1>Package freerdp | 2.11.1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A free implementation of the Remote Desktop Protocol (RDP)
+        <p><b>Description:</b> A free implementation of the Remote Desktop Protocol (RDP)</p>
+        <p><b>Supports:</b> !uwp &amp; !(arm &amp; windows)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="glib">glib</a> <i>(platform: !windows)</i></li>
+            <li><a href="openssl">openssl</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a> <i>(platform: !windows)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>client-mac - Build native mac client. Requires XCode. <i>(supports: osx)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>ffmpeg - Enable image scaling, video and audio with ffmpeg <i>(supports: !windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ffmpeg">ffmpeg</a></li>
+              </ul>
+              </li>
+            <li>server - Build server components <i>(supports: !android &amp; !ios &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>urbdrc - USB redirection channel support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libusb">libusb</a></li>
+              </ul>
+              </li>
+            <li>wayland - Enable wayland support <i>(supports: !windows &amp; !android &amp; !ios &amp; !osx &amp; !openbsd)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="wayland">wayland</a></li>
+              </ul>
+              </li>
+            <li>winpr-tools - Build winpr tools <i>(supports: !android &amp; !ios &amp; !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>x11 - Enable X11 support <i>(supports: !windows &amp; !android &amp; !ios)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="xcb">xcb</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

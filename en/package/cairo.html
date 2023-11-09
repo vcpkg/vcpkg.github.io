@@ -194,10 +194,52 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package cairo</h1></div>
+    <div class="header-text"><h1>Package cairo | 1.17.8#4</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Cairo is a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers, PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS&#x2F;2, and DirectFB.
+        <p><b>Description:</b> Cairo is a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers, PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS&#x2F;2, and DirectFB.</p>
+        <p><b>Supports:</b> !xbox &amp; !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="dirent">dirent</a></li>
+            <li><a href="expat">expat</a></li>
+            <li><a href="libpng">libpng</a></li>
+            <li><a href="lzo">lzo</a></li>
+            <li><a href="pixman">pixman</a></li>
+            <li><a href="pthread">pthread</a></li>
+            <li><a href="vcpkg-tool-meson">vcpkg-tool-meson</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>fontconfig - build with fontconfig
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="fontconfig">fontconfig</a></li>
+              </ul>
+              </li>
+            <li>freetype - use the freetype font backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="freetype">freetype</a></li>
+              </ul>
+              </li>
+            <li>gobject - build gobject module
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="glib">glib</a></li>
+              </ul>
+              </li>
+            <li>x11 - build with x11 support <i>(supports: !windows)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

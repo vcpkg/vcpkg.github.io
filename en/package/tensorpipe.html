@@ -194,10 +194,43 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package tensorpipe</h1></div>
+    <div class="header-text"><h1>Package tensorpipe | 2022-03-16#5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        A tensor-aware point-to-point communication primitive for machine learning
+        <p><b>Description:</b> A tensor-aware point-to-point communication primitive for machine learning</p>
+        <p><b>Supports:</b> linux | osx</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="libnop">libnop</a></li>
+            <li><a href="libuv">libuv</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cuda - Enable support for CUDA tensors, CUDA IPC channel
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+              </ul>
+              </li>
+            <li>pybind11 - Build Python bindings
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="pybind11">pybind11</a></li>
+              </ul>
+              </li>
+            <li>test - Build with Google.Test
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="gtest">gtest</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

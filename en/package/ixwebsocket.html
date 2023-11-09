@@ -194,10 +194,50 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package ixwebsocket</h1></div>
+    <div class="header-text"><h1>Package ixwebsocket | 11.4.4#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        Lightweight WebSocket Client and Server + HTTP Client and Server
+        <p><b>Description:</b> Lightweight WebSocket Client and Server + HTTP Client and Server</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>mbedtls - SSL support (mbedTLS)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="mbedtls">mbedtls</a></li>
+              </ul>
+              </li>
+            <li>openssl - SSL support (OpenSSL) <i>(supports: !uwp)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>sectransp - SSL support (sectransp) <i>(supports: osx | ios)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>ssl - Default SSL backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ixwebsocket">ixwebsocket</a> <i>(platform: windows)</i></li>
+                <li><a href="ixwebsocket">ixwebsocket</a> <i>(platform: osx | ios)</i></li>
+                <li><a href="ixwebsocket">ixwebsocket</a> <i>(platform: windows &amp; uwp)</i></li>
+                <li><a href="ixwebsocket">ixwebsocket</a> <i>(platform: !uwp &amp; !windows &amp; !osx &amp; !ios)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

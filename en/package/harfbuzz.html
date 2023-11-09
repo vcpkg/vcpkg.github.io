@@ -194,10 +194,55 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package harfbuzz</h1></div>
+    <div class="header-text"><h1>Package harfbuzz | 8.2.1</h1></div>
     <div class="package-body">
       <div class="main-content">
-        HarfBuzz OpenType text shaping engine
+        <p><b>Description:</b> HarfBuzz OpenType text shaping engine</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="freetype">freetype</a></li>
+            <li><a href="gettext">gettext</a> <i>(platform: osx)</i></li>
+            <li><a href="vcpkg-tool-meson">vcpkg-tool-meson</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>coretext - Enable CoreText shaper backend on macOS <i>(supports: osx)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>glib - Glib Unicode callbacks support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="glib">glib</a></li>
+                <li><a href="glib">glib</a> <i>(host: true)</i></li>
+              </ul>
+              </li>
+            <li>graphite2 - Graphite2 shaper support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="graphite2">graphite2</a></li>
+              </ul>
+              </li>
+            <li>icu - icu support for harfbuzz
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="icu">icu</a></li>
+              </ul>
+              </li>
+            <li>introspection - build with introspection
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="glib">glib</a></li>
+                <li><a href="gobject-introspection">gobject-introspection</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

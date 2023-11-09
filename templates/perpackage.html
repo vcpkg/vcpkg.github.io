@@ -17,10 +17,28 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package {{name}}</h1></div>
+    <div class="header-text"><h1>Package {{name}} | {{version_text}}</h1></div>
     <div class="package-body">
       <div class="main-content">
-        {{description}}
+        <p><b>Description:</b> {{description}}</p>
+        {{#supports}}<p><b>Supports:</b> {{.}}</p>{{/supports}}
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+          {{#dependencies}}  <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}} <i>(platform: {{.}})</i>{{/platform}}</li>
+          {{/dependencies}}{{^dependencies}}<li>No Dependencies</li>{{/dependencies}}</ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+          {{#features}}  <li>{{name}} - {{description}}{{#supports}} <i>(supports: {{.}})</i>{{/supports}}
+            <br><b>Dependencies:</b>
+            <ul>
+              {{#dependencies}}  <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}} <i>(platform: {{.}})</i>{{/platform}}</li>
+              {{/dependencies}}{{^dependencies}}<li>No Dependencies</li>{{/dependencies}}</ul>
+              </li>
+          {{/features}}{{^features}}<li>No Features</li>{{/features}}</ul>
+        </div>
       </div>
     </div>
     </div>

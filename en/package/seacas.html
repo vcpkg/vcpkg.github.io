@@ -194,10 +194,39 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package seacas</h1></div>
+    <div class="header-text"><h1>Package seacas | 2022-11-22#5</h1></div>
     <div class="package-body">
       <div class="main-content">
-        The Sandia Engineering Analysis Code Access System (SEACAS) is a suite of preprocessing, postprocessing, translation, and utility applications supporting finite element analysis software using the Exodus database file format.
+        <p><b>Description:</b> The Sandia Engineering Analysis Code Access System (SEACAS) is a suite of preprocessing, postprocessing, translation, and utility applications supporting finite element analysis software using the Exodus database file format.</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="cereal">cereal</a></li>
+            <li><a href="cgns">cgns</a></li>
+            <li><a href="fmt">fmt</a></li>
+            <li><a href="hdf5">hdf5</a></li>
+            <li><a href="matio">matio</a></li>
+            <li><a href="metis">metis</a></li>
+            <li><a href="netcdf-c">netcdf-c</a></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>mpi - Enable MPI support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cgns">cgns</a></li>
+                <li><a href="hdf5">hdf5</a></li>
+                <li><a href="parmetis">parmetis</a> <i>(platform: !osx)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

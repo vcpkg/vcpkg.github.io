@@ -194,10 +194,61 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package ceres</h1></div>
+    <div class="header-text"><h1>Package ceres | 2.1.0#4</h1></div>
     <div class="package-body">
       <div class="main-content">
-        non-linear optimization package
+        <p><b>Description:</b> non-linear optimization package</p>
+        
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="eigen3">eigen3</a></li>
+            <li><a href="glog">glog</a> <i>(platform: !(arm &amp; uwp))</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>cuda - Support for CUDA based dense solvers <i>(supports: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows)))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="cuda">cuda</a></li>
+              </ul>
+              </li>
+            <li>cxsparse - CXSparse support for Ceres
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ceres">ceres</a></li>
+              </ul>
+              </li>
+            <li>eigensparse - Use of Eigen as a sparse linear algebra library in Ceres
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>lapack - Use Lapack in Ceres
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="lapack">lapack</a></li>
+              </ul>
+              </li>
+            <li>suitesparse - SuiteSparse support for Ceres
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="ceres">ceres</a></li>
+                <li><a href="suitesparse">suitesparse</a></li>
+              </ul>
+              </li>
+            <li>tools - Ceres tools
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="gflags">gflags</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

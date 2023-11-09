@@ -194,10 +194,55 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package ace</h1></div>
+    <div class="header-text"><h1>Package ace | 7.1.1#2</h1></div>
     <div class="package-body">
       <div class="main-content">
-        The ADAPTIVE Communication Environment
+        <p><b>Description:</b> The ADAPTIVE Communication Environment</p>
+        <p><b>Supports:</b> !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-msbuild">vcpkg-msbuild</a> <i>(host: true)</i> <i>(platform: windows)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>ssl - Enable SSL&#x2F;TLS features in ACE
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>tao - The ACE ORB <i>(supports: native | !(windows &amp; arm))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>wchar - Enable extra wide char functions in ACE <i>(supports: !osx)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>xml - Enable XML features in ACE
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>xml-utils - Include the ACE_XML_Utils library
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="xerces-c">xerces-c</a></li>
+              </ul>
+              </li>
+            <li>zlib - Enable zlib support
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zlib">zlib</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

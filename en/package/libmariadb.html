@@ -194,10 +194,64 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package libmariadb</h1></div>
+    <div class="header-text"><h1>Package libmariadb | 3.3.1#3</h1></div>
     <div class="package-body">
       <div class="main-content">
-        MariaDB Connector&#x2F;C is used to connect C&#x2F;C++ applications to MariaDB and MySQL databases
+        <p><b>Description:</b> MariaDB Connector&#x2F;C is used to connect C&#x2F;C++ applications to MariaDB and MySQL databases</p>
+        <p><b>Supports:</b> !uwp &amp; !xbox</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="zlib">zlib</a></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>iconv - Enables character set conversion
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libiconv">libiconv</a></li>
+              </ul>
+              </li>
+            <li>mariadbclient - Build the static mariadbclient library
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>openssl - SSL support (OpenSSL)
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openssl">openssl</a></li>
+              </ul>
+              </li>
+            <li>schannel - SSL support (Secure Channel) <i>(supports: windows | mingw)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>ssl - Default SSL backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="libmariadb">libmariadb</a> <i>(platform: windows | mingw)</i></li>
+                <li><a href="libmariadb">libmariadb</a> <i>(platform: !windows &amp; !mingw)</i></li>
+              </ul>
+              </li>
+            <li>zlib - Obsolete. zlib is always used. This feature is left for compatibility.
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>zstd - Build zstd compression plugin.
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="zstd">zstd</a></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

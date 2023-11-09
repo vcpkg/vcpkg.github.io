@@ -194,10 +194,42 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package openblas</h1></div>
+    <div class="header-text"><h1>Package openblas | 0.3.24</h1></div>
     <div class="package-body">
       <div class="main-content">
-        OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
+        <p><b>Description:</b> OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.</p>
+        <p><b>Supports:</b> !arm | arm64 | !uwp</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="openblas">openblas</a> <i>(host: true)</i></li>
+            <li><a href="pthread">pthread</a> <i>(platform: !windows &amp; !uwp)</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>dynamic-arch - Support for multiple targets in a single library <i>(supports: !windows | mingw)</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>simplethread - Use simple thread
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="openblas">openblas</a></li>
+              </ul>
+              </li>
+            <li>threads - Use a threading backend
+            <br><b>Dependencies:</b>
+            <ul>
+                <li><a href="pthread">pthread</a> <i>(platform: !windows &amp; !uwp)</i></li>
+              </ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>

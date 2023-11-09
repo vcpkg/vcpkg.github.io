@@ -194,10 +194,36 @@
   <div id="banner"></div>
   <body>
     <div tabindex="-1" role="main" id="main">
-    <div class="header-text"><h1>Package luajit</h1></div>
+    <div class="header-text"><h1>Package luajit | 2023-01-04#4</h1></div>
     <div class="package-body">
       <div class="main-content">
-        LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language.
+        <p><b>Description:</b> LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language.</p>
+        <p><b>Supports:</b> !uwp &amp; !(arm64 &amp; windows)</p>
+        <div>
+          <div><b>Dependencies:</b></div>
+          <ul>
+            <li><a href="luajit">luajit</a> <i>(host: true)</i> <i>(platform: !native &amp; (arm64 | x64) &amp; (!windows | mingw))</i></li>
+            <li><a href="luajit">luajit</a> <i>(host: true)</i> <i>(platform: !native &amp; ((arm &amp; !arm64) | x86) &amp; (!windows | mingw))</i></li>
+            <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
+            <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
+          </ul>
+        </div>
+        <div>
+          <div><b>Features:</b></div>
+          <ul>
+            <li>buildvm-32 - Install host tools for 32 bit targets <i>(supports: native &amp; ((arm &amp; !arm64) | x86) &amp; (!windows | mingw))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+            <li>buildvm-64 - Install host tools for 64 bit targets <i>(supports: native &amp; (arm64 | x64) &amp; (!windows | mingw))</i>
+            <br><b>Dependencies:</b>
+            <ul>
+              <li>No Dependencies</li></ul>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
     </div>
