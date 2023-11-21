@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <title>vcpkg package - {{{packageName.Name}}}</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  {{{commonhead}}}
+
+  <!-- additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+    integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+    crossorigin="anonymous"></script>
+  <script src="/dist/packages.js"></script>
+</head>
+
+<div id="loadNavBar">{{{navbar}}}</div>
+<div id="banner"></div>
+
+<body>
+
+  <main class="package-body" id="main">
+    <div class="main-content">
+      <div class="text-heading">
+        <h2>Package Information</h2>
+        <div><span class="detailed-package-item-heading">Package Name:</span> {{{packageName.Name}}}</div>
+        <div><span class="detailed-package-item-heading">Package Type:</span> {{{packageName.Type}}}</div>
+        <div> <span class="detailed-package-item-heading">Version:</span> {{{packageName.Version}}}</div>
+        <div><span class="detailed-package-item-heading">Description:</span> {{{packageName.Description}}}</div>
+        <div><span class="detailed-package-item-heading">License:</span> {{{packageName.License}}}</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> {{{packageName.LastUpdated}}}</div>
+        <div><span class="detailed-package-item-heading">Homepage:</span> {{{packageName.Homepage}}}</div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> {{{packageName.Documentation}}}</div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span>{{{packageVersions.availablePkgVersions}}}</div><br />
+        <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span>{{{packageVersions.availablePortVersions}}}</div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Features</h2>
+        <div>{{{packageName.FeaturesContent}}}</div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install {{{packageName.Name}}}</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port {{{packageName.Name}}}</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <div><span class="detailed-package-item-heading">Platforms:</span> {{{packageName.Supports}}}</div>
+        <div><span class="detailed-package-item-heading">Architectures:</span> {{{packageName.supportedArchitectures}}}
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div>
+          <h2>Dependencies</h2>
+        </div>
+        <ul>
+          {{#dependencies}} <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}}
+            <i>(platform: {{.}})</i>{{/platform}}
+          </li>
+          {{/dependencies}}{{^dependencies}}<li>No Dependencies</li>{{/dependencies}}</ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Profile Preview</h2>
+        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+            href="{{{packageName.portfileCmake}}}" target="_blank">click here </a></div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter">{{{footer}}}</div>
+</body>
+
+</html>

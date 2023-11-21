@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <title>vcpkg package - qt5</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link
+    rel="stylesheet"
+    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+/>
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript"
+    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+</script>
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script
+    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+
+
+  <!-- additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+    integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+    crossorigin="anonymous"></script>
+  <script src="/dist/packages.js"></script>
+</head>
+
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+
+<body>
+
+  <main class="package-body" id="main">
+    <div class="main-content">
+      <div class="text-heading">
+        <h2>Package Information</h2>
+        <div><span class="detailed-package-item-heading">Package Name:</span> qt5</div>
+        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <div> <span class="detailed-package-item-heading">Version:</span> 5.15.11</div>
+        <div><span class="detailed-package-item-heading">Description:</span> Qt5 Application Framework</div>
+        <div><span class="detailed-package-item-heading">License:</span> </div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-21 21:41:26</div>
+        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.qt.io/</div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><a href="83c7937d7b60d45f3f9e5006fa6cbcdead8b62e0" class="badge badge-primary">5.15.11</a> <a href="50fe0254b5caf977970fd69dfed756799a54120c" class="badge badge-primary">5.15.10</a> <a href="1b194230fb11eb7bf37092591a917b024ac96a9b" class="badge badge-primary">5.15.9</a> <a href="f770e40ee8bc91d18f208ceee737d2c8abfaf8d0" class="badge badge-primary">5.15.8</a> <a href="88647dde8c3f8eee01f4b02b3f5a211046e5e5bd" class="badge badge-primary">5.15.8</a> <a href="ae86831b5413a334195f8751e78e2ad9fcbd4349" class="badge badge-primary">5.15.7</a> <a href="6d75a3344bc8561e1764372d80f28fcc3bfd5ba7" class="badge badge-primary">5.15.7</a> <a href="1be1c7149cfbdf1af817b70e2d32d2648d34af78" class="badge badge-primary">5.15.6</a> <a href="5a71d754b8b0e033e9588dfc5d84b0b1d81a8c45" class="badge badge-primary">5.15.5</a> <a href="15bce9bdfce0d88dafafa166be4f56c2c4883877" class="badge badge-primary">5.15.4</a> <a href="979ef9acc281793cef4f43f1e1eaed177ed9b408" class="badge badge-primary">5.15.3</a> <a href="428cdd43abdc1200e889c66b9c388b421d16bf58" class="badge badge-primary">5.15.3</a> <a href="9810d811337a74ca11e032b94b52f4e4bed5d1b1" class="badge badge-primary">5.15.2</a> <a href="3ab863fc125546487759d6672f0e459da27f5f41" class="badge badge-primary">5.15.2</a> <a href="6c44bc778ae3e400ff6f777d6f6bb68c24a81fed" class="badge badge-primary">5.15.1</a> <a href="800137391209a8e9acbff74fb129f05192e159a8" class="badge badge-primary">5.15.1</a> <a href="1cf3366aa520643907eaf281edd1209d46762838" class="badge badge-primary">5.15.1</a> <a href="da980816d56966ba3a62f940d8319ef211363f1e" class="badge badge-primary">5.15.0</a> <a href="77f274080c535a523e638722085715dafbb00fc1" class="badge badge-primary">5.15.0</a> <a href="27e55da03da89dcd727dabc0b906320ec31f9c14" class="badge badge-primary">5.12.5</a> <a href="044db93ec24dc19cf505969bb4bc37791bff7ae1" class="badge badge-primary">5.12.4</a> <a href="3896d169d13e7e6b0eb6969942a91e106568d1e1" class="badge badge-primary">5.12.3-1</a> <a href="9aafb7c18221fa0c5b44cf02a5ff1e6fa19dc5c8" class="badge badge-primary">5.12.3</a> <a href="e4055eb5c566c3b043d4740b604828054503bd8a" class="badge badge-primary">5.12.1-2</a> <a href="2d4c09271773156bf248f17b384756de8c26906f" class="badge badge-primary">5.12.1-1</a> <a href="7896f5609bb83bf3b925fb627eaa7159b42b8950" class="badge badge-primary">5.12.0</a> <a href="750da4a3e633dafcd60b75c720144660cfc07e27" class="badge badge-primary">5.11.2</a> <a href="4fb62f3b74a5cf05bd07e2526b0d38dd5aa8f6fe" class="badge badge-primary">5.9.2-1</a> <a href="c54440a2fc7b7f56c1339015dbd88f195ef1c4f1" class="badge badge-primary">5.8-6</a> <a href="7d62c038e2916d12bbb04cb3565fcf2377a717c5" class="badge badge-primary">5.9.2-1</a> <a href="98e553c4e98e304bdea7fc602e4dd521f78de39b" class="badge badge-primary">5.8-6</a> <a href="8ef67f83440846b3df327ad5632ab40b56a5afad" class="badge badge-primary">5.8-5</a> <a href="fd49510b125c64b63e1177fe2c9c7ee71eab1f42" class="badge badge-primary">5.8-4</a> <a href="ba9eae53136170ce59fb80fba94bc0017d997f76" class="badge badge-primary">5.8-3</a> <a href="8450857e614a27d7885f65ed31a63d46e537474b" class="badge badge-primary">5.8-2</a> <a href="d8806f8aa4a51c2afb96e5e982b61ead5d1b57b9" class="badge badge-primary">5.8-3</a> <a href="bb2f14e92545e3bfd4b00b2a57ce632b25756aba" class="badge badge-primary">5.8-2</a> <a href="057443d5b5d8c682cf1bd78edd3c20478479f533" class="badge badge-primary">5.8-1</a> <a href="3d9f4415d7d6c419ea18165b1daea4a602b1ca04" class="badge badge-primary">5.7.1-7</a> <a href="a213c34055d0653c960318382feff42c86f4f1b0" class="badge badge-primary">5.7.1-6</a> <a href="ff901a5e6ef1fa151fad2da33289f0407c630d92" class="badge badge-primary">5.7.1-5</a> <a href="e8694966c75688a3dea133e887487da8405182d1" class="badge badge-primary">5.7.1-4</a> <a href="3bdfae1f98355075b40a26d0f6219561edd4edae" class="badge badge-primary">5.7.1-3</a> <a href="8cc9d59d5a9de8271ea11b188af58ce1515f3f89" class="badge badge-primary">5.7.1-2</a> <a href="05d0534884fc11a45bd16e405fd7ffd17dd5fb51" class="badge badge-primary">5.7.1-1</a> <a href="5983a3a786fed2c993e63b2441f62bff58416fb9" class="badge badge-primary">5.7.1</a> <a href="290292f1733374206d67588a3ccce9ed9c808e60" class="badge badge-primary">5.7-1</a> <a href="42df162ea3ee0f8ec8ae23f9ef01664cd19008b4" class="badge badge-primary">5.7</a></div><br />
+        <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Features</h2>
+        <div>• 3d : <br>• activeqt : Windows Only<br>• all : Install all Qt5 submodules (Warning: Could take a long time and fail...)<br>• charts : <br>• connectivity : <br>• datavis3d : <br>• declarative : <br>• doc : <br>• essentials : Build the essential qt modules<br>• extras : <br>• gamepad : <br>• graphicaleffects : <br>• imageformats : <br>• latest : (deprecated)<br>• location : <br>• mqtt : <br>• multimedia : <br>• networkauth : <br>• purchasing : <br>• quickcontrols : (deprecated)<br>• quickcontrols2 : <br>• remoteobjects : <br>• script : (deprecated)<br>• scxml : <br>• sensors : <br>• serialbus : <br>• serialport : <br>• speech : <br>• svg : <br>• tools : <br>• translations : <br>• virtualkeyboard : <br>• wayland : <br>• webchannel : <br>• webengine : <br>• webglplugin : <br>• websockets : <br>• webview : <br>• xmlpatterns : (deprecated)<br></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install qt5</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port qt5</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <div><span class="detailed-package-item-heading">Platforms:</span> </div>
+        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div>
+          <h2>Dependencies</h2>
+        </div>
+        <ul>
+           <li><a href="qt5-base">qt5-base</a>
+          </li>
+          </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Profile Preview</h2>
+        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+            href="https://github.com/microsoft/vcpkg/blob/master/ports/qt5/portfile.cmake" target="_blank">click here </a></div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a
+            class="footer-link"
+            href="/en/getting-started?platform=windows"
+            >Windows</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux"
+            >Linux</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac"
+            >Mac</a
+          >
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group">
+        <div class="footer-description">&#169; Microsoft</div>
+      </div>
+      <div class="footer-info-group">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link" href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 30 14" xml:space="preserve">
+            <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill: #fff"></path>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill: #06f"></path>
+        </svg>
+        <span>Your California Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+</body>
+
+</html>

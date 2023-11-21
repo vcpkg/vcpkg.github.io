@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <title>vcpkg package - libjpeg-turbo</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link
+    rel="stylesheet"
+    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+/>
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript"
+    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+</script>
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script
+    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+
+
+  <!-- additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+    integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+    crossorigin="anonymous"></script>
+  <script src="/dist/packages.js"></script>
+</head>
+
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+
+<body>
+
+  <main class="package-body" id="main">
+    <div class="main-content">
+      <div class="text-heading">
+        <h2>Package Information</h2>
+        <div><span class="detailed-package-item-heading">Package Name:</span> libjpeg-turbo</div>
+        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <div> <span class="detailed-package-item-heading">Version:</span> 3.0.1</div>
+        <div><span class="detailed-package-item-heading">Description:</span> libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.</div>
+        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-21 21:41:26</div>
+        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/libjpeg-turbo/libjpeg-turbo</div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><a href="481b08127d4002ba7441f144df259e03271e7592" class="badge badge-primary">3.0.1</a> <a href="4510832adaa3f5f415a59d26f5520ca250a8ff77" class="badge badge-primary">3.0.0</a> <a href="91d431c26902a8c0b21e7956caa136093b7d7d6b" class="badge badge-primary">3.0.0</a> <a href="3cd08939c6dab1963ac5b309a4205b2f4534fb79" class="badge badge-primary">3.0.0</a> <a href="a54bb2bec4dfc177249e2c10b31a665c249c660c" class="badge badge-primary">2.1.5.1</a> <a href="2764640a1b2cc36636084470108de50f2b531085" class="badge badge-primary">2.1.5.1</a> <a href="2b3b3fe0c258463586c0e421a2665ca1d2df9b4d" class="badge badge-primary">2.1.5.1</a> <a href="8ddeeba46c059986db83de51ec72b4ff587f0dcc" class="badge badge-primary">2.1.5</a> <a href="07c9848d16ee346b314e87e6c0d856bfb0745af9" class="badge badge-primary">2.1.4</a> <a href="f3ab7c40b47aa03953467e7697d3eea7b60d624e" class="badge badge-primary">2.1.3</a> <a href="dd9bb6eb0d4e28d2b3ef0d83b6b9ef736555621d" class="badge badge-primary">2.1.3</a> <a href="7373af20f73237f0453fb02a1ba097e5f710d2f5" class="badge badge-primary">2.1.3</a> <a href="987bbe2533672eff1aaf160f0f36c818a1f986ee" class="badge badge-primary">2.1.3</a> <a href="b37f789a1bb562a1469e0c30cf195c641ab824a6" class="badge badge-primary">2.1.2</a> <a href="1f10cf90b5807f4b4b98cc82786236002e85b9ac" class="badge badge-primary">2.0.6</a> <a href="48423df98f8715a1f33c2abdfcfc0c0bf5cc5f92" class="badge badge-primary">2.0.6</a> <a href="88d4315ae4daa0619554d0465564beee0a688d71" class="badge badge-primary">2.0.6</a> <a href="42aed1a37d04ecdc437a4f52c6dd71740339f478" class="badge badge-primary">2.0.6</a> <a href="0c5889f679a9404504230cb568df8f1f1263cbba" class="badge badge-primary">2.0.5</a> <a href="cf4b226059c3e824fc31962ba1afde783f7f1833" class="badge badge-primary">2.0.5</a> <a href="769ce1b935b91ea1ec2f3d76cd3708dec3e1b565" class="badge badge-primary">2.0.5</a> <a href="0cc64a738991909ff19e91167458517fec81c63d" class="badge badge-primary">2.0.5</a> <a href="49f7653ab5a15a52511b05a3fbadc4e6126b2031" class="badge badge-primary">2.0.5</a> <a href="5a4d55bc4c964d84a8ed03f61a1ecd7937c4a066" class="badge badge-primary">2.0.4</a> <a href="61a5d22ba7121fd7bbb445371b48abaf27bb650e" class="badge badge-primary">2.0.3</a> <a href="58fb3b2fd2cca2185bfce8035019e2dc295740b5" class="badge badge-primary">2.0.2</a> <a href="ceafc2a970c04c9c391fd3d020de793a7573e203" class="badge badge-primary">2.0.1-1</a> <a href="f5006e3c642292f8e287c4f85d4697a170252115" class="badge badge-primary">1.5.3-2</a> <a href="15b8e5e07bf506f4eab4fc29219c35acf110b1fa" class="badge badge-primary">1.5.3-1</a> <a href="360a48e9c4d7cff45917c0019190043cf0e5a1a3" class="badge badge-primary">1.5.3</a> <a href="26dcc564116a6350ce1be8e530b820434733b22e" class="badge badge-primary">1.5.2-2</a> <a href="06b4287c029a8684485e937a28b1cd32dd2c4194" class="badge badge-primary">1.5.2-1</a> <a href="b4016b566b7d8d51ebf7607be142fb51ea9432a0" class="badge badge-primary">1.5.2</a> <a href="be8bea575e46448d133a68b628f8b637d417b3fe" class="badge badge-primary">1.5.1-1</a> <a href="9247fbac463498da5095cef9d680f3c0b3544754" class="badge badge-primary">1.4.90-1</a> <a href="080f92f39008e2f69b00ff1f474b1ac344fbafc5" class="badge badge-primary">1.4.90-2</a> <a href="27233b528c1e7d9e9e468521d2b58473cc0a2b37" class="badge badge-primary">1.4.90-1</a></div><br />
+        <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">4</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Features</h2>
+        <div>• jpeg7 : Emulate libjpeg v7 API/ABI (this makes libjpeg-turbo backward-incompatible with libjpeg v6b!)<br>• jpeg8 : Emulate libjpeg v8 API/ABI (this makes libjpeg-turbo backward-incompatible with libjpeg v6b!)<br></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install libjpeg-turbo</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port libjpeg-turbo</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <div><span class="detailed-package-item-heading">Platforms:</span> </div>
+        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div>
+          <h2>Dependencies</h2>
+        </div>
+        <ul>
+           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i>
+          </li>
+           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i>
+          </li>
+          </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Profile Preview</h2>
+        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+            href="https://github.com/microsoft/vcpkg/blob/master/ports/libjpeg-turbo/portfile.cmake" target="_blank">click here </a></div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a
+            class="footer-link"
+            href="/en/getting-started?platform=windows"
+            >Windows</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux"
+            >Linux</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac"
+            >Mac</a
+          >
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group">
+        <div class="footer-description">&#169; Microsoft</div>
+      </div>
+      <div class="footer-info-group">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link" href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 30 14" xml:space="preserve">
+            <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill: #fff"></path>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill: #06f"></path>
+        </svg>
+        <span>Your California Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+</body>
+
+</html>
