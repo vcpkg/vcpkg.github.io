@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <title>vcpkg package - aws-sdk-cpp</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link
+    rel="stylesheet"
+    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+/>
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript"
+    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+</script>
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script
+    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+
+
+  <!-- additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+    integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+    crossorigin="anonymous"></script>
+  <script src="/dist/packages.js"></script>
+</head>
+
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+
+<body>
+
+  <main class="package-body" id="main">
+    <div class="main-content">
+      <div class="text-heading">
+        <h2>Package Information</h2>
+        <div><span class="detailed-package-item-heading">Package Name:</span> aws-sdk-cpp</div>
+        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <div> <span class="detailed-package-item-heading">Version:</span> 1.11.201</div>
+        <div><span class="detailed-package-item-heading">Description:</span> AWS SDK for C++</div>
+        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-21 23:52:32</div>
+        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/aws/aws-sdk-cpp</div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><a href="7e0ba4822d4dcc90eac626f351d7a3fd215a68a8" class="badge badge-primary">1.11.201</a> <a href="bb95756096209a013e786b104a11b0aa6357119d" class="badge badge-primary">1.11.169</a> <a href="5c0ad10a852e7facc0cea54e3990f16e0cb1ea8b" class="badge badge-primary">1.11.169</a> <a href="714b1b2815e2a3f57c79c8703a9cdc9892240acd" class="badge badge-primary">1.11.169</a> <a href="3fb36e871ff39d82abfb7eca5bedbaa2b177c72e" class="badge badge-primary">1.11.160</a> <a href="94f8f9c8774eda639d96a707cf3fda55fc9df034" class="badge badge-primary">1.11.155</a> <a href="f0cc899ce753e066c26bec70fdfb87c84feaf28f" class="badge badge-primary">1.11.155</a> <a href="f8b598e9d9b0ecde285a6898a1962f937f9511e9" class="badge badge-primary">1.11.149</a> <a href="bacc82ba5052ad66e3b20ad1cae53c36989a28ea" class="badge badge-primary">1.11.132</a> <a href="785c086e68c5e4d5257587ee6deeae566140b8fe" class="badge badge-primary">1.11.65</a> <a href="495471c4071406ec6929d77a553dc03ebd6df095" class="badge badge-primary">1.11.4</a> <a href="53396d33cc22ee631dbfbb9b9a3a656ee3f4ea38" class="badge badge-primary">1.9.220</a> <a href="8303c2804c010e352168fda9a38e7256c30d170d" class="badge badge-primary">1.9.220</a> <a href="c7d142ac1a2667f6ba9650cab2505a71ffaddbd3" class="badge badge-primary">1.9.220</a> <a href="7fc21526c4465a7e399683055a6df0096cad218e" class="badge badge-primary">1.9.220</a> <a href="e1d4dde6c824e40b0a0dce27f48539dfa4f64eed" class="badge badge-primary">1.9.160</a> <a href="e02908481470143ae86077c24e80d493d609f379" class="badge badge-primary">1.9.160</a> <a href="f3e8e88a0bf271817cd42083f58070df1a006603" class="badge badge-primary">1.9.96</a> <a href="2da283f5bdb07366001a8b14674c0961ac173566" class="badge badge-primary">1.9.96</a> <a href="fc86d9dc77f15fb8c7c18f767cc21e01e024a8cc" class="badge badge-primary">1.9.96</a> <a href="74ac36ae24b2c852423a57305005fd86d23d51d9" class="badge badge-primary">1.9.96</a> <a href="1c6b4335305034bea75f07f368e51142abddb789" class="badge badge-primary">1.9.96</a> <a href="5989ba8996df75b9195ef2f429191b48602236c9" class="badge badge-primary">1.9.96</a> <a href="e407a52a177c37acd340209b0c00d1dd1355d2aa" class="badge badge-primary">1.9.96</a> <a href="13f162ba967b3eaa61320e2062eabd924e1f7a65" class="badge badge-primary">1.8.126</a> <a href="c23d66191b235f6f388187395b62f38b8e6e35f5" class="badge badge-primary">1.8.126</a> <a href="e1cf5cdb2c16125d532b8281d6901839f11a25f5" class="badge badge-primary">1.8.126</a> <a href="f1baa5b35e752a0576d9d81d70d15b2c44a467db" class="badge badge-primary">1.8.126</a> <a href="011de9c924af9f41faddda1a6bc2bf080eee6679" class="badge badge-primary">1.8.126</a> <a href="1091bd9bd625aab8f19bc9d32499bd888788c613" class="badge badge-primary">1.8.126</a> <a href="1474856fe6fdeb8feab5068959e189bc9f6c0327" class="badge badge-primary">1.8.83</a> <a href="0e9236d4366958451f888a5f6616aa64a26afa61" class="badge badge-primary">1.8.83</a> <a href="948e791fc4effed6d27b6ad4da335a51ba6111bd" class="badge badge-primary">1.8.83</a> <a href="bc319d0eaa3164611ee527fbea2e2762a463f2fb" class="badge badge-primary">1.8.83</a> <a href="1ab9d27ef480aa31ff61d26bc119065d033de186" class="badge badge-primary">1.8.83</a> <a href="25296cbd7a7d602b8aa13ad09536845e2d39e4fd" class="badge badge-primary">1.8.4</a> <a href="2a538315e8d87e1c1b309df02df48c8d1ac2c8fb" class="badge badge-primary">1.8.4</a> <a href="08ea7a610c40148e3482a69e61b35243bd32d653" class="badge badge-primary">1.7.333</a> <a href="796789e5892ff15bd488c929097f6bf49d4d5757" class="badge badge-primary">1.7.270</a> <a href="d52df80388ebf58e81fbd305767274cc46a28098" class="badge badge-primary">1.7.214-1</a> <a href="2ee25c13ac13de82586aa5f8739c79442d584e96" class="badge badge-primary">1.7.214</a> <a href="003e047531084b5607bf0fa7650d9306368931c7" class="badge badge-primary">1.7.142-1</a> <a href="37100a1d00ea1fa12500c305efdfc9c2d39db249" class="badge badge-primary">1.7.142</a> <a href="c70be8918571b0047fe5c8dd99fb28361579c235" class="badge badge-primary">1.7.116</a> <a href="24e8b096060af9ba178fdab1ae2cec5680848a93" class="badge badge-primary">1.7.106</a> <a href="4d1a7231e28d990a993ddd7238dccc53cb4d3ff0" class="badge badge-primary">1.7.100</a> <a href="f30834108da8e38617086267dfee6a4e4e2ccb02" class="badge badge-primary">1.7.98</a> <a href="61bf71b5041f2c2a624aa0fdf21bb6ddbfd48924" class="badge badge-primary">1.7.89</a> <a href="e797ed8e640e800bf556fe9981cf735927a6eb3c" class="badge badge-primary">1.7.80</a> <a href="b83bc0e52d936be054b490ef50c79adf73f68fa5" class="badge badge-primary">1.7.41</a> <a href="9cdf6e74b272bb883bb536c9960f67e0af3a7c69" class="badge badge-primary">1.7.38</a> <a href="2f6bee8ce92ba561c5aabb43a16daacb22941c03" class="badge badge-primary">1.6.47</a> <a href="3ec29fd4a699993cda047b1e00663b786c120efa" class="badge badge-primary">1.6.43</a> <a href="b75b33c86cafda26afec82d8e9d52aaebb924d51" class="badge badge-primary">1.6.38</a> <a href="ca0eede4bb07d50f091fdfe1e1f1615bdcd24f00" class="badge badge-primary">1.6.29</a> <a href="f325650c4c786a5f7fdf6ed7a7190e5799287f9c" class="badge badge-primary">1.6.12-1</a> <a href="70753f945bfcb0b66c577748dddbec17a0d9c0e7" class="badge badge-primary">1.6.12</a> <a href="05d10ce3843b6d373a39f74abd2ec6774e38faff" class="badge badge-primary">1.5.7</a> <a href="7569d8b07f3244919df76e4338793d5c15d69902" class="badge badge-primary">1.5.2</a> <a href="c8d693c088850ae34c45b06dc8c93b5a186577c7" class="badge badge-primary">1.4.82</a> <a href="270e45b8b39a33ccd0c17275a9eb8e14da2722dd" class="badge badge-primary">1.4.78</a> <a href="8aaaec26546bc6e9d266651a18d834af099d30ff" class="badge badge-primary">1.4.69</a> <a href="33cb870a4b73c0e490d2fae7b3a6a11abc017898" class="badge badge-primary">1.4.65</a> <a href="5e76ee91aabaaa2421b689716a5555cd7cfc4319" class="badge badge-primary">1.4.52</a> <a href="df7dbeb03eb5b09a4585caa02cf44813513bbced" class="badge badge-primary">1.4.40</a> <a href="7616504952d47da4523f5479eecea772229a29fc" class="badge badge-primary">1.4.38</a> <a href="88c68e5bb2a3413d19b049d9c408a4316ec0b000" class="badge badge-primary">1.4.33</a> <a href="cccf3ff726ac8b25ad4babd21f7db9fddb7a8ee6" class="badge badge-primary">1.4.32</a> <a href="1c6995e70f2974f07c40b57eab2766faef273cbb" class="badge badge-primary">1.4.31-1</a> <a href="f4734cfc713d954afe15a3aafa86580cdf2f257d" class="badge badge-primary">1.4.30-1</a> <a href="2a95b31e39214a2cbc3f6ef804b2ada00f16b8ea" class="badge badge-primary">1.4.30</a> <a href="914fb03e175de5741eab4e4790d7c6f1c6096b67" class="badge badge-primary">1.4.27</a> <a href="9ee7b941c0e7f8ab6166704830c2203845f2c755" class="badge badge-primary">1.4.26</a> <a href="a480a4d56b1f297d5b843194a4fcfea8396a61b9" class="badge badge-primary">1.4.24</a> <a href="bf2a19a867c4ff6ab44d87545ff33465827ad419" class="badge badge-primary">1.4.23</a> <a href="6755840b50489b95087b94c21144300270813014" class="badge badge-primary">1.4.21</a> <a href="ef5dff7ac71c02c2787310917d89778bce5b2406" class="badge badge-primary">1.3.58</a> <a href="4ada15f7756b0d9c2b367f579136963ebab4b891" class="badge badge-primary">1.3.15</a> <a href="52e1dfc53de2b0f66dc212e3acc1fbc7a6a1d248" class="badge badge-primary">1.2.4</a> <a href="1c1682b10a345a4ec9b263c1f2421e5173be0260" class="badge badge-primary">1.0.61-1</a> <a href="5269268896d55c8a0d8f04de0757e37133f20b19" class="badge badge-primary">1.0.61</a> <a href="0a426cf5a8d5de394f31d2672f29fb78c2626a32" class="badge badge-primary">1.0.47</a> <a href="4d41e1e89793bc5b18df6cf604cdbc81445078bb" class="badge badge-primary">1.0.34-1</a> <a href="d39ebb54cfebceb23fce3f52ddfbafc34589e8af" class="badge badge-primary">1.0.34</a></div><br />
+        <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">6</span> <span class="badge badge-primary">5</span> <span class="badge badge-primary">4</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">10</span> <span class="badge badge-primary">9</span> <span class="badge badge-primary">8</span> <span class="badge badge-primary">7</span> <span class="badge badge-primary">6</span> <span class="badge badge-primary">5</span> <span class="badge badge-primary">4</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Features</h2>
+        <div>• access-management : C++ SDK for the AWS access-management service<br>• accessanalyzer : C++ SDK for the AWS accessanalyzer service<br>• account : C++ SDK for the AWS account service<br>• acm : C++ SDK for the AWS acm service<br>• acm-pca : C++ SDK for the AWS acm-pca service<br>• alexaforbusiness : C++ SDK for the AWS alexaforbusiness service<br>• amp : C++ SDK for the AWS amp service<br>• amplify : C++ SDK for the AWS amplify service<br>• amplifybackend : C++ SDK for the AWS amplifybackend service<br>• amplifyuibuilder : C++ SDK for the AWS amplifyuibuilder service<br>• apigateway : C++ SDK for the AWS apigateway service<br>• apigatewaymanagementapi : C++ SDK for the AWS apigatewaymanagementapi service<br>• apigatewayv2 : C++ SDK for the AWS apigatewayv2 service<br>• appconfig : C++ SDK for the AWS appconfig service<br>• appconfigdata : C++ SDK for the AWS appconfigdata service<br>• appfabric : C++ SDK for the AWS appfabric service<br>• appflow : C++ SDK for the AWS appflow service<br>• appintegrations : C++ SDK for the AWS appintegrations service<br>• application-autoscaling : C++ SDK for the AWS application-autoscaling service<br>• application-insights : C++ SDK for the AWS application-insights service<br>• applicationcostprofiler : C++ SDK for the AWS applicationcostprofiler service<br>• appmesh : C++ SDK for the AWS appmesh service<br>• apprunner : C++ SDK for the AWS apprunner service<br>• appstream : C++ SDK for the AWS appstream service<br>• appsync : C++ SDK for the AWS appsync service<br>• arc-zonal-shift : C++ SDK for the AWS arc-zonal-shift service<br>• athena : C++ SDK for the AWS athena service<br>• auditmanager : C++ SDK for the AWS auditmanager service<br>• autoscaling : C++ SDK for the AWS autoscaling service<br>• autoscaling-plans : C++ SDK for the AWS autoscaling-plans service<br>• awsmigrationhub : C++ SDK for the AWS AWSMigrationHub service<br>• awstransfer : C++ SDK for the AWS awstransfer service<br>• backup : C++ SDK for the AWS backup service<br>• backup-gateway : C++ SDK for the AWS backup-gateway service<br>• backupstorage : C++ SDK for the AWS backupstorage service<br>• batch : C++ SDK for the AWS batch service<br>• billingconductor : C++ SDK for the AWS billingconductor service<br>• braket : C++ SDK for the AWS braket service<br>• budgets : C++ SDK for the AWS budgets service<br>• ce : C++ SDK for the AWS ce service<br>• chime : C++ SDK for the AWS chime service<br>• chime-sdk-identity : C++ SDK for the AWS chime-sdk-identity service<br>• chime-sdk-media-pipelines : C++ SDK for the AWS chime-sdk-media-pipelines service<br>• chime-sdk-meetings : C++ SDK for the AWS chime-sdk-meetings service<br>• chime-sdk-messaging : C++ SDK for the AWS chime-sdk-messaging service<br>• chime-sdk-voice : C++ SDK for the AWS chime-sdk-voice service<br>• cleanrooms : C++ SDK for the AWS cleanrooms service<br>• cloud9 : C++ SDK for the AWS cloud9 service<br>• cloudcontrol : C++ SDK for the AWS cloudcontrol service<br>• clouddirectory : C++ SDK for the AWS clouddirectory service<br>• cloudformation : C++ SDK for the AWS cloudformation service<br>• cloudfront : C++ SDK for the AWS cloudfront service<br>• cloudhsm : C++ SDK for the AWS cloudhsm service<br>• cloudhsmv2 : C++ SDK for the AWS cloudhsmv2 service<br>• cloudsearch : C++ SDK for the AWS cloudsearch service<br>• cloudsearchdomain : C++ SDK for the AWS cloudsearchdomain service<br>• cloudtrail : C++ SDK for the AWS cloudtrail service<br>• cloudtrail-data : C++ SDK for the AWS cloudtrail-data service<br>• codeartifact : C++ SDK for the AWS codeartifact service<br>• codebuild : C++ SDK for the AWS codebuild service<br>• codecatalyst : C++ SDK for the AWS codecatalyst service<br>• codecommit : C++ SDK for the AWS codecommit service<br>• codedeploy : C++ SDK for the AWS codedeploy service<br>• codeguru-reviewer : C++ SDK for the AWS codeguru-reviewer service<br>• codeguru-security : C++ SDK for the AWS codeguru-security service<br>• codeguruprofiler : C++ SDK for the AWS codeguruprofiler service<br>• codepipeline : C++ SDK for the AWS codepipeline service<br>• codestar : C++ SDK for the AWS codestar service<br>• codestar-connections : C++ SDK for the AWS codestar-connections service<br>• codestar-notifications : C++ SDK for the AWS codestar-notifications service<br>• cognito-identity : C++ SDK for the AWS cognito-identity service<br>• cognito-idp : C++ SDK for the AWS cognito-idp service<br>• cognito-sync : C++ SDK for the AWS cognito-sync service<br>• comprehend : C++ SDK for the AWS comprehend service<br>• comprehendmedical : C++ SDK for the AWS comprehendmedical service<br>• compute-optimizer : C++ SDK for the AWS compute-optimizer service<br>• config : C++ SDK for the AWS config service<br>• connect : C++ SDK for the AWS connect service<br>• connect-contact-lens : C++ SDK for the AWS connect-contact-lens service<br>• connectcampaigns : C++ SDK for the AWS connectcampaigns service<br>• connectcases : C++ SDK for the AWS connectcases service<br>• connectparticipant : C++ SDK for the AWS connectparticipant service<br>• controltower : C++ SDK for the AWS controltower service<br>• cur : C++ SDK for the AWS cur service<br>• customer-profiles : C++ SDK for the AWS customer-profiles service<br>• databrew : C++ SDK for the AWS databrew service<br>• dataexchange : C++ SDK for the AWS dataexchange service<br>• datapipeline : C++ SDK for the AWS datapipeline service<br>• datasync : C++ SDK for the AWS datasync service<br>• dax : C++ SDK for the AWS dax service<br>• detective : C++ SDK for the AWS detective service<br>• devicefarm : C++ SDK for the AWS devicefarm service<br>• devops-guru : C++ SDK for the AWS devops-guru service<br>• directconnect : C++ SDK for the AWS directconnect service<br>• discovery : C++ SDK for the AWS discovery service<br>• dlm : C++ SDK for the AWS dlm service<br>• dms : C++ SDK for the AWS dms service<br>• docdb : C++ SDK for the AWS docdb service<br>• docdb-elastic : C++ SDK for the AWS docdb-elastic service<br>• drs : C++ SDK for the AWS drs service<br>• ds : C++ SDK for the AWS ds service<br>• dynamodb : C++ SDK for the AWS dynamodb service<br>• dynamodbstreams : C++ SDK for the AWS dynamodbstreams service<br>• ebs : C++ SDK for the AWS ebs service<br>• ec2 : C++ SDK for the AWS ec2 service<br>• ec2-instance-connect : C++ SDK for the AWS ec2-instance-connect service<br>• ecr : C++ SDK for the AWS ecr service<br>• ecr-public : C++ SDK for the AWS ecr-public service<br>• ecs : C++ SDK for the AWS ecs service<br>• eks : C++ SDK for the AWS eks service<br>• elastic-inference : C++ SDK for the AWS elastic-inference service<br>• elasticache : C++ SDK for the AWS elasticache service<br>• elasticbeanstalk : C++ SDK for the AWS elasticbeanstalk service<br>• elasticfilesystem : C++ SDK for the AWS elasticfilesystem service<br>• elasticloadbalancing : C++ SDK for the AWS elasticloadbalancing service<br>• elasticloadbalancingv2 : C++ SDK for the AWS elasticloadbalancingv2 service<br>• elasticmapreduce : C++ SDK for the AWS elasticmapreduce service<br>• elastictranscoder : C++ SDK for the AWS elastictranscoder service<br>• email : C++ SDK for the AWS email service<br>• emr-containers : C++ SDK for the AWS emr-containers service<br>• emr-serverless : C++ SDK for the AWS emr-serverless service<br>• entityresolution : C++ SDK for the AWS entityresolution service<br>• es : C++ SDK for the AWS es service<br>• eventbridge : C++ SDK for the AWS eventbridge service<br>• events : C++ SDK for the AWS events service<br>• evidently : C++ SDK for the AWS evidently service<br>• finspace : C++ SDK for the AWS finspace service<br>• finspace-data : C++ SDK for the AWS finspace-data service<br>• firehose : C++ SDK for the AWS firehose service<br>• fis : C++ SDK for the AWS fis service<br>• fms : C++ SDK for the AWS fms service<br>• forecast : C++ SDK for the AWS forecast service<br>• forecastquery : C++ SDK for the AWS forecastquery service<br>• frauddetector : C++ SDK for the AWS frauddetector service<br>• fsx : C++ SDK for the AWS fsx service<br>• gamelift : C++ SDK for the AWS gamelift service<br>• gamesparks : C++ SDK for the AWS gamesparks service<br>• glacier : C++ SDK for the AWS glacier service<br>• globalaccelerator : C++ SDK for the AWS globalaccelerator service<br>• glue : C++ SDK for the AWS glue service<br>• grafana : C++ SDK for the AWS grafana service<br>• greengrass : C++ SDK for the AWS greengrass service<br>• greengrassv2 : C++ SDK for the AWS greengrassv2 service<br>• groundstation : C++ SDK for the AWS groundstation service<br>• guardduty : C++ SDK for the AWS guardduty service<br>• health : C++ SDK for the AWS health service<br>• healthlake : C++ SDK for the AWS healthlake service<br>• honeycode : C++ SDK for the AWS honeycode service<br>• iam : C++ SDK for the AWS iam service<br>• identity-management : C++ SDK for the AWS identity-management service<br>• identitystore : C++ SDK for the AWS identitystore service<br>• imagebuilder : C++ SDK for the AWS imagebuilder service<br>• importexport : C++ SDK for the AWS importexport service<br>• inspector : C++ SDK for the AWS inspector service<br>• inspector2 : C++ SDK for the AWS inspector2 service<br>• internetmonitor : C++ SDK for the AWS internetmonitor service<br>• iot : C++ SDK for the AWS iot service<br>• iot-data : C++ SDK for the AWS iot-data service<br>• iot-jobs-data : C++ SDK for the AWS iot-jobs-data service<br>• iot-roborunner : C++ SDK for the AWS iot-roborunner service<br>• iot1click-devices : C++ SDK for the AWS iot1click-devices service<br>• iot1click-projects : C++ SDK for the AWS iot1click-projects service<br>• iotanalytics : C++ SDK for the AWS iotanalytics service<br>• iotdeviceadvisor : C++ SDK for the AWS iotdeviceadvisor service<br>• iotevents : C++ SDK for the AWS iotevents service<br>• iotevents-data : C++ SDK for the AWS iotevents-data service<br>• iotfleethub : C++ SDK for the AWS iotfleethub service<br>• iotfleetwise : C++ SDK for the AWS iotfleetwise service<br>• iotsecuretunneling : C++ SDK for the AWS iotsecuretunneling service<br>• iotsitewise : C++ SDK for the AWS iotsitewise service<br>• iotthingsgraph : C++ SDK for the AWS iotthingsgraph service<br>• iottwinmaker : C++ SDK for the AWS iottwinmaker service<br>• iotwireless : C++ SDK for the AWS iotwireless service<br>• ivs : C++ SDK for the AWS ivs service<br>• ivs-realtime : C++ SDK for the AWS ivs-realtime service<br>• ivschat : C++ SDK for the AWS ivschat service<br>• kafka : C++ SDK for the AWS kafka service<br>• kafkaconnect : C++ SDK for the AWS kafkaconnect service<br>• kendra : C++ SDK for the AWS kendra service<br>• kendra-ranking : C++ SDK for the AWS kendra-ranking service<br>• keyspaces : C++ SDK for the AWS keyspaces service<br>• kinesis : C++ SDK for the AWS kinesis service<br>• kinesis-video-archived-media : C++ SDK for the AWS kinesis-video-archived-media service<br>• kinesis-video-media : C++ SDK for the AWS kinesis-video-media service<br>• kinesis-video-signaling : C++ SDK for the AWS kinesis-video-signaling service<br>• kinesis-video-webrtc-storage : C++ SDK for the AWS kinesis-video-webrtc-storage service<br>• kinesisanalytics : C++ SDK for the AWS kinesisanalytics service<br>• kinesisanalyticsv2 : C++ SDK for the AWS kinesisanalyticsv2 service<br>• kinesisvideo : C++ SDK for the AWS kinesisvideo service<br>• kms : C++ SDK for the AWS kms service<br>• lakeformation : C++ SDK for the AWS lakeformation service<br>• lambda : C++ SDK for the AWS lambda service<br>• lex : C++ SDK for the AWS lex service<br>• lex-models : C++ SDK for the AWS lex-models service<br>• lexv2-models : C++ SDK for the AWS lexv2-models service<br>• lexv2-runtime : C++ SDK for the AWS lexv2-runtime service<br>• license-manager : C++ SDK for the AWS license-manager service<br>• license-manager-linux-subscriptions : C++ SDK for the AWS license-manager-linux-subscriptions service<br>• license-manager-user-subscriptions : C++ SDK for the AWS license-manager-user-subscriptions service<br>• lightsail : C++ SDK for the AWS lightsail service<br>• location : C++ SDK for the AWS location service<br>• logs : C++ SDK for the AWS logs service<br>• lookoutequipment : C++ SDK for the AWS lookoutequipment service<br>• lookoutmetrics : C++ SDK for the AWS lookoutmetrics service<br>• lookoutvision : C++ SDK for the AWS lookoutvision service<br>• m2 : C++ SDK for the AWS m2 service<br>• machinelearning : C++ SDK for the AWS machinelearning service<br>• macie : C++ SDK for the AWS macie service<br>• macie2 : C++ SDK for the AWS macie2 service<br>• managedblockchain : C++ SDK for the AWS managedblockchain service<br>• managedblockchain-query : C++ SDK for the AWS managedblockchain-query service<br>• marketplace-catalog : C++ SDK for the AWS marketplace-catalog service<br>• marketplace-entitlement : C++ SDK for the AWS marketplace-entitlement service<br>• marketplacecommerceanalytics : C++ SDK for the AWS marketplacecommerceanalytics service<br>• mediaconnect : C++ SDK for the AWS mediaconnect service<br>• mediaconvert : C++ SDK for the AWS mediaconvert service<br>• medialive : C++ SDK for the AWS medialive service<br>• mediapackage : C++ SDK for the AWS mediapackage service<br>• mediapackage-vod : C++ SDK for the AWS mediapackage-vod service<br>• mediapackagev2 : C++ SDK for the AWS mediapackagev2 service<br>• mediastore : C++ SDK for the AWS mediastore service<br>• mediastore-data : C++ SDK for the AWS mediastore-data service<br>• mediatailor : C++ SDK for the AWS mediatailor service<br>• medical-imaging : C++ SDK for the AWS medical-imaging service<br>• memorydb : C++ SDK for the AWS memorydb service<br>• meteringmarketplace : C++ SDK for the AWS meteringmarketplace service<br>• mgn : C++ SDK for the AWS mgn service<br>• migration-hub-refactor-spaces : C++ SDK for the AWS migration-hub-refactor-spaces service<br>• migrationhub-config : C++ SDK for the AWS migrationhub-config service<br>• migrationhuborchestrator : C++ SDK for the AWS migrationhuborchestrator service<br>• migrationhubstrategy : C++ SDK for the AWS migrationhubstrategy service<br>• mobile : C++ SDK for the AWS mobile service<br>• monitoring : C++ SDK for the AWS monitoring service<br>• mq : C++ SDK for the AWS mq service<br>• mturk-requester : C++ SDK for the AWS mturk-requester service<br>• mwaa : C++ SDK for the AWS mwaa service<br>• neptune : C++ SDK for the AWS neptune service<br>• neptunedata : C++ SDK for the AWS neptunedata service<br>• network-firewall : C++ SDK for the AWS network-firewall service<br>• networkmanager : C++ SDK for the AWS networkmanager service<br>• nimble : C++ SDK for the AWS nimble service<br>• oam : C++ SDK for the AWS oam service<br>• omics : C++ SDK for the AWS omics service<br>• opensearch : C++ SDK for the AWS opensearch service<br>• opensearchserverless : C++ SDK for the AWS opensearchserverless service<br>• opsworks : C++ SDK for the AWS opsworks service<br>• opsworkscm : C++ SDK for the AWS opsworkscm service<br>• organizations : C++ SDK for the AWS organizations service<br>• osis : C++ SDK for the AWS osis service<br>• outposts : C++ SDK for the AWS outposts service<br>• panorama : C++ SDK for the AWS panorama service<br>• payment-cryptography : C++ SDK for the AWS payment-cryptography service<br>• payment-cryptography-data : C++ SDK for the AWS payment-cryptography-data service<br>• pca-connector-ad : C++ SDK for the AWS pca-connector-ad service<br>• personalize : C++ SDK for the AWS personalize service<br>• personalize-events : C++ SDK for the AWS personalize-events service<br>• personalize-runtime : C++ SDK for the AWS personalize-runtime service<br>• pi : C++ SDK for the AWS pi service<br>• pinpoint : C++ SDK for the AWS pinpoint service<br>• pinpoint-email : C++ SDK for the AWS pinpoint-email service<br>• pinpoint-sms-voice-v2 : C++ SDK for the AWS pinpoint-sms-voice-v2 service<br>• pipes : C++ SDK for the AWS pipes service<br>• polly : C++ SDK for the AWS polly service<br>• pricing : C++ SDK for the AWS pricing service<br>• privatenetworks : C++ SDK for the AWS privatenetworks service<br>• proton : C++ SDK for the AWS proton service<br>• qldb : C++ SDK for the AWS qldb service<br>• qldb-session : C++ SDK for the AWS qldb-session service<br>• queues : C++ SDK for the AWS queues service<br>• quicksight : C++ SDK for the AWS quicksight service<br>• ram : C++ SDK for the AWS ram service<br>• rbin : C++ SDK for the AWS rbin service<br>• rds : C++ SDK for the AWS rds service<br>• rds-data : C++ SDK for the AWS rds-data service<br>• redshift : C++ SDK for the AWS redshift service<br>• redshift-data : C++ SDK for the AWS redshift-data service<br>• redshift-serverless : C++ SDK for the AWS redshift-serverless service<br>• rekognition : C++ SDK for the AWS rekognition service<br>• resiliencehub : C++ SDK for the AWS resiliencehub service<br>• resource-explorer-2 : C++ SDK for the AWS resource-explorer-2 service<br>• resource-groups : C++ SDK for the AWS resource-groups service<br>• resourcegroupstaggingapi : C++ SDK for the AWS resourcegroupstaggingapi service<br>• robomaker : C++ SDK for the AWS robomaker service<br>• rolesanywhere : C++ SDK for the AWS rolesanywhere service<br>• route53 : C++ SDK for the AWS route53 service<br>• route53-recovery-cluster : C++ SDK for the AWS route53-recovery-cluster service<br>• route53-recovery-control-config : C++ SDK for the AWS route53-recovery-control-config service<br>• route53-recovery-readiness : C++ SDK for the AWS route53-recovery-readiness service<br>• route53domains : C++ SDK for the AWS route53domains service<br>• route53resolver : C++ SDK for the AWS route53resolver service<br>• rum : C++ SDK for the AWS rum service<br>• s3 : C++ SDK for the AWS s3 service<br>• s3-crt : C++ SDK for the AWS s3-crt service<br>• s3-encryption : C++ SDK for the AWS s3-encryption service<br>• s3control : C++ SDK for the AWS s3control service<br>• s3outposts : C++ SDK for the AWS s3outposts service<br>• sagemaker : C++ SDK for the AWS sagemaker service<br>• sagemaker-a2i-runtime : C++ SDK for the AWS sagemaker-a2i-runtime service<br>• sagemaker-edge : C++ SDK for the AWS sagemaker-edge service<br>• sagemaker-featurestore-runtime : C++ SDK for the AWS sagemaker-featurestore-runtime service<br>• sagemaker-geospatial : C++ SDK for the AWS sagemaker-geospatial service<br>• sagemaker-metrics : C++ SDK for the AWS sagemaker-metrics service<br>• sagemaker-runtime : C++ SDK for the AWS sagemaker-runtime service<br>• savingsplans : C++ SDK for the AWS savingsplans service<br>• scheduler : C++ SDK for the AWS scheduler service<br>• schemas : C++ SDK for the AWS schemas service<br>• sdb : C++ SDK for the AWS sdb service<br>• secretsmanager : C++ SDK for the AWS secretsmanager service<br>• securityhub : C++ SDK for the AWS securityhub service<br>• securitylake : C++ SDK for the AWS securitylake service<br>• serverlessrepo : C++ SDK for the AWS serverlessrepo service<br>• service-quotas : C++ SDK for the AWS service-quotas service<br>• servicecatalog : C++ SDK for the AWS servicecatalog service<br>• servicecatalog-appregistry : C++ SDK for the AWS servicecatalog-appregistry service<br>• servicediscovery : C++ SDK for the AWS servicediscovery service<br>• sesv2 : C++ SDK for the AWS sesv2 service<br>• shield : C++ SDK for the AWS shield service<br>• signer : C++ SDK for the AWS signer service<br>• simspaceweaver : C++ SDK for the AWS simspaceweaver service<br>• sms : C++ SDK for the AWS sms service<br>• sms-voice : C++ SDK for the AWS sms-voice service<br>• snow-device-management : C++ SDK for the AWS snow-device-management service<br>• snowball : C++ SDK for the AWS snowball service<br>• sns : C++ SDK for the AWS sns service<br>• sqs : C++ SDK for the AWS sqs service<br>• ssm : C++ SDK for the AWS ssm service<br>• ssm-contacts : C++ SDK for the AWS ssm-contacts service<br>• ssm-incidents : C++ SDK for the AWS ssm-incidents service<br>• ssm-sap : C++ SDK for the AWS ssm-sap service<br>• sso : C++ SDK for the AWS sso service<br>• sso-admin : C++ SDK for the AWS sso-admin service<br>• sso-oidc : C++ SDK for the AWS sso-oidc service<br>• states : C++ SDK for the AWS states service<br>• storagegateway : C++ SDK for the AWS storagegateway service<br>• sts : C++ SDK for the AWS sts service<br>• support : C++ SDK for the AWS support service<br>• support-app : C++ SDK for the AWS support-app service<br>• swf : C++ SDK for the AWS swf service<br>• synthetics : C++ SDK for the AWS synthetics service<br>• text-to-speech : C++ SDK for the AWS text-to-speech service<br>• textract : C++ SDK for the AWS textract service<br>• timestream-query : C++ SDK for the AWS timestream-query service<br>• timestream-write : C++ SDK for the AWS timestream-write service<br>• tnb : C++ SDK for the AWS tnb service<br>• transcribe : C++ SDK for the AWS transcribe service<br>• transcribestreaming : C++ SDK for the AWS transcribestreaming service<br>• transfer : C++ SDK for the AWS transfer service<br>• translate : C++ SDK for the AWS translate service<br>• verifiedpermissions : C++ SDK for the AWS verifiedpermissions service<br>• voice-id : C++ SDK for the AWS voice-id service<br>• vpc-lattice : C++ SDK for the AWS vpc-lattice service<br>• waf : C++ SDK for the AWS waf service<br>• waf-regional : C++ SDK for the AWS waf-regional service<br>• wafv2 : C++ SDK for the AWS wafv2 service<br>• wellarchitected : C++ SDK for the AWS wellarchitected service<br>• wisdom : C++ SDK for the AWS wisdom service<br>• workdocs : C++ SDK for the AWS workdocs service<br>• worklink : C++ SDK for the AWS worklink service<br>• workmail : C++ SDK for the AWS workmail service<br>• workmailmessageflow : C++ SDK for the AWS workmailmessageflow service<br>• workspaces : C++ SDK for the AWS workspaces service<br>• workspaces-web : C++ SDK for the AWS workspaces-web service<br>• xray : C++ SDK for the AWS xray service<br></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install aws-sdk-cpp</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port aws-sdk-cpp</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <div><span class="detailed-package-item-heading">Platforms:</span> !(windows & arm) & !uwp</div>
+        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div>
+          <h2>Dependencies</h2>
+        </div>
+        <ul>
+           <li><a href="aws-crt-cpp">aws-crt-cpp</a>
+          </li>
+           <li><a href="curl">curl</a>
+            <i>(platform: !uwp &amp; !windows)</i>
+          </li>
+           <li><a href="openssl">openssl</a>
+            <i>(platform: !uwp &amp; !windows)</i>
+          </li>
+           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i>
+          </li>
+           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i>
+          </li>
+           <li><a href="zlib">zlib</a>
+          </li>
+          </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Profile Preview</h2>
+        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+            href="https://github.com/microsoft/vcpkg/blob/master/ports/aws-sdk-cpp/portfile.cmake" target="_blank">click here </a></div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a
+            class="footer-link"
+            href="/en/getting-started?platform=windows"
+            >Windows</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux"
+            >Linux</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac"
+            >Mac</a
+          >
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group">
+        <div class="footer-description">&#169; Microsoft</div>
+      </div>
+      <div class="footer-info-group">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link" href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 30 14" xml:space="preserve">
+            <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill: #fff"></path>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill: #06f"></path>
+        </svg>
+        <span>Your California Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+</body>
+
+</html>

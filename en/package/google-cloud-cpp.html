@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <title>vcpkg package - google-cloud-cpp</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link
+    rel="stylesheet"
+    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+/>
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript"
+    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+</script>
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script
+    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+
+
+  <!-- additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+    integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+    crossorigin="anonymous"></script>
+  <script src="/dist/packages.js"></script>
+</head>
+
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+
+<body>
+
+  <main class="package-body" id="main">
+    <div class="main-content">
+      <div class="text-heading">
+        <h2>Package Information</h2>
+        <div><span class="detailed-package-item-heading">Package Name:</span> google-cloud-cpp</div>
+        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <div> <span class="detailed-package-item-heading">Version:</span> 2.18.0</div>
+        <div><span class="detailed-package-item-heading">Description:</span> C++ Client Libraries for Google Cloud Platform APIs.</div>
+        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-21 23:52:32</div>
+        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/googleapis/google-cloud-cpp</div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><a href="21cf84757dd988f8b1ea4aa318002a4cc047b697" class="badge badge-primary">2.18.0</a> <a href="2a52d32521f59da4d2ecfe7beffe13bab448ea64" class="badge badge-primary">2.17.0</a> <a href="eb4b2fd7eea450ced2e6f33dcd9af1237f2de3c2" class="badge badge-primary">2.17.0</a> <a href="cfe978bbc8c0f0e98f02aaaf2ab546f08107ce95" class="badge badge-primary">2.17.0</a> <a href="76121e57d4d9f0ce925973295ee30a574d448e4f" class="badge badge-primary">2.16.0</a> <a href="6b622eca80c311ef081e80432d56f13d9c8f0d72" class="badge badge-primary">2.15.1</a> <a href="abe57efc591eb204c5e39b2a78c5c1d6832fc236" class="badge badge-primary">2.15.0</a> <a href="d32a3fa190564c35057874f3912f61ebf07852b7" class="badge badge-primary">2.14.0</a> <a href="696c1d17cd2174ffde1c0d53779b76e8d98d924a" class="badge badge-primary">2.14.0</a> <a href="c067a236b62d38d1f56a658b086039bf22441c4a" class="badge badge-primary">2.13.0</a> <a href="f7179212beeb134849f381dbe2c200580cc37c97" class="badge badge-primary">2.12.0</a> <a href="0a4dc6845aca21d78853e4f6bc11e9bc5174b7b2" class="badge badge-primary">2.11.0</a> <a href="c3c69ec65e243e929646ca08f0697849d2d78191" class="badge badge-primary">2.10.0</a> <a href="4f9ab675a9cb385078d01716543e99db9a95135a" class="badge badge-primary">2.9.0</a> <a href="cd39ca22d68218395284a484878ecf7774f1a23c" class="badge badge-primary">2.8.0</a> <a href="9430285a9f961b1defe7394130aac23e6f65b97f" class="badge badge-primary">2.7.0</a> <a href="3cf693b6f222dfea1458f2a576f6e4ff270efac2" class="badge badge-primary">2.6.0</a> <a href="4c30065de0805a0b44a0f913541b4824286a053a" class="badge badge-primary">2.5.0</a> <a href="ca9ad64f3cb29e1d51281a0e2679d0da3468f5c8" class="badge badge-primary">2.5.0</a> <a href="f3ada0142b3cd88fbafd2cb8d2d9323c0da62dcb" class="badge badge-primary">2.4.0</a> <a href="653d6d11f8a3dade7985f982ae09471dc34b9d7d" class="badge badge-primary">2.3.0</a> <a href="1787308d659051c50c95298d855cd7ad5308d8b4" class="badge badge-primary">2.2.0</a> <a href="47537b3b241e2f6a757553ad9475c44c7e13eb01" class="badge badge-primary">2.2.0</a> <a href="8e675db53dae8b88be806ecd93411810ee8048d7" class="badge badge-primary">2.1.0</a> <a href="a70cc631d25b110ce203a0f571689304fb0e8595" class="badge badge-primary">2.1.0</a> <a href="a68fd18fa28b5bbe4807c7ed32ed45c0d4392dd1" class="badge badge-primary">2.1.0</a> <a href="80997c40db6cb1d4e51f77875f75bf3a8046680f" class="badge badge-primary">2.0.1</a> <a href="71a72e78da707ee567b96bc835cf25cd8e8eb975" class="badge badge-primary">2.0.0</a> <a href="95315156a8c6fefdde56b6c4718062975ff7e0ce" class="badge badge-primary">1.42.0</a> <a href="a6fac62fee7c3ad470f81ac87fcdf19d5a85f8b8" class="badge badge-primary">1.41.0</a> <a href="506bdfbf9040c856f8f3a4a2c183da38f9030817" class="badge badge-primary">1.40.1</a> <a href="2a18f7bea0f4811da422b3099c4331305cb1f617" class="badge badge-primary">1.40.1</a> <a href="7f6839d85455e137c21bf5bf894e00e0327c3423" class="badge badge-primary">1.39.0</a> <a href="ca8e8015d59f4f5e03b0a257d46506c2b0219a71" class="badge badge-primary">1.39.0</a> <a href="a22f467e483356f9ce6b6d8502385d447c28912a" class="badge badge-primary">1.38.0</a> <a href="284b1c6a7a7ac2d2d878aa68766b7db3c6775314" class="badge badge-primary">1.38.0</a> <a href="f67a7068dcb56bb2a97b03a6960d522b71eb28f5" class="badge badge-primary">1.38.0</a> <a href="b986c9bce793574d2a4936c1b23e705aa8b29abc" class="badge badge-primary">1.37.0</a> <a href="15cf3b112010a1f5c8ec0948f135a5e1863a2246" class="badge badge-primary">1.36.0</a> <a href="7b5a4cd75e98700c970afb3b0f6de808bc954ef3" class="badge badge-primary">1.36.0</a> <a href="cb69d19a2e45c9dae1a8caa1ee5898b4344cb7f1" class="badge badge-primary">1.35.0</a> <a href="5df9e36ebb6dd75abc2a5ff3aebdd61719739e8e" class="badge badge-primary">1.35.0</a> <a href="171fbf69839919f9cbd18e7d1d3c4375920c4ae5" class="badge badge-primary">1.35.0</a> <a href="3a3519f9f0fc9833e8f4dd815aea69b385ea6885" class="badge badge-primary">1.34.1</a> <a href="d0975c563a68cf3d45c97c420e3e83af83620127" class="badge badge-primary">1.34.0</a> <a href="3c272f2136618359a7e387fdc45a434e25e4ce85" class="badge badge-primary">1.33.0</a> <a href="793c4f8aafbed21274611812020a3a4c01517fc2" class="badge badge-primary">1.32.1</a> <a href="42240e5f4653d8ce17158c706e232de8a57a4c6e" class="badge badge-primary">1.32.1</a> <a href="2b53c52b812f1d7fe8ada0a6d938b047b5a3dbd2" class="badge badge-primary">1.32.0</a> <a href="d138daefe227de160954ecdce23178fa659edb36" class="badge badge-primary">1.32.0</a> <a href="64af5624931918b1df7ff30a2f44ef86104739cd" class="badge badge-primary">1.31.1</a> <a href="81d0a42380da299b4942b6d7f8c00ecba4ca7745" class="badge badge-primary">1.31.0</a> <a href="7e4c28a8a9e84631228981bd73a3932596fe8e1f" class="badge badge-primary">1.30.1</a> <a href="254b48f7254b7ab5b4ac6676ccd3149274f154f0" class="badge badge-primary">1.30.1</a> <a href="4cc90bac3e6db351ea0daa3de00a32947c3b2050" class="badge badge-primary">1.30.0</a> <a href="47a4d6d3258efe94ffe95b10abd1f0a19c48aab2" class="badge badge-primary">1.29.0</a> <a href="41623bc51fa4b9763aa83d192130ff37119afe33" class="badge badge-primary">1.28.0</a> <a href="7e6a35577a3c0149939403d8aa0bb1ba3487398b" class="badge badge-primary">1.27.0</a> <a href="249151585040064668071c55f2cd0e4ec1fae8c5" class="badge badge-primary">1.26.0</a> <a href="83200cc9220f1d5da7d7367321597708cf4ee044" class="badge badge-primary">1.25.0</a> <a href="f6cb8953a3026ff687125228a7149cd23f2ed231" class="badge badge-primary">1.25.0</a> <a href="720f34d5340392fe35e2ed3553b378225c8bb211" class="badge badge-primary">1.24.0</a> <a href="16ca3b8eae830e46a951f7e5dc10408ee0517f6d" class="badge badge-primary">1.24.0</a> <a href="39f9bad63d71830d31bd827577e3c37621653d5e" class="badge badge-primary">1.24.0</a> <a href="ab2377218e8992e8aedf8fed757edb90cc390817" class="badge badge-primary">1.23.0</a> <a href="85ed59dd339159f0600765d49cb7e1e723e67fec" class="badge badge-primary">1.22.0</a> <a href="8cd6472a3f9bbb44fb73d7ae053098f3e38e8ee2" class="badge badge-primary">1.21.0</a> <a href="bf429f159295f55917a153351f4e3cacc6ff1ef6" class="badge badge-primary">1.20.0</a> <a href="59bf156235030361bdb5acf54f544284a3aa9754" class="badge badge-primary">1.19.0</a> <a href="69917d9f2e5096f98deac99e711ec752c689f7c3" class="badge badge-primary">1.18.0</a> <a href="fb9b65a2cb366c1daf755059abfd2d95aaba9e7a" class="badge badge-primary">1.17.1</a> <a href="2c97742fd3d6b7c93bfb8ff88d5619ed4412f473" class="badge badge-primary">1.16.0</a> <a href="712f8a863b2dfe78c13148e81d3212efb5a8ed97" class="badge badge-primary">1.15.0</a> <a href="c43175be8261276b1783667357c7945158fe958f" class="badge badge-primary">1.14.0</a> <a href="52c57b66e005aa31e111a15bf77143c957d2e89c" class="badge badge-primary">0.21.0</a> <a href="9bc8ac8316d13f9030a9d567232470914de91e0a" class="badge badge-primary">0.20.0</a> <a href="8ef2b02db68faa89633ebba272f07239050cae29" class="badge badge-primary">0.19.0</a> <a href="eb0cf475c99430d3bcaf4f52ab576d8eb653e16c" class="badge badge-primary">0.18.0</a> <a href="00498368ad052708ff4ab0007e7c9e2ba254a14d" class="badge badge-primary">0.17.0</a> <a href="73b08543dcf70c3788f24522a9a760146f5542a3" class="badge badge-primary">0.15.0</a> <a href="424f6cb8f1523a67b8d17e38d054d724af9bf288" class="badge badge-primary">0.14.0-1</a> <a href="55f7ea6570a8347107f0088b8d275af382b831f4" class="badge badge-primary">0.14.0</a> <a href="8ba7ff1b5b1023e8ac0f2e474bd68ded5cecc077" class="badge badge-primary">0.13.0</a> <a href="04080464b28da820cd25910378a2a82e777a25da" class="badge badge-primary">0.12.0</a> <a href="b9db46a33268ec3b23e6499f244e6ab8c9a2680d" class="badge badge-primary">0.11.0</a> <a href="21aeb9f2d880397831202f0b6ad184942b1a32d1" class="badge badge-primary">0.10.0</a> <a href="737c20a6baffd851d34d121a942bee74c044f53c" class="badge badge-primary">0.9.0</a> <a href="7e68f5fd615216033490e1c35ed3b0ecaa2afa11" class="badge badge-primary">0.8.1-1</a> <a href="e0d1065da2edb91743dd18b701a06a22adf860e0" class="badge badge-primary">0.8.0-1</a> <a href="17db695ea8da500d3d8df815c718da04b1c77a98" class="badge badge-primary">0.8.0</a> <a href="919ab4fadde542d660016dbc1a37b401cc0e84ec" class="badge badge-primary">0.7.0</a> <a href="f695b99935d98c05bc6d79dec8029ebda4ab3722" class="badge badge-primary">0.6.0</a> <a href="3070578d2ff6641a4acfa7bd23c3f8f6970e5d26" class="badge badge-primary">0.5.0</a> <a href="a74e28a214a8434f3a5313c450ec234fd2c07882" class="badge badge-primary">0.4.0</a> <a href="436feabe3adf421c80a6bd7a6c5a19aa8abba011" class="badge badge-primary">0.3.0-1</a> <a href="d31aae0639ac2e3bb90c20722c718367910a7d19" class="badge badge-primary">0.1.0-1</a> <a href="90463477b1a37c4e5f47ee9f1c756c9e140914b4" class="badge badge-primary">0.1.0</a></div><br />
+        <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Features</h2>
+        <div>• accessapproval : Access Approval API C++ Client Library<br>• accesscontextmanager : Access Context Manager API C++ Client Library<br>• advisorynotifications : Advisory Notifications API C++ Client Library<br>• alloydb : Alloy DB API C++ Client Library<br>• apigateway : API Gateway API C++ Client Library<br>• apigeeconnect : Apigee Connect API C++ Client Library<br>• apikeys : API Keys API C++ Client Library<br>• appengine : App Engine Admin API C++ Client Library<br>• artifactregistry : Artifact Registry API C++ Client Library<br>• asset : Cloud Asset API C++ Client Library<br>• assuredworkloads : Assured Workloads API C++ Client Library<br>• automl : Cloud AutoML API C++ Client Library<br>• baremetalsolution : Bare Metal Solution API C++ Client Library<br>• batch : Batch API C++ Client Library<br>• beyondcorp : BeyondCorp API C++ Client Library<br>• bigquery : The Google Cloud BigQuery C++ client library<br>• bigtable : The Google Cloud Bigtable C++ client library<br>• billing : Cloud Billing Budget API C++ Client Library<br>• binaryauthorization : Binary Authorization API C++ Client Library<br>• certificatemanager : Certificate Manager API C++ Client Library<br>• channel : Cloud Channel API C++ Client Library<br>• cloudbuild : Cloud Build API C++ Client Library<br>• commerce : Cloud Commerce C++ Client Library<br>• composer : Cloud Composer C++ Client Library<br>• compute : Compute Engine C++ Client Library<br>• confidentialcomputing : Confidential Computing API C++ Client Library<br>• config : Infrastructure Manager API C++ Client Library<br>• connectors : Connectors API C++ Client Library<br>• contactcenterinsights : Contact Center AI Insights API C++ Client Library<br>• container : Kubernetes Engine API C++ Client Library<br>• containeranalysis : Container Analysis API C++ Client Library<br>• datacatalog : Google Cloud Data Catalog API C++ Client Library<br>• datafusion : Cloud Data Fusion API C++ Client Library<br>• datamigration : Database Migration API C++ Client Library<br>• dataplex : Cloud Dataplex API C++ Client Library<br>• dataproc : Cloud Dataproc API C++ Client Library<br>• datastore : Cloud Datastore API C++ Client Library<br>• datastream : Datastream API C++ Client Library<br>• deploy : Google Cloud Deploy API C++ Client Library<br>• dialogflow-cx : Cloud Dialogflow CX API C++ Client Library<br>• dialogflow-es : Cloud Dialogflow ES API C++ Client Library<br>• discoveryengine : Discovery Engine API C++ Client Library<br>• dlp : Cloud Data Loss Prevention (DLP) API C++ Client Library<br>• documentai : Cloud Document AI API C++ Client Library<br>• edgecontainer : Distributed Cloud Edge Container API C++ Client Library<br>• eventarc : Eventarc API C++ Client Library<br>• experimental-storage-grpc : The GCS+gRPC plugin<br>• filestore : Cloud Filestore API C++ Client Library<br>• functions : Cloud Functions API C++ Client Library<br>• gkehub : GKE Hub C++ Client Library<br>• gkemulticloud : Anthos Multi-Cloud C++ Client Library<br>• grafeas : Protocol buffers implementing the 'Grafeas API' (metadata about software artifacts)<br>• grpc-common : Dependencies used by all gRPC-based libraries<br>• iam : The Google Cloud IAM C++ client library<br>• iap : Cloud Identity-Aware Proxy API C++ Client Library<br>• ids : Cloud IDS API C++ Client Library<br>• kms : Cloud Key Management Service (KMS) API C++ Client Library<br>• language : Cloud Natural Language API C++ Client Library<br>• logging : Google Cloud Logging C++ Client Library<br>• managedidentities : Managed Service for Microsoft Active Directory API C++ Client Library<br>• memcache : Cloud Memorystore for Memcached API C++ Client Library<br>• metastore : Dataproc Metastore API C++ Client Library<br>• migrationcenter : Migration Center API C++ Client Library<br>• monitoring : Cloud Monitoring API C++ Client Library<br>• netapp : NetApp API C++ Client Library<br>• networkconnectivity : Network Connectivity API C++ Client Library<br>• networkmanagement : Network Management API C++ Client Library<br>• networksecurity : Secure Web Proxy API C++ Client Library<br>• notebooks : Notebooks API C++ Client Library<br>• oauth2 : OAuth2 Access Token Generation Library<br>• opentelemetry : OpenTelemetry C++ GCP Exporter Library<br>• optimization : Cloud Optimization API C++ Client Library<br>• orgpolicy : Organization Policy API C++ Client Library<br>• osconfig : Cloud OS Config API C++ Client library<br>• oslogin : Cloud OS Login API C++ Client Library<br>• policysimulator : Policy Simulator API C++ Client Library<br>• policytroubleshooter : Policy Troubleshooter API C++ Client Library<br>• privateca : Certificate Authority API C++ Client Library<br>• profiler : Cloud Profiler API C++ Client Library<br>• pubsub : The Google Cloud Bigtable C++ client library<br>• rapidmigrationassessment : Rapid Migration Assessment C++ Client Library<br>• recommender : Recommender C++ Client Library<br>• redis : Google Cloud Memorystore for Redis API C++ Client Library<br>• resourcemanager : Cloud Resource Manager API C++ Client Library<br>• resourcesettings : Resource Settings API C++ Client Library<br>• rest-common : Dependencies used by all REST-based libraries<br>• retail : Retail API C++ Client Library<br>• run : Cloud Run Admin API C++ Client Library<br>• scheduler : Cloud Scheduler API C++ Client Library<br>• secretmanager : The Google Cloud Secret Manager C++ client library<br>• securesourcemanager : Secure Source Manager API C++ Client Library<br>• securitycenter : Security Command Center API C++ Client Library<br>• servicecontrol : Service Control API C++ Client Library<br>• servicedirectory : Service Directory API C++ Client Library<br>• servicemanagement : Service Management API C++ Client Library<br>• serviceusage : Service Usage API C++ Client Library<br>• shell : Cloud Shell API C++ Client Library<br>• spanner : The Google Cloud Spanner C++ client library<br>• speech : The Google Cloud Speech-to-Text C++ client library<br>• storage : The Google Cloud Storage C++ client library<br>• storageinsights : Storage Insights API C++ Client Library<br>• storagetransfer : Storage Transfer API C++ Client Library<br>• support : Cloud Support API C++ Client Library<br>• talent : Cloud Talent Solution API C++ Client Library<br>• tasks : The Google Cloud Tasks C++ client library<br>• texttospeech : Cloud Text-to-Speech API C++ Client Library<br>• tpu : Cloud TPU API C++ Client Library<br>• trace : Stackdriver Trace API C++ Client Library<br>• translate : Cloud Translation API C++ Client Library<br>• video : Video Services C++ Client Library<br>• videointelligence : Cloud Video Intelligence API C++ Client Library<br>• vision : Cloud Vision API C++ Client Library<br>• vmmigration : VM Migration API C++ Client Library<br>• vmwareengine : VMware Engine API C++ Client Library<br>• vpcaccess : Serverless VPC Access API C++ Client Library<br>• webrisk : Web Risk API C++ Client Library<br>• websecurityscanner : Web Security Scanner API C++ Client Library<br>• workflows : Workflow Executions API C++ Client Library<br>• workstations : Workstations API C++ Client Library<br></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install google-cloud-cpp</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port google-cloud-cpp</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <div><span class="detailed-package-item-heading">Platforms:</span> !uwp</div>
+        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div>
+          <h2>Dependencies</h2>
+        </div>
+        <ul>
+           <li><a href="abseil">abseil</a>
+          </li>
+           <li><a href="openssl">openssl</a>
+          </li>
+           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i>
+          </li>
+           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i>
+          </li>
+          </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Profile Preview</h2>
+        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+            href="https://github.com/microsoft/vcpkg/blob/master/ports/google-cloud-cpp/portfile.cmake" target="_blank">click here </a></div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a
+            class="footer-link"
+            href="/en/getting-started?platform=windows"
+            >Windows</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux"
+            >Linux</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac"
+            >Mac</a
+          >
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group">
+        <div class="footer-description">&#169; Microsoft</div>
+      </div>
+      <div class="footer-info-group">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link" href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 30 14" xml:space="preserve">
+            <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill: #fff"></path>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill: #06f"></path>
+        </svg>
+        <span>Your California Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+</body>
+
+</html>

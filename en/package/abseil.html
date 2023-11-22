@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <title>vcpkg package - abseil</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link
+    rel="stylesheet"
+    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous"
+/>
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript"
+    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
+</script>
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script
+    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+
+
+  <!-- additional scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"
+    integrity="sha384-UBGmRyNtwBeGap4zdtKXLwUHdLJM9M/aSMLo8NaIzCxnLxYU6F9+V8veOXP3Fakh"
+    crossorigin="anonymous"></script>
+  <script src="/dist/packages.js"></script>
+</head>
+
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+
+<body>
+
+  <main class="package-body" id="main">
+    <div class="main-content">
+      <div class="text-heading">
+        <h2>Package Information</h2>
+        <div><span class="detailed-package-item-heading">Package Name:</span> abseil</div>
+        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <div> <span class="detailed-package-item-heading">Version:</span> 20230802.1</div>
+        <div><span class="detailed-package-item-heading">Description:</span> an open-source collection designed to augment the C++ standard library.,Abseil is an open-source collection of C++ library code designed to augment the C++ standard library. The Abseil library code is collected from Google's own C++ code base, has been extensively tested and used in production, and is the same code we depend on in our daily coding lives.,In some cases, Abseil provides pieces missing from the C++ standard; in others, Abseil provides alternatives to the standard for special needs we've found through usage in the Google code base. We denote those cases clearly within the library code we provide you.,Abseil is not meant to be a competitor to the standard library; we've just found that many of these utilities serve a purpose within our code base, and we now want to provide those resources to the C++ community as a whole.</div>
+        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-21 23:52:32</div>
+        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/abseil/abseil-cpp</div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><a href="49a35a30915907a4e46b57bb33b8aa1f2185e757" class="badge badge-primary">20230802.1</a> <a href="95cfb844950f2cc3e1a530bd23967ee2ea218f74" class="badge badge-primary">20230802.0</a> <a href="370a6da6fa1c5e259a8c8deec863e705aa423be6" class="badge badge-primary">20230125.3</a> <a href="6a337fa251c0ac4489d9c0ea1e2f1c9a7d019eb5" class="badge badge-primary">20230125.3</a> <a href="a88e9003e0d38c2cfbcc676931a0204d749e6629" class="badge badge-primary">20230125.0</a> <a href="aa4f29f110c771e7096ba356501e4a0d6d3d9baa" class="badge badge-primary">20230125.0</a> <a href="c569c0e44beca0b94d5a2d52a24e3a91868550ae" class="badge badge-primary">20220623.1</a> <a href="962a81319706d17c9e90bd0b873659ec7c75178a" class="badge badge-primary">20211102.1</a> <a href="10d137aa21adc696f8469d49f67b90ce0d50e1a1" class="badge badge-primary">20210324.2</a> <a href="231cc80bbfb1e54466799ddb6a94dc6d15e7d39b" class="badge badge-primary">20210324.2</a> <a href="bae9c59114a4a2dc396452fb9e988a9da881b4f4" class="badge badge-primary">undefined</a> <a href="d58deb5198f8a1d72eafc3e1d6bdb36197fac470" class="badge badge-primary">undefined</a> <a href="184230b7622b1be5630f893dcecdaac7acde101f" class="badge badge-primary">2020-09-23</a> <a href="1558fdc71dd0f0988cd2a53ba439bed3cc899247" class="badge badge-primary">2020-09-23</a> <a href="3d9d65e41e314658c5e18839117ebf7f060b9cb7" class="badge badge-primary">2020-09-23</a> <a href="4258e2e692cb3ee0ab68eb253ee8df5296fcc206" class="badge badge-primary">2020-09-23</a> <a href="0d4dfbea87f5b8903a5db5ed3ed6851b6e6a3a79" class="badge badge-primary">2020-03-03</a> <a href="606b9214364983e5df021d0556dbec5e44f4b0a8" class="badge badge-primary">2020-03-03-7</a> <a href="1f8a41353506f308128d9818ce82afefa8f5cbaa" class="badge badge-primary">2020-03-03-6</a> <a href="f12f0fd203075e10e997740f9a859ff2afb8aef9" class="badge badge-primary">2020-03-03-5</a> <a href="d87b9a5227dc88a046586fad46bdb087c8ee4a8a" class="badge badge-primary">2020-03-03-4</a> <a href="574159a94de7e13a16df672d7694747d15b51b6e" class="badge badge-primary">2020-03-03-3</a> <a href="83c70111363fd72030199cd4746febd5a3deb86b" class="badge badge-primary">2020-03-03-2</a> <a href="3fe1459a1ed06573700901f46c55b8515125bcc8" class="badge badge-primary">2020-03-03-1</a> <a href="cb05f05a1ee7fcc5b545e23387c0e97904181a45" class="badge badge-primary">2020-03-03</a> <a href="42821eb6795ede2674126dd8a63a8270d625fb71" class="badge badge-primary">2019-12-19</a> <a href="67ffa71966b97cce9af682a6ab313077e9e8fdec" class="badge badge-primary">2019-05-08-1</a> <a href="b47a07ae7d4bf6245622289ad4f61d8378d4b4d4" class="badge badge-primary">2019-05-08</a> <a href="219eed8e70aba774359db6a7305da67f5c37286c" class="badge badge-primary">2019-05-07</a> <a href="1290314a9cc3848d55f78ba479a1e8010c3575c1" class="badge badge-primary">2019-04-19-1</a> <a href="f4ab7cf4b0d4c7936dd92670bc80d1da7935754d" class="badge badge-primary">2019-04-19</a> <a href="d1c95bdf0be59c5169d4585159c3ede6cdd0f648" class="badge badge-primary">2019-03-29</a> <a href="0ec930976860b806e67ccd7e317f3409e7312d31" class="badge badge-primary">2019_01_30-1</a> <a href="474e0d01ab4f28129b27d8bb206a12f0b6083cf6" class="badge badge-primary">2019-01-30</a> <a href="b1dc60998cf959863511719bb8f652415b0c3616" class="badge badge-primary">2019-01-09-1</a> <a href="c72de9332fdffd942d9f8faab0d467b4b7a4517d" class="badge badge-primary">2018-12-14</a> <a href="a486c9d12f167abdf62e82705f8de0c1d6800b86" class="badge badge-primary">2018-11-08-1</a> <a href="6e5c38debfc9ba9095f7b541c4004bc6d91dfb53" class="badge badge-primary">2018-11-08</a> <a href="6a7a573563cfb875a1cb6d14ff7a256949206d26" class="badge badge-primary">2018-11-01</a> <a href="340bbf898c959ea9873328e54dd4f6243b9f6101" class="badge badge-primary">2018-10-25</a> <a href="e58db76030f30c070b6682ceaab92bce107b689c" class="badge badge-primary">2018-10-11</a> <a href="389bc4ecb350878ce52467d94de8f15d3faa2465" class="badge badge-primary">2018-09-18-3</a> <a href="9014f0fed8d78a07f17f0f31ff979cbc978b455b" class="badge badge-primary">2018-09-18</a> <a href="b5fb3ddc7aedb015cce6001f91eada613d5c12f2" class="badge badge-primary">2018-08-03</a> <a href="918f4b2105b2b2804e3037eb8cb9ec78442373bd" class="badge badge-primary">2018-07-30</a> <a href="f1574d6d5ac00c0eb3c841705c8309e9299ea09a" class="badge badge-primary">2018-07-08</a> <a href="ed2c2706442eae786013ac1e96aa1c305e472f0d" class="badge badge-primary">2018-07-03</a> <a href="87deb0db1be83281dfa8bdda25d0682039797e3e" class="badge badge-primary">2018-07-01</a> <a href="efdfc3d7e6bb0ea93b9ab714d428e328cd387e00" class="badge badge-primary">2018-06-15</a> <a href="221188807a3daefbdd47860678e3d694a75881f6" class="badge badge-primary">2018-06-12-1</a> <a href="efe7369a1c9660b854d72fbfc236a7c7853160f9" class="badge badge-primary">2018-05-01-1</a> <a href="86be3d78ea2cda31298e855723eeabc1e01956d8" class="badge badge-primary">2018-04-25-1</a> <a href="8542937b2ad319fac2b555dff1db37158efe0f9d" class="badge badge-primary">2018-04-12</a> <a href="cfbabf336133d3277c875863885aeb21bbe94672" class="badge badge-primary">2018-04-09</a> <a href="fe36a137929999662114548bb9cb805300f9f7f4" class="badge badge-primary">2018-04-05</a> <a href="8271c3e6bb3cd27ffffff70d044dedeadcabce5e" class="badge badge-primary">2018-04-02</a> <a href="9b7bd36ba59ae3d43ec88e8f31bccb3820147d90" class="badge badge-primary">2018-03-29</a> <a href="fe36d92dbdc2c773ee0808305af8bb04c7f7e1ae" class="badge badge-primary">2018-03-27</a> <a href="f9206e416a8f76f9cfdcb34e18ebdc6364a68e09" class="badge badge-primary">2018-03-23</a> <a href="d974de4bf17feeff3b1dd02938ce71c4faa0dae5" class="badge badge-primary">2018-03-20</a> <a href="9c62ecef7e2c6fd477828349bd479ff8ae7829ff" class="badge badge-primary">2018-03-17</a> <a href="68068406842e8cadd24cec3d4fa92e4a4c5a1762" class="badge badge-primary">2018-03-14</a> <a href="4c47db1ff8f8cc3667f50479330149ce74fd51ea" class="badge badge-primary">2018-03-13</a> <a href="8171362241e62f412834c7bb2a8f32645479f3a2" class="badge badge-primary">2018-03-07</a> <a href="ad7f8d103d0150e9f0d26a8b15d3d254366dcf99" class="badge badge-primary">2018-03-02</a> <a href="f937714f50ad98cbfe320864d1f91aaba042ba43" class="badge badge-primary">2018-2-23</a> <a href="21c19b70eb5a2e072cbbc143834a70210ed2f60f" class="badge badge-primary">2018-2-5</a> <a href="6c87b15fce15d6781c993ce619fa1cd8ca34cb6e" class="badge badge-primary">2017-11-10-1</a> <a href="76598c99218db15f5e300e26ec75e29e8c4b8e10" class="badge badge-primary">2017-11-10</a> <a href="84bd3ac433569058fe7e58defc219e939917daab" class="badge badge-primary">2017-10-14</a> <a href="01ef56b603dac7b3e3bbefac09df439e2d159219" class="badge badge-primary">2017-09-28</a></div><br />
+        <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">8</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Features</h2>
+        <div>• cxx17 : Enable compiler C++17.<br></div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install abseil</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port abseil</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <div><span class="detailed-package-item-heading">Platforms:</span> </div>
+        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div>
+        <div>
+          <h2>Dependencies</h2>
+        </div>
+        <ul>
+           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i>
+          </li>
+           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i>
+          </li>
+          </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Profile Preview</h2>
+        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+            href="https://github.com/microsoft/vcpkg/blob/master/ports/abseil/portfile.cmake" target="_blank">click here </a></div>
+      </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a
+            class="footer-link"
+            href="/en/getting-started?platform=windows"
+            >Windows</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux"
+            >Linux</a
+          >
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac"
+            >Mac</a
+          >
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group">
+        <div class="footer-description">&#169; Microsoft</div>
+      </div>
+      <div class="footer-info-group">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link" href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 30 14" xml:space="preserve">
+            <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill: #fff"></path>
+            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill: #06f"></path>
+        </svg>
+        <span>Your California Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+</body>
+
+</html>

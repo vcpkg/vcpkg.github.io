@@ -20,7 +20,7 @@ async function get_pages_recursive(docs_set, path) {
     var dirents = await fs.readdir(path, { encoding: 'utf-8', withFileTypes: true });
     var promises = [];
     for (var ent of dirents) {
-        if (ent.isDirectory()) {
+        if (ent.isDirectory() && ent.name != "package") {
             promises.push(get_pages_recursive(docs_set, path + "/" + ent.name));
         } else if (ent.name.endsWith(".html")) {
             docs_set.push(path + "/" + ent.name);
