@@ -232,7 +232,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
         var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
         let viewpkgDetails = "View Details for ".concat(package.Name);
         vcpkgPage.setAttribute("name",viewpkgDetails);
-        /*
+        
         //add link to package name
         var nameLink = parentNameLink.cloneNode(true);
         nameLink.textContent = package.Name;
@@ -240,10 +240,10 @@ function renderPackageDetails(package, packageDiv, isCard) {
         nameLink.href = "/en/package/" + package.Name;
         nameLink.target = "_blank"
         cardHeaderDiv.appendChild(nameLink);
-        */
+        
         // Package Name
         var nameDiv = parentNameDiv.cloneNode(true);
-        nameDiv.textContent = package.Name + " |";
+        nameDiv.textContent =  " |";
         cardHeaderDiv.appendChild(nameDiv);
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
@@ -422,12 +422,8 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, compatibility, website)
     cardFrag.appendChild(renderPackageDetails(package, packageDiv));
-    // Wrap package card in an anchor element to link to the per-package page
-    let cardLink = document.createElement('a');
-    cardLink.setAttribute('href', 'package/' + package.Name);
-    cardLink.appendChild(cardFrag);
     // Add the package card to the page
-    packageDiv.appendChild(cardLink);
+    packageDiv.appendChild(cardFrag);
     // Parent div to hold all the package cards
     mainDiv.appendChild(packageDiv);
 }
