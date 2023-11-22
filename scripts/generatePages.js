@@ -5,6 +5,7 @@ const path = require('path');
 const Mustache = require('mustache');
 const rootDir = path.dirname(__dirname);
 const enDir = rootDir + "/en"
+const pkgDir = rootDir + "/en/package"
 const templatesDir = rootDir + "/templates"
 
 async function render(src, dst, view) {
@@ -15,6 +16,7 @@ async function render(src, dst, view) {
 
 async function main() {
     await fs.mkdir(enDir, { recursive: true });
+    await fs.mkdir(pkgDir, { recursive: true });
     const view = {
         navbar: await fs.readFile(templatesDir + "/navbar.html"),
         footer: await fs.readFile(templatesDir + "/footer.html"),
