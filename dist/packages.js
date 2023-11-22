@@ -230,18 +230,21 @@ function renderPackageDetails(package, packageDiv, isCard) {
     var detailFrag = document.createDocumentFragment();
     if (isCard) {
         var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
-
+        let viewpkgDetails = "View Details for ".concat(package.Name);
+        vcpkgPage.setAttribute("name",viewpkgDetails);
+        /*
         //add link to package name
         var nameLink = parentNameLink.cloneNode(true);
         nameLink.textContent = package.Name;
         nameLink.setAttribute('aria-label', package.Name);
-        nameLink.href = "/en/package/" + package.Name ;
+        nameLink.href = "/en/package/" + package.Name;
         nameLink.target = "_blank"
         cardHeaderDiv.appendChild(nameLink);
+        */
         // Package Name
-        var namePipeDiv = parentNameDiv.cloneNode(true);
-        namePipeDiv.textContent = " |";
-        cardHeaderDiv.appendChild(namePipeDiv);
+        var nameDiv = parentNameDiv.cloneNode(true);
+        nameDiv.textContent = package.Name + " |";
+        cardHeaderDiv.appendChild(nameDiv);
         // Package Version
         var versionDiv = parentVersionDiv.cloneNode(true);
         let versionStr = package.Version || package["Version-semver"] || package["Version-date"];
@@ -419,8 +422,12 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, compatibility, website)
     cardFrag.appendChild(renderPackageDetails(package, packageDiv));
+    // Wrap package card in an anchor element to link to the per-package page
+    let cardLink = document.createElement('a');
+    cardLink.setAttribute('href', 'package/' + package.Name);
+    cardLink.appendChild(cardFrag);
     // Add the package card to the page
-    packageDiv.appendChild(cardFrag);
+    packageDiv.appendChild(cardLink);
     // Parent div to hold all the package cards
     mainDiv.appendChild(packageDiv);
 }
