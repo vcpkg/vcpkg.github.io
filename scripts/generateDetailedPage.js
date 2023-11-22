@@ -134,8 +134,8 @@ function GetPackageVersions(pkgName) {
 
     var versionObj = {};
     versionObj.availablePkgVersions = versionsInfo.versions.map(function (obj) {
-        return obj.version != undefined ? `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj.version}</a>` : `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj["version-string"]}</a>`
-        //return obj.version != undefined ? obj.version : obj["version-string"];
+        //return obj.version != undefined ? `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj.version}</a>` : `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj["version-string"]}</a>`
+        return obj.version != undefined ? `<span class="badge badge-primary">${obj.version}</span>` : `<span class="badge badge-primary">${obj["version-string"]}</span>`
     }).join(' ');
 
 
