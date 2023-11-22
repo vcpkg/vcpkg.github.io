@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
-<head>
-  <title>vcpkg package - cctag</title>
-  <meta name="description" content="Explore vcpkg libraries to install">
-  <meta name="keywords"
-    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>vcpkg-package</title>
+    <meta name="description" content="Explore vcpkg libraries to install">
+    <meta name="keywords" content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
-  <link href="/css/githubBtn.css" rel="stylesheet" />
+    <!-- additional stylesheets and fonts -->
+    <link href="/css/packages.css" rel="stylesheet" />
+    <link href="/css/githubBtn.css" rel="stylesheet" />
 
-  <!-- favicons -->
+    <!-- favicons -->
 <link rel="icon" href="/assets/mark/mark.svg" />
 <link rel="icon" href="/assets/mark/favicon.png" />
 <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
@@ -49,8 +48,9 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 
-</head>
-<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  </head>
+
+  <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
   <a class="navbar-brand align-baseline" href="/en/index.html">
     <span id="vcpkg-nav-logo" class=""
@@ -191,114 +191,22 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
-<body>
-  <main class="package-body" id="main">
-    <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> cctag</div>
-        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.0.2</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Computer vision library for detecting CCTag markers made up of concentric circles</div>
-        <div><span class="detailed-package-item-heading">License:</span> MPL-2.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-22 18:30:21</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/alicevision/CCTag</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> https://cctag.readthedocs.io/</div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span></div><br />
-        <div><span class="detailed-package-item-heading">Available Port
-            Versions:</span><span class="badge badge-primary">5</span> <span class="badge badge-primary">4</span> <span class="badge badge-primary">3</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span></div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <div>• apps : Sample applications for detecting CCTag markers in images and videos<br>• cuda : Enable Cuda support for faster detection<br></div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <p>How to integrate vcpkg into your preferred environment:</p>
-        <ol>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
-              line</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
-              (CMake)</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
-              Studio (MSBuild) </a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
-              Studio Code </a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
-              target="_blank">Manual integration (other build systems / IDEs)</a></li>
-        </ol>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install cctag</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port cctag</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms:</span> !(uwp | arm | arm64 | android | x86 | xbox)</div>
-        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
-        </div>
-      </div>
-      <br />
-      <br />
-      <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="boost-accumulators">boost-accumulators</a></li>
-           <li><a href="boost-algorithm">boost-algorithm</a></li>
-           <li><a href="boost-container">boost-container</a></li>
-           <li><a href="boost-date-time">boost-date-time</a></li>
-           <li><a href="boost-exception">boost-exception</a></li>
-           <li><a href="boost-filesystem">boost-filesystem</a></li>
-           <li><a href="boost-foreach">boost-foreach</a></li>
-           <li><a href="boost-iterator">boost-iterator</a></li>
-           <li><a href="boost-lexical-cast">boost-lexical-cast</a></li>
-           <li><a href="boost-math">boost-math</a></li>
-           <li><a href="boost-mpl">boost-mpl</a></li>
-           <li><a href="boost-multi-array">boost-multi-array</a></li>
-           <li><a href="boost-program-options">boost-program-options</a></li>
-           <li><a href="boost-ptr-container">boost-ptr-container</a></li>
-           <li><a href="boost-serialization">boost-serialization</a></li>
-           <li><a href="boost-spirit">boost-spirit</a></li>
-           <li><a href="boost-stacktrace">boost-stacktrace</a></li>
-           <li><a href="boost-static-assert">boost-static-assert</a></li>
-           <li><a href="boost-test">boost-test</a></li>
-           <li><a href="boost-thread">boost-thread</a></li>
-           <li><a href="boost-throw-exception">boost-throw-exception</a></li>
-           <li><a href="boost-timer">boost-timer</a></li>
-           <li><a href="boost-type-traits">boost-type-traits</a></li>
-           <li><a href="boost-unordered">boost-unordered</a></li>
-           <li><a href="eigen3">eigen3</a></li>
-           <li><a href="opencv">opencv</a></li>
-           <li><a href="tbb">tbb</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Profile Preview</h2>
-        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/cctag/portfile.cmake" target="_blank">click here </a></div>
-      </div>
+  <div id="banner"></div>
+  <body>
+    <div tabindex="-1" role="main" id="main">
+    <div class="text-heading">
+      <h2>Package Information</h2>
+      <div><span class="detailed-package-item-heading">Package Name:</span> cctag</div>
+      <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.0.2</div>
+      <div><span class="detailed-package-item-heading">Description:</span> Computer vision library for detecting CCTag markers made up of concentric circles</div>
+      <div><span class="detailed-package-item-heading">License:</span> MPL-2.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-22 18:38:43</div>
+      <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/alicevision/CCTag</div>
+      <div><span class="detailed-package-item-heading">Documentation:</span> https://cctag.readthedocs.io/</div>
     </div>
     </div>
-  </main>
-  <div id="loadFooter"><div class="footer">
+    <div id="loadFooter"><div class="footer">
   <div class="footer-info">
     <div class="footer-left">
       <div class="footer-info-group">
@@ -382,5 +290,5 @@
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>
 </div>
-</body>
+  </body>
 </html>
