@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
-
 <head>
   <title>vcpkg package - {{{packageName.Name}}}</title>
   <meta name="description" content="Explore vcpkg libraries to install">
@@ -14,12 +13,9 @@
 
   {{{commonhead}}}
 </head>
-
 <div id="loadNavBar">{{{navbar}}}</div>
 <div id="banner"></div>
-
 <body>
-
   <main class="package-body" id="main">
     <div class="main-content">
       <div class="text-heading">
@@ -84,10 +80,7 @@
         <div>
           <h2>Dependencies</h2>
         </div>
-        <ul>
-          {{#dependencies}} <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}}
-            <i>(platform: {{.}})</i>{{/platform}}
-          </li>
+        <ul>{{#dependencies}} <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}}<i>(platform: {{.}})</i>{{/platform}}</li>
           {{/dependencies}}{{^dependencies}}<li>No Dependencies</li>{{/dependencies}}</ul>
       </div>
       <br />
@@ -102,5 +95,4 @@
   </main>
   <div id="loadFooter">{{{footer}}}</div>
 </body>
-
 </html>
