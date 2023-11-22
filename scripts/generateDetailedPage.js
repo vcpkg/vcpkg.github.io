@@ -115,7 +115,7 @@ async function getLastUpdatedTimestamp(url) {
 
 async function main() {
     //await fs.mkdir(enDir, { recursive: true });
-    await fs.mkdir(pkgDir, { recursive: true });
+    //await fs.mkdir(pkgDir, { recursive: true });
     await renderDetailedPackage();
 }
 
