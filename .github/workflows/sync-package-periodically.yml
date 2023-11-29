@@ -17,8 +17,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: vcpkg/vcpkg.github.io.git
-          ref: main 
+          repository: JavierMatosD/vcpkg.github.io.git
+          ref: package_sync 
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Restore NPM cache
@@ -27,12 +27,6 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
-
-      - name: Create new branch for changes
-        run: |
-            new_branch="update-metadata-${{ github.run_id }}"
-            git checkout -b "$new_branch"
-            echo "new_branch=$(git branch --show-current)" >> $GITHUB_ENV
 
       - name: Sync Package metadata
         run: scripts/syncMetadata.sh
@@ -46,7 +40,7 @@ jobs:
             git config --local user.name "GitHub Actions"
             git add .
             git commit -m 'Update package metadata and website content' || echo 'No changes to commit'
-            git push origin HEAD  || echo "Error occurred while push to origin"
+            git push origin package_sync  || echo "Error occurred while push to origin"
       
       - name: Open Pull Request
         uses: actions/github-script@v6
@@ -56,7 +50,7 @@ jobs:
             const repositoryFullName = process.env.GITHUB_REPOSITORY; // 'owner/repo'
             const [owner, repo] = repositoryFullName.split('/');
             const actor = process.env.GITHUB_ACTOR;
-            const newBranch = process.env.NEW_BRANCH;
+            const newBranch = 'package_sync';
             const output = {
                 owner: owner,
                 repo: repo,
@@ -66,5 +60,3 @@ jobs:
                 base: "main"
               };
             await github.rest.pulls.create(output);
-        env:
-          NEW_BRANCH:  ${{ env.new_branch }}
