@@ -4,10 +4,13 @@ const fs = require('fs/promises');
 const path = require('path');
 const Mustache = require('mustache');
 const util = require('util');
+const { url } = require('inspector');
 const rootDir = path.dirname(__dirname);
 const enDir = rootDir + "/en"
 const pkgDir = rootDir + "/en/package"
 const templatesDir = rootDir + "/templates"
+const versionsDir = rootDir + "/vcpkg/versions"
+const tripletsDir = rootDir + "/vcpkg/triplets"
 const destDir = path.dirname(__dirname);
 
 var triplets = [
@@ -45,12 +48,17 @@ async function renderDetailedPackage() {
                     const packageName = type;
 
                     packageName.Type = 'Port';
+                    if (!packageName.hasOwnProperty('Documentation')) { // && packageName.Documentation !== null && packageName.Documentation !== undefined) {
+                        packageName.Documentation = 'N/A';
+                    }
+
                     // const lastUpdatedts = getLastUpdated(packageName.Homepage);
                     packageName.LastUpdated = lastUpdatedts;
                     let homePageUrl = packageName.Homepage;
 
                     if (homePageUrl) {
 
+                        //await getLastUpdatedTimestamp(packageName);
                         //const lastUpdated = await getLastUpdatedTimestamp(repoUrl);
                         //packageName.LastUpdated = lastUpdated;
 
@@ -69,11 +77,12 @@ async function renderDetailedPackage() {
                     packageName.supportedPlatForms = supportedPlatFormsObj.supportedPlatForms;
                     packageName.supportedArchitectures = supportedPlatFormsObj.supportedArchitectures;
                     const dependencies = (packageName.Dependencies || []).map(transform_dep);
+                    const features = obj_map(packageName.Features, normalize_feature);
                     //packageName.dependencies = dependencies;
                     const vcpkgPortsurl = "https://github.com/microsoft/vcpkg/blob/master/ports/"
                     const portfileCMakeUrl = vcpkgPortsurl + type.Name + '/portfile.cmake';
                     packageName.portfileCmake = portfileCMakeUrl;
-                    const result = Mustache.render(template, { navbar: navbar, footer: footer, commonhead: commonhead, packageName: packageName, packageVersions: packageVersions, dependencies: dependencies });
+                    const result = Mustache.render(template, { navbar: navbar, footer: footer, commonhead: commonhead, packageName: packageName, packageVersions: packageVersions, dependencies: dependencies, features: features });
                     const dst = pkgDir + "/" + type.Name + ".html";
                     fs.writeFile(dst, result, function (err) {
                         if (err) throw err;
@@ -88,46 +97,16 @@ async function renderDetailedPackage() {
     console.log("from render");
 }
 
-
-async function getLastUpdatedTimestamp(url) {
-    try {
-        let apiUrl = '';
-        const githubUrl = 'https://github.com/';
-        if (url.startsWith(githubUrl)) {
-            apiUrl = url.replace("https://github.com/", "https://api.github.com/repos/");
-        }
-        else {
-            return 'invalid data ';
-        }
-
-        const response = await fetch(url);
-        if (!response.ok) {
-            console.log(`GitHub API request failed with status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        const lastUpdated = new Date(data.updated_at);
-        return lastUpdated;
-    } catch (error) {
-        console.error(error);
-    }
-}
-
 async function main() {
     //await fs.mkdir(enDir, { recursive: true });
     await fs.mkdir(pkgDir, { recursive: true });
     await renderDetailedPackage();
 }
 
-
-const currentWorkingDirectory = process.cwd();
-console.log("Current Working Directory:", currentWorkingDirectory);
-
 function GetPackageVersions(pkgName) {
     const pkgFolder = pkgName.charAt(0) + '-';
-    //console.log(pkgFolder);
     const pkgJsonFile = path.join('/', pkgName + '.json');
-    const versionFile = path.join(currentWorkingDirectory, '/vcpkg/versions/', pkgFolder, pkgJsonFile);
+    const versionFile = path.join(versionsDir, pkgFolder, pkgJsonFile);
     const rawData = fss.readFileSync(versionFile);
     const versionsInfo = JSON.parse(rawData);
     //console.log(versionsInfo.versions.length);
@@ -135,12 +114,12 @@ function GetPackageVersions(pkgName) {
     var versionObj = {};
     versionObj.availablePkgVersions = versionsInfo.versions.map(function (obj) {
         //return obj.version != undefined ? `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj.version}</a>` : `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj["version-string"]}</a>`
-        return obj.version != undefined ? `<span class="badge badge-primary">${obj.version}</span>` : `<span class="badge badge-primary">${obj["version-string"]}</span>`
+        return obj.version != undefined ? `<span class="badge badge-primary">${obj.version} - ${obj["port-version"]}</span>` : `<span class="badge badge-primary">${obj["version-string"]} - ${obj["port-version"]}</span>`
     }).join(' ');
 
 
     versionObj.availablePortVersions = versionsInfo.versions.map(function (obj) {
-        return  `<span class="badge badge-primary">${obj["port-version"]}</span>`;
+        return `<span class="badge badge-primary">${obj["port-version"]}</span>`;
         //return obj["port-version"];
     }).join(' ');
 
@@ -179,13 +158,19 @@ function GetSupportedPlatArch(packageObj) {
         var status = packageObj[t];
         if (status === 'pass') {
             platformPassesString += ", " + triplets_1[_i];
-            archiPassesString += ", " + triplets_1[_i];
+            if (archiPassesString == "") {
+                archiPassesString = triplets_1[_i];
+            }
+            else {
+                archiPassesString += ", " + triplets_1[_i];
+            }
         }
     }
     spaObj.supportedPlatForms = platformPassesString;
     spaObj.supportedArchitectures = archiPassesString;
     return spaObj;
 }
+
 
 function transform_dep(dep) {
     if (typeof (dep) === "string") {
@@ -199,5 +184,57 @@ function transform_dep(dep) {
     }
 }
 
+function normalize_feature(feature, name) {
+    var r = {
+        "name": name,
+        "description": feature.description,
+        "dependencies": (feature.dependencies || []).map(transform_dep),
+        "supports": feature.supports,
+    };
+    return r;
+}
+
+function obj_map(obj, fn) {
+    var r = [];
+    for (var k in obj) {
+        r.push(fn(obj[k], k));
+    }
+    return r;
+}
+
+const accessToken = ''; // Replace with your GitHub access token
+
+async function getLastUpdatedTimestamp(packageObj) {
+    try {
+        const githubUrl = 'https://github.com/';
+        let apiUrl = '';
+        let url = pkgObj.Homepage;
+        if (url.startsWith(githubUrl)) {
+            const characterToCheck = "/";
+            if (url.endsWith(characterToCheck)) {
+                url = url.slice(0, -1);
+            }
+
+            apiUrl = url.replace("https://github.com/", "https://api.github.com/repos/");
+            const response = await fetch(apiUrl, {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                const lastUpdatedTimestamp = new Date(data.updated_at);
+                pkgObj.LastUpdated = lastUpdatedTimestamp;
+                console.log('Last updated timestamp:', lastUpdatedTimestamp);
+            } else {
+                console.error('Failed to retrieve data:', data.message);
+            }
+        }
+    } catch (error) {
+        console.error('Error:', error.message);
+    }
+}
 
 main();

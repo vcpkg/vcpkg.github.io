@@ -198,58 +198,13 @@
       <div class="text-heading">
         <h2>Package Information</h2>
         <div><span class="detailed-package-item-heading">Package Name:</span> flashlight-cuda</div>
-        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <!-- <div><span class="detailed-package-item-heading">Package Type:</span> Port</div> -->
         <div> <span class="detailed-package-item-heading">Version:</span> 0.3</div>
         <div><span class="detailed-package-item-heading">Description:</span> A C++ standalone library for machine learning. CUDA backend.</div>
         <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-22 19:42:44</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-05 15:06:30</div>
         <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/facebookresearch/flashlight</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">0.3</span> <span class="badge badge-primary">0.3</span> <span class="badge badge-primary">0.3</span> <span class="badge badge-primary">0.3</span> <span class="badge badge-primary">0.3</span> <span class="badge badge-primary">0.3</span> <span class="badge badge-primary">20210111</span> <span class="badge badge-primary">20201201</span> <span class="badge badge-primary">20201120</span></div><br />
-        <div><span class="detailed-package-item-heading">Available Port
-            Versions:</span><span class="badge badge-primary">6</span> <span class="badge badge-primary">5</span> <span class="badge badge-primary">4</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span></div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <div>• asr : flashlight asr app<br>• fl : flashlight core autograd and neural net library<br>• imgclass : flashlight image classification app<br>• lib : flashlight libraries<br>• lm : flashlight lm app<br>• objdet : flashlight object detection app<br></div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <p>How to integrate vcpkg into your preferred environment:</p>
-        <ol>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
-              line</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
-              (CMake)</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
-              Studio (MSBuild) </a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
-              Studio Code </a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
-              target="_blank">Manual integration (other build systems / IDEs)</a></li>
-        </ol>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install flashlight-cuda</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port flashlight-cuda</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms:</span> !(windows | osx)</div>
-        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
-        </div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
       </div>
       <br />
       <br />
@@ -264,8 +219,109 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Profile Preview</h2>
-        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><span class="badge badge-primary">0.3 - 6</span> <span class="badge badge-primary">0.3 - 5</span> <span class="badge badge-primary">0.3 - 4</span> <span class="badge badge-primary">0.3 - 2</span> <span class="badge badge-primary">0.3 - 1</span> <span class="badge badge-primary">0.3 - 0</span> <span class="badge badge-primary">20210111 - 0</span> <span class="badge badge-primary">20201201 - 0</span> <span class="badge badge-primary">20201120 - 1</span></div><br />
+        <!-- <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">6</span> <span class="badge badge-primary">5</span> <span class="badge badge-primary">4</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">0</span> <span class="badge badge-primary">1</span></div> -->
+      </div>
+      <br />
+      <br />
+      <!-- <div class="text-heading">
+        <h2>Features</h2>
+        <div>• asr : flashlight asr app<br>• fl : flashlight core autograd and neural net library<br>• imgclass : flashlight image classification app<br>• lib : flashlight libraries<br>• lm : flashlight lm app<br>• objdet : flashlight object detection app<br></div>
+      </div> -->
+      <div class="text-heading">
+        <h2>Features</h2>
+        <ul>
+          <li>asr - flashlight asr app
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
+              <li><a href="gflags">gflags</a></li>
+              <li><a href="libsndfile">libsndfile</a></li>
+            </ul>
+            </li>
+          <li>fl - flashlight core autograd and neural net library
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="arrayfire">arrayfire</a></li>
+              <li><a href="cereal">cereal</a></li>
+              <li><a href="cuda">cuda</a></li>
+              <li><a href="cudnn">cudnn</a></li>
+              <li><a href="nccl">nccl</a></li>
+              <li><a href="openmpi">openmpi</a></li>
+              <li><a href="stb">stb</a></li>
+            </ul>
+            </li>
+          <li>imgclass - flashlight image classification app
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
+              <li><a href="gflags">gflags</a></li>
+            </ul>
+            </li>
+          <li>lib - flashlight libraries
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="cub">cub</a></li>
+              <li><a href="cuda">cuda</a></li>
+              <li><a href="fftw3">fftw3</a></li>
+              <li><a href="intel-mkl">intel-mkl</a></li>
+              <li><a href="kenlm">kenlm</a></li>
+            </ul>
+            </li>
+          <li>lm - flashlight lm app
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
+              <li><a href="gflags">gflags</a></li>
+            </ul>
+            </li>
+          <li>objdet - flashlight object detection app
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
+              <li><a href="gflags">gflags</a></li>
+            </ul>
+            </li>
+        </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <!-- <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol> -->
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install flashlight-cuda</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port flashlight-cuda</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <!-- <div><span class="detailed-package-item-heading">Platforms:</span> !(windows | osx)</div> -->
+        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Portfile Preview</h2>
+        <div><span>To view portfile details &nbsp;</span><a
             href="https://github.com/microsoft/vcpkg/blob/master/ports/flashlight-cuda/portfile.cmake" target="_blank">click here </a></div>
       </div>
     </div>

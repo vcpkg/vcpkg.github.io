@@ -198,58 +198,13 @@
       <div class="text-heading">
         <h2>Package Information</h2>
         <div><span class="detailed-package-item-heading">Package Name:</span> cyclonedds</div>
-        <div><span class="detailed-package-item-heading">Package Type:</span> Port</div>
+        <!-- <div><span class="detailed-package-item-heading">Package Type:</span> Port</div> -->
         <div> <span class="detailed-package-item-heading">Version:</span> 0.10.3</div>
         <div><span class="detailed-package-item-heading">Description:</span> Eclipse Cyclone DDS is a very performant and robust open-source implementation of the OMG DDS specification</div>
         <div><span class="detailed-package-item-heading">License:</span> EPL-2.0 OR BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-11-22 19:42:44</div>
+        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-05 15:06:30</div>
         <div><span class="detailed-package-item-heading">Homepage:</span> https://cyclonedds.io</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> </div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span> <span class="badge badge-primary">undefined</span></div><br />
-        <div><span class="detailed-package-item-heading">Available Port
-            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span></div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <div>• ddsperf : Build ddsperf tool<br>• deadline-missed : Enable Deadline Missed QoS suppor<br>• idlc : Build IDL preprocessor<br>• ipv6 : Enable ipv6 support<br>• lifespan : Enable Lifespan QoS support<br>• security : Enable OMG DDS Security support<br>• shm : Enable shared memory support<br>• source-specific-multicast : Enable support for source-specific multicast<br>• ssl : Enable OpenSSL support<br>• topic-discovery : Enable Topic Discovery support<br>• type-discovery : Enable Type Discovery support<br></div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <p>How to integrate vcpkg into your preferred environment:</p>
-        <ol>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
-              line</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
-              (CMake)</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
-              Studio (MSBuild) </a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
-              Studio Code </a></li>
-          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
-              target="_blank">Manual integration (other build systems / IDEs)</a></li>
-        </ol>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install cyclonedds</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port cyclonedds</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms:</span> !uwp & !(arm64 & windows)</div>
-        <div><span class="detailed-package-item-heading">Architectures:</span> , arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
-        </div>
+        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
       </div>
       <br />
       <br />
@@ -264,8 +219,117 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Profile Preview</h2>
-        <div><span class="detailed-package-item-heading">To View Profile details &nbsp;</span><a
+        <h2>Versions</h2>
+        <div><span class="detailed-package-item-heading">Available Package
+            Versions:</span><span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span></div><br />
+        <!-- <div><span class="detailed-package-item-heading">Available Port
+            Versions:</span><span class="badge badge-primary">0</span> <span class="badge badge-primary">2</span> <span class="badge badge-primary">1</span> <span class="badge badge-primary">0</span></div> -->
+      </div>
+      <br />
+      <br />
+      <!-- <div class="text-heading">
+        <h2>Features</h2>
+        <div>• ddsperf : Build ddsperf tool<br>• deadline-missed : Enable Deadline Missed QoS suppor<br>• idlc : Build IDL preprocessor<br>• ipv6 : Enable ipv6 support<br>• lifespan : Enable Lifespan QoS support<br>• security : Enable OMG DDS Security support<br>• shm : Enable shared memory support<br>• source-specific-multicast : Enable support for source-specific multicast<br>• ssl : Enable OpenSSL support<br>• topic-discovery : Enable Topic Discovery support<br>• type-discovery : Enable Type Discovery support<br></div>
+      </div> -->
+      <div class="text-heading">
+        <h2>Features</h2>
+        <ul>
+          <li>ddsperf - Build ddsperf tool
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="cyclonedds">cyclonedds</a> <i>(host: true)</i></li>
+            </ul>
+            </li>
+          <li>deadline-missed - Enable Deadline Missed QoS suppor
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+          <li>idlc - Build IDL preprocessor
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+          <li>ipv6 - Enable ipv6 support
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+          <li>lifespan - Enable Lifespan QoS support
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+          <li>security - Enable OMG DDS Security support
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+          <li>shm - Enable shared memory support <i>(supports: !windows)</i>
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="iceoryx">iceoryx</a></li>
+            </ul>
+            </li>
+          <li>source-specific-multicast - Enable support for source-specific multicast
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+          <li>ssl - Enable OpenSSL support
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="openssl">openssl</a></li>
+            </ul>
+            </li>
+          <li>topic-discovery - Enable Topic Discovery support
+          <br><b>Dependencies:</b>
+          <ul>
+              <li><a href="cyclonedds">cyclonedds</a></li>
+            </ul>
+            </li>
+          <li>type-discovery - Enable Type Discovery support
+          <br><b>Dependencies:</b>
+          <ul>
+            <li>No Dependencies</li></ul>
+            </li>
+        </ul>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <!-- <p>How to integrate vcpkg into your preferred environment:</p>
+        <ol>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started" target="_blank">CMake / command
+              line</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vs" target="_blank">Visual Studio
+              (CMake)</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild" target="_blank">Visual
+              Studio (MSBuild) </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-vscode" target="_blank">Visual
+              Studio Code </a></li>
+          <li><a href="https://learn.microsoft.com/en-us/vcpkg/users/buildsystems/manual-integration"
+              target="_blank">Manual integration (other build systems / IDEs)</a></li>
+        </ol> -->
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install cyclonedds</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port cyclonedds</pre>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Supported Platforms and Architectures</h2>
+        <!-- <div><span class="detailed-package-item-heading">Platforms:</span> !uwp & !(arm64 & windows)</div> -->
+        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2> Portfile Preview</h2>
+        <div><span>To view portfile details &nbsp;</span><a
             href="https://github.com/microsoft/vcpkg/blob/master/ports/cyclonedds/portfile.cmake" target="_blank">click here </a></div>
       </div>
     </div>
