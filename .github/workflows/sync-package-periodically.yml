@@ -2,6 +2,8 @@ name: Sync Package Metadata
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * SUN'
 
 permissions:
   pull-requests: write
