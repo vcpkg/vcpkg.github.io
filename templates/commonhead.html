@@ -62,32 +62,6 @@
     //Initialize SDK
     analytics.initialize(config, []);
 
-    // -------------------------------------------------------------------------------
-    // Changing the GPC_DataSharingOptIn property sent in the `ext.web.consentDetails'
-
-    // Set to true (will be included)
-    analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = true;
-
-    // Set to false (property will be included)
-    analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = false;
-
-    // Set to null (property will NOT be included)
-    analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = null;
-
-    // Change the value on the next JavaScript execution cycle (all dynamic configuration change
-    // notifications occur via a setTimeout with 0ms so all changes are batched together), once the
-    // change notification is processed the value of `analytics.getPropertyManager().getPropertyContext().web.gpcDataSharingOptIn`
-    // is also changed
-
-    // Set to true (will be included)
-    analytics.config.extensionConfig.SystemPropertiesCollector.gpcDataSharingOptIn = true;
-
-    // Set to false (property will be included)
-    analytics.config.extensionConfig.SystemPropertiesCollector.gpcDataSharingOptIn = false;
-
-    // Set to null (property will NOT be included)
-    analytics.config.extensionConfig.SystemPropertiesCollector.gpcDataSharingOptIn = null;
-
     window.addEventListener('DOMContentLoaded', function () {
         function onConsentChanged(categoryPreferences) { console.log("onConsentChanged", categoryPreferences); }
         WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
