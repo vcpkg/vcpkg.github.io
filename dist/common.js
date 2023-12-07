@@ -86,6 +86,7 @@ function setScrollFocus (){
 
 window.addEventListener('DOMContentLoaded', function () {
     manageCaliforniaPrivacy();
+    showCurrentYear();
   });
   function manageCaliforniaPrivacy() {
       //Link is required in the footer to comply with the California Privacy Rights Act
@@ -96,41 +97,12 @@ window.addEventListener('DOMContentLoaded', function () {
       else {
           document.getElementsByClassName('managePrivacyChoice')[0].style.display = 'none';
       }
-
   }
-  
-$(document).ready(function(){
-    //Analytics
-    if (typeof oneDS === 'undefined') {
-        return;
-    }
-    var siteConsent = null;
-    WcpConsent.init("en-US", "banner", function (err, _siteConsent) {
-        if (err != undefined) {
-            throw err;
-        }
-        siteConsent = _siteConsent;
-    });
-    const analytics = new oneDS.ApplicationInsights();
-    var config = {
-    instrumentationKey: "60f2563fd77547d6bb8e99a31494ecad-f2c1f61d-fc5e-482f-a560-647ca0865b27-7409",
-    propertyConfiguration: {
-        callback: {
-            userConsentDetails: siteConsent ? siteConsent.getConsent : null
-        },
-    },
-    webAnalyticsConfiguration:{
-        autoCapture: {
-            scroll: true,
-            pageView: true,
-            onLoad: true,
-            onUnload: true,
-            click: true,
-            scroll: true,
-            resize: true,
-            jsError: true
-        }
-    }
-    };
-    analytics.initialize(config, []);
-})
+
+  function showCurrentYear()
+  {
+     // Get the current year
+     var currentYear = new Date().getFullYear();
+     // Display the current year in the specified element
+     document.getElementById("currentYear").innerHTML = currentYear;
+  }

@@ -4,34 +4,124 @@
 <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
 
 <!-- external style sheets -->
-<link
-    rel="stylesheet"
-    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-    crossorigin="anonymous"
-/>
+<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
 <!-- our style sheets -->
 <link href="/css/common.css" rel="stylesheet" />
 
 <!-- external scripts -->
-<script type="text/javascript"
-    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
-</script>
-<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+
+<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-<script
-    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"
-></script>
-<script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-></script>
+    crossorigin="anonymous"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
+
+<script type="text/javascript">
+    // WCP initialization
+    var siteConsent = null;
+    var url = window.location.href;
+    const analytics = new oneDS.ApplicationInsights();
+    var config = {
+        instrumentationKey: "60f2563fd77547d6bb8e99a31494ecad-f2c1f61d-fc5e-482f-a560-647ca0865b27-7409",
+        channelConfiguration: { // Post channel configuration
+            eventsLimitInMem: 5000
+        },
+        propertyConfiguration: { // Properties Plugin configuration
+            env: "PROD", // Environment can be set to PPE or PROD as needed.
+            gpcDataSharingOptIn: (typeof GPC_DataSharingOptIn !== 'undefined') ? GPC_DataSharingOptIn : true, // Include the CCPA "GPC_DataSharingOptIn" property as false
+            callback: {
+                userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+            },
+        },
+        webAnalyticsConfiguration: { // Web Analytics Plugin configuration
+            urlCollectQuery:true,
+            autoCapture: {
+                scroll: true,
+                pageView: true,
+                onLoad: true,
+                onUnload: true,
+                click: true,
+                scroll: true,
+                resize: true,
+                jsError: true
+            }
+        }
+    };
+
+    //Initialize SDK
+    analytics.initialize(config, []);
+
+    // -------------------------------------------------------------------------------
+    // Changing the GPC_DataSharingOptIn property sent in the `ext.web.consentDetails'
+
+    // Set to true (will be included)
+    analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = true;
+
+    // Set to false (property will be included)
+    analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = false;
+
+    // Set to null (property will NOT be included)
+    analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = null;
+
+    // Change the value on the next JavaScript execution cycle (all dynamic configuration change
+    // notifications occur via a setTimeout with 0ms so all changes are batched together), once the
+    // change notification is processed the value of `analytics.getPropertyManager().getPropertyContext().web.gpcDataSharingOptIn`
+    // is also changed
+
+    // Set to true (will be included)
+    analytics.config.extensionConfig.SystemPropertiesCollector.gpcDataSharingOptIn = true;
+
+    // Set to false (property will be included)
+    analytics.config.extensionConfig.SystemPropertiesCollector.gpcDataSharingOptIn = false;
+
+    // Set to null (property will NOT be included)
+    analytics.config.extensionConfig.SystemPropertiesCollector.gpcDataSharingOptIn = null;
+
+    window.addEventListener('DOMContentLoaded', function () {
+        function onConsentChanged(categoryPreferences) { console.log("onConsentChanged", categoryPreferences); }
+        WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
+            if (err != undefined) {
+                return error;
+            } else {
+                siteConsent = _siteConsent; //siteConsent is used to get the current consent
+            }
+        });
+    });
+
+</script>
+<script>
+
+    //Detect GPC
+    const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
+
+    // set data sharing opt-in to false when GPC/AMC controls detected
+    const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie();
+
+    //Detect AMC opt out choice
+    function checkThirdPartyAdsOptOutCookie() {
+        try {
+            const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut';
+            var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName);
+            // for unauthenticated users
+            return cookieValue !== 1;
+        } catch {
+            return true;
+        }
+    }
+
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie.match('(^|;)\\s' + cookieName + '\\s*=\\s*([^;]+)');
+        return (cookieValue) ? cookieValue[2] : '';
+    }
+</script>
