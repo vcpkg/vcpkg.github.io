@@ -3,14 +3,10 @@ const fss = require('fs');
 const fs = require('fs/promises');
 const path = require('path');
 const Mustache = require('mustache');
-const util = require('util');
-const { url } = require('inspector');
 const rootDir = path.dirname(__dirname);
-const enDir = rootDir + "/en"
 const pkgDir = rootDir + "/en/package"
 const templatesDir = rootDir + "/templates"
 const versionsDir = rootDir + "/vcpkg/versions"
-const tripletsDir = rootDir + "/vcpkg/triplets"
 const destDir = path.dirname(__dirname);
 
 var triplets = [
@@ -30,7 +26,6 @@ async function renderDetailedPackage() {
     console.log("dynamic page");
     const jsonFile = path.join(destDir, 'output.json');
     console.log("dest dir", destDir);
-    //const readFile = util.promisify(fs.readFile);
 
     const navbar = await fs.readFile(templatesDir + "/navbar.html");
     const footer = await fs.readFile(templatesDir + "/footer.html");
@@ -42,32 +37,17 @@ async function renderDetailedPackage() {
     fs.readFile(jsonFile)
         .then((data) => {
             const users = JSON.parse(data);
-            // console.log(users.Source.length);
             for (let type of users.Source) {
                 (async () => {
                     const packageName = type;
 
                     packageName.Type = 'Port';
-                    if (!packageName.hasOwnProperty('Documentation')) { // && packageName.Documentation !== null && packageName.Documentation !== undefined) {
+                    if (!packageName.hasOwnProperty('Documentation')) { 
                         packageName.Documentation = 'N/A';
                     }
 
-                    // const lastUpdatedts = getLastUpdated(packageName.Homepage);
                     packageName.LastUpdated = lastUpdatedts;
                     let homePageUrl = packageName.Homepage;
-
-                    if (homePageUrl) {
-
-                        //await getLastUpdatedTimestamp(packageName);
-                        //const lastUpdated = await getLastUpdatedTimestamp(repoUrl);
-                        //packageName.LastUpdated = lastUpdated;
-
-                        // getLastUpdatedTimestamp(repoUrl)
-                        //     .then(lastUpdated => {
-                        //         console.log(`Last updated at: ${lastUpdated}`);
-                        //         packageName.LastUpdated = lastUpdated;
-                        //     })
-                    }
 
                     // Get package versions
                     const packageVersions = GetPackageVersions(packageName.Name);
@@ -78,7 +58,6 @@ async function renderDetailedPackage() {
                     packageName.supportedArchitectures = supportedPlatFormsObj.supportedArchitectures;
                     const dependencies = (packageName.Dependencies || []).map(transform_dep);
                     const features = obj_map(packageName.Features, normalize_feature);
-                    //packageName.dependencies = dependencies;
                     const vcpkgPortsurl = "https://github.com/microsoft/vcpkg/blob/master/ports/"
                     const portfileCMakeUrl = vcpkgPortsurl + type.Name + '/portfile.cmake';
                     packageName.portfileCmake = portfileCMakeUrl;
@@ -98,7 +77,6 @@ async function renderDetailedPackage() {
 }
 
 async function main() {
-    //await fs.mkdir(enDir, { recursive: true });
     await fs.mkdir(pkgDir, { recursive: true });
     await renderDetailedPackage();
 }
@@ -109,26 +87,16 @@ function GetPackageVersions(pkgName) {
     const versionFile = path.join(versionsDir, pkgFolder, pkgJsonFile);
     const rawData = fss.readFileSync(versionFile);
     const versionsInfo = JSON.parse(rawData);
-    //console.log(versionsInfo.versions.length);
 
     var versionObj = {};
     versionObj.availablePkgVersions = versionsInfo.versions.map(function (obj) {
-        //return obj.version != undefined ? `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj.version}</a>` : `<a href="${obj["git-tree"]}" class="badge badge-primary">${obj["version-string"]}</a>`
         return obj.version != undefined ? `<span class="badge badge-primary">${obj.version} - ${obj["port-version"]}</span>` : `<span class="badge badge-primary">${obj["version-string"]} - ${obj["port-version"]}</span>`
     }).join(' ');
 
 
     versionObj.availablePortVersions = versionsInfo.versions.map(function (obj) {
         return `<span class="badge badge-primary">${obj["port-version"]}</span>`;
-        //return obj["port-version"];
     }).join(' ');
-
-    /*
-        // to get the distinct elements
-        versionObj.availablePortVersions = Array.from(new Set(versionsInfo.versions.map(function (obj) {
-            return obj["port-version"];
-        })));
-    */
 
     return versionObj
 }
@@ -136,7 +104,6 @@ function GetPackageVersions(pkgName) {
 function GetPackageFeatures(packageObj) {
     let featureList = '';
     if (packageObj.hasOwnProperty('Features')) {
-        //if (type.Features !== undefined) {
         var featureKeys = Object.keys(packageObj.Features);
         var keysCount = featureKeys.length;
         if (keysCount > 0) {

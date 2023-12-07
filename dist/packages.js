@@ -27,10 +27,18 @@ var triplets = [
 ];
 var compatFilter = [];
 $(document).ready(function () {
-    $(".load-results").on("click", function (e) {
+    $(".load-results").on("click", function(e) {
         renderMorePackages();
         handleLoadPkgMessage();
         loadTotalPackages();
+    });
+    $(".load-results").on("keypress", function(event) {
+        if (event.keyCode == 13) {
+        renderMorePackages();
+        handleLoadPkgMessage();
+        loadTotalPackages();
+        return true;
+        }
     });
 });
 
@@ -187,7 +195,6 @@ var parentNameDiv = document.createElement('div');
 parentNameDiv.className = 'package-name';
 var parentNameLink = document.createElement('a');
 parentNameLink.className = 'package-name';
-parentNameLink.style.marginRight = "5px";
 var parentDescriptionDiv = document.createElement('div');
 parentDescriptionDiv.className = 'package-text';
 var parentShortDescSpan = document.createElement('span');
@@ -201,24 +208,20 @@ parentCardFooterDiv.className = 'package-card-footer';
 var parentWebsiteLink = document.createElement('a');
 parentWebsiteLink.className = 'package-website align-bottom';
 parentWebsiteLink.textContent = wording[lang]['website'];
-parentWebsiteLink.target = '_blank';
 var parentFullBtnSpan = document.createElement('span');
 parentFullBtnSpan.className = 'github-btn';
 var parentGitHub = document.createElement('a');
 parentGitHub.className = 'gh-btn';
-parentGitHub.target = '_blank';
 var parentBtnIcoSpan = document.createElement('span');
 parentBtnIcoSpan.className = 'gh-ico';
 var parentBtnTxtSpan = document.createElement('span');
 parentBtnTxtSpan.className = 'gh-text';
 parentBtnTxtSpan.textContent = wording[lang]['star'];
 var parentGitHubCount = document.createElement('a');
-parentGitHubCount.className = 'gh-count';
-parentGitHubCount.target = '_blank';
-parentGitHubCount.style.display = 'block';
+parentGitHubCount.classList.add('gh-count');
+parentGitHubCount.classList.add('display-block');
 var parentVersionDiv = document.createElement('div');
 parentVersionDiv.className = 'package-version';
-
 var vcpkgPackagePage = document.createElement('div');
 vcpkgPackagePage.className = 'vcpkg-page-link';
 vcpkgPackagePage.textContent = "View Details";
@@ -238,7 +241,6 @@ function renderPackageDetails(package, packageDiv, isCard) {
         nameLink.textContent = package.Name;
         nameLink.setAttribute('aria-label', package.Name);
         nameLink.href = "/en/package/" + package.Name;
-        nameLink.target = "_blank"
         cardHeaderDiv.appendChild(nameLink);
         
         // Package Name
@@ -263,10 +265,6 @@ function renderPackageDetails(package, packageDiv, isCard) {
             : renderModalDescription(fullDesc);
         detailFrag.appendChild(descriptionDiv);
     }
-    // Package Processor Compatibilities
-    //detailFrag.appendChild(renderCompatibility(package, packageDiv));
-
-    //detailFrag.appendChild(vcpkgPage);
 
     vcpkgPage.addEventListener("click", function () {
         if (this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
@@ -391,7 +389,6 @@ function renderPackageDetails(package, packageDiv, isCard) {
     // Website link (with clause)
     var homepageURL = package.Homepage;
     if (homepageURL) {
-        //var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
         var websiteLink = parentWebsiteLink.cloneNode(true);
         websiteLink.href = homepageURL;
         if (package.Stars) {
