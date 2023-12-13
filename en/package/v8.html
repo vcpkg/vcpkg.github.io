@@ -195,43 +195,91 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> v8</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 9.1.269.39</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Google Chrome's JavaScript engine</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://v8.dev</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>v8</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 9.1.269.39</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          6
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Google Chrome's JavaScript engine</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://v8.dev">https://v8.dev</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="glib">glib</a><i>(platform: linux)</i></li>
-           <li><a href="icu">icu</a></li>
-           <li><a href="pthread">pthread</a><i>(platform: linux)</i></li>
-           <li><a href="vcpkg-gn">vcpkg-gn</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-tool-python2">vcpkg-tool-python2</a> <i>(host: true)</i></li>
-           <li><a href="zlib">zlib</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="glib">glib</a>
+            
+             <i>(platform: linux)</i>
+            
+          </li>
+          <li>
+            <a href="icu">icu</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="pthread">pthread</a>
+            
+             <i>(platform: linux)</i>
+            
+          </li>
+          <li>
+            <a href="vcpkg-gn">vcpkg-gn</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-tool-python2">vcpkg-tool-python2</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="zlib">zlib</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">9.1.269.39 - 6</span> <span class="badge badge-primary">9.1.269.39 - 5</span> <span class="badge badge-primary">9.1.269.39 - 4</span> <span class="badge badge-primary">9.1.269.39 - 3</span> <span class="badge badge-primary">9.1.269.39 - 2</span> <span class="badge badge-primary">9.1.269.39 - 1</span> <span class="badge badge-primary">9.1.269.39 - 0</span> <span class="badge badge-primary">9.0.257.17 - 1</span> <span class="badge badge-primary">9.0.257.17 - 0</span> <span class="badge badge-primary">8.6.395.17 - 0</span> <span class="badge badge-primary">8.3.110.13 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">9.1.269.39#6</span>
+          <span class="badge badge-primary">9.1.269.39#5</span>
+          <span class="badge badge-primary">9.1.269.39#4</span>
+          <span class="badge badge-primary">9.1.269.39#3</span>
+          <span class="badge badge-primary">9.1.269.39#2</span>
+          <span class="badge badge-primary">9.1.269.39#1</span>
+          <span class="badge badge-primary">9.1.269.39#0</span>
+          <span class="badge badge-primary">9.0.257.17#1</span>
+          <span class="badge badge-primary">9.0.257.17#0</span>
+          <span class="badge badge-primary">8.6.395.17#0</span>
+          <span class="badge badge-primary">8.3.110.13#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        <li>No Features</li></ul>
+          <li>No Features</li>
+        </ul>
       </div>
       <br />
       <br />
@@ -252,9 +300,21 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/v8/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/V8Config-shared.cmake" target="_blank">V8Config-shared.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/V8Config-static.cmake" target="_blank">V8Config-static.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/build.patch" target="_blank">build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/icu.gn" target="_blank">icu.gn</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/v8.patch" target="_blank">v8.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/v8.pc.in" target="_blank">v8.pc.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/v8_libbase.pc.in" target="_blank">v8_libbase.pc.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/v8_libplatform.pc.in" target="_blank">v8_libplatform.pc.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/v8_monolith.pc.in" target="_blank">v8_monolith.pc.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/v8/zlib.gn" target="_blank">zlib.gn</a></li>
+        </ul>
       </div>
     </div>
     </div>

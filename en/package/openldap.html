@@ -195,47 +195,60 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> openldap</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.5.13</div>
-        <div><span class="detailed-package-item-heading">Description:</span> OpenLDAP Software is an open source implementation of the Lightweight Directory Access Protocol.</div>
-        <div><span class="detailed-package-item-heading">License:</span> OLDAP-2.8</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.openldap.org/software/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>openldap</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.5.13</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> OpenLDAP Software is an open source implementation of the Lightweight Directory Access Protocol.</div>
+      <div><span class="detailed-package-item-heading">License:</span> OLDAP-2.8</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.openldap.org/software/">https://www.openldap.org/software/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="openssl">openssl</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="openssl">openssl</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">2.5.13 - 1</span> <span class="badge badge-primary">2.5.13 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.5.13#1</span>
+          <span class="badge badge-primary">2.5.13#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cyrus-sasl - with Cyrus SASL support
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>tools - Enable client tools
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/cyrus-sasl">cyrus-sasl</a> - with Cyrus SASL support
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Enable client tools
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -257,9 +270,15 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/openldap/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/openldap/m4.patch" target="_blank">m4.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/openldap/openssl.patch" target="_blank">openssl.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/openldap/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/openldap/subdirs.patch" target="_blank">subdirs.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/openldap/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/openldap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

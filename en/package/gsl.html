@@ -195,39 +195,74 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> gsl</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.7.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> The GNU Scientific Library is a numerical library for C and C++ programmers</div>
-        <div><span class="detailed-package-item-heading">License:</span> GPL-3.0-or-later</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.gnu.org/software/gsl/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>gsl</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.7.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          3
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> The GNU Scientific Library is a numerical library for C and C++ programmers</div>
+      <div><span class="detailed-package-item-heading">License:</span> GPL-3.0-or-later</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.gnu.org/software/gsl/">https://www.gnu.org/software/gsl/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">2.7.1 - 3</span> <span class="badge badge-primary">2.7.1 - 2</span> <span class="badge badge-primary">2.7.1 - 1</span> <span class="badge badge-primary">2.7.1 - 0</span> <span class="badge badge-primary">2.7 - 0</span> <span class="badge badge-primary">2.6 - 2</span> <span class="badge badge-primary">2.6 - 1</span> <span class="badge badge-primary">2.6 - 0</span> <span class="badge badge-primary">2.4-5 - 0</span> <span class="badge badge-primary">2.4-4 - 0</span> <span class="badge badge-primary">2.4-3 - 0</span> <span class="badge badge-primary">2.4-2 - 0</span> <span class="badge badge-primary">2.4-1 - 0</span> <span class="badge badge-primary">2.3-2 - 0</span> <span class="badge badge-primary">2.3-1 - 0</span> <span class="badge badge-primary">2.3 - 0</span> <span class="badge badge-primary">20170425-8b320e3f5d016f953e55dfc7ec8694c1349d3fe4 - 0</span> <span class="badge badge-primary">0-fd5ad87bf - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.7.1#3</span>
+          <span class="badge badge-primary">2.7.1#2</span>
+          <span class="badge badge-primary">2.7.1#1</span>
+          <span class="badge badge-primary">2.7.1#0</span>
+          <span class="badge badge-primary">2.7#0</span>
+          <span class="badge badge-primary">2.6#2</span>
+          <span class="badge badge-primary">2.6#1</span>
+          <span class="badge badge-primary">2.6#0</span>
+          <span class="badge badge-primary">2.4-5#0</span>
+          <span class="badge badge-primary">2.4-4#0</span>
+          <span class="badge badge-primary">2.4-3#0</span>
+          <span class="badge badge-primary">2.4-2#0</span>
+          <span class="badge badge-primary">2.4-1#0</span>
+          <span class="badge badge-primary">2.3-2#0</span>
+          <span class="badge badge-primary">2.3-1#0</span>
+          <span class="badge badge-primary">2.3#0</span>
+          <span class="badge badge-primary">20170425-8b320e3f5d016f953e55dfc7ec8694c1349d3fe4#0</span>
+          <span class="badge badge-primary">0-fd5ad87bf#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        <li>No Features</li></ul>
+          <li>No Features</li>
+        </ul>
       </div>
       <br />
       <br />
@@ -248,9 +283,16 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/gsl/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/0001-configure.patch" target="_blank">0001-configure.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/0002-add-fp-control.patch" target="_blank">0002-add-fp-control.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/gsl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

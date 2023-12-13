@@ -195,49 +195,80 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> ktx</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 4.3.0-alpha3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> The Khronos KTX library and tools.,Functions for writing and reading KTX files, and instantiating OpenGL®, OpenGL ES™️ and Vulkan® textures from them.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/KhronosGroup/KTX-Software</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>ktx</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 4.3.0-alpha3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> The Khronos KTX library and tools.,Functions for writing and reading KTX files, and instantiating OpenGL®, OpenGL ES™️ and Vulkan® textures from them.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/KhronosGroup/KTX-Software">https://github.com/KhronosGroup/KTX-Software</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-           <li><a href="zstd">zstd</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="zstd">zstd</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">4.0.0 - 2</span> <span class="badge badge-primary">4.0.0 - 1</span> <span class="badge badge-primary">4.0.0 - 0</span> <span class="badge badge-primary">4.0.0-beta5 - 2</span> <span class="badge badge-primary">4.0.0-beta5 - 1</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">4.3.0-alpha3#0</span>
+          <span class="badge badge-primary">4.1.0#0</span>
+          <span class="badge badge-primary">4.1.0-rc3#1</span>
+          <span class="badge badge-primary">4.1.0-rc3#0</span>
+          <span class="badge badge-primary">4.1.0-rc2#0</span>
+          <span class="badge badge-primary">4.1.0-rc1#0</span>
+          <span class="badge badge-primary">4.0.0#2</span>
+          <span class="badge badge-primary">4.0.0#1</span>
+          <span class="badge badge-primary">4.0.0#0</span>
+          <span class="badge badge-primary">4.0.0-beta5#2</span>
+          <span class="badge badge-primary">4.0.0-beta5#1</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>tools - Build tools <i>(supports: !android)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>vulkan - Build Vulkan support <i>(supports: !emscripten)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Build tools
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/vulkan">vulkan</a> - Build Vulkan support
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -259,9 +290,15 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/ktx/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ktx/0001-Use-vcpkg-zstd.patch" target="_blank">0001-Use-vcpkg-zstd.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ktx/0002-Fix-versioning.patch" target="_blank">0002-Fix-versioning.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ktx/0003-mkversion.patch" target="_blank">0003-mkversion.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ktx/0004-quirks.patch" target="_blank">0004-quirks.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ktx/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ktx/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

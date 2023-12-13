@@ -19,4 +19,3 @@ node validateLinks.js
 node generateGitHubStars.js ../vcpkg $1
 node generatePackages.js ../vcpkg
 node generateDetailedPages.js
-

@@ -195,51 +195,91 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> ned14-internal-quickcpplib</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2023-11-22</div>
-        <div><span class="detailed-package-item-heading">Description:</span> NOT FOR EXTERNAL CONSUMPTION, a set of internal scripts used by ned14's libraries.</div>
-        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0 OR BSL-1.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/ned14/quickcpplib</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>ned14-internal-quickcpplib</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2023-11-22</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> NOT FOR EXTERNAL CONSUMPTION, a set of internal scripts used by ned14's libraries.</div>
+      <div><span class="detailed-package-item-heading">License:</span> Apache-2.0 OR BSL-1.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/ned14/quickcpplib">https://github.com/ned14/quickcpplib</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">0.0.0-cad832c8 - 1</span> <span class="badge badge-primary">0.0.0-cad832c8 - 0</span> <span class="badge badge-primary">0.0.0-8089a948 - 0</span> <span class="badge badge-primary">0.0.0-e691a6dc - 0</span> <span class="badge badge-primary">0.0.0-7cb75d4e - 1</span> <span class="badge badge-primary">0.0.0-7cb75d4e - 0</span> <span class="badge badge-primary">0.0.0-24d92c71 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2023-11-22#0</span>
+          <span class="badge badge-primary">2023-11-06#0</span>
+          <span class="badge badge-primary">2023-03-13#0</span>
+          <span class="badge badge-primary">2023-01-27#0</span>
+          <span class="badge badge-primary">2022-09-08#1</span>
+          <span class="badge badge-primary">2022-09-08#0</span>
+          <span class="badge badge-primary">2022-07-04#0</span>
+          <span class="badge badge-primary">2022-06-17#0</span>
+          <span class="badge badge-primary">0.0.0-cad832c8#1</span>
+          <span class="badge badge-primary">0.0.0-cad832c8#0</span>
+          <span class="badge badge-primary">0.0.0-8089a948#0</span>
+          <span class="badge badge-primary">0.0.0-e691a6dc#0</span>
+          <span class="badge badge-primary">0.0.0-7cb75d4e#1</span>
+          <span class="badge badge-primary">0.0.0-7cb75d4e#0</span>
+          <span class="badge badge-primary">0.0.0-24d92c71#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>polyfill-cxx17 - Polyfill std::byte with byte-lite
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="byte-lite">byte-lite</a></li>
-              <li><a href="ned14-internal-quickcpplib">ned14-internal-quickcpplib</a></li>
+          <li>
+            <a href="/en/package/polyfill-cxx17">polyfill-cxx17</a> - Polyfill std::byte with byte-lite
+            <ul>
+              <li><a href="/en/package/byte-lite">byte-lite</a>
+                
+                
+              </li>
+              <li><a href="/en/package/ned14-internal-quickcpplib">ned14-internal-quickcpplib</a>
+                  [polyfill-cxx20]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>polyfill-cxx20 - Polyfill std::span with span-lite
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="span-lite">span-lite</a></li>
+          </li>
+          <li>
+            <a href="/en/package/polyfill-cxx20">polyfill-cxx20</a> - Polyfill std::span with span-lite
+            <ul>
+              <li><a href="/en/package/span-lite">span-lite</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -261,9 +301,14 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/ned14-internal-quickcpplib/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ned14-internal-quickcpplib/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ned14-internal-quickcpplib/quicklib-depheaders.patch" target="_blank">quicklib-depheaders.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ned14-internal-quickcpplib/sha_manifest.cmake" target="_blank">sha_manifest.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ned14-internal-quickcpplib/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ned14-internal-quickcpplib/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

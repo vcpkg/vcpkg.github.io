@@ -195,64 +195,105 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> msdfgen</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.11.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Multi-channel signed distance field generator</div>
-        <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/Chlumsky/msdfgen</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>msdfgen</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.11.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Multi-channel signed distance field generator</div>
+      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/Chlumsky/msdfgen">https://github.com/Chlumsky/msdfgen</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">1.11.0 - 0</span> <span class="badge badge-primary">1.10.0 - 1</span> <span class="badge badge-primary">1.10.0 - 0</span> <span class="badge badge-primary">1.9.2 - 0</span> <span class="badge badge-primary">1.9.1 - 0</span> <span class="badge badge-primary">1.8 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">1.11.0#0</span>
+          <span class="badge badge-primary">1.10.0#1</span>
+          <span class="badge badge-primary">1.10.0#0</span>
+          <span class="badge badge-primary">1.9.2#0</span>
+          <span class="badge badge-primary">1.9.1#0</span>
+          <span class="badge badge-primary">1.8#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>extensions - Extended functionality that depends on external libraries - loading fonts and SVG files, generating PNG images.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="freetype">freetype</a></li>
-              <li><a href="libpng">libpng</a></li>
-              <li><a href="tinyxml2">tinyxml2</a></li>
+          <li>
+            <a href="/en/package/extensions">extensions</a> - Extended functionality that depends on external libraries - loading fonts and SVG files, generating PNG images.
+            <ul>
+              <li><a href="/en/package/freetype">freetype</a>
+                
+                
+              </li>
+              <li><a href="/en/package/libpng">libpng</a>
+                
+                
+              </li>
+              <li><a href="/en/package/tinyxml2">tinyxml2</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>geometry-preprocessing - Preprocessing of non-compliant vector geometry via the Skia library.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="msdfgen">msdfgen</a></li>
-              <li><a href="skia">skia</a></li>
+          </li>
+          <li>
+            <a href="/en/package/geometry-preprocessing">geometry-preprocessing</a> - Preprocessing of non-compliant vector geometry via the Skia library.
+            <ul>
+              <li><a href="/en/package/msdfgen">msdfgen</a>
+                  [extensions]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/skia">skia</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>openmp - Build with OpenMP support for multi-threaded code.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>tools - Generates an executable inside the tools folder. <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="msdfgen">msdfgen</a></li>
+          </li>
+          <li>
+            <a href="/en/package/openmp">openmp</a> - Build with OpenMP support for multi-threaded code.
+            <ul>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Generates an executable inside the tools folder.
+            <ul>
+              <li><a href="/en/package/msdfgen">msdfgen</a>
+                  [extensions]
+                 (default-features: false)
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -274,9 +315,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/msdfgen/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/msdfgen/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/msdfgen/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

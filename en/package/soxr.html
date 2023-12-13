@@ -195,47 +195,65 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> soxr</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.1.3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> High quality audio resampling</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://sourceforge.net/projects/soxr/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>soxr</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.1.3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          7
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> High quality audio resampling</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://sourceforge.net/projects/soxr/">https://sourceforge.net/projects/soxr/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">0.1.3 - 7</span> <span class="badge badge-primary">0.1.3 - 6</span> <span class="badge badge-primary">0.1.3 - 5</span> <span class="badge badge-primary">0.1.3 - 4</span> <span class="badge badge-primary">0.1.3 - 3</span> <span class="badge badge-primary">0.1.3-2 - 0</span> <span class="badge badge-primary">0.1.3. - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.1.3#7</span>
+          <span class="badge badge-primary">0.1.3#6</span>
+          <span class="badge badge-primary">0.1.3#5</span>
+          <span class="badge badge-primary">0.1.3#4</span>
+          <span class="badge badge-primary">0.1.3#3</span>
+          <span class="badge badge-primary">0.1.3-2#0</span>
+          <span class="badge badge-primary">0.1.3.#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>lsr-bindings - Include a &#x60;libsamplerate&#39;-like interface.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>openmp - Include OpenMP threading.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/lsr-bindings">lsr-bindings</a> - Include a &#x60;libsamplerate&#39;-like interface.
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/openmp">openmp</a> - Include OpenMP threading.
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -257,9 +275,14 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/soxr/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/soxr/001_initialize-resampler.patch" target="_blank">001_initialize-resampler.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/soxr/002_disable_warning.patch" target="_blank">002_disable_warning.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/soxr/003_detect_arm.patch" target="_blank">003_detect_arm.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/soxr/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/soxr/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

@@ -195,130 +195,277 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> libpq</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 16.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> The official database access API of postgresql</div>
-        <div><span class="detailed-package-item-heading">License:</span> PostgreSQL</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.postgresql.org/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>libpq</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 16.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> The official database access API of postgresql</div>
+      <div><span class="detailed-package-item-heading">License:</span> PostgreSQL</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.postgresql.org/">https://www.postgresql.org/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="libpq">libpq</a><i>(platform: osx)</i></li>
-           <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</a> <i>(host: true)</i><i>(platform: windows &amp; !mingw)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="libpq">libpq</a>
+            
+             <i>(platform: osx)</i>
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</a>
+             <i>(host: true)</i>
+             <i>(platform: windows &amp; !mingw)</i>
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">16.0 - 1</span> <span class="badge badge-primary">16.0 - 0</span> <span class="badge badge-primary">15.3 - 2</span> <span class="badge badge-primary">15.3 - 1</span> <span class="badge badge-primary">15.3 - 0</span> <span class="badge badge-primary">15.2 - 3</span> <span class="badge badge-primary">15.2 - 2</span> <span class="badge badge-primary">15.2 - 1</span> <span class="badge badge-primary">15.2 - 0</span> <span class="badge badge-primary">14.4 - 3</span> <span class="badge badge-primary">14.4 - 2</span> <span class="badge badge-primary">14.4 - 1</span> <span class="badge badge-primary">14.4 - 0</span> <span class="badge badge-primary">14.1 - 2</span> <span class="badge badge-primary">14.1 - 1</span> <span class="badge badge-primary">14.1 - 0</span> <span class="badge badge-primary">12.9 - 1</span> <span class="badge badge-primary">12.2 - 20</span> <span class="badge badge-primary">12.2 - 19</span> <span class="badge badge-primary">12.2 - 18</span> <span class="badge badge-primary">12.2 - 17</span> <span class="badge badge-primary">12.2 - 16</span> <span class="badge badge-primary">12.2 - 15</span> <span class="badge badge-primary">12.2 - 14</span> <span class="badge badge-primary">12.2 - 13</span> <span class="badge badge-primary">12.2 - 12</span> <span class="badge badge-primary">12.2 - 11</span> <span class="badge badge-primary">12.2 - 10</span> <span class="badge badge-primary">12.2 - 9</span> <span class="badge badge-primary">12.2 - 8</span> <span class="badge badge-primary">12.2 - 7</span> <span class="badge badge-primary">12.2 - 6</span> <span class="badge badge-primary">12.2 - 5</span> <span class="badge badge-primary">12.2 - 4</span> <span class="badge badge-primary">12.2-3 - 0</span> <span class="badge badge-primary">12.2-2 - 0</span> <span class="badge badge-primary">12.2-1 - 0</span> <span class="badge badge-primary">12.2 - 0</span> <span class="badge badge-primary">12.0-2 - 0</span> <span class="badge badge-primary">12.0-1 - 0</span> <span class="badge badge-primary">12.0 - 0</span> <span class="badge badge-primary">9.6.3 - 0</span> <span class="badge badge-primary">9.6.1-8 - 0</span> <span class="badge badge-primary">9.6.1-7 - 0</span> <span class="badge badge-primary">9.6.1-6 - 0</span> <span class="badge badge-primary">9.6.1-5 - 0</span> <span class="badge badge-primary">9.6.1-4 - 0</span> <span class="badge badge-primary">9.6.1-1 - 0</span> <span class="badge badge-primary">9.6.1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">16.0#1</span>
+          <span class="badge badge-primary">16.0#0</span>
+          <span class="badge badge-primary">15.3#2</span>
+          <span class="badge badge-primary">15.3#1</span>
+          <span class="badge badge-primary">15.3#0</span>
+          <span class="badge badge-primary">15.2#3</span>
+          <span class="badge badge-primary">15.2#2</span>
+          <span class="badge badge-primary">15.2#1</span>
+          <span class="badge badge-primary">15.2#0</span>
+          <span class="badge badge-primary">14.4#3</span>
+          <span class="badge badge-primary">14.4#2</span>
+          <span class="badge badge-primary">14.4#1</span>
+          <span class="badge badge-primary">14.4#0</span>
+          <span class="badge badge-primary">14.1#2</span>
+          <span class="badge badge-primary">14.1#1</span>
+          <span class="badge badge-primary">14.1#0</span>
+          <span class="badge badge-primary">12.9#1</span>
+          <span class="badge badge-primary">12.2#20</span>
+          <span class="badge badge-primary">12.2#19</span>
+          <span class="badge badge-primary">12.2#18</span>
+          <span class="badge badge-primary">12.2#17</span>
+          <span class="badge badge-primary">12.2#16</span>
+          <span class="badge badge-primary">12.2#15</span>
+          <span class="badge badge-primary">12.2#14</span>
+          <span class="badge badge-primary">12.2#13</span>
+          <span class="badge badge-primary">12.2#12</span>
+          <span class="badge badge-primary">12.2#11</span>
+          <span class="badge badge-primary">12.2#10</span>
+          <span class="badge badge-primary">12.2#9</span>
+          <span class="badge badge-primary">12.2#8</span>
+          <span class="badge badge-primary">12.2#7</span>
+          <span class="badge badge-primary">12.2#6</span>
+          <span class="badge badge-primary">12.2#5</span>
+          <span class="badge badge-primary">12.2#4</span>
+          <span class="badge badge-primary">12.2-3#0</span>
+          <span class="badge badge-primary">12.2-2#0</span>
+          <span class="badge badge-primary">12.2-1#0</span>
+          <span class="badge badge-primary">12.2#0</span>
+          <span class="badge badge-primary">12.0-2#0</span>
+          <span class="badge badge-primary">12.0-1#0</span>
+          <span class="badge badge-primary">12.0#0</span>
+          <span class="badge badge-primary">9.6.3#0</span>
+          <span class="badge badge-primary">9.6.1-8#0</span>
+          <span class="badge badge-primary">9.6.1-7#0</span>
+          <span class="badge badge-primary">9.6.1-6#0</span>
+          <span class="badge badge-primary">9.6.1-5#0</span>
+          <span class="badge badge-primary">9.6.1-4#0</span>
+          <span class="badge badge-primary">9.6.1-1#0</span>
+          <span class="badge badge-primary">9.6.1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>all - Build all supported features
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libpq">libpq</a></li>
-              <li><a href="libpq">libpq</a> <i>(platform: osx)</i></li>
-              <li><a href="libpq">libpq</a> <i>(platform: !osx)</i></li>
-              <li><a href="libpq">libpq</a> <i>(platform: !windows)</i></li>
-              <li><a href="libpq">libpq</a> <i>(platform: !android &amp; !mingw)</i></li>
-              <li><a href="libpq">libpq</a> <i>(platform: windows &amp; !mingw &amp; !arm)</i></li>
+          <li>
+            <a href="/en/package/all">all</a> - Build all supported features
+            <ul>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [client, 
+                  icu, 
+                  xml, 
+                  xslt, 
+                  zstd]
+                
+                
+              </li>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [bonjour]
+                
+                 (platform: osx)
+              </li>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [nls]
+                
+                 (platform: !osx)
+              </li>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [readline]
+                
+                 (platform: !windows)
+              </li>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [python]
+                
+                 (platform: !android &amp; !mingw)
+              </li>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [tcl]
+                
+                 (platform: windows &amp; !mingw &amp; !arm)
+              </li>
             </ul>
-            </li>
-          <li>bonjour - Build with Bonjour support <i>(supports: osx)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>client - Build all client tools and libraries
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>icu - Build with support for the ICU library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="icu">icu</a></li>
+          </li>
+          <li>
+            <a href="/en/package/bonjour">bonjour</a> - Build with Bonjour support
+            <ul>
             </ul>
-            </li>
-          <li>lz4 - Use lz4
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="lz4">lz4</a></li>
+          </li>
+          <li>
+            <a href="/en/package/client">client</a> - Build all client tools and libraries
+            <ul>
             </ul>
-            </li>
-          <li>nls - Native Language Support <i>(supports: !osx)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="gettext">gettext</a></li>
-              <li><a href="gettext">gettext</a> <i>(host: true)</i> <i>(platform: !windows, mingw)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/icu">icu</a> - Build with support for the ICU library
+            <ul>
+              <li><a href="/en/package/icu">icu</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>openssl - support for encrypted client connections and random number generation on platforms that do not have &quot;&#x2F;dev&#x2F;urandom&quot; (except windows)
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="openssl">openssl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/lz4">lz4</a> - Use lz4
+            <ul>
+              <li><a href="/en/package/lz4">lz4</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>python - build the PL&#x2F;Python server programming language
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libpq">libpq</a></li>
-              <li><a href="python3">python3</a></li>
+          </li>
+          <li>
+            <a href="/en/package/nls">nls</a> - Native Language Support
+            <ul>
+              <li><a href="/en/package/gettext">gettext</a>
+                
+                
+              </li>
+              <li><a href="/en/package/gettext">gettext</a>
+                  [tools]
+                
+                 (platform: !windows, mingw)
+              </li>
             </ul>
-            </li>
-          <li>readline - Use readline <i>(supports: !windows, mingw)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="readline">readline</a></li>
+          </li>
+          <li>
+            <a href="/en/package/openssl">openssl</a> - support for encrypted client connections and random number generation on platforms that do not have &quot;&#x2F;dev&#x2F;urandom&quot; (except windows)
+            <ul>
+              <li><a href="/en/package/openssl">openssl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tcl - build the PL&#x2F;Tcl procedural language <i>(supports: windows &amp; !mingw)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libpq">libpq</a></li>
-              <li><a href="tcl">tcl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/python">python</a> - build the PL&#x2F;Python server programming language
+            <ul>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [client]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/python3">python3</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>xml - Build with libxml
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libxml2">libxml2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/readline">readline</a> - Use readline
+            <ul>
+              <li><a href="/en/package/readline">readline</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>xslt - Build with libxslt
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libpq">libpq</a></li>
-              <li><a href="libxslt">libxslt</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tcl">tcl</a> - build the PL&#x2F;Tcl procedural language
+            <ul>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [client]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/tcl">tcl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>zlib - Use zlib
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="zlib">zlib</a></li>
+          </li>
+          <li>
+            <a href="/en/package/xml">xml</a> - Build with libxml
+            <ul>
+              <li><a href="/en/package/libxml2">libxml2</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>zstd - Use zstd
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="zstd">zstd</a></li>
+          </li>
+          <li>
+            <a href="/en/package/xslt">xslt</a> - Build with libxslt
+            <ul>
+              <li><a href="/en/package/libpq">libpq</a>
+                  [xml]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/libxslt">libxslt</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/zlib">zlib</a> - Use zlib
+            <ul>
+              <li><a href="/en/package/zlib">zlib</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/zstd">zstd</a> - Use zstd
+            <ul>
+              <li><a href="/en/package/zstd">zstd</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -340,9 +487,19 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/libpq/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/Makefile" target="_blank">Makefile</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/build-msvc.cmake" target="_blank">build-msvc.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/libpq.props.in" target="_blank">libpq.props.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/unix" target="_blank">unix</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/vcpkg-libs.props.in" target="_blank">vcpkg-libs.props.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libpq/windows" target="_blank">windows</a></li>
+        </ul>
       </div>
     </div>
     </div>

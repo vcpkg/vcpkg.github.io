@@ -195,56 +195,95 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> lapack-reference</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.11.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> LAPACK - Linear Algebra PACKage</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause-Open-MPI</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> http://www.netlib.org/lapack/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>lapack-reference</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.11.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> LAPACK - Linear Algebra PACKage</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause-Open-MPI</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="http://www.netlib.org/lapack/">http://www.netlib.org/lapack/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-gfortran">vcpkg-gfortran</a><i>(platform: windows)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-gfortran">vcpkg-gfortran</a>
+            
+             <i>(platform: windows)</i>
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">3.11.0 - 1</span> <span class="badge badge-primary">3.11.0 - 0</span> <span class="badge badge-primary">3.10.1 - 0</span> <span class="badge badge-primary">3.10.0 - 0</span> <span class="badge badge-primary">undefined - 6</span> <span class="badge badge-primary">3.8.0 - 5</span> <span class="badge badge-primary">3.8.0 - 4</span> <span class="badge badge-primary">3.8.0 - 3</span> <span class="badge badge-primary">3.8.0 - 2</span> <span class="badge badge-primary">3.8.0 - 1</span> <span class="badge badge-primary">3.8.0 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.11.0#1</span>
+          <span class="badge badge-primary">3.11.0#0</span>
+          <span class="badge badge-primary">3.10.1#0</span>
+          <span class="badge badge-primary">3.10.0#0</span>
+          <span class="badge badge-primary">3.8.0#6</span>
+          <span class="badge badge-primary">3.8.0#5</span>
+          <span class="badge badge-primary">3.8.0#4</span>
+          <span class="badge badge-primary">3.8.0#3</span>
+          <span class="badge badge-primary">3.8.0#2</span>
+          <span class="badge badge-primary">3.8.0#1</span>
+          <span class="badge badge-primary">3.8.0#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>blas-select - Use external optimized BLAS
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="lapack-reference">lapack-reference</a> <i>(platform: !windows | !static)</i></li>
+          <li>
+            <a href="/en/package/blas-select">blas-select</a> - Use external optimized BLAS
+            <ul>
+              <li><a href="/en/package/lapack-reference">lapack-reference</a>
+                  [noblas]
+                 (default-features: false)
+                 (platform: !windows | !static)
+              </li>
             </ul>
-            </li>
-          <li>cblas - Builds CBLAS
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>noblas - Use external optimized BLAS
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="blas">blas</a></li>
+          </li>
+          <li>
+            <a href="/en/package/cblas">cblas</a> - Builds CBLAS
+            <ul>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/noblas">noblas</a> - Use external optimized BLAS
+            <ul>
+              <li><a href="/en/package/blas">blas</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -266,9 +305,16 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/lapack-reference/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/FindLAPACK.cmake" target="_blank">FindLAPACK.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/cmake-config.patch" target="_blank">cmake-config.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/lapacke.patch" target="_blank">lapacke.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/lapack-reference/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

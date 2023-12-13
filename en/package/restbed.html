@@ -195,46 +195,82 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> restbed</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 4.8</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Corvusoft's Restbed framework brings asynchronous RESTful functionality to C++14 applications.</div>
-        <div><span class="detailed-package-item-heading">License:</span> AGPL-3.0-or-later OR CPL-1.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/corvusoft/restbed</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>restbed</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 4.8</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          3
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Corvusoft's Restbed framework brings asynchronous RESTful functionality to C++14 applications.</div>
+      <div><span class="detailed-package-item-heading">License:</span> AGPL-3.0-or-later OR CPL-1.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/corvusoft/restbed">https://github.com/corvusoft/restbed</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="asio">asio</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="asio">asio</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">4.8 - 3</span> <span class="badge badge-primary">4.8 - 2</span> <span class="badge badge-primary">4.8 - 1</span> <span class="badge badge-primary">4.8 - 0</span> <span class="badge badge-primary">4.7 - 0</span> <span class="badge badge-primary">4.16-07-28-2018-2 - 0</span> <span class="badge badge-primary">4.16-07-28-2018-1 - 0</span> <span class="badge badge-primary">4.16-07-28-2018 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">4.8#3</span>
+          <span class="badge badge-primary">4.8#2</span>
+          <span class="badge badge-primary">4.8#1</span>
+          <span class="badge badge-primary">4.8#0</span>
+          <span class="badge badge-primary">4.7#0</span>
+          <span class="badge badge-primary">4.16-07-28-2018-2#0</span>
+          <span class="badge badge-primary">4.16-07-28-2018-1#0</span>
+          <span class="badge badge-primary">4.16-07-28-2018#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>openssl - Secure over the wire communication allowing you to transmit private data online.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="asio">asio</a></li>
-              <li><a href="openssl">openssl</a></li>
+          <li>
+            <a href="/en/package/openssl">openssl</a> - Secure over the wire communication allowing you to transmit private data online.
+            <ul>
+              <li><a href="/en/package/asio">asio</a>
+                  [openssl]
+                
+                
+              </li>
+              <li><a href="/en/package/openssl">openssl</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -256,9 +292,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/restbed/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/restbed/fix-cmake.patch" target="_blank">fix-cmake.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/restbed/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/restbed/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/restbed/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

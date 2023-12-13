@@ -195,61 +195,120 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> crashrpt</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.4.3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A crash reporting system for Windows applications</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> http://crashrpt.sourceforge.net/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>crashrpt</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.4.3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          3
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A crash reporting system for Windows applications</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="http://crashrpt.sourceforge.net/">http://crashrpt.sourceforge.net/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="dbghelp">dbghelp</a></li>
-           <li><a href="libjpeg-turbo">libjpeg-turbo</a></li>
-           <li><a href="libogg">libogg</a></li>
-           <li><a href="libpng">libpng</a></li>
-           <li><a href="libtheora">libtheora</a></li>
-           <li><a href="tinyxml">tinyxml</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="wtl">wtl</a></li>
-           <li><a href="zlib">zlib</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="dbghelp">dbghelp</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libjpeg-turbo">libjpeg-turbo</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libogg">libogg</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libpng">libpng</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libtheora">libtheora</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="tinyxml">tinyxml</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="wtl">wtl</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="zlib">zlib</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">1.4.3 - 3</span> <span class="badge badge-primary">1.4.3 - 2</span> <span class="badge badge-primary">1.4.3 - 1</span> <span class="badge badge-primary">1.4.3 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">1.4.3#3</span>
+          <span class="badge badge-primary">1.4.3#2</span>
+          <span class="badge badge-primary">1.4.3#1</span>
+          <span class="badge badge-primary">1.4.3#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>demos - Demo applications for CrashRptProbe
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>probe - The CrashRptProbe library
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>tests - Test application for crashrpt
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="crashrpt">crashrpt</a></li>
+          <li>
+            <a href="/en/package/demos">demos</a> - Demo applications for CrashRptProbe
+            <ul>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/probe">probe</a> - The CrashRptProbe library
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/tests">tests</a> - Test application for crashrpt
+            <ul>
+              <li><a href="/en/package/crashrpt">crashrpt</a>
+                  [probe]
+                 (default-features: false)
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -271,9 +330,14 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/crashrpt/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/crashrpt/001-add-install-target-and-find-deps.patch" target="_blank">001-add-install-target-and-find-deps.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/crashrpt/002-fix-wtl-includepath.patch" target="_blank">002-fix-wtl-includepath.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/crashrpt/003-add-definition-UNICODE.patch" target="_blank">003-add-definition-UNICODE.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/crashrpt/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/crashrpt/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

@@ -3,6 +3,9 @@
 const fs = require('fs/promises');
 const path = require('path');
 const { exit } = require('process');
+const { exec } = require('child_process');
+const util = require('util');
+const execAsync = util.promisify(exec);
 
 function makeManifestKeyReadable(key) {
     const versionKeys = {
@@ -42,6 +45,18 @@ async function readManifest(manifestFile) {
     return out;
 }
 
+async function getLastModifiedDate(repoPath, filePath) {
+    try {
+        // Ensure the file path is relative to the repository root
+        const relativeFilePath = path.relative(repoPath, filePath);
+        const { date } = await execAsync(`git -C ${repoPath} log -1 --format=%cd --date=format:%Y-%m-%d -- ${relativeFilePath}`);
+        return date.trim();
+    } catch (error) {
+        console.error(`Error getting last modified date for ${relativeFilePath}: ${error}`);
+        return null;
+    }
+}
+
 async function readPorts(vcpkgDir) {
     const portsDir = path.join(vcpkgDir, 'ports');
     let dirents = await fs.readdir(portsDir, { encoding: 'utf-8', withFileTypes: true });
@@ -54,6 +69,10 @@ async function readPorts(vcpkgDir) {
             console.log('Failed to read ' + manifestFile);
             continue;
         }
+
+        //const lastModifiedDate = await getLastModifiedDate(vcpkgDir, manifestFile);
+        //temp['LastModified'] = lastModifiedDate;
+
         results[ent.name] = temp;
     }
     return results;

@@ -195,131 +195,190 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> sdl2-mixer-ext</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.6.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> An audio mixer library based on the SDL library, a fork of SDL_mixer</div>
-        <div><span class="detailed-package-item-heading">License:</span> Zlib OR LGPL-2.1-or-later OR GPL-2.0-or-later OR GPL-3.0-or-later</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://wohlsoft.github.io/SDL-Mixer-X</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>sdl2-mixer-ext</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.6.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> An audio mixer library based on the SDL library, a fork of SDL_mixer</div>
+      <div><span class="detailed-package-item-heading">License:</span> Zlib OR LGPL-2.1-or-later OR GPL-2.0-or-later OR GPL-3.0-or-later</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://wohlsoft.github.io/SDL-Mixer-X">https://wohlsoft.github.io/SDL-Mixer-X</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="sdl2">sdl2</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="sdl2">sdl2</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">2.6.0 - 0</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.6.0#0</span>
+          <span class="badge badge-primary">2023-05-04#1</span>
+          <span class="badge badge-primary">2023-05-04#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cmd - Use external command for playing music (Linux only). <i>(supports: linux)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>ffmpeg - Use FFMPEG to play WMA and AAC audio formats.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          <li>
+            <a href="/en/package/cmd">cmd</a> - Use external command for playing music (Linux only).
+            <ul>
             </ul>
-            </li>
-          <li>fluidsynth - Use FluidSynth to play MIDI audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="fluidsynth">fluidsynth</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ffmpeg">ffmpeg</a> - Use FFMPEG to play WMA and AAC audio formats.
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>libadlmidi - Use libADLMIDI to play XMI, MUS, IMF and regular MIDI audio format with OPL3 (YMF262) emulator.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libadlmidi">libadlmidi</a></li>
+          </li>
+          <li>
+            <a href="/en/package/fluidsynth">fluidsynth</a> - Use FluidSynth to play MIDI audio format.
+            <ul>
+              <li><a href="/en/package/fluidsynth">fluidsynth</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>libflac - Use libflac to play FLAC audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libflac">libflac</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libadlmidi">libadlmidi</a> - Use libADLMIDI to play XMI, MUS, IMF and regular MIDI audio format with OPL3 (YMF262) emulator.
+            <ul>
+              <li><a href="/en/package/libadlmidi">libadlmidi</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>libgme - Use libgme to play chip music (AY, GBS, GYM, HES, KSS, NSF&#x2F;NSFE, SAP, SPC, VGM&#x2F;VGZ).
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libgme">libgme</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libflac">libflac</a> - Use libflac to play FLAC audio format.
+            <ul>
+              <li><a href="/en/package/libflac">libflac</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>libmodplug - Use libmodplug to play tracker music including exclusive formats (AMS, DMF, DSM, MT2).
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libmodplug">libmodplug</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libgme">libgme</a> - Use libgme to play chip music (AY, GBS, GYM, HES, KSS, NSF&#x2F;NSFE, SAP, SPC, VGM&#x2F;VGZ).
+            <ul>
+              <li><a href="/en/package/libgme">libgme</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>libopnmidi - Use libOPNMIDI to play MIDI and RMI audio format with OPN2 (YM2612) emulator.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libopnmidi">libopnmidi</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libmodplug">libmodplug</a> - Use libmodplug to play tracker music including exclusive formats (AMS, DMF, DSM, MT2).
+            <ul>
+              <li><a href="/en/package/libmodplug">libmodplug</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>libvorbis - Use libvorbis to play OGG audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libvorbis">libvorbis</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libopnmidi">libopnmidi</a> - Use libOPNMIDI to play MIDI and RMI audio format with OPN2 (YM2612) emulator.
+            <ul>
+              <li><a href="/en/package/libopnmidi">libopnmidi</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>libxmp - Use libxmp to play tracker music including exclusive formats (ABK, DIGI, DTM, EMOD, FLX, FNK, GDM, IMF, J2B, LIQ, M15, MFP, MGT, MMDC, MTN, RTM, SFX, SPM, STIM, STX, WOW).
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libxmp">libxmp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libvorbis">libvorbis</a> - Use libvorbis to play OGG audio format.
+            <ul>
+              <li><a href="/en/package/libvorbis">libvorbis</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>mpg123 - Use mpg123 to play MP3 audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mpg123">mpg123</a></li>
+          </li>
+          <li>
+            <a href="/en/package/libxmp">libxmp</a> - Use libxmp to play tracker music including exclusive formats (ABK, DIGI, DTM, EMOD, FLX, FNK, GDM, IMF, J2B, LIQ, M15, MFP, MGT, MMDC, MTN, RTM, SFX, SPM, STIM, STX, WOW).
+            <ul>
+              <li><a href="/en/package/libxmp">libxmp</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>nativemidi - Use Native MIDI Player to play MIDI audio format. <i>(supports: (windows &amp; !uwp) | osx)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>opusfile - Use opusfile to play Opus audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opusfile">opusfile</a></li>
+          </li>
+          <li>
+            <a href="/en/package/mpg123">mpg123</a> - Use mpg123 to play MP3 audio format.
+            <ul>
+              <li><a href="/en/package/mpg123">mpg123</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>pxtone - Use pxtone to play PPTUNE and PTCOP audio formats.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>timidity - Use Timidity to play MIDI audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>wavpack - Use wavpack to play VW audio format.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="wavpack">wavpack</a></li>
+          </li>
+          <li>
+            <a href="/en/package/nativemidi">nativemidi</a> - Use Native MIDI Player to play MIDI audio format.
+            <ul>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/opusfile">opusfile</a> - Use opusfile to play Opus audio format.
+            <ul>
+              <li><a href="/en/package/opusfile">opusfile</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/pxtone">pxtone</a> - Use pxtone to play PPTUNE and PTCOP audio formats.
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/timidity">timidity</a> - Use Timidity to play MIDI audio format.
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/wavpack">wavpack</a> - Use wavpack to play VW audio format.
+            <ul>
+              <li><a href="/en/package/wavpack">wavpack</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -341,9 +400,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/sdl2-mixer-ext/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/sdl2-mixer-ext/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/sdl2-mixer-ext/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/sdl2-mixer-ext/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/sdl2-mixer-ext/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

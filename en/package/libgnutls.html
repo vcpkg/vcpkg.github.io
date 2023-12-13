@@ -195,55 +195,111 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> libgnutls</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.8.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A secure communications library implementing the SSL, TLS and DTLS protocols.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.gnutls.org/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>libgnutls</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.8.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A secure communications library implementing the SSL, TLS and DTLS protocols.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.gnutls.org/">https://www.gnutls.org/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="gmp">gmp</a></li>
-           <li><a href="libidn2">libidn2</a></li>
-           <li><a href="libtasn1">libtasn1</a></li>
-           <li><a href="libunistring">libunistring</a></li>
-           <li><a href="nettle">nettle</a></li>
-           <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i><i>(platform: !native)</i></li>
-           <li><a href="zlib">zlib</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="gmp">gmp</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libidn2">libidn2</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libtasn1">libtasn1</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libunistring">libunistring</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="nettle">nettle</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a>
+             <i>(host: true)</i>
+             <i>(platform: !native)</i>
+            
+          </li>
+          <li>
+            <a href="zlib">zlib</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">3.8.1 - 1</span> <span class="badge badge-primary">3.8.1 - 0</span> <span class="badge badge-primary">3.7.8 - 0</span> <span class="badge badge-primary">3.6.16 - 0</span> <span class="badge badge-primary">3.6.15 - 3</span> <span class="badge badge-primary">3.6.15 - 2</span> <span class="badge badge-primary">3.6.15 - 1</span> <span class="badge badge-primary">3.6.15 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.8.1#1</span>
+          <span class="badge badge-primary">3.8.1#0</span>
+          <span class="badge badge-primary">3.7.8#0</span>
+          <span class="badge badge-primary">3.6.16#0</span>
+          <span class="badge badge-primary">3.6.15#3</span>
+          <span class="badge badge-primary">3.6.15#2</span>
+          <span class="badge badge-primary">3.6.15#1</span>
+          <span class="badge badge-primary">3.6.15#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>nls - Enable native language support.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="gettext">gettext</a> <i>(host: true)</i></li>
-              <li><a href="gettext-libintl">gettext-libintl</a></li>
+          <li>
+            <a href="/en/package/nls">nls</a> - Enable native language support.
+            <ul>
+              <li><a href="/en/package/gettext">gettext</a>
+                  [tools]
+                
+                
+              </li>
+              <li><a href="/en/package/gettext-libintl">gettext-libintl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>openssl - Enable the OpenSSL compatibility library.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/openssl">openssl</a> - Enable the OpenSSL compatibility library.
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -265,9 +321,12 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/libgnutls/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgnutls/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgnutls/use-gmp-pkgconfig.patch" target="_blank">use-gmp-pkgconfig.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgnutls/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

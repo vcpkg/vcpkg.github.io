@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - {{{packageName.Name}}}</title>
+  <title>vcpkg package - {{{package.Name}}}</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -18,67 +18,114 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> {{{packageName.Name}}}</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> {{{packageName.Version}}}</div>
-        <div><span class="detailed-package-item-heading">Description:</span> {{{packageName.Description}}}</div>
-        <div><span class="detailed-package-item-heading">License:</span> {{{packageName.License}}}</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> {{{packageName.LastUpdated}}}</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> {{{packageName.Homepage}}}</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> {{{packageName.Documentation}}}</div>
+      <h1>{{{package.Name}}}</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> {{{package.Version}}}</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+        {{#package.PortVersion}}
+          {{package.PortVersion}}
+        {{/package.PortVersion}}
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> {{{package.Description}}}</div>
+      <div><span class="detailed-package-item-heading">License:</span> {{{package.License}}}</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> {{{package.LastUpdated}}}</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+        {{#package.Homepage}}
+         <a href="{{{package.Homepage}}}">{{{package.Homepage}}}</a>
+        {{/package.Homepage}}
+        {{^package.Homepage}}
+         N/A
+        {{/package.Homepage}}
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+        {{#package.Documentation}}
+         <a href="{{{package.Documentation}}}">{{{package.Documentation}}}</a>
+        {{/package.Documentation}}
+        {{^package.Documentation}}
+         N/A
+        {{/package.Documentation}}
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul>{{#dependencies}} <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}}<i>(platform: {{.}})</i>{{/platform}}</li>
-          {{/dependencies}}{{^dependencies}}<li>No Dependencies</li>{{/dependencies}}</ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          {{#dependencies}}
+          <li>
+            <a href="{{name}}">{{name}}</a>
+            {{#host}} <i>(host: true)</i>{{/host}}
+            {{#platform}} <i>(platform: {{platform}})</i>{{/platform}}
+            {{#versionMinimum}} <i>(version>=: {{versionMinimum}})</i>{{/versionMinimum}}
+          </li>
+          {{/dependencies}}
+          {{^dependencies}}
+          <li>No Dependencies</li>
+          {{/dependencies}}
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span>{{{packageVersions.availablePkgVersions}}}</div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          {{#packageVersions}}
+          <span class="badge badge-primary">{{.}}</span>
+          {{/packageVersions}}
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        {{#features}}  <li>{{name}} - {{description}}{{#supports}} <i>(supports: {{.}})</i>{{/supports}}
-          <br><b>Dependencies:</b>
-          <ul>
-            {{#dependencies}}  <li><a href="{{name}}">{{name}}</a>{{#host}} <i>(host: true)</i>{{/host}}{{#platform}} <i>(platform: {{.}})</i>{{/platform}}</li>
-            {{/dependencies}}{{^dependencies}}<li>No Dependencies</li>{{/dependencies}}</ul>
-            </li>
-        {{/features}}{{^features}}<li>No Features</li>{{/features}}</ul>
+          {{#features}}
+          <li>
+            <a href="/en/package/{{name}}">{{name}}</a> - {{description}}
+            <ul>
+              {{#dependencies}}
+              <li><a href="/en/package/{{name}}">{{name}}</a>
+                {{#depFeatures}}
+                  {{#first}}[{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}
+                {{/depFeatures}}
+                {{#noDefaultFeatures}} (default-features: false){{/noDefaultFeatures}}
+                {{#platform}} (platform: {{.}}){{/platform}}
+              </li>
+              {{/dependencies}}
+            </ul>
+          </li>
+          {{/features}}
+          {{^features}}
+          <li>No Features</li>
+          {{/features}}
+        </ul>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Installation Instructions</h2>
         <h3>Classic Mode:</h3>
-        <pre> vcpkg install {{{packageName.Name}}}</pre>
+        <pre> vcpkg install {{{package.Name}}}</pre>
         <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port {{{packageName.Name}}}</pre>
+        <pre> vcpkg add port {{{package.Name}}}</pre>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> {{{packageName.supportedArchitectures}}}
+        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> {{{package.supportedArchitectures}}}
         </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="{{{packageName.portfileCmake}}}" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          {{#package.githubFileUrls}}
+          <li><a href="{{{url}}}" target="_blank">{{name}}</a></li>
+          {{/package.githubFileUrls}}
+        </ul>
       </div>
     </div>
     </div>

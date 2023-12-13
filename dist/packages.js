@@ -90,6 +90,7 @@ var renderModalDescription = function (fullDesc) {
     }
     return descriptionDiv;
 };
+
 var renderCardDescription = function (fullDesc) {
     var cutoff = 200; //character cut off
     var descriptionDiv = parentDescriptionDiv.cloneNode(true);
@@ -103,6 +104,7 @@ var renderCardDescription = function (fullDesc) {
     descriptionDiv.appendChild(shortDescSpan);
     return descriptionDiv;
 };
+
 var renderCompatibility = function (pkg, packageDiv) {
     var compatRowDiv = document.createElement('div');
     compatRowDiv.className = 'package-compatibility';
@@ -156,6 +158,7 @@ var renderCompatibility = function (pkg, packageDiv) {
     compatRowDiv.appendChild(compatRowFrag);
     return compatRowDiv;
 };
+
 var renderCompability = function (pkg, packageDiv) {
     var compatRowDiv = document.createElement('div');
     compatRowDiv.className = 'package-compatibility';
@@ -181,10 +184,12 @@ var renderCompability = function (pkg, packageDiv) {
     compatRowDiv.appendChild(compatRowFrag);
     return compatRowDiv;
 };
+
 function expandText(moreDescSpan, extraDescSpan) {
     extraDescSpan.classList.remove('hide');
     moreDescSpan.className = 'hide';
 }
+
 // elements for a package card
 var mainPackageFrag = document.createDocumentFragment();
 var parentPackageDiv = document.createElement('div');
@@ -407,7 +412,6 @@ function renderPackageDetails(package, packageDiv, isCard) {
             fullBtnSpan.appendChild(ghCount);
             cardHeaderDiv.appendChild(fullBtnSpan);
         }
-        //detailFrag.appendChild(cardFooterDiv);
     }
     return detailFrag;
 }

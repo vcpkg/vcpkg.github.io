@@ -195,42 +195,65 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> ngspice</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 41</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Ngspice is a mixed-level/mixed-signal electronic circuit simulator. It is a successor of the latest stable release of Berkeley SPICE</div>
-        <div><span class="detailed-package-item-heading">License:</span> CC-BY-SA-4.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> http://ngspice.sourceforge.net/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>ngspice</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 41</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Ngspice is a mixed-level/mixed-signal electronic circuit simulator. It is a successor of the latest stable release of Berkeley SPICE</div>
+      <div><span class="detailed-package-item-heading">License:</span> CC-BY-SA-4.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="http://ngspice.sourceforge.net/">http://ngspice.sourceforge.net/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-msbuild">vcpkg-msbuild</a> <i>(host: true)</i><i>(platform: windows)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-msbuild">vcpkg-msbuild</a>
+             <i>(host: true)</i>
+             <i>(platform: windows)</i>
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">41 - 0</span> <span class="badge badge-primary">39 - 1</span> <span class="badge badge-primary">39 - 0</span> <span class="badge badge-primary">37 - 0</span> <span class="badge badge-primary">35 - 2</span> <span class="badge badge-primary">35 - 1</span> <span class="badge badge-primary">35 - 0</span> <span class="badge badge-primary">34 - 1</span> <span class="badge badge-primary">34 - 0</span> <span class="badge badge-primary">33 - 1</span> <span class="badge badge-primary">33 - 0</span> <span class="badge badge-primary">32 - 1</span> <span class="badge badge-primary">32 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">41#0</span>
+          <span class="badge badge-primary">39#1</span>
+          <span class="badge badge-primary">39#0</span>
+          <span class="badge badge-primary">37#0</span>
+          <span class="badge badge-primary">35#2</span>
+          <span class="badge badge-primary">35#1</span>
+          <span class="badge badge-primary">35#0</span>
+          <span class="badge badge-primary">34#1</span>
+          <span class="badge badge-primary">34#0</span>
+          <span class="badge badge-primary">33#1</span>
+          <span class="badge badge-primary">33#0</span>
+          <span class="badge badge-primary">32#1</span>
+          <span class="badge badge-primary">32#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>codemodels - Adds optional code models for XSPICE, ADMS (verilog integration) and B-&#x2F;E-&#x2F;G- sources.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/codemodels">codemodels</a> - Adds optional code models for XSPICE, ADMS (verilog integration) and B-&#x2F;E-&#x2F;G- sources.
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -252,9 +275,16 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/ngspice/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/Fix-C2065.patch" target="_blank">Fix-C2065.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/remove-64-in-codemodel-name.patch" target="_blank">remove-64-in-codemodel-name.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/remove-post-build.patch" target="_blank">remove-post-build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/use-winbison-sharedspice.patch" target="_blank">use-winbison-sharedspice.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/use-winbison-vngspice.patch" target="_blank">use-winbison-vngspice.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ngspice/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

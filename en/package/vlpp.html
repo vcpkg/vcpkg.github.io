@@ -195,90 +195,147 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> vlpp</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.1.0.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Common C++ construction, including string operation / generic container / linq / General-LR parser generator / multithreading / reflection for C++ / etc</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/vczh-libraries/Release</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>vlpp</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.1.0.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Common C++ construction, including string operation / generic container / linq / General-LR parser generator / multithreading / reflection for C++ / etc</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/vczh-libraries/Release">https://github.com/vczh-libraries/Release</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">1.1.0.0 - 1</span> <span class="badge badge-primary">1.1.0.0 - 0</span> <span class="badge badge-primary">0.11.0.0 - 3</span> <span class="badge badge-primary">0.11.0.0 - 2</span> <span class="badge badge-primary">0.11.0.0 - 1</span> <span class="badge badge-primary">0.11.0.0 - 0</span> <span class="badge badge-primary">0.10.0.0 - 0</span> <span class="badge badge-primary">0.9.3.1-2 - 0</span> <span class="badge badge-primary">0.9.3.1-1 - 0</span> <span class="badge badge-primary">0.9.3.1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">1.1.0.0#1</span>
+          <span class="badge badge-primary">1.1.0.0#0</span>
+          <span class="badge badge-primary">0.11.0.0#3</span>
+          <span class="badge badge-primary">0.11.0.0#2</span>
+          <span class="badge badge-primary">0.11.0.0#1</span>
+          <span class="badge badge-primary">0.11.0.0#0</span>
+          <span class="badge badge-primary">0.10.0.0#0</span>
+          <span class="badge badge-primary">0.9.3.1-2#0</span>
+          <span class="badge badge-primary">0.9.3.1-1#0</span>
+          <span class="badge badge-primary">0.9.3.1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>gacuicore - Enable GacUI Core
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          <li>
+            <a href="/en/package/gacuicore">gacuicore</a> - Enable GacUI Core
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [glrparser, 
+                  workflowlibrary]
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>gacuirecompiler - Enable GacUI Compiler
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/gacuirecompiler">gacuirecompiler</a> - Enable GacUI Compiler
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [gacuireflection, 
+                  workflowcompiler]
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>gacuireflection - Enable GacUI Reflection
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/gacuireflection">gacuireflection</a> - Enable GacUI Reflection
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [gacuicore, 
+                  workflowruntime]
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>glrparser - Enable GlrParser
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/glrparser">glrparser</a> - Enable GlrParser
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [reflection]
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>reflection - Enable Reflection
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>tools - Build tools <i>(supports: !osx)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>workflowcompiler - Enable VlppWorkflow Compiler
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/reflection">reflection</a> - Enable Reflection
+            <ul>
             </ul>
-            </li>
-          <li>workflowlibrary - Enable VlppWorkflow Library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Build tools
+            <ul>
             </ul>
-            </li>
-          <li>workflowruntime - Enable VlppWorkflow Runtime
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="vlpp">vlpp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/workflowcompiler">workflowcompiler</a> - Enable VlppWorkflow Compiler
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [workflowruntime]
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/workflowlibrary">workflowlibrary</a> - Enable VlppWorkflow Library
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [reflection]
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/workflowruntime">workflowruntime</a> - Enable VlppWorkflow Runtime
+            <ul>
+              <li><a href="/en/package/vlpp">vlpp</a>
+                  [workflowlibrary]
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -300,9 +357,12 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/vlpp/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/vlpp/fix-tool-build.patch" target="_blank">fix-tool-build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/vlpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/vlpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

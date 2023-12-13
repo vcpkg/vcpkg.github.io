@@ -195,73 +195,116 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> czmq</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 4.2.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> High-level C binding for ZeroMQ</div>
-        <div><span class="detailed-package-item-heading">License:</span> MPL-2.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/zeromq/czmq</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>czmq</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 4.2.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          4
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> High-level C binding for ZeroMQ</div>
+      <div><span class="detailed-package-item-heading">License:</span> MPL-2.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/zeromq/czmq">https://github.com/zeromq/czmq</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-           <li><a href="zeromq">zeromq</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="zeromq">zeromq</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 4</span> <span class="badge badge-primary">undefined - 3</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">2019-06-10-4 - 0</span> <span class="badge badge-primary">2019-06-10-3 - 0</span> <span class="badge badge-primary">2019-06-10-2 - 0</span> <span class="badge badge-primary">2019-06-10-1 - 0</span> <span class="badge badge-primary">2019-06-10 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">4.2.1#4</span>
+          <span class="badge badge-primary">4.2.1#3</span>
+          <span class="badge badge-primary">4.2.1#2</span>
+          <span class="badge badge-primary">4.2.1#1</span>
+          <span class="badge badge-primary">4.2.1#0</span>
+          <span class="badge badge-primary">2019-06-10-4#0</span>
+          <span class="badge badge-primary">2019-06-10-3#0</span>
+          <span class="badge badge-primary">2019-06-10-2#0</span>
+          <span class="badge badge-primary">2019-06-10-1#0</span>
+          <span class="badge badge-primary">2019-06-10#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>curl - Build with libcurl
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="curl">curl</a></li>
+          <li>
+            <a href="/en/package/curl">curl</a> - Build with libcurl
+            <ul>
+              <li><a href="/en/package/curl">curl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>draft - Build and install draft APIs
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>httpd - Build with HTTP server support (libmicrohttpd)
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libmicrohttpd">libmicrohttpd</a></li>
+          </li>
+          <li>
+            <a href="/en/package/draft">draft</a> - Build and install draft APIs
+            <ul>
             </ul>
-            </li>
-          <li>lz4 - Build with lz4
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="lz4">lz4</a></li>
+          </li>
+          <li>
+            <a href="/en/package/httpd">httpd</a> - Build with HTTP server support (libmicrohttpd)
+            <ul>
+              <li><a href="/en/package/libmicrohttpd">libmicrohttpd</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tool - Build and install czmq tools (zmakecert)
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>uuid - Build with libuuid
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libuuid">libuuid</a> <i>(platform: !windows &amp; !uwp &amp; !osx)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/lz4">lz4</a> - Build with lz4
+            <ul>
+              <li><a href="/en/package/lz4">lz4</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/tool">tool</a> - Build and install czmq tools (zmakecert)
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/uuid">uuid</a> - Build with libuuid
+            <ul>
+              <li><a href="/en/package/libuuid">libuuid</a>
+                
+                 (platform: !windows &amp; !uwp &amp; !osx)
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -283,9 +326,18 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/czmq/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/Findlibcurl.cmake" target="_blank">Findlibcurl.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/Findlibmicrohttpd.cmake" target="_blank">Findlibmicrohttpd.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/Findlibzmq.cmake" target="_blank">Findlibzmq.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/Findlz4.cmake" target="_blank">Findlz4.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/Finduuid.cmake" target="_blank">Finduuid.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/czmq/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

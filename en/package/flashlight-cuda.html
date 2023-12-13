@@ -195,89 +195,188 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> flashlight-cuda</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A C++ standalone library for machine learning. CUDA backend.</div>
-        <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/facebookresearch/flashlight</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>flashlight-cuda</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          6
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A C++ standalone library for machine learning. CUDA backend.</div>
+      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/facebookresearch/flashlight">https://github.com/facebookresearch/flashlight</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">0.3 - 6</span> <span class="badge badge-primary">0.3 - 5</span> <span class="badge badge-primary">0.3 - 4</span> <span class="badge badge-primary">0.3 - 2</span> <span class="badge badge-primary">0.3 - 1</span> <span class="badge badge-primary">0.3 - 0</span> <span class="badge badge-primary">20210111 - 0</span> <span class="badge badge-primary">20201201 - 0</span> <span class="badge badge-primary">20201120 - 1</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.3#6</span>
+          <span class="badge badge-primary">0.3#5</span>
+          <span class="badge badge-primary">0.3#4</span>
+          <span class="badge badge-primary">0.3#2</span>
+          <span class="badge badge-primary">0.3#1</span>
+          <span class="badge badge-primary">0.3#0</span>
+          <span class="badge badge-primary">20210111#0</span>
+          <span class="badge badge-primary">20201201#0</span>
+          <span class="badge badge-primary">20201120#1</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>asr - flashlight asr app
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
-              <li><a href="gflags">gflags</a></li>
-              <li><a href="libsndfile">libsndfile</a></li>
+          <li>
+            <a href="/en/package/asr">asr</a> - flashlight asr app
+            <ul>
+              <li><a href="/en/package/flashlight-cuda">flashlight-cuda</a>
+                  [fl, 
+                  lib]
+                
+                
+              </li>
+              <li><a href="/en/package/gflags">gflags</a>
+                
+                
+              </li>
+              <li><a href="/en/package/libsndfile">libsndfile</a>
+                  [external-libs]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>fl - flashlight core autograd and neural net library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="arrayfire">arrayfire</a></li>
-              <li><a href="cereal">cereal</a></li>
-              <li><a href="cuda">cuda</a></li>
-              <li><a href="cudnn">cudnn</a></li>
-              <li><a href="nccl">nccl</a></li>
-              <li><a href="openmpi">openmpi</a></li>
-              <li><a href="stb">stb</a></li>
+          </li>
+          <li>
+            <a href="/en/package/fl">fl</a> - flashlight core autograd and neural net library
+            <ul>
+              <li><a href="/en/package/arrayfire">arrayfire</a>
+                  [cuda]
+                
+                
+              </li>
+              <li><a href="/en/package/cereal">cereal</a>
+                
+                
+              </li>
+              <li><a href="/en/package/cuda">cuda</a>
+                
+                
+              </li>
+              <li><a href="/en/package/cudnn">cudnn</a>
+                
+                
+              </li>
+              <li><a href="/en/package/nccl">nccl</a>
+                
+                
+              </li>
+              <li><a href="/en/package/openmpi">openmpi</a>
+                
+                
+              </li>
+              <li><a href="/en/package/stb">stb</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>imgclass - flashlight image classification app
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
-              <li><a href="gflags">gflags</a></li>
+          </li>
+          <li>
+            <a href="/en/package/imgclass">imgclass</a> - flashlight image classification app
+            <ul>
+              <li><a href="/en/package/flashlight-cuda">flashlight-cuda</a>
+                  [fl, 
+                  lib]
+                
+                
+              </li>
+              <li><a href="/en/package/gflags">gflags</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>lib - flashlight libraries
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cub">cub</a></li>
-              <li><a href="cuda">cuda</a></li>
-              <li><a href="fftw3">fftw3</a></li>
-              <li><a href="intel-mkl">intel-mkl</a></li>
-              <li><a href="kenlm">kenlm</a></li>
+          </li>
+          <li>
+            <a href="/en/package/lib">lib</a> - flashlight libraries
+            <ul>
+              <li><a href="/en/package/cub">cub</a>
+                
+                
+              </li>
+              <li><a href="/en/package/cuda">cuda</a>
+                
+                
+              </li>
+              <li><a href="/en/package/fftw3">fftw3</a>
+                
+                
+              </li>
+              <li><a href="/en/package/intel-mkl">intel-mkl</a>
+                
+                
+              </li>
+              <li><a href="/en/package/kenlm">kenlm</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>lm - flashlight lm app
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
-              <li><a href="gflags">gflags</a></li>
+          </li>
+          <li>
+            <a href="/en/package/lm">lm</a> - flashlight lm app
+            <ul>
+              <li><a href="/en/package/flashlight-cuda">flashlight-cuda</a>
+                  [fl, 
+                  lib]
+                
+                
+              </li>
+              <li><a href="/en/package/gflags">gflags</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>objdet - flashlight object detection app
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="flashlight-cuda">flashlight-cuda</a></li>
-              <li><a href="gflags">gflags</a></li>
+          </li>
+          <li>
+            <a href="/en/package/objdet">objdet</a> - flashlight object detection app
+            <ul>
+              <li><a href="/en/package/flashlight-cuda">flashlight-cuda</a>
+                  [fl, 
+                  imgclass, 
+                  lib]
+                
+                
+              </li>
+              <li><a href="/en/package/gflags">gflags</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -299,9 +398,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/flashlight-cuda/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/flashlight-cuda/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/flashlight-cuda/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

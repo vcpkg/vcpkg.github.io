@@ -195,85 +195,139 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> dcmtk</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.6.7</div>
-        <div><span class="detailed-package-item-heading">Description:</span> This DICOM ToolKit (DCMTK) package consists of source code, documentation and installation instructions for a set of software libraries and applications implementing part of the DICOM/MEDICOM Standard.</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause OR BSD-2-Clause OR libtiff OR MIT OR Zlib OR Libpng</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/DCMTK/dcmtk</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>dcmtk</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.6.7</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          6
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> This DICOM ToolKit (DCMTK) package consists of source code, documentation and installation instructions for a set of software libraries and applications implementing part of the DICOM/MEDICOM Standard.</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause OR BSD-2-Clause OR libtiff OR MIT OR Zlib OR Libpng</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/DCMTK/dcmtk">https://github.com/DCMTK/dcmtk</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">3.6.7 - 6</span> <span class="badge badge-primary">3.6.7 - 5</span> <span class="badge badge-primary">3.6.7 - 4</span> <span class="badge badge-primary">3.6.7 - 3</span> <span class="badge badge-primary">3.6.7 - 2</span> <span class="badge badge-primary">3.6.7 - 1</span> <span class="badge badge-primary">3.6.7 - 0</span> <span class="badge badge-primary">3.6.6 - 3</span> <span class="badge badge-primary">3.6.6 - 2</span> <span class="badge badge-primary">3.6.6 - 1</span> <span class="badge badge-primary">3.6.6 - 0</span> <span class="badge badge-primary">3.6.5+_20191213 - 0</span> <span class="badge badge-primary">3.6.4-2 - 0</span> <span class="badge badge-primary">3.6.4-1 - 0</span> <span class="badge badge-primary">3.6.4 - 0</span> <span class="badge badge-primary">3.6.3-1 - 0</span> <span class="badge badge-primary">3.6.3 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.6.7#6</span>
+          <span class="badge badge-primary">3.6.7#5</span>
+          <span class="badge badge-primary">3.6.7#4</span>
+          <span class="badge badge-primary">3.6.7#3</span>
+          <span class="badge badge-primary">3.6.7#2</span>
+          <span class="badge badge-primary">3.6.7#1</span>
+          <span class="badge badge-primary">3.6.7#0</span>
+          <span class="badge badge-primary">3.6.6#3</span>
+          <span class="badge badge-primary">3.6.6#2</span>
+          <span class="badge badge-primary">3.6.6#1</span>
+          <span class="badge badge-primary">3.6.6#0</span>
+          <span class="badge badge-primary">3.6.5+_20191213#0</span>
+          <span class="badge badge-primary">3.6.4-2#0</span>
+          <span class="badge badge-primary">3.6.4-1#0</span>
+          <span class="badge badge-primary">3.6.4#0</span>
+          <span class="badge badge-primary">3.6.3-1#0</span>
+          <span class="badge badge-primary">3.6.3#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>iconv - Enable Iconv support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libiconv">libiconv</a></li>
+          <li>
+            <a href="/en/package/iconv">iconv</a> - Enable Iconv support
+            <ul>
+              <li><a href="/en/package/libiconv">libiconv</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>icu - Enable ICU support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="icu">icu</a></li>
+          </li>
+          <li>
+            <a href="/en/package/icu">icu</a> - Enable ICU support
+            <ul>
+              <li><a href="/en/package/icu">icu</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>openssl - Enable OpenSSL
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="openssl">openssl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/openssl">openssl</a> - Enable OpenSSL
+            <ul>
+              <li><a href="/en/package/openssl">openssl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>png - Enable PNG support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libpng">libpng</a></li>
+          </li>
+          <li>
+            <a href="/en/package/png">png</a> - Enable PNG support
+            <ul>
+              <li><a href="/en/package/libpng">libpng</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tiff - Enable TIFF support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="tiff">tiff</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tiff">tiff</a> - Enable TIFF support
+            <ul>
+              <li><a href="/en/package/tiff">tiff</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tools - Build apps
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>xml2 - Enable XML support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libxml2">libxml2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Build apps
+            <ul>
             </ul>
-            </li>
-          <li>zlib - Enable zlib support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="zlib">zlib</a></li>
+          </li>
+          <li>
+            <a href="/en/package/xml2">xml2</a> - Enable XML support
+            <ul>
+              <li><a href="/en/package/libxml2">libxml2</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/zlib">zlib</a> - Enable zlib support
+            <ul>
+              <li><a href="/en/package/zlib">zlib</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -295,9 +349,16 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/dcmtk/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/dcmtk.patch" target="_blank">dcmtk.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/fix-pc-format.patch" target="_blank">fix-pc-format.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/fix_link_xml2.patch" target="_blank">fix_link_xml2.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/dcmtk/windows-patch.patch" target="_blank">windows-patch.patch</a></li>
+        </ul>
       </div>
     </div>
     </div>

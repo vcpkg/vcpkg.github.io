@@ -195,44 +195,78 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> nettle</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.8.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Nettle is a low-level cryptographic library that is designed to fit easily in more or less any context: In crypto toolkits for object-oriented languages (C++, Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel space.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://git.lysator.liu.se/nettle/nettle</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>nettle</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.8.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Nettle is a low-level cryptographic library that is designed to fit easily in more or less any context: In crypto toolkits for object-oriented languages (C++, Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel space.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://git.lysator.liu.se/nettle/nettle">https://git.lysator.liu.se/nettle/nettle</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="gmp">gmp</a></li>
-           <li><a href="nettle">nettle</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="gmp">gmp</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="nettle">nettle</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">3.8.1 - 1</span> <span class="badge badge-primary">3.8.1 - 0</span> <span class="badge badge-primary">3.7.3 - 1</span> <span class="badge badge-primary">3.7.3 - 0</span> <span class="badge badge-primary">3.6 - 2</span> <span class="badge badge-primary">3.6 - 1</span> <span class="badge badge-primary">3.6 - 0</span> <span class="badge badge-primary">3.5.1 - 5</span> <span class="badge badge-primary">3.5.1 - 4</span> <span class="badge badge-primary">3.5.1 - 3</span> <span class="badge badge-primary">3.5.1-2 - 0</span> <span class="badge badge-primary">3.5.1-1 - 0</span> <span class="badge badge-primary">3.5.1  - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.8.1#1</span>
+          <span class="badge badge-primary">3.8.1#0</span>
+          <span class="badge badge-primary">3.7.3#1</span>
+          <span class="badge badge-primary">3.7.3#0</span>
+          <span class="badge badge-primary">3.6#2</span>
+          <span class="badge badge-primary">3.6#1</span>
+          <span class="badge badge-primary">3.6#0</span>
+          <span class="badge badge-primary">3.5.1#5</span>
+          <span class="badge badge-primary">3.5.1#4</span>
+          <span class="badge badge-primary">3.5.1#3</span>
+          <span class="badge badge-primary">3.5.1-2#0</span>
+          <span class="badge badge-primary">3.5.1-1#0</span>
+          <span class="badge badge-primary">3.5.1 #0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>tools - Build tools
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Build tools
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -254,9 +288,28 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/nettle/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/ccas.patch" target="_blank">ccas.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/compile.patch" target="_blank">compile.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/fix-libdir.patch" target="_blank">fix-libdir.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/hogweed-arm.def" target="_blank">hogweed-arm.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/hogweed-arm64.def" target="_blank">hogweed-arm64.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/hogweed-x64.def" target="_blank">hogweed-x64.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/hogweed-x86.def" target="_blank">hogweed-x86.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/host-tools.patch" target="_blank">host-tools.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/lib-to-def.cmake" target="_blank">lib-to-def.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/libname-windows.patch" target="_blank">libname-windows.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/msvc-support.patch" target="_blank">msvc-support.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/nettle-arm.def" target="_blank">nettle-arm.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/nettle-arm64.def" target="_blank">nettle-arm64.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/nettle-x64.def" target="_blank">nettle-x64.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/nettle-x86.def" target="_blank">nettle-x86.def</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/subdirs.patch" target="_blank">subdirs.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nettle/yasm.patch" target="_blank">yasm.patch</a></li>
+        </ul>
       </div>
     </div>
     </div>

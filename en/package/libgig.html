@@ -195,50 +195,72 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> libgig</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 4.3.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> C++ library for loading Gigasampler files and DLS Level 1/2 files</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.linuxsampler.org/libgig/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>libgig</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 4.3.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> C++ library for loading Gigasampler files and DLS Level 1/2 files</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.linuxsampler.org/libgig/">https://www.linuxsampler.org/libgig/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">4.3.0 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">4.3.0#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>tests - Build test cases
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cppunit">cppunit</a></li>
+          <li>
+            <a href="/en/package/tests">tests</a> - Build test cases
+            <ul>
+              <li><a href="/en/package/cppunit">cppunit</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tools - Build extra tools
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libsndfile">libsndfile</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tools">tools</a> - Build extra tools
+            <ul>
+              <li><a href="/en/package/libsndfile">libsndfile</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -260,9 +282,14 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/libgig/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgig/0001-msvc-fix-ssize_t.patch" target="_blank">0001-msvc-fix-ssize_t.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgig/0002-cmake-fixes.patch" target="_blank">0002-cmake-fixes.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgig/0003-fix-usage.patch" target="_blank">0003-fix-usage.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgig/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libgig/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

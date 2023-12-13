@@ -195,48 +195,70 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> sqlpp11-connector-mysql</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.61</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A C++ wrapper for MySQL meant to be used in combination with sqlpp11 (obsolete, use sqlpp11 with the mariadb/mysql feature instead)</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-2-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/rbock/sqlpp11-connector-mysql</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>sqlpp11-connector-mysql</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.61</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A C++ wrapper for MySQL meant to be used in combination with sqlpp11 (obsolete, use sqlpp11 with the mariadb/mysql feature instead)</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-2-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/rbock/sqlpp11-connector-mysql">https://github.com/rbock/sqlpp11-connector-mysql</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul><li>No Dependencies</li></ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>No Dependencies</li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">0.61 - 0</span> <span class="badge badge-primary">0.29 - 2</span> <span class="badge badge-primary">0.29-1 - 0</span> <span class="badge badge-primary">0.29 - 0</span> <span class="badge badge-primary">0.26 - 0</span> <span class="badge badge-primary">0.25-2 - 0</span> <span class="badge badge-primary">0.25-1 - 0</span> <span class="badge badge-primary">0.25 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.61#0</span>
+          <span class="badge badge-primary">0.29#2</span>
+          <span class="badge badge-primary">0.29-1#0</span>
+          <span class="badge badge-primary">0.29#0</span>
+          <span class="badge badge-primary">0.26#0</span>
+          <span class="badge badge-primary">0.25-2#0</span>
+          <span class="badge badge-primary">0.25-1#0</span>
+          <span class="badge badge-primary">0.25#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>mariadb - Use MariaDB connector
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="sqlpp11">sqlpp11</a></li>
+          <li>
+            <a href="/en/package/mariadb">mariadb</a> - Use MariaDB connector
+            <ul>
+              <li><a href="/en/package/sqlpp11">sqlpp11</a>
+                  [mariadb]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>mysql - Use MySQL connector
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="sqlpp11">sqlpp11</a></li>
+          </li>
+          <li>
+            <a href="/en/package/mysql">mysql</a> - Use MySQL connector
+            <ul>
+              <li><a href="/en/package/sqlpp11">sqlpp11</a>
+                  [mysql]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -258,9 +280,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/sqlpp11-connector-mysql/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/sqlpp11-connector-mysql/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/sqlpp11-connector-mysql/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

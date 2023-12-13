@@ -195,38 +195,71 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> pthreads</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.0.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Meta-package that provides PThreads4W on Windows, or assumes presence of system pthreads on POSIX systems.</div>
-        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://sourceforge.net/projects/pthreads4w/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>pthreads</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.0.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          14
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Meta-package that provides PThreads4W on Windows, or assumes presence of system pthreads on POSIX systems.</div>
+      <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://sourceforge.net/projects/pthreads4w/">https://sourceforge.net/projects/pthreads4w/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">3.0.0 - 14</span> <span class="badge badge-primary">3.0.0 - 13</span> <span class="badge badge-primary">3.0.0 - 12</span> <span class="badge badge-primary">3.0.0 - 11</span> <span class="badge badge-primary">3.0.0 - 10</span> <span class="badge badge-primary">3.0.0 - 9</span> <span class="badge badge-primary">3.0.0 - 8</span> <span class="badge badge-primary">3.0.0 - 7</span> <span class="badge badge-primary">3.0.0-6 - 0</span> <span class="badge badge-primary">3.0.0-5 - 0</span> <span class="badge badge-primary">3.0.0-4 - 0</span> <span class="badge badge-primary">3.0.0-3 - 0</span> <span class="badge badge-primary">3.0.0-2 - 0</span> <span class="badge badge-primary">3.0.0-1 - 0</span> <span class="badge badge-primary">3.0.0 - 0</span> <span class="badge badge-primary">2.9.1-5 - 0</span> <span class="badge badge-primary">2.9.1-4 - 0</span> <span class="badge badge-primary">2.9.1-3 - 0</span> <span class="badge badge-primary">2.9.1-2 - 0</span> <span class="badge badge-primary">2.9.1-1 - 0</span> <span class="badge badge-primary">2.9.1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.0.0#14</span>
+          <span class="badge badge-primary">3.0.0#13</span>
+          <span class="badge badge-primary">3.0.0#12</span>
+          <span class="badge badge-primary">3.0.0#11</span>
+          <span class="badge badge-primary">3.0.0#10</span>
+          <span class="badge badge-primary">3.0.0#9</span>
+          <span class="badge badge-primary">3.0.0#8</span>
+          <span class="badge badge-primary">3.0.0#7</span>
+          <span class="badge badge-primary">3.0.0-6#0</span>
+          <span class="badge badge-primary">3.0.0-5#0</span>
+          <span class="badge badge-primary">3.0.0-4#0</span>
+          <span class="badge badge-primary">3.0.0-3#0</span>
+          <span class="badge badge-primary">3.0.0-2#0</span>
+          <span class="badge badge-primary">3.0.0-1#0</span>
+          <span class="badge badge-primary">3.0.0#0</span>
+          <span class="badge badge-primary">2.9.1-5#0</span>
+          <span class="badge badge-primary">2.9.1-4#0</span>
+          <span class="badge badge-primary">2.9.1-3#0</span>
+          <span class="badge badge-primary">2.9.1-2#0</span>
+          <span class="badge badge-primary">2.9.1-1#0</span>
+          <span class="badge badge-primary">2.9.1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        <li>No Features</li></ul>
+          <li>No Features</li>
+        </ul>
       </div>
       <br />
       <br />
@@ -247,9 +280,24 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/pthreads/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/PThreads4WConfig.cmake" target="_blank">PThreads4WConfig.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/fix-arm-macro.patch" target="_blank">fix-arm-macro.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/fix-arm64-version_rc.patch" target="_blank">fix-arm64-version_rc.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/fix-install.patch" target="_blank">fix-install.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/fix-pthread_getname_np.patch" target="_blank">fix-pthread_getname_np.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/fix-uwp-linkage.patch" target="_blank">fix-uwp-linkage.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/use-md.patch" target="_blank">use-md.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/use-mt.patch" target="_blank">use-mt.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/vcpkg-cmake-wrapper-pthread.cmake" target="_blank">vcpkg-cmake-wrapper-pthread.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/vcpkg-cmake-wrapper-pthreads-windows.cmake" target="_blank">vcpkg-cmake-wrapper-pthreads-windows.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/vcpkg-cmake-wrapper-pthreads.cmake" target="_blank">vcpkg-cmake-wrapper-pthreads.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/pthreads/whitespace_in_path.patch" target="_blank">whitespace_in_path.patch</a></li>
+        </ul>
       </div>
     </div>
     </div>

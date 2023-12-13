@@ -195,66 +195,108 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> matio</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.5.26</div>
-        <div><span class="detailed-package-item-heading">Description:</span> MATLAB MAT File I/O Library</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-2-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/tbeu/matio</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>matio</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.5.26</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> MATLAB MAT File I/O Library</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-2-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/tbeu/matio">https://github.com/tbeu/matio</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">1.5.26 - 0</span> <span class="badge badge-primary">1.5.24 - 0</span> <span class="badge badge-primary">1.5.23 - 3</span> <span class="badge badge-primary">1.5.23 - 2</span> <span class="badge badge-primary">1.5.23 - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">1.5.19 - 0</span> <span class="badge badge-primary">1.5.17 - 0</span> <span class="badge badge-primary">1.5.16 - 0</span> <span class="badge badge-primary">1.5.15 - 0</span> <span class="badge badge-primary">1.5.13-1 - 0</span> <span class="badge badge-primary">1.5.13 - 0</span> <span class="badge badge-primary">1.5.12 - 0</span> <span class="badge badge-primary">1.5.11 - 0</span> <span class="badge badge-primary">1.5.10-2 - 0</span> <span class="badge badge-primary">1.5.10-1 - 0</span> <span class="badge badge-primary">1.5.10 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">1.5.26#0</span>
+          <span class="badge badge-primary">1.5.24#0</span>
+          <span class="badge badge-primary">1.5.23#3</span>
+          <span class="badge badge-primary">1.5.23#2</span>
+          <span class="badge badge-primary">1.5.23#1</span>
+          <span class="badge badge-primary">1.5.23#0</span>
+          <span class="badge badge-primary">1.5.19#1</span>
+          <span class="badge badge-primary">1.5.19#0</span>
+          <span class="badge badge-primary">1.5.17#0</span>
+          <span class="badge badge-primary">1.5.16#0</span>
+          <span class="badge badge-primary">1.5.15#0</span>
+          <span class="badge badge-primary">1.5.13-1#0</span>
+          <span class="badge badge-primary">1.5.13#0</span>
+          <span class="badge badge-primary">1.5.12#0</span>
+          <span class="badge badge-primary">1.5.11#0</span>
+          <span class="badge badge-primary">1.5.10-2#0</span>
+          <span class="badge badge-primary">1.5.10-1#0</span>
+          <span class="badge badge-primary">1.5.10#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>extended-sparse - Enable extended sparse matrix data types not supported in MATLAB
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>hdf5 - Check for HDF5 library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="hdf5">hdf5</a></li>
-              <li><a href="matio">matio</a></li>
+          <li>
+            <a href="/en/package/extended-sparse">extended-sparse</a> - Enable extended sparse matrix data types not supported in MATLAB
+            <ul>
             </ul>
-            </li>
-          <li>mat73 - Enable support for version 7.3 MAT files
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="matio">matio</a></li>
+          </li>
+          <li>
+            <a href="/en/package/hdf5">hdf5</a> - Check for HDF5 library
+            <ul>
+              <li><a href="/en/package/hdf5">hdf5</a>
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/matio">matio</a>
+                  [zlib]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>pic - Enable position-independent code (PIC), i.e., compilation with the -fPIC flag
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>zlib - Check for zlib library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="zlib">zlib</a></li>
+          </li>
+          <li>
+            <a href="/en/package/mat73">mat73</a> - Enable support for version 7.3 MAT files
+            <ul>
+              <li><a href="/en/package/matio">matio</a>
+                  [hdf5]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/pic">pic</a> - Enable position-independent code (PIC), i.e., compilation with the -fPIC flag
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/zlib">zlib</a> - Check for zlib library
+            <ul>
+              <li><a href="/en/package/zlib">zlib</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -276,9 +318,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/matio/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/matio/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/matio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/matio/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/matio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

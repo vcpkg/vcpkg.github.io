@@ -195,106 +195,153 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> opensubdiv</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.5.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> An Open-Source subdivision surface library.</div>
-        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/PixarAnimationStudios/OpenSubdiv</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>opensubdiv</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.5.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> An Open-Source subdivision surface library.</div>
+      <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/PixarAnimationStudios/OpenSubdiv">https://github.com/PixarAnimationStudios/OpenSubdiv</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 5</span> <span class="badge badge-primary">undefined - 4</span> <span class="badge badge-primary">undefined - 3</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">3.4.3 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.5.0#0</span>
+          <span class="badge badge-primary">3.4.3#5</span>
+          <span class="badge badge-primary">3.4.3#4</span>
+          <span class="badge badge-primary">3.4.3#3</span>
+          <span class="badge badge-primary">3.4.3#2</span>
+          <span class="badge badge-primary">3.4.3#1</span>
+          <span class="badge badge-primary">3.4.3#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cuda - Enable CUDA backend
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cuda">cuda</a></li>
+          <li>
+            <a href="/en/package/cuda">cuda</a> - Enable CUDA backend
+            <ul>
+              <li><a href="/en/package/cuda">cuda</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>dx - Enable DirectX support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="directxsdk">directxsdk</a></li>
+          </li>
+          <li>
+            <a href="/en/package/dx">dx</a> - Enable DirectX support
+            <ul>
+              <li><a href="/en/package/directxsdk">directxsdk</a>
+                  [xp]
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>examples - Build examples
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>glew - Enable GLEW wrapper library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="glew">glew</a></li>
+          </li>
+          <li>
+            <a href="/en/package/examples">examples</a> - Build examples
+            <ul>
             </ul>
-            </li>
-          <li>glfw - Build components depending on GLFW
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="glfw3">glfw3</a></li>
+          </li>
+          <li>
+            <a href="/en/package/glew">glew</a> - Enable GLEW wrapper library
+            <ul>
+              <li><a href="/en/package/glew">glew</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>omp - Enable OpenMP backend
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>opencl - Enable OpenCL backend
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opencl">opencl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/glfw">glfw</a> - Build components depending on GLFW
+            <ul>
+              <li><a href="/en/package/glfw3">glfw3</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>opengl - Enable OpenGL backend
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opengl">opengl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/omp">omp</a> - Enable OpenMP backend
+            <ul>
             </ul>
-            </li>
-          <li>ptex - Enable Ptex support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ptex">ptex</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opencl">opencl</a> - Enable OpenCL backend
+            <ul>
+              <li><a href="/en/package/opencl">opencl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tbb - Enable TBB backend
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="tbb">tbb</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opengl">opengl</a> - Enable OpenGL backend
+            <ul>
+              <li><a href="/en/package/opengl">opengl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>true-deriv-eval - Enable true derivative evaluation for Gregory basis patches
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>tutorials - Enable tutorials build
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/ptex">ptex</a> - Enable Ptex support
+            <ul>
+              <li><a href="/en/package/ptex">ptex</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/tbb">tbb</a> - Enable TBB backend
+            <ul>
+              <li><a href="/en/package/tbb">tbb</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/true-deriv-eval">true-deriv-eval</a> - Enable true derivative evaluation for Gregory basis patches
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/tutorials">tutorials</a> - Enable tutorials build
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -316,9 +363,15 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/opensubdiv/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/opensubdiv/fix-build-type.patch" target="_blank">fix-build-type.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/opensubdiv/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/opensubdiv/fix-version-search.patch" target="_blank">fix-version-search.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/opensubdiv/fix_compile-option.patch" target="_blank">fix_compile-option.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/opensubdiv/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/opensubdiv/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

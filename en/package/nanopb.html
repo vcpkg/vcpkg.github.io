@@ -195,44 +195,69 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> nanopb</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.4.7</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A small code-size Protocol Buffers implementation in ANSI C.</div>
-        <div><span class="detailed-package-item-heading">License:</span> Zlib</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://jpa.kapsi.fi/nanopb/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>nanopb</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.4.7</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          2
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A small code-size Protocol Buffers implementation in ANSI C.</div>
+      <div><span class="detailed-package-item-heading">License:</span> Zlib</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://jpa.kapsi.fi/nanopb/">https://jpa.kapsi.fi/nanopb/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">2019-02-12-2 - 0</span> <span class="badge badge-primary">2019-02-12-1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.4.7#2</span>
+          <span class="badge badge-primary">0.4.7#1</span>
+          <span class="badge badge-primary">0.4.7#0</span>
+          <span class="badge badge-primary">0.4.5#0</span>
+          <span class="badge badge-primary">2019-02-12-2#0</span>
+          <span class="badge badge-primary">2019-02-12-1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>generator - build the generator
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="protobuf">protobuf</a> <i>(host: true)</i></li>
+          <li>
+            <a href="/en/package/generator">generator</a> - build the generator
+            <ul>
+              <li><a href="/en/package/protobuf">protobuf</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -254,9 +279,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/nanopb/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nanopb/fix-cmakelist-and-pb-header.patch" target="_blank">fix-cmakelist-and-pb-header.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nanopb/fix-install-location.patch" target="_blank">fix-install-location.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nanopb/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nanopb/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

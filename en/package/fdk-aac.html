@@ -195,43 +195,70 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> fdk-aac</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.0.2</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A standalone Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android. Uses a fork without HE-AAC, HE-AACv2, or xHE-AAC support to avoid patent licensing and GPL compatibility issues when built without the he-aac option.</div>
-        <div><span class="detailed-package-item-heading">License:</span> FDK-AAC</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>fdk-aac</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.0.2</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          2
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A standalone Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android. Uses a fork without HE-AAC, HE-AACv2, or xHE-AAC support to avoid patent licensing and GPL compatibility issues when built without the he-aac option.</div>
+      <div><span class="detailed-package-item-heading">License:</span> FDK-AAC</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped">https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">2018-07-08 - 3</span> <span class="badge badge-primary">2018-07-08-2 - 0</span> <span class="badge badge-primary">2018-07-08-1 - 0</span> <span class="badge badge-primary">2018-07-08 - 0</span> <span class="badge badge-primary">2018-05-17 - 0</span> <span class="badge badge-primary">2018-03-07 - 0</span> <span class="badge badge-primary">2018-02-25 - 0</span> <span class="badge badge-primary">2017-11-02-1e351 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.0.2#2</span>
+          <span class="badge badge-primary">2.0.2#1</span>
+          <span class="badge badge-primary">2.0.2#0</span>
+          <span class="badge badge-primary">2018-07-08#3</span>
+          <span class="badge badge-primary">2018-07-08-2#0</span>
+          <span class="badge badge-primary">2018-07-08-1#0</span>
+          <span class="badge badge-primary">2018-07-08#0</span>
+          <span class="badge badge-primary">2018-05-17#0</span>
+          <span class="badge badge-primary">2018-03-07#0</span>
+          <span class="badge badge-primary">2018-02-25#0</span>
+          <span class="badge badge-primary">2017-11-02-1e351#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>he-aac - Support patent-encumbered HE-AAC, HE-AACv2, and xHE-AAC codec profiles. Do not distribute binaries with this option without the relevant patent licenses if you are in a jurisdiction that recognizes software patents. Might not be compatible with the GPL depending on legal interpretation. Refer to https:&#x2F;&#x2F;bugzilla.redhat.com&#x2F;show_bug.cgi?id&#x3D;1501522#c112
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/he-aac">he-aac</a> - Support patent-encumbered HE-AAC, HE-AACv2, and xHE-AAC codec profiles. Do not distribute binaries with this option without the relevant patent licenses if you are in a jurisdiction that recognizes software patents. Might not be compatible with the GPL depending on legal interpretation. Refer to https:&#x2F;&#x2F;bugzilla.redhat.com&#x2F;show_bug.cgi?id&#x3D;1501522#c112
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -253,9 +280,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/fdk-aac/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/fdk-aac/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/fdk-aac/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

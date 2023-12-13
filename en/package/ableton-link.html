@@ -195,62 +195,94 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> ableton-link</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 3.0.6</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Ableton Link, a technology that synchronizes musical beat, tempo, and phase across multiple applications running on one or more devices.</div>
-        <div><span class="detailed-package-item-heading">License:</span> GPL-2.0-or-later</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.ableton.com/en/link/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> http://ableton.github.io/link/</div>
+      <h1>ableton-link</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.0.6</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Ableton Link, a technology that synchronizes musical beat, tempo, and phase across multiple applications running on one or more devices.</div>
+      <div><span class="detailed-package-item-heading">License:</span> GPL-2.0-or-later</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.ableton.com/en/link/">https://www.ableton.com/en/link/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         <a href="http://ableton.github.io/link/">http://ableton.github.io/link/</a>
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="asio">asio</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="asio">asio</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">3.0.6 - 1</span> <span class="badge badge-primary">3.0.6 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">3.0.6#1</span>
+          <span class="badge badge-primary">3.0.6#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>coretest - Build LinkCoreTest suite <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="catch2">catch2</a></li>
+          <li>
+            <a href="/en/package/coretest">coretest</a> - Build LinkCoreTest suite
+            <ul>
+              <li><a href="/en/package/catch2">catch2</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>discoverytest - Build LinkDiscoveryTest suite <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="catch2">catch2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/discoverytest">discoverytest</a> - Build LinkDiscoveryTest suite
+            <ul>
+              <li><a href="/en/package/catch2">catch2</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>hut - Build LinkHut command line tool
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="asiosdk">asiosdk</a> <i>(platform: windows)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/hut">hut</a> - Build LinkHut command line tool
+            <ul>
+              <li><a href="/en/package/asiosdk">asiosdk</a>
+                
+                 (platform: windows)
+              </li>
             </ul>
-            </li>
-          <li>hutsilent - Build LinkHutSilent command line tool <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/hutsilent">hutsilent</a> - Build LinkHutSilent command line tool
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -272,9 +304,16 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/ableton-link/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/correct_cmake_include_directory.patch" target="_blank">correct_cmake_include_directory.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/no-werror.patch" target="_blank">no-werror.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/replace_asiosdk_download_by_vcpkg_asiosdk.patch" target="_blank">replace_asiosdk_download_by_vcpkg_asiosdk.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/replace_local_asiostandalone_by_vcpkg_asio.patch" target="_blank">replace_local_asiostandalone_by_vcpkg_asio.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/replace_local_catch_by_vcpkg_catch2.patch" target="_blank">replace_local_catch_by_vcpkg_catch2.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ableton-link/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

@@ -195,37 +195,59 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> hwloc</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.9.3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Portable Hardware Locality (hwloc),The Portable Hardware Locality (hwloc) software package provides a portable abstraction (across OS, versions, architectures, ...) of the hierarchical topology of modern architectures, including NUMA memory nodes, sockets, shared caches, cores and simultaneous multithreading. It also gathers various system attributes such as cache and memory information as well as the locality of I/O devices such as network interfaces, InfiniBand HCAs or GPUs.</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-2-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/open-mpi/hwloc</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>hwloc</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.9.3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Portable Hardware Locality (hwloc),The Portable Hardware Locality (hwloc) software package provides a portable abstraction (across OS, versions, architectures, ...) of the hierarchical topology of modern architectures, including NUMA memory nodes, sockets, shared caches, cores and simultaneous multithreading. It also gathers various system attributes such as cache and memory information as well as the locality of I/O devices such as network interfaces, InfiniBand HCAs or GPUs.</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-2-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/open-mpi/hwloc">https://github.com/open-mpi/hwloc</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul><li>No Dependencies</li></ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>No Dependencies</li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">2.9.3 - 0</span> <span class="badge badge-primary">2.9.0 - 0</span> <span class="badge badge-primary">2.7.1 - 0</span> <span class="badge badge-primary">2.7.0 - 0</span> <span class="badge badge-primary">2.5.0 - 3</span> <span class="badge badge-primary">2.5.0 - 2</span> <span class="badge badge-primary">2.5.0 - 1</span> <span class="badge badge-primary">2.5.0 - 0</span> <span class="badge badge-primary">2.2.0 - 1</span> <span class="badge badge-primary">2.2.0 - 0</span> <span class="badge badge-primary">1.11.7-4 - 0</span> <span class="badge badge-primary">1.11.7-3 - 0</span> <span class="badge badge-primary">1.11.7-2 - 0</span> <span class="badge badge-primary">1.11.7-1 - 0</span> <span class="badge badge-primary">1.11.7 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.9.3#0</span>
+          <span class="badge badge-primary">2.9.0#0</span>
+          <span class="badge badge-primary">2.7.1#0</span>
+          <span class="badge badge-primary">2.7.0#0</span>
+          <span class="badge badge-primary">2.5.0#3</span>
+          <span class="badge badge-primary">2.5.0#2</span>
+          <span class="badge badge-primary">2.5.0#1</span>
+          <span class="badge badge-primary">2.5.0#0</span>
+          <span class="badge badge-primary">2.2.0#1</span>
+          <span class="badge badge-primary">2.2.0#0</span>
+          <span class="badge badge-primary">1.11.7-4#0</span>
+          <span class="badge badge-primary">1.11.7-3#0</span>
+          <span class="badge badge-primary">1.11.7-2#0</span>
+          <span class="badge badge-primary">1.11.7-1#0</span>
+          <span class="badge badge-primary">1.11.7#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        <li>No Features</li></ul>
+          <li>No Features</li>
+        </ul>
       </div>
       <br />
       <br />
@@ -246,9 +268,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/hwloc/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/hwloc/fix_shared_win_build.patch" target="_blank">fix_shared_win_build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/hwloc/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/hwloc/stdout_fileno.patch" target="_blank">stdout_fileno.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/hwloc/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

@@ -195,44 +195,77 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> nvtt</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.1.2</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Texture processing tools with support for Direct3D 10 and 11 formats.</div>
-        <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/castano/nvidia-texture-tools</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>nvtt</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.1.2</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          8
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Texture processing tools with support for Direct3D 10 and 11 formats.</div>
+      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/castano/nvidia-texture-tools">https://github.com/castano/nvidia-texture-tools</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="libsquish">libsquish</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="libsquish">libsquish</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">2.1.2 - 8</span> <span class="badge badge-primary">2.1.2 - 7</span> <span class="badge badge-primary">2.1.2 - 6</span> <span class="badge badge-primary">2.1.2 - 5</span> <span class="badge badge-primary">2.1.2 - 4</span> <span class="badge badge-primary">2.1.2 - 3</span> <span class="badge badge-primary">2.1.2 - 2</span> <span class="badge badge-primary">2.1.2 - 1</span> <span class="badge badge-primary">2.1.2 - 0</span> <span class="badge badge-primary">2.1.1 - 0</span> <span class="badge badge-primary">2.1.0-3 - 0</span> <span class="badge badge-primary">2.1.0-2 - 0</span> <span class="badge badge-primary">2.1.0-1 - 0</span> <span class="badge badge-primary">2.1.0 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.1.2#8</span>
+          <span class="badge badge-primary">2.1.2#7</span>
+          <span class="badge badge-primary">2.1.2#6</span>
+          <span class="badge badge-primary">2.1.2#5</span>
+          <span class="badge badge-primary">2.1.2#4</span>
+          <span class="badge badge-primary">2.1.2#3</span>
+          <span class="badge badge-primary">2.1.2#2</span>
+          <span class="badge badge-primary">2.1.2#1</span>
+          <span class="badge badge-primary">2.1.2#0</span>
+          <span class="badge badge-primary">2.1.1#0</span>
+          <span class="badge badge-primary">2.1.0-3#0</span>
+          <span class="badge badge-primary">2.1.0-2#0</span>
+          <span class="badge badge-primary">2.1.0-1#0</span>
+          <span class="badge badge-primary">2.1.0#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cuda - Enable CUDA support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cuda">cuda</a></li>
+          <li>
+            <a href="/en/package/cuda">cuda</a> - Enable CUDA support
+            <ul>
+              <li><a href="/en/package/cuda">cuda</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -254,9 +287,20 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/nvtt/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch" target="_blank">001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/add-compile-options-for-osx.patch" target="_blank">add-compile-options-for-osx.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/bc6h.patch" target="_blank">bc6h.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/bc7.patch" target="_blank">bc7.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/fix-build-error.patch" target="_blank">fix-build-error.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/fix-intrinsic-function.patch" target="_blank">fix-intrinsic-function.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/fix-release-flags.patch" target="_blank">fix-release-flags.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/skip-building-libsquish.patch" target="_blank">skip-building-libsquish.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/squish.patch" target="_blank">squish.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/nvtt/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

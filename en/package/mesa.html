@@ -195,86 +195,174 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> mesa</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 23.2.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Mesa - The 3D Graphics Library</div>
-        <div><span class="detailed-package-item-heading">License:</span> MIT AND BSL-1.0 AND SGI-B-2.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.mesa3d.org/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>mesa</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 23.2.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Mesa - The 3D Graphics Library</div>
+      <div><span class="detailed-package-item-heading">License:</span> MIT AND BSL-1.0 AND SGI-B-2.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.mesa3d.org/">https://www.mesa3d.org/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-get-python-packages">vcpkg-get-python-packages</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-tool-meson">vcpkg-tool-meson</a> <i>(host: true)</i></li>
-           <li><a href="zlib">zlib</a></li>
-           <li><a href="zstd">zstd</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-get-python-packages">vcpkg-get-python-packages</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-tool-meson">vcpkg-tool-meson</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="zlib">zlib</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="zstd">zstd</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">23.2.1 - 0</span> <span class="badge badge-primary">23.0.1 - 2</span> <span class="badge badge-primary">23.0.1 - 1</span> <span class="badge badge-primary">23.0.1 - 0</span> <span class="badge badge-primary">22.1.7 - 1</span> <span class="badge badge-primary">22.1.7 - 0</span> <span class="badge badge-primary">22.0.2 - 0</span> <span class="badge badge-primary">21.2.5 - 4</span> <span class="badge badge-primary">21.2.5 - 3</span> <span class="badge badge-primary">21.2.5 - 2</span> <span class="badge badge-primary">21.2.5 - 1</span> <span class="badge badge-primary">21.2.5 - 0</span> <span class="badge badge-primary">21.2.0 - 1</span> <span class="badge badge-primary">21.2.0 - 0</span> <span class="badge badge-primary">21.1.6 - 0</span> <span class="badge badge-primary">21.1.2 - 0</span> <span class="badge badge-primary">20.2.2 - 1</span> <span class="badge badge-primary">20.2.2 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">23.2.1#0</span>
+          <span class="badge badge-primary">23.0.1#2</span>
+          <span class="badge badge-primary">23.0.1#1</span>
+          <span class="badge badge-primary">23.0.1#0</span>
+          <span class="badge badge-primary">22.1.7#1</span>
+          <span class="badge badge-primary">22.1.7#0</span>
+          <span class="badge badge-primary">22.0.2#0</span>
+          <span class="badge badge-primary">21.2.5#4</span>
+          <span class="badge badge-primary">21.2.5#3</span>
+          <span class="badge badge-primary">21.2.5#2</span>
+          <span class="badge badge-primary">21.2.5#1</span>
+          <span class="badge badge-primary">21.2.5#0</span>
+          <span class="badge badge-primary">21.2.0#1</span>
+          <span class="badge badge-primary">21.2.0#0</span>
+          <span class="badge badge-primary">21.1.6#0</span>
+          <span class="badge badge-primary">21.1.2#0</span>
+          <span class="badge badge-primary">20.2.2#1</span>
+          <span class="badge badge-primary">20.2.2#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>default-features - Platform dependent default features
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mesa">mesa</a></li>
-              <li><a href="mesa">mesa</a> <i>(platform: x64)</i></li>
+          <li>
+            <a href="/en/package/default-features">default-features</a> - Platform dependent default features
+            <ul>
+              <li><a href="/en/package/mesa">mesa</a>
+                  [gles1, 
+                  gles2, 
+                  opengl]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/mesa">mesa</a>
+                  [llvm]
+                 (default-features: false)
+                 (platform: x64)
+              </li>
             </ul>
-            </li>
-          <li>egl - Build support for EGL platform
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="egl-registry">egl-registry</a></li>
+          </li>
+          <li>
+            <a href="/en/package/egl">egl</a> - Build support for EGL platform
+            <ul>
+              <li><a href="/en/package/egl-registry">egl-registry</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>gles1 - Build support for OpenGL ES 1.x
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mesa">mesa</a></li>
+          </li>
+          <li>
+            <a href="/en/package/gles1">gles1</a> - Build support for OpenGL ES 1.x
+            <ul>
+              <li><a href="/en/package/mesa">mesa</a>
+                  [opengl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>gles2 - Build support for OpenGL ES 2.x and 3.x
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mesa">mesa</a></li>
+          </li>
+          <li>
+            <a href="/en/package/gles2">gles2</a> - Build support for OpenGL ES 2.x and 3.x
+            <ul>
+              <li><a href="/en/package/mesa">mesa</a>
+                  [opengl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>llvm - Build with llvmpipe
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="llvm">llvm</a></li>
-              <li><a href="llvm">llvm</a> <i>(platform: arm32)</i></li>
-              <li><a href="llvm">llvm</a> <i>(platform: arm64)</i></li>
-              <li><a href="llvm">llvm</a> <i>(platform: x64 | x86)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/llvm">llvm</a> - Build with llvmpipe
+            <ul>
+              <li><a href="/en/package/llvm">llvm</a>
+                  [enable-rtti, 
+                  libclc]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/llvm">llvm</a>
+                  [target-arm]
+                 (default-features: false)
+                 (platform: arm32)
+              </li>
+              <li><a href="/en/package/llvm">llvm</a>
+                  [target-aarch64]
+                 (default-features: false)
+                 (platform: arm64)
+              </li>
+              <li><a href="/en/package/llvm">llvm</a>
+                  [target-x86]
+                 (default-features: false)
+                 (platform: x64 | x86)
+              </li>
             </ul>
-            </li>
-          <li>offscreen - Build with support for offscreen rendering (OSMesa)
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mesa">mesa</a></li>
+          </li>
+          <li>
+            <a href="/en/package/offscreen">offscreen</a> - Build with support for offscreen rendering (OSMesa)
+            <ul>
+              <li><a href="/en/package/mesa">mesa</a>
+                  [opengl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>opengl - Build support for OpenGL (all versions)
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opengl">opengl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opengl">opengl</a> - Build support for OpenGL (all versions)
+            <ul>
+              <li><a href="/en/package/opengl">opengl</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -296,9 +384,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/mesa/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/mesa/clover-llvm-move-to-modern-pass-manager.patch" target="_blank">clover-llvm-move-to-modern-pass-manager.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/mesa/gallium-fix-build-with-llvm-17.patch" target="_blank">gallium-fix-build-with-llvm-17.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/mesa/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/mesa/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

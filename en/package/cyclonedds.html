@@ -195,97 +195,130 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> cyclonedds</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.10.3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Eclipse Cyclone DDS is a very performant and robust open-source implementation of the OMG DDS specification</div>
-        <div><span class="detailed-package-item-heading">License:</span> EPL-2.0 OR BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://cyclonedds.io</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>cyclonedds</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.10.3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Eclipse Cyclone DDS is a very performant and robust open-source implementation of the OMG DDS specification</div>
+      <div><span class="detailed-package-item-heading">License:</span> EPL-2.0 OR BSD-3-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://cyclonedds.io">https://cyclonedds.io</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.10.3#0</span>
+          <span class="badge badge-primary">0.10.2#2</span>
+          <span class="badge badge-primary">0.10.2#1</span>
+          <span class="badge badge-primary">0.10.2#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>ddsperf - Build ddsperf tool
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cyclonedds">cyclonedds</a> <i>(host: true)</i></li>
+          <li>
+            <a href="/en/package/ddsperf">ddsperf</a> - Build ddsperf tool
+            <ul>
+              <li><a href="/en/package/cyclonedds">cyclonedds</a>
+                  [idlc]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>deadline-missed - Enable Deadline Missed QoS suppor
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>idlc - Build IDL preprocessor
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>ipv6 - Enable ipv6 support
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>lifespan - Enable Lifespan QoS support
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>security - Enable OMG DDS Security support
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>shm - Enable shared memory support <i>(supports: !windows)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="iceoryx">iceoryx</a></li>
+          </li>
+          <li>
+            <a href="/en/package/deadline-missed">deadline-missed</a> - Enable Deadline Missed QoS suppor
+            <ul>
             </ul>
-            </li>
-          <li>source-specific-multicast - Enable support for source-specific multicast
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>ssl - Enable OpenSSL support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="openssl">openssl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/idlc">idlc</a> - Build IDL preprocessor
+            <ul>
             </ul>
-            </li>
-          <li>topic-discovery - Enable Topic Discovery support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cyclonedds">cyclonedds</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ipv6">ipv6</a> - Enable ipv6 support
+            <ul>
             </ul>
-            </li>
-          <li>type-discovery - Enable Type Discovery support
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/lifespan">lifespan</a> - Enable Lifespan QoS support
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/security">security</a> - Enable OMG DDS Security support
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/shm">shm</a> - Enable shared memory support
+            <ul>
+              <li><a href="/en/package/iceoryx">iceoryx</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/source-specific-multicast">source-specific-multicast</a> - Enable support for source-specific multicast
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/ssl">ssl</a> - Enable OpenSSL support
+            <ul>
+              <li><a href="/en/package/openssl">openssl</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/topic-discovery">topic-discovery</a> - Enable Topic Discovery support
+            <ul>
+              <li><a href="/en/package/cyclonedds">cyclonedds</a>
+                  [type-discovery]
+                 (default-features: false)
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/type-discovery">type-discovery</a> - Enable Type Discovery support
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -307,9 +340,14 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/cyclonedds/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/cyclonedds/enable-security.patch" target="_blank">enable-security.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/cyclonedds/idlc-generate.patch" target="_blank">idlc-generate.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/cyclonedds/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/cyclonedds/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/cyclonedds/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

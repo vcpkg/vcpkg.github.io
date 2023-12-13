@@ -195,80 +195,158 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> libigl</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2.5.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> libigl is a simple C++ geometry processing library. We have a wide functionality including construction of sparse discrete differential geometry operators and finite-elements matrices such as the cotangent Laplacian and diagonalized mass matrix, simple facet and edge-based topology data structures, mesh-viewing utilities for OpenGL and GLSL, and many core functions for matrix manipulation which make Eigen feel a lot more like MATLAB.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/libigl/libigl</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>libigl</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.5.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> libigl is a simple C++ geometry processing library. We have a wide functionality including construction of sparse discrete differential geometry operators and finite-elements matrices such as the cotangent Laplacian and diagonalized mass matrix, simple facet and edge-based topology data structures, mesh-viewing utilities for OpenGL and GLSL, and many core functions for matrix manipulation which make Eigen feel a lot more like MATLAB.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/libigl/libigl">https://github.com/libigl/libigl</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="eigen3">eigen3</a></li>
-           <li><a href="stb">stb</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="eigen3">eigen3</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="stb">stb</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">2.5.0 - 0</span> <span class="badge badge-primary">2.4.0 - 4</span> <span class="badge badge-primary">2.4.0 - 3</span> <span class="badge badge-primary">2.4.0 - 2</span> <span class="badge badge-primary">2.4.0 - 1</span> <span class="badge badge-primary">2.4.0 - 0</span> <span class="badge badge-primary">2.3.0 - 2</span> <span class="badge badge-primary">2.3.0 - 1</span> <span class="badge badge-primary">2.3.0 - 0</span> <span class="badge badge-primary">2.2.0 - 6</span> <span class="badge badge-primary">2.2.0 - 5</span> <span class="badge badge-primary">2.2.0 - 4</span> <span class="badge badge-primary">2.2.0 - 3</span> <span class="badge badge-primary">2.2.0 - 2</span> <span class="badge badge-primary">2.2.0 - 1</span> <span class="badge badge-primary">2.2.0 - 0</span> <span class="badge badge-primary">2.1.0-2 - 0</span> <span class="badge badge-primary">2.1.0-1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2.5.0#0</span>
+          <span class="badge badge-primary">2.4.0#4</span>
+          <span class="badge badge-primary">2.4.0#3</span>
+          <span class="badge badge-primary">2.4.0#2</span>
+          <span class="badge badge-primary">2.4.0#1</span>
+          <span class="badge badge-primary">2.4.0#0</span>
+          <span class="badge badge-primary">2.3.0#2</span>
+          <span class="badge badge-primary">2.3.0#1</span>
+          <span class="badge badge-primary">2.3.0#0</span>
+          <span class="badge badge-primary">2.2.0#6</span>
+          <span class="badge badge-primary">2.2.0#5</span>
+          <span class="badge badge-primary">2.2.0#4</span>
+          <span class="badge badge-primary">2.2.0#3</span>
+          <span class="badge badge-primary">2.2.0#2</span>
+          <span class="badge badge-primary">2.2.0#1</span>
+          <span class="badge badge-primary">2.2.0#0</span>
+          <span class="badge badge-primary">2.1.0-2#0</span>
+          <span class="badge badge-primary">2.1.0-1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cgal - Build with cgal
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cgal">cgal</a></li>
+          <li>
+            <a href="/en/package/cgal">cgal</a> - Build with cgal
+            <ul>
+              <li><a href="/en/package/cgal">cgal</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>embree - Build with embree
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="embree3">embree3</a></li>
+          </li>
+          <li>
+            <a href="/en/package/embree">embree</a> - Build with embree
+            <ul>
+              <li><a href="/en/package/embree3">embree3</a>
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>glfw - Build with glfw
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="glfw3">glfw3</a></li>
-              <li><a href="libigl">libigl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/glfw">glfw</a> - Build with glfw
+            <ul>
+              <li><a href="/en/package/glfw3">glfw3</a>
+                
+                
+              </li>
+              <li><a href="/en/package/libigl">libigl</a>
+                  [opengl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>imgui - Build with imgui
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="imgui">imgui</a></li>
-              <li><a href="imguizmo">imguizmo</a></li>
-              <li><a href="libigl">libigl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/imgui">imgui</a> - Build with imgui
+            <ul>
+              <li><a href="/en/package/imgui">imgui</a>
+                  [glfw-binding, 
+                  libigl-imgui, 
+                  opengl3-binding]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/imguizmo">imguizmo</a>
+                
+                
+              </li>
+              <li><a href="/en/package/libigl">libigl</a>
+                  [glfw]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>opengl - Build with opengl
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="glad">glad</a></li>
-              <li><a href="opengl">opengl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opengl">opengl</a> - Build with opengl
+            <ul>
+              <li><a href="/en/package/glad">glad</a>
+                
+                
+              </li>
+              <li><a href="/en/package/opengl">opengl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>xml - Build with libxml
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="tinyxml2">tinyxml2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/xml">xml</a> - Build with libxml
+            <ul>
+              <li><a href="/en/package/tinyxml2">tinyxml2</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -290,9 +368,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/libigl/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libigl/dependencies.patch" target="_blank">dependencies.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libigl/install-extra-targets.patch" target="_blank">install-extra-targets.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libigl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libigl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

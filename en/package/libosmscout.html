@@ -195,78 +195,154 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> libosmscout</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.1.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> libosmscout offers applications simple, high-level interfaces for offline location and POI lokup, rendering and routing functionalities based on OpenStreetMap (OSM) data.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> http://libosmscout.sourceforge.net/</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> http://libosmscout.sourceforge.net/documentation/</div>
+      <h1>libosmscout</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.1.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          4
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> libosmscout offers applications simple, high-level interfaces for offline location and POI lokup, rendering and routing functionalities based on OpenStreetMap (OSM) data.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="http://libosmscout.sourceforge.net/">http://libosmscout.sourceforge.net/</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         <a href="http://libosmscout.sourceforge.net/documentation/">http://libosmscout.sourceforge.net/documentation/</a>
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="libiconv">libiconv</a></li>
-           <li><a href="liblzma">liblzma</a></li>
-           <li><a href="libxml2">libxml2</a></li>
-           <li><a href="protobuf">protobuf</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-           <li><a href="zlib">zlib</a></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="libiconv">libiconv</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="liblzma">liblzma</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libxml2">libxml2</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="protobuf">protobuf</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="zlib">zlib</a>
+            
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">1.1.1 - 4</span> <span class="badge badge-primary">1.1.1 - 3</span> <span class="badge badge-primary">1.1.1 - 2</span> <span class="badge badge-primary">1.1.1 - 1</span> <span class="badge badge-primary">1.1.1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">1.1.1#4</span>
+          <span class="badge badge-primary">1.1.1#3</span>
+          <span class="badge badge-primary">1.1.1#2</span>
+          <span class="badge badge-primary">1.1.1#1</span>
+          <span class="badge badge-primary">1.1.1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cairo - Cairo backend renderer
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="cairo">cairo</a></li>
-              <li><a href="freetype">freetype</a></li>
-              <li><a href="harfbuzz">harfbuzz</a></li>
-              <li><a href="libpng">libpng</a></li>
-              <li><a href="pango">pango</a></li>
+          <li>
+            <a href="/en/package/cairo">cairo</a> - Cairo backend renderer
+            <ul>
+              <li><a href="/en/package/cairo">cairo</a>
+                
+                
+              </li>
+              <li><a href="/en/package/freetype">freetype</a>
+                
+                
+              </li>
+              <li><a href="/en/package/harfbuzz">harfbuzz</a>
+                
+                
+              </li>
+              <li><a href="/en/package/libpng">libpng</a>
+                
+                
+              </li>
+              <li><a href="/en/package/pango">pango</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>directx - Direct2D backend renderer <i>(supports: windows)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>gdi - GDI+ backend renderer <i>(supports: windows)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>qt5 - Enable build of Qt5 map drawing backend
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="qt5-base">qt5-base</a></li>
-              <li><a href="qt5-svg">qt5-svg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/directx">directx</a> - Direct2D backend renderer
+            <ul>
             </ul>
-            </li>
-          <li>svg - SVG backend renderer
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="freetype">freetype</a></li>
-              <li><a href="harfbuzz">harfbuzz</a></li>
-              <li><a href="pango">pango</a></li>
+          </li>
+          <li>
+            <a href="/en/package/gdi">gdi</a> - GDI+ backend renderer
+            <ul>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/qt5">qt5</a> - Enable build of Qt5 map drawing backend
+            <ul>
+              <li><a href="/en/package/qt5-base">qt5-base</a>
+                
+                
+              </li>
+              <li><a href="/en/package/qt5-svg">qt5-svg</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/svg">svg</a> - SVG backend renderer
+            <ul>
+              <li><a href="/en/package/freetype">freetype</a>
+                
+                
+              </li>
+              <li><a href="/en/package/harfbuzz">harfbuzz</a>
+                
+                
+              </li>
+              <li><a href="/en/package/pango">pango</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -288,9 +364,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/libosmscout/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libosmscout/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libosmscout/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

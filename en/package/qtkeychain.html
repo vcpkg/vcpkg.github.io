@@ -195,46 +195,85 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> qtkeychain</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.14.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> (Unaffiliated with Qt) Platform-independent Qt5 API for storing passwords securely</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/frankosterfeld/qtkeychain</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>qtkeychain</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.14.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> (Unaffiliated with Qt) Platform-independent Qt5 API for storing passwords securely</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/frankosterfeld/qtkeychain">https://github.com/frankosterfeld/qtkeychain</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="libsecret">libsecret</a><i>(platform: !(windows | uwp | osx))</i></li>
-           <li><a href="qt5-base">qt5-base</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="libsecret">libsecret</a>
+            
+             <i>(platform: !(windows | uwp | osx))</i>
+            
+          </li>
+          <li>
+            <a href="qt5-base">qt5-base</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">0.14.1 - 0</span> <span class="badge badge-primary">0.13.2 - 4</span> <span class="badge badge-primary">0.13.2 - 3</span> <span class="badge badge-primary">0.13.2 - 2</span> <span class="badge badge-primary">0.13.2 - 1</span> <span class="badge badge-primary">0.13.2 - 0</span> <span class="badge badge-primary">0.13.1 - 0</span> <span class="badge badge-primary">0.11.1 - 1</span> <span class="badge badge-primary">0.11.1 - 0</span> <span class="badge badge-primary">v0.9.1-1 - 0</span> <span class="badge badge-primary">v0.9.1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.14.1#0</span>
+          <span class="badge badge-primary">0.13.2#4</span>
+          <span class="badge badge-primary">0.13.2#3</span>
+          <span class="badge badge-primary">0.13.2#2</span>
+          <span class="badge badge-primary">0.13.2#1</span>
+          <span class="badge badge-primary">0.13.2#0</span>
+          <span class="badge badge-primary">0.13.1#0</span>
+          <span class="badge badge-primary">0.11.1#1</span>
+          <span class="badge badge-primary">0.11.1#0</span>
+          <span class="badge badge-primary">v0.9.1-1#0</span>
+          <span class="badge badge-primary">v0.9.1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>translations - Build qtkeychain translations
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="qt5-tools">qt5-tools</a></li>
+          <li>
+            <a href="/en/package/translations">translations</a> - Build qtkeychain translations
+            <ul>
+              <li><a href="/en/package/qt5-tools">qt5-tools</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
         </ul>
       </div>
       <br />
@@ -256,9 +295,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/qtkeychain/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/qtkeychain/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/qtkeychain/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

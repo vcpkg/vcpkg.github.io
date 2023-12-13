@@ -195,68 +195,113 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> libtcod</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 1.24.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Common algorithms and tools for roguelikes.</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/libtcod/libtcod</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> https://libtcod.readthedocs.io/en/latest/</div>
+      <h1>libtcod</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.24.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Common algorithms and tools for roguelikes.</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/libtcod/libtcod">https://github.com/libtcod/libtcod</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         <a href="https://libtcod.readthedocs.io/en/latest/">https://libtcod.readthedocs.io/en/latest/</a>
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="stb">stb</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="stb">stb</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">1.24.0 - 0</span> <span class="badge badge-primary">1.23.1 - 0</span> <span class="badge badge-primary">1.23.0 - 0</span> <span class="badge badge-primary">1.22.3 - 0</span> <span class="badge badge-primary">1.22.2 - 0</span> <span class="badge badge-primary">1.22.1 - 0</span> <span class="badge badge-primary">1.21.0 - 0</span> <span class="badge badge-primary">1.20.1 - 1</span> <span class="badge badge-primary">1.20.1 - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">1.16.6 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">1.24.0#0</span>
+          <span class="badge badge-primary">1.23.1#0</span>
+          <span class="badge badge-primary">1.23.0#0</span>
+          <span class="badge badge-primary">1.22.3#0</span>
+          <span class="badge badge-primary">1.22.2#0</span>
+          <span class="badge badge-primary">1.22.1#0</span>
+          <span class="badge badge-primary">1.21.0#0</span>
+          <span class="badge badge-primary">1.20.1#1</span>
+          <span class="badge badge-primary">1.20.1#0</span>
+          <span class="badge badge-primary">1.19.0#0</span>
+          <span class="badge badge-primary">1.18.0#0</span>
+          <span class="badge badge-primary">1.16.7#2</span>
+          <span class="badge badge-primary">1.16.6#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>png - Support for reading and writing PNG files.  Required to save screenshots and to load tilesets from files.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="lodepng">lodepng</a></li>
+          <li>
+            <a href="/en/package/png">png</a> - Support for reading and writing PNG files.  Required to save screenshots and to load tilesets from files.
+            <ul>
+              <li><a href="/en/package/lodepng">lodepng</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>sdl - Support for SDL2 windows and events with the libtcod context.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="sdl2">sdl2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/sdl">sdl</a> - Support for SDL2 windows and events with the libtcod context.
+            <ul>
+              <li><a href="/en/package/sdl2">sdl2</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>threads - Support for deprecated threading functions.  If in doubt then leave this disabled.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>unicode - Support for non-ASCII characters.  Required for text printing functions
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="utf8proc">utf8proc</a></li>
+          </li>
+          <li>
+            <a href="/en/package/threads">threads</a> - Support for deprecated threading functions.  If in doubt then leave this disabled.
+            <ul>
             </ul>
-            </li>
-          <li>zlib - Support for REXPaint files and TCODZip archives.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="zlib">zlib</a></li>
+          </li>
+          <li>
+            <a href="/en/package/unicode">unicode</a> - Support for non-ASCII characters.  Required for text printing functions
+            <ul>
+              <li><a href="/en/package/utf8proc">utf8proc</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/zlib">zlib</a> - Support for REXPaint files and TCODZip archives.
+            <ul>
+              <li><a href="/en/package/zlib">zlib</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -278,9 +323,11 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/libtcod/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libtcod/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/libtcod/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

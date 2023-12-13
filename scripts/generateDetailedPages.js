@@ -1,5 +1,4 @@
 'use strict';
-const fss = require('fs');
 const fs = require('fs/promises');
 const path = require('path');
 const Mustache = require('mustache');
@@ -8,6 +7,8 @@ const pkgDir = rootDir + "/en/package"
 const templatesDir = rootDir + "/templates"
 const versionsDir = rootDir + "/vcpkg/versions"
 const destDir = path.dirname(__dirname);
+const commitFilePath = path.join(__dirname, 'commit.txt');
+const vcpkgDir = path.join(__dirname, '../vcpkg');
 
 var triplets = [
     'arm-uwp',
@@ -20,100 +21,68 @@ var triplets = [
     'x86-windows',
 ];
 
-async function renderDetailedPackage() {
-    const template = await fs.readFile(templatesDir + "/package.html", 'utf-8');
-
-    console.log("dynamic page");
-    const jsonFile = path.join(destDir, 'output.json');
-    console.log("dest dir", destDir);
-
-    const navbar = await fs.readFile(templatesDir + "/navbar.html");
-    const footer = await fs.readFile(templatesDir + "/footer.html");
-    const commonhead = await fs.readFile(templatesDir + "/commonhead.html");
-    const { format } = require('date-fns');
-    const currentDate = new Date();
-    const lastUpdatedts = format(currentDate, "yyyy-MM-dd HH:mm:ss");
-
-    fs.readFile(jsonFile)
-        .then((data) => {
-            const users = JSON.parse(data);
-            for (let type of users.Source) {
-                (async () => {
-                    const packageName = type;
-
-                    packageName.Type = 'Port';
-                    if (!packageName.hasOwnProperty('Documentation')) { 
-                        packageName.Documentation = 'N/A';
-                    }
-
-                    packageName.LastUpdated = lastUpdatedts;
-                    let homePageUrl = packageName.Homepage;
-
-                    // Get package versions
-                    const packageVersions = GetPackageVersions(packageName.Name);
-                    const featuresContent = GetPackageFeatures(packageName);
-                    packageName.FeaturesContent = featuresContent;
-                    const supportedPlatFormsObj = GetSupportedPlatArch(packageName);
-                    packageName.supportedPlatForms = supportedPlatFormsObj.supportedPlatForms;
-                    packageName.supportedArchitectures = supportedPlatFormsObj.supportedArchitectures;
-                    const dependencies = (packageName.Dependencies || []).map(transform_dep);
-                    const features = obj_map(packageName.Features, normalize_feature);
-                    const vcpkgPortsurl = "https://github.com/microsoft/vcpkg/blob/master/ports/"
-                    const portfileCMakeUrl = vcpkgPortsurl + type.Name + '/portfile.cmake';
-                    packageName.portfileCmake = portfileCMakeUrl;
-                    const result = Mustache.render(template, { navbar: navbar, footer: footer, commonhead: commonhead, packageName: packageName, packageVersions: packageVersions, dependencies: dependencies, features: features });
-                    const dst = pkgDir + "/" + type.Name + ".html";
-                    fs.writeFile(dst, result, function (err) {
-                        if (err) throw err;
-                        console.info('file saved!');
-                    });
-
-                })();
-
-            }
-        });
-
-    console.log("from render");
+async function readJsonFile(filePath) {
+    const fileData = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(fileData);
 }
 
-async function main() {
-    await fs.mkdir(pkgDir, { recursive: true });
-    await renderDetailedPackage();
+function renderTemplate(template, data) {
+    return Mustache.render(template, data);
 }
 
-function GetPackageVersions(pkgName) {
+async function getCommitHash(commitFilePath) {
+    try {
+        const commitHash = await fs.readFile(commitFilePath, 'utf8');
+        return commitHash.trim();
+    } catch (error) {
+        console.error(`Error reading commit hash: ${error}`);
+        return 'master'; // Fallback to master if commit hash is unavailable
+    }
+}
+
+async function generateGithubFileUrls(packageInfo, commitHash, vcpkgDir) {
+    const portDirPath = path.join(vcpkgDir, 'ports', packageInfo.Name);
+    const fileNames = await fs.readdir(portDirPath);
+    const githubBaseUrl = `https://github.com/microsoft/vcpkg/blob/${commitHash}/ports/${packageInfo.Name}/`;
+
+    return fileNames.map(fileName => {
+        return {
+            name: fileName,
+            url: `${githubBaseUrl}${fileName}`
+        };
+    });
+}
+
+
+async function GetPackageVersions(pkgName) {
     const pkgFolder = pkgName.charAt(0) + '-';
     const pkgJsonFile = path.join('/', pkgName + '.json');
     const versionFile = path.join(versionsDir, pkgFolder, pkgJsonFile);
-    const rawData = fss.readFileSync(versionFile);
+
+    const rawData = await fs.readFile(versionFile);
     const versionsInfo = JSON.parse(rawData);
 
-    var versionObj = {};
-    versionObj.availablePkgVersions = versionsInfo.versions.map(function (obj) {
-        return obj.version != undefined ? `<span class="badge badge-primary">${obj.version} - ${obj["port-version"]}</span>` : `<span class="badge badge-primary">${obj["version-string"]} - ${obj["port-version"]}</span>`
-    }).join(' ');
-
-
-    versionObj.availablePortVersions = versionsInfo.versions.map(function (obj) {
-        return `<span class="badge badge-primary">${obj["port-version"]}</span>`;
-    }).join(' ');
-
-    return versionObj
+    var versionsArray = versionsInfo.versions.map(obj => {
+        const version = obj.version || obj["version-string"] || obj["version-semver"] || obj["version-date"];
+        return version + '#' + obj["port-version"];
+    });
+    
+    return versionsArray;
 }
 
 function GetPackageFeatures(packageObj) {
-    let featureList = '';
-    if (packageObj.hasOwnProperty('Features')) {
-        var featureKeys = Object.keys(packageObj.Features);
-        var keysCount = featureKeys.length;
-        if (keysCount > 0) {
-            for (const fea of featureKeys) {
-                featureList += `• ${fea} : ${packageObj.Features[fea].description}<br>`;
-            }
+    let featuresList = [];
+    if (packageObj && typeof packageObj.Features === 'object') {
+        for (const [featureName, featureDetails] of Object.entries(packageObj.Features)) {
+            let feature = {
+                name: featureName,
+                description: featureDetails.description,
+                dependencies: Array.isArray(featureDetails.dependencies) ? featureDetails.dependencies.map(transform_dep): []
+            };
+            featuresList.push(feature);
         }
     }
-
-    return featureList;
+    return featuresList;
 }
 
 function GetSupportedPlatArch(packageObj) {
@@ -141,67 +110,66 @@ function GetSupportedPlatArch(packageObj) {
 
 function transform_dep(dep) {
     if (typeof (dep) === "string") {
-        return { "name": dep, "host": false };
+        return { "name": dep };
     } else {
-        let obj = { "name": dep.name, "host": !!dep.host };
-        if (dep.platform) {
-            obj.platform = dep.platform;
+        let obj = { 
+            "name": dep.name,
+            "platform": dep.platform || "",
+            "host": dep.host || false,
+            "noDefaultFeatures": dep["default-features"] === false,
+            "depFeatures" : dep.features ? dep.features.map((feature, i, arr) =>{return {name: feature, first: i===0, last: i === arr.length - 1};}) : []
+        };
+
+        if (dep["version>="]) {
+            obj.versionMinimum = dep["version>="];
         }
+
         return obj;
     }
 }
 
-function normalize_feature(feature, name) {
-    var r = {
-        "name": name,
-        "description": feature.description,
-        "dependencies": (feature.dependencies || []).map(transform_dep),
-        "supports": feature.supports,
-    };
-    return r;
+async function renderDetailedPackages() {
+    const commitHash = await getCommitHash(commitFilePath);
+
+    // Load all templates and data once at the beginning.
+    const [packageTemplate, navbarHtml, footerHtml, commonHeadHtml, packageDataSource] = await Promise.all([
+        fs.readFile(templatesDir + "/package.html", 'utf8'),
+        fs.readFile(templatesDir + "/navbar.html"),
+        fs.readFile(templatesDir + "/footer.html"),
+        fs.readFile(templatesDir + "/commonhead.html"),
+        readJsonFile(path.join(destDir, 'output.json'))
+    ]);
+
+    for (let packageInfo of packageDataSource.Source) {
+        packageInfo.Documentation = packageInfo.Documentation || '';
+        //packageInfo.LastUpdated = packageInfo.LastModified;
+        packageInfo.LastUpdated = '12-12-12';
+        packageInfo.PortVersion = packageInfo['Port-Version'] || 0;
+        packageInfo.FeaturesContent = GetPackageFeatures(packageInfo);
+        packageInfo = { ...packageInfo, ...GetSupportedPlatArch(packageInfo) };
+        packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
+        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
+
+        // Gather all data needed for rendering.
+        const renderData = {
+            navbar: navbarHtml,
+            footer: footerHtml,
+            commonhead: commonHeadHtml,
+            package: packageInfo,
+            packageVersions: await GetPackageVersions(packageInfo.Name),
+            dependencies: packageInfo.dependenciesList,
+            features: packageInfo.FeaturesContent
+        };
+
+        const renderedHtml = renderTemplate(packageTemplate, renderData);
+        const destinationHtmlPath = path.join(pkgDir, `${packageInfo.Name}.html`);
+        await fs.writeFile(destinationHtmlPath, renderedHtml);
+    }
 }
 
-function obj_map(obj, fn) {
-    var r = [];
-    for (var k in obj) {
-        r.push(fn(obj[k], k));
-    }
-    return r;
-}
-
-const accessToken = ''; // Replace with your GitHub access token
-
-async function getLastUpdatedTimestamp(packageObj) {
-    try {
-        const githubUrl = 'https://github.com/';
-        let apiUrl = '';
-        let url = pkgObj.Homepage;
-        if (url.startsWith(githubUrl)) {
-            const characterToCheck = "/";
-            if (url.endsWith(characterToCheck)) {
-                url = url.slice(0, -1);
-            }
-
-            apiUrl = url.replace("https://github.com/", "https://api.github.com/repos/");
-            const response = await fetch(apiUrl, {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                },
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                const lastUpdatedTimestamp = new Date(data.updated_at);
-                pkgObj.LastUpdated = lastUpdatedTimestamp;
-                console.log('Last updated timestamp:', lastUpdatedTimestamp);
-            } else {
-                console.error('Failed to retrieve data:', data.message);
-            }
-        }
-    } catch (error) {
-        console.error('Error:', error.message);
-    }
+async function main() {
+    await fs.mkdir(pkgDir, { recursive: true });
+    await renderDetailedPackages();
 }
 
 main();

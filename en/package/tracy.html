@@ -195,66 +195,132 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> tracy</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.10.0</div>
-        <div><span class="detailed-package-item-heading">Description:</span> A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.</div>
-        <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/wolfpld/tracy</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>tracy</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.10.0</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.</div>
+      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/wolfpld/tracy">https://github.com/wolfpld/tracy</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="pthreads">pthreads</a><i>(platform: !windows)</i></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="pthreads">pthreads</a>
+            
+             <i>(platform: !windows)</i>
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 4</span> <span class="badge badge-primary">undefined - 3</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 3</span> <span class="badge badge-primary">undefined - 2</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">0.8.0 - 0</span> <span class="badge badge-primary">0.7.8 - 2</span> <span class="badge badge-primary">0.7.8 - 1</span> <span class="badge badge-primary">0.7.8 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.10.0#1</span>
+          <span class="badge badge-primary">0.10.0#0</span>
+          <span class="badge badge-primary">0.9.1#4</span>
+          <span class="badge badge-primary">0.9.1#3</span>
+          <span class="badge badge-primary">0.9.1#2</span>
+          <span class="badge badge-primary">0.9.1#1</span>
+          <span class="badge badge-primary">0.9.1#0</span>
+          <span class="badge badge-primary">0.9.0#3</span>
+          <span class="badge badge-primary">0.9.0#2</span>
+          <span class="badge badge-primary">0.9.0#1</span>
+          <span class="badge badge-primary">0.9.0#0</span>
+          <span class="badge badge-primary">0.8.2#0</span>
+          <span class="badge badge-primary">0.8.1#0</span>
+          <span class="badge badge-primary">0.8.0#1</span>
+          <span class="badge badge-primary">0.8.0#0</span>
+          <span class="badge badge-primary">0.7.8#2</span>
+          <span class="badge badge-primary">0.7.8#1</span>
+          <span class="badge badge-primary">0.7.8#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>cli-tools - Build Tracy command-line tools: &#x60;capture&#x60;, &#x60;csvexport&#x60;, &#x60;import-chrome&#x60; and &#x60;update&#x60; <i>(supports: !(windows &amp; x86))</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="capstone">capstone</a></li>
-              <li><a href="tbb">tbb</a> <i>(platform: !windows)</i></li>
+          <li>
+            <a href="/en/package/cli-tools">cli-tools</a> - Build Tracy command-line tools: &#x60;capture&#x60;, &#x60;csvexport&#x60;, &#x60;import-chrome&#x60; and &#x60;update&#x60;
+            <ul>
+              <li><a href="/en/package/capstone">capstone</a>
+                  [arm, 
+                  arm64, 
+                  x86]
+                
+                
+              </li>
+              <li><a href="/en/package/tbb">tbb</a>
+                
+                 (platform: !windows)
+              </li>
             </ul>
-            </li>
-          <li>crash-handler - Enable crash handler
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>gui-tools - Build Tracy GUI tool: &#x60;profiler&#x60; (aka &#x60;Tracy&#x60; executable) <i>(supports: !(windows &amp; x86))</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="capstone">capstone</a></li>
-              <li><a href="dbus">dbus</a> <i>(platform: !windows)</i></li>
-              <li><a href="freetype">freetype</a></li>
-              <li><a href="glfw3">glfw3</a></li>
-              <li><a href="tbb">tbb</a> <i>(platform: !windows)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/crash-handler">crash-handler</a> - Enable crash handler
+            <ul>
             </ul>
-            </li>
-          <li>on-demand - Enable on-demand profiling
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/gui-tools">gui-tools</a> - Build Tracy GUI tool: &#x60;profiler&#x60; (aka &#x60;Tracy&#x60; executable)
+            <ul>
+              <li><a href="/en/package/capstone">capstone</a>
+                  [arm, 
+                  arm64, 
+                  x86]
+                
+                
+              </li>
+              <li><a href="/en/package/dbus">dbus</a>
+                
+                 (platform: !windows)
+              </li>
+              <li><a href="/en/package/freetype">freetype</a>
+                
+                
+              </li>
+              <li><a href="/en/package/glfw3">glfw3</a>
+                
+                
+              </li>
+              <li><a href="/en/package/tbb">tbb</a>
+                
+                 (platform: !windows)
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/on-demand">on-demand</a> - Enable on-demand profiling
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -276,9 +342,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/tracy/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/tracy/001-fix-vcxproj-vcpkg.patch" target="_blank">001-fix-vcxproj-vcpkg.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/tracy/002-use-internal-imgui.patch" target="_blank">002-use-internal-imgui.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/tracy/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/tracy/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

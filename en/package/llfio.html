@@ -195,64 +195,119 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> llfio</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 2023-11-06</div>
-        <div><span class="detailed-package-item-heading">Description:</span> P1031 low level file i/o and filesystem library for the C++ standard</div>
-        <div><span class="detailed-package-item-heading">License:</span> Apache-2.0 OR BSL-1.0</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/ned14/llfio</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>llfio</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2023-11-06</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> P1031 low level file i/o and filesystem library for the C++ standard</div>
+      <div><span class="detailed-package-item-heading">License:</span> Apache-2.0 OR BSL-1.0</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/ned14/llfio">https://github.com/ned14/llfio</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="outcome">outcome</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="outcome">outcome</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 1</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">undefined - 0</span> <span class="badge badge-primary">2.0-20220112 - 3</span> <span class="badge badge-primary">2.0-20220112 - 2</span> <span class="badge badge-primary">2.0-20220112 - 1</span> <span class="badge badge-primary">2.0-20220112 - 0</span> <span class="badge badge-primary">2.0-20211208 - 0</span> <span class="badge badge-primary">2.0-20210922 - 0</span> <span class="badge badge-primary">2.0 - 20210421</span> <span class="badge badge-primary">2.0-20210420 - 0</span> <span class="badge badge-primary">2.0-a74411ed - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">2023-11-06#0</span>
+          <span class="badge badge-primary">2023-03-13#1</span>
+          <span class="badge badge-primary">2023-03-13#0</span>
+          <span class="badge badge-primary">2023-01-27#0</span>
+          <span class="badge badge-primary">2022-09-18#0</span>
+          <span class="badge badge-primary">2022-09-08#0</span>
+          <span class="badge badge-primary">2.0-20220112#3</span>
+          <span class="badge badge-primary">2.0-20220112#2</span>
+          <span class="badge badge-primary">2.0-20220112#1</span>
+          <span class="badge badge-primary">2.0-20220112#0</span>
+          <span class="badge badge-primary">2.0-20211208#0</span>
+          <span class="badge badge-primary">2.0-20210922#0</span>
+          <span class="badge badge-primary">2.0#20210421</span>
+          <span class="badge badge-primary">2.0-20210420#0</span>
+          <span class="badge badge-primary">2.0-a74411ed#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>polyfill-cxx17 - Polyfill C++17 entities
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="llfio">llfio</a></li>
-              <li><a href="ned14-internal-quickcpplib">ned14-internal-quickcpplib</a></li>
-              <li><a href="outcome">outcome</a></li>
+          <li>
+            <a href="/en/package/polyfill-cxx17">polyfill-cxx17</a> - Polyfill C++17 entities
+            <ul>
+              <li><a href="/en/package/llfio">llfio</a>
+                  [polyfill-cxx20]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/ned14-internal-quickcpplib">ned14-internal-quickcpplib</a>
+                  [polyfill-cxx17]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/outcome">outcome</a>
+                  [polyfill-cxx17]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>polyfill-cxx20 - Polyfill C++20 entities
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ned14-internal-quickcpplib">ned14-internal-quickcpplib</a></li>
-              <li><a href="outcome">outcome</a></li>
+          </li>
+          <li>
+            <a href="/en/package/polyfill-cxx20">polyfill-cxx20</a> - Polyfill C++20 entities
+            <ul>
+              <li><a href="/en/package/ned14-internal-quickcpplib">ned14-internal-quickcpplib</a>
+                  [polyfill-cxx20]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/outcome">outcome</a>
+                  [polyfill-cxx20]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>run-tests - Build and run the dependency validation tests
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>status-code - Have LLFIO use SG14 &#x60;status_code&#x60; (proposed &#x60;std::error&#x60;) instead of &#x60;std::error_code&#x60;.
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/run-tests">run-tests</a> - Build and run the dependency validation tests
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/status-code">status-code</a> - Have LLFIO use SG14 &#x60;status_code&#x60; (proposed &#x60;std::error&#x60;) instead of &#x60;std::error_code&#x60;.
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -274,9 +329,15 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/llfio/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/llfio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/llfio/usage-error-code-dynamic" target="_blank">usage-error-code-dynamic</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/llfio/usage-error-code-static" target="_blank">usage-error-code-static</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/llfio/usage-status-code-dynamic" target="_blank">usage-status-code-dynamic</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/llfio/usage-status-code-static" target="_blank">usage-status-code-static</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/llfio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

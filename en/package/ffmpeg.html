@@ -195,408 +195,871 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> ffmpeg</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 6.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> a library to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.,FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://ffmpeg.org</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>ffmpeg</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 6.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          1
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> a library to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.,FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://ffmpeg.org">https://ffmpeg.org</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake-get-vars">vcpkg-cmake-get-vars</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-pkgconfig-get-modules">vcpkg-pkgconfig-get-modules</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">6.1 - 1</span> <span class="badge badge-primary">6.1 - 0</span> <span class="badge badge-primary">6.0 - 2</span> <span class="badge badge-primary">6.0 - 1</span> <span class="badge badge-primary">6.0 - 0</span> <span class="badge badge-primary">5.1.2 - 10</span> <span class="badge badge-primary">5.1.2 - 9</span> <span class="badge badge-primary">5.1.2 - 8</span> <span class="badge badge-primary">5.1.2 - 7</span> <span class="badge badge-primary">5.1.2 - 6</span> <span class="badge badge-primary">5.1.2 - 5</span> <span class="badge badge-primary">5.1.2 - 4</span> <span class="badge badge-primary">5.1.2 - 3</span> <span class="badge badge-primary">5.1.2 - 2</span> <span class="badge badge-primary">5.1.2 - 1</span> <span class="badge badge-primary">5.1.2 - 0</span> <span class="badge badge-primary">5.0.2 - 3</span> <span class="badge badge-primary">5.0.2 - 2</span> <span class="badge badge-primary">5.0.2 - 1</span> <span class="badge badge-primary">5.0.2 - 0</span> <span class="badge badge-primary">5.0.0 - 0</span> <span class="badge badge-primary">4.4.3 - 3</span> <span class="badge badge-primary">4.4.3 - 2</span> <span class="badge badge-primary">4.4.3 - 1</span> <span class="badge badge-primary">4.4.3 - 0</span> <span class="badge badge-primary">4.4.1 - 22</span> <span class="badge badge-primary">4.4.1 - 21</span> <span class="badge badge-primary">4.4.1 - 20</span> <span class="badge badge-primary">4.4.1 - 19</span> <span class="badge badge-primary">4.4.1 - 18</span> <span class="badge badge-primary">4.4.1 - 17</span> <span class="badge badge-primary">4.4.1 - 16</span> <span class="badge badge-primary">4.4.1 - 15</span> <span class="badge badge-primary">4.4.1 - 14</span> <span class="badge badge-primary">4.4.1 - 13</span> <span class="badge badge-primary">4.4.1 - 12</span> <span class="badge badge-primary">4.4.1 - 11</span> <span class="badge badge-primary">4.4.1 - 10</span> <span class="badge badge-primary">4.4.1 - 9</span> <span class="badge badge-primary">4.4.1 - 8</span> <span class="badge badge-primary">4.4.1 - 7</span> <span class="badge badge-primary">4.4.1 - 6</span> <span class="badge badge-primary">4.4.1 - 5</span> <span class="badge badge-primary">4.4.1 - 4</span> <span class="badge badge-primary">4.4.1 - 3</span> <span class="badge badge-primary">4.4.1 - 2</span> <span class="badge badge-primary">4.4.1 - 1</span> <span class="badge badge-primary">4.4.1 - 0</span> <span class="badge badge-primary">4.4 - 18</span> <span class="badge badge-primary">4.4 - 17</span> <span class="badge badge-primary">4.4 - 16</span> <span class="badge badge-primary">4.4 - 15</span> <span class="badge badge-primary">4.4 - 14</span> <span class="badge badge-primary">4.4 - 13</span> <span class="badge badge-primary">4.4 - 12</span> <span class="badge badge-primary">4.4 - 11</span> <span class="badge badge-primary">4.4 - 10</span> <span class="badge badge-primary">4.4 - 9</span> <span class="badge badge-primary">4.4 - 8</span> <span class="badge badge-primary">4.4 - 7</span> <span class="badge badge-primary">4.4 - 6</span> <span class="badge badge-primary">4.4 - 5</span> <span class="badge badge-primary">4.4 - 4</span> <span class="badge badge-primary">4.4 - 3</span> <span class="badge badge-primary">4.4 - 2</span> <span class="badge badge-primary">4.4 - 1</span> <span class="badge badge-primary">4.4 - 0</span> <span class="badge badge-primary">4.3.2 - 11</span> <span class="badge badge-primary">4.3.2 - 10</span> <span class="badge badge-primary">4.3.2 - 9</span> <span class="badge badge-primary">4.3.2 - 8</span> <span class="badge badge-primary">4.3.2 - 7</span> <span class="badge badge-primary">4.3.2 - 6</span> <span class="badge badge-primary">4.3.2 - 5</span> <span class="badge badge-primary">4.3.2 - 4</span> <span class="badge badge-primary">4.3.2 - 3</span> <span class="badge badge-primary">4.3.2 - 2</span> <span class="badge badge-primary">4.3.2 - 1</span> <span class="badge badge-primary">4.3.2 - 0</span> <span class="badge badge-primary">4.3.1 - 12</span> <span class="badge badge-primary">4.3.1 - 11</span> <span class="badge badge-primary">4.3.1 - 10</span> <span class="badge badge-primary">4.3.1 - 9</span> <span class="badge badge-primary">4.3.1 - 8</span> <span class="badge badge-primary">4.3.1 - 7</span> <span class="badge badge-primary">4.3.1 - 6</span> <span class="badge badge-primary">4.3.1 - 5</span> <span class="badge badge-primary">4.3.1 - 4</span> <span class="badge badge-primary">4.3.1 - 3</span> <span class="badge badge-primary">4.3.1 - 2</span> <span class="badge badge-primary">4.3.1 - 1</span> <span class="badge badge-primary">4.3.1 - 0</span> <span class="badge badge-primary">4.2 - 26</span> <span class="badge badge-primary">4.2 - 25</span> <span class="badge badge-primary">4.2 - 24</span> <span class="badge badge-primary">4.2 - 23</span> <span class="badge badge-primary">4.2 - 22</span> <span class="badge badge-primary">4.2 - 21</span> <span class="badge badge-primary">4.2 - 20</span> <span class="badge badge-primary">4.2 - 18</span> <span class="badge badge-primary">4.2 - 17</span> <span class="badge badge-primary">4.2 - 16</span> <span class="badge badge-primary">4.2 - 14</span> <span class="badge badge-primary">4.2-13 - 0</span> <span class="badge badge-primary">4.2-12 - 0</span> <span class="badge badge-primary">4.2-11 - 0</span> <span class="badge badge-primary">4.2-10 - 0</span> <span class="badge badge-primary">4.2-9 - 0</span> <span class="badge badge-primary">4.2-8 - 0</span> <span class="badge badge-primary">4.2-7 - 0</span> <span class="badge badge-primary">4.2-6 - 0</span> <span class="badge badge-primary">4.2-5 - 0</span> <span class="badge badge-primary">4.2-4 - 0</span> <span class="badge badge-primary">4.2-3 - 0</span> <span class="badge badge-primary">4.2-2 - 0</span> <span class="badge badge-primary">4.2-1 - 0</span> <span class="badge badge-primary">4.2 - 0</span> <span class="badge badge-primary">4.1-3 - 0</span> <span class="badge badge-primary">4.1-2 - 0</span> <span class="badge badge-primary">4.1-1 - 0</span> <span class="badge badge-primary">4.1 - 0</span> <span class="badge badge-primary">3.3.3-5 - 0</span> <span class="badge badge-primary">3.3.3-4 - 0</span> <span class="badge badge-primary">3.3.3-3 - 0</span> <span class="badge badge-primary">3.3.3-2 - 0</span> <span class="badge badge-primary">3.3.3-1 - 0</span> <span class="badge badge-primary">3.3.3 - 0</span> <span class="badge badge-primary">3.2.4-3 - 0</span> <span class="badge badge-primary">3.2.4-2 - 0</span> <span class="badge badge-primary">3.2.4-1 - 0</span> <span class="badge badge-primary">3.2.4 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">6.1#1</span>
+          <span class="badge badge-primary">6.1#0</span>
+          <span class="badge badge-primary">6.0#2</span>
+          <span class="badge badge-primary">6.0#1</span>
+          <span class="badge badge-primary">6.0#0</span>
+          <span class="badge badge-primary">5.1.2#10</span>
+          <span class="badge badge-primary">5.1.2#9</span>
+          <span class="badge badge-primary">5.1.2#8</span>
+          <span class="badge badge-primary">5.1.2#7</span>
+          <span class="badge badge-primary">5.1.2#6</span>
+          <span class="badge badge-primary">5.1.2#5</span>
+          <span class="badge badge-primary">5.1.2#4</span>
+          <span class="badge badge-primary">5.1.2#3</span>
+          <span class="badge badge-primary">5.1.2#2</span>
+          <span class="badge badge-primary">5.1.2#1</span>
+          <span class="badge badge-primary">5.1.2#0</span>
+          <span class="badge badge-primary">5.0.2#3</span>
+          <span class="badge badge-primary">5.0.2#2</span>
+          <span class="badge badge-primary">5.0.2#1</span>
+          <span class="badge badge-primary">5.0.2#0</span>
+          <span class="badge badge-primary">5.0.0#0</span>
+          <span class="badge badge-primary">4.4.3#3</span>
+          <span class="badge badge-primary">4.4.3#2</span>
+          <span class="badge badge-primary">4.4.3#1</span>
+          <span class="badge badge-primary">4.4.3#0</span>
+          <span class="badge badge-primary">4.4.1#22</span>
+          <span class="badge badge-primary">4.4.1#21</span>
+          <span class="badge badge-primary">4.4.1#20</span>
+          <span class="badge badge-primary">4.4.1#19</span>
+          <span class="badge badge-primary">4.4.1#18</span>
+          <span class="badge badge-primary">4.4.1#17</span>
+          <span class="badge badge-primary">4.4.1#16</span>
+          <span class="badge badge-primary">4.4.1#15</span>
+          <span class="badge badge-primary">4.4.1#14</span>
+          <span class="badge badge-primary">4.4.1#13</span>
+          <span class="badge badge-primary">4.4.1#12</span>
+          <span class="badge badge-primary">4.4.1#11</span>
+          <span class="badge badge-primary">4.4.1#10</span>
+          <span class="badge badge-primary">4.4.1#9</span>
+          <span class="badge badge-primary">4.4.1#8</span>
+          <span class="badge badge-primary">4.4.1#7</span>
+          <span class="badge badge-primary">4.4.1#6</span>
+          <span class="badge badge-primary">4.4.1#5</span>
+          <span class="badge badge-primary">4.4.1#4</span>
+          <span class="badge badge-primary">4.4.1#3</span>
+          <span class="badge badge-primary">4.4.1#2</span>
+          <span class="badge badge-primary">4.4.1#1</span>
+          <span class="badge badge-primary">4.4.1#0</span>
+          <span class="badge badge-primary">4.4#18</span>
+          <span class="badge badge-primary">4.4#17</span>
+          <span class="badge badge-primary">4.4#16</span>
+          <span class="badge badge-primary">4.4#15</span>
+          <span class="badge badge-primary">4.4#14</span>
+          <span class="badge badge-primary">4.4#13</span>
+          <span class="badge badge-primary">4.4#12</span>
+          <span class="badge badge-primary">4.4#11</span>
+          <span class="badge badge-primary">4.4#10</span>
+          <span class="badge badge-primary">4.4#9</span>
+          <span class="badge badge-primary">4.4#8</span>
+          <span class="badge badge-primary">4.4#7</span>
+          <span class="badge badge-primary">4.4#6</span>
+          <span class="badge badge-primary">4.4#5</span>
+          <span class="badge badge-primary">4.4#4</span>
+          <span class="badge badge-primary">4.4#3</span>
+          <span class="badge badge-primary">4.4#2</span>
+          <span class="badge badge-primary">4.4#1</span>
+          <span class="badge badge-primary">4.4#0</span>
+          <span class="badge badge-primary">4.3.2#11</span>
+          <span class="badge badge-primary">4.3.2#10</span>
+          <span class="badge badge-primary">4.3.2#9</span>
+          <span class="badge badge-primary">4.3.2#8</span>
+          <span class="badge badge-primary">4.3.2#7</span>
+          <span class="badge badge-primary">4.3.2#6</span>
+          <span class="badge badge-primary">4.3.2#5</span>
+          <span class="badge badge-primary">4.3.2#4</span>
+          <span class="badge badge-primary">4.3.2#3</span>
+          <span class="badge badge-primary">4.3.2#2</span>
+          <span class="badge badge-primary">4.3.2#1</span>
+          <span class="badge badge-primary">4.3.2#0</span>
+          <span class="badge badge-primary">4.3.1#12</span>
+          <span class="badge badge-primary">4.3.1#11</span>
+          <span class="badge badge-primary">4.3.1#10</span>
+          <span class="badge badge-primary">4.3.1#9</span>
+          <span class="badge badge-primary">4.3.1#8</span>
+          <span class="badge badge-primary">4.3.1#7</span>
+          <span class="badge badge-primary">4.3.1#6</span>
+          <span class="badge badge-primary">4.3.1#5</span>
+          <span class="badge badge-primary">4.3.1#4</span>
+          <span class="badge badge-primary">4.3.1#3</span>
+          <span class="badge badge-primary">4.3.1#2</span>
+          <span class="badge badge-primary">4.3.1#1</span>
+          <span class="badge badge-primary">4.3.1#0</span>
+          <span class="badge badge-primary">4.2#26</span>
+          <span class="badge badge-primary">4.2#25</span>
+          <span class="badge badge-primary">4.2#24</span>
+          <span class="badge badge-primary">4.2#23</span>
+          <span class="badge badge-primary">4.2#22</span>
+          <span class="badge badge-primary">4.2#21</span>
+          <span class="badge badge-primary">4.2#20</span>
+          <span class="badge badge-primary">4.2#18</span>
+          <span class="badge badge-primary">4.2#17</span>
+          <span class="badge badge-primary">4.2#16</span>
+          <span class="badge badge-primary">4.2#14</span>
+          <span class="badge badge-primary">4.2-13#0</span>
+          <span class="badge badge-primary">4.2-12#0</span>
+          <span class="badge badge-primary">4.2-11#0</span>
+          <span class="badge badge-primary">4.2-10#0</span>
+          <span class="badge badge-primary">4.2-9#0</span>
+          <span class="badge badge-primary">4.2-8#0</span>
+          <span class="badge badge-primary">4.2-7#0</span>
+          <span class="badge badge-primary">4.2-6#0</span>
+          <span class="badge badge-primary">4.2-5#0</span>
+          <span class="badge badge-primary">4.2-4#0</span>
+          <span class="badge badge-primary">4.2-3#0</span>
+          <span class="badge badge-primary">4.2-2#0</span>
+          <span class="badge badge-primary">4.2-1#0</span>
+          <span class="badge badge-primary">4.2#0</span>
+          <span class="badge badge-primary">4.1-3#0</span>
+          <span class="badge badge-primary">4.1-2#0</span>
+          <span class="badge badge-primary">4.1-1#0</span>
+          <span class="badge badge-primary">4.1#0</span>
+          <span class="badge badge-primary">3.3.3-5#0</span>
+          <span class="badge badge-primary">3.3.3-4#0</span>
+          <span class="badge badge-primary">3.3.3-3#0</span>
+          <span class="badge badge-primary">3.3.3-2#0</span>
+          <span class="badge badge-primary">3.3.3-1#0</span>
+          <span class="badge badge-primary">3.3.3#0</span>
+          <span class="badge badge-primary">3.2.4-3#0</span>
+          <span class="badge badge-primary">3.2.4-2#0</span>
+          <span class="badge badge-primary">3.2.4-1#0</span>
+          <span class="badge badge-primary">3.2.4#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>all - Build with all allowed dependencies selected that are compatible with the lgpl license
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: linux)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !osx)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !(arm &amp; uwp))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !(uwp | arm))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !osx &amp; !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp &amp; !(arm64 &amp; windows))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: x64 &amp; !static &amp; !uwp &amp; !windows)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !(uwp | (windows &amp; x86 &amp; !static)))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !(windows &amp; arm) &amp; !static &amp; !uwp)</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: linux | (!osx &amp; !uwp &amp; !(arm &amp; windows)))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows)))</i></li>
+          <li>
+            <a href="/en/package/all">all</a> - Build with all allowed dependencies selected that are compatible with the lgpl license
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [aom, 
+                  avcodec, 
+                  avdevice, 
+                  avfilter, 
+                  avformat, 
+                  bzip2, 
+                  freetype, 
+                  iconv, 
+                  lzma, 
+                  mp3lame, 
+                  openjpeg, 
+                  openmpt, 
+                  opus, 
+                  snappy, 
+                  soxr, 
+                  speex, 
+                  swresample, 
+                  swscale, 
+                  theora, 
+                  vorbis, 
+                  vpx, 
+                  webp, 
+                  xml2, 
+                  zlib]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [alsa]
+                 (default-features: false)
+                 (platform: linux)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [sdl2]
+                 (default-features: false)
+                 (platform: !osx)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [ass]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [fontconfig]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [fribidi]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [modplug]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [opencl]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [openh264]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [srt]
+                 (default-features: false)
+                 (platform: !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [ilbc]
+                 (default-features: false)
+                 (platform: !(arm &amp; uwp))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [ssh]
+                 (default-features: false)
+                 (platform: !(uwp | arm))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [amf]
+                 (default-features: false)
+                 (platform: !osx &amp; !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [opengl]
+                 (default-features: false)
+                 (platform: !uwp &amp; !(arm64 &amp; windows))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [tensorflow]
+                 (default-features: false)
+                 (platform: x64 &amp; !static &amp; !uwp &amp; !windows)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [dav1d]
+                 (default-features: false)
+                 (platform: !(uwp | (windows &amp; x86 &amp; !static)))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [tesseract]
+                 (default-features: false)
+                 (platform: !(windows &amp; arm) &amp; !static &amp; !uwp)
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [qsv]
+                 (default-features: false)
+                 (platform: linux | (!osx &amp; !uwp &amp; !(arm &amp; windows)))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [nvcodec]
+                 (default-features: false)
+                 (platform: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows)))
+              </li>
             </ul>
-            </li>
-          <li>all-gpl - Build with all allowed dependencies selected that are compatible with the gpl license
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !(arm &amp; windows))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: !uwp &amp; !(arm &amp; windows))</i></li>
-              <li><a href="ffmpeg">ffmpeg</a> <i>(platform: windows &amp; !arm &amp; !uwp &amp; !static)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/all-gpl">all-gpl</a> - Build with all allowed dependencies selected that are compatible with the gpl license
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [all, 
+                  gpl, 
+                  postproc]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [x264]
+                 (default-features: false)
+                 (platform: !(arm &amp; windows))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [x265]
+                 (default-features: false)
+                 (platform: !uwp &amp; !(arm &amp; windows))
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avisynthplus]
+                 (default-features: false)
+                 (platform: windows &amp; !arm &amp; !uwp &amp; !static)
+              </li>
             </ul>
-            </li>
-          <li>all-nonfree - Build with all allowed dependencies selected with a non-redistributable license
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/all-nonfree">all-nonfree</a> - Build with all allowed dependencies selected with a non-redistributable license
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [all-gpl, 
+                  fdk-aac, 
+                  nonfree, 
+                  openssl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>alsa - Enable ALSA support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="alsa">alsa</a></li>
+          </li>
+          <li>
+            <a href="/en/package/alsa">alsa</a> - Enable ALSA support
+            <ul>
+              <li><a href="/en/package/alsa">alsa</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>amf - AMD AMF codec support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="amd-amf">amd-amf</a></li>
+          </li>
+          <li>
+            <a href="/en/package/amf">amf</a> - AMD AMF codec support
+            <ul>
+              <li><a href="/en/package/amd-amf">amd-amf</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>aom - AV1 video encoding&#x2F;decoding via libaom support in ffmpeg
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="aom">aom</a></li>
+          </li>
+          <li>
+            <a href="/en/package/aom">aom</a> - AV1 video encoding&#x2F;decoding via libaom support in ffmpeg
+            <ul>
+              <li><a href="/en/package/aom">aom</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>ass - Libass subtitles rendering, needed for subtitles and ass filter support in ffmpeg
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libass">libass</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ass">ass</a> - Libass subtitles rendering, needed for subtitles and ass filter support in ffmpeg
+            <ul>
+              <li><a href="/en/package/libass">libass</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>avcodec - Build the avcodec library
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>avdevice - Build the avdevice library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/avcodec">avcodec</a> - Build the avcodec library
+            <ul>
             </ul>
-            </li>
-          <li>avfilter - Build the avfilter library
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>avformat - Build the avformat library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/avdevice">avdevice</a> - Build the avdevice library
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avcodec, 
+                  avformat]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>avisynthplus - Reading of AviSynth script files <i>(supports: windows &amp; !static)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="avisynthplus">avisynthplus</a></li>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/avfilter">avfilter</a> - Build the avfilter library
+            <ul>
             </ul>
-            </li>
-          <li>avresample - Build the avresample library
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>bzip2 - Bzip2 support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="bzip2">bzip2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/avformat">avformat</a> - Build the avformat library
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avcodec]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>dav1d - AV1 decoding via libdav1d
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="dav1d">dav1d</a></li>
+          </li>
+          <li>
+            <a href="/en/package/avisynthplus">avisynthplus</a> - Reading of AviSynth script files
+            <ul>
+              <li><a href="/en/package/avisynthplus">avisynthplus</a>
+                
+                
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [gpl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>fdk-aac - AAC de&#x2F;encoding via libfdk-aac, **including GPL-incompatible patent-encumbered HE-AAC**. If you do not require HE-AAC, use the built-in FFmpeg AAC codec.
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="fdk-aac">fdk-aac</a></li>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/avresample">avresample</a> - Build the avresample library
+            <ul>
             </ul>
-            </li>
-          <li>ffmpeg - Build the ffmpeg application <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/bzip2">bzip2</a> - Bzip2 support
+            <ul>
+              <li><a href="/en/package/bzip2">bzip2</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>ffplay - Build the ffplay application <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/dav1d">dav1d</a> - AV1 decoding via libdav1d
+            <ul>
+              <li><a href="/en/package/dav1d">dav1d</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>ffprobe - Build the ffprobe application <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/fdk-aac">fdk-aac</a> - AAC de&#x2F;encoding via libfdk-aac, **including GPL-incompatible patent-encumbered HE-AAC**. If you do not require HE-AAC, use the built-in FFmpeg AAC codec.
+            <ul>
+              <li><a href="/en/package/fdk-aac">fdk-aac</a>
+                  [he-aac]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [nonfree]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>fontconfig - Useful for drawtext filter
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="fontconfig">fontconfig</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ffmpeg">ffmpeg</a> - Build the ffmpeg application
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avcodec, 
+                  avfilter, 
+                  avformat]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>freetype - Needed for drawtext filter
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="freetype">freetype</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ffplay">ffplay</a> - Build the ffplay application
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avcodec, 
+                  avfilter, 
+                  avformat, 
+                  sdl2, 
+                  swresample, 
+                  swscale]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>fribidi - Improves drawtext filter
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="fribidi">fribidi</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ffprobe">ffprobe</a> - Build the ffprobe application
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avcodec, 
+                  avformat]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>gpl - Allow use of GPL code, the resulting libs and binaries will be under GPL
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>iconv - Iconv support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libiconv">libiconv</a></li>
+          </li>
+          <li>
+            <a href="/en/package/fontconfig">fontconfig</a> - Useful for drawtext filter
+            <ul>
+              <li><a href="/en/package/fontconfig">fontconfig</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>ilbc - iLBC de&#x2F;encoding via libilbc
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libilbc">libilbc</a></li>
+          </li>
+          <li>
+            <a href="/en/package/freetype">freetype</a> - Needed for drawtext filter
+            <ul>
+              <li><a href="/en/package/freetype">freetype</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>lzma - lzma support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="liblzma">liblzma</a></li>
+          </li>
+          <li>
+            <a href="/en/package/fribidi">fribidi</a> - Improves drawtext filter
+            <ul>
+              <li><a href="/en/package/fribidi">fribidi</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>modplug - ModPlug via libmodplug
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libmodplug">libmodplug</a></li>
+          </li>
+          <li>
+            <a href="/en/package/gpl">gpl</a> - Allow use of GPL code, the resulting libs and binaries will be under GPL
+            <ul>
             </ul>
-            </li>
-          <li>mp3lame - MP3 encoding via libmp3lame
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mp3lame">mp3lame</a></li>
+          </li>
+          <li>
+            <a href="/en/package/iconv">iconv</a> - Iconv support
+            <ul>
+              <li><a href="/en/package/libiconv">libiconv</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>nonfree - Allow use of nonfree code, the resulting libs and binaries will be unredistributable
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>nvcodec - Nvidia video decoding&#x2F;encoding acceleration <i>(supports: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows)))</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffnvcodec">ffnvcodec</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ilbc">ilbc</a> - iLBC de&#x2F;encoding via libilbc
+            <ul>
+              <li><a href="/en/package/libilbc">libilbc</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>opencl - OpenCL processing <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opencl">opencl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/lzma">lzma</a> - lzma support
+            <ul>
+              <li><a href="/en/package/liblzma">liblzma</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>opengl - OpenGL rendering <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opengl">opengl</a></li>
-              <li><a href="opengl-registry">opengl-registry</a></li>
+          </li>
+          <li>
+            <a href="/en/package/modplug">modplug</a> - ModPlug via libmodplug
+            <ul>
+              <li><a href="/en/package/libmodplug">libmodplug</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>openh264 - H.264 de&#x2F;encoding via openh264
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="openh264">openh264</a></li>
+          </li>
+          <li>
+            <a href="/en/package/mp3lame">mp3lame</a> - MP3 encoding via libmp3lame
+            <ul>
+              <li><a href="/en/package/mp3lame">mp3lame</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>openjpeg - JPEG 2000 de&#x2F;encoding via OpenJPEG
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="openjpeg">openjpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/nonfree">nonfree</a> - Allow use of nonfree code, the resulting libs and binaries will be unredistributable
+            <ul>
             </ul>
-            </li>
-          <li>openmpt - Decoding tracked files via libopenmpt
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libopenmpt">libopenmpt</a></li>
+          </li>
+          <li>
+            <a href="/en/package/nvcodec">nvcodec</a> - Nvidia video decoding&#x2F;encoding acceleration
+            <ul>
+              <li><a href="/en/package/ffnvcodec">ffnvcodec</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>openssl - Needed for https support if gnutls, libtls or mbedtls is not used
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="openssl">openssl</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opencl">opencl</a> - OpenCL processing
+            <ul>
+              <li><a href="/en/package/opencl">opencl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>opus - Opus de&#x2F;encoding via libopus
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="opus">opus</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opengl">opengl</a> - OpenGL rendering
+            <ul>
+              <li><a href="/en/package/opengl">opengl</a>
+                
+                
+              </li>
+              <li><a href="/en/package/opengl-registry">opengl-registry</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>postproc - Build the postproc library
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
+          </li>
+          <li>
+            <a href="/en/package/openh264">openh264</a> - H.264 de&#x2F;encoding via openh264
+            <ul>
+              <li><a href="/en/package/openh264">openh264</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>qsv - Intel QSV Codec
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="mfx-dispatch">mfx-dispatch</a></li>
+          </li>
+          <li>
+            <a href="/en/package/openjpeg">openjpeg</a> - JPEG 2000 de&#x2F;encoding via OpenJPEG
+            <ul>
+              <li><a href="/en/package/openjpeg">openjpeg</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>sdl2 - Sdl2 support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="sdl2">sdl2</a> <i>(platform: linux)</i></li>
-              <li><a href="sdl2">sdl2</a> <i>(platform: !linux)</i></li>
+          </li>
+          <li>
+            <a href="/en/package/openmpt">openmpt</a> - Decoding tracked files via libopenmpt
+            <ul>
+              <li><a href="/en/package/libopenmpt">libopenmpt</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>snappy - Snappy compression, needed for hap encoding
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="snappy">snappy</a></li>
+          </li>
+          <li>
+            <a href="/en/package/openssl">openssl</a> - Needed for https support if gnutls, libtls or mbedtls is not used
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [nonfree]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/openssl">openssl</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>soxr - Include libsoxr resampling
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="soxr">soxr</a></li>
+          </li>
+          <li>
+            <a href="/en/package/opus">opus</a> - Opus de&#x2F;encoding via libopus
+            <ul>
+              <li><a href="/en/package/opus">opus</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>speex - Speex de&#x2F;encoding via libspeex
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="speex">speex</a></li>
+          </li>
+          <li>
+            <a href="/en/package/postproc">postproc</a> - Build the postproc library
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [gpl]
+                 (default-features: false)
+                
+              </li>
             </ul>
-            </li>
-          <li>srt - Haivision SRT protocol <i>(supports: !uwp)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libsrt">libsrt</a></li>
+          </li>
+          <li>
+            <a href="/en/package/qsv">qsv</a> - Intel QSV Codec
+            <ul>
+              <li><a href="/en/package/mfx-dispatch">mfx-dispatch</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>ssh - SFTP protocol via libssh
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libssh">libssh</a></li>
+          </li>
+          <li>
+            <a href="/en/package/sdl2">sdl2</a> - Sdl2 support
+            <ul>
+              <li><a href="/en/package/sdl2">sdl2</a>
+                  [x11]
+                 (default-features: false)
+                 (platform: linux)
+              </li>
+              <li><a href="/en/package/sdl2">sdl2</a>
+                
+                 (platform: !linux)
+              </li>
             </ul>
-            </li>
-          <li>swresample - Build the swresample library
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>swscale - Build the swscale library
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>tensorflow - TensorFlow as a DNN module backend for DNN based filters like sr <i>(supports: !static)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="tensorflow">tensorflow</a></li>
+          </li>
+          <li>
+            <a href="/en/package/snappy">snappy</a> - Snappy compression, needed for hap encoding
+            <ul>
+              <li><a href="/en/package/snappy">snappy</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>tesseract - Tesseract, needed for ocr filter <i>(supports: !static)</i>
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="tesseract">tesseract</a></li>
+          </li>
+          <li>
+            <a href="/en/package/soxr">soxr</a> - Include libsoxr resampling
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [swresample]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/soxr">soxr</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>theora - Theora encoding via libtheora
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libtheora">libtheora</a></li>
+          </li>
+          <li>
+            <a href="/en/package/speex">speex</a> - Speex de&#x2F;encoding via libspeex
+            <ul>
+              <li><a href="/en/package/speex">speex</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>version3 - Upgrade (L)GPL to version 3
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>vorbis - Vorbis en&#x2F;decoding via libvorbis, native implementation exists
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libvorbis">libvorbis</a></li>
+          </li>
+          <li>
+            <a href="/en/package/srt">srt</a> - Haivision SRT protocol
+            <ul>
+              <li><a href="/en/package/libsrt">libsrt</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>vpx - VP8 and VP9 de&#x2F;encoding via libvpx
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="libvpx">libvpx</a></li>
+          </li>
+          <li>
+            <a href="/en/package/ssh">ssh</a> - SFTP protocol via libssh
+            <ul>
+              <li><a href="/en/package/libssh">libssh</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>webp - WebP encoding via libwebp
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libwebp">libwebp</a></li>
+          </li>
+          <li>
+            <a href="/en/package/swresample">swresample</a> - Build the swresample library
+            <ul>
             </ul>
-            </li>
-          <li>x264 - H.264 encoding via x264
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="x264">x264</a></li>
+          </li>
+          <li>
+            <a href="/en/package/swscale">swscale</a> - Build the swscale library
+            <ul>
             </ul>
-            </li>
-          <li>x265 - HEVC encoding via x265
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="ffmpeg">ffmpeg</a></li>
-              <li><a href="x265">x265</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tensorflow">tensorflow</a> - TensorFlow as a DNN module backend for DNN based filters like sr
+            <ul>
+              <li><a href="/en/package/tensorflow">tensorflow</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>xml2 - XML parsing using the C library libxml2, needed for dash demuxing support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="libxml2">libxml2</a></li>
+          </li>
+          <li>
+            <a href="/en/package/tesseract">tesseract</a> - Tesseract, needed for ocr filter
+            <ul>
+              <li><a href="/en/package/tesseract">tesseract</a>
+                
+                
+              </li>
             </ul>
-            </li>
-          <li>zlib - zlib support
-          <br><b>Dependencies:</b>
-          <ul>
-              <li><a href="zlib">zlib</a></li>
+          </li>
+          <li>
+            <a href="/en/package/theora">theora</a> - Theora encoding via libtheora
+            <ul>
+              <li><a href="/en/package/libtheora">libtheora</a>
+                
+                
+              </li>
             </ul>
-            </li>
+          </li>
+          <li>
+            <a href="/en/package/version3">version3</a> - Upgrade (L)GPL to version 3
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/vorbis">vorbis</a> - Vorbis en&#x2F;decoding via libvorbis, native implementation exists
+            <ul>
+              <li><a href="/en/package/libvorbis">libvorbis</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/vpx">vpx</a> - VP8 and VP9 de&#x2F;encoding via libvpx
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [avcodec]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/libvpx">libvpx</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/webp">webp</a> - WebP encoding via libwebp
+            <ul>
+              <li><a href="/en/package/libwebp">libwebp</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/x264">x264</a> - H.264 encoding via x264
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [gpl]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/x264">x264</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/x265">x265</a> - HEVC encoding via x265
+            <ul>
+              <li><a href="/en/package/ffmpeg">ffmpeg</a>
+                  [gpl]
+                 (default-features: false)
+                
+              </li>
+              <li><a href="/en/package/x265">x265</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/xml2">xml2</a> - XML parsing using the C library libxml2, needed for dash demuxing support
+            <ul>
+              <li><a href="/en/package/libxml2">libxml2</a>
+                
+                
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/zlib">zlib</a> - zlib support
+            <ul>
+              <li><a href="/en/package/zlib">zlib</a>
+                
+                
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -618,9 +1081,30 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/ffmpeg/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0001-create-lib-libraries.patch" target="_blank">0001-create-lib-libraries.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0002-fix-msvc-link.patch" target="_blank">0002-fix-msvc-link.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0003-fix-windowsinclude.patch" target="_blank">0003-fix-windowsinclude.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0004-fix-debug-build.patch" target="_blank">0004-fix-debug-build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0005-fix-nasm.patch" target="_blank">0005-fix-nasm.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0006-fix-StaticFeatures.patch" target="_blank">0006-fix-StaticFeatures.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0007-fix-lib-naming.patch" target="_blank">0007-fix-lib-naming.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0009-Fix-fdk-detection.patch" target="_blank">0009-Fix-fdk-detection.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0011-Fix-x265-detection.patch" target="_blank">0011-Fix-x265-detection.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0012-Fix-ssl-110-detection.patch" target="_blank">0012-Fix-ssl-110-detection.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0013-define-WINVER.patch" target="_blank">0013-define-WINVER.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0015-Fix-xml2-detection.patch" target="_blank">0015-Fix-xml2-detection.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0020-fix-aarch64-libswscale.patch" target="_blank">0020-fix-aarch64-libswscale.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0022-fix-iconv.patch" target="_blank">0022-fix-iconv.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/0023-fix-qsv-init.patch" target="_blank">0023-fix-qsv-init.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/FindFFMPEG.cmake.in" target="_blank">FindFFMPEG.cmake.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/build.sh.in" target="_blank">build.sh.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/ffmpeg/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

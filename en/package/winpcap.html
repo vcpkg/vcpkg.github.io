@@ -195,38 +195,64 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> winpcap</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 4.1.3</div>
-        <div><span class="detailed-package-item-heading">Description:</span> WinPcap is the industry-standard tool for link-layer network access in Windows environments.</div>
-        <div><span class="detailed-package-item-heading">License:</span> </div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://www.winpcap.org</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>winpcap</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 4.1.3</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+          12
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> WinPcap is the industry-standard tool for link-layer network access in Windows environments.</div>
+      <div><span class="detailed-package-item-heading">License:</span> </div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://www.winpcap.org">https://www.winpcap.org</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-msbuild">vcpkg-msbuild</a> <i>(host: true)</i><i>(platform: windows)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-msbuild">vcpkg-msbuild</a>
+             <i>(host: true)</i>
+             <i>(platform: windows)</i>
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">4.1.3 - 12</span> <span class="badge badge-primary">4.1.3 - 11</span> <span class="badge badge-primary">4.1.3 - 10</span> <span class="badge badge-primary">4.1.3 - 9</span> <span class="badge badge-primary">4.1.3 - 8</span> <span class="badge badge-primary">4.1.3 - 7</span> <span class="badge badge-primary">4.1.3 - 6</span> <span class="badge badge-primary">4.1.3 - 5</span> <span class="badge badge-primary">4.1.3 - 4</span> <span class="badge badge-primary">4.1.3-3 - 0</span> <span class="badge badge-primary">4.1.3-2 - 0</span> <span class="badge badge-primary">4.1.3-1 - 0</span> <span class="badge badge-primary">4.1.3 - 0</span> <span class="badge badge-primary">4.1.2 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">4.1.3#12</span>
+          <span class="badge badge-primary">4.1.3#11</span>
+          <span class="badge badge-primary">4.1.3#10</span>
+          <span class="badge badge-primary">4.1.3#9</span>
+          <span class="badge badge-primary">4.1.3#8</span>
+          <span class="badge badge-primary">4.1.3#7</span>
+          <span class="badge badge-primary">4.1.3#6</span>
+          <span class="badge badge-primary">4.1.3#5</span>
+          <span class="badge badge-primary">4.1.3#4</span>
+          <span class="badge badge-primary">4.1.3-3#0</span>
+          <span class="badge badge-primary">4.1.3-2#0</span>
+          <span class="badge badge-primary">4.1.3-1#0</span>
+          <span class="badge badge-primary">4.1.3#0</span>
+          <span class="badge badge-primary">4.1.2#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        <li>No Features</li></ul>
+          <li>No Features</li>
+        </ul>
       </div>
       <br />
       <br />
@@ -247,9 +273,16 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/winpcap/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/Packet.vcxproj.in" target="_blank">Packet.vcxproj.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/bison-flex.patch" target="_blank">bison-flex.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/packetNtx.patch.in" target="_blank">packetNtx.patch.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/wpcap.patch.in" target="_blank">wpcap.patch.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/winpcap/wpcap.vcxproj.in" target="_blank">wpcap.vcxproj.in</a></li>
+        </ul>
       </div>
     </div>
     </div>

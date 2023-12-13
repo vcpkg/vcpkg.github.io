@@ -195,53 +195,78 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> easyloggingpp</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 9.97.1</div>
-        <div><span class="detailed-package-item-heading">Description:</span> Easylogging++ is a single header efficient logging library for C++ applications.</div>
-        <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/abumq/easyloggingpp</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>easyloggingpp</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 9.97.1</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> Easylogging++ is a single header efficient logging library for C++ applications.</div>
+      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/abumq/easyloggingpp">https://github.com/abumq/easyloggingpp</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">9.97.1 - 0</span> <span class="badge badge-primary">9.97.0 - 4</span> <span class="badge badge-primary">9.97.0 - 3</span> <span class="badge badge-primary">9.97.0 - 2</span> <span class="badge badge-primary">9.97.0 - 1</span> <span class="badge badge-primary">9.97.0 - 0</span> <span class="badge badge-primary">9.96.7 - 2</span> <span class="badge badge-primary">9.96.7-1 - 0</span> <span class="badge badge-primary">9.96.7 - 0</span> <span class="badge badge-primary">9.96.5-1 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">9.97.1#0</span>
+          <span class="badge badge-primary">9.97.0#4</span>
+          <span class="badge badge-primary">9.97.0#3</span>
+          <span class="badge badge-primary">9.97.0#2</span>
+          <span class="badge badge-primary">9.97.0#1</span>
+          <span class="badge badge-primary">9.97.0#0</span>
+          <span class="badge badge-primary">9.96.7#2</span>
+          <span class="badge badge-primary">9.96.7-1#0</span>
+          <span class="badge badge-primary">9.96.7#0</span>
+          <span class="badge badge-primary">9.96.5-1#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-          <li>no-defaultfile - Do not write to default log file &quot;myeasylog.log&quot; (compile with ELPP_NO_DEFAULT_LOG_FILE)
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>std-locking - Use std::mutex for thread synchronization (compile with ELPP_FORCE_USE_STD_THREAD)
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
-          <li>thread-safe - Make easyloggingpp thread safe (compile with ELPP_THREAD_SAFE)
-          <br><b>Dependencies:</b>
-          <ul>
-            <li>No Dependencies</li></ul>
-            </li>
+          <li>
+            <a href="/en/package/no-defaultfile">no-defaultfile</a> - Do not write to default log file &quot;myeasylog.log&quot; (compile with ELPP_NO_DEFAULT_LOG_FILE)
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/std-locking">std-locking</a> - Use std::mutex for thread synchronization (compile with ELPP_FORCE_USE_STD_THREAD)
+            <ul>
+            </ul>
+          </li>
+          <li>
+            <a href="/en/package/thread-safe">thread-safe</a> - Make easyloggingpp thread safe (compile with ELPP_THREAD_SAFE)
+            <ul>
+            </ul>
+          </li>
         </ul>
       </div>
       <br />
@@ -263,9 +288,13 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/easyloggingpp/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/easyloggingpp/0001_add_cmake_options.patch" target="_blank">0001_add_cmake_options.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/easyloggingpp/0002_fix_build_uwp.patch" target="_blank">0002_fix_build_uwp.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/easyloggingpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/easyloggingpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>

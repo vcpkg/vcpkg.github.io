@@ -195,40 +195,72 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <div class="text-heading">
-        <h2>Package Information</h2>
-        <div><span class="detailed-package-item-heading">Package Name:</span> rttr</div>
-        <div> <span class="detailed-package-item-heading">Version:</span> 0.9.6+20210811</div>
-        <div><span class="detailed-package-item-heading">Description:</span> an easy and intuitive way to use reflection in C++</div>
-        <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-        <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-07 23:24:46</div>
-        <div><span class="detailed-package-item-heading">Homepage:</span> https://github.com/rttrorg/rttr</div>
-        <div><span class="detailed-package-item-heading">Documentation:</span> N/A</div>
+      <h1>rttr</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.9.6+20210811</div>
+      <div> 
+        <span class="detailed-package-item-heading">Port-Version:</span>
+      </div>
+      <div><span class="detailed-package-item-heading">Description:</span> an easy and intuitive way to use reflection in C++</div>
+      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 12-12-12</div>
+      <div>
+        <span class="detailed-package-item-heading">Homepage:</span>
+         <a href="https://github.com/rttrorg/rttr">https://github.com/rttrorg/rttr</a>
+      </div>
+      <div>
+        <span class="detailed-package-item-heading">Documentation:</span>
+         N/A
       </div>
       <br />
       <br />
       <div>
-        <div>
-          <h2>Dependencies</h2>
-        </div>
-        <ul> <li><a href="rapidjson">rapidjson</a></li>
-           <li><a href="vcpkg-cmake">vcpkg-cmake</a> <i>(host: true)</i></li>
-           <li><a href="vcpkg-cmake-config">vcpkg-cmake-config</a> <i>(host: true)</i></li>
-          </ul>
-      </div>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>
+            <a href="rapidjson">rapidjson</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake">vcpkg-cmake</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake-config">vcpkg-cmake-config</a>
+             <i>(host: true)</i>
+            
+            
+          </li>
+        </ul>
+      </div>      
       <br />
       <br />
       <div class="text-heading">
-        <h2>Versions</h2>
-        <div><span class="detailed-package-item-heading">Available Package
-            Versions:</span><span class="badge badge-primary">0.9.6+20210811 - 0</span> <span class="badge badge-primary">0.9.6 - 5</span> <span class="badge badge-primary">0.9.6 - 4</span> <span class="badge badge-primary">0.9.6 - 3</span> <span class="badge badge-primary">0.9.6-2 - 0</span> <span class="badge badge-primary">0.9.6-1 - 0</span> <span class="badge badge-primary">0.9.6-0 - 0</span> <span class="badge badge-primary">0.9.5-3 - 0</span> <span class="badge badge-primary">0.9.5-2 - 0</span> <span class="badge badge-primary">0.9.5-1 - 0</span> <span class="badge badge-primary">0.9.5 - 0</span></div><br />
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.9.6+20210811#0</span>
+          <span class="badge badge-primary">0.9.6#5</span>
+          <span class="badge badge-primary">0.9.6#4</span>
+          <span class="badge badge-primary">0.9.6#3</span>
+          <span class="badge badge-primary">0.9.6-2#0</span>
+          <span class="badge badge-primary">0.9.6-1#0</span>
+          <span class="badge badge-primary">0.9.6-0#0</span>
+          <span class="badge badge-primary">0.9.5-3#0</span>
+          <span class="badge badge-primary">0.9.5-2#0</span>
+          <span class="badge badge-primary">0.9.5-1#0</span>
+          <span class="badge badge-primary">0.9.5#0</span>
+        </div>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Features</h2>
         <ul>
-        <li>No Features</li></ul>
+          <li>No Features</li>
+        </ul>
       </div>
       <br />
       <br />
@@ -249,9 +281,15 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Portfile Preview</h2>
-        <div><span>To view portfile details &nbsp;</span><a
-            href="https://github.com/microsoft/vcpkg/blob/master/ports/rttr/portfile.cmake" target="_blank">click here </a></div>
+        <h2>Port Contents</h2>
+        <ul>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/rttr/Fix-depends.patch" target="_blank">Fix-depends.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/rttr/disable-unsupport-header.patch" target="_blank">disable-unsupport-header.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/rttr/fix-directory-output.patch" target="_blank">fix-directory-output.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/rttr/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/rttr/remove-owner-read-perms.patch" target="_blank">remove-owner-read-perms.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/rttr/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        </ul>
       </div>
     </div>
     </div>
