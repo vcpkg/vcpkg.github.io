@@ -27,7 +27,9 @@ jobs:
       - name: Check for differences
         run: |
           if ! git diff --quiet -- . ':!en/package/'; then
-            echo "::error ::Detected changes when regenerating website."
-            git diff --stat
-            exit 1
+            if ! git diff --quiet -- ':!en/package/'; then
+              echo "::error ::Detected changes outside 'en/package/' directory."
+              git diff --stat
+              exit 1
+            fi
           fi
