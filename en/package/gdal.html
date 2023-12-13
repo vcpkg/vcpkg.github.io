@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -271,7 +272,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install gdal</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port gdal</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -378,342 +388,353 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            aws-ec2-windows - Optimized detection of AWS EC2 Windows hosts
-            <ul>
-              <li><a href="/en/package/atlmfc.html">atlmfc</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cfitsio - Enable cfitsio support
-            <ul>
-              <li><a href="/en/package/cfitsio.html">cfitsio</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            curl - Enable CURL network support
-            <ul>
-              <li><a href="/en/package/curl.html">curl</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            default-features - Default set of features, including recommended features
-            <ul>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                  [gif, 
-                  iconv, 
-                  libkml, 
-                  libxml2, 
-                  lzma, 
-                  openjpeg, 
-                  openssl, 
-                  pcre2, 
-                  recommended-features, 
-                  webp, 
-                  zstd]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                  [libspatialite, 
-                  postgresql]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                  [hdf5, 
-                  netcdf]
-                 (default-features: false)
-                 (platform: !uwp &amp; !(windows &amp; arm64) &amp; !android &amp; !ios)
-              </li>
-            </ul>
-          </li>
-          <li>
-            expat - Use EXPAT library
-            <ul>
-              <li><a href="/en/package/expat.html">expat</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            freexl - Enable FREEXL support
-            <ul>
-              <li><a href="/en/package/freexl.html">freexl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            geos - Enable GEOS support
-            <ul>
-              <li><a href="/en/package/geos.html">geos</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gif - Enable GIF support
-            <ul>
-              <li><a href="/en/package/giflib.html">giflib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            hdf5 - Enable HDF5 support
-            <ul>
-              <li><a href="/en/package/hdf5.html">hdf5</a>
-                  [cpp]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            iconv - Use iconv library
-            <ul>
-              <li><a href="/en/package/libiconv.html">libiconv</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jpeg - Use JPEG compression library
-            <ul>
-              <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            lerc - Enable LERC support
-            <ul>
-              <li><a href="/en/package/lerc.html">lerc</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            libkml - Enable the LibKML driver
-            <ul>
-              <li><a href="/en/package/libkml.html">libkml</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            libspatialite - Create or update SpatiaLite databases using libspatialite
-            <ul>
-              <li><a href="/en/package/libspatialite.html">libspatialite</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            libxml2 - Use LibXML2 library
-            <ul>
-              <li><a href="/en/package/libxml2.html">libxml2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            lzma - Use LZMA library
-            <ul>
-              <li><a href="/en/package/liblzma.html">liblzma</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mysql-libmariadb - Add mysql support using libmariadb
-            <ul>
-              <li><a href="/en/package/libmariadb.html">libmariadb</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            netcdf - Enable NetCDF support
-            <ul>
-              <li><a href="/en/package/netcdf-c.html">netcdf-c</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openjpeg - Use OpenJPEG library
-            <ul>
-              <li><a href="/en/package/openjpeg.html">openjpeg</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - Use OpenSSL library
-            <ul>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pcre2 - Enable PCRE2 support for sqlite3
-            <ul>
-              <li><a href="/en/package/pcre2.html">pcre2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            png - Use PNG compression library
-            <ul>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            poppler - Enable PDF reading support via poppler
-            <ul>
-              <li><a href="/en/package/poppler.html">poppler</a>
-                  [private-api]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            postgresql - Enable PostgreSQL support
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            qhull - Use QHULL library
-            <ul>
-              <li><a href="/en/package/qhull.html">qhull</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            recommended-features - Features that are explicity marked as recommended by GDAL.
-            <ul>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                  [curl, 
-                  expat, 
-                  geos, 
-                  jpeg, 
-                  lerc, 
-                  png, 
-                  qhull, 
-                  sqlite3]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sqlite3 - Enable SQLite3 support
-            <ul>
-              <li><a href="/en/package/sqlite3.html">sqlite3</a>
-                  [rtree]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            supported-default-features - This feature is an alias for default-features. It is retained for compatibility.
-            <ul>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                  [default-features]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            system-libraries - This feature does nothing. It is retained for compatibility.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tools - Builds gdal and ogr executables
-            <ul>
-            </ul>
-          </li>
-          <li>
-            webp - Enable WEBP support
-            <ul>
-              <li><a href="/en/package/libwebp.html">libwebp</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            zstd - Use ZSTD library
-            <ul>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install gdal</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port gdal</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>aws-ec2-windows - Optimized detection of AWS EC2 Windows hosts</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/atlmfc.html">atlmfc</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>cfitsio - Enable cfitsio support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cfitsio.html">cfitsio</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>curl - Enable CURL network support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/curl.html">curl</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Default set of features, including recommended features</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              [gif, iconv, libkml, libxml2, lzma, openjpeg, openssl, pcre2, recommended-features, webp, zstd]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              [libspatialite, postgresql]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              [hdf5, netcdf]
+               (default-features: false)
+               (platform: !uwp &amp; !(windows &amp; arm64) &amp; !android &amp; !ios)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>expat - Use EXPAT library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/expat.html">expat</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>freexl - Enable FREEXL support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freexl.html">freexl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>geos - Enable GEOS support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/geos.html">geos</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gif - Enable GIF support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/giflib.html">giflib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>hdf5 - Enable HDF5 support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/hdf5.html">hdf5</a>
+              [cpp]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>iconv - Use iconv library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libiconv.html">libiconv</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jpeg - Use JPEG compression library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>lerc - Enable LERC support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/lerc.html">lerc</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>libkml - Enable the LibKML driver</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libkml.html">libkml</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>libspatialite - Create or update SpatiaLite databases using libspatialite</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libspatialite.html">libspatialite</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>libxml2 - Use LibXML2 library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libxml2.html">libxml2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>lzma - Use LZMA library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/liblzma.html">liblzma</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>mysql-libmariadb - Add mysql support using libmariadb</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libmariadb.html">libmariadb</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>netcdf - Enable NetCDF support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/netcdf-c.html">netcdf-c</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openjpeg - Use OpenJPEG library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openjpeg.html">openjpeg</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - Use OpenSSL library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pcre2 - Enable PCRE2 support for sqlite3</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcre2.html">pcre2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>png - Use PNG compression library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>poppler - Enable PDF reading support via poppler</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/poppler.html">poppler</a>
+              [private-api]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>postgresql - Enable PostgreSQL support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>qhull - Use QHULL library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qhull.html">qhull</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>recommended-features - Features that are explicity marked as recommended by GDAL.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              [curl, expat, geos, jpeg, lerc, png, qhull, sqlite3]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sqlite3 - Enable SQLite3 support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/sqlite3.html">sqlite3</a>
+              [rtree]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>supported-default-features - This feature is an alias for default-features. It is retained for compatibility.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              [default-features]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>system-libraries - This feature does nothing. It is retained for compatibility.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tools - Builds gdal and ogr executables</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>webp - Enable WEBP support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libwebp.html">libwebp</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zstd - Use ZSTD library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

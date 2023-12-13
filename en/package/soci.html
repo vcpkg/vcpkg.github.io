@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -230,7 +231,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install soci</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port soci</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -257,93 +267,86 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            boost - Integration with Boost
-            <ul>
-              <li><a href="/en/package/boost-date-time.html">boost-date-time</a>
-                
-                
-              </li>
-              <li><a href="/en/package/boost-fusion.html">boost-fusion</a>
-                
-                
-              </li>
-              <li><a href="/en/package/boost-optional.html">boost-optional</a>
-                
-                
-              </li>
-              <li><a href="/en/package/boost-preprocessor.html">boost-preprocessor</a>
-                
-                
-              </li>
-              <li><a href="/en/package/boost-tuple.html">boost-tuple</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            empty - Build the backend skeleton for new backends development
-            <ul>
-            </ul>
-          </li>
-          <li>
-            mysql - Build mysql backend
-            <ul>
-              <li><a href="/en/package/libmysql.html">libmysql</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            odbc - Build odbc backend
-            <ul>
-              <li><a href="/en/package/unixodbc.html">unixodbc</a>
-                
-                 (platform: !windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            postgresql - Build postgresql backend
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sqlite3 - Build sqlite3 backend
-            <ul>
-              <li><a href="/en/package/sqlite3.html">sqlite3</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install soci</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port soci</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>boost - Integration with Boost</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/boost-date-time.html">boost-date-time</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/boost-fusion.html">boost-fusion</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/boost-optional.html">boost-optional</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/boost-preprocessor.html">boost-preprocessor</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/boost-tuple.html">boost-tuple</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>empty - Build the backend skeleton for new backends development</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>mysql - Build mysql backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libmysql.html">libmysql</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>odbc - Build odbc backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/unixodbc.html">unixodbc</a>
+              
+              
+               (platform: !windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>postgresql - Build postgresql backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sqlite3 - Build sqlite3 backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/sqlite3.html">sqlite3</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

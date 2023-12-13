@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -272,7 +273,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install qtbase</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port qtbase</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -336,434 +346,435 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            appstore-compliant - Disable code that is not allowed in platform app stores. This is on by default for platforms which require distribution through an app store by default, in particular Android, iOS, tvOS, and watchOS.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            brotli - Support for downloading and decompressing resources compressed with Brotli through QNetworkAccessManager.
-            <ul>
-              <li><a href="/en/package/brotli.html">brotli</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [network]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            concurrent - Provides a high-level multi-threading API. Qt Concurrent
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [thread]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            dbus - Qt D-Bus
-            <ul>
-            </ul>
-          </li>
-          <li>
-            default-features - Platform-dependent default features
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [appstore-compliant]
-                 (default-features: false)
-                 (platform: uwp)
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [egl, 
-                  fontconfig, 
-                  xcb, 
-                  xcb-xlib, 
-                  xrender]
-                 (default-features: false)
-                 (platform: linux)
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [egl, 
-                  gles2]
-                 (default-features: false)
-                 (platform: android)
-              </li>
-            </ul>
-          </li>
-          <li>
-            doubleconversion - Enable double conversion support
-            <ul>
-              <li><a href="/en/package/double-conversion.html">double-conversion</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            egl - EGL
-            <ul>
-              <li><a href="/en/package/egl.html">egl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            fontconfig - Use fontconfig
-            <ul>
-              <li><a href="/en/package/fontconfig.html">fontconfig</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            framework - MAC framework build
-            <ul>
-            </ul>
-          </li>
-          <li>
-            freetype - Supports the FreeType 2 font engine (and its supported font formats).
-            <ul>
-              <li><a href="/en/package/freetype.html">freetype</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gles2 - OpenGL ES 2.0
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            glib - GLib
-            <ul>
-              <li><a href="/en/package/glib.html">glib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gui - Qt Gui
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [freetype]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [opengl]
-                 (default-features: false)
-                 (platform: osx)
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [thread]
-                 (default-features: false)
-                 (platform: windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            harfbuzz - Use harfbuzz
-            <ul>
-              <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            icu - Enable ICU support
-            <ul>
-              <li><a href="/en/package/icu.html">icu</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jpeg - Enable JPEG
-            <ul>
-              <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            network - Qt Network
-            <ul>
-            </ul>
-          </li>
-          <li>
-            opengl - OpenGL
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - Enable OpenSSL
-            <ul>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [network]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pcre2 - Enable PCRE2 support
-            <ul>
-              <li><a href="/en/package/pcre2.html">pcre2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            png - Enable PNG
-            <ul>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql - Qt Sql
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [concurrent]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-mysql - Enable SQL Driver MySQL
-            <ul>
-              <li><a href="/en/package/libmysql.html">libmysql</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-oci - Enable SQL Driver Oracle OCI
-            <ul>
-              <li><a href="/en/package/ocilib.html">ocilib</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-odbc - Enable SQL Driver odbc
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-psql - Enable SQL Driver psql
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-sqlite - Enable SQL Driver sqlite
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/sqlite3.html">sqlite3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            testlib - Qt Testlib
-            <ul>
-            </ul>
-          </li>
-          <li>
-            thread - Thread support; provides QThread and related classes.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            vulkan - Enable Vulkan support
-            <ul>
-              <li><a href="/en/package/vulkan.html">vulkan</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            widgets - Qt Widgets
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xcb - XCB
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [concurrent, 
-                  xkbcommon-x11, 
-                  xlib]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xcb-xlib - xcb-xlib
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [xlib]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xkb - XKB
-            <ul>
-            </ul>
-          </li>
-          <li>
-            xkbcommon-x11 - xkbcommon_x11
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [xkb]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xlib - XLib
-            <ul>
-            </ul>
-          </li>
-          <li>
-            xrender - XRender for native painting
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [xcb]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            zstd - Zstandard support
-            <ul>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install qtbase</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port qtbase</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>appstore-compliant - Disable code that is not allowed in platform app stores. This is on by default for platforms which require distribution through an app store by default, in particular Android, iOS, tvOS, and watchOS.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>brotli - Support for downloading and decompressing resources compressed with Brotli through QNetworkAccessManager.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/brotli.html">brotli</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [network]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>concurrent - Provides a high-level multi-threading API. Qt Concurrent</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [thread]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>dbus - Qt D-Bus</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Platform-dependent default features</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [appstore-compliant]
+               (default-features: false)
+               (platform: uwp)
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [egl, fontconfig, xcb, xcb-xlib, xrender]
+               (default-features: false)
+               (platform: linux)
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [egl, gles2]
+               (default-features: false)
+               (platform: android)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>doubleconversion - Enable double conversion support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/double-conversion.html">double-conversion</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>egl - EGL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/egl.html">egl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>fontconfig - Use fontconfig</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fontconfig.html">fontconfig</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>framework - MAC framework build</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>freetype - Supports the FreeType 2 font engine (and its supported font formats).</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freetype.html">freetype</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gles2 - OpenGL ES 2.0</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>glib - GLib</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/glib.html">glib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gui - Qt Gui</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [freetype]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [opengl]
+               (default-features: false)
+               (platform: osx)
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [thread]
+               (default-features: false)
+               (platform: windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>harfbuzz - Use harfbuzz</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>icu - Enable ICU support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/icu.html">icu</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jpeg - Enable JPEG</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>network - Qt Network</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>opengl - OpenGL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - Enable OpenSSL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [network]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pcre2 - Enable PCRE2 support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcre2.html">pcre2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>png - Enable PNG</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql - Qt Sql</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [concurrent]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-mysql - Enable SQL Driver MySQL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libmysql.html">libmysql</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-oci - Enable SQL Driver Oracle OCI</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ocilib.html">ocilib</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-odbc - Enable SQL Driver odbc</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-psql - Enable SQL Driver psql</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-sqlite - Enable SQL Driver sqlite</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/sqlite3.html">sqlite3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>testlib - Qt Testlib</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>thread - Thread support; provides QThread and related classes.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>vulkan - Enable Vulkan support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vulkan.html">vulkan</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>widgets - Qt Widgets</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xcb - XCB</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [concurrent, xkbcommon-x11, xlib]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xcb-xlib - xcb-xlib</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [xlib]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xkb - XKB</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>xkbcommon-x11 - xkbcommon_x11</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [xkb]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xlib - XLib</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>xrender - XRender for native painting</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [xcb]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zstd - Zstandard support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

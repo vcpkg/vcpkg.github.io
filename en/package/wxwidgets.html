@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -301,7 +302,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install wxwidgets</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port wxwidgets</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -358,77 +368,62 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            debug-support - Enable wxWidgets debugging support hooks even for release builds (wxDEBUG_LEVEL 1)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            example - Example source code and CMake project
-            <ul>
-            </ul>
-          </li>
-          <li>
-            fonts - Enable to use the font functionality of wxWidgets
-            <ul>
-              <li><a href="/en/package/fontconfig.html">fontconfig</a>
-                
-                 (platform: !windows &amp; !osx)
-              </li>
-              <li><a href="/en/package/pango.html">pango</a>
-                
-                 (platform: !windows &amp; !osx)
-              </li>
-            </ul>
-          </li>
-          <li>
-            media - Build wxMediaCtrl support
-            <ul>
-              <li><a href="/en/package/gstreamer.html">gstreamer</a>
-                 (default-features: false)
-                 (platform: !windows &amp; !osx &amp; !ios)
-              </li>
-            </ul>
-          </li>
-          <li>
-            sound - Build wxSound support
-            <ul>
-              <li><a href="/en/package/sdl2.html">sdl2</a>
-                 (default-features: false)
-                 (platform: !windows &amp; !osx &amp; !ios)
-              </li>
-            </ul>
-          </li>
-          <li>
-            webview - The Edge backend uses Microsoft&#39;s Edge WebView2
-            <ul>
-              <li><a href="/en/package/webview2.html">webview2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install wxwidgets</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port wxwidgets</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>debug-support - Enable wxWidgets debugging support hooks even for release builds (wxDEBUG_LEVEL 1)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>example - Example source code and CMake project</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>fonts - Enable to use the font functionality of wxWidgets</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fontconfig.html">fontconfig</a>
+              
+              
+               (platform: !windows &amp; !osx)
+            </li>
+            <li><a href="/en/package/pango.html">pango</a>
+              
+              
+               (platform: !windows &amp; !osx)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>media - Build wxMediaCtrl support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gstreamer.html">gstreamer</a>
+              
+               (default-features: false)
+               (platform: !windows &amp; !osx &amp; !ios)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sound - Build wxSound support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/sdl2.html">sdl2</a>
+              
+               (default-features: false)
+               (platform: !windows &amp; !osx &amp; !ios)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>webview - The Edge backend uses Microsoft&#39;s Edge WebView2</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/webview2.html">webview2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

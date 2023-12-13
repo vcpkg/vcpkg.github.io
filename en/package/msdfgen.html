@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -229,7 +230,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install msdfgen</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port msdfgen</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -245,73 +255,59 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            extensions - Extended functionality that depends on external libraries - loading fonts and SVG files, generating PNG images.
-            <ul>
-              <li><a href="/en/package/freetype.html">freetype</a>
-                
-                
-              </li>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-              <li><a href="/en/package/tinyxml2.html">tinyxml2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            geometry-preprocessing - Preprocessing of non-compliant vector geometry via the Skia library.
-            <ul>
-              <li><a href="/en/package/msdfgen.html">msdfgen</a>
-                  [extensions]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/skia.html">skia</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openmp - Build with OpenMP support for multi-threaded code.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tools - Generates an executable inside the tools folder.
-            <ul>
-              <li><a href="/en/package/msdfgen.html">msdfgen</a>
-                  [extensions]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install msdfgen</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port msdfgen</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>extensions - Extended functionality that depends on external libraries - loading fonts and SVG files, generating PNG images.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freetype.html">freetype</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/tinyxml2.html">tinyxml2</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>geometry-preprocessing - Preprocessing of non-compliant vector geometry via the Skia library.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/msdfgen.html">msdfgen</a>
+              [extensions]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/skia.html">skia</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openmp - Build with OpenMP support for multi-threaded code.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tools - Generates an executable inside the tools folder.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/msdfgen.html">msdfgen</a>
+              [extensions]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

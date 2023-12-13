@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -236,7 +237,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install magnum</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port magnum</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -278,469 +288,472 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            al-info - magnum-al-info utility
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            anyaudioimporter - AnyAudioImporter plugin
-            <ul>
-              <li><a href="/en/package/corrade.html">corrade</a>
-                  [pluginmanager]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            anyimageconverter - AnyImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            anyimageimporter - AnyImageImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            anysceneconverter - AnySceneConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            anysceneimporter - AnySceneImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            anyshaderconverter - AnyShaderConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [shadertools]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            audio - Audio library
-            <ul>
-              <li><a href="/en/package/openal-soft.html">openal-soft</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cglcontext - CglContext library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            debugtools - DebugTools library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            distancefieldconverter - magnum-distancefieldconverter utility
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl, 
-                  texturetools, 
-                  trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            eglcontext - EglContext library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            fontconverter - magnum-fontconverter utility
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl, 
-                  text, 
-                  trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gl - GL library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            gl-info - gl-info utility
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            glfwapplication - GlfwApplication library
-            <ul>
-              <li><a href="/en/package/glfw3.html">glfw3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            glxcontext - GlxContext library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            imageconverter - magnum-imageconverter utility
-            <ul>
-              <li><a href="/en/package/corrade.html">corrade</a>
-                  [dynamic-pluginmanager]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            magnumfont - MagnumFont plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [text]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            magnumfontconverter - MagnumFontConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [text]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [tgaimageconverter]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            meshtools - MeshTools library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            objimporter - ObjImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengltester - OpenGLTester library
-            <ul>
-              <li><a href="/en/package/corrade.html">corrade</a>
-                  [testsuite]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            primitives - Primitives library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [meshtools, 
-                  trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sceneconverter - magnum-sceneconverter utility
-            <ul>
-              <li><a href="/en/package/corrade.html">corrade</a>
-                  [dynamic-pluginmanager]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [anysceneconverter]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            scenegraph - SceneGraph library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            sdl2application - Sdl2Application library
-            <ul>
-              <li><a href="/en/package/sdl2.html">sdl2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            shaderconverter - magnum-shaderconverter utility
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [anyshaderconverter, 
-                  shadertools]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            shaders - Shaders library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            shadertools - ShaderTools library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            text - Text library
-            <ul>
-              <li><a href="/en/package/corrade.html">corrade</a>
-                  [pluginmanager]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [texturetools]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            texturetools - TextureTools library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tgaimageconverter - TgaImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tgaimporter - TgaImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            trade - Trade library
-            <ul>
-              <li><a href="/en/package/corrade.html">corrade</a>
-                  [pluginmanager]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vk - Vk library
-            <ul>
-              <li><a href="/en/package/vulkan.html">vulkan</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vk-info - vk-info utility
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [vk]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            wavaudioimporter - WavAudioImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            wglcontext - WglContext library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            windowlesscglapplication - WindowlessCglApplication library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            windowlesseglapplication - WindowlessEglApplication library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            windowlessglxapplication - WindowlessGlxApplication library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            windowlesswglapplication - WindowlessWglApplication library
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [gl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install magnum</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port magnum</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>al-info - magnum-al-info utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>anyaudioimporter - AnyAudioImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/corrade.html">corrade</a>
+              [pluginmanager]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>anyimageconverter - AnyImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>anyimageimporter - AnyImageImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>anysceneconverter - AnySceneConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>anysceneimporter - AnySceneImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>anyshaderconverter - AnyShaderConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [shadertools]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>audio - Audio library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openal-soft.html">openal-soft</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>cglcontext - CglContext library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>debugtools - DebugTools library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>distancefieldconverter - magnum-distancefieldconverter utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl, texturetools, trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>eglcontext - EglContext library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>fontconverter - magnum-fontconverter utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl, text, trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gl - GL library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>gl-info - gl-info utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>glfwapplication - GlfwApplication library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/glfw3.html">glfw3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>glxcontext - GlxContext library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>imageconverter - magnum-imageconverter utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/corrade.html">corrade</a>
+              [dynamic-pluginmanager]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>magnumfont - MagnumFont plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [text]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>magnumfontconverter - MagnumFontConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [text]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [tgaimageconverter]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>meshtools - MeshTools library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>objimporter - ObjImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengltester - OpenGLTester library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/corrade.html">corrade</a>
+              [testsuite]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>primitives - Primitives library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [meshtools, trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sceneconverter - magnum-sceneconverter utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/corrade.html">corrade</a>
+              [dynamic-pluginmanager]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [anysceneconverter]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>scenegraph - SceneGraph library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>sdl2application - Sdl2Application library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/sdl2.html">sdl2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>shaderconverter - magnum-shaderconverter utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [anyshaderconverter, shadertools]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>shaders - Shaders library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>shadertools - ShaderTools library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>text - Text library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/corrade.html">corrade</a>
+              [pluginmanager]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [texturetools]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>texturetools - TextureTools library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tgaimageconverter - TgaImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tgaimporter - TgaImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>trade - Trade library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/corrade.html">corrade</a>
+              [pluginmanager]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vk - Vk library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vulkan.html">vulkan</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vk-info - vk-info utility</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [vk]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>wavaudioimporter - WavAudioImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>wglcontext - WglContext library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>windowlesscglapplication - WindowlessCglApplication library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>windowlesseglapplication - WindowlessEglApplication library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>windowlessglxapplication - WindowlessGlxApplication library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>windowlesswglapplication - WindowlessWglApplication library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [gl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

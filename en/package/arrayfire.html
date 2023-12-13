@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -254,7 +255,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install arrayfire</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port arrayfire</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -273,79 +283,73 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            cpu - ArrayFire CPU backend
-            <ul>
-              <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cuda - ArrayFire CUDA backend. This feature only supports dynamic because dependency cudnn is dynamic only.
-            <ul>
-              <li><a href="/en/package/cub.html">cub</a>
-                
-                
-              </li>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-              <li><a href="/en/package/cudnn.html">cudnn</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencl - ArrayFire OpenCL backend
-            <ul>
-              <li><a href="/en/package/clblast.html">clblast</a>
-                
-                
-              </li>
-              <li><a href="/en/package/clfft.html">clfft</a>
-                
-                
-              </li>
-              <li><a href="/en/package/opencl.html">opencl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            unified - ArrayFire unified backend
-            <ul>
-              <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install arrayfire</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port arrayfire</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>cpu - ArrayFire CPU backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>cuda - ArrayFire CUDA backend. This feature only supports dynamic because dependency cudnn is dynamic only.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cub.html">cub</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/cudnn.html">cudnn</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencl - ArrayFire OpenCL backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/clblast.html">clblast</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/clfft.html">clfft</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/opencl.html">opencl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>unified - ArrayFire unified backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

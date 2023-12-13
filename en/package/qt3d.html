@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -229,7 +230,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install qt3d</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port qt3d</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -250,110 +260,91 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            animation - Use the 3D Animation Aspect library
-            <ul>
-              <li><a href="/en/package/qt3d.html">qt3d</a>
-                  [render]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            assimp - Build with assimp
-            <ul>
-              <li><a href="/en/package/assimp.html">assimp</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            extras - Use the 3D Extra library
-            <ul>
-              <li><a href="/en/package/qt3d.html">qt3d</a>
-                  [input, 
-                  logic, 
-                  render]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            input - Use the 3D Input Aspect library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            logic - Use the 3D Logic Aspect library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            qml - Build QML imports
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/qtdeclarative.html">qtdeclarative</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            render - Use the 3D Render Aspect library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            rhi - Enable RHI renderer
-            <ul>
-              <li><a href="/en/package/qtshadertools.html">qtshadertools</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vulkan - Build with vulkan support
-            <ul>
-              <li><a href="/en/package/qt3d.html">qt3d</a>
-                  [rhi]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/vulkan.html">vulkan</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install qt3d</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port qt3d</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>animation - Use the 3D Animation Aspect library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt3d.html">qt3d</a>
+              [render]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>assimp - Build with assimp</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/assimp.html">assimp</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>extras - Use the 3D Extra library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt3d.html">qt3d</a>
+              [input, logic, render]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>input - Use the 3D Input Aspect library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>logic - Use the 3D Logic Aspect library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>qml - Build QML imports</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/qtdeclarative.html">qtdeclarative</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>render - Use the 3D Render Aspect library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>rhi - Enable RHI renderer</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtshadertools.html">qtshadertools</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vulkan - Build with vulkan support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt3d.html">qt3d</a>
+              [rhi]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vulkan.html">vulkan</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

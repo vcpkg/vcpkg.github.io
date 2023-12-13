@@ -47,6 +47,7 @@
          N/A
         {{/package.Documentation}}
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> {{{package.supportedArchitectures}}}</div>      
       <br />
       <br />
       <div>
@@ -64,42 +65,6 @@
           <li>No Dependencies</li>
           {{/dependencies}}
         </ul>
-      </div>      
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          {{#packageVersions}}
-          <span class="badge badge-primary">{{.}}</span>
-          {{/packageVersions}}
-        </div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          {{#features}}
-          <li>
-            {{name}} - {{description}}
-            <ul>
-              {{#dependencies}}
-              <li><a href="/en/package/{{name}}.html">{{name}}</a>
-                {{#depFeatures}}
-                  {{#first}}[{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}
-                {{/depFeatures}}
-                {{#noDefaultFeatures}} (default-features: false){{/noDefaultFeatures}}
-                {{#platform}} (platform: {{.}}){{/platform}}
-              </li>
-              {{/dependencies}}
-            </ul>
-          </li>
-          {{/features}}
-          {{^features}}
-          <li>No Features</li>
-          {{/features}}
-        </ul>
       </div>
       <br />
       <br />
@@ -113,10 +78,41 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> {{{package.supportedArchitectures}}}
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          {{#packageVersions}}
+          <span class="badge badge-primary">{{.}}</span>
+          {{/packageVersions}}
         </div>
       </div>
+      <br />
+      <br />
+      <h2>Features</h2>
+      <div>
+        {{#features}}
+        <div class="feature-name"><span class="carrot">></span>{{name}} - {{description}}</div>
+        {{#hasDependencies}}
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            {{#dependencies}}
+            <li><a href="/en/package/{{name}}.html">{{name}}</a>
+              {{#depFeatures}}{{#first}}[{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}{{/depFeatures}}
+              {{#noDefaultFeatures}} (default-features: false){{/noDefaultFeatures}}
+              {{#platform}} (platform: {{.}}){{/platform}}
+            </li>
+            {{/dependencies}}
+          </ul>
+        </div>
+        {{/hasDependencies}}
+        {{^hasDependencies}}
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        {{/hasDependencies}}
+        {{/features}}
+        {{^features}}
+        <div>No Features</div>
+        {{/features}}
+      </div>           
       <br />
       <br />
       <div class="text-heading">

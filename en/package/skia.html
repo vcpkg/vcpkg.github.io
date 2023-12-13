@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -284,7 +285,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install skia</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port skia</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -320,113 +330,105 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            dawn - dawn support for skia
-            <ul>
-              <li><a href="/en/package/vulkan-headers.html">vulkan-headers</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            direct3d - Direct3D support for skia
-            <ul>
-            </ul>
-          </li>
-          <li>
-            fontconfig - Fontconfig support
-            <ul>
-              <li><a href="/en/package/fontconfig.html">fontconfig</a>
-                
-                
-              </li>
-              <li><a href="/en/package/skia.html">skia</a>
-                  [freetype]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            freetype - Freetype support
-            <ul>
-              <li><a href="/en/package/dlfcn-win32.html">dlfcn-win32</a>
-                
-                 (platform: windows)
-              </li>
-              <li><a href="/en/package/freetype.html">freetype</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gl - OpenGL support for skia
-            <ul>
-              <li><a href="/en/package/opengl-registry.html">opengl-registry</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            harfbuzz - Harfbuzz support
-            <ul>
-              <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            icu - Use icu.
-            <ul>
-              <li><a href="/en/package/icu.html">icu</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            metal - Metal support for skia
-            <ul>
-            </ul>
-          </li>
-          <li>
-            vulkan - Vulkan support for skia
-            <ul>
-              <li><a href="/en/package/vulkan-headers.html">vulkan-headers</a>
-                
-                
-              </li>
-              <li><a href="/en/package/vulkan-memory-allocator.html">vulkan-memory-allocator</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install skia</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port skia</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>dawn - dawn support for skia</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vulkan-headers.html">vulkan-headers</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>direct3d - Direct3D support for skia</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>fontconfig - Fontconfig support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fontconfig.html">fontconfig</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/skia.html">skia</a>
+              [freetype]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>freetype - Freetype support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/dlfcn-win32.html">dlfcn-win32</a>
+              
+              
+               (platform: windows)
+            </li>
+            <li><a href="/en/package/freetype.html">freetype</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gl - OpenGL support for skia</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl-registry.html">opengl-registry</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>harfbuzz - Harfbuzz support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>icu - Use icu.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/icu.html">icu</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>metal - Metal support for skia</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>vulkan - Vulkan support for skia</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vulkan-headers.html">vulkan-headers</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/vulkan-memory-allocator.html">vulkan-memory-allocator</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -229,7 +230,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install hdf5</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port hdf5</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -275,88 +285,63 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            cpp - Builds cpp lib
-            <ul>
-            </ul>
-          </li>
-          <li>
-            fortran - Build with fortran
-            <ul>
-            </ul>
-          </li>
-          <li>
-            map - Build the map API
-            <ul>
-            </ul>
-          </li>
-          <li>
-            parallel - parallel support for HDF5
-            <ul>
-              <li><a href="/en/package/mpi.html">mpi</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            szip - Build with szip
-            <ul>
-              <li><a href="/en/package/szip.html">szip</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            threadsafe - thread safety for HDF5
-            <ul>
-              <li><a href="/en/package/pthreads.html">pthreads</a>
-                
-                 (platform: !windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            tools - Build hdf tools
-            <ul>
-            </ul>
-          </li>
-          <li>
-            utils - Build HDF5 Utils
-            <ul>
-            </ul>
-          </li>
-          <li>
-            zlib - Build with zlib
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install hdf5</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port hdf5</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>cpp - Builds cpp lib</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>fortran - Build with fortran</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>map - Build the map API</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>parallel - parallel support for HDF5</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mpi.html">mpi</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>szip - Build with szip</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/szip.html">szip</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>threadsafe - thread safety for HDF5</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pthreads.html">pthreads</a>
+              
+              
+               (platform: !windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tools - Build hdf tools</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>utils - Build HDF5 Utils</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>zlib - Build with zlib</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

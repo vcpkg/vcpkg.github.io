@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          <a href="https://www.tinyorm.org">https://www.tinyorm.org</a>
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -248,97 +249,6 @@
             
           </li>
         </ul>
-      </div>      
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">0.36.5#2</span>
-          <span class="badge badge-primary">0.36.5#1</span>
-          <span class="badge badge-primary">0.36.5#0</span>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            disable-thread-local - Remove all thread_local storage duration specifiers (disables multi-threading support)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            inline-constants - Use inline constants instead of extern constants in shared builds
-            <ul>
-            </ul>
-          </li>
-          <li>
-            mysql-ping - Install MySQL C client library (libmysql) to support the mysql_ping()
-            <ul>
-              <li><a href="/en/package/libmysql.html">libmysql</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            orm - Enable ORM-related source code (without it only the query builder is compiled)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            sql-mysql - Build Qt SQL Driver for MySQL
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql-mysql]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-psql - Build Qt SQL Driver for PostgreSQL
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql-psql]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sql-sqlite - Build Qt SQL Driver for SQLite
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [sql-sqlite]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            strict-mode - Propagate strict compiler&#x2F;linker options and Qt definitions
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tom - Enable Tom-related source code (command-line interface)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tom-example - Build Tom command-line application example
-            <ul>
-              <li><a href="/en/package/tinyorm.html">tinyorm</a>
-                  [tom]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
       </div>
       <br />
       <br />
@@ -352,10 +262,83 @@
       <br />
       <br />
       <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+        <h2>Available Versions</h2>
+        <div class="version-badges">
+          <span class="badge badge-primary">0.36.5#2</span>
+          <span class="badge badge-primary">0.36.5#1</span>
+          <span class="badge badge-primary">0.36.5#0</span>
         </div>
       </div>
+      <br />
+      <br />
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>disable-thread-local - Remove all thread_local storage duration specifiers (disables multi-threading support)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>inline-constants - Use inline constants instead of extern constants in shared builds</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>mysql-ping - Install MySQL C client library (libmysql) to support the mysql_ping()</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libmysql.html">libmysql</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>orm - Enable ORM-related source code (without it only the query builder is compiled)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>sql-mysql - Build Qt SQL Driver for MySQL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql-mysql]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-psql - Build Qt SQL Driver for PostgreSQL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql-psql]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sql-sqlite - Build Qt SQL Driver for SQLite</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [sql-sqlite]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>strict-mode - Propagate strict compiler&#x2F;linker options and Qt definitions</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tom - Enable Tom-related source code (command-line interface)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tom-example - Build Tom command-line application example</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/tinyorm.html">tinyorm</a>
+              [tom]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

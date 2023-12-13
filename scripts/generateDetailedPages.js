@@ -77,6 +77,7 @@ function GetPackageFeatures(packageObj) {
             let feature = {
                 name: featureName,
                 description: featureDetails.description,
+                hasDependencies: Array.isArray(featureDetails.dependencies) && featureDetails.dependencies.length > 0,
                 dependencies: Array.isArray(featureDetails.dependencies) ? featureDetails.dependencies.map(transform_dep): []
             };
             featuresList.push(feature);

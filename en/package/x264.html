@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -223,7 +224,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install x264</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port x264</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -264,58 +274,28 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            asm - Enable platform-specific assembly optimizations
-            <ul>
-            </ul>
-          </li>
-          <li>
-            chroma-format-all - Output all chroma formats
-            <ul>
-            </ul>
-          </li>
-          <li>
-            default-features - Default set of features
-            <ul>
-              <li><a href="/en/package/x264.html">x264</a>
-                  [asm, 
-                  gpl]
-                
-                 (platform: x86 | x64 | (arm &amp; !windows) | arm64)
-              </li>
-            </ul>
-          </li>
-          <li>
-            gpl - Allow use of GPL code, the resulting libs and binaries will be under GPL
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tool - Build the command line tool
-            <ul>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install x264</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port x264</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>asm - Enable platform-specific assembly optimizations</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>chroma-format-all - Output all chroma formats</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Default set of features</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/x264.html">x264</a>
+              [asm, gpl]
+              
+               (platform: x86 | x64 | (arm &amp; !windows) | arm64)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>gpl - Allow use of GPL code, the resulting libs and binaries will be under GPL</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tool - Build the command line tool</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

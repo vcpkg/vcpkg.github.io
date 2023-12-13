@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -242,7 +243,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install mathgl</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port mathgl</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -269,150 +279,153 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            arma - Armadillo support
-            <ul>
-              <li><a href="/en/package/armadillo.html">armadillo</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            examples - Build example programs (not installed)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            fltk - fltk module
-            <ul>
-              <li><a href="/en/package/fltk.html">fltk</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gif - gif module
-            <ul>
-              <li><a href="/en/package/giflib.html">giflib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            glut - glut module
-            <ul>
-              <li><a href="/en/package/freeglut.html">freeglut</a>
-                
-                 (platform: !osx)
-              </li>
-              <li><a href="/en/package/mathgl.html">mathgl</a>
-                  [opengl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gsl - gsl module
-            <ul>
-              <li><a href="/en/package/gsl.html">gsl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            hdf5 - hdf5 module
-            <ul>
-              <li><a href="/en/package/hdf5.html">hdf5</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jpeg - jpeg module
-            <ul>
-              <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengl - opengl module
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            png - png module
-            <ul>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-              <li><a href="/en/package/mathgl.html">mathgl</a>
-                  [zlib]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            qt5 - qt5 module
-            <ul>
-              <li><a href="/en/package/qt5-base.html">qt5-base</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            wx - wx module
-            <ul>
-              <li><a href="/en/package/wxwidgets.html">wxwidgets</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            zlib - zlib module
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install mathgl</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port mathgl</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>arma - Armadillo support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/armadillo.html">armadillo</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>examples - Build example programs (not installed)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>fltk - fltk module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fltk.html">fltk</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gif - gif module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/giflib.html">giflib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>glut - glut module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freeglut.html">freeglut</a>
+              
+              
+               (platform: !osx)
+            </li>
+            <li><a href="/en/package/mathgl.html">mathgl</a>
+              [opengl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gsl - gsl module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gsl.html">gsl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>hdf5 - hdf5 module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/hdf5.html">hdf5</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jpeg - jpeg module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengl - opengl module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>png - png module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/mathgl.html">mathgl</a>
+              [zlib]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>qt5 - qt5 module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-base.html">qt5-base</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>wx - wx module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/wxwidgets.html">wxwidgets</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zlib - zlib module</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

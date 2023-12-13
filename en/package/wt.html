@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -434,7 +435,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install wt</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port wt</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -474,92 +484,81 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            dbo - Wt::Dbo
-            <ul>
-            </ul>
-          </li>
-          <li>
-            graphicsmagick - WRasterImage support on non-Windows based on GraphicsMagick
-            <ul>
-              <li><a href="/en/package/graphicsmagick.html">graphicsmagick</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - TLS support
-            <ul>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            postgresql - Wt::Dbo PostgreSQL backend
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                
-                
-              </li>
-              <li><a href="/en/package/wt.html">wt</a>
-                  [dbo]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sqlite3 - Wt::Dbo Sqlite 3 backend
-            <ul>
-              <li><a href="/en/package/sqlite3.html">sqlite3</a>
-                
-                
-              </li>
-              <li><a href="/en/package/wt.html">wt</a>
-                  [dbo]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sqlserver - Wt::Dbo MS SQL Server backend
-            <ul>
-              <li><a href="/en/package/unixodbc.html">unixodbc</a>
-                
-                 (platform: !windows)
-              </li>
-              <li><a href="/en/package/wt.html">wt</a>
-                  [dbo]
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install wt</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port wt</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>dbo - Wt::Dbo</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>graphicsmagick - WRasterImage support on non-Windows based on GraphicsMagick</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/graphicsmagick.html">graphicsmagick</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - TLS support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>postgresql - Wt::Dbo PostgreSQL backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/wt.html">wt</a>
+              [dbo]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sqlite3 - Wt::Dbo Sqlite 3 backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/sqlite3.html">sqlite3</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/wt.html">wt</a>
+              [dbo]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sqlserver - Wt::Dbo MS SQL Server backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/unixodbc.html">unixodbc</a>
+              
+              
+               (platform: !windows)
+            </li>
+            <li><a href="/en/package/wt.html">wt</a>
+              [dbo]
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

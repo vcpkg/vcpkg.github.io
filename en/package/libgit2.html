@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -242,7 +243,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install libgit2</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port libgit2</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -275,107 +285,91 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            mbedtls - SSL support (mbedTLS)
-            <ul>
-              <li><a href="/en/package/mbedtls.html">mbedtls</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - SSL support (OpenSSL)
-            <ul>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pcre - Build against external libpcre
-            <ul>
-              <li><a href="/en/package/pcre.html">pcre</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pcre2 - Build against external libpcre2
-            <ul>
-              <li><a href="/en/package/pcre2.html">pcre2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sectransp - SSL support (sectransp)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            ssh - SSH support via libssh2
-            <ul>
-              <li><a href="/en/package/libssh2.html">libssh2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ssl - Default SSL backend
-            <ul>
-              <li><a href="/en/package/libgit2.html">libgit2</a>
-                  [sectransp]
-                 (default-features: false)
-                 (platform: osx)
-              </li>
-              <li><a href="/en/package/libgit2.html">libgit2</a>
-                  [winhttp]
-                 (default-features: false)
-                 (platform: windows)
-              </li>
-              <li><a href="/en/package/libgit2.html">libgit2</a>
-                  [openssl]
-                 (default-features: false)
-                 (platform: !windows &amp; !osx)
-              </li>
-            </ul>
-          </li>
-          <li>
-            tools - Build CLI tools
-            <ul>
-            </ul>
-          </li>
-          <li>
-            winhttp - SSL support (WinHTTP)
-            <ul>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install libgit2</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port libgit2</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>mbedtls - SSL support (mbedTLS)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mbedtls.html">mbedtls</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - SSL support (OpenSSL)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pcre - Build against external libpcre</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcre.html">pcre</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pcre2 - Build against external libpcre2</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcre2.html">pcre2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sectransp - SSL support (sectransp)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>ssh - SSH support via libssh2</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libssh2.html">libssh2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ssl - Default SSL backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libgit2.html">libgit2</a>
+              [sectransp]
+               (default-features: false)
+               (platform: osx)
+            </li>
+            <li><a href="/en/package/libgit2.html">libgit2</a>
+              [winhttp]
+               (default-features: false)
+               (platform: windows)
+            </li>
+            <li><a href="/en/package/libgit2.html">libgit2</a>
+              [openssl]
+               (default-features: false)
+               (platform: !windows &amp; !osx)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tools - Build CLI tools</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>winhttp - SSL support (WinHTTP)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

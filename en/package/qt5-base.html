@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -314,7 +315,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install qt5-base</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port qt5-base</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -432,68 +442,55 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            icu - Enable ICU support
-            <ul>
-              <li><a href="/en/package/icu.html">icu</a>
-                
-                 (platform: !uwp)
-              </li>
-            </ul>
-          </li>
-          <li>
-            latest - (deprecated)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            mysqlplugin - Build the sql plugin for connecting to mysql databases
-            <ul>
-              <li><a href="/en/package/libmysql.html">libmysql</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            postgresqlplugin - Build the sql plugin for connecting to postgresql databases
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vulkan - Enable Vulkan support in QtGui
-            <ul>
-              <li><a href="/en/package/vulkan.html">vulkan</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install qt5-base</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port qt5-base</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>icu - Enable ICU support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/icu.html">icu</a>
+              
+              
+               (platform: !uwp)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>latest - (deprecated)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>mysqlplugin - Build the sql plugin for connecting to mysql databases</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libmysql.html">libmysql</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>postgresqlplugin - Build the sql plugin for connecting to postgresql databases</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vulkan - Enable Vulkan support in QtGui</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vulkan.html">vulkan</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -308,7 +309,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install azure-kinect-sensor-sdk</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port azure-kinect-sensor-sdk</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -331,51 +341,32 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            docs - Build K4A doxygen documentation.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tool - Build tools.
-            <ul>
-              <li><a href="/en/package/gl3w.html">gl3w</a>
-                
-                
-              </li>
-              <li><a href="/en/package/glew.html">glew</a>
-                
-                
-              </li>
-              <li><a href="/en/package/imgui.html">imgui</a>
-                  [glfw-binding, 
-                  opengl3-binding]
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install azure-kinect-sensor-sdk</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port azure-kinect-sensor-sdk</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>docs - Build K4A doxygen documentation.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tool - Build tools.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gl3w.html">gl3w</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/glew.html">glew</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/imgui.html">imgui</a>
+              [glfw-binding, opengl3-binding]
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -241,7 +242,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install mesa</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port mesa</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -269,118 +279,106 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            default-features - Platform dependent default features
-            <ul>
-              <li><a href="/en/package/mesa.html">mesa</a>
-                  [gles1, 
-                  gles2, 
-                  opengl]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/mesa.html">mesa</a>
-                  [llvm]
-                 (default-features: false)
-                 (platform: x64)
-              </li>
-            </ul>
-          </li>
-          <li>
-            egl - Build support for EGL platform
-            <ul>
-              <li><a href="/en/package/egl-registry.html">egl-registry</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gles1 - Build support for OpenGL ES 1.x
-            <ul>
-              <li><a href="/en/package/mesa.html">mesa</a>
-                  [opengl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gles2 - Build support for OpenGL ES 2.x and 3.x
-            <ul>
-              <li><a href="/en/package/mesa.html">mesa</a>
-                  [opengl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            llvm - Build with llvmpipe
-            <ul>
-              <li><a href="/en/package/llvm.html">llvm</a>
-                  [enable-rtti, 
-                  libclc]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/llvm.html">llvm</a>
-                  [target-arm]
-                 (default-features: false)
-                 (platform: arm32)
-              </li>
-              <li><a href="/en/package/llvm.html">llvm</a>
-                  [target-aarch64]
-                 (default-features: false)
-                 (platform: arm64)
-              </li>
-              <li><a href="/en/package/llvm.html">llvm</a>
-                  [target-x86]
-                 (default-features: false)
-                 (platform: x64 | x86)
-              </li>
-            </ul>
-          </li>
-          <li>
-            offscreen - Build with support for offscreen rendering (OSMesa)
-            <ul>
-              <li><a href="/en/package/mesa.html">mesa</a>
-                  [opengl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengl - Build support for OpenGL (all versions)
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install mesa</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port mesa</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Platform dependent default features</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mesa.html">mesa</a>
+              [gles1, gles2, opengl]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/mesa.html">mesa</a>
+              [llvm]
+               (default-features: false)
+               (platform: x64)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>egl - Build support for EGL platform</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/egl-registry.html">egl-registry</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gles1 - Build support for OpenGL ES 1.x</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mesa.html">mesa</a>
+              [opengl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gles2 - Build support for OpenGL ES 2.x and 3.x</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mesa.html">mesa</a>
+              [opengl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>llvm - Build with llvmpipe</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/llvm.html">llvm</a>
+              [enable-rtti, libclc]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/llvm.html">llvm</a>
+              [target-arm]
+               (default-features: false)
+               (platform: arm32)
+            </li>
+            <li><a href="/en/package/llvm.html">llvm</a>
+              [target-aarch64]
+               (default-features: false)
+               (platform: arm64)
+            </li>
+            <li><a href="/en/package/llvm.html">llvm</a>
+              [target-x86]
+               (default-features: false)
+               (platform: x64 | x86)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>offscreen - Build with support for offscreen rendering (OSMesa)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mesa.html">mesa</a>
+              [opengl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengl - Build support for OpenGL (all versions)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

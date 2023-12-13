@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -398,7 +399,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install vtk</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port vtk</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -478,212 +488,213 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            all - Build all vtk modules
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                
-                
-              </li>
-              <li><a href="/en/package/libmysql.html">libmysql</a>
-                
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [gdal, 
-                  geojson, 
-                  mpi, 
-                  python, 
-                  qt]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [atlmfc, 
-                  utf8]
-                 (default-features: false)
-                 (platform: windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            atlmfc - Mfc functionality for vtk on Windows
-            <ul>
-              <li><a href="/en/package/atlmfc.html">atlmfc</a>
-                
-                 (platform: windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            cuda - Support CUDA compilation
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gdal - Support GDAL compilation
-            <ul>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            geojson - Convert Geo JSON format to vtkPolyData
-            <ul>
-            </ul>
-          </li>
-          <li>
-            mpi - MPI functionality for VTK
-            <ul>
-              <li><a href="/en/package/hdf5.html">hdf5</a>
-                  [parallel]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/mpi.html">mpi</a>
-                
-                
-              </li>
-              <li><a href="/en/package/seacas.html">seacas</a>
-                  [mpi]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [vtkm]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/vtk-m.html">vtk-m</a>
-                  [mpi]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengl - All opengl related modules
-            <ul>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openvr - OpenVR functionality for VTK
-            <ul>
-              <li><a href="/en/package/openvr.html">openvr</a>
-                
-                
-              </li>
-              <li><a href="/en/package/sdl2.html">sdl2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            paraview - Build vtk modules required by paraview
-            <ul>
-              <li><a href="/en/package/cli11.html">cli11</a>
-                
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [qt]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [atlmfc]
-                 (default-features: false)
-                 (platform: windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            python - Python functionality for VTK
-            <ul>
-              <li><a href="/en/package/python3.html">python3</a>
-                
-                
-              </li>
-              <li><a href="/en/package/python3.html">python3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            qt - Qt functionality for VTK
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui, 
-                  opengl, 
-                  widgets]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/qtdeclarative.html">qtdeclarative</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qtimageformats.html">qtimageformats</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qttools.html">qttools</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            utf8 - Enables vtk reader&#x2F;writer with utf-8 path support
-            <ul>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vtkm - Build with vtk-m accelerator and module.
-            <ul>
-              <li><a href="/en/package/vtk-m.html">vtk-m</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install vtk</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port vtk</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>all - Build all vtk modules</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/libmysql.html">libmysql</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [gdal, geojson, mpi, python, qt]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [atlmfc, utf8]
+               (default-features: false)
+               (platform: windows)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>atlmfc - Mfc functionality for vtk on Windows</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/atlmfc.html">atlmfc</a>
+              
+              
+               (platform: windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>cuda - Support CUDA compilation</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gdal - Support GDAL compilation</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>geojson - Convert Geo JSON format to vtkPolyData</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>mpi - MPI functionality for VTK</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/hdf5.html">hdf5</a>
+              [parallel]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/mpi.html">mpi</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/seacas.html">seacas</a>
+              [mpi]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [vtkm]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vtk-m.html">vtk-m</a>
+              [mpi]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengl - All opengl related modules</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openvr - OpenVR functionality for VTK</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openvr.html">openvr</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/sdl2.html">sdl2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>paraview - Build vtk modules required by paraview</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cli11.html">cli11</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [qt]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [atlmfc]
+               (default-features: false)
+               (platform: windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>python - Python functionality for VTK</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/python3.html">python3</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/python3.html">python3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>qt - Qt functionality for VTK</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui, opengl, widgets]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/qtdeclarative.html">qtdeclarative</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qtimageformats.html">qtimageformats</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qttools.html">qttools</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>utf8 - Enables vtk reader&#x2F;writer with utf-8 path support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vtkm - Build with vtk-m accelerator and module.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk-m.html">vtk-m</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

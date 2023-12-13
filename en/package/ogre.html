@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -260,7 +261,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install ogre</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port ogre</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -312,122 +322,98 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            assimp - Build with assimp support
-            <ul>
-              <li><a href="/en/package/assimp.html">assimp</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            bullet - Build with bullet physics support
-            <ul>
-              <li><a href="/en/package/bullet3.html">bullet3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            csharp - Build csharp bindings
-            <ul>
-            </ul>
-          </li>
-          <li>
-            d3d9 - Build Direct3D9 RenderSystem
-            <ul>
-            </ul>
-          </li>
-          <li>
-            freeimage - Build with FreeImage support (no effect for Emscripten)
-            <ul>
-              <li><a href="/en/package/freeimage.html">freeimage</a>
-                
-                 (platform: !emscripten)
-              </li>
-            </ul>
-          </li>
-          <li>
-            java - Build Java (JNI) bindings
-            <ul>
-            </ul>
-          </li>
-          <li>
-            openexr - Build with OpenEXR support
-            <ul>
-              <li><a href="/en/package/openexr.html">openexr</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            overlay - Build overlay component
-            <ul>
-              <li><a href="/en/package/imgui.html">imgui</a>
-                  [freetype]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            python - Build Python bindings
-            <ul>
-              <li><a href="/en/package/python3.html">python3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            strict - Force Ogre resource manager to be strict with group names and resource names
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tools - Build tools
-            <ul>
-            </ul>
-          </li>
-          <li>
-            zip - Build ZIP archive support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            zziplib - Obsolete, use zip feature instead
-            <ul>
-              <li><a href="/en/package/ogre.html">ogre</a>
-                  [zip]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install ogre</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port ogre</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>assimp - Build with assimp support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/assimp.html">assimp</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>bullet - Build with bullet physics support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/bullet3.html">bullet3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>csharp - Build csharp bindings</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>d3d9 - Build Direct3D9 RenderSystem</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>freeimage - Build with FreeImage support (no effect for Emscripten)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freeimage.html">freeimage</a>
+              
+              
+               (platform: !emscripten)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>java - Build Java (JNI) bindings</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>openexr - Build with OpenEXR support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openexr.html">openexr</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>overlay - Build overlay component</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/imgui.html">imgui</a>
+              [freetype]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>python - Build Python bindings</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/python3.html">python3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>strict - Force Ogre resource manager to be strict with group names and resource names</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tools - Build tools</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>zip - Build ZIP archive support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>zziplib - Obsolete, use zip feature instead</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ogre.html">ogre</a>
+              [zip]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

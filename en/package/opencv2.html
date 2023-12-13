@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp</div>      
       <br />
       <br />
       <div>
@@ -242,7 +243,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install opencv2</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port opencv2</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -273,171 +283,166 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            cuda - CUDA support for opencv
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            dc1394 - Dc1394 support for opencv
-            <ul>
-              <li><a href="/en/package/libdc1394.html">libdc1394</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            default-features - Platform-dependent default features
-            <ul>
-              <li><a href="/en/package/opencv2.html">opencv2</a>
-                  [eigen, 
-                  jpeg, 
-                  png, 
-                  tiff]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/opencv2.html">opencv2</a>
-                  [gtk]
-                 (default-features: false)
-                 (platform: linux)
-              </li>
-            </ul>
-          </li>
-          <li>
-            eigen - Eigen support for opencv
-            <ul>
-              <li><a href="/en/package/eigen3.html">eigen3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ffmpeg - ffmpeg support for opencv
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec, 
-                  avformat, 
-                  swresample, 
-                  swscale]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gtk - GTK support for opencv
-            <ul>
-              <li><a href="/en/package/gtk.html">gtk</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jasper - JPEG 2000 support for opencv
-            <ul>
-              <li><a href="/en/package/jasper.html">jasper</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jpeg - JPEG support for opencv
-            <ul>
-              <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openexr - OpenEXR support for opencv
-            <ul>
-              <li><a href="/en/package/imath.html">imath</a>
-                
-                
-              </li>
-              <li><a href="/en/package/openexr.html">openexr</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengl - opengl support for opencv
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            png - PNG support for opencv
-            <ul>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            python - Python wrapper support for opencv
-            <ul>
-            </ul>
-          </li>
-          <li>
-            qt - Qt GUI support for opencv
-            <ul>
-              <li><a href="/en/package/qt5-base.html">qt5-base</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tiff - TIFF support for opencv
-            <ul>
-              <li><a href="/en/package/tiff.html">tiff</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            world - Compile to a single package support for opencv
-            <ul>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install opencv2</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port opencv2</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>cuda - CUDA support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>dc1394 - Dc1394 support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libdc1394.html">libdc1394</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Platform-dependent default features</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv2.html">opencv2</a>
+              [eigen, jpeg, png, tiff]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/opencv2.html">opencv2</a>
+              [gtk]
+               (default-features: false)
+               (platform: linux)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>eigen - Eigen support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/eigen3.html">eigen3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ffmpeg - ffmpeg support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec, avformat, swresample, swscale]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gtk - GTK support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gtk.html">gtk</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jasper - JPEG 2000 support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/jasper.html">jasper</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jpeg - JPEG support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openexr - OpenEXR support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/imath.html">imath</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/openexr.html">openexr</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengl - opengl support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>png - PNG support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>python - Python wrapper support for opencv</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>qt - Qt GUI support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-base.html">qt5-base</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tiff - TIFF support for opencv</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/tiff.html">tiff</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>world - Compile to a single package support for opencv</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

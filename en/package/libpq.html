@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -236,7 +237,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install libpq</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port libpq</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -295,195 +305,190 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            all - Build all supported features
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [client, 
-                  icu, 
-                  xml, 
-                  xslt, 
-                  zstd]
-                
-                
-              </li>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [bonjour]
-                
-                 (platform: osx)
-              </li>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [nls]
-                
-                 (platform: !osx)
-              </li>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [readline]
-                
-                 (platform: !windows)
-              </li>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [python]
-                
-                 (platform: !android &amp; !mingw)
-              </li>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [tcl]
-                
-                 (platform: windows &amp; !mingw &amp; !arm)
-              </li>
-            </ul>
-          </li>
-          <li>
-            bonjour - Build with Bonjour support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            client - Build all client tools and libraries
-            <ul>
-            </ul>
-          </li>
-          <li>
-            icu - Build with support for the ICU library
-            <ul>
-              <li><a href="/en/package/icu.html">icu</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            lz4 - Use lz4
-            <ul>
-              <li><a href="/en/package/lz4.html">lz4</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            nls - Native Language Support
-            <ul>
-              <li><a href="/en/package/gettext.html">gettext</a>
-                
-                
-              </li>
-              <li><a href="/en/package/gettext.html">gettext</a>
-                  [tools]
-                
-                 (platform: !windows, mingw)
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - support for encrypted client connections and random number generation on platforms that do not have &quot;&#x2F;dev&#x2F;urandom&quot; (except windows)
-            <ul>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            python - build the PL&#x2F;Python server programming language
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [client]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/python3.html">python3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            readline - Use readline
-            <ul>
-              <li><a href="/en/package/readline.html">readline</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tcl - build the PL&#x2F;Tcl procedural language
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [client]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/tcl.html">tcl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xml - Build with libxml
-            <ul>
-              <li><a href="/en/package/libxml2.html">libxml2</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xslt - Build with libxslt
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                  [xml]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/libxslt.html">libxslt</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            zlib - Use zlib
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            zstd - Use zstd
-            <ul>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install libpq</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port libpq</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>all - Build all supported features</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [client, icu, xml, xslt, zstd]
+              
+              
+            </li>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [bonjour]
+              
+               (platform: osx)
+            </li>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [nls]
+              
+               (platform: !osx)
+            </li>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [readline]
+              
+               (platform: !windows)
+            </li>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [python]
+              
+               (platform: !android &amp; !mingw)
+            </li>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [tcl]
+              
+               (platform: windows &amp; !mingw &amp; !arm)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>bonjour - Build with Bonjour support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>client - Build all client tools and libraries</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>icu - Build with support for the ICU library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/icu.html">icu</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>lz4 - Use lz4</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/lz4.html">lz4</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>nls - Native Language Support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/gettext.html">gettext</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/gettext.html">gettext</a>
+              [tools]
+              
+               (platform: !windows, mingw)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - support for encrypted client connections and random number generation on platforms that do not have &quot;&#x2F;dev&#x2F;urandom&quot; (except windows)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>python - build the PL&#x2F;Python server programming language</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [client]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/python3.html">python3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>readline - Use readline</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/readline.html">readline</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tcl - build the PL&#x2F;Tcl procedural language</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [client]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/tcl.html">tcl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xml - Build with libxml</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libxml2.html">libxml2</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xslt - Build with libxslt</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              [xml]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/libxslt.html">libxslt</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zlib - Use zlib</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zstd - Use zstd</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

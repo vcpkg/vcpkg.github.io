@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -284,7 +285,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install cpprestsdk</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port cpprestsdk</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -332,80 +342,72 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            brotli - Brotli compression support
-            <ul>
-              <li><a href="/en/package/brotli.html">brotli</a>
-                
-                
-              </li>
-              <li><a href="/en/package/cpprestsdk.html">cpprestsdk</a>
-                  [compression]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            compression - HTTP Compression support
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            websockets - Websockets support
-            <ul>
-              <li><a href="/en/package/boost-date-time.html">boost-date-time</a>
-                
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/boost-regex.html">boost-regex</a>
-                
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/boost-system.html">boost-system</a>
-                
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/cpprestsdk.html">cpprestsdk</a>
-                  [compression]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/websocketpp.html">websocketpp</a>
-                
-                 (platform: !uwp)
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install cpprestsdk</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port cpprestsdk</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>brotli - Brotli compression support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/brotli.html">brotli</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/cpprestsdk.html">cpprestsdk</a>
+              [compression]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>compression - HTTP Compression support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>websockets - Websockets support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/boost-date-time.html">boost-date-time</a>
+              
+              
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/boost-regex.html">boost-regex</a>
+              
+              
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/boost-system.html">boost-system</a>
+              
+              
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/cpprestsdk.html">cpprestsdk</a>
+              [compression]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/websocketpp.html">websocketpp</a>
+              
+              
+               (platform: !uwp)
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

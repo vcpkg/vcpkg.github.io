@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -278,7 +279,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install poppler</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port poppler</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -305,115 +315,106 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            cairo - Enable the Cairo graphics backend
-            <ul>
-              <li><a href="/en/package/cairo.html">cairo</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cms - Enable use of LCMS2 as color management system
-            <ul>
-              <li><a href="/en/package/lcms.html">lcms</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            curl - curl for poppler
-            <ul>
-              <li><a href="/en/package/curl.html">curl</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            font-configuration - Defaut font configuration backend
-            <ul>
-              <li><a href="/en/package/poppler.html">poppler</a>
-                  [fontconfig]
-                 (default-features: false)
-                 (platform: !windows &amp; !android)
-              </li>
-            </ul>
-          </li>
-          <li>
-            fontconfig - Use fontconfig
-            <ul>
-              <li><a href="/en/package/fontconfig.html">fontconfig</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            glib - glib for poppler
-            <ul>
-              <li><a href="/en/package/glib.html">glib</a>
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/poppler.html">poppler</a>
-                  [cairo]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            private-api - Install headers for private API (aka unstable API&#x2F;ABI headers)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            qt - Enable the Qt API
-            <ul>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            splash - The splash backend is always enabled. This option is kept for compatibility.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            zlib - zlib for poppler
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install poppler</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port poppler</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>cairo - Enable the Cairo graphics backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cairo.html">cairo</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>cms - Enable use of LCMS2 as color management system</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/lcms.html">lcms</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>curl - curl for poppler</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/curl.html">curl</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>font-configuration - Defaut font configuration backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/poppler.html">poppler</a>
+              [fontconfig]
+               (default-features: false)
+               (platform: !windows &amp; !android)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>fontconfig - Use fontconfig</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fontconfig.html">fontconfig</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>glib - glib for poppler</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/glib.html">glib</a>
+              
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/poppler.html">poppler</a>
+              [cairo]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>private-api - Install headers for private API (aka unstable API&#x2F;ABI headers)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>qt - Enable the Qt API</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>splash - The splash backend is always enabled. This option is kept for compatibility.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>zlib - zlib for poppler</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

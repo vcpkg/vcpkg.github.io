@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -236,7 +237,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install embree3</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port embree3</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -266,65 +276,30 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            avx - Enables AVX ISA.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            avx2 - Enables AVX2 ISA.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            avx512 - Enables AVX512 ISA.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            default-features - Enables all default features.
-            <ul>
-              <li><a href="/en/package/embree3.html">embree3</a>
-                  [avx, 
-                  avx2, 
-                  sse2, 
-                  sse42]
-                 (default-features: false)
-                 (platform: x64 | x86)
-              </li>
-            </ul>
-          </li>
-          <li>
-            sse2 - Enables SSE2 ISA.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            sse42 - Enables SSE4.2 ISA.
-            <ul>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install embree3</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port embree3</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>avx - Enables AVX ISA.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>avx2 - Enables AVX2 ISA.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>avx512 - Enables AVX512 ISA.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Enables all default features.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/embree3.html">embree3</a>
+              [avx, avx2, sse2, sse42]
+               (default-features: false)
+               (platform: x64 | x86)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>sse2 - Enables SSE2 ISA.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>sse42 - Enables SSE4.2 ISA.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

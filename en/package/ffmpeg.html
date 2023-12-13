@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -230,7 +231,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install ffmpeg</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port ffmpeg</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -371,713 +381,725 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            all - Build with all allowed dependencies selected that are compatible with the lgpl license
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [aom, 
-                  avcodec, 
-                  avdevice, 
-                  avfilter, 
-                  avformat, 
-                  bzip2, 
-                  freetype, 
-                  iconv, 
-                  lzma, 
-                  mp3lame, 
-                  openjpeg, 
-                  openmpt, 
-                  opus, 
-                  snappy, 
-                  soxr, 
-                  speex, 
-                  swresample, 
-                  swscale, 
-                  theora, 
-                  vorbis, 
-                  vpx, 
-                  webp, 
-                  xml2, 
-                  zlib]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [alsa]
-                 (default-features: false)
-                 (platform: linux)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [sdl2]
-                 (default-features: false)
-                 (platform: !osx)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [ass]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [fontconfig]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [fribidi]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [modplug]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [opencl]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [openh264]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [srt]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [ilbc]
-                 (default-features: false)
-                 (platform: !(arm &amp; uwp))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [ssh]
-                 (default-features: false)
-                 (platform: !(uwp | arm))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [amf]
-                 (default-features: false)
-                 (platform: !osx &amp; !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [opengl]
-                 (default-features: false)
-                 (platform: !uwp &amp; !(arm64 &amp; windows))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [tensorflow]
-                 (default-features: false)
-                 (platform: x64 &amp; !static &amp; !uwp &amp; !windows)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [dav1d]
-                 (default-features: false)
-                 (platform: !(uwp | (windows &amp; x86 &amp; !static)))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [tesseract]
-                 (default-features: false)
-                 (platform: !(windows &amp; arm) &amp; !static &amp; !uwp)
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [qsv]
-                 (default-features: false)
-                 (platform: linux | (!osx &amp; !uwp &amp; !(arm &amp; windows)))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [nvcodec]
-                 (default-features: false)
-                 (platform: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows)))
-              </li>
-            </ul>
-          </li>
-          <li>
-            all-gpl - Build with all allowed dependencies selected that are compatible with the gpl license
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [all, 
-                  gpl, 
-                  postproc]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [x264]
-                 (default-features: false)
-                 (platform: !(arm &amp; windows))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [x265]
-                 (default-features: false)
-                 (platform: !uwp &amp; !(arm &amp; windows))
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avisynthplus]
-                 (default-features: false)
-                 (platform: windows &amp; !arm &amp; !uwp &amp; !static)
-              </li>
-            </ul>
-          </li>
-          <li>
-            all-nonfree - Build with all allowed dependencies selected with a non-redistributable license
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [all-gpl, 
-                  fdk-aac, 
-                  nonfree, 
-                  openssl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            alsa - Enable ALSA support
-            <ul>
-              <li><a href="/en/package/alsa.html">alsa</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            amf - AMD AMF codec support
-            <ul>
-              <li><a href="/en/package/amd-amf.html">amd-amf</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            aom - AV1 video encoding&#x2F;decoding via libaom support in ffmpeg
-            <ul>
-              <li><a href="/en/package/aom.html">aom</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ass - Libass subtitles rendering, needed for subtitles and ass filter support in ffmpeg
-            <ul>
-              <li><a href="/en/package/libass.html">libass</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            avcodec - Build the avcodec library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            avdevice - Build the avdevice library
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec, 
-                  avformat]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            avfilter - Build the avfilter library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            avformat - Build the avformat library
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            avisynthplus - Reading of AviSynth script files
-            <ul>
-              <li><a href="/en/package/avisynthplus.html">avisynthplus</a>
-                
-                
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [gpl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            avresample - Build the avresample library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            bzip2 - Bzip2 support
-            <ul>
-              <li><a href="/en/package/bzip2.html">bzip2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            dav1d - AV1 decoding via libdav1d
-            <ul>
-              <li><a href="/en/package/dav1d.html">dav1d</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            fdk-aac - AAC de&#x2F;encoding via libfdk-aac, **including GPL-incompatible patent-encumbered HE-AAC**. If you do not require HE-AAC, use the built-in FFmpeg AAC codec.
-            <ul>
-              <li><a href="/en/package/fdk-aac.html">fdk-aac</a>
-                  [he-aac]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [nonfree]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ffmpeg - Build the ffmpeg application
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec, 
-                  avfilter, 
-                  avformat]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ffplay - Build the ffplay application
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec, 
-                  avfilter, 
-                  avformat, 
-                  sdl2, 
-                  swresample, 
-                  swscale]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ffprobe - Build the ffprobe application
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec, 
-                  avformat]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            fontconfig - Useful for drawtext filter
-            <ul>
-              <li><a href="/en/package/fontconfig.html">fontconfig</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            freetype - Needed for drawtext filter
-            <ul>
-              <li><a href="/en/package/freetype.html">freetype</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            fribidi - Improves drawtext filter
-            <ul>
-              <li><a href="/en/package/fribidi.html">fribidi</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gpl - Allow use of GPL code, the resulting libs and binaries will be under GPL
-            <ul>
-            </ul>
-          </li>
-          <li>
-            iconv - Iconv support
-            <ul>
-              <li><a href="/en/package/libiconv.html">libiconv</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ilbc - iLBC de&#x2F;encoding via libilbc
-            <ul>
-              <li><a href="/en/package/libilbc.html">libilbc</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            lzma - lzma support
-            <ul>
-              <li><a href="/en/package/liblzma.html">liblzma</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            modplug - ModPlug via libmodplug
-            <ul>
-              <li><a href="/en/package/libmodplug.html">libmodplug</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mp3lame - MP3 encoding via libmp3lame
-            <ul>
-              <li><a href="/en/package/mp3lame.html">mp3lame</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            nonfree - Allow use of nonfree code, the resulting libs and binaries will be unredistributable
-            <ul>
-            </ul>
-          </li>
-          <li>
-            nvcodec - Nvidia video decoding&#x2F;encoding acceleration
-            <ul>
-              <li><a href="/en/package/ffnvcodec.html">ffnvcodec</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencl - OpenCL processing
-            <ul>
-              <li><a href="/en/package/opencl.html">opencl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengl - OpenGL rendering
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-              <li><a href="/en/package/opengl-registry.html">opengl-registry</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openh264 - H.264 de&#x2F;encoding via openh264
-            <ul>
-              <li><a href="/en/package/openh264.html">openh264</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openjpeg - JPEG 2000 de&#x2F;encoding via OpenJPEG
-            <ul>
-              <li><a href="/en/package/openjpeg.html">openjpeg</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openmpt - Decoding tracked files via libopenmpt
-            <ul>
-              <li><a href="/en/package/libopenmpt.html">libopenmpt</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - Needed for https support if gnutls, libtls or mbedtls is not used
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [nonfree]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opus - Opus de&#x2F;encoding via libopus
-            <ul>
-              <li><a href="/en/package/opus.html">opus</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            postproc - Build the postproc library
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [gpl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            qsv - Intel QSV Codec
-            <ul>
-              <li><a href="/en/package/mfx-dispatch.html">mfx-dispatch</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sdl2 - Sdl2 support
-            <ul>
-              <li><a href="/en/package/sdl2.html">sdl2</a>
-                  [x11]
-                 (default-features: false)
-                 (platform: linux)
-              </li>
-              <li><a href="/en/package/sdl2.html">sdl2</a>
-                
-                 (platform: !linux)
-              </li>
-            </ul>
-          </li>
-          <li>
-            snappy - Snappy compression, needed for hap encoding
-            <ul>
-              <li><a href="/en/package/snappy.html">snappy</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            soxr - Include libsoxr resampling
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [swresample]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/soxr.html">soxr</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            speex - Speex de&#x2F;encoding via libspeex
-            <ul>
-              <li><a href="/en/package/speex.html">speex</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            srt - Haivision SRT protocol
-            <ul>
-              <li><a href="/en/package/libsrt.html">libsrt</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ssh - SFTP protocol via libssh
-            <ul>
-              <li><a href="/en/package/libssh.html">libssh</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            swresample - Build the swresample library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            swscale - Build the swscale library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tensorflow - TensorFlow as a DNN module backend for DNN based filters like sr
-            <ul>
-              <li><a href="/en/package/tensorflow.html">tensorflow</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tesseract - Tesseract, needed for ocr filter
-            <ul>
-              <li><a href="/en/package/tesseract.html">tesseract</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            theora - Theora encoding via libtheora
-            <ul>
-              <li><a href="/en/package/libtheora.html">libtheora</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            version3 - Upgrade (L)GPL to version 3
-            <ul>
-            </ul>
-          </li>
-          <li>
-            vorbis - Vorbis en&#x2F;decoding via libvorbis, native implementation exists
-            <ul>
-              <li><a href="/en/package/libvorbis.html">libvorbis</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vpx - VP8 and VP9 de&#x2F;encoding via libvpx
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [avcodec]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/libvpx.html">libvpx</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            webp - WebP encoding via libwebp
-            <ul>
-              <li><a href="/en/package/libwebp.html">libwebp</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            x264 - H.264 encoding via x264
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [gpl]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/x264.html">x264</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            x265 - HEVC encoding via x265
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                  [gpl]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/x265.html">x265</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xml2 - XML parsing using the C library libxml2, needed for dash demuxing support
-            <ul>
-              <li><a href="/en/package/libxml2.html">libxml2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            zlib - zlib support
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install ffmpeg</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port ffmpeg</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>all - Build with all allowed dependencies selected that are compatible with the lgpl license</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [aom, avcodec, avdevice, avfilter, avformat, bzip2, freetype, iconv, lzma, mp3lame, openjpeg, openmpt, opus, snappy, soxr, speex, swresample, swscale, theora, vorbis, vpx, webp, xml2, zlib]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [alsa]
+               (default-features: false)
+               (platform: linux)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [sdl2]
+               (default-features: false)
+               (platform: !osx)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [ass]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [fontconfig]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [fribidi]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [modplug]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [opencl]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [openh264]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [srt]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [ilbc]
+               (default-features: false)
+               (platform: !(arm &amp; uwp))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [ssh]
+               (default-features: false)
+               (platform: !(uwp | arm))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [amf]
+               (default-features: false)
+               (platform: !osx &amp; !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [opengl]
+               (default-features: false)
+               (platform: !uwp &amp; !(arm64 &amp; windows))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [tensorflow]
+               (default-features: false)
+               (platform: x64 &amp; !static &amp; !uwp &amp; !windows)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [dav1d]
+               (default-features: false)
+               (platform: !(uwp | (windows &amp; x86 &amp; !static)))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [tesseract]
+               (default-features: false)
+               (platform: !(windows &amp; arm) &amp; !static &amp; !uwp)
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [qsv]
+               (default-features: false)
+               (platform: linux | (!osx &amp; !uwp &amp; !(arm &amp; windows)))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [nvcodec]
+               (default-features: false)
+               (platform: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows)))
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>all-gpl - Build with all allowed dependencies selected that are compatible with the gpl license</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [all, gpl, postproc]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [x264]
+               (default-features: false)
+               (platform: !(arm &amp; windows))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [x265]
+               (default-features: false)
+               (platform: !uwp &amp; !(arm &amp; windows))
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avisynthplus]
+               (default-features: false)
+               (platform: windows &amp; !arm &amp; !uwp &amp; !static)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>all-nonfree - Build with all allowed dependencies selected with a non-redistributable license</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [all-gpl, fdk-aac, nonfree, openssl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>alsa - Enable ALSA support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/alsa.html">alsa</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>amf - AMD AMF codec support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/amd-amf.html">amd-amf</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>aom - AV1 video encoding&#x2F;decoding via libaom support in ffmpeg</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/aom.html">aom</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ass - Libass subtitles rendering, needed for subtitles and ass filter support in ffmpeg</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libass.html">libass</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>avcodec - Build the avcodec library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>avdevice - Build the avdevice library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec, avformat]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>avfilter - Build the avfilter library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>avformat - Build the avformat library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>avisynthplus - Reading of AviSynth script files</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/avisynthplus.html">avisynthplus</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [gpl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>avresample - Build the avresample library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>bzip2 - Bzip2 support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/bzip2.html">bzip2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>dav1d - AV1 decoding via libdav1d</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/dav1d.html">dav1d</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>fdk-aac - AAC de&#x2F;encoding via libfdk-aac, **including GPL-incompatible patent-encumbered HE-AAC**. If you do not require HE-AAC, use the built-in FFmpeg AAC codec.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fdk-aac.html">fdk-aac</a>
+              [he-aac]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [nonfree]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ffmpeg - Build the ffmpeg application</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec, avfilter, avformat]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ffplay - Build the ffplay application</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec, avfilter, avformat, sdl2, swresample, swscale]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ffprobe - Build the ffprobe application</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec, avformat]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>fontconfig - Useful for drawtext filter</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fontconfig.html">fontconfig</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>freetype - Needed for drawtext filter</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freetype.html">freetype</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>fribidi - Improves drawtext filter</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fribidi.html">fribidi</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gpl - Allow use of GPL code, the resulting libs and binaries will be under GPL</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>iconv - Iconv support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libiconv.html">libiconv</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ilbc - iLBC de&#x2F;encoding via libilbc</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libilbc.html">libilbc</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>lzma - lzma support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/liblzma.html">liblzma</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>modplug - ModPlug via libmodplug</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libmodplug.html">libmodplug</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>mp3lame - MP3 encoding via libmp3lame</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mp3lame.html">mp3lame</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>nonfree - Allow use of nonfree code, the resulting libs and binaries will be unredistributable</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>nvcodec - Nvidia video decoding&#x2F;encoding acceleration</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffnvcodec.html">ffnvcodec</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencl - OpenCL processing</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencl.html">opencl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengl - OpenGL rendering</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/opengl-registry.html">opengl-registry</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openh264 - H.264 de&#x2F;encoding via openh264</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openh264.html">openh264</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openjpeg - JPEG 2000 de&#x2F;encoding via OpenJPEG</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openjpeg.html">openjpeg</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openmpt - Decoding tracked files via libopenmpt</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libopenmpt.html">libopenmpt</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - Needed for https support if gnutls, libtls or mbedtls is not used</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [nonfree]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opus - Opus de&#x2F;encoding via libopus</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opus.html">opus</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>postproc - Build the postproc library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [gpl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>qsv - Intel QSV Codec</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mfx-dispatch.html">mfx-dispatch</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sdl2 - Sdl2 support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/sdl2.html">sdl2</a>
+              [x11]
+               (default-features: false)
+               (platform: linux)
+            </li>
+            <li><a href="/en/package/sdl2.html">sdl2</a>
+              
+              
+               (platform: !linux)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>snappy - Snappy compression, needed for hap encoding</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/snappy.html">snappy</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>soxr - Include libsoxr resampling</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [swresample]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/soxr.html">soxr</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>speex - Speex de&#x2F;encoding via libspeex</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/speex.html">speex</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>srt - Haivision SRT protocol</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libsrt.html">libsrt</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ssh - SFTP protocol via libssh</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libssh.html">libssh</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>swresample - Build the swresample library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>swscale - Build the swscale library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tensorflow - TensorFlow as a DNN module backend for DNN based filters like sr</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/tensorflow.html">tensorflow</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tesseract - Tesseract, needed for ocr filter</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/tesseract.html">tesseract</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>theora - Theora encoding via libtheora</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libtheora.html">libtheora</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>version3 - Upgrade (L)GPL to version 3</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>vorbis - Vorbis en&#x2F;decoding via libvorbis, native implementation exists</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libvorbis.html">libvorbis</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vpx - VP8 and VP9 de&#x2F;encoding via libvpx</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [avcodec]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/libvpx.html">libvpx</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>webp - WebP encoding via libwebp</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libwebp.html">libwebp</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>x264 - H.264 encoding via x264</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [gpl]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/x264.html">x264</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>x265 - HEVC encoding via x265</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              [gpl]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/x265.html">x265</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xml2 - XML parsing using the C library libxml2, needed for dash demuxing support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libxml2.html">libxml2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zlib - zlib support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

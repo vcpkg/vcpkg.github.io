@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -236,7 +237,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install magnum-plugins</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port magnum-plugins</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -275,457 +285,485 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            assimpimporter - AssimpImporter plugin
-            <ul>
-              <li><a href="/en/package/assimp.html">assimp</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [anyimageimporter]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            basisimageconverter - BasisImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            basisimporter - BasisImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cgltfimporter - CgltfImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [anyimageimporter]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ddsimporter - DdsImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            devilimageimporter - DevIlImageImporter plugin
-            <ul>
-              <li><a href="/en/package/devil.html">devil</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            drflacaudioimporter - DrFlacAudioImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            drmp3audioimporter - DrMp3AudioImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            drwavaudioimporter - DrWavAudioImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            freetypefont - FreeTypeFont plugin
-            <ul>
-              <li><a href="/en/package/freetype.html">freetype</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [text]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            glslangshaderconverter - GlslangShaderConverter plugin
-            <ul>
-              <li><a href="/en/package/glslang.html">glslang</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [shadertools]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            harfbuzzfont - HarfBuzzFont plugin
-            <ul>
-              <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum-plugins.html">magnum-plugins</a>
-                  [freetypefont]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            icoimporter - IcoImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jpegimageconverter - JpegImageConverter plugin
-            <ul>
-              <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jpegimporter - JpegImporter plugin
-            <ul>
-              <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ktximageconverter - KtxImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            ktximporter - KtxImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            meshoptimizersceneconverter - MeshOptimizerSceneConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/meshoptimizer.html">meshoptimizer</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            miniexrimageconverter - MiniExrImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openddl - OpenDdl library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            openexrimageconverter - OpenExrImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/openexr.html">openexr</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openexrimporter - OpenExrImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/openexr.html">openexr</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengeximporter - OpenGexImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [anyimageimporter]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum-plugins.html">magnum-plugins</a>
-                  [openddl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pngimageconverter - PngImageConverter plugin
-            <ul>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pngimporter - PngImporter plugin
-            <ul>
-              <li><a href="/en/package/libpng.html">libpng</a>
-                
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            spirvtoolsshaderconverter - SpirvToolsShaderConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [shadertools]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/spirv-tools.html">spirv-tools</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stanfordimporter - StanfordImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stanfordsceneconverter - StanfordSceneConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stbdxtimageconverter - StbDxtImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stbimageconverter - StbImageConverter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stbimageimporter - StbImageImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stbtruetypefont - StbTrueTypeFont plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [text]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stbvorbisaudioimporter - StbVorbisAudioImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [audio]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            stlimporter - StlImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tinygltfimporter - TinyGltfImporter plugin
-            <ul>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [anyimageimporter]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/magnum.html">magnum</a>
-                  [trade]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install magnum-plugins</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port magnum-plugins</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>assimpimporter - AssimpImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/assimp.html">assimp</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [anyimageimporter]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>basisimageconverter - BasisImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>basisimporter - BasisImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>cgltfimporter - CgltfImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [anyimageimporter]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ddsimporter - DdsImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>devilimageimporter - DevIlImageImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/devil.html">devil</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>drflacaudioimporter - DrFlacAudioImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>drmp3audioimporter - DrMp3AudioImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>drwavaudioimporter - DrWavAudioImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>freetypefont - FreeTypeFont plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freetype.html">freetype</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [text]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>glslangshaderconverter - GlslangShaderConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/glslang.html">glslang</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [shadertools]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>harfbuzzfont - HarfBuzzFont plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum-plugins.html">magnum-plugins</a>
+              [freetypefont]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>icoimporter - IcoImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jpegimageconverter - JpegImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jpegimporter - JpegImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ktximageconverter - KtxImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>ktximporter - KtxImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>meshoptimizersceneconverter - MeshOptimizerSceneConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/meshoptimizer.html">meshoptimizer</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>miniexrimageconverter - MiniExrImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openddl - OpenDdl library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>openexrimageconverter - OpenExrImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/openexr.html">openexr</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openexrimporter - OpenExrImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/openexr.html">openexr</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengeximporter - OpenGexImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [anyimageimporter]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum-plugins.html">magnum-plugins</a>
+              [openddl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pngimageconverter - PngImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pngimporter - PngImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpng.html">libpng</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>spirvtoolsshaderconverter - SpirvToolsShaderConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [shadertools]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/spirv-tools.html">spirv-tools</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stanfordimporter - StanfordImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stanfordsceneconverter - StanfordSceneConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stbdxtimageconverter - StbDxtImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stbimageconverter - StbImageConverter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stbimageimporter - StbImageImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stbtruetypefont - StbTrueTypeFont plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [text]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stbvorbisaudioimporter - StbVorbisAudioImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [audio]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>stlimporter - StlImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tinygltfimporter - TinyGltfImporter plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [anyimageimporter]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/magnum.html">magnum</a>
+              [trade]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

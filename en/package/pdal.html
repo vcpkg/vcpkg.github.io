@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -272,7 +273,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install pdal</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port pdal</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -306,108 +316,102 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            draco - Build the Draco plugin
-            <ul>
-              <li><a href="/en/package/draco.html">draco</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            e57 - Build the E57 plugin
-            <ul>
-              <li><a href="/en/package/xerces-c.html">xerces-c</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            hdf - Build the HDF plugin
-            <ul>
-              <li><a href="/en/package/hdf5.html">hdf5</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            i3s - Build the SLPK&#x2F;I3S plugins
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            liblzma - Support for compression&#x2F;decompression with LZMA
-            <ul>
-              <li><a href="/en/package/liblzma.html">liblzma</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            pgpointcloud - Build the PgPointCloud plugin
-            <ul>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            supported-plugins - Default set of plugins, dependent on platform
-            <ul>
-              <li><a href="/en/package/pdal.html">pdal</a>
-                  [draco, 
-                  e57, 
-                  i3s]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/pdal.html">pdal</a>
-                  [hdf, 
-                  pgpointcloud]
-                 (default-features: false)
-                 (platform: !uwp)
-              </li>
-            </ul>
-          </li>
-          <li>
-            zstd - Support for ZSTD compression&#x2F;decompression
-            <ul>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install pdal</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port pdal</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>draco - Build the Draco plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/draco.html">draco</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>e57 - Build the E57 plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/xerces-c.html">xerces-c</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>hdf - Build the HDF plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/hdf5.html">hdf5</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>i3s - Build the SLPK&#x2F;I3S plugins</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>liblzma - Support for compression&#x2F;decompression with LZMA</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/liblzma.html">liblzma</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pgpointcloud - Build the PgPointCloud plugin</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>supported-plugins - Default set of plugins, dependent on platform</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pdal.html">pdal</a>
+              [draco, e57, i3s]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/pdal.html">pdal</a>
+              [hdf, pgpointcloud]
+               (default-features: false)
+               (platform: !uwp)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>zstd - Support for ZSTD compression&#x2F;decompression</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

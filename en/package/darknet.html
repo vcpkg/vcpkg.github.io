@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -248,7 +249,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install darknet</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port darknet</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -281,132 +291,113 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            cuda - Build darknet with support for CUDA
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cudnn - Build darknet with support for cuDNN
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-              <li><a href="/en/package/cudnn.html">cudnn</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            full - Build darknet fully featured
-            <ul>
-              <li><a href="/en/package/darknet.html">darknet</a>
-                  [cuda, 
-                  cudnn, 
-                  opencv-cuda]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv-base - Build darknet with support for latest version of OpenCV
-            <ul>
-              <li><a href="/en/package/opencv.html">opencv</a>
-                  [contrib, 
-                  dnn, 
-                  ffmpeg]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv-cuda - Build darknet with support for latest version of CUDA-enabled OpenCV
-            <ul>
-              <li><a href="/en/package/opencv.html">opencv</a>
-                  [contrib, 
-                  cuda, 
-                  dnn, 
-                  ffmpeg]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv2-base - Build darknet with support for OpenCV2
-            <ul>
-              <li><a href="/en/package/opencv2.html">opencv2</a>
-                  [ffmpeg]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv2-cuda - Build darknet with support for CUDA-enabled OpenCV2
-            <ul>
-              <li><a href="/en/package/opencv2.html">opencv2</a>
-                  [cuda, 
-                  ffmpeg]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv3-base - Build darknet with support for OpenCV3
-            <ul>
-              <li><a href="/en/package/opencv3.html">opencv3</a>
-                  [contrib, 
-                  dnn, 
-                  ffmpeg]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv3-cuda - Build darknet with support for CUDA-enabled OpenCV3
-            <ul>
-              <li><a href="/en/package/opencv3.html">opencv3</a>
-                  [contrib, 
-                  cuda, 
-                  dnn, 
-                  ffmpeg]
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install darknet</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port darknet</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>cuda - Build darknet with support for CUDA</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>cudnn - Build darknet with support for cuDNN</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/cudnn.html">cudnn</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>full - Build darknet fully featured</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/darknet.html">darknet</a>
+              [cuda, cudnn, opencv-cuda]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv-base - Build darknet with support for latest version of OpenCV</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv.html">opencv</a>
+              [contrib, dnn, ffmpeg]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv-cuda - Build darknet with support for latest version of CUDA-enabled OpenCV</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv.html">opencv</a>
+              [contrib, cuda, dnn, ffmpeg]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv2-base - Build darknet with support for OpenCV2</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv2.html">opencv2</a>
+              [ffmpeg]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv2-cuda - Build darknet with support for CUDA-enabled OpenCV2</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv2.html">opencv2</a>
+              [cuda, ffmpeg]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv3-base - Build darknet with support for OpenCV3</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv3.html">opencv3</a>
+              [contrib, dnn, ffmpeg]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv3-cuda - Build darknet with support for CUDA-enabled OpenCV3</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv3.html">opencv3</a>
+              [contrib, cuda, dnn, ffmpeg]
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

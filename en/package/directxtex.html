@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          <a href="https://github.com/microsoft/DirectXTex/wiki">https://github.com/microsoft/DirectXTex/wiki</a>
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -247,7 +248,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install directxtex</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port directxtex</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -310,60 +320,37 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            dx11 - Build with DirectX11 support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            dx12 - Build with DirectX12 support for Windows 10&#x2F;Windows 11
-            <ul>
-              <li><a href="/en/package/directx-headers.html">directx-headers</a>
-                
-                 (platform: windows &amp; !xbox)
-              </li>
-            </ul>
-          </li>
-          <li>
-            openexr - Enable OpenEXR support
-            <ul>
-              <li><a href="/en/package/openexr.html">openexr</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            spectre - Build Spectre-mitigated library
-            <ul>
-            </ul>
-          </li>
-          <li>
-            tools - texture command-line tools
-            <ul>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install directxtex</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port directxtex</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>dx11 - Build with DirectX11 support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>dx12 - Build with DirectX12 support for Windows 10&#x2F;Windows 11</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/directx-headers.html">directx-headers</a>
+              
+              
+               (platform: windows &amp; !xbox)
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>openexr - Enable OpenEXR support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openexr.html">openexr</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>spectre - Build Spectre-mitigated library</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>tools - texture command-line tools</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

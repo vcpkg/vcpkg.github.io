@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -380,7 +381,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install qtwebengine</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port qtwebengine</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -415,60 +425,37 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            default-features - Platform-dependent default features
-            <ul>
-            </ul>
-          </li>
-          <li>
-            geolocation - Build with Geolocation
-            <ul>
-              <li><a href="/en/package/qtlocation.html">qtlocation</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            proprietary-codecs - Enables the use of proprietary codecs such as h.264&#x2F;h.265 and MP3.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            spellchecker - Provides a spellchecker
-            <ul>
-            </ul>
-          </li>
-          <li>
-            webchannel - Provides QtWebChannel integration
-            <ul>
-              <li><a href="/en/package/qtwebchannel.html">qtwebchannel</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install qtwebengine</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port qtwebengine</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>default-features - Platform-dependent default features</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>geolocation - Build with Geolocation</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtlocation.html">qtlocation</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>proprietary-codecs - Enables the use of proprietary codecs such as h.264&#x2F;h.265 and MP3.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>spellchecker - Provides a spellchecker</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>webchannel - Provides QtWebChannel integration</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qtwebchannel.html">qtwebchannel</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

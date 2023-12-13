@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -308,7 +309,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install openmvg</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port openmvg</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -341,55 +351,38 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            opencv - opencv support for openmvg
-            <ul>
-              <li><a href="/en/package/opencv.html">opencv</a>
-                  [contrib]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openmp - openmp support for openmvg
-            <ul>
-            </ul>
-          </li>
-          <li>
-            software - build openMVG tools
-            <ul>
-              <li><a href="/en/package/qt5-base.html">qt5-base</a>
-                
-                
-              </li>
-              <li><a href="/en/package/qt5-svg.html">qt5-svg</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install openmvg</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port openmvg</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>opencv - opencv support for openmvg</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv.html">opencv</a>
+              [contrib]
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>openmp - openmp support for openmvg</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>software - build openMVG tools</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-base.html">qt5-base</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/qt5-svg.html">qt5-svg</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

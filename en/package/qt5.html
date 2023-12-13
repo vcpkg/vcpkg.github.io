@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -223,7 +224,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install qt5</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port qt5</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -281,449 +291,459 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            3d - 
-            <ul>
-              <li><a href="/en/package/qt5-3d.html">qt5-3d</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            activeqt - Windows Only
-            <ul>
-              <li><a href="/en/package/qt5-activeqt.html">qt5-activeqt</a>
-                
-                 (platform: windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            all - Install all Qt5 submodules (Warning: Could take a long time and fail...)
-            <ul>
-              <li><a href="/en/package/qt5.html">qt5</a>
-                  [3d, 
-                  activeqt, 
-                  charts, 
-                  connectivity, 
-                  datavis3d, 
-                  declarative, 
-                  doc, 
-                  extras, 
-                  gamepad, 
-                  graphicaleffects, 
-                  imageformats, 
-                  location, 
-                  mqtt, 
-                  multimedia, 
-                  networkauth, 
-                  purchasing, 
-                  quickcontrols, 
-                  quickcontrols2, 
-                  remoteobjects, 
-                  script, 
-                  scxml, 
-                  sensors, 
-                  serialbus, 
-                  serialport, 
-                  speech, 
-                  svg, 
-                  tools, 
-                  translations, 
-                  virtualkeyboard, 
-                  webchannel, 
-                  webglplugin, 
-                  websockets, 
-                  webview, 
-                  xmlpatterns]
-                
-                
-              </li>
-              <li><a href="/en/package/qt5.html">qt5</a>
-                  [webengine]
-                 (default-features: false)
-                 (platform: !static)
-              </li>
-              <li><a href="/en/package/qt5.html">qt5</a>
-                  [wayland]
-                 (default-features: false)
-                 (platform: !windows)
-              </li>
-              <li><a href="/en/package/qt5-base.html">qt5-base</a>
-                  [icu, 
-                  mysqlplugin, 
-                  postgresqlplugin]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            charts - 
-            <ul>
-              <li><a href="/en/package/qt5-charts.html">qt5-charts</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            connectivity - 
-            <ul>
-              <li><a href="/en/package/qt5-connectivity.html">qt5-connectivity</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            datavis3d - 
-            <ul>
-              <li><a href="/en/package/qt5-datavis3d.html">qt5-datavis3d</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            declarative - 
-            <ul>
-              <li><a href="/en/package/qt5-declarative.html">qt5-declarative</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            doc - 
-            <ul>
-              <li><a href="/en/package/qt5-doc.html">qt5-doc</a>
-                
-                 (platform: !windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            essentials - Build the essential qt modules
-            <ul>
-              <li><a href="/en/package/qt5.html">qt5</a>
-                  [activeqt, 
-                  declarative, 
-                  imageformats, 
-                  multimedia, 
-                  networkauth, 
-                  quickcontrols, 
-                  quickcontrols2, 
-                  svg, 
-                  tools, 
-                  translations, 
-                  websockets]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            extras - 
-            <ul>
-              <li><a href="/en/package/qt5-androidextras.html">qt5-androidextras</a>
-                
-                 (platform: android)
-              </li>
-              <li><a href="/en/package/qt5-macextras.html">qt5-macextras</a>
-                
-                 (platform: osx)
-              </li>
-              <li><a href="/en/package/qt5-winextras.html">qt5-winextras</a>
-                  [declarative]
-                
-                 (platform: windows)
-              </li>
-              <li><a href="/en/package/qt5-x11extras.html">qt5-x11extras</a>
-                
-                 (platform: linux)
-              </li>
-            </ul>
-          </li>
-          <li>
-            gamepad - 
-            <ul>
-              <li><a href="/en/package/qt5-gamepad.html">qt5-gamepad</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            graphicaleffects - 
-            <ul>
-              <li><a href="/en/package/qt5-graphicaleffects.html">qt5-graphicaleffects</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            imageformats - 
-            <ul>
-              <li><a href="/en/package/qt5-imageformats.html">qt5-imageformats</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            latest - (deprecated)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            location - 
-            <ul>
-              <li><a href="/en/package/qt5-location.html">qt5-location</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mqtt - 
-            <ul>
-              <li><a href="/en/package/qt5-mqtt.html">qt5-mqtt</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            multimedia - 
-            <ul>
-              <li><a href="/en/package/qt5-multimedia.html">qt5-multimedia</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            networkauth - 
-            <ul>
-              <li><a href="/en/package/qt5-networkauth.html">qt5-networkauth</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            purchasing - 
-            <ul>
-              <li><a href="/en/package/qt5-purchasing.html">qt5-purchasing</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            quickcontrols - (deprecated)
-            <ul>
-              <li><a href="/en/package/qt5-quickcontrols.html">qt5-quickcontrols</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            quickcontrols2 - 
-            <ul>
-              <li><a href="/en/package/qt5-quickcontrols2.html">qt5-quickcontrols2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            remoteobjects - 
-            <ul>
-              <li><a href="/en/package/qt5-remoteobjects.html">qt5-remoteobjects</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            script - (deprecated)
-            <ul>
-              <li><a href="/en/package/qt5-script.html">qt5-script</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            scxml - 
-            <ul>
-              <li><a href="/en/package/qt5-scxml.html">qt5-scxml</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sensors - 
-            <ul>
-              <li><a href="/en/package/qt5-sensors.html">qt5-sensors</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            serialbus - 
-            <ul>
-              <li><a href="/en/package/qt5-serialbus.html">qt5-serialbus</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            serialport - 
-            <ul>
-              <li><a href="/en/package/qt5-serialport.html">qt5-serialport</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            speech - 
-            <ul>
-              <li><a href="/en/package/qt5-speech.html">qt5-speech</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            svg - 
-            <ul>
-              <li><a href="/en/package/qt5-svg.html">qt5-svg</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tools - 
-            <ul>
-              <li><a href="/en/package/qt5-tools.html">qt5-tools</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            translations - 
-            <ul>
-              <li><a href="/en/package/qt5-translations.html">qt5-translations</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            virtualkeyboard - 
-            <ul>
-              <li><a href="/en/package/qt5-virtualkeyboard.html">qt5-virtualkeyboard</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            wayland - 
-            <ul>
-              <li><a href="/en/package/qt5-wayland.html">qt5-wayland</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            webchannel - 
-            <ul>
-              <li><a href="/en/package/qt5-webchannel.html">qt5-webchannel</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            webengine - 
-            <ul>
-              <li><a href="/en/package/qt5-webengine.html">qt5-webengine</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            webglplugin - 
-            <ul>
-              <li><a href="/en/package/qt5-webglplugin.html">qt5-webglplugin</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            websockets - 
-            <ul>
-              <li><a href="/en/package/qt5-websockets.html">qt5-websockets</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            webview - 
-            <ul>
-              <li><a href="/en/package/qt5-webview.html">qt5-webview</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            xmlpatterns - (deprecated)
-            <ul>
-              <li><a href="/en/package/qt5-xmlpatterns.html">qt5-xmlpatterns</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install qt5</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port qt5</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>3d - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-3d.html">qt5-3d</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>activeqt - Windows Only</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-activeqt.html">qt5-activeqt</a>
+              
+              
+               (platform: windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>all - Install all Qt5 submodules (Warning: Could take a long time and fail...)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5.html">qt5</a>
+              [3d, activeqt, charts, connectivity, datavis3d, declarative, doc, extras, gamepad, graphicaleffects, imageformats, location, mqtt, multimedia, networkauth, purchasing, quickcontrols, quickcontrols2, remoteobjects, script, scxml, sensors, serialbus, serialport, speech, svg, tools, translations, virtualkeyboard, webchannel, webglplugin, websockets, webview, xmlpatterns]
+              
+              
+            </li>
+            <li><a href="/en/package/qt5.html">qt5</a>
+              [webengine]
+               (default-features: false)
+               (platform: !static)
+            </li>
+            <li><a href="/en/package/qt5.html">qt5</a>
+              [wayland]
+               (default-features: false)
+               (platform: !windows)
+            </li>
+            <li><a href="/en/package/qt5-base.html">qt5-base</a>
+              [icu, mysqlplugin, postgresqlplugin]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>charts - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-charts.html">qt5-charts</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>connectivity - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-connectivity.html">qt5-connectivity</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>datavis3d - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-datavis3d.html">qt5-datavis3d</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>declarative - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-declarative.html">qt5-declarative</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>doc - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-doc.html">qt5-doc</a>
+              
+              
+               (platform: !windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>essentials - Build the essential qt modules</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5.html">qt5</a>
+              [activeqt, declarative, imageformats, multimedia, networkauth, quickcontrols, quickcontrols2, svg, tools, translations, websockets]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>extras - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-androidextras.html">qt5-androidextras</a>
+              
+              
+               (platform: android)
+            </li>
+            <li><a href="/en/package/qt5-macextras.html">qt5-macextras</a>
+              
+              
+               (platform: osx)
+            </li>
+            <li><a href="/en/package/qt5-winextras.html">qt5-winextras</a>
+              [declarative]
+              
+               (platform: windows)
+            </li>
+            <li><a href="/en/package/qt5-x11extras.html">qt5-x11extras</a>
+              
+              
+               (platform: linux)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gamepad - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-gamepad.html">qt5-gamepad</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>graphicaleffects - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-graphicaleffects.html">qt5-graphicaleffects</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>imageformats - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-imageformats.html">qt5-imageformats</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>latest - (deprecated)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>location - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-location.html">qt5-location</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>mqtt - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-mqtt.html">qt5-mqtt</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>multimedia - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-multimedia.html">qt5-multimedia</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>networkauth - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-networkauth.html">qt5-networkauth</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>purchasing - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-purchasing.html">qt5-purchasing</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>quickcontrols - (deprecated)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-quickcontrols.html">qt5-quickcontrols</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>quickcontrols2 - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-quickcontrols2.html">qt5-quickcontrols2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>remoteobjects - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-remoteobjects.html">qt5-remoteobjects</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>script - (deprecated)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-script.html">qt5-script</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>scxml - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-scxml.html">qt5-scxml</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sensors - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-sensors.html">qt5-sensors</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>serialbus - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-serialbus.html">qt5-serialbus</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>serialport - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-serialport.html">qt5-serialport</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>speech - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-speech.html">qt5-speech</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>svg - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-svg.html">qt5-svg</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tools - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-tools.html">qt5-tools</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>translations - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-translations.html">qt5-translations</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>virtualkeyboard - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-virtualkeyboard.html">qt5-virtualkeyboard</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>wayland - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-wayland.html">qt5-wayland</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>webchannel - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-webchannel.html">qt5-webchannel</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>webengine - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-webengine.html">qt5-webengine</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>webglplugin - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-webglplugin.html">qt5-webglplugin</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>websockets - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-websockets.html">qt5-websockets</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>webview - </div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-webview.html">qt5-webview</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>xmlpatterns - (deprecated)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/qt5-xmlpatterns.html">qt5-xmlpatterns</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -278,7 +279,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install paraview</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port paraview</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -300,102 +310,91 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            all-modules - enables the build of all paraview modules
-            <ul>
-              <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
-                
-                
-              </li>
-              <li><a href="/en/package/gdal.html">gdal</a>
-                
-                
-              </li>
-              <li><a href="/en/package/laszip.html">laszip</a>
-                
-                
-              </li>
-              <li><a href="/en/package/pdal.html">pdal</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cuda - enables cuda within paraview
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [cuda]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mpi - enables cuda within paraview
-            <ul>
-              <li><a href="/en/package/hdf5.html">hdf5</a>
-                  [parallel]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [mpi]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            python - enables the build of python wrappers
-            <ul>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [python]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tools - Build paraview tools
-            <ul>
-            </ul>
-          </li>
-          <li>
-            vtkm - enables vtkm for the build of paraview
-            <ul>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [vtkm]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install paraview</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port paraview</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>all-modules - enables the build of all paraview modules</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/ffmpeg.html">ffmpeg</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/gdal.html">gdal</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/laszip.html">laszip</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/pdal.html">pdal</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>cuda - enables cuda within paraview</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [cuda]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>mpi - enables cuda within paraview</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/hdf5.html">hdf5</a>
+              [parallel]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [mpi]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>python - enables the build of python wrappers</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [python]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tools - Build paraview tools</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>vtkm - enables vtkm for the build of paraview</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [vtkm]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

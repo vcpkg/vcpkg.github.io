@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -320,7 +321,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install arrow</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port arrow</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -387,144 +397,115 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            acero - Acero support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            csv - CSV support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            cuda - cuda support
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            dataset - Dataset support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            example - Install the minimal example (source code)
-            <ul>
-            </ul>
-          </li>
-          <li>
-            filesystem - Filesystem support
-            <ul>
-            </ul>
-          </li>
-          <li>
-            flight - Arrow Flight RPC support
-            <ul>
-              <li><a href="/en/package/abseil.html">abseil</a>
-                
-                
-              </li>
-              <li><a href="/en/package/c-ares.html">c-ares</a>
-                
-                
-              </li>
-              <li><a href="/en/package/grpc.html">grpc</a>
-                
-                
-              </li>
-              <li><a href="/en/package/protobuf.html">protobuf</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            gcs - GCS support
-            <ul>
-              <li><a href="/en/package/google-cloud-cpp.html">google-cloud-cpp</a>
-                  [storage]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            jemalloc - jemalloc allocator
-            <ul>
-            </ul>
-          </li>
-          <li>
-            json - JSON support
-            <ul>
-              <li><a href="/en/package/rapidjson.html">rapidjson</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mimalloc - mimalloc allocator
-            <ul>
-            </ul>
-          </li>
-          <li>
-            orc - ORC support
-            <ul>
-              <li><a href="/en/package/orc.html">orc</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            parquet - Parquet support
-            <ul>
-              <li><a href="/en/package/rapidjson.html">rapidjson</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            s3 - S3 support
-            <ul>
-              <li><a href="/en/package/aws-sdk-cpp.html">aws-sdk-cpp</a>
-                  [cognito-identity, 
-                  config, 
-                  identity-management, 
-                  s3, 
-                  sts, 
-                  transfer]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install arrow</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port arrow</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>acero - Acero support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>csv - CSV support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>cuda - cuda support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>dataset - Dataset support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>example - Install the minimal example (source code)</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>filesystem - Filesystem support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>flight - Arrow Flight RPC support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/abseil.html">abseil</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/c-ares.html">c-ares</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/grpc.html">grpc</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/protobuf.html">protobuf</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>gcs - GCS support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/google-cloud-cpp.html">google-cloud-cpp</a>
+              [storage]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>jemalloc - jemalloc allocator</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>json - JSON support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/rapidjson.html">rapidjson</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>mimalloc - mimalloc allocator</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>orc - ORC support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/orc.html">orc</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>parquet - Parquet support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/rapidjson.html">rapidjson</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>s3 - S3 support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/aws-sdk-cpp.html">aws-sdk-cpp</a>
+              [cognito-identity, config, identity-management, s3, sts, transfer]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -266,7 +267,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install rtabmap</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port rtabmap</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -290,123 +300,118 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            gui - Build RTAB-Map with GUI support (Qt)
-            <ul>
-              <li><a href="/en/package/pcl.html">pcl</a>
-                  [qt]
-                 (default-features: false)
-                
-              </li>
-              <li><a href="/en/package/qtbase.html">qtbase</a>
-                  [gui, 
-                  opengl, 
-                  widgets]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            k4w2 - Build RTAB-Map with Kinect For Windows SDK 2.0 camera driver
-            <ul>
-              <li><a href="/en/package/kinectsdk2.html">kinectsdk2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            octomap - Build RTAB-Map with OctoMap support
-            <ul>
-              <li><a href="/en/package/octomap.html">octomap</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv-contrib - Use OpenCV with contrib modules (e.g., xfeatures2d, aruco)
-            <ul>
-              <li><a href="/en/package/opencv.html">opencv</a>
-                  [contrib]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv-cuda - Use OpenCV with CUDA (accelerated SIFT ad SURF GPU options)
-            <ul>
-              <li><a href="/en/package/opencv.html">opencv</a>
-                  [cuda]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opencv-nonfree - Use OpenCV with nonfree module (surf feature)
-            <ul>
-              <li><a href="/en/package/opencv.html">opencv</a>
-                  [nonfree]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openni2 - Build RTAB-Map with OpenNI2 camera driver
-            <ul>
-              <li><a href="/en/package/kinectsdk1.html">kinectsdk1</a>
-                
-                
-              </li>
-              <li><a href="/en/package/openni2.html">openni2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            realsense2 - Build RTAB-Map with RealSense2 camera driver
-            <ul>
-              <li><a href="/en/package/realsense2.html">realsense2</a>
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tools - Build RTAB-Map&#39;s tools
-            <ul>
-              <li><a href="/en/package/yaml-cpp.html">yaml-cpp</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install rtabmap</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port rtabmap</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>gui - Build RTAB-Map with GUI support (Qt)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcl.html">pcl</a>
+              [qt]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/qtbase.html">qtbase</a>
+              [gui, opengl, widgets]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>k4w2 - Build RTAB-Map with Kinect For Windows SDK 2.0 camera driver</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/kinectsdk2.html">kinectsdk2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>octomap - Build RTAB-Map with OctoMap support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/octomap.html">octomap</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv-contrib - Use OpenCV with contrib modules (e.g., xfeatures2d, aruco)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv.html">opencv</a>
+              [contrib]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv-cuda - Use OpenCV with CUDA (accelerated SIFT ad SURF GPU options)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv.html">opencv</a>
+              [cuda]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opencv-nonfree - Use OpenCV with nonfree module (surf feature)</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opencv.html">opencv</a>
+              [nonfree]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openni2 - Build RTAB-Map with OpenNI2 camera driver</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/kinectsdk1.html">kinectsdk1</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/openni2.html">openni2</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>realsense2 - Build RTAB-Map with RealSense2 camera driver</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/realsense2.html">realsense2</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tools - Build RTAB-Map&#39;s tools</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/yaml-cpp.html">yaml-cpp</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

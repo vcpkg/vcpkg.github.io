@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -235,7 +236,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install libzip</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port libzip</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -270,102 +280,89 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            bzip2 - Support bzip2-compressed zip archives
-            <ul>
-              <li><a href="/en/package/bzip2.html">bzip2</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            commoncrypto - AES (encryption) support using Apple&#39;s Common Crypto API
-            <ul>
-            </ul>
-          </li>
-          <li>
-            default-aes - Use default AES
-            <ul>
-              <li><a href="/en/package/libzip.html">libzip</a>
-                  [commoncrypto]
-                 (default-features: false)
-                 (platform: osx)
-              </li>
-              <li><a href="/en/package/libzip.html">libzip</a>
-                  [wincrypto]
-                 (default-features: false)
-                 (platform: windows)
-              </li>
-              <li><a href="/en/package/libzip.html">libzip</a>
-                  [openssl]
-                 (default-features: false)
-                 (platform: !(windows | osx))
-              </li>
-            </ul>
-          </li>
-          <li>
-            liblzma - Support XZ compressed zip archives using liblzma
-            <ul>
-              <li><a href="/en/package/liblzma.html">liblzma</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mbedtls - AES (encryption) support using mbedtls
-            <ul>
-              <li><a href="/en/package/mbedtls.html">mbedtls</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openssl - AES (encryption) support using OpenSSL
-            <ul>
-              <li><a href="/en/package/openssl.html">openssl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            wincrypto - AES (encryption) support using Windows Crypto API
-            <ul>
-            </ul>
-          </li>
-          <li>
-            zstd - Support Zstandard-compressed zip archives
-            <ul>
-              <li><a href="/en/package/zstd.html">zstd</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install libzip</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port libzip</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>bzip2 - Support bzip2-compressed zip archives</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/bzip2.html">bzip2</a>
+              
+              
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>commoncrypto - AES (encryption) support using Apple&#39;s Common Crypto API</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>default-aes - Use default AES</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libzip.html">libzip</a>
+              [commoncrypto]
+               (default-features: false)
+               (platform: osx)
+            </li>
+            <li><a href="/en/package/libzip.html">libzip</a>
+              [wincrypto]
+               (default-features: false)
+               (platform: windows)
+            </li>
+            <li><a href="/en/package/libzip.html">libzip</a>
+              [openssl]
+               (default-features: false)
+               (platform: !(windows | osx))
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>liblzma - Support XZ compressed zip archives using liblzma</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/liblzma.html">liblzma</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>mbedtls - AES (encryption) support using mbedtls</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mbedtls.html">mbedtls</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openssl - AES (encryption) support using OpenSSL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openssl.html">openssl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>wincrypto - AES (encryption) support using Windows Crypto API</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>zstd - Support Zstandard-compressed zip archives</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zstd.html">zstd</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

@@ -211,6 +211,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          <a href="https://drogon.docsforge.com/master/overview/">https://drogon.docsforge.com/master/overview/</a>
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -259,7 +260,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install drogon</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port drogon</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -299,103 +309,91 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            ctl - Build drogon_ctl tool.
-            <ul>
-              <li><a href="/en/package/drogon.html">drogon</a>
-                  [ctl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            mysql - Support reading and writing from&#x2F;to MySQL databases.
-            <ul>
-              <li><a href="/en/package/drogon.html">drogon</a>
-                  [orm]
-                
-                
-              </li>
-              <li><a href="/en/package/libmariadb.html">libmariadb</a>
-                  [iconv]
-                
-                 (platform: osx)
-              </li>
-              <li><a href="/en/package/libmariadb.html">libmariadb</a>
-                
-                 (platform: !osx)
-              </li>
-            </ul>
-          </li>
-          <li>
-            orm - Build with object-relational mapping support.
-            <ul>
-            </ul>
-          </li>
-          <li>
-            postgres - Support reading and writing from&#x2F;to Postgres databases.
-            <ul>
-              <li><a href="/en/package/drogon.html">drogon</a>
-                  [orm]
-                
-                
-              </li>
-              <li><a href="/en/package/libpq.html">libpq</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            redis - Support reading and writing from&#x2F;to Redis databases.
-            <ul>
-              <li><a href="/en/package/drogon.html">drogon</a>
-                  [orm]
-                
-                
-              </li>
-              <li><a href="/en/package/hiredis.html">hiredis</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            sqlite3 - Support reading and writing from&#x2F;to SQLite databases.
-            <ul>
-              <li><a href="/en/package/drogon.html">drogon</a>
-                  [orm]
-                
-                
-              </li>
-              <li><a href="/en/package/sqlite3.html">sqlite3</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install drogon</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port drogon</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>ctl - Build drogon_ctl tool.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/drogon.html">drogon</a>
+              [ctl]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>mysql - Support reading and writing from&#x2F;to MySQL databases.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/drogon.html">drogon</a>
+              [orm]
+              
+              
+            </li>
+            <li><a href="/en/package/libmariadb.html">libmariadb</a>
+              [iconv]
+              
+               (platform: osx)
+            </li>
+            <li><a href="/en/package/libmariadb.html">libmariadb</a>
+              
+              
+               (platform: !osx)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>orm - Build with object-relational mapping support.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="carrot">></span>postgres - Support reading and writing from&#x2F;to Postgres databases.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/drogon.html">drogon</a>
+              [orm]
+              
+              
+            </li>
+            <li><a href="/en/package/libpq.html">libpq</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>redis - Support reading and writing from&#x2F;to Redis databases.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/drogon.html">drogon</a>
+              [orm]
+              
+              
+            </li>
+            <li><a href="/en/package/hiredis.html">hiredis</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>sqlite3 - Support reading and writing from&#x2F;to SQLite databases.</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/drogon.html">drogon</a>
+              [orm]
+              
+              
+            </li>
+            <li><a href="/en/package/sqlite3.html">sqlite3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

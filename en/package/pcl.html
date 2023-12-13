@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -356,7 +357,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install pcl</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port pcl</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -421,166 +431,167 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            apps - Build application examples&#x2F;samples that show how PCL works
-            <ul>
-              <li><a href="/en/package/pcl.html">pcl</a>
-                  [opengl, 
-                  openni2, 
-                  qt, 
-                  vtk]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            cuda - CUDA support for PCL
-            <ul>
-              <li><a href="/en/package/cuda.html">cuda</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            examples - Build PCL examples
-            <ul>
-              <li><a href="/en/package/pcl.html">pcl</a>
-                  [visualization]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            libusb - Build USB RGBD-Camera drivers
-            <ul>
-              <li><a href="/en/package/libusb.html">libusb</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            opengl - OpenGL support for PCL
-            <ul>
-              <li><a href="/en/package/opengl.html">opengl</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            openni2 - OpenNI2 support for PCL
-            <ul>
-              <li><a href="/en/package/openni2.html">openni2</a>
-                
-                
-              </li>
-              <li><a href="/en/package/pcl.html">pcl</a>
-                  [libusb]
-                 (default-features: false)
-                 (platform: !windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            pcap - PCAP support for PCL
-            <ul>
-              <li><a href="/en/package/libpcap.html">libpcap</a>
-                
-                 (platform: !windows)
-              </li>
-              <li><a href="/en/package/winpcap.html">winpcap</a>
-                
-                 (platform: windows)
-              </li>
-            </ul>
-          </li>
-          <li>
-            qt - Qt support for PCL
-            <ul>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [qt]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            simulation - Build Point Cloud Library Simulation
-            <ul>
-              <li><a href="/en/package/glew.html">glew</a>
-                
-                
-              </li>
-              <li><a href="/en/package/pcl.html">pcl</a>
-                  [opengl]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            surface-on-nurbs - Fitting NURBS to point clouds
-            <ul>
-              <li><a href="/en/package/zlib.html">zlib</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            tools - Build PCL utilities
-            <ul>
-              <li><a href="/en/package/boost-accumulators.html">boost-accumulators</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            visualization - Build visualization
-            <ul>
-              <li><a href="/en/package/vtk.html">vtk</a>
-                  [opengl]
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            vtk - An alias for visualization
-            <ul>
-              <li><a href="/en/package/pcl.html">pcl</a>
-                  [visualization]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install pcl</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port pcl</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>apps - Build application examples&#x2F;samples that show how PCL works</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcl.html">pcl</a>
+              [opengl, openni2, qt, vtk]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>cuda - CUDA support for PCL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>examples - Build PCL examples</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcl.html">pcl</a>
+              [visualization]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>libusb - Build USB RGBD-Camera drivers</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libusb.html">libusb</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>opengl - OpenGL support for PCL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>openni2 - OpenNI2 support for PCL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/openni2.html">openni2</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/pcl.html">pcl</a>
+              [libusb]
+               (default-features: false)
+               (platform: !windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>pcap - PCAP support for PCL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/libpcap.html">libpcap</a>
+              
+              
+               (platform: !windows)
+            </li>
+            <li><a href="/en/package/winpcap.html">winpcap</a>
+              
+              
+               (platform: windows)
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>qt - Qt support for PCL</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [qt]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>simulation - Build Point Cloud Library Simulation</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/glew.html">glew</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/pcl.html">pcl</a>
+              [opengl]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>surface-on-nurbs - Fitting NURBS to point clouds</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/zlib.html">zlib</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>tools - Build PCL utilities</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/boost-accumulators.html">boost-accumulators</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>visualization - Build visualization</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/vtk.html">vtk</a>
+              [opengl]
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>vtk - An alias for visualization</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/pcl.html">pcl</a>
+              [visualization]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">

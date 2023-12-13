@@ -212,6 +212,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -230,7 +231,16 @@
             
           </li>
         </ul>
-      </div>      
+      </div>
+      <br />
+      <br />
+      <div class="text-heading">
+        <h2>Installation Instructions</h2>
+        <h3>Classic Mode:</h3>
+        <pre> vcpkg install flashlight-cpu</pre>
+        <h3>Manifest Mode:</h3>
+        <pre> vcpkg add port flashlight-cpu</pre>
+      </div>
       <br />
       <br />
       <div class="text-heading">
@@ -247,141 +257,135 @@
       </div>
       <br />
       <br />
-      <div class="text-heading">
-        <h2>Features</h2>
-        <ul>
-          <li>
-            asr - flashlight asr app
-            <ul>
-              <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
-                  [fl, 
-                  lib]
-                
-                
-              </li>
-              <li><a href="/en/package/gflags.html">gflags</a>
-                
-                
-              </li>
-              <li><a href="/en/package/libsndfile.html">libsndfile</a>
-                  [external-libs]
-                 (default-features: false)
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            fl - flashlight core autograd and neural net library
-            <ul>
-              <li><a href="/en/package/arrayfire.html">arrayfire</a>
-                  [cpu]
-                
-                
-              </li>
-              <li><a href="/en/package/cereal.html">cereal</a>
-                
-                
-              </li>
-              <li><a href="/en/package/gloo.html">gloo</a>
-                  [mpi]
-                
-                
-              </li>
-              <li><a href="/en/package/onednn.html">onednn</a>
-                
-                
-              </li>
-              <li><a href="/en/package/openmpi.html">openmpi</a>
-                
-                
-              </li>
-              <li><a href="/en/package/stb.html">stb</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            imgclass - flashlight image classification app
-            <ul>
-              <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
-                  [fl, 
-                  lib]
-                
-                
-              </li>
-              <li><a href="/en/package/gflags.html">gflags</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            lib - flashlight libraries
-            <ul>
-              <li><a href="/en/package/fftw3.html">fftw3</a>
-                
-                
-              </li>
-              <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
-                
-                
-              </li>
-              <li><a href="/en/package/kenlm.html">kenlm</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            lm - flashlight lm app
-            <ul>
-              <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
-                  [fl, 
-                  lib]
-                
-                
-              </li>
-              <li><a href="/en/package/gflags.html">gflags</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-          <li>
-            objdet - flashlight object detection app
-            <ul>
-              <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
-                  [fl, 
-                  imgclass, 
-                  lib]
-                
-                
-              </li>
-              <li><a href="/en/package/gflags.html">gflags</a>
-                
-                
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install flashlight-cpu</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port flashlight-cpu</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2> Supported Platforms and Architectures</h2>
-        <div><span class="detailed-package-item-heading">Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows
+      <h2>Features</h2>
+      <div>
+        <div class="feature-name"><span class="carrot">></span>asr - flashlight asr app</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
+              [fl, lib]
+              
+              
+            </li>
+            <li><a href="/en/package/gflags.html">gflags</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/libsndfile.html">libsndfile</a>
+              [external-libs]
+               (default-features: false)
+              
+            </li>
+          </ul>
         </div>
-      </div>
+        <div class="feature-name"><span class="carrot">></span>fl - flashlight core autograd and neural net library</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/arrayfire.html">arrayfire</a>
+              [cpu]
+              
+              
+            </li>
+            <li><a href="/en/package/cereal.html">cereal</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/gloo.html">gloo</a>
+              [mpi]
+              
+              
+            </li>
+            <li><a href="/en/package/onednn.html">onednn</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/openmpi.html">openmpi</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/stb.html">stb</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>imgclass - flashlight image classification app</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
+              [fl, lib]
+              
+              
+            </li>
+            <li><a href="/en/package/gflags.html">gflags</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>lib - flashlight libraries</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fftw3.html">fftw3</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/kenlm.html">kenlm</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>lm - flashlight lm app</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
+              [fl, lib]
+              
+              
+            </li>
+            <li><a href="/en/package/gflags.html">gflags</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="carrot">></span>objdet - flashlight object detection app</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/flashlight-cpu.html">flashlight-cpu</a>
+              [fl, imgclass, lib]
+              
+              
+            </li>
+            <li><a href="/en/package/gflags.html">gflags</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>           
       <br />
       <br />
       <div class="text-heading">
