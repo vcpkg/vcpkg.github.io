@@ -54,7 +54,7 @@
         <ul>
           {{#dependencies}}
           <li>
-            <a href="{{name}}">{{name}}</a>
+            <a href="{{name}}.html">{{name}}</a>
             {{#host}} <i>(host: true)</i>{{/host}}
             {{#platform}} <i>(platform: {{platform}})</i>{{/platform}}
             {{#versionMinimum}} <i>(version>=: {{versionMinimum}})</i>{{/versionMinimum}}
@@ -82,10 +82,10 @@
         <ul>
           {{#features}}
           <li>
-            <a href="/en/package/{{name}}">{{name}}</a> - {{description}}
+            {{name}} - {{description}}
             <ul>
               {{#dependencies}}
-              <li><a href="/en/package/{{name}}">{{name}}</a>
+              <li><a href="/en/package/{{name}}.html">{{name}}</a>
                 {{#depFeatures}}
                   {{#first}}[{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}
                 {{/depFeatures}}

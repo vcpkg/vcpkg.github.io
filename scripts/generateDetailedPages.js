@@ -142,8 +142,7 @@ async function renderDetailedPackages() {
 
     for (let packageInfo of packageDataSource.Source) {
         packageInfo.Documentation = packageInfo.Documentation || '';
-        //packageInfo.LastUpdated = packageInfo.LastModified;
-        packageInfo.LastUpdated = '12-12-12';
+        packageInfo.LastUpdated = packageInfo.LastModified;
         packageInfo.PortVersion = packageInfo['Port-Version'] || 0;
         packageInfo.FeaturesContent = GetPackageFeatures(packageInfo);
         packageInfo = { ...packageInfo, ...GetSupportedPlatArch(packageInfo) };

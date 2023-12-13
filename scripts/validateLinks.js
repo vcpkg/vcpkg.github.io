@@ -20,7 +20,7 @@ async function get_pages_recursive(docs_set, path) {
     var dirents = await fs.readdir(path, { encoding: 'utf-8', withFileTypes: true });
     var promises = [];
     for (var ent of dirents) {
-        if (ent.isDirectory() && ent.name != "package") {
+        if (ent.isDirectory()) {
             promises.push(get_pages_recursive(docs_set, path + "/" + ent.name));
         } else if (ent.name.endsWith(".html")) {
             docs_set.push(path + "/" + ent.name);
@@ -92,8 +92,8 @@ async function load_page_info(page, relative_path) {
     for (const match of content.matchAll(/ name="([^"]*)"/g)) {
         ret.fragments[match[1]] = true;
     }
-    for (const match of content.matchAll(/.{0,30}\]\[.{0,30}/g)) {
-        ret.errors.push(`Incorrect markdown link: ${match[0]}`);
+    for (const match of content.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)) {
+        ret.errors.push(`Possible incorrect markdown link in HTML: ${match[0]}`);
     }
     return ret;
 }

@@ -420,9 +420,17 @@ function renderCard(package, mainDiv, oldCancellationToken) {
         return; //don't render old packages
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
+    
+    packageDiv.addEventListener('click', function(event) {
+        // Check if the clicked element is not an interactive element
+        if (!event.target.matches('a, a *, button, button *, .interactive-class, .interactive-class *')) {
+            window.location.href = "/en/package/" + package.Name;
+        }
+    });
+
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, compatibility, website)
-    cardFrag.appendChild(renderPackageDetails(package, packageDiv));
+    cardFrag.appendChild(renderPackageDetails(package, packageDiv, true));
     // Add the package card to the page
     packageDiv.appendChild(cardFrag);
     // Parent div to hold all the package cards

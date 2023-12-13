@@ -241,9 +241,16 @@
   margin: 10px 0px;
 }
 
-.card.package-card.hover-effect:hover {
+.package-card:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure that interactive elements have a different hover effect to stand out */
+.package-card a:hover, 
+.package-card button:hover {
+  background-color: #e8e8e8;
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .package-name {

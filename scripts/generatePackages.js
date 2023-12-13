@@ -49,10 +49,10 @@ async function getLastModifiedDate(repoPath, filePath) {
     try {
         // Ensure the file path is relative to the repository root
         const relativeFilePath = path.relative(repoPath, filePath);
-        const { date } = await execAsync(`git -C ${repoPath} log -1 --format=%cd --date=format:%Y-%m-%d -- ${relativeFilePath}`);
-        return date.trim();
+        const { stdout } = await execAsync(`git -C ${repoPath} log -1 --format=%cd --date=format:%Y-%m-%d -- ${relativeFilePath}`);
+        return stdout.trim();
     } catch (error) {
-        console.error(`Error getting last modified date for ${relativeFilePath}: ${error}`);
+        console.error(`Error getting last modified date for ${repoPath}: ${error}`);
         return null;
     }
 }
@@ -70,8 +70,8 @@ async function readPorts(vcpkgDir) {
             continue;
         }
 
-        //const lastModifiedDate = await getLastModifiedDate(vcpkgDir, manifestFile);
-        //temp['LastModified'] = lastModifiedDate;
+        const lastModifiedDate = await getLastModifiedDate(vcpkgDir, manifestFile);
+        temp['LastModified'] = lastModifiedDate;
 
         results[ent.name] = temp;
     }

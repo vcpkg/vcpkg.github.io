@@ -7,8 +7,6 @@ const { exit } = require('process');
 
 async function getGitHubStars(octokit, url) {
     try {
-
-
         const githubUrl = 'https://github.com/';
         const regex = /^(?<owner>[a-zA-Z\d][a-zA-Z\d\.\-\_]+)\/(?<repo>[a-zA-Z\d][a-zA-Z\d\.\-\_]+).*$/;
 
