@@ -16,12 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with:
           repository: vcpkg/vcpkg.github.io.git
-          ref: package_sync 
+          ref: main
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Create or reset package_sync branch
+        run: |
+          git checkout -b package_sync || git checkout package_sync
+          git reset --hard origin/main
 
       - name: Restore NPM cache
         uses: actions/cache@v3
@@ -42,8 +47,8 @@ jobs:
             git config --local user.name "GitHub Actions"
             git add .
             git commit -m 'Update package metadata and website content' || echo 'No changes to commit'
-            git push origin package_sync  || echo "Error occurred while push to origin"
-      
+            git push -f origin package_sync || echo "Error occurred while push to origin"
+
       - name: Open Pull Request
         uses: actions/github-script@v6
         with:
