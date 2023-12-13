@@ -26,10 +26,10 @@ jobs:
 
       - name: Check for differences
         run: |
-          if ! git diff --quiet -- . ':!en/package/'; then
-            if ! git diff --quiet -- ':!en/package/'; then
-              echo "::error ::Detected changes outside 'en/package/' directory."
-              git diff --stat
-              exit 1
-            fi
+          if git diff --quiet -- . ':!en/package/' ':!output.json'; then
+            echo "No unexpected changes detected."
+          else
+            echo "::error ::Detected unexpected changes outside 'en/package/' directory and in 'output.json'."
+            git diff --stat
+            exit 1
           fi
