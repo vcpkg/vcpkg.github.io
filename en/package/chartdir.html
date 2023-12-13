@@ -17,37 +17,29 @@
 <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
 
 <!-- external style sheets -->
-<link
-    rel="stylesheet"
-    href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-    crossorigin="anonymous"
-/>
+<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
 <!-- our style sheets -->
 <link href="/css/common.css" rel="stylesheet" />
 
 <!-- external scripts -->
-<script type="text/javascript"
-    src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js">
-</script>
-<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script>
+
+<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-<script
-    src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"
-></script>
-<script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"
-></script>
+    crossorigin="anonymous"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
+<script src="../scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -259,11 +251,11 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/chartdir/Config.cmake.in" target="_blank">Config.cmake.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/chartdir/chartdir.h" target="_blank">chartdir.h</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/chartdir/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/chartdir/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/72010900b7cee36cea77aebb97695095c9358eaf/ports/chartdir/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/3135b990681223c46d2bce0793e04036d88f307c/ports/chartdir/Config.cmake.in" target="_blank">Config.cmake.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/3135b990681223c46d2bce0793e04036d88f307c/ports/chartdir/chartdir.h" target="_blank">chartdir.h</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/3135b990681223c46d2bce0793e04036d88f307c/ports/chartdir/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/3135b990681223c46d2bce0793e04036d88f307c/ports/chartdir/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/3135b990681223c46d2bce0793e04036d88f307c/ports/chartdir/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>
@@ -275,27 +267,19 @@
       <div class="footer-info-group">
         <div class="footer-heading">
           <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
-          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg"/>
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg" />
         </div>
       </div>
       <div class="footer-info-group footer-list">
         <div class="footer-heading">Get Started</div>
         <div class="footer-description">
-          <a
-            class="footer-link"
-            href="/en/getting-started?platform=windows"
-            >Windows</a
-          >
+          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=linux"
-            >Linux</a
-          >
+          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=mac"
-            >Mac</a
-          >
+          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -314,7 +298,7 @@
         </div>
         <div class="footer-description">
           <a class="footer-link" href="https://www.includecpp.org/">
-            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord"/>
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord" />
             Discord
           </a>
         </div>
@@ -327,24 +311,33 @@
       </div>
     </div>
     <div class="footer-right">
-      <div class="footer-info-group">
-        <div class="footer-description">&#169; Microsoft</div>
+      <div class="footer-info-group-dw">
+        <div class="footer-description">&#169; Microsoft <span id="currentYear"></span></div>
       </div>
-      <div class="footer-info-group">
+      <div class="footer-info-group-dw">
         <div class="footer-description">
           <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
         </div>
       </div>
       <div class="footer-info-group-privacy">
         <div class="footer-description">
-          <a style="display: none;" class="managePrivacyChoice footer-link" href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30px" viewBox="0 0 30 14" xml:space="preserve">
-            <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
-            <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
-            <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
-            <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill: #fff"></path>
-            <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill: #06f"></path>
-        </svg>
-        <span>Your California Privacy Choices</span></a>
+          <a style="display: none;" class="managePrivacyChoice footer-link"
+            href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg"
+              width="30px" viewBox="0 0 30 14" xml:space="preserve">
+              <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+              <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+                style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+              <path
+                d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+                style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+              <path
+                d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+                style="fill: #fff"></path>
+              <path
+                d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+                style="fill: #06f"></path>
+            </svg>
+            <span>Your Privacy Choices</span></a>
         </div>
       </div>
     </div>
