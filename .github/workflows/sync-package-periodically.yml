@@ -23,7 +23,10 @@ jobs:
           ref: main
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - name: Create or reset package_sync branch
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Checkout package_sync branch
         run: |
           git checkout package_sync
           git reset --hard origin/main
