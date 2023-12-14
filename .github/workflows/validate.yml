@@ -20,11 +20,11 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
-          
+
       - name: Check Current Commit
         run: |
           echo "Current commit hash:"
-          git rev-parse HEAD
+          cat scripts/commit.txt
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
