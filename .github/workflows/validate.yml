@@ -29,5 +29,6 @@ jobs:
           if ! git diff --quiet; then
             echo "::error ::Detected changes when regenerating website."
             git diff --stat
+            git config --list
             exit 1
           fi
