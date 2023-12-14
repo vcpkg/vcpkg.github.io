@@ -28,7 +28,7 @@ jobs:
         run: |
           if ! git diff --quiet; then
             echo "::error ::Detected changes when regenerating website."
-            git diff -- ../en/package/3fd.html
+            git diff -- en/package/3fd.html
             git config --list
             exit 1
           fi
