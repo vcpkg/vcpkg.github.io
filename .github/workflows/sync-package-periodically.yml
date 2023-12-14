@@ -3,7 +3,7 @@ name: Sync Package Metadata
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 * * SUN'
+     - cron: '0 5 * * 1' # 10 PM PT Sunday, which is 5 AM UTC Monday
 
 permissions:
   pull-requests: write
