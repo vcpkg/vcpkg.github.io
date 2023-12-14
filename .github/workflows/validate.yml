@@ -24,7 +24,7 @@ jobs:
       - name: Check Current Commit
         run: |
           echo "Current commit hash:"
-          cat scripts/commit.txt
+          git rev-parse HEAD
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
