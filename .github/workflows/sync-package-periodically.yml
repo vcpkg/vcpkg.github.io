@@ -2,7 +2,14 @@ name: Sync Package Metadata
 
 on:
   schedule:
-    - cron: '0 0 * * 6'
+    - cron: '0 9 * * *'
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  contents: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -10,6 +17,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          repository: vcpkg/vcpkg.github.io.git
+          ref: main 
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Restore NPM cache
         uses: actions/cache@v3
@@ -28,14 +39,8 @@ jobs:
         run: |
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Actions"
-            git add commit.txt
+            git add scripts/commit.txt
             git commit -m 'Data Updated' ||  echo 'No changes to commit'
-            git push origin || echo "No changes to commit"
+            git fetch origin main
+            git push origin HEAD:main || echo "Error occurred while push to origin"
             
-      - name: Check for differences
-        run: |
-          if ! git diff --quiet; then
-            echo "::error ::Detected changes when regenerating website."
-            git diff --stat
-            exit 1
-          fi
