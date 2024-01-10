@@ -50,7 +50,7 @@ jobs:
             git config --local user.name "GitHub Actions"
             git add .
             git commit -m 'Update package metadata and website content' || echo 'No changes to commit'
-            git push -f origin package_sync || echo "Error occurred while push to origin"
+            git push -f origin package_sync
 
       - name: Open Pull Request
         uses: actions/github-script@v6
