@@ -241,10 +241,23 @@
   margin: 10px 0px;
 }
 
+.package-card:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure that interactive elements have a different hover effect to stand out */
+.package-card a:hover, 
+.package-card button:hover {
+  background-color: #e8e8e8;
+  text-decoration: underline;
+}
+
 .package-name {
   font-weight: bolder;
   font-size: 20px;
   float: left;
+  margin-right: 5px;
 }
 
 .package-text {
@@ -349,4 +362,31 @@ footer {
 
 .package-compatibility-text {
   font-weight: bold;
+}
+
+.detailed-package-item-heading {
+  display: inline-block;
+  /* width: 50px; */
+  font-weight: bold;
+}
+
+.dependency-header{
+
+}
+
+.feature-name{
+  font-weight: 600;
+}
+
+.carrot{
+  padding-inline-end: 5px;
+  color: #b8b3b3;
+}
+
+.feature-dependencies {
+  margin-inline-start: 15px;
+
+  &.no-dependencies {
+    margin-block-end: 16px !important;
+  }
 }
