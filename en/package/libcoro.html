@@ -188,13 +188,13 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>libcoro</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 0.9</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.10</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> C++20 coroutine library</div>
       <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://github.com/jbaldwin/libcoro">https://github.com/jbaldwin/libcoro</a>
@@ -209,12 +209,6 @@
       <div>
         <h2>Dependencies</h2>
         <ul>
-          <li>
-            <a href="tl-expected.html">tl-expected</a>
-            
-            
-            
-          </li>
           <li>
             <a href="vcpkg-cmake.html">vcpkg-cmake</a>
              <i>(host: true)</i>
@@ -237,6 +231,7 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">0.10#0</span>
           <span class="badge badge-primary">0.9#0</span>
         </div>
       </div>
@@ -244,7 +239,7 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>networking - Include networking features.</div>
+        <div class="feature-name"><span class="caret">></span>networking - Include networking features.</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -255,7 +250,9 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>ssl - Include SSL features.</div>
+        <div class="feature-name"><span class="caret">></span>platform - Include linux platform features.</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="caret">></span>ssl - Include SSL features.</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -271,18 +268,18 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>threading - Include multithreading features.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
       </div>           
       <br />
       <br />
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libcoro/0001-allow-shared-lib.patch" target="_blank">0001-allow-shared-lib.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libcoro/0002-disable-git-config.patch" target="_blank">0002-disable-git-config.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libcoro/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libcoro/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libcoro/0001-allow-shared-lib.patch" target="_blank">0001-allow-shared-lib.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libcoro/0002-disable-git-config.patch" target="_blank">0002-disable-git-config.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libcoro/0003-fix-pkgconfig-includedir.patch" target="_blank">0003-fix-pkgconfig-includedir.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libcoro/0004-fix-pkgconfig-on-windows.patch" target="_blank">0004-fix-pkgconfig-on-windows.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libcoro/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libcoro/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

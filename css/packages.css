@@ -241,7 +241,8 @@
   margin: 10px 0px;
 }
 
-.package-card:hover {
+.package-card:hover,
+.package-card:focus{
   background-color: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -366,27 +367,23 @@ footer {
 
 .detailed-package-item-heading {
   display: inline-block;
-  /* width: 50px; */
   font-weight: bold;
 }
 
-.dependency-header{
-
-}
 
 .feature-name{
   font-weight: 600;
 }
 
-.carrot{
+.caret{
   padding-inline-end: 5px;
   color: #b8b3b3;
 }
 
 .feature-dependencies {
   margin-inline-start: 15px;
+}
 
-  &.no-dependencies {
-    margin-block-end: 16px !important;
-  }
+.feature-dependencies.no-dependencies {
+  margin-block-end: 16px !important;
 }

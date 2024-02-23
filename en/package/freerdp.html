@@ -188,14 +188,14 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>freerdp</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2.11.2</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.0.0</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
           1
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> A free implementation of the Remote Desktop Protocol (RDP)</div>
       <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://github.com/FreeRDP/FreeRDP">https://github.com/FreeRDP/FreeRDP</a>
@@ -210,6 +210,12 @@
       <div>
         <h2>Dependencies</h2>
         <ul>
+          <li>
+            <a href="cjson.html">cjson</a>
+            
+            
+            
+          </li>
           <li>
             <a href="glib.html">glib</a>
             
@@ -237,7 +243,7 @@
           <li>
             <a href="zlib.html">zlib</a>
             
-             <i>(platform: !windows)</i>
+            
             
           </li>
         </ul>
@@ -256,6 +262,9 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">3.0.0#1</span>
+          <span class="badge badge-primary">3.0.0#0</span>
+          <span class="badge badge-primary">2.11.2#2</span>
           <span class="badge badge-primary">2.11.2#1</span>
           <span class="badge badge-primary">2.11.2#0</span>
           <span class="badge badge-primary">2.11.1#0</span>
@@ -295,9 +304,7 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>client-mac - Build native mac client. Requires XCode.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>ffmpeg - Enable image scaling, video and audio with ffmpeg</div>
+        <div class="feature-name"><span class="caret">></span>ffmpeg - Enable image scaling, video and audio with ffmpeg</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -308,7 +315,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>server - Build server components</div>
+        <div class="feature-name"><span class="caret">></span>server - Build server components</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -319,7 +326,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>urbdrc - USB redirection channel support</div>
+        <div class="feature-name"><span class="caret">></span>urbdrc - USB redirection channel support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -330,7 +337,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>wayland - Enable wayland support</div>
+        <div class="feature-name"><span class="caret">></span>wayland - Enable wayland support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -341,9 +348,9 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>winpr-tools - Build winpr tools</div>
+        <div class="feature-name"><span class="caret">></span>winpr-tools - Build winpr tools</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>x11 - Enable X11 support</div>
+        <div class="feature-name"><span class="caret">></span>x11 - Enable X11 support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -360,17 +367,15 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/DontInstallSystemRuntimeLibs.patch" target="_blank">DontInstallSystemRuntimeLibs.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/export-include.patch" target="_blank">export-include.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/find-dependency.patch" target="_blank">find-dependency.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/fix-include-path.patch" target="_blank">fix-include-path.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/fix-install-destination.patch" target="_blank">fix-install-destination.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/keep-dup-libs.patch" target="_blank">keep-dup-libs.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/pr-7060-jni-onload.patch" target="_blank">pr-7060-jni-onload.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/vcpkg.json" target="_blank">vcpkg.json</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/freerdp/wfreerdp-server-cli.patch" target="_blank">wfreerdp-server-cli.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/DontInstallSystemRuntimeLibs.patch" target="_blank">DontInstallSystemRuntimeLibs.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/dependencies.patch" target="_blank">dependencies.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/install-layout.patch" target="_blank">install-layout.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/keep-dup-libs.patch" target="_blank">keep-dup-libs.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/wfreerdp-server-cli.patch" target="_blank">wfreerdp-server-cli.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/freerdp/windows-linkage.patch" target="_blank">windows-linkage.patch</a></li>
         </ul>
       </div>
     </div>

@@ -188,14 +188,13 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>libtorch</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 1.12.1</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.1.2</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
-          3
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> Tensors and Dynamic neural networks in Python with strong GPU acceleration</div>
       <div><span class="detailed-package-item-heading">License:</span> </div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://pytorch.org/">https://pytorch.org/</a>
@@ -204,12 +203,18 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
         <h2>Dependencies</h2>
         <ul>
+          <li>
+            <a href="blas.html">blas</a>
+            
+            
+            
+          </li>
           <li>
             <a href="cpuinfo.html">cpuinfo</a>
             
@@ -247,6 +252,18 @@
             
           </li>
           <li>
+            <a href="foxi.html">foxi</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="fp16.html">fp16</a>
+            
+            
+            
+          </li>
+          <li>
             <a href="gemmlowp.html">gemmlowp</a>
             
             
@@ -265,15 +282,21 @@
             
           </li>
           <li>
+            <a href="lapack.html">lapack</a>
+            
+            
+            
+          </li>
+          <li>
             <a href="lmdb.html">lmdb</a>
             
             
             
           </li>
           <li>
-            <a href="mpi.html">mpi</a>
+            <a href="mimalloc.html">mimalloc</a>
             
-             <i>(platform: linux)</i>
+            
             
           </li>
           <li>
@@ -289,9 +312,15 @@
             
           </li>
           <li>
-            <a href="openblas.html">openblas</a>
+            <a href="opencl.html">opencl</a>
             
-             <i>(platform: windows)</i>
+            
+            
+          </li>
+          <li>
+            <a href="pocketfft.html">pocketfft</a>
+            
+            
             
           </li>
           <li>
@@ -303,6 +332,12 @@
           <li>
             <a href="protobuf.html">protobuf</a>
              <i>(host: true)</i>
+            
+            
+          </li>
+          <li>
+            <a href="pthreadpool.html">pthreadpool</a>
+            
             
             
           </li>
@@ -346,6 +381,9 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">2.1.2#0</span>
+          <span class="badge badge-primary">1.12.1#5</span>
+          <span class="badge badge-primary">1.12.1#4</span>
           <span class="badge badge-primary">1.12.1#3</span>
           <span class="badge badge-primary">1.12.1#2</span>
           <span class="badge badge-primary">1.12.1#1</span>
@@ -356,7 +394,28 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>dist - Use distributed with MPI, Gloo, libuv, TensorPipe</div>
+        <div class="feature-name"><span class="caret">></span>cuda - Build with CUDA GPU backend</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/cuda.html">cuda</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/cudnn.html">cudnn</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/magma.html">magma</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="caret">></span>dist - Use distributed with MPI, Gloo, libuv, TensorPipe</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -365,15 +424,15 @@
               
                (platform: linux)
             </li>
+            <li><a href="/en/package/libtorch.html">libtorch</a>
+              [mpi]
+               (default-features: false)
+               (platform: linux)
+            </li>
             <li><a href="/en/package/libuv.html">libuv</a>
               
               
                (platform: windows | osx)
-            </li>
-            <li><a href="/en/package/openmpi.html">openmpi</a>
-              
-              
-               (platform: linux | osx)
             </li>
             <li><a href="/en/package/tensorpipe.html">tensorpipe</a>
               
@@ -382,7 +441,18 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>leveldb - Build with LevelDB</div>
+        <div class="feature-name"><span class="caret">></span>fftw3 - Build with fftw3</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/fftw3.html">fftw3</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="caret">></span>leveldb - Build with LevelDB</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -398,7 +468,29 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>nnpack - Build with NNPack</div>
+        <div class="feature-name"><span class="caret">></span>llvm - Build with LLVM</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/llvm.html">llvm</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="caret">></span>mpi - Build with MPI</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/mpi.html">mpi</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="caret">></span>nnpack - Build with NNPack</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -409,7 +501,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>opencv - Build with OpenCV 3.x</div>
+        <div class="feature-name"><span class="caret">></span>opencv - Build with OpenCV 3.x</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -420,18 +512,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>tbb - Build with Intel TBB</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/tbb.html">tbb</a>
-              
-              
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="carrot">></span>vulkan - Build with Vulkan GPU backend</div>
+        <div class="feature-name"><span class="caret">></span>vulkan - Build with Vulkan GPU backend</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -440,12 +521,27 @@
               
               
             </li>
+            <li><a href="/en/package/vulkan-loader.html">vulkan-loader</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/vulkan-memory-allocator.html">vulkan-memory-allocator</a>
+              
+              
+              
+            </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>xnnpack - Build with XNNPack</div>
+        <div class="feature-name"><span class="caret">></span>xnnpack - Build with XNNPack</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
+            <li><a href="/en/package/fxdiv.html">fxdiv</a>
+              
+              
+               (platform: !windows)
+            </li>
             <li><a href="/en/package/xnnpack.html">xnnpack</a>
               
               
@@ -453,7 +549,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>zstd - Build with ZSTD</div>
+        <div class="feature-name"><span class="caret">></span>zstd - Build with ZSTD</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -470,16 +566,21 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/fix-c10-glog.patch" target="_blank">fix-c10-glog.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/fix-cmake.patch" target="_blank">fix-cmake.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/fix-fbgemm-include.patch" target="_blank">fix-fbgemm-include.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/fix-windows.patch" target="_blank">fix-windows.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/fix_werror.patch" target="_blank">fix_werror.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/pytorch-pr-85958.patch" target="_blank">pytorch-pr-85958.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/use-flatbuffers2.patch" target="_blank">use-flatbuffers2.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/vcpkg-dependencies.cmake" target="_blank">vcpkg-dependencies.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/libtorch/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/clang-cl.patch" target="_blank">clang-cl.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/cmake-fixes.patch" target="_blank">cmake-fixes.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/cuda-adjustments.patch" target="_blank">cuda-adjustments.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fix-api-export.patch" target="_blank">fix-api-export.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fix-build.patch" target="_blank">fix-build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fix-glog.patch" target="_blank">fix-glog.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fix-msvc-ICE.patch" target="_blank">fix-msvc-ICE.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fix-onnx-case.patch" target="_blank">fix-onnx-case.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fix-sleef.patch" target="_blank">fix-sleef.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/fxdiv.patch" target="_blank">fxdiv.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/kineto.patch" target="_blank">kineto.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/more-fixes.patch" target="_blank">more-fixes.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/protoc.patch" target="_blank">protoc.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/libtorch/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

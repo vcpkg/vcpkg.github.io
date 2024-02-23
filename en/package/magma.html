@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - cmcstl2</title>
+  <title>vcpkg package - magma</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -187,37 +187,48 @@
 <body>
   <main class="package-body" id="main">
     <div class="main-content">
-      <h1>cmcstl2</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2019-07-20</div>
+      <h1>magma</h1>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2.7.2</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
-          3
       </div>
-      <div><span class="detailed-package-item-heading">Description:</span> An implementation of C++ Extensions for Ranges</div>
+      <div><span class="detailed-package-item-heading">Description:</span> Matrix Algebra on GPU and Multi-core Architectures (MAGMA) is a collection of next-generation linear algebra libraries for heterogeneous computing</div>
       <div><span class="detailed-package-item-heading">License:</span> </div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/CaseyCarter/cmcstl2">https://github.com/CaseyCarter/cmcstl2</a>
+         <a href="https://icl.utk.edu/magma/">https://icl.utk.edu/magma/</a>
       </div>
       <div>
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp</div>      
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
         <h2>Dependencies</h2>
         <ul>
           <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
+            <a href="blas.html">blas</a>
+            
             
             
           </li>
           <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
+            <a href="cuda.html">cuda</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="lapack.html">lapack</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
              <i>(host: true)</i>
             
             
@@ -229,19 +240,16 @@
       <div class="text-heading">
         <h2>Installation Instructions</h2>
         <h3>Classic Mode:</h3>
-        <pre> vcpkg install cmcstl2</pre>
+        <pre> vcpkg install magma</pre>
         <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port cmcstl2</pre>
+        <pre> vcpkg add port magma</pre>
       </div>
       <br />
       <br />
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
-          <span class="badge badge-primary">2019-07-20#3</span>
-          <span class="badge badge-primary">2019-07-20#2</span>
-          <span class="badge badge-primary">2019-07-20#1</span>
-          <span class="badge badge-primary">2019-07-20#0</span>
+          <span class="badge badge-primary">2.7.2#0</span>
         </div>
       </div>
       <br />
@@ -255,8 +263,11 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cmcstl2/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cmcstl2/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/magma/clang-cuda.patch" target="_blank">clang-cuda.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/magma/disable-openmp-msvc.patch" target="_blank">disable-openmp-msvc.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/magma/no-tests.patch" target="_blank">no-tests.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/magma/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/magma/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

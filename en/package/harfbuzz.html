@@ -188,14 +188,14 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>harfbuzz</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 8.2.1</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 8.3.0</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
           3
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> HarfBuzz OpenType text shaping engine</div>
       <div><span class="detailed-package-item-heading">License:</span> MIT-Modern-Variant</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://github.com/harfbuzz/harfbuzz">https://github.com/harfbuzz/harfbuzz</a>
@@ -210,12 +210,6 @@
       <div>
         <h2>Dependencies</h2>
         <ul>
-          <li>
-            <a href="freetype.html">freetype</a>
-            
-            
-            
-          </li>
           <li>
             <a href="gettext.html">gettext</a>
             
@@ -244,6 +238,10 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">8.3.0#3</span>
+          <span class="badge badge-primary">8.3.0#2</span>
+          <span class="badge badge-primary">8.3.0#1</span>
+          <span class="badge badge-primary">8.3.0#0</span>
           <span class="badge badge-primary">8.2.1#3</span>
           <span class="badge badge-primary">8.2.1#2</span>
           <span class="badge badge-primary">8.2.1#1</span>
@@ -322,7 +320,7 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>cairo - Enable Cairo graphics library support</div>
+        <div class="feature-name"><span class="caret">></span>cairo - Enable Cairo graphics library support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -333,9 +331,22 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>coretext - Enable CoreText shaper backend on macOS</div>
+        <div class="feature-name"><span class="caret">></span>coretext - Enable CoreText shaper backend on macOS</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>glib - Glib Unicode callbacks support</div>
+        <div class="feature-name"><span class="caret">></span>directwrite - Enable DirectWrite support on Windows</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="caret">></span>freetype - Enable FreeType support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/freetype.html">freetype</a>
+              
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
+        <div class="feature-name"><span class="caret">></span>glib - Glib Unicode callbacks support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -351,7 +362,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>graphite2 - Graphite2 shaper support</div>
+        <div class="feature-name"><span class="caret">></span>graphite2 - Graphite2 shaper support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -362,7 +373,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>icu - icu support for harfbuzz</div>
+        <div class="feature-name"><span class="caret">></span>icu - icu support for harfbuzz</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -373,7 +384,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>introspection - build with introspection</div>
+        <div class="feature-name"><span class="caret">></span>introspection - build with introspection</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -395,10 +406,10 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/harfbuzz/fix-win32-build.patch" target="_blank">fix-win32-build.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/harfbuzz/harfbuzzConfig.cmake.in" target="_blank">harfbuzzConfig.cmake.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/harfbuzz/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/harfbuzz/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/harfbuzz/fix-win32-build.patch" target="_blank">fix-win32-build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/harfbuzz/harfbuzzConfig.cmake.in" target="_blank">harfbuzzConfig.cmake.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/harfbuzz/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/harfbuzz/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

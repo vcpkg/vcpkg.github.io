@@ -188,14 +188,13 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>vulkan</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 1.1.82.1</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2023-12-17</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
-          6
       </div>
-      <div><span class="detailed-package-item-heading">Description:</span> A stub package that ensures that the Vulkan SDK is installed.</div>
+      <div><span class="detailed-package-item-heading">Description:</span> A stub package that ensures that Vulkan headers and a loader are available.,On Android, the NDK provides a loader at API level 24 or higher.</div>
       <div><span class="detailed-package-item-heading">License:</span> </div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          N/A
@@ -204,7 +203,7 @@
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, x64-uwp</div>      
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
@@ -214,6 +213,18 @@
             <a href="vcpkg-cmake.html">vcpkg-cmake</a>
              <i>(host: true)</i>
             
+            
+          </li>
+          <li>
+            <a href="vulkan-headers.html">vulkan-headers</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="vulkan-loader.html">vulkan-loader</a>
+            
+             <i>(platform: !android)</i>
             
           </li>
         </ul>
@@ -232,6 +243,8 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">2023-12-17#0</span>
+          <span class="badge badge-primary">1.3.268.0#0</span>
           <span class="badge badge-primary">1.1.82.1#6</span>
           <span class="badge badge-primary">1.1.82.1#5</span>
           <span class="badge badge-primary">1.1.82.1#4</span>
@@ -252,12 +265,11 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/vulkan/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/vulkan/LICENSE.txt" target="_blank">LICENSE.txt</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/vulkan/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/vulkan/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/vulkan/vcpkg.json" target="_blank">vcpkg.json</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/vulkan/vulkan-result.cmake.in" target="_blank">vulkan-result.cmake.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/vulkan/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/vulkan/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/vulkan/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/vulkan/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/vulkan/vulkan-result.cmake.in" target="_blank">vulkan-result.cmake.in</a></li>
         </ul>
       </div>
     </div>

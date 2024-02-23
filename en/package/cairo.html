@@ -188,14 +188,13 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>cairo</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 1.17.8</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 1.18.0</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
-          4
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> Cairo is a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers, PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB.</div>
       <div><span class="detailed-package-item-heading">License:</span> LGPL-2.1-only OR MPL-1.1</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://cairographics.org">https://cairographics.org</a>
@@ -274,6 +273,7 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">1.18.0#0</span>
           <span class="badge badge-primary">1.17.8#4</span>
           <span class="badge badge-primary">1.17.8#3</span>
           <span class="badge badge-primary">1.17.8#2</span>
@@ -321,7 +321,7 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>fontconfig - build with fontconfig</div>
+        <div class="feature-name"><span class="caret">></span>fontconfig - build with fontconfig</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -332,7 +332,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>freetype - use the freetype font backend</div>
+        <div class="feature-name"><span class="caret">></span>freetype - use the freetype font backend</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -343,7 +343,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>gobject - build gobject module</div>
+        <div class="feature-name"><span class="caret">></span>gobject - build gobject module</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -354,7 +354,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>x11 - build with x11 support</div>
+        <div class="feature-name"><span class="caret">></span>x11 - build with x11 support</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
       </div>           
       <br />
@@ -362,14 +362,14 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/cairo_static_fix.patch" target="_blank">cairo_static_fix.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/disable-atomic-ops-check.patch" target="_blank">disable-atomic-ops-check.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/fix-static-missing-lib-msimg32.patch" target="_blank">fix-static-missing-lib-msimg32.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/fix_clang-cl_build.patch" target="_blank">fix_clang-cl_build.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/mingw-dllexport.patch" target="_blank">mingw-dllexport.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/cairo/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/cairo_static_fix.patch" target="_blank">cairo_static_fix.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/disable-atomic-ops-check.patch" target="_blank">disable-atomic-ops-check.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/fix-alloca-undefine.patch" target="_blank">fix-alloca-undefine.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/fix-static-missing-lib-msimg32.patch" target="_blank">fix-static-missing-lib-msimg32.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/fix_clang-cl_build.patch" target="_blank">fix_clang-cl_build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/cairo/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

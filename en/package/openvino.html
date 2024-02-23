@@ -188,13 +188,14 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>openvino</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2023.2.0</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 2023.3.0</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
+          1
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> Intel® Distribution of OpenVINO™ toolkit is an open-source toolkit for optimizing ,and deploying AI inference. It can be used to develop applications and solutions based ,on deep learning tasks, such as: emulation of human vision, automatic speech recognition, ,natural language processing, recommendation systems, etc. It provides high-performance ,and rich deployment options, from edge to cloud</div>
       <div><span class="detailed-package-item-heading">License:</span> Apache-2.0</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://github.com/openvinotoolkit/openvino">https://github.com/openvinotoolkit/openvino</a>
@@ -267,6 +268,8 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">2023.3.0#1</span>
+          <span class="badge badge-primary">2023.3.0#0</span>
           <span class="badge badge-primary">2023.2.0#0</span>
           <span class="badge badge-primary">2023.1.0#4</span>
           <span class="badge badge-primary">2023.1.0#3</span>
@@ -286,13 +289,13 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>auto - Enables Auto plugin for inference</div>
+        <div class="feature-name"><span class="caret">></span>auto - Enables Auto plugin for inference</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>auto-batch - Enables Auto Batch plugin for inference, useful for throughput mode</div>
+        <div class="feature-name"><span class="caret">></span>auto-batch - Enables Auto Batch plugin for inference, useful for throughput mode</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>cpu - Enables CPU plugin for inference</div>
+        <div class="feature-name"><span class="caret">></span>cpu - Enables CPU plugin for inference</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>gpu - Enables GPU plugin for inference</div>
+        <div class="feature-name"><span class="caret">></span>gpu - Enables GPU plugin for inference</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -308,11 +311,11 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>hetero - Enables Hetero plugin for inference</div>
+        <div class="feature-name"><span class="caret">></span>hetero - Enables Hetero plugin for inference</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>ir - Enables IR frontend for reading models in OpenVINO IR format</div>
+        <div class="feature-name"><span class="caret">></span>ir - Enables IR frontend for reading models in OpenVINO IR format</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>onnx - Enables ONNX frontend for reading models in ONNX format</div>
+        <div class="feature-name"><span class="caret">></span>onnx - Enables ONNX frontend for reading models in ONNX format</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -333,7 +336,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>paddle - Enables PaddlePaddle frontend for reading models in PaddlePaddle format</div>
+        <div class="feature-name"><span class="caret">></span>paddle - Enables PaddlePaddle frontend for reading models in PaddlePaddle format</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -349,9 +352,9 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>pytorch - Enables PyTorch frontend to convert models in PyTorch format</div>
+        <div class="feature-name"><span class="caret">></span>pytorch - Enables PyTorch frontend to convert models in PyTorch format</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>tensorflow - Enables TensorFlow frontend for reading models in TensorFlow format</div>
+        <div class="feature-name"><span class="caret">></span>tensorflow - Enables TensorFlow frontend for reading models in TensorFlow format</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -372,7 +375,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>tensorflow-lite - Enables TensorFlow Lite frontend for reading models in TensorFlow Lite format</div>
+        <div class="feature-name"><span class="caret">></span>tensorflow-lite - Enables TensorFlow Lite frontend for reading models in TensorFlow Lite format</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -394,12 +397,11 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/openvino/001-disable-tools.patch" target="_blank">001-disable-tools.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/openvino/002-git-version.patch" target="_blank">002-git-version.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/openvino/006-onednn-gpu-build.patch" target="_blank">006-onednn-gpu-build.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/openvino/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/openvino/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/openvino/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/openvino/001-disable-tools.patch" target="_blank">001-disable-tools.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/openvino/002-conditional-enabling-of-js-api.patch" target="_blank">002-conditional-enabling-of-js-api.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/openvino/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/openvino/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/openvino/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

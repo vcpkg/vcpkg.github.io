@@ -231,43 +231,41 @@ var vcpkgPackagePage = document.createElement('div');
 vcpkgPackagePage.className = 'vcpkg-page-link';
 vcpkgPackagePage.textContent = "View Details";
 
-function renderPackageDetails(package, packageDiv, isCard) {
+function renderPackageDetails(package) {
 
     var vcpkgPage = vcpkgPackagePage.cloneNode(true);
-    if (isCard === void 0) { isCard = true; }
     var detailFrag = document.createDocumentFragment();
-    if (isCard) {
-        var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
-        let viewpkgDetails = "View Details for ".concat(package.Name);
-        vcpkgPage.setAttribute("name",viewpkgDetails);
-        
-        //add link to package name
-        var nameLink = parentNameLink.cloneNode(true);
-        nameLink.textContent = package.Name;
-        nameLink.setAttribute('aria-label', package.Name);
-        nameLink.href = "/en/package/" + package.Name;
-        cardHeaderDiv.appendChild(nameLink);
-        
-        // Package Name
-        var nameDiv = parentNameDiv.cloneNode(true);
-        nameDiv.textContent =  " |";
-        cardHeaderDiv.appendChild(nameDiv);
-        // Package Version
-        var versionDiv = parentVersionDiv.cloneNode(true);
-        let versionStr = package.Version || package["Version-semver"] || package["Version-date"];
-        versionDiv.textContent = wording[lang]['version'] + versionStr;
-        cardHeaderDiv.appendChild(versionDiv);
-        detailFrag.appendChild(cardHeaderDiv);
-    }
+
+    var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
+    let viewpkgDetails = "View Details for ".concat(package.Name);
+    vcpkgPage.setAttribute("name",viewpkgDetails);
+    
+    //add link to package name
+    var nameLink = parentNameLink.cloneNode(true);
+    nameLink.textContent = package.Name;
+    nameLink.setAttribute('aria-label', package.Name);
+    nameLink.href = "/en/package/" + package.Name;
+    cardHeaderDiv.appendChild(nameLink);
+    
+    // Package Name
+    var nameDiv = parentNameDiv.cloneNode(true);
+    nameDiv.textContent = " |";
+    cardHeaderDiv.appendChild(nameDiv);
+    // Package Version
+    var versionDiv = parentVersionDiv.cloneNode(true);
+    let versionStr = package.Version || package["Version-semver"] || package["Version-date"];
+    versionDiv.textContent = wording[lang]['version'] + versionStr;
+    cardHeaderDiv.appendChild(versionDiv);
+    detailFrag.appendChild(cardHeaderDiv);
+    
     // Package Description (HTML version)
     var fullDesc = package.Description;
     if (fullDesc) {
         if (Array.isArray(fullDesc)) {
             fullDesc = fullDesc.join("\n");
         }
-        var descriptionDiv = isCard
-            ? renderCardDescription(fullDesc)
-            : renderModalDescription(fullDesc);
+        var descriptionDiv = renderCardDescription(fullDesc)
+         
         detailFrag.appendChild(descriptionDiv);
     }
 
@@ -384,13 +382,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     detailFrag.appendChild(windowsText);
     detailFrag.appendChild(linuxText);
     detailFrag.appendChild(featureText);
-    // Package Version for modal
 
-    if (!isCard) {
-        var versionDiv = parentDescriptionDiv.cloneNode(true);
-        versionDiv.textContent = wording[lang]['version'] + package.Version;
-        detailFrag.appendChild(versionDiv);
-    }
     // Website link (with clause)
     var homepageURL = package.Homepage;
     if (homepageURL) {
@@ -418,8 +410,22 @@ function renderPackageDetails(package, packageDiv, isCard) {
 function renderCard(package, mainDiv, oldCancellationToken) {
     if (oldCancellationToken !== null && oldCancellationToken !== cancellationToken)
         return; //don't render old packages
+
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
+
+    // Set the card to be focusable
+    packageDiv.setAttribute('tabindex', '0');
+    
+    // Add keyboard support for 'Enter' key
+    packageDiv.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Check if the focused element is not an interactive element
+            if (!event.target.matches('a, a *, button, button *, .interactive-class, .interactive-class *')) {
+                window.location.href = "/en/package/" + package.Name;
+            }
+        }
+    });
     
     packageDiv.addEventListener('click', function(event) {
         // Check if the clicked element is not an interactive element
@@ -430,7 +436,7 @@ function renderCard(package, mainDiv, oldCancellationToken) {
 
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, compatibility, website)
-    cardFrag.appendChild(renderPackageDetails(package, packageDiv, true));
+    cardFrag.appendChild(renderPackageDetails(package));
     // Add the package card to the page
     packageDiv.appendChild(cardFrag);
     // Parent div to hold all the package cards

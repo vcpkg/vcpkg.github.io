@@ -188,14 +188,14 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>dcmtk</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 3.6.7</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.6.8</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
-          6
+          2
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> This DICOM ToolKit (DCMTK) package consists of source code, documentation and installation instructions for a set of software libraries and applications implementing part of the DICOM/MEDICOM Standard.</div>
       <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause OR BSD-2-Clause OR libtiff OR MIT OR Zlib OR Libpng</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://github.com/DCMTK/dcmtk">https://github.com/DCMTK/dcmtk</a>
@@ -238,6 +238,9 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">3.6.8#2</span>
+          <span class="badge badge-primary">3.6.8#1</span>
+          <span class="badge badge-primary">3.6.8#0</span>
           <span class="badge badge-primary">3.6.7#6</span>
           <span class="badge badge-primary">3.6.7#5</span>
           <span class="badge badge-primary">3.6.7#4</span>
@@ -261,7 +264,9 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>iconv - Enable Iconv support</div>
+        <div class="feature-name"><span class="caret">></span>external-dict - Enable external dictionary</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="caret">></span>iconv - Enable Iconv support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -272,7 +277,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>icu - Enable ICU support</div>
+        <div class="feature-name"><span class="caret">></span>icu - Enable ICU support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -283,7 +288,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>openssl - Enable OpenSSL</div>
+        <div class="feature-name"><span class="caret">></span>openssl - Enable OpenSSL</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -294,7 +299,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>png - Enable PNG support</div>
+        <div class="feature-name"><span class="caret">></span>png - Enable PNG support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -305,7 +310,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>tiff - Enable TIFF support</div>
+        <div class="feature-name"><span class="caret">></span>tiff - Enable TIFF support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -316,9 +321,9 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>tools - Build apps</div>
+        <div class="feature-name"><span class="caret">></span>tools - Build apps</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>xml2 - Enable XML support</div>
+        <div class="feature-name"><span class="caret">></span>xml2 - Enable XML support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -329,7 +334,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>zlib - Enable zlib support</div>
+        <div class="feature-name"><span class="caret">></span>zlib - Enable zlib support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -346,13 +351,13 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/dcmtk.patch" target="_blank">dcmtk.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/fix-pc-format.patch" target="_blank">fix-pc-format.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/fix_link_xml2.patch" target="_blank">fix_link_xml2.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/vcpkg.json" target="_blank">vcpkg.json</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/dcmtk/windows-patch.patch" target="_blank">windows-patch.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/dcmtk.patch" target="_blank">dcmtk.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/dictionary_paths.patch" target="_blank">dictionary_paths.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/fix_link_tiff.patch" target="_blank">fix_link_tiff.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/fix_link_xml2.patch" target="_blank">fix_link_xml2.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/dcmtk/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

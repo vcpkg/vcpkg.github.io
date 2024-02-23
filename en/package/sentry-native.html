@@ -188,13 +188,14 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>sentry-native</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 0.6.7</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 0.7.0</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
+          1
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> Sentry SDK for C, C++ and native applications.</div>
       <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://sentry.io/">https://sentry.io/</a>
@@ -237,6 +238,8 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">0.7.0#1</span>
+          <span class="badge badge-primary">0.7.0#0</span>
           <span class="badge badge-primary">0.6.7#0</span>
           <span class="badge badge-primary">0.6.6#0</span>
           <span class="badge badge-primary">0.6.5#0</span>
@@ -286,10 +289,15 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>backend - Enables the platform-specific backend.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
+        <div class="feature-name"><span class="caret">></span>backend - Enables the platform-specific backend.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
+            <li><a href="/en/package/pkgconf.html">pkgconf</a>
+              
+              
+               (platform: !android &amp; !ios)
+            </li>
             <li><a href="/en/package/zlib.html">zlib</a>
               
               
@@ -297,7 +305,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-name"><span class="carrot">></span>transport - Enables the platform-specific network transport.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
+        <div class="feature-name"><span class="caret">></span>transport - Enables the platform-specific network transport.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -314,10 +322,9 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sentry-native/fix-config-cmake.patch" target="_blank">fix-config-cmake.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sentry-native/fix-warningC5105.patch" target="_blank">fix-warningC5105.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sentry-native/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sentry-native/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sentry-native/fix-config-cmake.patch" target="_blank">fix-config-cmake.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sentry-native/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sentry-native/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

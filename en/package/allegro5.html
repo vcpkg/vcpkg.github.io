@@ -188,27 +188,33 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>allegro5</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 5.2.9.0</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 5.2.9.1</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> Allegro is a cross-platform library mainly aimed at video game and multimedia programming. It handles common, low-level tasks such as creating windows, accepting user input, loading data, drawing images, playing sounds, etc. and generally abstracting away the underlying platform. However, Allegro is not a game engine: you are free to design and structure your program as you like.</div>
       <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause AND Zlib</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/liballeg/allegro5">https://github.com/liballeg/allegro5</a>
+         <a href="https://liballeg.org/">https://liballeg.org/</a>
       </div>
       <div>
         <span class="detailed-package-item-heading">Documentation:</span>
          N/A
       </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
+      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
       <br />
       <br />
       <div>
         <h2>Dependencies</h2>
         <ul>
+          <li>
+            <a href="alsa.html">alsa</a>
+            
+             <i>(platform: linux)</i>
+            
+          </li>
           <li>
             <a href="bzip2.html">bzip2</a>
             
@@ -223,6 +229,12 @@
           </li>
           <li>
             <a href="libflac.html">libflac</a>
+            
+            
+            
+          </li>
+          <li>
+            <a href="libjpeg-turbo.html">libjpeg-turbo</a>
             
             
             
@@ -252,13 +264,13 @@
             
           </li>
           <li>
-            <a href="openal-soft.html">openal-soft</a>
+            <a href="libwebp.html">libwebp</a>
             
             
             
           </li>
           <li>
-            <a href="opengl.html">opengl</a>
+            <a href="openal-soft.html">openal-soft</a>
             
             
             
@@ -315,6 +327,7 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">5.2.9.1#0</span>
           <span class="badge badge-primary">5.2.9.0#0</span>
           <span class="badge badge-primary">5.2.6.0#4</span>
           <span class="badge badge-primary">5.2.6.0#3</span>
@@ -333,18 +346,30 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div>No Features</div>
+        <div class="feature-name"><span class="caret">></span>direct3d - Direct3D support</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="caret">></span>opengl - OpenGL support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/opengl.html">opengl</a>
+              
+              
+              
+            </li>
+          </ul>
+        </div>
       </div>           
       <br />
       <br />
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/allegro5/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/allegro5/do-not-copy-pdbs-to-lib.patch" target="_blank">do-not-copy-pdbs-to-lib.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/allegro5/msvc-arm64-atomic.patch" target="_blank">msvc-arm64-atomic.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/allegro5/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/allegro5/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/allegro5/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/allegro5/do-not-copy-pdbs-to-lib.patch" target="_blank">do-not-copy-pdbs-to-lib.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/allegro5/msvc-arm64-atomic.patch" target="_blank">msvc-arm64-atomic.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/allegro5/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/allegro5/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

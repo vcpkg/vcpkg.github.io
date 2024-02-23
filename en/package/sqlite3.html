@@ -188,13 +188,13 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>sqlite3</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 3.43.2</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 3.45.1</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.</div>
       <div><span class="detailed-package-item-heading">License:</span> blessing</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2023-12-14</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://sqlite.org/">https://sqlite.org/</a>
@@ -237,6 +237,9 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">3.45.1#0</span>
+          <span class="badge badge-primary">3.45.0#0</span>
+          <span class="badge badge-primary">3.43.2#1</span>
           <span class="badge badge-primary">3.43.2#0</span>
           <span class="badge badge-primary">3.43.1#0</span>
           <span class="badge badge-primary">3.43.0#0</span>
@@ -304,35 +307,37 @@
       <br />
       <h2>Features</h2>
       <div>
-        <div class="feature-name"><span class="carrot">></span>dbstat - Enable the DBSTAT virtual table</div>
+        <div class="feature-name"><span class="caret">></span>dbstat - Enable the DBSTAT virtual table</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>fts3 - Enable the FTS3 extension</div>
+        <div class="feature-name"><span class="caret">></span>fts3 - Enable the FTS3 extension</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>fts4 - Enable the FTS4 extension</div>
+        <div class="feature-name"><span class="caret">></span>fts4 - Enable the FTS4 extension</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>fts5 - Enable the FTS5 extension</div>
+        <div class="feature-name"><span class="caret">></span>fts5 - Enable the FTS5 extension</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>geopoly - Enable geopoly functionality for sqlite3</div>
+        <div class="feature-name"><span class="caret">></span>geopoly - Enable geopoly functionality for sqlite3</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>json1 - Enable JSON functionality for sqlite3</div>
+        <div class="feature-name"><span class="caret">></span>json1 - Enable JSON functionality for sqlite3</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>limit - Enable the UPDATE&#x2F;DELETE LIMIT clause</div>
+        <div class="feature-name"><span class="caret">></span>limit - Enable the UPDATE&#x2F;DELETE LIMIT clause</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>math - Enable math functions</div>
+        <div class="feature-name"><span class="caret">></span>math - Enable math functions</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>memsys3 - Enable MEMSYS3</div>
+        <div class="feature-name"><span class="caret">></span>memsys3 - Enable MEMSYS3</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>memsys5 - Enable MEMSYS5</div>
+        <div class="feature-name"><span class="caret">></span>memsys5 - Enable MEMSYS5</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>omit-load-extension - Enable loading of external extensions</div>
+        <div class="feature-name"><span class="caret">></span>omit-load-extension - Enable loading of external extensions</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>rtree - Enable the RTREE extension</div>
+        <div class="feature-name"><span class="caret">></span>rtree - Enable the RTREE extension</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>session - Enable the SESSION extension</div>
+        <div class="feature-name"><span class="caret">></span>session - Enable the SESSION extension</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>tool - Build sqlite3 executable</div>
+        <div class="feature-name"><span class="caret">></span>soundex - Enable the SOUNDEX scalar function</div>
         <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="carrot">></span>zlib - Build sqlite3 command line tool with zlib support; has no effect on the library itself</div>
+        <div class="feature-name"><span class="caret">></span>tool - Build sqlite3 executable</div>
+        <div class="feature-dependencies no-dependencies">No Dependencies</div>
+        <div class="feature-name"><span class="caret">></span>zlib - Build sqlite3 command line tool with zlib support; has no effect on the library itself</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
@@ -349,15 +354,15 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/add-config-include.patch" target="_blank">add-config-include.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/fix-arm-uwp.patch" target="_blank">fix-arm-uwp.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/sqlite3-config.in.cmake" target="_blank">sqlite3-config.in.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/sqlite3-vcpkg-config.h.in" target="_blank">sqlite3-vcpkg-config.h.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/sqlite3.pc.in" target="_blank">sqlite3.pc.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/eb33d2f7583405fca184bcdf7fdd5828ec88ac05/ports/sqlite3/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/add-config-include.patch" target="_blank">add-config-include.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/fix-arm-uwp.patch" target="_blank">fix-arm-uwp.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/sqlite3-config.in.cmake" target="_blank">sqlite3-config.in.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/sqlite3-vcpkg-config.h.in" target="_blank">sqlite3-vcpkg-config.h.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/sqlite3.pc.in" target="_blank">sqlite3.pc.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/37c3e63a1306562f7f59c4c3c8892ddd50fdf992/ports/sqlite3/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>
