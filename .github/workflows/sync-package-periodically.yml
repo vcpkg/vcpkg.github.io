@@ -69,6 +69,6 @@ jobs:
                 title: title,
                 body: "This PR was automatically created by a GitHub Action triggered by a schedule. It updates the package metadata and website content.",
                 head: newBranch,
-                base: "main" 
+                base: "main"
               };
             await github.rest.pulls.create(output);
