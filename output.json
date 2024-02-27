@@ -1,6 +1,6 @@
 {
-  "Baseline": "ba1465e584fb7d11973d96be8d6b76c883a8aa48",
-  "Size": 2395,
+  "Baseline": "37c3e63a1306562f7f59c4c3c8892ddd50fdf992",
+  "Size": 2396,
   "Source": [
     {
       "Name": "3fd",
@@ -6329,7 +6329,7 @@
     },
     {
       "Name": "bext-sml2",
-      "Version": "2023-09-20",
+      "Version": "2024-02-02",
       "Description": "Your scalable C++20 one header only State Machine Library with no dependencies",
       "Homepage": "https://github.com/boost-ext/sml2",
       "License": "BSL-1.0",
@@ -6823,12 +6823,12 @@
     {
       "Name": "blaze",
       "Version": "3.8.2",
+      "Port-Version": 1,
       "Description": "Blaze is an open-source, high-performance C++ math library for dense and sparse arithmetic.",
       "Homepage": "https://bitbucket.org/blaze-lib/blaze",
       "License": "BSD-3-Clause",
       "Dependencies": [
         "boost-exception",
-        "lapack",
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -6838,7 +6838,21 @@
           "host": true
         }
       ],
-      "Features": [],
+      "Default-Features": [
+        "lapack",
+        "openmp"
+      ],
+      "Features": {
+        "lapack": {
+          "description": "LAPACK support",
+          "dependencies": [
+            "lapack"
+          ]
+        },
+        "openmp": {
+          "description": "OpenMP support"
+        }
+      },
       "Stars": 0,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
@@ -18531,8 +18545,7 @@
     },
     {
       "Name": "cairo",
-      "Version": "1.17.8",
-      "Port-Version": 4,
+      "Version": "1.18.0",
       "Description": "Cairo is a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers, PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB.",
       "Homepage": "https://cairographics.org",
       "License": "LGPL-2.1-only OR MPL-1.1",
@@ -19775,9 +19788,10 @@
     {
       "Name": "chipmunk",
       "Version": "7.0.3",
-      "Port-Version": 6,
+      "Port-Version": 7,
       "Description": "A fast and lightweight 2D game physics library.",
       "Homepage": "https://github.com/slembcke/Chipmunk2D",
+      "License": "MIT",
       "Supports": "!(arm & !arm64 & android)",
       "Dependencies": [
         {
@@ -23887,6 +23901,34 @@
       "Version": "1.2.9",
       "Description": "Path library for C/C++. Cross-Platform for Windows, MacOS and Linux. Supports UNIX and Windows path styles on those platforms.",
       "Homepage": "https://likle.github.io/cwalk/",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "cwapi3d",
+      "Version": "30.10.1",
+      "Description": "CwAPI3D is the Cadwork 3D plugin architecture in C++.",
+      "Homepage": "https://github.com/cwapi3d/cwapi3dcpp",
+      "License": "MIT",
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -28468,7 +28510,7 @@
     {
       "Name": "fdk-aac",
       "Version": "2.0.2",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "A standalone Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android. Uses a fork without HE-AAC, HE-AACv2, or xHE-AAC support to avoid patent licensing and GPL compatibility issues when built without the he-aac option.",
       "Homepage": "https://gitlab.freedesktop.org/wtaymans/fdk-aac-stripped",
       "License": "FDK-AAC",
@@ -28484,7 +28526,8 @@
       ],
       "Features": {
         "he-aac": {
-          "description": "Support patent-encumbered HE-AAC, HE-AACv2, and xHE-AAC codec profiles. Do not distribute binaries with this option without the relevant patent licenses if you are in a jurisdiction that recognizes software patents. Might not be compatible with the GPL depending on legal interpretation. Refer to https://bugzilla.redhat.com/show_bug.cgi?id=1501522#c112"
+          "description": "Support patent-encumbered HE-AAC, HE-AACv2, and xHE-AAC codec profiles. Do not distribute binaries with this option without the relevant patent licenses if you are in a jurisdiction that recognizes software patents. Might not be compatible with the GPL depending on legal interpretation. Refer to https://bugzilla.redhat.com/show_bug.cgi?id=1501522#c112",
+          "supports": "!android"
         }
       },
       "Stars": 0,
@@ -33239,7 +33282,7 @@
     },
     {
       "Name": "glaze",
-      "Version": "2.0.9",
+      "Version": "2.1.4",
       "Description": "One of the fastest JSON libraries in the world. Glaze reads and writes from C++ memory, simplifying interfaces and offering incredible performance.",
       "Homepage": "https://github.com/stephenberry/glaze",
       "License": "MIT",
@@ -37286,7 +37329,7 @@
     {
       "Name": "gts",
       "Version": "0.7.6",
-      "Port-Version": 8,
+      "Port-Version": 9,
       "Description": "3D surfaces meshed with interconnected triangles",
       "Homepage": "https://gts.sourceforge.net/",
       "License": "LGPL-2.0-or-later",
@@ -37993,8 +38036,7 @@
     },
     {
       "Name": "halide",
-      "Version": "16.0.0",
-      "Port-Version": 1,
+      "Version": "17.0.1",
       "Description": "Halide is a programming language designed to make it easier to write high-performance image and array processing code on modern machines.",
       "Homepage": "https://github.com/halide/Halide",
       "License": "MIT",
@@ -38953,7 +38995,7 @@
     },
     {
       "Name": "highway",
-      "Version": "1.0.7",
+      "Version": "1.1.0",
       "Description": "Performance-portable, length-agnostic SIMD with runtime dispatch",
       "Homepage": "https://github.com/google/highway",
       "License": "Apache-2.0",
@@ -39195,7 +39237,7 @@
       "x64-osx": "pass",
       "x64-uwp": "pass",
       "x64-windows-static-md": "pass",
-      "x64-windows-static": "pass",
+      "x64-windows-static": "fail",
       "x64-windows": "pass",
       "x86-windows": "pass"
     },
@@ -42290,7 +42332,7 @@
     },
     {
       "Name": "jwt-cpp",
-      "Version": "0.6.0",
+      "Version": "0.7.0",
       "Description": "A header only library for creating and validating json web tokens in c++",
       "Homepage": "https://github.com/Thalhammer/jwt-cpp",
       "License": "MIT",
@@ -45161,7 +45203,7 @@
     },
     {
       "Name": "leptonica",
-      "Version": "1.83.1",
+      "Version": "1.84.1",
       "Description": "An open source library containing software that is broadly useful for image processing and image analysis applications",
       "Homepage": "https://github.com/DanBloomberg/leptonica",
       "License": null,
@@ -48310,6 +48352,7 @@
     {
       "Name": "libheif",
       "Version": "1.17.6",
+      "Port-Version": 1,
       "Description": "libheif is an HEIF and AVIF file format decoder and encoder.",
       "Homepage": "http://www.libheif.org/",
       "License": "LGPL-3.0-only",
@@ -48327,10 +48370,20 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        },
-        "x265"
+        }
       ],
-      "Features": [],
+      "Default-Features": [
+        "hevc"
+      ],
+      "Features": {
+        "hevc": {
+          "description": "HEVC encoding via x265",
+          "license": "GPL-2.0-or-later",
+          "dependencies": [
+            "x265"
+          ]
+        }
+      },
       "Stars": 0,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
@@ -50069,7 +50122,7 @@
     },
     {
       "Name": "libnick",
-      "Version": "2024.2.5",
+      "Version": "2024.2.7",
       "Maintainers": "Nicholas Logozzo nlogozzo225@gmail.com",
       "Description": "A cross-platform base for native Nickvision applications.",
       "Homepage": "https://github.com/NickvisionApps/libnick",
@@ -50949,8 +51002,7 @@
     },
     {
       "Name": "libpq",
-      "Version": "16.0",
-      "Port-Version": 2,
+      "Version": "16.2",
       "Description": "The official database access API of postgresql",
       "Homepage": "https://www.postgresql.org/",
       "License": "PostgreSQL",
@@ -51567,6 +51619,7 @@
     {
       "Name": "libredwg",
       "Version": "0.13.2",
+      "Port-Version": 1,
       "Description": "GNU LibreDWG is a free C library to handle DWG files. It aims to be a free replacement for the OpenDWG libraries. DWG is the native file format of AutoCAD.",
       "Homepage": "https://www.gnu.org/software/libredwg/",
       "License": "GPL-3.0",
@@ -52270,17 +52323,15 @@
     {
       "Name": "libsodium",
       "Version": "1.0.19",
+      "Port-Version": 1,
       "Description": "A modern and easy-to-use crypto library",
-      "Homepage": "https://github.com/jedisct1/libsodium",
+      "Homepage": "https://libsodium.org/",
       "License": "ISC",
       "Dependencies": [
         {
-          "name": "vcpkg-cmake",
-          "host": true
-        },
-        {
-          "name": "vcpkg-cmake-config",
-          "host": true
+          "name": "vcpkg-msbuild",
+          "host": true,
+          "platform": "windows & !mingw"
         }
       ],
       "Features": [],
@@ -53238,7 +53289,7 @@
     },
     {
       "Name": "libtorrent",
-      "Version": "2.0.9",
+      "Version": "2.0.10",
       "Maintainers": "Arvid Norberg <arvid.norberg@gmail.com>",
       "Description": "An efficient feature complete C++ BitTorrent implementation",
       "Homepage": "https://libtorrent.org",
@@ -53589,7 +53640,7 @@
     },
     {
       "Name": "libunwind",
-      "Version": "1.7.2",
+      "Version": "1.8.0",
       "Description": "Unix libray for portable stack unwinding",
       "Homepage": "https://www.nongnu.org/libunwind",
       "License": "MIT",
@@ -61399,7 +61450,7 @@
     },
     {
       "Name": "mongoose",
-      "Version": "7.12",
+      "Version": "7.13",
       "Description": "Embedded web server / embedded networking library",
       "Homepage": "https://cesanta.com/",
       "License": null,
@@ -63239,7 +63290,7 @@
     },
     {
       "Name": "ncnn",
-      "Version": "20231027",
+      "Version": "20240102",
       "Description": "ncnn is a high-performance neural network inference computing framework.",
       "Homepage": "https://github.com/Tencent/ncnn",
       "License": "BSD-3-Clause",
@@ -68695,6 +68746,7 @@
     {
       "Name": "opentelemetry-cpp",
       "Version": "1.14.0",
+      "Port-Version": 1,
       "Description": [
         "OpenTelemetry is a collection of tools, APIs, and SDKs.",
         "You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior."
@@ -68722,7 +68774,16 @@
           "supports": "windows"
         },
         "geneva": {
-          "description": "Whether to include the Geneva Exporter from the opentelemetry-cpp-contrib repository"
+          "description": "Whether to include the Geneva Exporter from the opentelemetry-cpp-contrib repository",
+          "dependencies": [
+            {
+              "name": "opentelemetry-cpp",
+              "features": [
+                "etw"
+              ],
+              "platform": "windows"
+            }
+          ]
         },
         "otlp-grpc": {
           "description": "Whether to include the OTLP gRPC exporter in the SDK",
@@ -80924,8 +80985,7 @@
     },
     {
       "Name": "rtabmap",
-      "Version": "0.21.0",
-      "Port-Version": 3,
+      "Version": "0.21.4",
       "Description": "Real-Time Appearance-Based Mapping",
       "Homepage": "https://introlab.github.io/rtabmap/",
       "License": "BSD-3-Clause",
@@ -84380,8 +84440,7 @@
     },
     {
       "Name": "skia",
-      "Version": "0.38.2",
-      "Port-Version": 4,
+      "Version": "122",
       "Description": [
         "Skia is an open source 2D graphics library which provides common APIs that work across a variety of hardware and software platforms.",
         "It serves as the graphics engine for Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.",
@@ -84441,7 +84500,7 @@
         },
         {
           "name": "harfbuzz",
-          "platform": "!uwp"
+          "platform": "!uwp & !(windows & !static)"
         },
         {
           "name": "icu",
@@ -84452,7 +84511,17 @@
         "dawn": {
           "description": "dawn support for skia",
           "dependencies": [
-            "vulkan-headers"
+            "egl-registry",
+            "opengl-registry",
+            {
+              "name": "skia",
+              "default-features": false,
+              "features": [
+                "graphite",
+                "vulkan"
+              ]
+            },
+            "vulkan-utility-libraries"
           ]
         },
         "direct3d": {
@@ -84492,10 +84561,25 @@
             "opengl-registry"
           ]
         },
+        "graphite": {
+          "description": "Graphite support",
+          "dependencies": [
+            {
+              "name": "skia",
+              "default-features": false,
+              "features": [
+                "vulkan"
+              ]
+            }
+          ]
+        },
         "harfbuzz": {
           "description": "Harfbuzz support",
           "dependencies": [
-            "harfbuzz"
+            {
+              "name": "harfbuzz",
+              "default-features": false
+            }
           ]
         },
         "icu": {
@@ -93663,7 +93747,7 @@
     },
     {
       "Name": "winreg",
-      "Version": "6.1.1",
+      "Version": "6.2.0",
       "Description": "High-level C++ wrapper around the Windows Registry C API.",
       "Homepage": "https://github.com/GiovanniDicanio/WinReg",
       "License": "MIT",
@@ -94343,7 +94427,7 @@
     },
     {
       "Name": "wyhash",
-      "Version": "2023-01-25",
+      "Version": "2023-12-03",
       "Description": "The FASTEST QUALITY hash function, random number generators (PRNG) and hash map.",
       "Homepage": "https://github.com/wangyi-fudan/wyhash",
       "License": "Unlicense",
@@ -94742,6 +94826,7 @@
     {
       "Name": "xcb-util-errors",
       "Version": "1.0.1",
+      "Port-Version": 1,
       "Description": "XCB utility library that gives human readable names to error, event, & request codes.",
       "Homepage": "https://xcb.freedesktop.org/",
       "License": null,
