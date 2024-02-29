@@ -38,8 +38,10 @@ async function readHomepage(manifestFile) {
 }
 
 async function main(vcpkgDir, destDir, githubToken) {
+    console.log(`Using GitHub Token: ${githubToken.substring(0, 4)}...`);
+
     if (githubToken.length == 0) {
-        console.log('Skipping GitHub stars');
+        console.log('Skipping GitHub stars due to missing token');
         return;
     }
 
