@@ -44,7 +44,7 @@ jobs:
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
         env:
-          GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and Push changes
         run: |
