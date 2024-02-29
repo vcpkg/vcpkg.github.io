@@ -5,6 +5,9 @@ const path = require('path');
 const { Octokit } = require('@octokit/rest');
 const { exit } = require('process');
 
+console.log('Starting GitHub stars generation script.');
+
+
 async function getGitHubStars(octokit, url) {
     try {
         const githubUrl = 'https://github.com/';
