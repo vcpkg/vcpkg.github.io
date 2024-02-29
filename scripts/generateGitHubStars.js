@@ -5,9 +5,6 @@ const path = require('path');
 const { Octokit } = require('@octokit/rest');
 const { exit } = require('process');
 
-console.log('Starting GitHub stars generation script.');
-
-
 async function getGitHubStars(octokit, url) {
     try {
         const githubUrl = 'https://github.com/';
@@ -29,7 +26,7 @@ async function getGitHubStars(octokit, url) {
 
         return response.data.stargazers_count;
     } catch (error) {
-        console.log("Error fetching stars for repo: ", error); //more verbose
+        console.log("Error fetching stars for repo: ", error);
         return 0;
     }
 }
@@ -41,8 +38,6 @@ async function readHomepage(manifestFile) {
 }
 
 async function main(vcpkgDir, destDir, githubToken) {
-    console.log(`Using GitHub Token: ${githubToken.substring(0, 4)}...`);
-
     if (githubToken.length == 0) {
         console.log('Skipping GitHub stars due to missing token');
         return;
