@@ -1,8 +1,9 @@
 name: Sync Package Metadata
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 9 * * *'
+     - cron: '0 5 * * 1' # 10 PM PT Sunday, which is 5 AM UTC Monday
 
 permissions:
   pull-requests: write
@@ -15,12 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with:
           repository: vcpkg/vcpkg.github.io.git
-          ref: main 
+          ref: main
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Checkout package_sync branch
+        run: |
+          git checkout package_sync
+          git reset --hard origin/main
 
       - name: Restore NPM cache
         uses: actions/cache@v3
@@ -34,13 +43,34 @@ jobs:
 
       - name: Rebuild and validate website
         run: scripts/rebuild.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit Results
+      - name: Commit and Push changes
         run: |
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Actions"
-            git add scripts/commit.txt
-            git commit -m 'Data Updated' ||  echo 'No changes to commit'
-            git fetch origin main
-            git push origin HEAD:main || echo "Error occurred while push to origin"
-            
+            git add .
+            git commit -m 'Update package metadata and website content' || echo 'No changes to commit'
+            git push -f origin package_sync
+
+      - name: Open Pull Request
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const repositoryFullName = process.env.GITHUB_REPOSITORY; // 'owner/repo'
+            const [owner, repo] = repositoryFullName.split('/');
+            const actor = process.env.GITHUB_ACTOR;
+            const newBranch = 'package_sync';
+            const timestamp = new Date().toISOString();
+            const title = `Update Package Metadata - ${timestamp}`;
+            const output = {
+                owner: owner,
+                repo: repo,
+                title: title,
+                body: "This PR was automatically created by a GitHub Action triggered by a schedule. It updates the package metadata and website content.",
+                head: newBranch,
+                base: "main"
+              };
+            await github.rest.pulls.create(output);
