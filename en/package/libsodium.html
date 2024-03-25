@@ -60,7 +60,7 @@
   <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
     <ul class="navbar-nav ml-auto navbar-right-margin">
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started </a>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
         <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
@@ -81,7 +81,7 @@
     <div class="mobile-margin">
       <ul class="mobile-nav-list">
         <li class="mobile-nav-item">
-          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+          <a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started</a>
         </li>
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="/en/packages">Packages</a>
@@ -191,13 +191,14 @@
       <div> <span class="detailed-package-item-heading">Version:</span> 1.0.19</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
+          1
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> A modern and easy-to-use crypto library</div>
       <div><span class="detailed-package-item-heading">License:</span> ISC</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-21</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/jedisct1/libsodium">https://github.com/jedisct1/libsodium</a>
+         <a href="https://libsodium.org/">https://libsodium.org/</a>
       </div>
       <div>
         <span class="detailed-package-item-heading">Documentation:</span>
@@ -210,15 +211,9 @@
         <h2>Dependencies</h2>
         <ul>
           <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
+            <a href="vcpkg-msbuild.html">vcpkg-msbuild</a>
              <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
+             <i>(platform: windows &amp; !mingw)</i>
             
           </li>
         </ul>
@@ -237,6 +232,7 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">1.0.19#1</span>
           <span class="badge badge-primary">1.0.19#0</span>
           <span class="badge badge-primary">1.0.18#9</span>
           <span class="badge badge-primary">1.0.18#8</span>
@@ -269,10 +265,9 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/libsodium/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/libsodium/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/libsodium/sodiumConfig.cmake.in" target="_blank">sodiumConfig.cmake.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/libsodium/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libsodium/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libsodium/sodiumConfig.cmake.in" target="_blank">sodiumConfig.cmake.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libsodium/vcpkg.json" target="_blank">vcpkg.json</a></li>
         </ul>
       </div>
     </div>

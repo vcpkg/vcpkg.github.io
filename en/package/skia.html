@@ -60,7 +60,7 @@
   <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
     <ul class="navbar-nav ml-auto navbar-right-margin">
       <li class="nav-item active" onmouseover="addMouseLeave()">
-        <a class="nav-link nav-link-hover" href="/en/getting-started">Get Started </a>
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started </a>
       </li>
       <li class="nav-item active" onmouseover="addMouseLeave()">
         <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
@@ -81,7 +81,7 @@
     <div class="mobile-margin">
       <ul class="mobile-nav-list">
         <li class="mobile-nav-item">
-          <a class="navbar-mobile" href="/en/getting-started">Get Started</a>
+          <a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started</a>
         </li>
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="/en/packages">Packages</a>
@@ -188,14 +188,13 @@
   <main class="package-body" id="main">
     <div class="main-content">
       <h1>skia</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 0.38.2</div>
+      <div> <span class="detailed-package-item-heading">Version:</span> 122</div>
       <div> 
         <span class="detailed-package-item-heading">Port-Version:</span>
-          4
       </div>
       <div><span class="detailed-package-item-heading">Description:</span> Skia is an open source 2D graphics library which provides common APIs that work across a variety of hardware and software platforms.,It serves as the graphics engine for Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.,Skia is sponsored and managed by Google, but is available for use by anyone under the BSD Free Software License. While engineering of the core components is done by the Skia development team, we consider contributions from any source.</div>
       <div><span class="detailed-package-item-heading">License:</span> </div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-21</div>
+      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
       <div>
         <span class="detailed-package-item-heading">Homepage:</span>
          <a href="https://skia.org">https://skia.org</a>
@@ -292,6 +291,7 @@
       <div class="text-heading">
         <h2>Available Versions</h2>
         <div class="version-badges">
+          <span class="badge badge-primary">122#0</span>
           <span class="badge badge-primary">0.38.2#4</span>
           <span class="badge badge-primary">0.38.2#3</span>
           <span class="badge badge-primary">0.38.2#2</span>
@@ -331,7 +331,22 @@
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
-            <li><a href="/en/package/vulkan-headers.html">vulkan-headers</a>
+            <li><a href="/en/package/egl-registry.html">egl-registry</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/opengl-registry.html">opengl-registry</a>
+              
+              
+              
+            </li>
+            <li><a href="/en/package/skia.html">skia</a>
+              [graphite, vulkan]
+               (default-features: false)
+              
+            </li>
+            <li><a href="/en/package/vulkan-utility-libraries.html">vulkan-utility-libraries</a>
               
               
               
@@ -383,13 +398,24 @@
             </li>
           </ul>
         </div>
+        <div class="feature-name"><span class="caret">></span>graphite - Graphite support</div>
+        <div class="feature-dependencies">
+        <div class="dependency-header">Dependencies:</div>
+          <ul>
+            <li><a href="/en/package/skia.html">skia</a>
+              [vulkan]
+               (default-features: false)
+              
+            </li>
+          </ul>
+        </div>
         <div class="feature-name"><span class="caret">></span>harfbuzz - Harfbuzz support</div>
         <div class="feature-dependencies">
         <div class="dependency-header">Dependencies:</div>
           <ul>
             <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
               
-              
+               (default-features: false)
               
             </li>
           </ul>
@@ -429,22 +455,22 @@
       <div class="text-heading">
         <h2>Port Contents</h2>
         <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/add-cstdlib.patch" target="_blank">add-cstdlib.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/dawn-dedup-native-proc-gen.patch" target="_blank">dawn-dedup-native-proc-gen.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/disable-dev-test.patch" target="_blank">disable-dev-test.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/disable-msvc-env-setup.patch" target="_blank">disable-msvc-env-setup.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/example" target="_blank">example</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/skdebug-stdio.patch" target="_blank">skdebug-stdio.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/skia-functions.cmake" target="_blank">skia-functions.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/skiaConfig.cmake" target="_blank">skiaConfig.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/third-party.gn.in" target="_blank">third-party.gn.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/unofficial-skia-config.cmake" target="_blank">unofficial-skia-config.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/unofficial-skia-targets-details.cmake" target="_blank">unofficial-skia-targets-details.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/unofficial-skia-targets.cmake" target="_blank">unofficial-skia-targets.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/uwp.patch" target="_blank">uwp.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/ba1465e584fb7d11973d96be8d6b76c883a8aa48/ports/skia/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/bentleyottmann-build.patch" target="_blank">bentleyottmann-build.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/disable-dev-test.patch" target="_blank">disable-dev-test.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/disable-msvc-env-setup.patch" target="_blank">disable-msvc-env-setup.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/example" target="_blank">example</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/graphite.patch" target="_blank">graphite.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/portfile.cmake" target="_blank">portfile.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/skia-functions.cmake" target="_blank">skia-functions.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/skia-include-string.patch" target="_blank">skia-include-string.patch</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/skiaConfig.cmake" target="_blank">skiaConfig.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/third-party.gn.in" target="_blank">third-party.gn.in</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/unofficial-skia-config.cmake" target="_blank">unofficial-skia-config.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/unofficial-skia-targets-details.cmake" target="_blank">unofficial-skia-targets-details.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/unofficial-skia-targets.cmake" target="_blank">unofficial-skia-targets.cmake</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/usage" target="_blank">usage</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/vcpkg.json" target="_blank">vcpkg.json</a></li>
+          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/skia/vulkan-headers.patch" target="_blank">vulkan-headers.patch</a></li>
         </ul>
       </div>
     </div>
