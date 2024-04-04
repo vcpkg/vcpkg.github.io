@@ -493,7 +493,6 @@ function sortPackages() {
 
 function loadTotalPackages() {
     var totalPackages = document.getElementsByClassName('total-packages')[0];
-    var hiddenPackages = new Set();
-    let packagesFound = currentPackages.length - hiddenPackages.size;
+    let packagesFound = currentPackages.length;
     totalPackages.textContent = 'Showing 1-' + maxPackageLength + ' of ' + packagesFound + ' packages';
 }
