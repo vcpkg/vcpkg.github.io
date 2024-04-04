@@ -136,15 +136,16 @@ function mergeDataSources(portsData, baselineData, githubData) {
 
         portsData[port]['Stars'] = githubData[port] ?? 0;
 
+        
         // website expects all known triplets to be listed
-        for (let triplet of allTriplets) {
-            if (port in baselineData && triplet in baselineData[port]) {
-                portsData[port][triplet] = baselineData[port][triplet];
-            }
-            else {
-                portsData[port][triplet] = 'pass';
-            }
-        }
+        // for (let triplet of allTriplets) {
+        //     if (port in baselineData && triplet in baselineData[port]) {
+        //         portsData[port][triplet] = baselineData[port][triplet];
+        //     }
+        //     else {
+        //         portsData[port][triplet] = 'pass';
+        //     }
+        // }
     }
 }
 
