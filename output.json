@@ -1,6 +1,6 @@
 {
-  "Baseline": "a34c873a9717a888f58dc05268dea15592c2f0ff",
-  "Size": 2415,
+  "Baseline": "943c5ef1c8f6b5e6ced092b242c8299caae2ff01",
+  "Size": 2426,
   "Source": [
     {
       "Name": "3fd",
@@ -96,7 +96,7 @@
     },
     {
       "Name": "ableton-link",
-      "Version": "3.1.0",
+      "Version": "3.1.1",
       "Description": "Ableton Link, a technology that synchronizes musical beat, tempo, and phase across multiple applications running on one or more devices.",
       "Homepage": "https://www.ableton.com/en/link/",
       "Documentation": "http://ableton.github.io/link/",
@@ -154,9 +154,8 @@
     },
     {
       "Name": "abseil",
-      "Version": "20240116.1",
+      "Version": "20240116.2",
       "Description": [
-        "an open-source collection designed to augment the C++ standard library.",
         "Abseil is an open-source collection of C++ library code designed to augment the C++ standard library. The Abseil library code is collected from Google's own C++ code base, has been extensively tested and used in production, and is the same code we depend on in our daily coding lives.",
         "In some cases, Abseil provides pieces missing from the C++ standard; in others, Abseil provides alternatives to the standard for special needs we've found through usage in the Google code base. We denote those cases clearly within the library code we provide you.",
         "Abseil is not meant to be a competitor to the standard library; we've just found that many of these utilities serve a purpose within our code base, and we now want to provide those resources to the C++ community as a whole."
@@ -219,8 +218,7 @@
     },
     {
       "Name": "ace",
-      "Version": "7.1.2",
-      "Port-Version": 1,
+      "Version": "7.1.4",
       "Maintainers": "Johnny Willemsen <jwillemsen@remedy.nl>",
       "Description": "The ADAPTIVE Communication Environment",
       "Homepage": "https://github.com/DOCGroup/ACE_TAO",
@@ -413,8 +411,7 @@
     },
     {
       "Name": "adios2",
-      "Version": "2.8.3",
-      "Port-Version": 1,
+      "Version": "2.9.2",
       "Description": "Next generation of ADIOS developed in the Exascale Computing Program",
       "Homepage": "https://github.com/ornladios/ADIOS2",
       "License": "Apache-2.0",
@@ -683,19 +680,16 @@
     },
     {
       "Name": "aliyun-oss-c-sdk",
-      "Version": "3.10.0",
-      "Port-Version": 3,
+      "Version": "3.10.1",
       "Description": "Alibaba Cloud Object Storage Service (OSS) is a cloud storage service provided by Alibaba Cloud, featuring massive capacity, security, a low cost, and high reliability.",
+      "Homepage": "https://github.com/aliyun/aliyun-oss-c-sdk",
+      "License": "MIT",
       "Supports": "!(uwp | linux | osx)",
       "Dependencies": [
         "apr-util",
         "curl",
         {
           "name": "vcpkg-cmake",
-          "host": true
-        },
-        {
-          "name": "vcpkg-cmake-config",
           "host": true
         }
       ],
@@ -890,7 +884,7 @@
     },
     {
       "Name": "amd-amf",
-      "Version": "1.4.29",
+      "Version": "1.4.33",
       "Description": "AMD Advanced Media Framework headers",
       "Homepage": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF",
       "License": "MIT",
@@ -973,7 +967,7 @@
     },
     {
       "Name": "amqpcpp",
-      "Version": "4.3.23",
+      "Version": "4.3.26",
       "Description": "AMQP-CPP is a C++ library for communicating with a RabbitMQ message broker",
       "Homepage": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP",
       "License": "Apache-2.0",
@@ -1140,7 +1134,7 @@
     },
     {
       "Name": "ankurvdev-embedresource",
-      "Version": "0.0.10",
+      "Version": "0.0.11",
       "Description": "Cross Platform Resource Embedding",
       "Homepage": "https://github.com/ankurvdev/embedresource",
       "License": "BSD-3-Clause",
@@ -1168,7 +1162,7 @@
     },
     {
       "Name": "annoy",
-      "Version": "1.17.2",
+      "Version": "1.17.3",
       "Description": "Approximate Nearest Neighbors optimized for memory usage and loading/saving to disk",
       "Homepage": "https://github.com/spotify/annoy",
       "License": "Apache-2.0",
@@ -1311,7 +1305,7 @@
     },
     {
       "Name": "apache-datasketches",
-      "Version": "4.1.0",
+      "Version": "5.0.2",
       "Description": "Apache DataSketches Core C++ Library Component.",
       "Homepage": "https://datasketches.apache.org/",
       "License": "Apache-2.0",
@@ -1339,9 +1333,10 @@
     },
     {
       "Name": "approval-tests-cpp",
-      "Version": "10.12.2",
+      "Version": "10.13.0",
       "Description": "Approval Tests allow you to verify a chunk of output (such as a file) in one operation as opposed to writing test assertions for each element.",
       "Homepage": "https://github.com/approvals/ApprovalTests.cpp",
+      "License": "Apache-2.0",
       "Features": [],
       "Stars": 304,
       "arm-uwp": "pass",
@@ -1889,6 +1884,7 @@
     {
       "Name": "armadillo",
       "Version": "12.6.6",
+      "Port-Version": 1,
       "Description": "Armadillo is a high quality linear algebra library (matrix maths) for the C++ language, aiming towards a good balance between speed and ease of use",
       "Homepage": "https://arma.sourceforge.net/",
       "License": "Apache-2.0",
@@ -2021,7 +2017,8 @@
     },
     {
       "Name": "arrow",
-      "Version": "15.0.2",
+      "Version": "16.0.0",
+      "Port-Version": 1,
       "Description": "Cross-language development platform for in-memory analytics",
       "Homepage": "https://arrow.apache.org",
       "License": "Apache-2.0",
@@ -2247,7 +2244,7 @@
     },
     {
       "Name": "asio",
-      "Version": "1.29.0",
+      "Version": "1.30.2",
       "Description": "Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.",
       "Homepage": "https://github.com/chriskohlhoff/asio",
       "Documentation": "https://think-async.com/Asio/asio-1.28.0/doc/",
@@ -2295,7 +2292,7 @@
     },
     {
       "Name": "asio-grpc",
-      "Version": "3.0.0",
+      "Version": "3.1.0",
       "Description": "Asynchronous gRPC with Asio/unified executors",
       "Homepage": "https://github.com/Tradias/asio-grpc",
       "License": "Apache-2.0",
@@ -2420,8 +2417,7 @@
     },
     {
       "Name": "assimp",
-      "Version": "5.3.1",
-      "Port-Version": 4,
+      "Version": "5.4.0",
       "Description": "The Open Asset import library",
       "Homepage": "https://github.com/assimp/assimp",
       "License": "BSD-3-Clause",
@@ -2459,7 +2455,7 @@
     },
     {
       "Name": "async-mqtt",
-      "Version": "4.0.0",
+      "Version": "4.1.0",
       "Description": "Header-only Asynchronous MQTT communication library for C++17 based on Boost.Asio.",
       "Homepage": "https://github.com/redboltz/async_mqtt",
       "License": "BSL-1.0",
@@ -2738,6 +2734,34 @@
       "x64-linux": "pass",
       "x64-osx": "pass",
       "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "atliac-minitest",
+      "Version": "1.0.0",
+      "Description": "A C++ unit testing framework that helps write tests alongside the code being tested.",
+      "Homepage": "https://github.com/Atliac/minitest",
+      "License": "MIT",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "fail",
+      "x64-osx": "fail",
+      "x64-uwp": "fail",
       "x64-windows-static-md": "pass",
       "x64-windows-static": "pass",
       "x64-windows": "pass",
@@ -3128,6 +3152,47 @@
       "x86-windows": "pass"
     },
     {
+      "Name": "awlib",
+      "Version": "2024-04-06",
+      "Description": "Cross-platform utility library",
+      "Homepage": "https://github.com/absurdworlds/awlib",
+      "License": "LGPL-3.0-or-later",
+      "Supports": "!uwp & !android",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": {
+        "graphics": {
+          "description": "Build graphics library",
+          "supports": "!uwp",
+          "dependencies": [
+            "glfw3",
+            "libpng"
+          ]
+        },
+        "hudf": {
+          "description": "Build HuDF support"
+        }
+      },
+      "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
       "Name": "aws-c-auth",
       "Version": "0.7.16",
       "Description": "C99 library implementation of AWS client-side authentication: standard credentials providers and signing.",
@@ -3393,7 +3458,7 @@
     },
     {
       "Name": "aws-c-s3",
-      "Version": "0.5.2",
+      "Version": "0.5.4",
       "Description": "C99 library implementation for communicating with the S3 service, designed for maximizing throughput on high bandwidth EC2 instances.",
       "Homepage": "https://github.com/awslabs/aws-c-s3",
       "License": "Apache-2.0",
@@ -3563,6 +3628,7 @@
     {
       "Name": "aws-sdk-cpp",
       "Version": "1.11.285",
+      "Port-Version": 1,
       "Description": "AWS SDK for C++",
       "Homepage": "https://github.com/aws/aws-sdk-cpp",
       "License": "Apache-2.0",
@@ -4855,6 +4921,7 @@
     {
       "Name": "azure-c-shared-utility",
       "Version": "2024-03-04",
+      "Port-Version": 1,
       "Description": "Azure C SDKs common code",
       "Homepage": "https://github.com/Azure/azure-c-shared-utility",
       "License": "MIT",
@@ -4893,7 +4960,7 @@
     },
     {
       "Name": "azure-core-amqp-cpp",
-      "Version": "1.0.0-beta.7",
+      "Version": "1.0.0-beta.8",
       "Description": [
         "Microsoft Azure AMQP SDK for C++",
         "This library provides AMQP functionality to Azure SDK services."
@@ -4906,7 +4973,7 @@
         {
           "name": "azure-core-cpp",
           "default-features": false,
-          "version>=": "1.10.0"
+          "version>=": "1.11.3"
         },
         "azure-macro-utils-c",
         "umock-c",
@@ -4933,7 +5000,7 @@
     },
     {
       "Name": "azure-core-cpp",
-      "Version": "1.11.2",
+      "Version": "1.11.3",
       "Description": [
         "Microsoft Azure Core SDK for C++",
         "This library provides shared primitives, abstractions, and helpers for modern Azure SDK client libraries written in the C++."
@@ -5021,7 +5088,7 @@
     {
       "Name": "azure-core-tracing-opentelemetry-cpp",
       "Version": "1.0.0-beta.4",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": [
         "Microsoft Azure Core Tracing OpenTelemetry SDK for C++",
         "This library provides support for modern Azure SDK client libraries written in C++ to leverage OpenTelemetry APIs."
@@ -5062,7 +5129,7 @@
     },
     {
       "Name": "azure-data-tables-cpp",
-      "Version": "1.0.0-beta.1",
+      "Version": "1.0.0-beta.2",
       "Description": [
         "Microsoft Azure Data Tables SDK for C++",
         "This library provides Azure Data Tables SDK."
@@ -5073,11 +5140,15 @@
         {
           "name": "azure-core-cpp",
           "default-features": false,
-          "version>=": "1.11.0"
+          "version>=": "1.11.3"
         },
         {
           "name": "libxml2",
           "default-features": false,
+          "platform": "!windows"
+        },
+        {
+          "name": "openssl",
           "platform": "!windows"
         },
         {
@@ -5104,6 +5175,7 @@
     {
       "Name": "azure-identity-cpp",
       "Version": "1.6.0",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Identity SDK for C++",
         "This library provides common authentication-related abstractions for Azure SDK."
@@ -5274,7 +5346,7 @@
     {
       "Name": "azure-messaging-eventhubs-checkpointstore-blob-cpp",
       "Version": "1.0.0-beta.1",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": [
         "Microsoft Azure Messaging Event Hubs Blob Checkpoint Store SDK for C++",
         "This library provides an Azure-Storage-Blobs based implementation of an Azure Messaging Event Hubs SDK Checkpoint Store."
@@ -5320,7 +5392,7 @@
     },
     {
       "Name": "azure-messaging-eventhubs-cpp",
-      "Version": "1.0.0-beta.6",
+      "Version": "1.0.0-beta.7",
       "Description": [
         "Microsoft Azure Messaging Event Hubs SDK for C++",
         "This library provides Azure Messaging Event Hubs SDK."
@@ -5331,7 +5403,7 @@
         {
           "name": "azure-core-amqp-cpp",
           "default-features": false,
-          "version>=": "1.0.0-beta.7"
+          "version>=": "1.0.0-beta.8"
         },
         {
           "name": "vcpkg-cmake",
@@ -5357,7 +5429,7 @@
     {
       "Name": "azure-security-attestation-cpp",
       "Version": "1.1.0",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": [
         "Microsoft Azure Attestation Service SDK for C++",
         "This library provides API access to the Microsoft Azure Attestation service."
@@ -5395,6 +5467,7 @@
     {
       "Name": "azure-security-keyvault-administration-cpp",
       "Version": "4.0.0-beta.4",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Key Vault Administration SDK for C++",
         "This library provides Azure Key Vault Administration SDK."
@@ -5431,6 +5504,7 @@
     {
       "Name": "azure-security-keyvault-certificates-cpp",
       "Version": "4.2.1",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Key Vault Certificates SDK for C++",
         "This library provides Azure Key Vault Certificates SDK."
@@ -5467,6 +5541,7 @@
     {
       "Name": "azure-security-keyvault-keys-cpp",
       "Version": "4.4.1",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Key Vault Keys SDK for C++",
         "This library provides Azure Key Vault Keys SDK."
@@ -5503,6 +5578,7 @@
     {
       "Name": "azure-security-keyvault-secrets-cpp",
       "Version": "4.2.1",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Key Vault Secrets SDK for C++",
         "This library provides Azure Key Vault Secrets SDK."
@@ -5539,6 +5615,7 @@
     {
       "Name": "azure-storage-blobs-cpp",
       "Version": "12.10.0",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Storage Blobs SDK for C++",
         "This library provides Azure Storage Blobs SDK."
@@ -5575,6 +5652,7 @@
     {
       "Name": "azure-storage-common-cpp",
       "Version": "12.5.0",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Common Storage SDK for C++",
         "This library provides common Azure Storage-related abstractions for Azure SDK."
@@ -5589,6 +5667,7 @@
         },
         {
           "name": "libxml2",
+          "default-features": false,
           "platform": "!windows"
         },
         {
@@ -5679,6 +5758,7 @@
     {
       "Name": "azure-storage-files-datalake-cpp",
       "Version": "12.9.0",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Storage Files Data Lake SDK for C++",
         "This library provides Azure Storage Files Data Lake SDK."
@@ -5715,6 +5795,7 @@
     {
       "Name": "azure-storage-files-shares-cpp",
       "Version": "12.8.0",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Storage Files Shares SDK for C++",
         "This library provides Azure Storage Files Shares SDK."
@@ -5751,6 +5832,7 @@
     {
       "Name": "azure-storage-queues-cpp",
       "Version": "12.2.0",
+      "Port-Version": 1,
       "Description": [
         "Microsoft Azure Storage Queues SDK for C++",
         "This library provides Azure Storage Queues SDK."
@@ -5936,7 +6018,7 @@
     },
     {
       "Name": "baresip-libre",
-      "Version": "3.9.0",
+      "Version": "3.11.0",
       "Description": "Generic library for real-time communications with async IO support",
       "Homepage": "https://github.com/baresip/re",
       "License": "BSD-3-Clause",
@@ -6160,8 +6242,8 @@
     {
       "Name": "benchmark",
       "Version": "1.8.3",
-      "Port-Version": 2,
-      "Description": "A library to support the benchmarking of functions, similar to unit-tests.",
+      "Port-Version": 3,
+      "Description": "A library to benchmark code snippets, similar to unit tests.",
       "Homepage": "https://github.com/google/benchmark",
       "License": "Apache-2.0",
       "Supports": "!uwp",
@@ -6772,8 +6854,7 @@
     },
     {
       "Name": "blake3",
-      "Version": "1.5.0",
-      "Port-Version": 1,
+      "Version": "1.5.1",
       "Description": "BLAKE3 cryptographic hash function.",
       "Homepage": "https://github.com/BLAKE3-team/BLAKE3",
       "License": "CC0-1.0 OR Apache-2.0",
@@ -6801,11 +6882,21 @@
     },
     {
       "Name": "blas",
-      "Version": "2023-03-25",
+      "Version": "2023-04-14",
       "Description": "Metapackage for packages which provide BLAS",
       "License": null,
       "Dependencies": [
-        "openblas",
+        {
+          "name": "lapack-reference",
+          "features": [
+            "cblas"
+          ],
+          "platform": "!osx & !ios & !uwp & !(windows & arm) & windows & static"
+        },
+        {
+          "name": "openblas",
+          "platform": "!osx & !ios & (uwp | (windows & arm) | !windows | !static)"
+        },
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -6964,7 +7055,7 @@
     {
       "Name": "blitz",
       "Version": "2020-03-25",
-      "Port-Version": 5,
+      "Port-Version": 6,
       "Description": "Blitz++ is a C++ template class library that provides high-performance multidimensional array containers for scientific computing.",
       "Homepage": "https://github.com/blitzpp/blitz",
       "Supports": "!(arm | arm64 | uwp)",
@@ -6976,18 +7067,14 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        },
-        {
-          "name": "vcpkg-tool-python2",
-          "host": true
         }
       ],
       "Features": [],
       "Stars": 397,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
-      "x64-linux": "fail",
-      "x64-osx": "fail",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
       "x64-uwp": "pass",
       "x64-windows-static-md": "pass",
       "x64-windows-static": "pass",
@@ -18015,7 +18102,7 @@
     },
     {
       "Name": "bshoshany-thread-pool",
-      "Version": "4.0.1",
+      "Version": "4.1.0",
       "Maintainers": "Barak Shoshany <baraksh@gmail.com>",
       "Description": "BS::thread_pool: a fast, lightweight, and easy-to-use C++17 thread pool library",
       "Homepage": "https://github.com/bshoshany/thread-pool",
@@ -18331,7 +18418,7 @@
     },
     {
       "Name": "c-ares",
-      "Version": "1.27.0",
+      "Version": "1.28.1",
       "Description": "A C library for asynchronous DNS requests",
       "Homepage": "https://github.com/c-ares/c-ares",
       "License": "MIT-CMU",
@@ -18461,9 +18548,8 @@
     },
     {
       "Name": "cachelib",
-      "Version": "2023.05.08.00",
-      "Port-Version": 1,
-      "Description": "facebook cachelib",
+      "Version": "2024.04.15.00",
+      "Description": "Pluggable caching engine to build and scale high performance cache services.",
       "Homepage": "https://github.com/facebook/CacheLib",
       "License": "Apache-2.0",
       "Supports": "linux & x64 & static",
@@ -18471,7 +18557,12 @@
         "fbthrift",
         "fizz",
         "fmt",
-        "folly",
+        {
+          "name": "folly",
+          "features": [
+            "libaio"
+          ]
+        },
         "gflags",
         "glog",
         "gtest",
@@ -18490,7 +18581,7 @@
       "Stars": 1089,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
-      "x64-linux": "pass",
+      "x64-linux": "fail",
       "x64-osx": "pass",
       "x64-uwp": "pass",
       "x64-windows-static-md": "pass",
@@ -18555,6 +18646,7 @@
     {
       "Name": "cairo",
       "Version": "1.18.0",
+      "Port-Version": 1,
       "Description": "Cairo is a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers, PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB.",
       "Homepage": "https://cairographics.org",
       "License": "LGPL-2.1-only OR MPL-1.1",
@@ -18563,7 +18655,6 @@
         "dirent",
         "expat",
         "libpng",
-        "lzo",
         "pixman",
         "pthread",
         {
@@ -18593,6 +18684,12 @@
           "description": "build gobject module",
           "dependencies": [
             "glib"
+          ]
+        },
+        "lzo": {
+          "description": "build with lzo support",
+          "dependencies": [
+            "lzo"
           ]
         },
         "x11": {
@@ -18641,12 +18738,22 @@
     },
     {
       "Name": "calceph",
-      "Version": "3.5.5",
+      "Version": "4.0.0",
       "Description": "C library to access the binary planetary ephemeris files.",
       "Homepage": "https://www.imcce.fr/inpop/calceph/",
-      "Documentation": "https://www.imcce.fr/content/medias/recherche/equipes/asd/calceph/html/c/index.html",
+      "Documentation": "https://calceph.imcce.fr/docs/latest/html/c/index.html",
       "License": "CECILL-2.1 OR CECILL-B OR CECILL-C",
       "Supports": "!uwp",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
       "Features": [],
       "Stars": 0,
       "arm-uwp": "pass",
@@ -18956,7 +19063,7 @@
     },
     {
       "Name": "catch2",
-      "Version": "3.5.3",
+      "Version": "3.5.4",
       "Description": "A modern, C++-native, test framework for unit-tests, TDD and BDD.",
       "Homepage": "https://github.com/catchorg/Catch2",
       "License": "BSL-1.0",
@@ -18972,6 +19079,40 @@
       ],
       "Features": [],
       "Stars": 18013,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "cblas",
+      "Version": "2024-03-19",
+      "Description": "Metapackage for packages which provide CBLAS",
+      "License": null,
+      "Dependencies": [
+        {
+          "name": "lapack-reference",
+          "features": [
+            "cblas"
+          ],
+          "platform": "!osx & !ios & !uwp & !(windows & arm) & windows & static"
+        },
+        {
+          "name": "openblas",
+          "platform": "!osx & !ios & (uwp | (windows & arm) | !windows | !static)"
+        },
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 0,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
       "x64-linux": "pass",
@@ -19137,8 +19278,7 @@
     },
     {
       "Name": "cctz",
-      "Version": "2.3",
-      "Port-Version": 7,
+      "Version": "2.4",
       "Description": "two libraries that cooperate with <chrono> to give C++ programmers all the necessary tools for computing with dates, times, and time zones in a simple and correct manner.",
       "Homepage": "https://github.com/google/cctz",
       "Dependencies": [
@@ -19533,8 +19673,7 @@
     },
     {
       "Name": "cglm",
-      "Version": "0.9.2",
-      "Port-Version": 1,
+      "Version": "0.9.4",
       "Description": "Highly Optimized Graphics Math (glm) for C",
       "Homepage": "https://github.com/recp/cglm",
       "License": "MIT",
@@ -19684,7 +19823,7 @@
     {
       "Name": "chakracore",
       "Version": "2022-11-09",
-      "Port-Version": 6,
+      "Port-Version": 7,
       "Description": "Core part of the Chakra Javascript engine",
       "Homepage": "https://github.com/Microsoft/ChakraCore",
       "License": "MIT",
@@ -20189,9 +20328,10 @@
     {
       "Name": "clapack",
       "Version": "3.2.1",
-      "Port-Version": 22,
+      "Port-Version": 23,
       "Description": "CLAPACK (f2c'ed version of LAPACK)",
-      "Homepage": "https://www.netlib.org/clapack",
+      "Homepage": "https://netlib.org/lapack/",
+      "License": null,
       "Dependencies": [
         "blas",
         {
@@ -20383,7 +20523,7 @@
     },
     {
       "Name": "cli11",
-      "Version": "2.4.0",
+      "Version": "2.4.1",
       "Description": "CLI11 is a command line parser for C++11 and beyond that provides a rich feature set with a simple and intuitive interface.",
       "Homepage": "https://github.com/CLIUtils/CLI11",
       "License": "BSD-3-Clause",
@@ -20714,8 +20854,7 @@
     },
     {
       "Name": "cnats",
-      "Version": "3.7.0",
-      "Port-Version": 1,
+      "Version": "3.8.0",
       "Description": "A C client for the NATS messaging system",
       "Homepage": "https://github.com/nats-io/nats.c",
       "License": "Apache-2.0",
@@ -21383,7 +21522,7 @@
     },
     {
       "Name": "configcat",
-      "Version": "3.2.0",
+      "Version": "4.0.0",
       "Description": "ConfigCat SDK for C++ provides easy integration for your application to ConfigCat. ConfigCat is a feature flag and configuration management service that lets you separate feature releases from deployments. Alternative to LaunchDarkly.",
       "Homepage": "https://configcat.com/",
       "License": "MIT",
@@ -22543,7 +22682,7 @@
     },
     {
       "Name": "cppslippi",
-      "Version": "1.3.3.14",
+      "Version": "1.4.3.16",
       "Description": "C++ Slippi replay file parser.",
       "Homepage": "https://sourceforge.net/projects/cppslippi/",
       "License": "MIT",
@@ -22601,7 +22740,7 @@
     },
     {
       "Name": "cpptrace",
-      "Version": "0.5.1",
+      "Version": "0.5.2",
       "Description": "Simple, portable, and self-contained stacktrace library for C++11 and newer",
       "Homepage": "https://github.com/jeremy-rifkin/cpptrace",
       "License": "MIT",
@@ -22945,7 +23084,7 @@
     {
       "Name": "crashpad",
       "Version": "2022-09-05",
-      "Port-Version": 4,
+      "Port-Version": 5,
       "Description": [
         "Crashpad is a crash-reporting system.",
         "Crashpad is a library for capturing, storing and transmitting postmortem crash reports from a client to an upstream collection server. Crashpad aims to make it possible for clients to capture process state at the time of crash with the best possible fidelity and coverage, with the minimum of fuss."
@@ -22954,6 +23093,7 @@
       "License": "Apache-2.0",
       "Supports": "linux | osx | (windows & !uwp)",
       "Dependencies": [
+        "curl",
         {
           "name": "vcpkg-cmake-get-vars",
           "host": true
@@ -23149,14 +23289,14 @@
     },
     {
       "Name": "crow",
-      "Version": "1.0-5",
+      "Version": "1.1.0",
       "Description": "Very fast and easy to use C++ micro web framework",
       "Homepage": "https://github.com/CrowCpp/crow",
       "License": "BSD-3-Clause",
       "Dependencies": [
+        "asio",
         "boost-algorithm",
         "boost-array",
-        "boost-asio",
         "boost-date-time",
         "boost-functional",
         "boost-lexical-cast",
@@ -23316,11 +23456,10 @@
     {
       "Name": "ctbignum",
       "Version": "2019-08-02",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "This is a header-only template library for fixed-width \"small big-integer\" computations, for use during run-time as well as compile-time.",
       "Homepage": "https://github.com/niekbouman/ctbignum",
       "Dependencies": [
-        "boost",
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -23588,7 +23727,7 @@
     {
       "Name": "cudnn",
       "Version": "7.6.5",
-      "Port-Version": 10,
+      "Port-Version": 11,
       "Description": "NVIDIA's cuDNN deep neural network acceleration library.",
       "Homepage": "https://developer.nvidia.com/cudnn",
       "License": null,
@@ -23639,8 +23778,8 @@
     },
     {
       "Name": "curl",
-      "Version": "8.6.0",
-      "Port-Version": 1,
+      "Version": "8.7.1",
+      "Port-Version": 2,
       "Description": "A library for transferring data with URLs",
       "Homepage": "https://curl.se/",
       "License": "curl AND ISC AND BSD-3-Clause",
@@ -23742,6 +23881,12 @@
           "description": "SSL support (OpenSSL)",
           "dependencies": [
             "openssl"
+          ]
+        },
+        "psl": {
+          "description": "Use psl support (libpsl)",
+          "dependencies": [
+            "libpsl"
           ]
         },
         "schannel": {
@@ -23985,7 +24130,7 @@
     },
     {
       "Name": "cwapi3d",
-      "Version": "30.10.1",
+      "Version": "30.475.1",
       "Description": "CwAPI3D is the Cadwork 3D plugin architecture in C++.",
       "Homepage": "https://github.com/cwapi3d/cwapi3dcpp",
       "License": "MIT",
@@ -24277,10 +24422,9 @@
     },
     {
       "Name": "d3d12-memory-allocator",
-      "Version": "2021-05-05",
-      "Port-Version": 1,
+      "Version": "2.0.1",
       "Description": "Easy to integrate D3d12 memory allocation library from GPUOpen",
-      "Homepage": "https://gpuopen.com/gaming-product/d3d12-memory-allocator/",
+      "Homepage": "https://gpuopen.com/d3d12-memory-allocator/",
       "License": "MIT",
       "Supports": "windows",
       "Dependencies": [
@@ -24915,7 +25059,7 @@
     {
       "Name": "dbus",
       "Version": "1.15.8",
-      "Port-Version": 2,
+      "Port-Version": 4,
       "Description": "D-Bus specification and reference implementation, including libdbus and dbus-daemon",
       "Homepage": "https://gitlab.freedesktop.org/dbus/dbus",
       "License": "AFL-2.1 OR GPL-2.0-or-later",
@@ -25237,8 +25381,7 @@
     },
     {
       "Name": "directx-dxc",
-      "Version": "2024-03-07",
-      "Port-Version": 1,
+      "Version": "2024-03-29",
       "Description": "DirectX Shader Compiler (LLVM/Clang)",
       "Homepage": "https://github.com/microsoft/DirectXShaderCompiler",
       "Documentation": "https://github.com/microsoft/DirectXShaderCompiler/wiki",
@@ -25443,7 +25586,7 @@
       "x64-osx": "pass",
       "x64-uwp": "pass",
       "x64-windows-static-md": "skip",
-      "x64-windows-static": "pass",
+      "x64-windows-static": "skip",
       "x64-windows": "skip",
       "x86-windows": "skip"
     },
@@ -26499,8 +26642,10 @@
     {
       "Name": "duktape",
       "Version": "2.7.0",
+      "Port-Version": 1,
       "Description": "Embeddable Javascript engine with a focus on portability and compact footprint.",
       "Homepage": "https://github.com/svaarala/duktape",
+      "License": "MIT",
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -27559,7 +27704,7 @@
     {
       "Name": "enkits",
       "Version": "1.11",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "A permissively licensed C and C++ Task Scheduler for creating parallel programs.",
       "Homepage": "https://github.com/dougbinks/enkiTS",
       "License": "Zlib",
@@ -27642,7 +27787,7 @@
     },
     {
       "Name": "entt",
-      "Version": "3.13.1",
+      "Version": "3.13.2",
       "Description": "Gaming meets modern C++ - a fast and reliable entity-component system and much more",
       "Homepage": "https://github.com/skypjack/entt",
       "License": "MIT",
@@ -27734,7 +27879,7 @@
     },
     {
       "Name": "etcd-cpp-apiv3",
-      "Version": "0.15.3",
+      "Version": "0.15.4",
       "Description": "The etcd-cpp-apiv3 is a C++ API for etcd's v3 client API, i.e., ETCDCTL_API=3.",
       "Homepage": "https://github.com/etcd-cpp-apiv3/etcd-cpp-apiv3",
       "License": "BSD-3-Clause",
@@ -27743,7 +27888,10 @@
         "boost-random",
         "boost-system",
         "boost-thread",
-        "cpprestsdk",
+        {
+          "name": "cpprestsdk",
+          "default-features": false
+        },
         "grpc",
         "openssl",
         "protobuf",
@@ -28299,8 +28447,7 @@
     },
     {
       "Name": "fast-float",
-      "Version": "6.1.0",
-      "Port-Version": 1,
+      "Version": "6.1.1",
       "Description": "Fast and exact implementation of the C++ from_chars functions for float and double types: 4x faster than strtod",
       "Homepage": "https://github.com/fastfloat/fast_float",
       "License": "Apache-2.0 OR BSL-1.0 OR MIT",
@@ -28634,7 +28781,7 @@
     },
     {
       "Name": "fbthrift",
-      "Version": "2024.01.01.00",
+      "Version": "2024.04.15.00",
       "Description": "Facebook's branch of Apache Thrift, including a new C++ server.",
       "Homepage": "https://github.com/facebook/fbthrift",
       "License": "Apache-2.0",
@@ -29647,7 +29794,7 @@
     },
     {
       "Name": "fizz",
-      "Version": "2024.01.01.00",
+      "Version": "2024.04.15.00",
       "Description": "a TLS 1.3 implementation by Facebook",
       "Homepage": "https://github.com/facebookincubator/fizz",
       "License": "BSD-3-Clause",
@@ -30115,12 +30262,8 @@
     },
     {
       "Name": "flatbuffers",
-      "Version": "23.5.26",
-      "Port-Version": 1,
-      "Description": [
-        "Memory Efficient Serialization Library",
-        "FlatBuffers is an efficient cross platform serialization library for games and other memory constrained apps. It allows you to directly access serialized data without unpacking/parsing it first, while still having great forwards/backwards compatibility."
-      ],
+      "Version": "24.3.25",
+      "Description": "FlatBuffers is a cross platform serialization library architected for maximum memory efficiency. It allows you to directly access serialized data without parsing/unpacking it first, while still having great forwards/backwards compatibility.",
       "Homepage": "https://google.github.io/flatbuffers/",
       "License": "Apache-2.0",
       "Dependencies": [
@@ -30331,7 +30474,7 @@
     },
     {
       "Name": "fluidsynth",
-      "Version": "2.3.4",
+      "Version": "2.3.5",
       "Description": "FluidSynth reads and handles MIDI events from the MIDI input device. It is the software analogue of a MIDI synthesizer. FluidSynth can also play midifiles using a Soundfont.",
       "Homepage": "https://github.com/FluidSynth/fluidsynth",
       "License": "LGPL-2.1-or-later",
@@ -30510,8 +30653,8 @@
     {
       "Name": "fmt",
       "Version": "10.2.1",
-      "Port-Version": 1,
-      "Description": "Formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.",
+      "Port-Version": 2,
+      "Description": "{fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.",
       "Homepage": "https://github.com/fmtlib/fmt",
       "License": "MIT",
       "Dependencies": [
@@ -30538,8 +30681,7 @@
     },
     {
       "Name": "folly",
-      "Version": "2024.01.01.00",
-      "Port-Version": 2,
+      "Version": "2024.04.15.00",
       "Description": "An open-source C++ library developed and used at Facebook. The library is UNSTABLE on Windows",
       "Homepage": "https://github.com/facebook/folly",
       "License": "Apache-2.0",
@@ -30582,6 +30724,10 @@
           "dependencies": [
             "bzip2"
           ]
+        },
+        "libaio": {
+          "description": "Support compile with libaio",
+          "supports": "linux & x64"
         },
         "libsodium": {
           "description": "Support libsodium for cryto",
@@ -30972,7 +31118,7 @@
     {
       "Name": "freeimage",
       "Version": "3.18.0",
-      "Port-Version": 25,
+      "Port-Version": 26,
       "Description": "Support library for graphics image formats",
       "Homepage": "https://sourceforge.net/projects/freeimage/",
       "License": "GPL-2.0-only OR GPL-3.0-only OR FreeImage",
@@ -30984,11 +31130,15 @@
         "libraw",
         {
           "name": "libwebp",
+          "default-features": false,
           "platform": "!uwp"
         },
         "openexr",
         "openjpeg",
-        "tiff",
+        {
+          "name": "tiff",
+          "default-features": false
+        },
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -31187,6 +31337,7 @@
     {
       "Name": "freetype",
       "Version": "2.13.2",
+      "Port-Version": 1,
       "Description": "A library to render fonts.",
       "Homepage": "https://www.freetype.org/",
       "License": "FTL OR GPL-2.0-or-later",
@@ -31227,6 +31378,9 @@
           "dependencies": [
             "libpng"
           ]
+        },
+        "subpixel-rendering": {
+          "description": "Enables subpixel rendering."
         },
         "zlib": {
           "description": "Use zlib instead of internal library for DEFLATE",
@@ -31608,7 +31762,7 @@
     {
       "Name": "g2o",
       "Version": "2020-02-07",
-      "Port-Version": 4,
+      "Port-Version": 6,
       "Description": "g2o: A General Framework for Graph Optimization",
       "Homepage": "https://openslam.org/g2o.html",
       "Dependencies": [
@@ -32049,8 +32203,8 @@
       "x64-uwp": "pass",
       "x64-windows-static-md": "pass",
       "x64-windows-static": "pass",
-      "x64-windows": "fail",
-      "x86-windows": "fail"
+      "x64-windows": "pass",
+      "x86-windows": "pass"
     },
     {
       "Name": "gcem",
@@ -32082,7 +32236,7 @@
     },
     {
       "Name": "gdal",
-      "Version": "3.8.4",
+      "Version": "3.8.5",
       "Description": "The Geographic Data Abstraction Library for reading and writing geospatial raster and vector data",
       "Homepage": "https://gdal.org",
       "License": null,
@@ -32412,7 +32566,7 @@
     },
     {
       "Name": "gdcm",
-      "Version": "3.0.22",
+      "Version": "3.0.23",
       "Description": "Grassroots DICOM library",
       "Homepage": "https://github.com/malaterre/GDCM",
       "License": "BSD-3-Clause",
@@ -32470,34 +32624,63 @@
     {
       "Name": "gdk-pixbuf",
       "Version": "2.42.10",
-      "Port-Version": 3,
+      "Port-Version": 5,
       "Description": "Image loading library.",
       "Homepage": "https://gitlab.gnome.org/GNOME/gdk-pixbuf",
       "License": "LGPL-2.1-or-later",
       "Supports": "!xbox",
       "Dependencies": [
-        "gettext",
+        {
+          "name": "gettext",
+          "host": true,
+          "features": [
+            "tools"
+          ]
+        },
+        "gettext-libintl",
         "glib",
         {
           "name": "glib",
           "host": true
         },
-        "libpng",
-        {
-          "name": "tiff",
-          "default-features": false
-        },
         {
           "name": "vcpkg-tool-meson",
           "host": true
-        },
-        "zlib"
+        }
+      ],
+      "Default-Features": [
+        "jpeg",
+        "png",
+        "tiff"
       ],
       "Features": {
         "introspection": {
           "description": "build with introspection",
           "dependencies": [
             "gobject-introspection"
+          ]
+        },
+        "jpeg": {
+          "description": "Enable JPEG loader (requires libjpeg)",
+          "supports": "!windows",
+          "dependencies": [
+            "libjpeg-turbo"
+          ]
+        },
+        "png": {
+          "description": "Enable PNG loader (requires libpng)",
+          "dependencies": [
+            "libpng"
+          ]
+        },
+        "tiff": {
+          "description": "Enable TIFF loader (requires libtiff)",
+          "supports": "!windows",
+          "dependencies": [
+            {
+              "name": "tiff",
+              "default-features": false
+            }
           ]
         }
       },
@@ -33026,8 +33209,7 @@
     },
     {
       "Name": "gklib",
-      "Version": "2022-07-27",
-      "Port-Version": 2,
+      "Version": "2023-03-27",
       "Description": "General helper libraries for KarypisLab.",
       "Homepage": "https://github.com/KarypisLab/GKlib/",
       "License": "Apache-2.0",
@@ -33477,7 +33659,7 @@
     },
     {
       "Name": "glaze",
-      "Version": "2.1.7",
+      "Version": "2.4.5",
       "Description": "One of the fastest JSON libraries in the world. Glaze reads and writes from C++ memory, simplifying interfaces and offering incredible performance.",
       "Homepage": "https://github.com/stephenberry/glaze",
       "License": "MIT",
@@ -33771,7 +33953,7 @@
     {
       "Name": "glm",
       "Version": "1.0.1",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "OpenGL Mathematics (GLM)",
       "Homepage": "https://glm.g-truc.net",
       "License": "MIT",
@@ -34253,15 +34435,17 @@
     },
     {
       "Name": "google-cloud-cpp",
-      "Version": "2.22.0",
-      "Port-Version": 1,
+      "Version": "2.23.0",
       "Description": "C++ Client Libraries for Google Cloud Platform APIs.",
       "Homepage": "https://github.com/googleapis/google-cloud-cpp",
       "License": "Apache-2.0",
       "Supports": "!uwp",
       "Dependencies": [
         "abseil",
-        "openssl",
+        {
+          "name": "openssl",
+          "platform": "!windows"
+        },
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -34376,6 +34560,18 @@
             }
           ]
         },
+        "apphub": {
+          "description": "App Hub API C++ Client Library",
+          "dependencies": [
+            {
+              "name": "google-cloud-cpp",
+              "default-features": false,
+              "features": [
+                "grpc-common"
+              ]
+            }
+          ]
+        },
         "artifactregistry": {
           "description": "Artifact Registry API C++ Client Library",
           "dependencies": [
@@ -34417,6 +34613,18 @@
         },
         "automl": {
           "description": "Cloud AutoML API C++ Client Library",
+          "dependencies": [
+            {
+              "name": "google-cloud-cpp",
+              "default-features": false,
+              "features": [
+                "grpc-common"
+              ]
+            }
+          ]
+        },
+        "backupdr": {
+          "description": "Backup and DR Service API C++ Client Library",
           "dependencies": [
             {
               "name": "google-cloud-cpp",
@@ -34539,6 +34747,18 @@
         },
         "cloudbuild": {
           "description": "Cloud Build API C++ Client Library",
+          "dependencies": [
+            {
+              "name": "google-cloud-cpp",
+              "default-features": false,
+              "features": [
+                "grpc-common"
+              ]
+            }
+          ]
+        },
+        "cloudcontrolspartner": {
+          "description": "Cloud Controls Partner API C++ Client Library",
           "dependencies": [
             {
               "name": "google-cloud-cpp",
@@ -35568,6 +35788,18 @@
             }
           ]
         },
+        "storagecontrol": {
+          "description": "Cloud Storage Control API C++ Client Library",
+          "dependencies": [
+            {
+              "name": "google-cloud-cpp",
+              "default-features": false,
+              "features": [
+                "grpc-common"
+              ]
+            }
+          ]
+        },
         "storageinsights": {
           "description": "Storage Insights API C++ Client Library",
           "dependencies": [
@@ -36275,8 +36507,8 @@
     {
       "Name": "grpc",
       "Version": "1.51.1",
-      "Port-Version": 2,
-      "Description": "An RPC library and framework",
+      "Port-Version": 3,
+      "Description": "gRPC is a modern, open source, high-performance remote procedure call (RPC) framework that can run anywhere. gRPC enables client and server applications to communicate transparently, and simplifies the building of connected systems.",
       "Homepage": "https://github.com/grpc/grpc",
       "License": "Apache-2.0",
       "Dependencies": [
@@ -37332,7 +37564,8 @@
     {
       "Name": "gtest",
       "Version": "1.14.0",
-      "Description": "GoogleTest and GoogleMock testing frameworks",
+      "Port-Version": 1,
+      "Description": "Google Testing and Mocking Framework",
       "Homepage": "https://github.com/google/googletest",
       "License": "BSD-3-Clause",
       "Dependencies": [
@@ -37456,7 +37689,7 @@
       "x64-linux": "pass",
       "x64-osx": "pass",
       "x64-uwp": "pass",
-      "x64-windows-static-md": "fail",
+      "x64-windows-static-md": "pass",
       "x64-windows-static": "pass",
       "x64-windows": "pass",
       "x86-windows": "pass"
@@ -38567,8 +38800,7 @@
     },
     {
       "Name": "hareflow",
-      "Version": "0.1.0",
-      "Port-Version": 1,
+      "Version": "0.1.1",
       "Description": "Hareflow: A RabbitMQ C++ stream client.",
       "Homepage": "https://github.com/coveooss/hareflow",
       "License": "Apache-2.0",
@@ -38621,7 +38853,7 @@
     },
     {
       "Name": "harfbuzz",
-      "Version": "8.3.1",
+      "Version": "8.4.0",
       "Port-Version": 1,
       "Description": "HarfBuzz OpenType text shaping engine",
       "Homepage": "https://github.com/harfbuzz/harfbuzz",
@@ -38660,6 +38892,9 @@
         "directwrite": {
           "description": "Enable DirectWrite support on Windows",
           "supports": "windows"
+        },
+        "experimental-api": {
+          "description": "Enable experimental api"
         },
         "freetype": {
           "description": "Enable FreeType support",
@@ -39403,6 +39638,34 @@
       "x86-windows": "pass"
     },
     {
+      "Name": "hjson-cpp",
+      "Version": "2.4.1",
+      "Description": "Hjson for C++",
+      "Homepage": "https://hjson.github.io",
+      "License": "MIT",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
       "Name": "hnswlib",
       "Version": "0.8.0",
       "Description": "Header-only library for fast approximate nearest neighbors",
@@ -39600,6 +39863,7 @@
     {
       "Name": "hunspell",
       "Version": "1.7.2",
+      "Port-Version": 1,
       "Description": "The most popular spellchecking library.",
       "Homepage": "https://github.com/hunspell/hunspell",
       "License": "MPL-1.1 OR LGPL-2.1-or-later OR GPL-2.0-or-later",
@@ -39623,7 +39887,8 @@
           ]
         },
         "tools": {
-          "description": "Build hunspell tools"
+          "description": "Build hunspell tools",
+          "supports": "!windows | mingw"
         }
       },
       "Stars": 2004,
@@ -39917,7 +40182,7 @@
     },
     {
       "Name": "idyntree",
-      "Version": "10.3.0",
+      "Version": "12.1.0",
       "Description": "Multibody Dynamics Library designed for Free Floating Robots.",
       "Homepage": "https://github.com/robotology/idyntree",
       "License": "BSD-3-Clause",
@@ -40550,7 +40815,7 @@
     },
     {
       "Name": "igraph",
-      "Version": "0.10.10",
+      "Version": "0.10.11",
       "Description": "igraph is a C library for network analysis and graph theory, with an emphasis on efficiency portability and ease of use.",
       "Homepage": "https://igraph.org/",
       "License": "GPL-2.0-or-later",
@@ -40700,7 +40965,7 @@
     },
     {
       "Name": "imageinfo",
-      "Version": "2024-01-19",
+      "Version": "2024-02-21",
       "Description": "Cross platform super fast single header c++ library to get image size and format without loading/decoding. Support avif, bmp, cur, dds, gif, hdr (pic), heic (heif), icns, ico, jp2, jpeg (jpg), jpx, ktx, png, psd, qoi, tga, tiff (tif), webp ...",
       "Homepage": "https://github.com/xiaozhuai/imageinfo",
       "License": "MIT",
@@ -41409,6 +41674,30 @@
       ],
       "Features": [],
       "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "iowa-hills-dsp",
+      "Version": "0.1.0",
+      "Description": "A platform-independent C/C++ library with many DSP (digital signal processing) functions, amongst also FIR and IIR filter design - but also FFT, DFT, Goertzel and Windowing functions.",
+      "Homepage": "https://github.com/hayguen/iowahills_dsp",
+      "License": "MIT",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 16,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
       "x64-linux": "pass",
@@ -42146,7 +42435,8 @@
     },
     {
       "Name": "joltphysics",
-      "Version": "4.0.0",
+      "Version": "5.0.0",
+      "Port-Version": 1,
       "Description": "A multi core friendly rigid body physics and collision detection library suitable for games and VR applications",
       "Homepage": "https://github.com/jrouwe/JoltPhysics",
       "License": "MIT",
@@ -42296,7 +42586,7 @@
     {
       "Name": "json-schema-validator",
       "Version": "2.3.0",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "C++ library for validating JSON documents based on a JSON Schema. This validator is based on the nlohmann-json library.",
       "Homepage": "https://github.com/pboettch/json-schema-validator",
       "License": "MIT",
@@ -42329,8 +42619,8 @@
     {
       "Name": "json-spirit",
       "Version": "4.1.0",
-      "Port-Version": 4,
-      "Description": "json parser using boost library",
+      "Port-Version": 5,
+      "Description": "A C++ JSON parser/generator implemented with Boost Spirit",
       "Dependencies": [
         "boost-config",
         "boost-integer",
@@ -42437,8 +42727,8 @@
     {
       "Name": "jsoncpp",
       "Version": "1.9.5",
-      "Port-Version": 2,
-      "Description": "jsoncpp is an implementation of a JSON reader and writer in C++. JSON (JavaScript Object Notation) is a lightweight data-interchange format that it is easy to parse and redeable for human.",
+      "Port-Version": 4,
+      "Description": "JsonCpp is a C++ library that allows manipulating JSON values, including serialization and deserialization to and from strings. It can also preserve existing comment in unserialization/serialization steps, making it a convenient format to store user input files.",
       "Homepage": "https://github.com/open-source-parsers/jsoncpp",
       "License": "MIT",
       "Dependencies": [
@@ -42516,7 +42806,7 @@
     },
     {
       "Name": "juce",
-      "Version": "7.0.10",
+      "Version": "7.0.12",
       "Description": "Open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, AAX and LV2 audio plug-ins and plug-in hosts",
       "Homepage": "https://juce.com",
       "License": null,
@@ -42997,7 +43287,7 @@
     },
     {
       "Name": "kerbal",
-      "Version": "2024.2.1",
+      "Version": "2024.4.1",
       "Description": "Kerbal C++ Template Library",
       "Homepage": "https://github.com/WentsingNee/Kerbal",
       "License": "LGPL-3.0",
@@ -44803,7 +45093,7 @@
     },
     {
       "Name": "kissnet",
-      "Version": "2023-02-04",
+      "Version": "2024-01-20",
       "Description": "Keep It Simple Stupid NETwork - C++17 wrapping of your OS's native socket API",
       "Homepage": "https://github.com/Ybalrid/kissnet",
       "License": "MIT",
@@ -45137,18 +45427,17 @@
     },
     {
       "Name": "lapack",
-      "Version": "2022-02-22",
-      "Port-Version": 2,
+      "Version": "2023-06-10",
       "Description": "Metapackage for packages which provide LAPACK",
       "License": null,
       "Dependencies": [
         {
           "name": "clapack",
-          "platform": "(arm & windows) | uwp"
+          "platform": "uwp | (arm & windows)"
         },
         {
           "name": "lapack-reference",
-          "platform": "!((arm & windows) | uwp)"
+          "platform": "!osx & !ios & !uwp & !(arm & windows)"
         },
         {
           "name": "vcpkg-cmake",
@@ -45170,9 +45459,9 @@
     {
       "Name": "lapack-reference",
       "Version": "3.11.0",
-      "Port-Version": 2,
+      "Port-Version": 5,
       "Description": "LAPACK - Linear Algebra PACKage",
-      "Homepage": "http://www.netlib.org/lapack/",
+      "Homepage": "https://netlib.org/lapack/",
       "License": "BSD-3-Clause-Open-MPI",
       "Dependencies": [
         {
@@ -45210,6 +45499,7 @@
         },
         "noblas": {
           "description": "Use external optimized BLAS",
+          "supports": "!windows | !static",
           "dependencies": [
             "blas"
           ]
@@ -45257,10 +45547,10 @@
     },
     {
       "Name": "laszip",
-      "Version": "3.4.3",
-      "Port-Version": 1,
+      "Version": "3.4.4",
       "Description": "LASzip - free and lossless LiDAR compression",
       "Homepage": "https://laszip.org/",
+      "License": "Apache-2.0",
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -46080,7 +46370,7 @@
     },
     {
       "Name": "libassert",
-      "Version": "2.0.0",
+      "Version": "2.0.1",
       "Description": "The most over-engineered C++ assertion library",
       "Homepage": "https://github.com/jeremy-rifkin/libassert",
       "License": "MIT",
@@ -46263,7 +46553,7 @@
     },
     {
       "Name": "libbson",
-      "Version": "1.26.1",
+      "Version": "1.26.2",
       "Description": "libbson is a library providing useful routines related to building, parsing, and iterating BSON documents.",
       "Homepage": "https://github.com/mongodb/mongo-c-driver/tree/master/src/libbson",
       "License": null,
@@ -46417,7 +46707,7 @@
     {
       "Name": "libcap",
       "Version": "2.69",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "A library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.",
       "Homepage": "https://git.kernel.org/pub/scm/libs/libcap/libcap.git",
       "License": "BSD-3-Clause OR GPL-2.0-only",
@@ -46844,8 +47134,7 @@
     },
     {
       "Name": "libdatachannel",
-      "Version": "0.20.1",
-      "Port-Version": 1,
+      "Version": "0.20.3",
       "Description": "libdatachannel is a standalone implementation of WebRTC Data Channels, WebRTC Media Transport, and WebSockets in C++17 with C bindings for POSIX platforms (including GNU/Linux, Android, and Apple macOS) and Microsoft Windows.",
       "Homepage": "https://github.com/paullouisageneau/libdatachannel",
       "License": "MPL-2.0",
@@ -46978,8 +47267,7 @@
     },
     {
       "Name": "libdeflate",
-      "Version": "1.19",
-      "Port-Version": 1,
+      "Version": "1.20",
       "Description": "libdeflate is a library for fast, whole-buffer DEFLATE-based compression and decompression.",
       "Homepage": "https://github.com/ebiggers/libdeflate",
       "License": "MIT",
@@ -47083,7 +47371,7 @@
     },
     {
       "Name": "libdjinterop",
-      "Version": "0.20.2",
+      "Version": "0.20.3",
       "Description": "C++ library for access to DJ record libraries. Currently only supports Denon Engine Prime databases",
       "Homepage": "https://github.com/xsco/libdjinterop",
       "License": "LGPL-3.0-or-later",
@@ -47440,7 +47728,7 @@
     },
     {
       "Name": "libeventheader-decode",
-      "Version": "1.3.0",
+      "Version": "1.3.3",
       "Description": "C++ classes for decoding EventHeader-encoded Linux Tracepoints",
       "Homepage": "https://github.com/microsoft/LinuxTracepoints/",
       "License": "MIT",
@@ -47448,11 +47736,11 @@
       "Dependencies": [
         {
           "name": "libeventheader-tracepoint",
-          "version>=": "1.3.0"
+          "version>=": "1.3.3"
         },
         {
           "name": "libtracepoint-decode",
-          "version>=": "1.3.0"
+          "version>=": "1.3.3"
         },
         {
           "name": "vcpkg-cmake",
@@ -47477,7 +47765,7 @@
     },
     {
       "Name": "libeventheader-tracepoint",
-      "Version": "1.3.2",
+      "Version": "1.3.3",
       "Description": "C/C++ interface for generating EventHeader-encoded Linux Tracepoints",
       "Homepage": "https://github.com/microsoft/LinuxTracepoints/",
       "License": "MIT",
@@ -47485,7 +47773,7 @@
       "Dependencies": [
         {
           "name": "libtracepoint",
-          "version>=": "1.3.2"
+          "version>=": "1.3.3"
         },
         {
           "name": "vcpkg-cmake",
@@ -48353,7 +48641,7 @@
     },
     {
       "Name": "libgnutls",
-      "Version": "3.8.3",
+      "Version": "3.8.5",
       "Description": "A secure communications library implementing the SSL, TLS and DTLS protocols.",
       "Homepage": "https://www.gnutls.org/",
       "License": null,
@@ -48703,12 +48991,16 @@
     {
       "Name": "libhdfs3",
       "Version": "2019-11-05",
-      "Port-Version": 5,
+      "Port-Version": 6,
       "Description": "Native Hadoop RPC protocol and HDFS data transfer protocol implementation",
       "Homepage": "https://github.com/erikmuttersbach/libhdfs3",
       "Supports": "!windows",
       "Dependencies": [
-        "boost",
+        "boost-atomic",
+        "boost-chrono",
+        "boost-iostreams",
+        "boost-system",
+        "boost-thread",
         {
           "name": "libuuid",
           "platform": "!windows & !osx"
@@ -49407,7 +49699,7 @@
     {
       "Name": "libjxl",
       "Version": "0.10.2",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "JPEG XL image format reference implementation",
       "Homepage": "https://github.com/libjxl/libjxl",
       "License": "BSD-3-Clause",
@@ -49835,7 +50127,7 @@
     },
     {
       "Name": "liblzma",
-      "Version": "5.6.0",
+      "Version": "5.4.4",
       "Description": "Compression library with an API similar to that of zlib.",
       "Homepage": "https://tukaani.org/xz/",
       "License": null,
@@ -50080,7 +50372,7 @@
     },
     {
       "Name": "libmediainfo",
-      "Version": "24.1",
+      "Version": "24.3",
       "Description": "Get most relevant technical and tag data from video and audio files",
       "Homepage": "https://github.com/MediaArea/MediaInfoLib",
       "Dependencies": [
@@ -50368,7 +50660,7 @@
     },
     {
       "Name": "libmount",
-      "Version": "2.39",
+      "Version": "2.40",
       "Description": "Block device identification library from util-linux",
       "Homepage": "https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/about/",
       "License": null,
@@ -51142,6 +51434,36 @@
       "x86-windows": "pass"
     },
     {
+      "Name": "libosdp",
+      "Version": "3.0.5",
+      "Description": "An cross-platform open source implementation of IEC 60839-11-5 Open Supervised Device Protocol (OSDP)",
+      "Homepage": "https://github.com/goToMain/libosdp",
+      "Documentation": "https://libosdp.sidcha.dev",
+      "License": "Apache-2.0",
+      "Dependencies": [
+        "openssl",
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 119,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
       "Name": "libosip2",
       "Version": "5.3.1",
       "Description": "oSIP is an LGPL implementation of SIP. It's stable, portable, flexible and compliant! -may be more-! It is used mostly with eXosip2 stack (GPL) which provides simpler API for User-Agent implementation.",
@@ -51476,6 +51798,7 @@
     {
       "Name": "libpng",
       "Version": "1.6.43",
+      "Port-Version": 1,
       "Description": "libpng is a library implementing an interface for reading and writing PNG (Portable Network Graphics) format files",
       "Homepage": "https://github.com/glennrp/libpng",
       "License": "libpng-2.0",
@@ -52042,8 +52365,7 @@
     },
     {
       "Name": "librabbitmq",
-      "Version": "0.11.0",
-      "Port-Version": 2,
+      "Version": "0.14.0",
       "Description": "A C-language AMQP client library for use with v2.0+ of the RabbitMQ broker.",
       "Homepage": "https://github.com/alanxz/rabbitmq-c",
       "License": "MIT",
@@ -52906,7 +53228,7 @@
     {
       "Name": "libsodium",
       "Version": "1.0.19",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "A modern and easy-to-use crypto library",
       "Homepage": "https://libsodium.org/",
       "License": "ISC",
@@ -53206,8 +53528,7 @@
     },
     {
       "Name": "libsrt",
-      "Version": "1.5.0",
-      "Port-Version": 3,
+      "Version": "1.5.3",
       "Description": "Secure Reliable Transport (SRT) is an open source transport technology that optimizes streaming performance across unpredictable networks, such as the Internet.",
       "Homepage": "https://github.com/Haivision/srt",
       "License": "MPL-2.0",
@@ -53462,11 +53783,11 @@
     },
     {
       "Name": "libsystemd",
-      "Version": "254",
-      "Port-Version": 2,
+      "Version": "255",
+      "Port-Version": 1,
       "Description": "Libsystemd",
       "Homepage": "https://github.com/systemd/systemd",
-      "License": "LGPL-2.1+",
+      "License": null,
       "Supports": "linux",
       "Dependencies": [
         {
@@ -53739,7 +54060,7 @@
     {
       "Name": "libtorch",
       "Version": "2.1.2",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
       "Homepage": "https://pytorch.org/",
       "License": null,
@@ -53981,7 +54302,7 @@
     },
     {
       "Name": "libtracepoint",
-      "Version": "1.3.2",
+      "Version": "1.3.3",
       "Description": "C/C++ interface for generating Linux Tracepoints",
       "Homepage": "https://github.com/microsoft/LinuxTracepoints/",
       "License": "MIT",
@@ -54010,7 +54331,7 @@
     },
     {
       "Name": "libtracepoint-control",
-      "Version": "1.3.2",
+      "Version": "1.3.3",
       "Description": "C++ classes for collecting Linux Tracepoints",
       "Homepage": "https://github.com/microsoft/LinuxTracepoints/",
       "License": "MIT",
@@ -54018,7 +54339,7 @@
       "Dependencies": [
         {
           "name": "libtracepoint-decode",
-          "version>=": "1.3.0"
+          "version>=": "1.3.3"
         },
         {
           "name": "vcpkg-cmake",
@@ -54043,7 +54364,7 @@
     },
     {
       "Name": "libtracepoint-decode",
-      "Version": "1.3.0",
+      "Version": "1.3.3",
       "Description": "C++ classes for decoding Linux Tracepoints",
       "Homepage": "https://github.com/microsoft/LinuxTracepoints/",
       "License": "MIT",
@@ -54177,6 +54498,7 @@
     {
       "Name": "libunibreak",
       "Version": "6.1",
+      "Port-Version": 1,
       "Description": "an implementation of the line breaking and word breaking algorithms as described in [Unicode Standard Annex 14] 1 and [Unicode Standard Annex 29] 2. Check the project's [home page] 3 for up-to-date information.",
       "Homepage": "https://github.com/adah1972/libunibreak",
       "License": "zlib-acknowledgement",
@@ -54709,7 +55031,7 @@
     },
     {
       "Name": "libwebp",
-      "Version": "1.3.2",
+      "Version": "1.4.0",
       "Description": "WebP codec: library to encode and decode images in WebP format",
       "Homepage": "https://github.com/webmproject/libwebp",
       "License": "BSD-3-Clause",
@@ -54963,7 +55285,7 @@
     {
       "Name": "libx11",
       "Version": "1.8.1",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "The X Window System is a network-transparent window system that was designed at MIT.",
       "Homepage": "https://www.x.org/wiki/",
       "License": "MIT",
@@ -55868,8 +56190,7 @@
     },
     {
       "Name": "libxt",
-      "Version": "1.2.1",
-      "Port-Version": 1,
+      "Version": "1.3.0",
       "Description": "X Toolkit Intrinsics library",
       "Homepage": "https://gitlab.freedesktop.org/xorg/lib/libxt",
       "License": null,
@@ -56702,7 +57023,7 @@
     {
       "Name": "llvm",
       "Version": "17.0.2",
-      "Port-Version": 3,
+      "Port-Version": 5,
       "Description": "The LLVM Compiler Infrastructure.",
       "Homepage": "https://llvm.org",
       "License": "Apache-2.0",
@@ -57790,11 +58111,12 @@
     {
       "Name": "luasec",
       "Version": "1.3.2",
+      "Port-Version": 2,
       "Maintainers": "Stephen Baker <baker.stephen.e@gmail.com>",
       "Description": "LuaSec depends on OpenSSL, and integrates with LuaSocket to make it easy to add secure connections to any Lua applications or scripts.",
-      "Homepage": "https://github.com/brunoos/luasec",
+      "Homepage": "https://github.com/lunarmodules/luasec",
       "License": "MIT",
-      "Supports": "!(windows & static)",
+      "Supports": "!staticcrt",
       "Dependencies": [
         "lua",
         "luasocket",
@@ -57823,10 +58145,10 @@
     {
       "Name": "luasocket",
       "Version": "3.1.0",
+      "Port-Version": 1,
       "Description": "LuaSocket is a Lua extension library that is composed by two parts: a C core that provides support for the TCP and UDP transport layers, and a set of Lua modules that add support for functionality commonly needed by applications that deal with the Internet.",
       "Homepage": "https://lunarmodules.github.io/luasocket/",
       "License": "MIT",
-      "Supports": "windows",
       "Dependencies": [
         "lua",
         {
@@ -57917,7 +58239,7 @@
     },
     {
       "Name": "lunarg-vulkantools",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "Tools to aid in Vulkan development",
       "Homepage": "https://github.com/LunarG/VulkanTools",
       "License": null,
@@ -61370,12 +61692,11 @@
     },
     {
       "Name": "minio-cpp",
-      "Version": "0.1.1",
-      "Port-Version": 1,
+      "Version": "0.2.0",
       "Description": "The MinIO C++ Client SDK provides simple APIs to access any Amazon S3 compatible object storage",
       "Homepage": "https://github.com/minio/minio-cpp",
       "License": "Apache-2.0",
-      "Supports": "!windows & !uwp",
+      "Supports": "!uwp",
       "Dependencies": [
         "curlpp",
         {
@@ -61394,7 +61715,8 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        }
+        },
+        "zlib"
       ],
       "Features": [],
       "Stars": 106,
@@ -61959,7 +62281,7 @@
     },
     {
       "Name": "mongo-c-driver",
-      "Version": "1.26.1",
+      "Version": "1.26.2",
       "Description": "Client library written in C for MongoDB.",
       "Homepage": "https://github.com/mongodb/mongo-c-driver",
       "License": null,
@@ -63279,11 +63601,11 @@
     },
     {
       "Name": "mvfst",
-      "Version": "2024.01.01.00",
+      "Version": "2024.04.15.00",
       "Description": "mvfst (Pronounced move fast) is a client and server implementation of IETF QUIC protocol in C++ by Facebook.",
       "Homepage": "https://github.com/facebook/mvfst",
       "License": "MIT",
-      "Supports": "!windows",
+      "Supports": "!(windows & !static)",
       "Dependencies": [
         "boost-context",
         "boost-date-time",
@@ -63321,6 +63643,7 @@
     {
       "Name": "mygui",
       "Version": "3.4.3",
+      "Port-Version": 1,
       "Description": "Fast, flexible and simple GUI",
       "Homepage": "http://mygui.info",
       "License": "MIT",
@@ -63705,8 +64028,7 @@
     },
     {
       "Name": "nanopb",
-      "Version": "0.4.7",
-      "Port-Version": 2,
+      "Version": "0.4.8",
       "Description": "A small code-size Protocol Buffers implementation in ANSI C.",
       "Homepage": "https://jpa.kapsi.fi/nanopb/",
       "License": "Zlib",
@@ -63934,6 +64256,7 @@
     {
       "Name": "ncnn",
       "Version": "20240102",
+      "Port-Version": 1,
       "Description": "ncnn is a high-performance neural network inference computing framework.",
       "Homepage": "https://github.com/Tencent/ncnn",
       "License": "BSD-3-Clause",
@@ -63948,7 +64271,15 @@
           "host": true
         }
       ],
-      "Features": [],
+      "Features": {
+        "vulkan": {
+          "description": "Enable Vulkan support",
+          "dependencies": [
+            "glslang",
+            "vulkan"
+          ]
+        }
+      },
       "Stars": 19245,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
@@ -63963,7 +64294,7 @@
     {
       "Name": "ncurses",
       "Version": "6.4",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "Free software emulation of curses in System V Release 4.0, and more",
       "Homepage": "https://invisible-island.net/ncurses/announce.html",
       "License": "MIT",
@@ -64000,8 +64331,7 @@
     },
     {
       "Name": "neargye-semver",
-      "Version": "0.3.0",
-      "Port-Version": 2,
+      "Version": "0.3.1",
       "Description": "C++17 header-only dependency-free versioning library complying with Semantic Versioning 2.0.0",
       "Homepage": "https://github.com/Neargye/semver",
       "License": "MIT",
@@ -64247,25 +64577,15 @@
     {
       "Name": "netgen",
       "Version": "6.2.2401",
+      "Port-Version": 1,
       "Description": "NETGEN is an automatic 3d tetrahedral mesh generator. It accepts input from constructive solid geometry (CSG) or boundary representation (BRep) from STL file format. The connection to a geometry kernel allows the handling of IGES and STEP files. NETGEN contains modules for mesh optimization and hierarchical mesh refinement.",
       "Homepage": "https://ngsolve.org/",
       "License": "LGPL-2.1-or-later",
       "Supports": "arm64 | x64",
       "Dependencies": [
         {
-          "name": "cgns",
-          "default-features": false
-        },
-        {
-          "name": "ffmpeg",
-          "default-features": false,
-          "features": [
-            "avcodec"
-          ]
-        },
-        "libjpeg-turbo",
-        {
-          "name": "opencascade",
+          "name": "netgen",
+          "host": true,
           "default-features": false
         },
         {
@@ -64279,6 +64599,42 @@
         "zlib"
       ],
       "Features": {
+        "cgns": {
+          "description": "CGNS file read/write support",
+          "dependencies": [
+            {
+              "name": "cgns",
+              "default-features": false
+            }
+          ]
+        },
+        "jpeg": {
+          "description": "enable snapshots using library libjpeg",
+          "dependencies": [
+            "libjpeg-turbo"
+          ]
+        },
+        "mpeg": {
+          "description": "enable video recording with FFmpeg",
+          "dependencies": [
+            {
+              "name": "ffmpeg",
+              "default-features": false,
+              "features": [
+                "avcodec"
+              ]
+            }
+          ]
+        },
+        "occ": {
+          "description": "build with OpenCascade geometry kernel interface",
+          "dependencies": [
+            {
+              "name": "opencascade",
+              "default-features": false
+            }
+          ]
+        },
         "python": {
           "description": "Build python bindings",
           "dependencies": [
@@ -64300,7 +64656,7 @@
     },
     {
       "Name": "nethost",
-      "Version": "8.0.0",
+      "Version": "8.0.3",
       "Description": "Provides a set of APIs that can be used to host .NET Core (dotnet)",
       "Homepage": "https://github.com/dotnet/runtime/tree/main/src/native/corehost/nethost",
       "License": "MIT",
@@ -64329,8 +64685,7 @@
     },
     {
       "Name": "nettle",
-      "Version": "3.8.1",
-      "Port-Version": 1,
+      "Version": "3.9.1",
       "Description": "Nettle is a low-level cryptographic library that is designed to fit easily in more or less any context: In crypto toolkits for object-oriented languages (C++, Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel space.",
       "Homepage": "https://git.lysator.liu.se/nettle/nettle",
       "License": null,
@@ -64382,7 +64737,7 @@
     },
     {
       "Name": "nghttp2",
-      "Version": "1.59.0",
+      "Version": "1.61.0",
       "Description": "Implementation of the Hypertext Transfer Protocol version 2 in C",
       "Homepage": "https://github.com/nghttp2/nghttp2",
       "License": "MIT",
@@ -65064,8 +65419,7 @@
     },
     {
       "Name": "nss",
-      "Version": "3.98",
-      "Port-Version": 1,
+      "Version": "3.99",
       "Description": "Network Security Services from Mozilla",
       "Homepage": "https://ftp.mozilla.org/pub/security/nss/releases/",
       "License": "MPL-2.0",
@@ -65259,17 +65613,19 @@
     {
       "Name": "numcpp",
       "Version": "2.12.1",
+      "Port-Version": 1,
       "Description": "C++ implementation of the Python Numpy library",
       "Homepage": "https://dpilger26.github.io/NumCpp",
       "License": "MIT",
       "Dependencies": [
-        "boost",
         "boost-algorithm",
         "boost-date-time",
         "boost-endian",
         "boost-integer",
+        "boost-log",
         "boost-math",
         "boost-predef",
+        "boost-python",
         "boost-random",
         "boost-type-traits",
         {
@@ -65879,8 +66235,7 @@
     },
     {
       "Name": "octomap",
-      "Version": "1.9.8",
-      "Port-Version": 1,
+      "Version": "1.10.0",
       "Description": "An Efficient Probabilistic 3D Mapping Framework Based on Octrees",
       "Homepage": "https://octomap.github.io/",
       "License": "BSD-3-Clause",
@@ -66709,8 +67064,7 @@
     },
     {
       "Name": "openblas",
-      "Version": "0.3.26",
-      "Port-Version": 3,
+      "Version": "0.3.27",
       "Description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
       "Homepage": "https://github.com/OpenMathLib/OpenBLAS",
       "License": "BSD-3-Clause",
@@ -66772,7 +67126,7 @@
     },
     {
       "Name": "opencascade",
-      "Version": "7.8.0",
+      "Version": "7.8.1",
       "Description": "Open CASCADE Technology (OCCT) is an open-source software development platform for 3D CAD, CAM, CAE.",
       "Homepage": "https://github.com/Open-Cascade-SAS/OCCT",
       "License": "LGPL-2.1-only",
@@ -68004,7 +68358,7 @@
     {
       "Name": "opencv4",
       "Version": "4.8.0",
-      "Port-Version": 15,
+      "Port-Version": 16,
       "Description": "computer vision library",
       "Homepage": "https://github.com/opencv/opencv",
       "License": "Apache-2.0",
@@ -68511,6 +68865,35 @@
       "x86-windows": "pass"
     },
     {
+      "Name": "openfx",
+      "Version": "1.4",
+      "Maintainers": "Reza Alizadeh Majd <r.a.majd@gmail.com>, Behnam Binesh <BehnamBih@gmail.com>",
+      "Summary": "OpenFX - An open-source plugin API for visual effects",
+      "Homepage": "https://github.com/AcademySoftwareFoundation/openfx",
+      "License": "BSD-3-Clause",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 379,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
       "Name": "opengl",
       "Version": "2022-12-04",
       "Port-Version": 3,
@@ -68606,7 +68989,7 @@
     {
       "Name": "openimageio",
       "Version": "2.5.8.0",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "A library for reading and writing images, and a bunch of related classes, utilities, and application.",
       "Homepage": "https://github.com/OpenImageIO/oiio",
       "License": "BSD-3-Clause",
@@ -68797,8 +69180,7 @@
     },
     {
       "Name": "openldap",
-      "Version": "2.5.13",
-      "Port-Version": 1,
+      "Version": "2.5.17",
       "Description": "OpenLDAP Software is an open source implementation of the Lightweight Directory Access Protocol.",
       "Homepage": "https://www.openldap.org/software/",
       "License": "OLDAP-2.8",
@@ -68986,7 +69368,7 @@
     {
       "Name": "openmvs",
       "Version": "2.1.0",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "OpenMVS: open Multi-View Stereo reconstruction library",
       "Homepage": "https://cdcseacave.github.io/openMVS",
       "License": "AGPL-3.0-only",
@@ -69175,8 +69557,7 @@
     },
     {
       "Name": "openssl",
-      "Version": "3.2.1",
-      "Port-Version": 1,
+      "Version": "3.3.0",
       "Description": "OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.",
       "Homepage": "https://www.openssl.org",
       "License": "Apache-2.0",
@@ -69284,7 +69665,7 @@
     {
       "Name": "opensubdiv",
       "Version": "3.5.0",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "An Open-Source subdivision surface library.",
       "Homepage": "https://github.com/PixarAnimationStudios/OpenSubdiv",
       "License": "Apache-2.0",
@@ -69380,6 +69761,7 @@
     {
       "Name": "opentelemetry-cpp",
       "Version": "1.14.2",
+      "Port-Version": 1,
       "Description": [
         "OpenTelemetry is a collection of tools, APIs, and SDKs.",
         "You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior."
@@ -69439,6 +69821,20 @@
           "description": "Whether to include the Prometheus Client in the SDK",
           "dependencies": [
             "prometheus-cpp"
+          ]
+        },
+        "user-events": {
+          "description": "Whether to include the User Events Exporter from the opentelemetry-cpp-contrib repository",
+          "supports": "linux",
+          "dependencies": [
+            "libeventheader-tracepoint",
+            "libtracepoint",
+            {
+              "name": "opentelemetry-cpp",
+              "features": [
+                "otlp-http"
+              ]
+            }
           ]
         },
         "zipkin": {
@@ -69945,7 +70341,7 @@
     },
     {
       "Name": "opus",
-      "Version": "1.4",
+      "Version": "1.5.1",
       "Description": "Totally open, royalty-free, highly versatile audio codec",
       "Homepage": "https://github.com/xiph/opus",
       "License": "BSD-3-Clause",
@@ -69960,8 +70356,8 @@
         }
       ],
       "Features": {
-        "avx": {
-          "description": "Builds the library with avx instruction set"
+        "avx2": {
+          "description": "Builds the library with avx2 instruction set"
         }
       },
       "Stars": 2105,
@@ -70017,7 +70413,7 @@
     },
     {
       "Name": "orc",
-      "Version": "1.9.2",
+      "Version": "2.0.0",
       "Description": "The smallest, fastest columnar storage for Hadoop workloads.",
       "Homepage": "https://orc.apache.org/",
       "License": "Apache-2.0",
@@ -70946,7 +71342,7 @@
     },
     {
       "Name": "parallel-hashmap",
-      "Version": "1.3.11",
+      "Version": "1.3.12",
       "Description": "A header-only, very fast and memory-friendly family of C++ hash map & btree containers.",
       "License": "Apache-2.0",
       "Dependencies": [
@@ -71297,7 +71693,7 @@
     {
       "Name": "pcl",
       "Version": "1.14.0",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "Point Cloud Library (PCL) is open source library for 2D/3D image and point cloud processing.",
       "Homepage": "https://github.com/PointCloudLibrary/pcl",
       "License": "BSD-3-Clause",
@@ -71510,8 +71906,7 @@
     },
     {
       "Name": "pcre2",
-      "Version": "10.42",
-      "Port-Version": 2,
+      "Version": "10.43",
       "Description": "Regular Expression pattern matching using the same syntax and semantics as Perl 5.",
       "Homepage": "https://github.com/PCRE2Project/pcre2",
       "License": "BSD-3-Clause",
@@ -71749,8 +72144,7 @@
     },
     {
       "Name": "pe-parse",
-      "Version": "2.1.0",
-      "Port-Version": 1,
+      "Version": "2.1.1",
       "Description": "pe-parse is a principled, lightweight C/C++ PE parser",
       "Homepage": "https://github.com/trailofbits/pe-parse",
       "Supports": "!uwp",
@@ -71822,6 +72216,35 @@
       ],
       "Features": [],
       "Stars": 1869,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "perfetto",
+      "Version": "44.0",
+      "Description": "System profiling, app tracing and trace analysis",
+      "Homepage": "https://perfetto.dev",
+      "License": "Apache-2.0",
+      "Supports": "!uwp",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 0,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
       "x64-linux": "pass",
@@ -72076,7 +72499,7 @@
     },
     {
       "Name": "pipewire",
-      "Version": "1.0.3",
+      "Version": "1.0.4",
       "Description": "Low-latency audio/video router and processor. This port only builds the client library, not the server.",
       "Homepage": "https://pipewire.org",
       "License": "MIT",
@@ -72167,7 +72590,7 @@
     },
     {
       "Name": "pixman",
-      "Version": "0.43.2",
+      "Version": "0.43.4",
       "Description": "Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization.",
       "Homepage": "https://www.cairographics.org/releases",
       "License": "MIT",
@@ -72192,7 +72615,7 @@
     },
     {
       "Name": "pkgconf",
-      "Version": "2.1.0",
+      "Version": "2.2.0",
       "Description": "pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.",
       "Homepage": "https://github.com/pkgconf/pkgconf",
       "License": null,
@@ -72665,7 +73088,7 @@
     },
     {
       "Name": "pocketpy",
-      "Version": "1.4.2",
+      "Version": "1.4.5",
       "Description": "pkpy is a lightweight(~15K LOC) Python interpreter for game scripting, built on C++17 with STL.",
       "Homepage": "https://github.com/pocketpy/pocketpy",
       "License": "MIT",
@@ -72693,7 +73116,7 @@
     },
     {
       "Name": "poco",
-      "Version": "1.13.2",
+      "Version": "1.13.3",
       "Description": "Modern, powerful open source C++ class libraries for building network and internet-based applications that run on desktop, server, mobile and embedded systems.",
       "Homepage": "https://github.com/pocoproject/poco",
       "License": "BSL-1.0",
@@ -72900,11 +73323,11 @@
     },
     {
       "Name": "polyhook2",
-      "Version": "2023-08-11",
+      "Version": "2024-02-08",
       "Description": "C++17, x86/x64 Hooking Library v2.0",
       "Homepage": "https://github.com/stevemk14ebr/PolyHook_2_0",
       "License": "MIT",
-      "Supports": "!(arm | uwp | linux | osx)",
+      "Supports": "(x86 | x64) & !(uwp | osx)",
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -72918,16 +73341,21 @@
       ],
       "Default-Features": [
         "detours",
-        "exception",
+        {
+          "name": "exception",
+          "platform": "windows"
+        },
         "inlinentd",
-        "pe",
+        {
+          "name": "pe",
+          "platform": "windows"
+        },
         "virtuals"
       ],
       "Features": {
         "detours": {
           "description": "Implement detour functionality",
           "dependencies": [
-            "asmjit",
             "asmtk"
           ]
         },
@@ -73459,6 +73887,24 @@
       "x86-windows": "pass"
     },
     {
+      "Name": "pravila00-enumflag",
+      "Version": "2024-04-12",
+      "Description": "This C++ code provides a template for enabling bitwise operations on enum classes, which are not supported by default in C++.",
+      "Homepage": "https://www.justsoftwaresolutions.co.uk/cplusplus/using-enum-classes-as-bitfields.html",
+      "License": "BSL-1.0",
+      "Features": [],
+      "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
       "Name": "pravila00-make-vector",
       "Version": "2023-04-10",
       "Description": "C++ helper for making vectors.",
@@ -73478,8 +73924,7 @@
     },
     {
       "Name": "presentmon",
-      "Version": "1.7.0",
-      "Port-Version": 2,
+      "Version": "1.10.0",
       "Description": "PresentMon is a tool to capture and analyze ETW events related to swap chain presentation on Windows.",
       "Supports": "windows & !uwp",
       "Dependencies": [
@@ -73506,7 +73951,7 @@
     },
     {
       "Name": "proj",
-      "Version": "9.3.1",
+      "Version": "9.4.0",
       "Description": "PROJ library for cartographic projections",
       "Homepage": "https://proj.org/",
       "License": "MIT",
@@ -73573,74 +74018,8 @@
       "x86-windows": "pass"
     },
     {
-      "Name": "proj4",
-      "Version": "8.9.9",
-      "Port-Version": 1,
-      "Description": "A stub package that pulls in proj. Do not depend on this package.",
-      "License": "MIT",
-      "Dependencies": [
-        {
-          "name": "proj",
-          "default-features": false,
-          "version>=": "9.0.0"
-        }
-      ],
-      "Default-Features": [
-        "net",
-        "tiff"
-      ],
-      "Features": {
-        "net": {
-          "description": "Enable network support",
-          "dependencies": [
-            {
-              "name": "proj",
-              "default-features": false,
-              "features": [
-                "net"
-              ]
-            }
-          ]
-        },
-        "tiff": {
-          "description": "Enable TIFF support to read some grids",
-          "dependencies": [
-            {
-              "name": "proj",
-              "default-features": false,
-              "features": [
-                "tiff"
-              ]
-            }
-          ]
-        },
-        "tools": {
-          "description": "Build tools",
-          "dependencies": [
-            {
-              "name": "proj",
-              "default-features": false,
-              "features": [
-                "tools"
-              ]
-            }
-          ]
-        }
-      },
-      "Stars": 0,
-      "arm-uwp": "pass",
-      "arm64-windows": "pass",
-      "x64-linux": "pass",
-      "x64-osx": "pass",
-      "x64-uwp": "pass",
-      "x64-windows-static-md": "pass",
-      "x64-windows-static": "pass",
-      "x64-windows": "pass",
-      "x86-windows": "pass"
-    },
-    {
       "Name": "prometheus-cpp",
-      "Version": "1.1.0",
+      "Version": "1.2.4",
       "Description": "Prometheus Client Library for Modern C++",
       "License": "MIT",
       "Dependencies": [
@@ -73720,8 +74099,8 @@
     {
       "Name": "protobuf",
       "Version": "3.21.12",
-      "Port-Version": 1,
-      "Description": "Protocol Buffers - Google's data interchange format",
+      "Port-Version": 2,
+      "Description": "Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.",
       "Homepage": "https://github.com/protocolbuffers/protobuf",
       "License": "BSD-3-Clause",
       "Dependencies": [
@@ -73858,7 +74237,7 @@
     },
     {
       "Name": "proxsuite",
-      "Version": "0.5.0",
+      "Version": "0.6.4",
       "Description": "The Advanced Proximal Optimization Toolbox",
       "Homepage": "https://github.com/Simple-Robotics/proxsuite",
       "License": "BSD-2-Clause",
@@ -73887,7 +74266,7 @@
     },
     {
       "Name": "proxy",
-      "Version": "2.2.1",
+      "Version": "2.3.2",
       "Description": "A single-header C++20 library that facilitates runtime polymorphism.",
       "Homepage": "https://github.com/microsoft/proxy",
       "License": "MIT",
@@ -73915,7 +74294,7 @@
     },
     {
       "Name": "proxygen",
-      "Version": "2024.01.01.00",
+      "Version": "2024.04.15.00",
       "Description": "It comprises the core C++ HTTP abstractions used at Facebook.",
       "Homepage": "https://github.com/facebook/proxygen",
       "License": "BSD-3-Clause",
@@ -74282,7 +74661,7 @@
     },
     {
       "Name": "pybind11",
-      "Version": "2.11.1",
+      "Version": "2.12.0",
       "Description": "pybind11 is a lightweight header-only library that exposes C++ types in Python and vice versa, mainly to create Python bindings of existing C++ code",
       "Homepage": "https://github.com/pybind/pybind11",
       "License": "BSD-3-Clause",
@@ -74436,6 +74815,7 @@
     {
       "Name": "qca",
       "Version": "2.3.7",
+      "Port-Version": 1,
       "Description": "Qt Cryptographic Architecture (QCA).",
       "Homepage": "https://userbase.kde.org/QCA",
       "Dependencies": [
@@ -74464,6 +74844,12 @@
           "description": "Build with botan",
           "dependencies": [
             "botan"
+          ]
+        },
+        "ossl": {
+          "description": "Build with openssl",
+          "dependencies": [
+            "openssl"
           ]
         }
       },
@@ -74607,7 +74993,7 @@
     {
       "Name": "qhull",
       "Version": "8.0.2",
-      "Port-Version": 4,
+      "Port-Version": 5,
       "Description": "computes the convex hull, Delaunay triangulation, Voronoi diagram",
       "Homepage": "https://github.com/qhull/qhull",
       "License": null,
@@ -74744,8 +75130,8 @@
     },
     {
       "Name": "qscintilla",
-      "Version": "2.13.4",
-      "Port-Version": 2,
+      "Version": "2.14.1",
+      "Port-Version": 1,
       "Description": "QScintilla is a port to Qt of the Scintilla editing component. Features syntax highlighting, code-completion and much more (Barebone build without python bindings (missing dependeny PyQt) and without QtDesigner plugin)",
       "Homepage": "https://www.riverbankcomputing.com/software/qscintilla",
       "License": "GPL-3.0-or-later",
@@ -75008,7 +75394,7 @@
     },
     {
       "Name": "qt-advanced-docking-system",
-      "Version": "4.2.1",
+      "Version": "4.3.0",
       "Description": "Create customizable layouts using an advanced window docking system similar to what is found in many popular IDEs such as Visual Studio",
       "Homepage": "https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System",
       "License": "LGPL-2.1-only",
@@ -75164,7 +75550,7 @@
     {
       "Name": "qt5",
       "Version": "5.15.13",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "A cross-platform application and UI framework.",
       "Homepage": "https://www.qt.io/",
       "License": null,
@@ -75239,17 +75625,17 @@
               "name": "qt5",
               "default-features": false,
               "features": [
-                "webengine"
+                "wayland"
               ],
-              "platform": "!static"
+              "platform": "linux"
             },
             {
               "name": "qt5",
               "default-features": false,
               "features": [
-                "wayland"
+                "webengine"
               ],
-              "platform": "!windows"
+              "platform": "!static"
             },
             {
               "name": "qt5-base",
@@ -75291,7 +75677,7 @@
           "dependencies": [
             {
               "name": "qt5-doc",
-              "platform": "!windows"
+              "platform": "linux"
             }
           ]
         },
@@ -76527,7 +76913,7 @@
     {
       "Name": "qt5-webengine",
       "Version": "5.15.13",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "Qt WebEngine provides functionality for rendering regions of dynamic web content.",
       "License": null,
       "Supports": "!static",
@@ -76654,7 +77040,7 @@
     {
       "Name": "qt5-winextras",
       "Version": "5.15.13",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "Qt Windows Extras provide classes and functions that enable you to use miscellaneous Windows-specific functions. For example, you can convert Qt objects to Windows object handles and manipulate DWM glass frames.",
       "License": null,
       "Supports": "windows",
@@ -76667,7 +77053,7 @@
       ],
       "Features": {
         "declarative": {
-          "description": "Build Qt.Quick imports",
+          "description": "Build Qt Quick imports",
           "dependencies": [
             "qt5-declarative"
           ]
@@ -76914,7 +77300,7 @@
     {
       "Name": "qtbase",
       "Version": "6.6.1",
-      "Port-Version": 11,
+      "Port-Version": 12,
       "Description": "Qt Base (Core, Gui, Widgets, Network, ...)",
       "Homepage": "https://www.qt.io/",
       "License": null,
@@ -78837,7 +79223,7 @@
     {
       "Name": "qttools",
       "Version": "6.6.1",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "A collection of tools and utilities that come with the Qt framework to assist developers in the creation, management, and deployment of Qt applications.",
       "Homepage": "https://www.qt.io/",
       "License": null,
@@ -78898,7 +79284,7 @@
           ]
         },
         "qdbus": {
-          "description": "Build qdbusviewer",
+          "description": "Build QDBusViewer",
           "dependencies": [
             {
               "name": "qtbase",
@@ -78911,7 +79297,7 @@
           ]
         },
         "qdoc": {
-          "description": "Build QDoc.",
+          "description": "Build QDoc",
           "dependencies": [
             {
               "name": "llvm",
@@ -79115,7 +79501,7 @@
     {
       "Name": "qtwebengine",
       "Version": "6.6.1",
-      "Port-Version": 4,
+      "Port-Version": 5,
       "Description": "Qt WebEngine provides functionality for rendering regions of dynamic web content.",
       "Homepage": "https://www.qt.io/",
       "License": null,
@@ -79227,10 +79613,6 @@
         },
         {
           "name": "vcpkg-tool-nodejs",
-          "host": true
-        },
-        {
-          "name": "vcpkg-tool-python2",
           "host": true
         },
         {
@@ -79391,7 +79773,7 @@
     },
     {
       "Name": "quantlib",
-      "Version": "1.33",
+      "Version": "1.34",
       "Description": "The QuantLib C++ library",
       "Homepage": "https://www.quantlib.org/",
       "License": "BSD-3-Clause",
@@ -79574,7 +79956,7 @@
     },
     {
       "Name": "quill",
-      "Version": "3.7.0",
+      "Version": "3.8.0",
       "Description": "C++14 Asynchronous Low Latency Logging Library",
       "Homepage": "https://github.com/odygrd/quill/",
       "License": "MIT",
@@ -79603,8 +79985,7 @@
     },
     {
       "Name": "quirc",
-      "Version": "1.1",
-      "Port-Version": 3,
+      "Version": "1.2",
       "Description": "quirc is one of the C library available for scanning QR Codes",
       "Homepage": "https://github.com/dlbeer/quirc",
       "License": null,
@@ -79841,8 +80222,8 @@
     {
       "Name": "range-v3",
       "Version": "0.12.0",
-      "Port-Version": 1,
-      "Description": "Range library for C++11/14/17/20.",
+      "Port-Version": 2,
+      "Description": "Range library for C++14/17/20, basis for C++20's std::ranges",
       "Homepage": "https://github.com/ericniebler/range-v3",
       "License": "BSL-1.0 AND MIT AND (NCSA OR MIT)",
       "Dependencies": [
@@ -79915,7 +80296,7 @@
     },
     {
       "Name": "rapidcsv",
-      "Version": "8.64",
+      "Version": "8.80",
       "Description": "Rapidcsv is a C++ header-only library for CSV parsing.",
       "Homepage": "https://github.com/d99kris/rapidcsv/",
       "License": "BSD-3-Clause",
@@ -79939,7 +80320,7 @@
     },
     {
       "Name": "rapidfuzz",
-      "Version": "2.0.0",
+      "Version": "3.0.2",
       "Description": "Rapid fuzzy string matching library for C++17 using the Levenshtein Distance.",
       "Homepage": "https://github.com/maxbachmann/rapidfuzz-cpp",
       "License": "MIT",
@@ -80123,11 +80504,10 @@
     {
       "Name": "rbdl",
       "Version": "3.3.0",
-      "Port-Version": 5,
+      "Port-Version": 6,
       "Description": "Rigid Body Dynamics Library",
       "Homepage": "https://github.com/rbdl/rbdl",
       "Dependencies": [
-        "boost",
         "eigen3",
         "lua",
         {
@@ -80174,7 +80554,8 @@
     },
     {
       "Name": "re2",
-      "Version": "2023-07-01",
+      "Version": "2024-04-01",
+      "Port-Version": 2,
       "Description": "RE2 is a fast, safe, thread-friendly alternative to backtracking regular expression engines like those used in PCRE, Perl, and Python. It is a C++ library.",
       "Homepage": "https://github.com/google/re2",
       "License": "BSD-3-Clause",
@@ -80494,7 +80875,7 @@
     },
     {
       "Name": "redis-plus-plus",
-      "Version": "1.3.10",
+      "Version": "1.3.12",
       "Description": "This is a C++ client for Redis. It's based on hiredis, and written in C++ 11",
       "Homepage": "https://github.com/sewenew/redis-plus-plus",
       "License": "Apache-2.0",
@@ -80840,7 +81221,7 @@
     },
     {
       "Name": "restinio",
-      "Version": "0.7.1",
+      "Version": "0.7.2",
       "Description": "A header-only C++14 library that gives you an embedded HTTP/Websocket server targeted primarily for asynchronous processing of HTTP-requests.",
       "Homepage": "https://github.com/Stiffstream/restinio",
       "License": "BSD-3-Clause",
@@ -81208,7 +81589,7 @@
     },
     {
       "Name": "roaring",
-      "Version": "2.0.4",
+      "Version": "3.0.0",
       "Description": "A better compressed bitset in C (and C++)",
       "Homepage": "https://github.com/RoaringBitmap/CRoaring",
       "License": "Apache-2.0 OR MIT",
@@ -81392,7 +81773,7 @@
     },
     {
       "Name": "rocksdb",
-      "Version": "9.0.0",
+      "Version": "9.1.0",
       "Description": "A library that provides an embeddable, persistent key-value store for fast storage",
       "Homepage": "https://github.com/facebook/rocksdb",
       "License": "GPL-2.0-only OR Apache-2.0",
@@ -81504,9 +81885,10 @@
     {
       "Name": "rply",
       "Version": "1.1.4",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "ANSI C Library for PLY file format input and output",
       "Homepage": "http://w3.impa.br/~diego/software/rply",
+      "License": "MIT",
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -81520,14 +81902,14 @@
       "Features": [],
       "Stars": 0,
       "arm-uwp": "pass",
-      "arm64-windows": "skip",
-      "x64-linux": "skip",
-      "x64-osx": "skip",
-      "x64-uwp": "skip",
-      "x64-windows-static-md": "skip",
-      "x64-windows-static": "skip",
-      "x64-windows": "skip",
-      "x86-windows": "skip"
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
     },
     {
       "Name": "rsasynccpp",
@@ -81683,7 +82065,7 @@
     {
       "Name": "rsocket",
       "Version": "2021.08.30.00",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "C++ implementation of RSocket http://rsocket.io",
       "Homepage": "https://github.com/rsocket/rsocket-cpp",
       "Dependencies": [
@@ -81723,11 +82105,11 @@
     },
     {
       "Name": "rtabmap",
-      "Version": "0.21.4",
+      "Version": "0.21.4.1",
+      "Port-Version": 1,
       "Description": "Real-Time Appearance-Based Mapping",
       "Homepage": "https://introlab.github.io/rtabmap/",
-      "License": "BSD-3-Clause",
-      "Supports": "windows & !static",
+      "License": null,
       "Dependencies": [
         "ceres",
         "g2o",
@@ -81737,10 +82119,11 @@
         },
         {
           "name": "pcl",
-          "default-features": false,
-          "features": [
-            "vtk"
-          ]
+          "default-features": false
+        },
+        {
+          "name": "rtabmap-res-tool",
+          "host": true
         },
         "sqlite3",
         {
@@ -81767,7 +82150,8 @@
               "name": "pcl",
               "default-features": false,
               "features": [
-                "qt"
+                "qt",
+                "visualization"
               ]
             },
             {
@@ -81778,6 +82162,10 @@
                 "opengl",
                 "widgets"
               ]
+            },
+            {
+              "name": "vtk",
+              "default-features": false
             }
           ]
         },
@@ -81852,6 +82240,31 @@
           ]
         }
       },
+      "Stars": 0,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "rtabmap-res-tool",
+      "Version": "0.21.4.1",
+      "Description": "Real-Time Appearance-Based Mapping, resource generator",
+      "Homepage": "https://introlab.github.io/rtabmap/",
+      "License": "BSD-3-Clause",
+      "Supports": "native",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        }
+      ],
+      "Features": [],
       "Stars": 0,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
@@ -82270,7 +82683,7 @@
     },
     {
       "Name": "s2n",
-      "Version": "1.3.56",
+      "Version": "1.4.8",
       "Description": "C99 implementation of the TLS/SSL protocols.",
       "Homepage": "https://github.com/aws/s2n-tls",
       "License": "Apache-2.0",
@@ -82304,7 +82717,7 @@
     },
     {
       "Name": "safeint",
-      "Version": "3.0.26",
+      "Version": "3.0.28",
       "Description": "SafeInt is a class library for C++ that manages integer overflows",
       "Homepage": "https://github.com/dcleblanc/SafeInt",
       "Features": [],
@@ -82321,7 +82734,7 @@
     },
     {
       "Name": "sail",
-      "Version": "0.9.1",
+      "Version": "0.9.4",
       "Description": "The missing small and fast image decoding library for humans (not for machines)",
       "Homepage": "https://github.com/HappySeaFox/sail",
       "License": "MIT",
@@ -82867,6 +83280,7 @@
     {
       "Name": "scnlib",
       "Version": "2.0.2",
+      "Port-Version": 2,
       "Description": "scnlib is a modern C++ library for replacing scanf and std::istream",
       "Homepage": "https://scnlib.dev/",
       "Dependencies": [
@@ -82988,8 +83402,7 @@
     },
     {
       "Name": "sdbus-cpp",
-      "Version": "1.3.0",
-      "Port-Version": 1,
+      "Version": "1.5.0",
       "Description": "High-level C++ D-Bus library for Linux designed to provide easy-to-use yet powerful API in modern C++",
       "Homepage": "https://github.com/Kistler-Group/sdbus-cpp",
       "License": "LGPL-2.1",
@@ -83059,8 +83472,7 @@
     },
     {
       "Name": "sdformat13",
-      "Version": "13.5.0",
-      "Port-Version": 1,
+      "Version": "13.6.0",
       "Description": "Simulation Description Format (SDF) parser and description files.",
       "Homepage": "http://sdformat.org/",
       "License": "Apache-2.0",
@@ -83801,7 +84213,7 @@
     {
       "Name": "seal",
       "Version": "4.1.1",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "Microsoft SEAL is an easy-to-use and powerful homomorphic encryption library.",
       "Homepage": "https://github.com/microsoft/SEAL",
       "License": "MIT",
@@ -83979,8 +84391,7 @@
     },
     {
       "Name": "sentencepiece",
-      "Version": "0.1.99",
-      "Port-Version": 1,
+      "Version": "0.2.0",
       "Description": "SentencePiece is an unsupervised text tokenizer and detokenizer mainly for Neural Network-based text generation systems where the vocabulary size is predetermined prior to the neural model training",
       "License": "Apache-2.0",
       "Supports": "static",
@@ -84004,8 +84415,7 @@
     },
     {
       "Name": "sentry-native",
-      "Version": "0.7.0",
-      "Port-Version": 1,
+      "Version": "0.7.2",
       "Description": "Sentry SDK for C, C++ and native applications.",
       "Homepage": "https://sentry.io/",
       "License": "MIT",
@@ -84022,7 +84432,11 @@
       ],
       "Default-Features": [
         "backend",
-        "transport"
+        "transport",
+        {
+          "name": "wer",
+          "platform": "windows & !static"
+        }
       ],
       "Features": {
         "backend": {
@@ -84045,6 +84459,15 @@
             }
           ]
         },
+        "compression": {
+          "description": [
+            "Enables gzip compression support for the transport.",
+            "Cf.https://github.com/getsentry/sentry-native#compile-time-options"
+          ],
+          "dependencies": [
+            "zlib"
+          ]
+        },
         "transport": {
           "description": [
             "Enables the platform-specific network transport.",
@@ -84056,6 +84479,21 @@
               "name": "curl",
               "default-features": false,
               "platform": "!windows"
+            }
+          ]
+        },
+        "wer": {
+          "description": [
+            "Enables the Windows Error Reporting backend.",
+            "Cf.https://github.com/getsentry/sentry-native#compile-time-options"
+          ],
+          "supports": "windows & !static",
+          "dependencies": [
+            {
+              "name": "sentry-native",
+              "features": [
+                "backend"
+              ]
             }
           ]
         }
@@ -84298,8 +84736,7 @@
     },
     {
       "Name": "sfsexp",
-      "Version": "1.3.1",
-      "Port-Version": 1,
+      "Version": "1.4.1",
       "Description": "Small Fast S-Expression Library",
       "Homepage": "https://github.com/mjsottile/sfsexp",
       "Dependencies": [
@@ -84322,7 +84759,7 @@
     },
     {
       "Name": "shader-slang",
-      "Version": "2023.5.1",
+      "Version": "2024.1.7",
       "Description": "Slang is a shading language that makes it easier to build and maintain large shader codebases in a modular and extensible fashion, while also maintaining the highest possible performance on modern GPUs and graphics APIs. Slang is based on years of collaboration between researchers at NVIDIA, Carnegie Mellon University, and Stanford.",
       "Homepage": "https://github.com/shader-slang/slang",
       "License": "MIT",
@@ -84568,7 +85005,7 @@
     {
       "Name": "shogun",
       "Version": "6.1.4",
-      "Port-Version": 9,
+      "Port-Version": 10,
       "Description": "Unified and efficient Machine Learning",
       "Homepage": "https://github.com/shogun-toolbox/shogun",
       "Dependencies": [
@@ -84577,6 +85014,12 @@
         "curl",
         "dirent",
         "eigen3",
+        {
+          "name": "hdf5",
+          "default-features": false,
+          "platform": "!windows"
+        },
+        "lapack",
         "liblzma",
         "libxml2",
         "lzo",
@@ -84590,6 +85033,10 @@
         },
         {
           "name": "vcpkg-cmake-config",
+          "host": true
+        },
+        {
+          "name": "vcpkg-pkgconfig-get-modules",
           "host": true
         },
         "zlib"
@@ -85007,7 +85454,7 @@
     },
     {
       "Name": "simdutf",
-      "Version": "4.0.9",
+      "Version": "5.2.5",
       "Description": "Unicode validation and transcoding at billions of characters per second",
       "Homepage": "https://github.com/simdutf/simdutf",
       "Dependencies": [
@@ -85112,7 +85559,7 @@
     },
     {
       "Name": "simpleini",
-      "Version": "4.19",
+      "Version": "4.22",
       "Description": "Cross-platform C++ library providing a simple API to read and write INI-style configuration files",
       "Homepage": "https://github.com/brofield/simpleini",
       "License": "MIT",
@@ -85193,7 +85640,7 @@
     },
     {
       "Name": "skia",
-      "Version": "123",
+      "Version": "124",
       "Description": [
         "Skia is an open source 2D graphics library which provides common APIs that work across a variety of hardware and software platforms.",
         "It serves as the graphics engine for Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.",
@@ -85253,11 +85700,11 @@
         },
         {
           "name": "harfbuzz",
-          "platform": "!uwp & !(windows & !static)"
+          "platform": "!uwp"
         },
         {
           "name": "icu",
-          "platform": "!uwp & !(windows & !static)"
+          "platform": "!uwp"
         }
       ],
       "Features": {
@@ -85332,12 +85779,18 @@
             {
               "name": "harfbuzz",
               "default-features": false
+            },
+            {
+              "name": "skia",
+              "default-features": false,
+              "features": [
+                "icu"
+              ]
             }
           ]
         },
         "icu": {
           "description": "Use icu.",
-          "supports": "!(windows & !static)",
           "dependencies": [
             "icu"
           ]
@@ -85767,7 +86220,7 @@
     },
     {
       "Name": "sobjectizer",
-      "Version": "5.8.1.1",
+      "Version": "5.8.2",
       "Description": "SObjectizer is a C++ in-process message dispatching framework with implementation of Actor Model, Publish-Subscribe Model and CSP-like channels.",
       "Homepage": "https://github.com/Stiffstream/sobjectizer",
       "License": "BSD-3-Clause",
@@ -86184,10 +86637,10 @@
     },
     {
       "Name": "soundtouch",
-      "Version": "2.3.2",
-      "Port-Version": 3,
+      "Version": "2.3.3",
       "Description": "SoundTouch is an open-source audio processing library for changing the Tempo, Pitch and Playback Rates of audio streams or audio files.",
       "Homepage": "https://www.surina.net/soundtouch",
+      "License": "LGPL-2.1-only",
       "Supports": "!uwp",
       "Dependencies": [
         {
@@ -86208,7 +86661,8 @@
           "description": "Build the soundstretch command line tool"
         },
         "soundtouchdll": {
-          "description": "Build the SoundTouchDLL C wrapper dynamic library"
+          "description": "Build the SoundTouchDLL C wrapper dynamic library",
+          "supports": "!staticcrt"
         }
       },
       "Stars": 0,
@@ -86389,8 +86843,7 @@
     },
     {
       "Name": "spdk",
-      "Version": "19.01.1",
-      "Port-Version": 3,
+      "Version": "24.01",
       "Description": "Storage Performance Development Kit",
       "Supports": "linux",
       "Dependencies": [
@@ -86485,7 +86938,8 @@
     {
       "Name": "spdlog",
       "Version": "1.13.0",
-      "Description": "Very fast, header only, C++ logging library",
+      "Port-Version": 1,
+      "Description": "Very fast, header-only/compiled, C++ logging library.",
       "Homepage": "https://github.com/gabime/spdlog",
       "License": "MIT",
       "Dependencies": [
@@ -86623,11 +87077,14 @@
     {
       "Name": "spirit-po",
       "Version": "1.1.2",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "A header-only C++ library for localization using GNU gettext po files, based on Boost.Spirit.",
       "Homepage": "https://github.com/cbeck88/spirit-po",
       "Dependencies": [
-        "boost"
+        "boost-fusion",
+        "boost-optional",
+        "boost-spirit",
+        "boost-variant"
       ],
       "Features": [],
       "Stars": 45,
@@ -86643,7 +87100,7 @@
     },
     {
       "Name": "spirv-cross",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "SPIRV-Cross is a practical tool and library for performing reflection on SPIR-V and disassembling SPIR-V back to high level languages.",
       "Homepage": "https://github.com/KhronosGroup/SPIRV-Cross",
       "Dependencies": [
@@ -86671,7 +87128,7 @@
     },
     {
       "Name": "spirv-headers",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "Machine-readable files for the SPIR-V Registry",
       "Homepage": "https://github.com/KhronosGroup/SPIRV-Headers",
       "Dependencies": [
@@ -86698,12 +87155,12 @@
     },
     {
       "Name": "spirv-reflect",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
+      "Port-Version": 1,
       "Description": "SPIRV-Reflect is a lightweight library that provides a C/C++ reflection API for SPIR-V shader bytecode in Vulkan applications.",
       "Homepage": "https://github.com/KhronosGroup/SPIRV-Reflect",
       "License": "Apache-2.0",
       "Dependencies": [
-        "spirv-headers",
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -86727,7 +87184,7 @@
     },
     {
       "Name": "spirv-tools",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "API and commands for processing SPIR-V modules",
       "Homepage": "https://github.com/KhronosGroup/SPIRV-Tools",
       "License": "Apache-2.0",
@@ -86887,8 +87344,7 @@
     },
     {
       "Name": "sqlite-modern-cpp",
-      "Version": "3.2-936cd0c8",
-      "Port-Version": 2,
+      "Version": "2023-12-03",
       "Description": "The C++14 wrapper around sqlite library",
       "Homepage": "https://github.com/aminroosta/sqlite_modern_cpp",
       "Dependencies": [
@@ -86949,7 +87405,7 @@
     },
     {
       "Name": "sqlite3",
-      "Version": "3.45.2",
+      "Version": "3.45.3",
       "Description": "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.",
       "Homepage": "https://sqlite.org/",
       "License": "blessing",
@@ -87242,8 +87698,7 @@
     },
     {
       "Name": "sratom",
-      "Version": "0.6.4",
-      "Port-Version": 2,
+      "Version": "0.6.16",
       "Description": "Sratom is a library for serialising LV2 atoms to and from RDF, particularly the Turtle syntax.",
       "Homepage": "https://drobilla.net/software/sratom",
       "License": "ISC",
@@ -87763,6 +88218,25 @@
       "x86-windows": "pass"
     },
     {
+      "Name": "stringzilla",
+      "Version": "3.7.0",
+      "Description": "StringZilla is the GodZilla of string libraries, using SIMD and SWAR to accelerate string operations on modern CPUs.",
+      "Homepage": "https://github.com/ashvardanian/StringZilla",
+      "License": "Apache-2.0",
+      "Supports": "!x86",
+      "Features": [],
+      "Stars": 1792,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
       "Name": "strong-type",
       "Version": "14",
       "Description": "An additive strong typedef library for C++14/17/20",
@@ -87844,7 +88318,7 @@
     {
       "Name": "strtk",
       "Version": "2020-09-14",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "robust, optimized and portable string processing algorithms for the C++ language",
       "Homepage": "https://github.com/ArashPartow/strtk",
       "License": null,
@@ -87852,7 +88326,12 @@
         "boost": {
           "description": "Request boost libraries",
           "dependencies": [
-            "boost"
+            "boost-algorithm",
+            "boost-lexical-cast",
+            "boost-random",
+            "boost-regex",
+            "boost-spirit",
+            "boost-tokenizer"
           ]
         }
       },
@@ -87869,7 +88348,7 @@
     },
     {
       "Name": "stx",
-      "Version": "0.0.3",
+      "Version": "1.0.5",
       "Description": "STX is a collection of libraries and utilities designed to make working with C++ easier and less error-prone.",
       "Homepage": "https://github.com/lamarrr/STX",
       "License": "MIT",
@@ -87987,7 +88466,7 @@
     },
     {
       "Name": "superlu",
-      "Version": "6.0.0",
+      "Version": "6.0.1",
       "Description": "Supernodal sparse direct solver.",
       "Homepage": "https://github.com/xiaoyeli/superlu",
       "License": "BSD-3-Clause-LBNL",
@@ -88034,7 +88513,7 @@
     },
     {
       "Name": "symengine",
-      "Version": "0.11.1",
+      "Version": "0.11.2",
       "Description": "SymEngine is a fast symbolic manipulation library",
       "Homepage": "https://github.com/symengine/symengine",
       "License": "BSD-3-Clause",
@@ -88787,7 +89266,7 @@
     },
     {
       "Name": "tgbot-cpp",
-      "Version": "1.7.2",
+      "Version": "1.7.3",
       "Description": "C++ library for Telegram bot API.",
       "Homepage": "https://github.com/reo7sp/tgbot-cpp",
       "License": "MIT",
@@ -88953,11 +89432,22 @@
     {
       "Name": "think-cell-range",
       "Version": "2023.1",
+      "Port-Version": 1,
       "Description": "think-cell's range library",
       "Homepage": "https://github.com/think-cell/think-cell-library",
       "License": "BSL-1.0",
       "Dependencies": [
-        "boost"
+        "boost-filesystem",
+        "boost-fusion",
+        "boost-integer",
+        "boost-intrusive",
+        "boost-lexical-cast",
+        "boost-mpl",
+        "boost-multi-index",
+        "boost-predef",
+        "boost-preprocessor",
+        "boost-range",
+        "boost-spirit"
       ],
       "Features": [],
       "Stars": 354,
@@ -89018,8 +89508,7 @@
     },
     {
       "Name": "thorvg",
-      "Version": "0.12.1",
-      "Port-Version": 1,
+      "Version": "0.13.1",
       "Description": "ThorVG is a platform-independent portable library for drawing vector-based scenes and animations",
       "Homepage": "https://www.thorvg.org",
       "License": "MIT",
@@ -89069,7 +89558,7 @@
     },
     {
       "Name": "thrift",
-      "Version": "0.19.0",
+      "Version": "0.20.0",
       "Description": "Apache Thrift is a software project spanning a variety of programming languages and use cases. Our goal is to make reliable, performant communication and data serialization across languages as efficient and seamless as possible.",
       "Homepage": "https://github.com/apache/thrift",
       "License": "Apache-2.0",
@@ -89436,7 +89925,7 @@
     },
     {
       "Name": "tinydir",
-      "Version": "1.2.5",
+      "Version": "1.2.6",
       "Description": "Lightweight, portable and easy to integrate C directory and file reader",
       "Homepage": "https://github.com/cxong/tinydir",
       "License": "BSD-2-Clause",
@@ -89511,7 +90000,7 @@
     },
     {
       "Name": "tinyexr",
-      "Version": "1.0.5",
+      "Version": "1.0.8",
       "Description": "Library to load and save OpenEXR(.exr) images",
       "Homepage": "https://github.com/syoyo/tinyexr",
       "License": "BSD-3-Clause",
@@ -89587,7 +90076,7 @@
     },
     {
       "Name": "tinygltf",
-      "Version": "2.8.20",
+      "Version": "2.8.21",
       "Description": "A header only C++11 glTF 2.0 library.",
       "Homepage": "https://github.com/syoyo/tinygltf",
       "Dependencies": [
@@ -89636,7 +90125,7 @@
     },
     {
       "Name": "tinyobjloader",
-      "Version": "2.0.0-rc9",
+      "Version": "2.0.0rc13",
       "Description": "Tiny but powerful single file wavefront obj loader",
       "License": "MIT",
       "Dependencies": [
@@ -89811,7 +90300,7 @@
     },
     {
       "Name": "tinyspline",
-      "Version": "0.4.0",
+      "Version": "0.6.0",
       "Description": "Library for NURBS, B-Splines, and Bézier curves, allowing you to handle splines with ease",
       "Homepage": "https://github.com/msteinbeck/tinyspline",
       "License": "MIT",
@@ -90101,8 +90590,7 @@
     },
     {
       "Name": "tlx",
-      "Version": "0.5.20191212",
-      "Port-Version": 4,
+      "Version": "0.6.1",
       "Description": "tlx is a collection of C++ helpers and extensions universally needed, but not found in the STL",
       "Homepage": "https://github.com/tlx/tlx",
       "Dependencies": [
@@ -90129,8 +90617,7 @@
     },
     {
       "Name": "tmx",
-      "Version": "1.2.0",
-      "Port-Version": 2,
+      "Version": "1.4.0",
       "Description": "A portable C library to load tiled maps in your games.",
       "License": "BSD-2-Clause",
       "Dependencies": [
@@ -90220,7 +90707,7 @@
     },
     {
       "Name": "toml11",
-      "Version": "3.7.1",
+      "Version": "3.8.1",
       "Description": "A C++11 header-only toml parser/encoder depending only on C++ standard library.",
       "Homepage": "https://github.com/ToruNiina/toml11",
       "License": "MIT",
@@ -90299,7 +90786,7 @@
     {
       "Name": "tracy",
       "Version": "0.10.0",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.",
       "Homepage": "https://github.com/wolfpld/tracy",
       "License": "BSD-3-Clause",
@@ -90343,6 +90830,9 @@
         "crash-handler": {
           "description": "Enable crash handler"
         },
+        "fibers": {
+          "description": "Enable fibers support"
+        },
         "gui-tools": {
           "description": "Build Tracy GUI tool: `profiler` (aka `Tracy` executable)",
           "supports": "!(windows & x86)",
@@ -90384,7 +90874,7 @@
     },
     {
       "Name": "transwarp",
-      "Version": "2.2.2",
+      "Version": "2.2.3",
       "Description": "A header-only C++ library for task concurrency",
       "Homepage": "https://github.com/bloomen/transwarp",
       "License": "MIT",
@@ -90409,6 +90899,7 @@
     {
       "Name": "trantor",
       "Version": "1.5.17",
+      "Port-Version": 1,
       "Description": "A non-blocking I/O cross-platform TCP network library, using C++14",
       "Homepage": "https://github.com/an-tao/trantor",
       "License": "BSD-2-Clause",
@@ -90661,7 +91152,7 @@
     },
     {
       "Name": "trompeloeil",
-      "Version": "45",
+      "Version": "47",
       "Description": "A thread-safe header-only mocking framework for C++11/14 using the Boost Software License 1.0",
       "Homepage": "https://github.com/rollbear/trompeloeil",
       "License": "BSL-1.0",
@@ -90707,8 +91198,7 @@
     },
     {
       "Name": "tsl-hopscotch-map",
-      "Version": "2.3.0",
-      "Port-Version": 3,
+      "Version": "2.3.1",
       "Description": "C++ implementation of a fast hash map and hash set using hopscotch hashing",
       "Dependencies": [
         {
@@ -90730,8 +91220,7 @@
     },
     {
       "Name": "tsl-ordered-map",
-      "Version": "1.0.0",
-      "Port-Version": 3,
+      "Version": "1.1.0",
       "Description": "C++ hash map and hash set which preserve the order of insertion",
       "Dependencies": [
         {
@@ -91292,8 +91781,7 @@
     },
     {
       "Name": "unrar",
-      "Version": "6.1.7",
-      "Port-Version": 3,
+      "Version": "7.0.7",
       "Description": "rarlab's unrar library",
       "Homepage": "https://www.rarlab.com",
       "License": null,
@@ -91396,7 +91884,7 @@
     },
     {
       "Name": "urdfdom-headers",
-      "Version": "1.1.0",
+      "Version": "1.1.1",
       "Description": "The URDF (U-Robot Description Format) headers provides core data structure headers for URDF.",
       "Homepage": "https://github.com/ros/urdfdom_headers",
       "License": "BSD-2-Clause",
@@ -91818,8 +92306,7 @@
     },
     {
       "Name": "uthenticode",
-      "Version": "1.0.6",
-      "Port-Version": 2,
+      "Version": "2.0.1",
       "Description": "A cross-platform library for verifying Authenticode signatures",
       "Homepage": "https://github.com/trailofbits/uthenticode",
       "Supports": "!uwp",
@@ -91942,7 +92429,7 @@
     },
     {
       "Name": "uwebsockets",
-      "Version": "20.60.0",
+      "Version": "20.62.0",
       "Description": "Simple, secure & standards compliant web I/O for the most demanding of applications",
       "Homepage": "https://github.com/uWebSockets/uWebSockets",
       "License": "Apache-2.0",
@@ -92004,7 +92491,7 @@
     {
       "Name": "v8",
       "Version": "9.1.269.39",
-      "Port-Version": 6,
+      "Port-Version": 7,
       "Description": "Google Chrome's JavaScript engine",
       "Homepage": "https://v8.dev",
       "License": "BSD-3-Clause",
@@ -92043,7 +92530,7 @@
     },
     {
       "Name": "valijson",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Description": "Header-only C++ library for JSON Schema validation",
       "Dependencies": [
         {
@@ -92385,6 +92872,7 @@
     {
       "Name": "vcpkg-qmake",
       "Version": "2023-03-22",
+      "Port-Version": 1,
       "Documentation": "https://vcpkg.io/en/docs/README.html",
       "License": "MIT",
       "Supports": "native",
@@ -92489,7 +92977,7 @@
     {
       "Name": "vcpkg-tool-meson",
       "Version": "1.3.2",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "Meson build system",
       "Homepage": "https://github.com/mesonbuild/meson",
       "License": "Apache-2.0",
@@ -92843,6 +93331,7 @@
     {
       "Name": "vk-bootstrap",
       "Version": "1.3.279",
+      "Port-Version": 1,
       "Description": "Vulkan bootstraping library",
       "Homepage": "https://github.com/charles-lunarg/vk-bootstrap",
       "License": "MIT",
@@ -92877,6 +93366,34 @@
       "License": "MIT",
       "Features": [],
       "Stars": 1444,
+      "arm-uwp": "pass",
+      "arm64-windows": "pass",
+      "x64-linux": "pass",
+      "x64-osx": "pass",
+      "x64-uwp": "pass",
+      "x64-windows-static-md": "pass",
+      "x64-windows-static": "pass",
+      "x64-windows": "pass",
+      "x86-windows": "pass"
+    },
+    {
+      "Name": "vladimirshaleev-ipaddress",
+      "Version": "1.0.1",
+      "Description": "A library for working and manipulating IPv4/IPv6 addresses and networks in modern C++.",
+      "Homepage": "https://vladimirshaleev.github.io/ipaddress/",
+      "License": "MIT",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "Features": [],
+      "Stars": 0,
       "arm-uwp": "pass",
       "arm64-windows": "pass",
       "x64-linux": "pass",
@@ -93036,7 +93553,7 @@
     },
     {
       "Name": "volk",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": [
         "Meta loader for Vulkan API.",
         "Note that the static library target volk::volk is built without platform-specific defines.",
@@ -93130,8 +93647,7 @@
     },
     {
       "Name": "vsg",
-      "Version": "1.0.9",
-      "Port-Version": 1,
+      "Version": "1.1.2",
       "Description": "A modern, cross platform, high performance scene graph library built upon Vulkan.",
       "Homepage": "http://www.vulkanscenegraph.org/",
       "License": "MIT",
@@ -93145,7 +93661,11 @@
           "name": "vcpkg-cmake-config",
           "host": true
         },
-        "vulkan"
+        "vulkan",
+        {
+          "name": "xcb",
+          "platform": "!(android | windows | osx)"
+        }
       ],
       "Features": [],
       "Stars": 0,
@@ -93259,7 +93779,7 @@
     {
       "Name": "vtk",
       "Version": "9.2.0-pv5.11.0",
-      "Port-Version": 10,
+      "Port-Version": 12,
       "Description": "Software system for 3D computer graphics, image processing, and visualization",
       "Homepage": "https://github.com/Kitware/VTK",
       "License": "BSD-3-Clause",
@@ -93637,7 +94157,7 @@
     },
     {
       "Name": "vulkan-headers",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "Vulkan header files and API registry",
       "Homepage": "https://github.com/KhronosGroup/Vulkan-Headers",
       "License": "Apache-2.0 OR MIT",
@@ -93687,7 +94207,7 @@
     },
     {
       "Name": "vulkan-loader",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "Vulkan Development Tools",
       "Homepage": "https://github.com/KhronosGroup/Vulkan-Loader",
       "License": null,
@@ -93748,6 +94268,7 @@
     {
       "Name": "vulkan-memory-allocator-hpp",
       "Version": "3.0.1.1",
+      "Port-Version": 1,
       "Description": "C++ bindings for VulkanMemoryAllocator (Development branch)",
       "Homepage": "https://github.com/YaaZ/VulkanMemoryAllocator-Hpp",
       "License": "CC0-1.0",
@@ -93770,8 +94291,7 @@
     },
     {
       "Name": "vulkan-sdk-components",
-      "Version": "1.3.275.0",
-      "Port-Version": 1,
+      "Version": "1.3.280.0",
       "Description": "Installs packages which are part of the Vulkan SDK.",
       "License": null,
       "Supports": "!uwp & !xbox",
@@ -93827,7 +94347,7 @@
     },
     {
       "Name": "vulkan-tools",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "Vulkan Development Tools",
       "Homepage": "https://github.com/KhronosGroup/Vulkan-Tools",
       "License": "Apache-2.0",
@@ -93858,8 +94378,7 @@
     },
     {
       "Name": "vulkan-utility-libraries",
-      "Version": "1.3.275.0",
-      "Port-Version": 1,
+      "Version": "1.3.280.0",
       "Description": "Utility libraries for Vulkan developers",
       "Homepage": "https://github.com/KhronosGroup/Vulkan-Utility-Libraries",
       "License": null,
@@ -93888,7 +94407,7 @@
     },
     {
       "Name": "vulkan-validationlayers",
-      "Version": "1.3.275.0",
+      "Version": "1.3.280.0",
       "Description": "Vulkan Validation Layers (VVL)",
       "Homepage": "https://github.com/KhronosGroup/Vulkan-ValidationLayers",
       "License": null,
@@ -94034,7 +94553,7 @@
     },
     {
       "Name": "wangle",
-      "Version": "2024.01.01.00",
+      "Version": "2024.04.15.00",
       "Description": "Wangle is a framework providing a set of common client/server abstractions for building services in a consistent, modular, and composable way.",
       "Homepage": "https://github.com/facebook/wangle",
       "License": "Apache-2.0",
@@ -94919,8 +95438,7 @@
     },
     {
       "Name": "wt",
-      "Version": "4.9.1",
-      "Port-Version": 2,
+      "Version": "4.10.4",
       "Description": "Wt is a C++ library for developing web applications",
       "Homepage": "https://github.com/emweb/wt",
       "License": "GPL-2.0-only",
@@ -96562,8 +97080,7 @@
     },
     {
       "Name": "yoga",
-      "Version": "2.0.1",
-      "Port-Version": 1,
+      "Version": "3.0.2",
       "Description": "Yoga is a cross-platform layout engine which implements Flexbox",
       "Homepage": "https://github.com/facebook/yoga",
       "License": "MIT",
@@ -96591,8 +97108,7 @@
     },
     {
       "Name": "yomm2",
-      "Version": "1.4.0",
-      "Port-Version": 1,
+      "Version": "1.5.0",
       "Description": "YOMM2 is an implementation of open multi-methods.",
       "Homepage": "https://github.com/jll63/yomm2",
       "License": "BSL-1.0",
@@ -97179,7 +97695,8 @@
     },
     {
       "Name": "zlmediakit",
-      "Version": "2023-08-12",
+      "Version": "2024-03-30",
+      "Port-Version": 1,
       "Description": "A high-performance carrier-grade streaming media service framework based on C++11.",
       "Homepage": "https://github.com/ZLMediaKit/ZLMediaKit",
       "License": "MIT",
@@ -97213,23 +97730,14 @@
         "sctp": {
           "description": "Enable SCTP",
           "dependencies": [
-            "usrsctp",
-            {
-              "name": "zlmediakit",
-              "default-features": false,
-              "features": [
-                "webrtc"
-              ]
-            }
+            "usrsctp"
           ]
         },
         "webrtc": {
           "description": "Enable WebRTC",
           "dependencies": [
-            "libsrtp",
             {
-              "name": "zlmediakit",
-              "default-features": false,
+              "name": "libsrtp",
               "features": [
                 "openssl"
               ]
@@ -97384,8 +97892,7 @@
     },
     {
       "Name": "zstd",
-      "Version": "1.5.5",
-      "Port-Version": 2,
+      "Version": "1.5.6",
       "Description": "Zstandard - Fast real-time compression algorithm",
       "Homepage": "https://facebook.github.io/zstd/",
       "License": "BSD-3-Clause OR GPL-2.0-only",
