@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,242 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>halide</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 17.0.1</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Halide is a programming language designed to make it easier to write high-performance image and array processing code on modern machines.</div>
-      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/halide/Halide">https://github.com/halide/Halide</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="halide.html">halide</a>
-            
-             <i>(platform: arm32)</i>
-            
-          </li>
-          <li>
-            <a href="halide.html">halide</a>
-            
-             <i>(platform: arm64)</i>
-            
-          </li>
-          <li>
-            <a href="halide.html">halide</a>
-            
-             <i>(platform: x86 | x64)</i>
-            
-          </li>
-          <li>
-            <a href="halide.html">halide</a>
-            
-             <i>(platform: !x86 &amp; !x64 &amp; !arm)</i>
-            
-          </li>
-          <li>
-            <a href="llvm.html">llvm</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    halide
+                </div>
+                <div class="package-version">
+                    v17.0.1
+                </div>
+            </div>
+            <div class="package-description">
+                Halide is a programming language designed to make it easier to write high-performance image and array processing code on modern machines.
+            </div>
+        </div>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install halide</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port halide</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">17.0.1#0</span>
-          <span class="badge badge-primary">16.0.0#1</span>
-          <span class="badge badge-primary">16.0.0#0</span>
-          <span class="badge badge-primary">15.0.0#1</span>
-          <span class="badge badge-primary">15.0.0#0</span>
-          <span class="badge badge-primary">14.0.0#1</span>
-          <span class="badge badge-primary">14.0.0#0</span>
-          <span class="badge badge-primary">13.0.2#0</span>
-          <span class="badge badge-primary">12.0.1#1</span>
-          <span class="badge badge-primary">12.0.1#0</span>
-          <span class="badge badge-primary">11.0.1#0</span>
-          <span class="badge badge-primary">10.0.0#0</span>
-          <span class="badge badge-primary">master_2020_03_07#0</span>
-          <span class="badge badge-primary">release_2019_08_27-2#0</span>
-          <span class="badge badge-primary">release_2019_08_27-1#0</span>
-          <span class="badge badge-primary">release_2019_08_27#0</span>
-          <span class="badge badge-primary">release_2018_02_15-1#0</span>
-          <span class="badge badge-primary">release_2018_02_15#0</span>
-          <span class="badge badge-primary">release_2017_10_30#0</span>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>target-aarch64 - Include AArch64 target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-aarch64]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-all - Include all targets</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/halide.html">halide</a>
-              [target-aarch64, target-amdgpu, target-arm, target-d3d12compute, target-hexagon, target-metal, target-nvptx, target-opencl, target-opengl-compute, target-powerpc, target-riscv, target-webassembly, target-x86]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-amdgpu - Include AMDGPU target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-amdgpu]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-arm - Include ARM target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-arm]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-d3d12compute - Include Direct3D 12 Compute target</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>target-hexagon - Include Hexagon target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-hexagon]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-metal - Include Metal target</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>target-nvptx - Include NVPTX target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-nvptx]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-opencl - Include OpenCL-C target</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>target-opengl-compute - Include OpenGL Compute target</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>target-powerpc - Include PowerPC target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-powerpc]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-riscv - Include RISCV target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-riscv]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-webassembly - Include WebAssembly target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-webassembly]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>target-x86 - Include X86 target</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/llvm.html">llvm</a>
-              [target-x86]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/halide/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/halide/usage.in" target="_blank">usage.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/halide/vcpkg.json" target="_blank">vcpkg.json</a></li>
-        </ul>
-      </div>
-    </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,177 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>mdl-sdk</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2021.1.2</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          4
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> NVIDIA Material Definition Language SDK</div>
-      <div><span class="detailed-package-item-heading">License:</span> BSD-3-Clause</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/NVIDIA/MDL-SDK">https://github.com/NVIDIA/MDL-SDK</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="boost-algorithm.html">boost-algorithm</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-any.html">boost-any</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-bind.html">boost-bind</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-core.html">boost-core</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-function.html">boost-function</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-functional.html">boost-functional</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-smart-ptr.html">boost-smart-ptr</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-tokenizer.html">boost-tokenizer</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-unordered.html">boost-unordered</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="boost-uuid.html">boost-uuid</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="freeimage.html">freeimage</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="opengl.html">opengl</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install mdl-sdk</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port mdl-sdk</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">2021.1.2#4</span>
-          <span class="badge badge-primary">2021.1.2#3</span>
-          <span class="badge badge-primary">2021.1.2#2</span>
-          <span class="badge badge-primary">2021.1.2#1</span>
-          <span class="badge badge-primary">2021.1.2#0</span>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    mdl-sdk
+                </div>
+                <div class="package-version">
+                    v2021.1.2
+                </div>
+            </div>
+            <div class="package-description">
+                NVIDIA Material Definition Language SDK
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>dds - Build image plugin for DDS</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>freeimage - Build image plugin for various image formats using Freeimage</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/freeimage.html">freeimage</a>
-              
-              
-              
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
             </li>
-          </ul>
-        </div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/001-freeimage-from-vcpkg.patch" target="_blank">001-freeimage-from-vcpkg.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/002-install-rules.patch" target="_blank">002-install-rules.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/003-freeimage-disable-faxg3.patch" target="_blank">003-freeimage-disable-faxg3.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/004-missing-std-includes.patch" target="_blank">004-missing-std-includes.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/005-missing-link-windows-crypt-libraries.patch" target="_blank">005-missing-link-windows-crypt-libraries.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/006-guard-nonexisting-targets.patch" target="_blank">006-guard-nonexisting-targets.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/007-plugin-options.patch" target="_blank">007-plugin-options.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/008-build-static-llvm.patch" target="_blank">008-build-static-llvm.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/009-include-priority-vendored-llvm.patch" target="_blank">009-include-priority-vendored-llvm.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/010-workaround-gcc-bit.patch" target="_blank">010-workaround-gcc-bit.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/011-fix-python.patch" target="_blank">011-fix-python.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/unofficial-mdl-config.cmake.in" target="_blank">unofficial-mdl-config.cmake.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/mdl-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-    </div>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
+        </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

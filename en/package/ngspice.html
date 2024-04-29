@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,88 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>ngspice</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 41</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Ngspice is a mixed-level/mixed-signal electronic circuit simulator. It is a successor of the latest stable release of Berkeley SPICE</div>
-      <div><span class="detailed-package-item-heading">License:</span> CC-BY-SA-4.0</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="http://ngspice.sourceforge.net/">http://ngspice.sourceforge.net/</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="vcpkg-msbuild.html">vcpkg-msbuild</a>
-             <i>(host: true)</i>
-             <i>(platform: windows)</i>
-            
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install ngspice</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port ngspice</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">41#0</span>
-          <span class="badge badge-primary">39#1</span>
-          <span class="badge badge-primary">39#0</span>
-          <span class="badge badge-primary">37#0</span>
-          <span class="badge badge-primary">35#2</span>
-          <span class="badge badge-primary">35#1</span>
-          <span class="badge badge-primary">35#0</span>
-          <span class="badge badge-primary">34#1</span>
-          <span class="badge badge-primary">34#0</span>
-          <span class="badge badge-primary">33#1</span>
-          <span class="badge badge-primary">33#0</span>
-          <span class="badge badge-primary">32#1</span>
-          <span class="badge badge-primary">32#0</span>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    ngspice
+                </div>
+                <div class="package-version">
+                    v41
+                </div>
+            </div>
+            <div class="package-description">
+                Ngspice is a mixed-level/mixed-signal electronic circuit simulator. It is a successor of the latest stable release of Berkeley SPICE
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>codemodels - Adds optional code models for XSPICE, ADMS (verilog integration) and B-&#x2F;E-&#x2F;G- sources.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/Fix-C2065.patch" target="_blank">Fix-C2065.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/remove-64-in-codemodel-name.patch" target="_blank">remove-64-in-codemodel-name.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/remove-post-build.patch" target="_blank">remove-post-build.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/use-winbison-sharedspice.patch" target="_blank">use-winbison-sharedspice.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/use-winbison-vngspice.patch" target="_blank">use-winbison-vngspice.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ngspice/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-    </div>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
+        </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

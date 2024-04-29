@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,132 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>blend2d</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2023-06-16</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          1
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Beta 2D Vector Graphics Powered by a JIT Compiler</div>
-      <div><span class="detailed-package-item-heading">License:</span> Zlib</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/blend2d/blend2d">https://github.com/blend2d/blend2d</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         <a href="https://blend2d.com/doc/index.html">https://blend2d.com/doc/index.html</a>
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    blend2d
+                </div>
+                <div class="package-version">
+                    v2023-06-16
+                </div>
+            </div>
+            <div class="package-description">
+                Beta 2D Vector Graphics Powered by a JIT Compiler
+            </div>
+        </div>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install blend2d</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port blend2d</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">2023-06-16#1</span>
-          <span class="badge badge-primary">2023-06-16#0</span>
-          <span class="badge badge-primary">0.10#0</span>
-          <span class="badge badge-primary">2022-12-31#3</span>
-          <span class="badge badge-primary">2022-12-31#2</span>
-          <span class="badge badge-primary">2022-12-31#1</span>
-          <span class="badge badge-primary">2022-12-31#0</span>
-          <span class="badge badge-primary">2022-05-02#0</span>
-          <span class="badge badge-primary">2022-02-19#0</span>
-          <span class="badge badge-primary">2021-03-17#1</span>
-          <span class="badge badge-primary">2021-03-17#0</span>
-          <span class="badge badge-primary">beta_2021-01-02#0</span>
-          <span class="badge badge-primary">beta_2020-08-24#0</span>
-          <span class="badge badge-primary">beta_2020-06-01#0</span>
-          <span class="badge badge-primary">beta_2020-05-04#0</span>
-          <span class="badge badge-primary">beta_2020-04-19#0</span>
-          <span class="badge badge-primary">beta_2020-04-15#0</span>
-          <span class="badge badge-primary">beta_2020-03-29#0</span>
-          <span class="badge badge-primary">beta_2019-12-27#0</span>
-          <span class="badge badge-primary">beta_2019-10-09#0</span>
-          <span class="badge badge-primary">beta_2019-07-16#0</span>
-          <span class="badge badge-primary">beta_2019-04-30#0</span>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>jit - Default feature. Enables jit pipeline compilation.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/blend2d.html">blend2d</a>
-              
-               (default-features: false)
-               (platform: windows)
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>logging - Default feature. Enables logging.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/blend2d.html">blend2d</a>
-              [jit]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>tls - Default feature. Enables use of thread_local feature. Disable for platforms where thread local storage is expensive or not supported.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/blend2d.html">blend2d</a>
-              
-               (default-features: false)
-               (platform: windows)
-            </li>
-          </ul>
-        </div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/blend2d/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/blend2d/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/blend2d/usage_static.txt" target="_blank">usage_static.txt</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/blend2d/vcpkg.json" target="_blank">vcpkg.json</a></li>
-        </ul>
-      </div>
-    </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

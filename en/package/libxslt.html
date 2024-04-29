@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,130 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>libxslt</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 1.1.37</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          3
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Libxslt is a XSLT library implemented in C for XSLT 1.0 and most of EXSLT</div>
-      <div><span class="detailed-package-item-heading">License:</span> </div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/GNOME/libxslt">https://github.com/GNOME/libxslt</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="libxml2.html">libxml2</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install libxslt</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port libxslt</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">1.1.37#3</span>
-          <span class="badge badge-primary">1.1.37#2</span>
-          <span class="badge badge-primary">1.1.37#1</span>
-          <span class="badge badge-primary">1.1.37#0</span>
-          <span class="badge badge-primary">1.1.35#2</span>
-          <span class="badge badge-primary">1.1.35#1</span>
-          <span class="badge badge-primary">1.1.35#0</span>
-          <span class="badge badge-primary">1.1.34#5</span>
-          <span class="badge badge-primary">1.1.34#4</span>
-          <span class="badge badge-primary">1.1.34#3</span>
-          <span class="badge badge-primary">1.1.34#2</span>
-          <span class="badge badge-primary">1.1.34#1</span>
-          <span class="badge badge-primary">1.1.34#0</span>
-          <span class="badge badge-primary">1.1.33#9</span>
-          <span class="badge badge-primary">1.1.33#8</span>
-          <span class="badge badge-primary">1.1.33-7#2</span>
-          <span class="badge badge-primary">1.1.33-7#1</span>
-          <span class="badge badge-primary">1.1.33-7#0</span>
-          <span class="badge badge-primary">1.1.33-6#0</span>
-          <span class="badge badge-primary">1.1.33-5#0</span>
-          <span class="badge badge-primary">1.1.33-4#0</span>
-          <span class="badge badge-primary">1.1.33-2#0</span>
-          <span class="badge badge-primary">1.1.33-1#0</span>
-          <span class="badge badge-primary">1.1.33#0</span>
-          <span class="badge badge-primary">1.1.29#0</span>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    libxslt
+                </div>
+                <div class="package-version">
+                    v1.1.37
+                </div>
+            </div>
+            <div class="package-description">
+                Libxslt is a XSLT library implemented in C for XSLT 1.0 and most of EXSLT
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>crypto - Build with crypto support</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/libgcrypt.html">libgcrypt</a>
-              
-              
-              
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
             </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>default-features - default features for the current platform</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>plugins - (deprecated)</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>python - Builds with python support</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/fix-gcrypt-deps.patch" target="_blank">fix-gcrypt-deps.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/libexslt-pkgconfig.patch" target="_blank">libexslt-pkgconfig.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/msvc-no-suffix.patch" target="_blank">msvc-no-suffix.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/python3.patch" target="_blank">python3.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/skip-install-docs.patch" target="_blank">skip-install-docs.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/libxslt/vcpkg.json" target="_blank">vcpkg.json</a></li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-    </div>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
+        </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

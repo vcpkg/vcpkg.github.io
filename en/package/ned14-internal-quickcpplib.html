@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,119 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>ned14-internal-quickcpplib</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2023-11-22</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> NOT FOR EXTERNAL CONSUMPTION, a set of internal scripts used by ned14's libraries.</div>
-      <div><span class="detailed-package-item-heading">License:</span> Apache-2.0 OR BSL-1.0</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/ned14/quickcpplib">https://github.com/ned14/quickcpplib</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    ned14-internal-quickcpplib
+                </div>
+                <div class="package-version">
+                    v2023-11-22
+                </div>
+            </div>
+            <div class="package-description">
+                NOT FOR EXTERNAL CONSUMPTION, a set of internal scripts used by ned14's libraries.
+            </div>
+        </div>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install ned14-internal-quickcpplib</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port ned14-internal-quickcpplib</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">2023-11-22#0</span>
-          <span class="badge badge-primary">2023-11-06#0</span>
-          <span class="badge badge-primary">2023-03-13#0</span>
-          <span class="badge badge-primary">2023-01-27#0</span>
-          <span class="badge badge-primary">2022-09-08#1</span>
-          <span class="badge badge-primary">2022-09-08#0</span>
-          <span class="badge badge-primary">2022-07-04#0</span>
-          <span class="badge badge-primary">2022-06-17#0</span>
-          <span class="badge badge-primary">0.0.0-cad832c8#1</span>
-          <span class="badge badge-primary">0.0.0-cad832c8#0</span>
-          <span class="badge badge-primary">0.0.0-8089a948#0</span>
-          <span class="badge badge-primary">0.0.0-e691a6dc#0</span>
-          <span class="badge badge-primary">0.0.0-7cb75d4e#1</span>
-          <span class="badge badge-primary">0.0.0-7cb75d4e#0</span>
-          <span class="badge badge-primary">0.0.0-24d92c71#0</span>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>polyfill-cxx17 - Polyfill std::byte with byte-lite</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/byte-lite.html">byte-lite</a>
-              
-              
-              
-            </li>
-            <li><a href="/en/package/ned14-internal-quickcpplib.html">ned14-internal-quickcpplib</a>
-              [polyfill-cxx20]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>polyfill-cxx20 - Polyfill std::span with span-lite</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/span-lite.html">span-lite</a>
-              
-              
-              
-            </li>
-          </ul>
-        </div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ned14-internal-quickcpplib/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ned14-internal-quickcpplib/quicklib-depheaders.patch" target="_blank">quicklib-depheaders.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ned14-internal-quickcpplib/sha_manifest.cmake" target="_blank">sha_manifest.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ned14-internal-quickcpplib/usage" target="_blank">usage</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ned14-internal-quickcpplib/vcpkg.json" target="_blank">vcpkg.json</a></li>
-        </ul>
-      </div>
-    </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

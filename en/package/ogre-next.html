@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,151 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>ogre-next</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2.3.3</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          2
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Ogre Next - scene-oriented, flexible 3D engine written in C++</div>
-      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/OGRECave/ogre-next">https://github.com/OGRECave/ogre-next</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="freeimage.html">freeimage</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="freetype.html">freetype</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="rapidjson.html">rapidjson</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="tinyxml.html">tinyxml</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="zlib.html">zlib</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="zziplib.html">zziplib</a>
-            
-            
-            
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install ogre-next</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port ogre-next</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">2.3.3#2</span>
-          <span class="badge badge-primary">2.3.3#1</span>
-          <span class="badge badge-primary">2.3.3#0</span>
-          <span class="badge badge-primary">2.3.2#0</span>
-          <span class="badge badge-primary">2.3.1#4</span>
-          <span class="badge badge-primary">2.3.1#3</span>
-          <span class="badge badge-primary">2.3.1#2</span>
-          <span class="badge badge-primary">2.3.1#1</span>
-          <span class="badge badge-primary">2.3.1#0</span>
-          <span class="badge badge-primary">2.3.0#0</span>
-          <span class="badge badge-primary">2019-10-20#2</span>
-          <span class="badge badge-primary">2019-10-20-1#0</span>
-          <span class="badge badge-primary">2019-10-20#0</span>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    ogre-next
+                </div>
+                <div class="package-version">
+                    v2.3.3
+                </div>
+            </div>
+            <div class="package-description">
+                Ogre Next - scene-oriented, flexible 3D engine written in C++
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>d3d11 - Direct3D 11 render system</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>gl3plus - OpenGL 3+ render system</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>metal - Metal render system</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>planar-reflections - Component to use planar reflections, can be used by both HlmsPbs and HlmsUnlit</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>vulkan - Vulkan render system</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glslang.html">glslang</a>
-              
-              
-              
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
             </li>
-            <li><a href="/en/package/vulkan.html">vulkan</a>
-              
-              
-              
+            <li class="versions-tab">
+                Versions
             </li>
-          </ul>
-        </div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ogre-next/avoid-name-clashes.patch" target="_blank">avoid-name-clashes.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ogre-next/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ogre-next/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ogre-next/toolchain_fixes.patch" target="_blank">toolchain_fixes.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/ogre-next/vcpkg.json" target="_blank">vcpkg.json</a></li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-    </div>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
+        </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

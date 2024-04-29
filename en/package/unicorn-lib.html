@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,126 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>unicorn-lib</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 2022-01-24</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          2
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Unicode library for C++ by Ross Smith</div>
-      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/CaptainCrowbar/unicorn-lib">https://github.com/CaptainCrowbar/unicorn-lib</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="libiconv.html">libiconv</a>
-            
-             <i>(platform: !windows)</i>
-            
-          </li>
-          <li>
-            <a href="pcre2.html">pcre2</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="zlib.html">zlib</a>
-            
-            
-            
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install unicorn-lib</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port unicorn-lib</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">2022-01-24#2</span>
-          <span class="badge badge-primary">2022-01-24#1</span>
-          <span class="badge badge-primary">2022-01-24#0</span>
-          <span class="badge badge-primary">2020-03-02#2</span>
-          <span class="badge badge-primary">2020-03-02#1</span>
-          <span class="badge badge-primary">2020-03-02#0</span>
-          <span class="badge badge-primary">2019-07-11#0</span>
-          <span class="badge badge-primary">2019-05-07-1#0</span>
-          <span class="badge badge-primary">2019-05-07#0</span>
-          <span class="badge badge-primary">2019-04-19#0</span>
-          <span class="badge badge-primary">2019-03-29#0</span>
-          <span class="badge badge-primary">2019-01-30#0</span>
-          <span class="badge badge-primary">2019-01-09#0</span>
-          <span class="badge badge-primary">2018-12-14#0</span>
-          <span class="badge badge-primary">2018-10-25#0</span>
-          <span class="badge badge-primary">2018-10-11#0</span>
-          <span class="badge badge-primary">2018-09-18#0</span>
-          <span class="badge badge-primary">2018-08-03#0</span>
-          <span class="badge badge-primary">2018-07-30#0</span>
-          <span class="badge badge-primary">2018-07-08#0</span>
-          <span class="badge badge-primary">2018-07-03#0</span>
-          <span class="badge badge-primary">2018-07-01#0</span>
-          <span class="badge badge-primary">2018-06-15-1#0</span>
-          <span class="badge badge-primary">2018-06-15#0</span>
-          <span class="badge badge-primary">2018-05-17#0</span>
-          <span class="badge badge-primary">2018-05-01#0</span>
-          <span class="badge badge-primary">2018-04-09#0</span>
-          <span class="badge badge-primary">2018-03-13#0</span>
-          <span class="badge badge-primary">2018-02-25#0</span>
-          <span class="badge badge-primary">commit-3ffa7fe69a1d0c37fb52a4af61380c5fd84fa5aa#0</span>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    unicorn-lib
+                </div>
+                <div class="package-version">
+                    v2022-01-24
+                </div>
+            </div>
+            <div class="package-description">
+                Unicode library for C++ by Ross Smith
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div>No Features</div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/unicorn-lib/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/unicorn-lib/fix-missing-headers.patch" target="_blank">fix-missing-headers.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/unicorn-lib/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/unicorn-lib/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-    </div>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
+        </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

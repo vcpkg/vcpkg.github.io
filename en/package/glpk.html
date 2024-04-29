@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,119 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>glpk</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 5.0</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          3
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> The GNU Linear Programming Kit (GLPK) solves large-scale linear programming (LP), mixed integer programming (MIP), and related problems.,GLPK includes the following main components:,Primal and dual simplex methods,Primal-dual interior-point method,Branch-and-cut method,Translator for GNU MathProg,Application program interface (API),Stand-alone LP/MIP solver </div>
-      <div><span class="detailed-package-item-heading">License:</span> GPL-3.0-or-later</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://www.gnu.org/software/glpk/">https://www.gnu.org/software/glpk/</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         <a href="https://www.gnu.org/software/glpk/#documentation">https://www.gnu.org/software/glpk/#documentation</a>
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>No Dependencies</li>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    glpk
+                </div>
+                <div class="package-version">
+                    v5.0
+                </div>
+            </div>
+            <div class="package-description">
+                The GNU Linear Programming Kit (GLPK) solves large-scale linear programming (LP), mixed integer programming (MIP), and related problems.,GLPK includes the following main components:,Primal and dual simplex methods,Primal-dual interior-point method,Branch-and-cut method,Translator for GNU MathProg,Application program interface (API),Stand-alone LP/MIP solver 
+            </div>
+        </div>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install glpk</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port glpk</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">5.0#3</span>
-          <span class="badge badge-primary">5.0#2</span>
-          <span class="badge badge-primary">5.0#1</span>
-          <span class="badge badge-primary">5.0#0</span>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>dl - Enable shared library support</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/dlfcn-win32.html">dlfcn-win32</a>
-              
-              
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gmp - Use the GNU Multiple Precision Arithmetic Library</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/gmp.html">gmp</a>
-              
-              
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>mysql - Sharing between MathProg objects and MySQL databases (libmysql)</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glpk.html">glpk</a>
-              [dl]
-              
-              
-            </li>
-            <li><a href="/en/package/libmysql.html">libmysql</a>
-              
-              
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>odbc - Sharing between MathProg objects and databases through ODBC (libiodbc)</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glpk.html">glpk</a>
-              [dl]
-              
-              
-            </li>
-          </ul>
-        </div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glpk/configure.ac.patch" target="_blank">configure.ac.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glpk/glpk.pc.in" target="_blank">glpk.pc.in</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glpk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glpk/vcpkg.json" target="_blank">vcpkg.json</a></li>
-        </ul>
-      </div>
-    </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,393 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>glad</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 0.1.36</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> Multi-Language Vulkan/GL/GLES/EGL/GLX/WGL Loader-Generator based on the official specs.</div>
-      <div><span class="detailed-package-item-heading">License:</span> MIT</div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://github.com/Dav1dde/glad">https://github.com/Dav1dde/glad</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         <a href="https://github.com/Dav1dde/glad/wiki">https://github.com/Dav1dde/glad/wiki</a>
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-linux, x64-osx, x64-uwp, x64-windows, x64-windows-static, x86-windows</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="egl-registry.html">egl-registry</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="opengl-registry.html">opengl-registry</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    glad
+                </div>
+                <div class="package-version">
+                    v0.1.36
+                </div>
+            </div>
+            <div class="package-description">
+                Multi-Language Vulkan/GL/GLES/EGL/GLX/WGL Loader-Generator based on the official specs.
+            </div>
+        </div>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install glad</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port glad</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">0.1.36#0</span>
-          <span class="badge badge-primary">0.1.34#3</span>
-          <span class="badge badge-primary">0.1.34#1</span>
-          <span class="badge badge-primary">0.1.34#0</span>
-          <span class="badge badge-primary">0.1.33-1#0</span>
-          <span class="badge badge-primary">0.1.33#0</span>
-          <span class="badge badge-primary">0.1.31#0</span>
-          <span class="badge badge-primary">0.1.30#0</span>
-          <span class="badge badge-primary">0.1.29#0</span>
-          <span class="badge badge-primary">0.1.28-3#0</span>
-          <span class="badge badge-primary">0.1.28-2#0</span>
-          <span class="badge badge-primary">0.1.28#0</span>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div class="feature-name"><span class="caret">></span>egl - Use &#x60;egl&#x60; spec instead of &#x60;gl&#x60;.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>extensions - Enables all extensions.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>gl-api-10 - Imports extensions from OpenGL API specification version 1.0.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>gl-api-11 - Imports extensions from OpenGL API specification version 1.1.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-10]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-12 - Imports extensions from OpenGL API specification version 1.2.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-11]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-13 - Imports extensions from OpenGL API specification version 1.3.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-12]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-14 - Imports extensions from OpenGL API specification version 1.4.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-13]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-15 - Imports extensions from OpenGL API specification version 1.5.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-14]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-20 - Imports extensions from OpenGL API specification version 2.0.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-15]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-21 - Imports extensions from OpenGL API specification version 2.1.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-20]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-30 - Imports extensions from OpenGL API specification version 3.0.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-21]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-31 - Imports extensions from OpenGL API specification version 3.1.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-30]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-32 - Imports extensions from OpenGL API specification version 3.2.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-31]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-33 - Imports extensions from OpenGL API specification version 3.3.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-32]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-40 - Imports extensions from OpenGL API specification version 4.0.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-33]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-41 - Imports extensions from OpenGL API specification version 4.1.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-40]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-42 - Imports extensions from OpenGL API specification version 4.2.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-41]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-43 - Imports extensions from OpenGL API specification version 4.3.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-42]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-44 - Imports extensions from OpenGL API specification version 4.4.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-43]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-45 - Imports extensions from OpenGL API specification version 4.5.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-44]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-46 - Imports extensions from OpenGL API specification version 4.6.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-45]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gl-api-latest - Imports extensions from latest OpenGL API specification version.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gl-api-46]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gles1-api-10 - Imports extensions from OpenGL ES 1 specification version 1.0.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>gles1-api-latest - Imports extensions from latest OpenGL ES 1 specification.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gles1-api-10]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gles2-api-20 - Imports extensions from OpenGL ES 2 specification version 2.0.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>gles2-api-30 - Imports extensions from OpenGL ES 2 specification version 3.0.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gles2-api-20]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gles2-api-31 - Imports extensions from OpenGL ES 2 specification version 3.1.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gles2-api-30]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gles2-api-32 - Imports extensions from OpenGL ES 2 specification version 3.2.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gles2-api-31]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>gles2-api-latest - Imports extensions from latest OpenGL ES 2 specification.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [gles2-api-32]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>glsc2-api-20 - Imports extensions from OpenGL SC API specification version 2.0.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>glsc2-api-latest - Imports extensions from latest OpenGL SC API specification.</div>
-        <div class="feature-dependencies">
-        <div class="dependency-header">Dependencies:</div>
-          <ul>
-            <li><a href="/en/package/glad.html">glad</a>
-              [glsc2-api-20]
-               (default-features: false)
-              
-            </li>
-          </ul>
-        </div>
-        <div class="feature-name"><span class="caret">></span>glx - Use &#x60;glx&#x60; spec instead of &#x60;gl&#x60;. Only available with the X Window System.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>loader - Generate loader logic.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-        <div class="feature-name"><span class="caret">></span>wgl - Use &#x60;wgl&#x60; spec instead of &#x60;gl&#x60;. Only available for Windows and UWP platforms.</div>
-        <div class="feature-dependencies no-dependencies">No Dependencies</div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glad/encoding.patch" target="_blank">encoding.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glad/find_python.patch" target="_blank">find_python.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glad/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/glad/vcpkg.json" target="_blank">vcpkg.json</a></li>
-        </ul>
-      </div>
-    </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">

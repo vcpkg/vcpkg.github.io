@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- additional stylesheets and fonts -->
-  <link href="/css/packages.css" rel="stylesheet" />
+  <link href="/css/pretty-package.css" rel="stylesheet" />
   <link href="/css/githubBtn.css" rel="stylesheet" />
 
   <!-- favicons -->
@@ -186,113 +186,39 @@
 <div id="banner"></div>
 <body>
   <main class="package-body" id="main">
-    <div class="main-content">
-      <h1>clapack</h1>
-      <div> <span class="detailed-package-item-heading">Version:</span> 3.2.1</div>
-      <div> 
-        <span class="detailed-package-item-heading">Port-Version:</span>
-          22
-      </div>
-      <div><span class="detailed-package-item-heading">Description:</span> CLAPACK (f2c'ed version of LAPACK)</div>
-      <div><span class="detailed-package-item-heading">License:</span> </div>
-      <div><span class="detailed-package-item-heading">Last Updated:</span> 2024-02-23</div>
-      <div>
-        <span class="detailed-package-item-heading">Homepage:</span>
-         <a href="https://www.netlib.org/clapack">https://www.netlib.org/clapack</a>
-      </div>
-      <div>
-        <span class="detailed-package-item-heading">Documentation:</span>
-         N/A
-      </div>
-      <div><span class="detailed-package-item-heading">Supported Platforms/Architectures:</span> arm-uwp, arm64-windows, x64-uwp</div>      
-      <br />
-      <br />
-      <div>
-        <h2>Dependencies</h2>
-        <ul>
-          <li>
-            <a href="blas.html">blas</a>
-            
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake.html">vcpkg-cmake</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-          <li>
-            <a href="vcpkg-cmake-config.html">vcpkg-cmake-config</a>
-             <i>(host: true)</i>
-            
-            
-          </li>
-        </ul>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Installation Instructions</h2>
-        <h3>Classic Mode:</h3>
-        <pre> vcpkg install clapack</pre>
-        <h3>Manifest Mode:</h3>
-        <pre> vcpkg add port clapack</pre>
-      </div>
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Available Versions</h2>
-        <div class="version-badges">
-          <span class="badge badge-primary">3.2.1#22</span>
-          <span class="badge badge-primary">3.2.1#21</span>
-          <span class="badge badge-primary">3.2.1#20</span>
-          <span class="badge badge-primary">3.2.1#19</span>
-          <span class="badge badge-primary">3.2.1#18</span>
-          <span class="badge badge-primary">3.2.1#17</span>
-          <span class="badge badge-primary">3.2.1#16</span>
-          <span class="badge badge-primary">3.2.1#15</span>
-          <span class="badge badge-primary">3.2.1#14</span>
-          <span class="badge badge-primary">3.2.1#13</span>
-          <span class="badge badge-primary">3.2.1-13#0</span>
-          <span class="badge badge-primary">3.2.1-12#0</span>
-          <span class="badge badge-primary">3.2.1-11#0</span>
-          <span class="badge badge-primary">3.2.1-10#0</span>
-          <span class="badge badge-primary">3.2.1-9#0</span>
-          <span class="badge badge-primary">3.2.1-6#0</span>
-          <span class="badge badge-primary">3.2.1-4#0</span>
-          <span class="badge badge-primary">3.2.1-3#0</span>
-          <span class="badge badge-primary">3.2.1-2#0</span>
-          <span class="badge badge-primary">3.2.1-1#0</span>
-          <span class="badge badge-primary">3.2.1#0</span>
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    clapack
+                </div>
+                <div class="package-version">
+                    v3.2.1
+                </div>
+            </div>
+            <div class="package-description">
+                CLAPACK (f2c'ed version of LAPACK)
+            </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <h2>Features</h2>
-      <div>
-        <div>No Features</div>
-      </div>           
-      <br />
-      <br />
-      <div class="text-heading">
-        <h2>Port Contents</h2>
-        <ul>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/FindLAPACK.cmake" target="_blank">FindLAPACK.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/arith_linux64.h" target="_blank">arith_linux64.h</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/arith_osx.h" target="_blank">arith_osx.h</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/arith_win32.h" target="_blank">arith_win32.h</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/arith_win64.h" target="_blank">arith_win64.h</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/fix-ConfigFile.patch" target="_blank">fix-ConfigFile.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/fix-install.patch" target="_blank">fix-install.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/portfile.cmake" target="_blank">portfile.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/remove_internal_blas.patch" target="_blank">remove_internal_blas.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/support-uwp.patch" target="_blank">support-uwp.patch</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-          <li><a href="https://github.com/microsoft/vcpkg/blob/a34c873a9717a888f58dc05268dea15592c2f0ff/ports/clapack/vcpkg.json" target="_blank">vcpkg.json</a></li>
+        <ul class="tab-container">
+            <li class="dependencies-feature-tab">
+                Dependencies & Features
+            </li>
+            <li class="versions-tab">
+                Versions
+            </li>
+            <li class="port-content-tab">
+                Port Content
+            </li>
         </ul>
-      </div>
-    </div>
+        <div class="deps-and-features-container">
+            <div class="deps-and-features">
+                Dependencies and Features
+            </div>
+            <div class="main-sidebar">
+                Metadata
+            </div>
+        </div>
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
