@@ -1,5 +1,5 @@
 .package-page-wrapper{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin:0 auto;
     width: 80%;
 }
@@ -39,6 +39,7 @@
    padding-inline: 5px;
 }
 
+
 .versions-tab{
    border: #000;
    padding-inline: 5px;
@@ -49,16 +50,27 @@
    padding-inline: 5px;
 }
 
-li {
-list-style-type: none;
-background-color: #eee;
-padding-block: 5px;
-}
-
 ul.tab-container {
     display: flex;
     padding-inline: 0;
     margin-inline-start: 0px;
+    margin-block-start: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.tab {
+    list-style-type: none;
+    padding-block: 5px;
+    padding-inline: 15px;
+    border-radius: 5px 5px 0 0;
+}
+.tab:hover{
+    border-bottom: 2px solid #000;
+    background-color: #f0f0f0;
+}
+
+.active-tab{
+    background-color: #ddd;
 }
 
 .deps-and-features-container{
@@ -66,11 +78,40 @@ ul.tab-container {
 }
 
 .deps-and-features{
-    background-color: grey;
+    background-color: #f1f1f1;
     flex: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-sidebar{
-    background-color: darkgray;
+    /* background-color: darkgray; */
     flex: 1;
+    padding-inline-start: 15px;
+}
+
+.sidebar-header{
+    font-size: 20px;
+    font-weight: 800;
+    padding-block-end: 5px;
+}
+
+.sidebar-description{
+    font-size: 10px;
+}
+
+.sidebar-logo{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-inline-end: 5px;
+}
+
+.support-arch{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.sidebar-section{
+    padding-block-end: 5px;
 }

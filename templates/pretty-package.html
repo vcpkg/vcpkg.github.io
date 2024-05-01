@@ -24,7 +24,7 @@
                     {{{package.Name}}}
                 </div>
                 <div class="package-version">
-                    v{{{package.Version}}}
+                    v{{{package.Version}}}#{{#package.PortVersion}}{{package.PortVersion}}{{/package.PortVersion}}
                 </div>
             </div>
             <div class="package-description">
@@ -32,22 +32,59 @@
             </div>
         </div>
         <ul class="tab-container">
-            <li class="dependencies-feature-tab">
+            <li class="dependencies-feature-tab tab active-tab">
                 Dependencies & Features
             </li>
-            <li class="versions-tab">
+            <li class="versions-tab tab">
                 Versions
             </li>
-            <li class="port-content-tab">
+            <li class="port-content-tab tab">
                 Port Content
             </li>
         </ul>
         <div class="deps-and-features-container">
             <div class="deps-and-features">
-                Dependencies and Features
             </div>
             <div class="main-sidebar">
-                Metadata
+                <div class="sidebar-header">Metadata</div>
+                <div class="sidebar-section">
+                    <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> {{{package.License}}}{{^package.License}}null{{/package.License}}</div>
+                    <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:"> {{{package.LastUpdated}}}{{^package.LastUpdated}}Unknown{{/package.LastUpdated}}</div>
+                </div>
+                <div class="sidebar-header">Supports</div>
+                <div class="sidebar-description">This package supports the following triplets:</div>
+                <div><pre class="support-arch">{{{package.supportedArchitectures}}}</pre></div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header">Documentation</div>
+                    <div>
+                        <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
+                        {{#package.Documentation}}
+                        <a href="{{{package.Documentation}}}">{{{package.Documentation}}}</a>
+                        {{/package.Documentation}}
+                        {{^package.Documentation}}
+                        Unavailable
+                        {{/package.Documentation}}
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header">Homepage</div>
+                    <div>
+                        <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Documentation:">
+                        {{#package.Homepage}}
+                        <a href="{{{package.Homepage}}}">{{{package.Homepage}}}</a>
+                        {{/package.Homepage}}
+                        {{^package.Homepage}}
+                        Unavailable
+                        {{/package.Homepage}}
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-header">Install</div>
+                    <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
+                    <pre> vcpkg install {{{package.Name}}}</pre>
+                    <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
+                    <pre> vcpkg add port {{{package.Name}}}</pre>
+                </div>
             </div>
         </div>
     </div>
