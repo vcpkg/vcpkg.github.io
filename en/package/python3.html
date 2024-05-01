@@ -201,8 +201,11 @@
             </div>
         </div>
         <ul class="tab-container">
-            <li class="dependencies-feature-tab tab active-tab">
-                Dependencies & Features
+            <li class="dependencies-tab tab active-tab">
+                Dependencies
+            </li>
+            <li class="features-tab tab">
+                Features
             </li>
             <li class="versions-tab tab">
                 Versions
@@ -211,10 +214,86 @@
                 Port Content
             </li>
         </ul>
-        <div class="deps-and-features-container">
-            <div class="deps-and-features">
+        <div class="active-container">
+            <div class="active-section">
+                <div class="active-header">Dependencies</div>
+                <div class="card-container">
+                    <div class="dependency-card">
+                      <a href="bzip2.html">bzip2</a>
+                      
+                       <i>(platform: !(windows &amp; static))</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="expat.html">expat</a>
+                      
+                      
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="gettext.html">gettext</a>
+                      
+                       <i>(platform: osx)</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="libffi.html">libffi</a>
+                      
+                       <i>(platform: !(windows &amp; static))</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="libiconv.html">libiconv</a>
+                      
+                       <i>(platform: osx)</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="liblzma.html">liblzma</a>
+                      
+                       <i>(platform: !(windows &amp; static))</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="libuuid.html">libuuid</a>
+                      
+                       <i>(platform: !osx &amp; !windows)</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="openssl.html">openssl</a>
+                      
+                       <i>(platform: !(windows &amp; static))</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="python3.html">python3</a>
+                       <i>(host: true)</i>
+                      
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="sqlite3.html">sqlite3</a>
+                      
+                       <i>(platform: !(windows &amp; static))</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="vcpkg-msbuild.html">vcpkg-msbuild</a>
+                       <i>(host: true)</i>
+                       <i>(platform: windows)</i>
+                      
+                    </div>
+                    <div class="dependency-card">
+                      <a href="zlib.html">zlib</a>
+                      
+                      
+                      
+                    </div>
+                </div>
+                <button id="expandButton">Expand for more</button>
             </div>
-            <div class="main-sidebar">
+            <div class="sidebar-container">
                 <div class="sidebar-header">Metadata</div>
                 <div class="sidebar-section">
                     <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Python-2.0</div>
@@ -333,5 +412,6 @@
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>
 </div>
+  <script src="/dist/pretty-package.js"></script>
 </body>
 </html>
