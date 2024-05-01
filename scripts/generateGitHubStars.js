@@ -10,6 +10,9 @@ async function getGitHubStars(octokit, url) {
         const githubUrl = 'https://github.com/';
         const regex = /^(?<owner>[a-zA-Z\d][a-zA-Z\d\.\-\_]+)\/(?<repo>[a-zA-Z\d][a-zA-Z\d\.\-\_]+).*$/;
 
+        // Remove .git extension from the URL if present
+        url = url.replace(/\.git$/, '');
+
         if (!url.startsWith(githubUrl)) return 0;
 
         const [_, owner, repo] = regex.exec(url.substr(githubUrl.length)) ?? [];
