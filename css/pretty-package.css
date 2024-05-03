@@ -181,6 +181,50 @@ ul.tab-container {
     display: none;
 }
 
+.feature-card{
+    border: 1px solid #00000020;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    padding-inline-start: 5px;
+    padding-inline-end: 15px;
+    margin-block-end: 10px;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+}
+
+.feature-card .section-one{
+    flex: 1;
+    font-size: 18px;
+    padding-block-start: 15px;
+    padding-inline-start: 15px;
+
+    .feature-name{
+        font-weight: 700;
+        color: #000;
+        font-size: 19px;
+    }
+
+    .feature-description{
+        color: grey;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+}
+
+.feature-card .section-two{
+    flex: 2;
+
+    .dependency-title{
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .no-dependencies{
+        text-align: center;
+    }
+}
+
+
 .card-container:target #expandButton,
 .card-container:target .dependency-card{
     display: block;

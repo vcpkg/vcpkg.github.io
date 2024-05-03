@@ -77,6 +77,36 @@
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
+                <div class="card-container">
+                    {{#features}}
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">{{name}}</div>
+                            <div class="feature-description">{{description}}</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            {{#hasDependencies}}
+                            <ul>
+                                {{#dependencies}}
+                                <li><a href="/en/package/{{name}}.html">{{name}}</a>
+                                {{#depFeatures}}{{#first}}[{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}{{/depFeatures}}
+                                {{#noDefaultFeatures}} (default-features: false){{/noDefaultFeatures}}
+                                {{#platform}} (platform: {{.}}){{/platform}}
+                                </li>
+                                {{/dependencies}}
+                            </ul>
+                            {{/hasDependencies}}
+                            {{^hasDependencies}}
+                            <div class="no-dependencies">None</div>
+                            {{/hasDependencies}}
+                        </div>
+                    </div>
+                    {{/features}}
+                    {{^features}}
+                    <div>No Features</div>
+                    {{/features}}
+                </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>

@@ -295,6 +295,742 @@
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
+                <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">bolt</div>
+                            <div class="feature-description">BOLT is a post-link optimizer developed to speed up large applications.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">clang</div>
+                            <div class="feature-description">Include C Language Family Front-end.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">clang-tools-extra</div>
+                            <div class="feature-description">Include Clang tools.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">compiler-rt</div>
+                            <div class="feature-description">Include compiler&#39;s runtime libraries.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">default-targets</div>
+                            <div class="feature-description">Build with platform-specific default targets.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [target-aarch64]
+                                 (default-features: false)
+                                 (platform: arm64)
+                                </li>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [target-x86]
+                                 (default-features: false)
+                                 (platform: x86 | x64)
+                                </li>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [target-arm]
+                                 (default-features: false)
+                                 (platform: arm &amp; !arm64)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-abi-breaking-checks</div>
+                            <div class="feature-description">Build LLVM with LLVM_ABI_BREAKING_CHECKS&#x3D;FORCE_ON.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-assertions</div>
+                            <div class="feature-description">Build LLVM with assertions.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-bindings</div>
+                            <div class="feature-description">Build bindings.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-eh</div>
+                            <div class="feature-description">Build LLVM with exception handler.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [enable-rtti]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-ffi</div>
+                            <div class="feature-description">Build LLVM with FFI.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libffi.html">libffi</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-ios</div>
+                            <div class="feature-description">Build compiler-rt for iOS SDK.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [target-arm]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-libxml2</div>
+                            <div class="feature-description">Build with LibXml2.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libxml2.html">libxml2</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-mlir-python-bindings</div>
+                            <div class="feature-description">Build MLIR Python bindings.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [mlir]
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/pybind11.html">pybind11</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/python3.html">python3</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-rtti</div>
+                            <div class="feature-description">Build LLVM with run-time type information.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-terminfo</div>
+                            <div class="feature-description">Use terminfo database if available.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-zlib</div>
+                            <div class="feature-description">Build with ZLib.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/zlib.html">zlib</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-zstd</div>
+                            <div class="feature-description">Build with zstd.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/zstd.html">zstd</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">flang</div>
+                            <div class="feature-description">Include Fortran front end.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang, mlir, tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libc</div>
+                            <div class="feature-description">Include libc library.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang, tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libclc</div>
+                            <div class="feature-description">Include OpenCL library.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libcxx</div>
+                            <div class="feature-description">Include libcxx library.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang, libcxxabi, tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libcxxabi</div>
+                            <div class="feature-description">Include libcxxabi library.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang, libcxx, tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libunwind</div>
+                            <div class="feature-description">Include libunwind library.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lld</div>
+                            <div class="feature-description">Include LLVM linker.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lldb</div>
+                            <div class="feature-description">Include LLVM debugger.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang, enable-terminfo, tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">mlir</div>
+                            <div class="feature-description">Include MLIR (Multi-Level IR Compiler Framework) project.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools, utils]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openmp</div>
+                            <div class="feature-description">Include LLVM OpenMP libraries.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [clang, utils]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">polly</div>
+                            <div class="feature-description">Include Polly (Polyhedral optimizations for LLVM) project.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools, utils]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pstl</div>
+                            <div class="feature-description">Include pstl (Parallel STL) library.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [tools]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-aarch64</div>
+                            <div class="feature-description">Build with AArch64 backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-all</div>
+                            <div class="feature-description">Build with all backends.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/llvm.html">llvm</a>
+                                [target-aarch64, target-amdgpu, target-arc, target-arm, target-avr, target-bpf, target-csky, target-directx, target-hexagon, target-lanai, target-loongarch, target-m68k, target-mips, target-msp430, target-nvptx, target-powerpc, target-riscv, target-sparc, target-spirv, target-systemz, target-ve, target-webassembly, target-x86, target-xcore, target-xtensa]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-amdgpu</div>
+                            <div class="feature-description">Build with AMDGPU backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-arc</div>
+                            <div class="feature-description">Build with ARC backend (experimental).</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-arm</div>
+                            <div class="feature-description">Build with ARM backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-avr</div>
+                            <div class="feature-description">Build with AVR backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-bpf</div>
+                            <div class="feature-description">Build with BPF backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-csky</div>
+                            <div class="feature-description">Build with CSKY backend (experimental).</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-directx</div>
+                            <div class="feature-description">Build with DirectX backend (experimental).</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-hexagon</div>
+                            <div class="feature-description">Build with Hexagon backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-lanai</div>
+                            <div class="feature-description">Build with Lanai backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-loongarch</div>
+                            <div class="feature-description">Build with LoongArch backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-m68k</div>
+                            <div class="feature-description">Build with M68k backend (experimental).</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-mips</div>
+                            <div class="feature-description">Build with Mips backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-msp430</div>
+                            <div class="feature-description">Build with MSP430 backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-nvptx</div>
+                            <div class="feature-description">Build with NVPTX backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-powerpc</div>
+                            <div class="feature-description">Build with PowerPC backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-riscv</div>
+                            <div class="feature-description">Build with RISC-V backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-sparc</div>
+                            <div class="feature-description">Build with Sparc backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-spirv</div>
+                            <div class="feature-description">Build with SPIRV backend (experimental).</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-systemz</div>
+                            <div class="feature-description">Build with SystemZ backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-ve</div>
+                            <div class="feature-description">Build with VE backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-webassembly</div>
+                            <div class="feature-description">Build with WebAssembly backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-x86</div>
+                            <div class="feature-description">Build with X86 backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-xcore</div>
+                            <div class="feature-description">Build with XCore backend.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">target-xtensa</div>
+                            <div class="feature-description">Build with Xtensa backend (experimental).</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools</div>
+                            <div class="feature-description">Build LLVM tools.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">utils</div>
+                            <div class="feature-description">Build LLVM utils.</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>

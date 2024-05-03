@@ -277,6 +277,71 @@
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
+                <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">curl</div>
+                            <div class="feature-description">Libcurl HTTP transport implementation</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/azure-core-cpp.html">azure-core-cpp</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/curl.html">curl</a>
+                                [ssl]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">http</div>
+                            <div class="feature-description">All HTTP transport implementations available on the platform</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/azure-core-cpp.html">azure-core-cpp</a>
+                                [curl]
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/azure-core-cpp.html">azure-core-cpp</a>
+                                [curl, winhttp]
+                                 (default-features: false)
+                                 (platform: windows &amp; !uwp)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">winhttp</div>
+                            <div class="feature-description">WinHTTP HTTP transport implementation</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/azure-core-cpp.html">azure-core-cpp</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/wil.html">wil</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>

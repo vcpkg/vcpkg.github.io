@@ -331,6 +331,278 @@
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
+                <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">collada</div>
+                            <div class="feature-description">Support for Collada (.dae) files</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/collada-dom.html">collada-dom</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">default-features</div>
+                            <div class="feature-description">Platform-dependent default features</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/osg.html">osg</a>
+                                [openexr]
+                                 (default-features: false)
+                                 (platform: !uwp)
+                                </li>
+                                <li><a href="/en/package/osg.html">osg</a>
+                                [fontconfig]
+                                 (default-features: false)
+                                 (platform: !android &amp; !ios &amp; !uwp)
+                                </li>
+                                <li><a href="/en/package/osg.html">osg</a>
+                                [nvtt]
+                                 (default-features: false)
+                                 (platform: !x86 &amp; !(windows &amp; arm64) &amp; !uwp)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">docs</div>
+                            <div class="feature-description">Build OpenSceneGraph reference documentation using doxygen (use: make doc_openscenegraph doc_openthreads</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">examples</div>
+                            <div class="feature-description">Enable to build OSG Examples</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libiconv.html">libiconv</a>
+                                
+                                
+                                 (platform: windows)
+                                </li>
+                                <li><a href="/en/package/osg.html">osg</a>
+                                [freetype, plugins]
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/sdl2.html">sdl2</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">fontconfig</div>
+                            <div class="feature-description">Enable Fontconfig support for osgText</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/fontconfig.html">fontconfig</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/osg.html">osg</a>
+                                [freetype]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">freetype</div>
+                            <div class="feature-description">Enable Freetype support</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/freetype.html">freetype</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">nvtt</div>
+                            <div class="feature-description">Build texture processing tools plugin</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/nvtt.html">nvtt</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openexr</div>
+                            <div class="feature-description">Build the exr plugin</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/openexr.html">openexr</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">packages</div>
+                            <div class="feature-description">Set to ON to generate CPack configuration files and packaging targets</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">plugins</div>
+                            <div class="feature-description">Build most OSG plugins</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/curl.html">curl</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/gdal.html">gdal</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/giflib.html">giflib</a>
+                                
+                                
+                                 (platform: windows)
+                                </li>
+                                <li><a href="/en/package/jasper.html">jasper</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/libgta.html">libgta</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/libiconv.html">libiconv</a>
+                                
+                                
+                                 (platform: windows)
+                                </li>
+                                <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/libpng.html">libpng</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/libxml2.html">libxml2</a>
+                                
+                                
+                                 (platform: windows)
+                                </li>
+                                <li><a href="/en/package/tiff.html">tiff</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">sdl1</div>
+                            <div class="feature-description">Build SDL 1 plugin, and enable SDL 1 app features</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/sdl1.html">sdl1</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools</div>
+                            <div class="feature-description">Enable to build OSG Applications (e.g. osgviewer)</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/curl.html">curl</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/libiconv.html">libiconv</a>
+                                
+                                
+                                 (platform: windows)
+                                </li>
+                                <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/libpng.html">libpng</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/osg.html">osg</a>
+                                [freetype, plugins]
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>

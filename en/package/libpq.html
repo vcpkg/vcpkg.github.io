@@ -277,6 +277,265 @@
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
+                <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">all</div>
+                            <div class="feature-description">Build all supported features</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [client, icu, xml, xslt, zstd]
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [bonjour]
+                                
+                                 (platform: osx)
+                                </li>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [nls]
+                                
+                                 (platform: !osx)
+                                </li>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [readline]
+                                
+                                 (platform: !windows)
+                                </li>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [python]
+                                
+                                 (platform: !android &amp; !mingw)
+                                </li>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [tcl]
+                                
+                                 (platform: windows &amp; !mingw &amp; !arm)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">bonjour</div>
+                            <div class="feature-description">Build with Bonjour support</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">client</div>
+                            <div class="feature-description">Build all client tools and libraries</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <div class="no-dependencies">No Dependencies</div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">icu</div>
+                            <div class="feature-description">Build with support for the ICU library</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/icu.html">icu</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lz4</div>
+                            <div class="feature-description">Use lz4</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/lz4.html">lz4</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">nls</div>
+                            <div class="feature-description">Native Language Support</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/gettext.html">gettext</a>
+                                
+                                
+                                
+                                </li>
+                                <li><a href="/en/package/gettext.html">gettext</a>
+                                [tools]
+                                
+                                 (platform: !windows, mingw)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openssl</div>
+                            <div class="feature-description">support for encrypted client connections and random number generation on platforms that do not have &quot;&#x2F;dev&#x2F;urandom&quot; (except windows)</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/openssl.html">openssl</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">python</div>
+                            <div class="feature-description">build the PL&#x2F;Python server programming language</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [client]
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/python3.html">python3</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">readline</div>
+                            <div class="feature-description">Use readline</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/readline.html">readline</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tcl</div>
+                            <div class="feature-description">build the PL&#x2F;Tcl procedural language</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [client]
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/tcl.html">tcl</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">xml</div>
+                            <div class="feature-description">Build with libxml</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libxml2.html">libxml2</a>
+                                
+                                 (default-features: false)
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">xslt</div>
+                            <div class="feature-description">Build with libxslt</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/libpq.html">libpq</a>
+                                [xml]
+                                 (default-features: false)
+                                
+                                </li>
+                                <li><a href="/en/package/libxslt.html">libxslt</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zlib</div>
+                            <div class="feature-description">Use zlib</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/zlib.html">zlib</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zstd</div>
+                            <div class="feature-description">Use zstd</div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <ul>
+                                <li><a href="/en/package/zstd.html">zstd</a>
+                                
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
