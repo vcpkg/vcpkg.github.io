@@ -201,109 +201,286 @@
             </div>
         </div>
         <ul class="tab-container">
-            <li class="dependencies-tab tab active-tab">
+            <li class="tab active-tab" data-target="dependencies-content">
                 Dependencies
             </li>
-            <li class="features-tab tab">
+            <li class="tab" data-target="features-content">
                 Features
             </li>
-            <li class="versions-tab tab">
+            <li class="tab" data-target="versions-content">
                 Versions
             </li>
-            <li class="port-content-tab tab">
+            <li class="tab" data-target="port-content">
                 Port Content
             </li>
         </ul>
         <div class="active-container">
-            <div class="active-section">
+            <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
                     <div class="dependency-card">
-                      <a href="atk.html">atk</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="atk.html">atk<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="cairo.html">cairo</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="cairo.html">cairo<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                gobject
+                                
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="cairo.html">cairo</a>
-                      
-                       <i>(platform: linux)</i>
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="cairo.html">cairo<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform">constraints: linux</div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                x11
+                                
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="gdk-pixbuf.html">gdk-pixbuf</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="gdk-pixbuf.html">gdk-pixbuf<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="gettext.html">gettext</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="gettext.html">gettext<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="gettext.html">gettext</a>
-                       <i>(host: true)</i>
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="gettext.html">gettext<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                tools
+                                
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="glib.html">glib</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="glib.html">glib<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="glib.html">glib</a>
-                       <i>(host: true)</i>
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="glib.html">glib<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="graphene.html">graphene</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="graphene.html">graphene<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="harfbuzz.html">harfbuzz</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="harfbuzz.html">harfbuzz<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                glib
+                                
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="libepoxy.html">libepoxy</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="libepoxy.html">libepoxy<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="pango.html">pango</a>
-                      
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="pango.html">pango<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="sassc.html">sassc</a>
-                       <i>(host: true)</i>
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="sassc.html">sassc<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                     <div class="dependency-card">
-                      <a href="vcpkg-tool-meson.html">vcpkg-tool-meson</a>
-                       <i>(host: true)</i>
-                      
-                      
+                        <div class="section-one">
+                            <a class="dep-name"href="vcpkg-tool-meson.html">vcpkg-tool-meson<i class="dep-version-min"></i></a>
+                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                        <div class="vertical-rule"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <pre class="dep-features-preview">
+                                
+                                None
+                                </pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button id="expandButton">Expand for more</button>
+            </div>
+            <div id="features-content" class="tab-content">
+                <div class="active-header">Features</div>
+            </div>
+            <div id="versions-content" class="tab-content">
+                <div class="active-header">Versions</div>
+            </div>
+            <div id="port-content" class="tab-content">
+                <div class="active-header">Port Content</div>
             </div>
             <div class="sidebar-container">
                 <div class="sidebar-header">Metadata</div>

@@ -118,7 +118,8 @@ function transform_dep(dep) {
             "platform": dep.platform || "",
             "host": dep.host || false,
             "noDefaultFeatures": dep["default-features"] === false,
-            "depFeatures" : dep.features ? dep.features.map((feature, i, arr) =>{return {name: feature, first: i===0, last: i === arr.length - 1};}) : []
+            "depFeatures" : dep.features ? dep.features.map((feature, i, arr) =>{return {name: feature, first: i===0, last: i === arr.length - 1};}) : [],
+            "hasFeatures": dep.features && dep.features.length > 0
         };
 
         if (dep["version>="]) {

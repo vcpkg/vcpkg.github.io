@@ -68,7 +68,6 @@ ul.tab-container {
     border-radius: 5px 5px 0 0;
 }
 .tab:hover{
-    border-bottom: 2px solid #000;
     background-color: #f0f0f0;
 }
 
@@ -80,29 +79,107 @@ ul.tab-container {
     display: flex;
 }
 
-.active-section{
+.tab-content{
     flex: 2;
     display: flex;
     flex-direction: column;
     padding-inline-start: 15px;
     padding-inline-end: 15px;
 }
+
+.tab-content{
+    display: none;
+}
+
+.tab-content.active{
+    display: block;
+}
+
 .active-header{
     font-size: 32px;
     font-weight: 700;
-}
-
-.card-container{
 }
 
 .dependency-card{
     border: 1px solid #00000020;
     box-shadow: 1px 1px 1px 1px #ccc;
     padding-inline-start: 5px;
+    padding-inline-end: 15px;
     margin-block-end: 10px;
     border-radius: 5px;
-    min-height: 80px;
+    min-height: 100px;
     display: none;
+
+}
+
+.dependency-card .section-one{
+    flex: 1;
+    font-size: 18px;
+    padding-block-start: 15px;
+    padding-inline-start: 15px;
+
+    .dep-name{
+        font-weight: 700;
+        color: #000;
+        font-size: 19px;
+    }
+
+    .dep-version-min{
+        font-size: 16px;
+        color: grey
+    }
+
+    .dep-platform{
+        font-size: 12px;
+    }
+
+}
+
+.dep-features-preview{
+    white-space: pre-line; 
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.vertical-rule {
+    width: 2px;
+    background-color: #444;
+    height: 90%;
+}
+
+.dependency-card .section-two{
+    flex: 2;
+
+}
+
+.dep-features-title{
+    text-align: center;
+    font-weight: 600;
+}
+
+.dep-host{
+    font-size:12px;
+    font-weight: 400;
+    color: orange;
+}
+
+.dep-card-logo{
+    width: 8px;
+    height: 8px;
+}
+
+.dep-no-default-feat{
+    font-size: 12px;
+
+    .enabled{
+        color: green;
+    }
+
+    .disabled{
+        color: red;
+    }
 }
 
 .dependency-card:nth-child(-n+10){
@@ -112,6 +189,7 @@ ul.tab-container {
 #expandButton{
     display: none;
 }
+
 .card-container:target #expandButton,
 .card-container:target .dependency-card{
     display: block;
