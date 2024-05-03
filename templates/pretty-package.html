@@ -52,7 +52,7 @@
                     {{#dependencies}}
                     <div class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="{{name}}.html">{{name}}<i class="dep-version-min">{{#versionMinimum}} v{{versionMinimum}}{{/versionMinimum}}</i></a>
+                            <a class="dep-name"href="{{name}}.html">{{name}}<i class="dep-version-min">{{#versionMinimum}} >=v{{versionMinimum}}{{/versionMinimum}}</i></a>
                             <div class="dep-no-default-feat">{{#noDefaultFeatures}}default features: <i class="disabled">disabled</i>{{/noDefaultFeatures}}{{^noDefaultFeatures}}default features: <i class="enabled">enabled</i>{{/noDefaultFeatures}}</div>
                             <div class="dep-platform">{{#platform}}constraints: {{platform}}{{/platform}}</div>
                             <div class="dep-host">{{#host}}host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg">{{/host}}{{^host}}host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg">{{/host}}</div>
@@ -79,10 +79,20 @@
                 <div class="active-header">Features</div>
             </div>
             <div id="versions-content" class="tab-content">
-                <div class="active-header">Versions</div>
+                <div class="active-header">Available Versions</div>
+                <ul class="version-badges">
+                    {{#packageVersions}}
+                    <li class="badge badge-primary">{{.}}</li>
+                    {{/packageVersions}}
+                </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
+                <ul>
+                    {{#package.githubFileUrls}}
+                    <li><a href="{{{url}}}" target="_blank">{{name}}</a></li>
+                    {{/package.githubFileUrls}}
+                  </ul>
             </div>
             <div class="sidebar-container">
                 <div class="sidebar-header">Metadata</div>
