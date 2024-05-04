@@ -218,218 +218,248 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">asr</div>
-                            <div class="feature-description">flashlight asr app</div>
+                            <div class="feature-name">asr - <i class="feature-description">flashlight asr app</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/flashlight-cuda.html">flashlight-cuda</a>
-                                [fl, lib]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/gflags.html">gflags</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/libsndfile.html">libsndfile</a>
-                                [external-libs]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/flashlight-cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">flashlight-cuda</div>
+                                <div class="feature-dep-feature">features: [fl, lib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gflags.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gflags</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libsndfile.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libsndfile</div>
+                                <div class="feature-dep-feature">features: [external-libs]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">fl</div>
-                            <div class="feature-description">flashlight core autograd and neural net library</div>
+                            <div class="feature-name">fl - <i class="feature-description">flashlight core autograd and neural net library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/arrayfire.html">arrayfire</a>
-                                [cuda]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/cereal.html">cereal</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/cuda.html">cuda</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/cudnn.html">cudnn</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/nccl.html">nccl</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/openmpi.html">openmpi</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/stb.html">stb</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/arrayfire.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">arrayfire</div>
+                                <div class="feature-dep-feature">features: [cuda]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/cereal.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cereal</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cuda</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/cudnn.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cudnn</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/nccl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">nccl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openmpi.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openmpi</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/stb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">stb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">imgclass</div>
-                            <div class="feature-description">flashlight image classification app</div>
+                            <div class="feature-name">imgclass - <i class="feature-description">flashlight image classification app</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/flashlight-cuda.html">flashlight-cuda</a>
-                                [fl, lib]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/gflags.html">gflags</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/flashlight-cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">flashlight-cuda</div>
+                                <div class="feature-dep-feature">features: [fl, lib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gflags.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gflags</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">lib</div>
-                            <div class="feature-description">flashlight libraries</div>
+                            <div class="feature-name">lib - <i class="feature-description">flashlight libraries</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/cub.html">cub</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/cuda.html">cuda</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/fftw3.html">fftw3</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/intel-mkl.html">intel-mkl</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/kenlm.html">kenlm</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/cub.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cub</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cuda</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/fftw3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">fftw3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/intel-mkl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">intel-mkl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/kenlm.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">kenlm</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">lm</div>
-                            <div class="feature-description">flashlight lm app</div>
+                            <div class="feature-name">lm - <i class="feature-description">flashlight lm app</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/flashlight-cuda.html">flashlight-cuda</a>
-                                [fl, lib]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/gflags.html">gflags</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/flashlight-cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">flashlight-cuda</div>
+                                <div class="feature-dep-feature">features: [fl, lib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gflags.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gflags</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">objdet</div>
-                            <div class="feature-description">flashlight object detection app</div>
+                            <div class="feature-name">objdet - <i class="feature-description">flashlight object detection app</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/flashlight-cuda.html">flashlight-cuda</a>
-                                [fl, imgclass, lib]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/gflags.html">gflags</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/flashlight-cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">flashlight-cuda</div>
+                                <div class="feature-dep-feature">features: [fl, imgclass, lib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gflags.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gflags</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

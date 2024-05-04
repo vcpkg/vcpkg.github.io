@@ -218,180 +218,128 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ddsperf</div>
-                            <div class="feature-description">Build ddsperf tool</div>
+                            <div class="feature-name">ddsperf - <i class="feature-description">Build ddsperf tool</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/cyclonedds.html">cyclonedds</a>
-                                [idlc]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/cyclonedds.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cyclonedds</div>
+                                <div class="feature-dep-feature">features: [idlc]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">deadline-missed - <i class="feature-description">Enable Deadline Missed QoS suppor</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">deadline-missed</div>
-                            <div class="feature-description">Enable Deadline Missed QoS suppor</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">idlc - <i class="feature-description">Build IDL preprocessor</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">idlc</div>
-                            <div class="feature-description">Build IDL preprocessor</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">ipv6 - <i class="feature-description">Enable ipv6 support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ipv6</div>
-                            <div class="feature-description">Enable ipv6 support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">lifespan - <i class="feature-description">Enable Lifespan QoS support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">lifespan</div>
-                            <div class="feature-description">Enable Lifespan QoS support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">security - <i class="feature-description">Enable OMG DDS Security support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">security</div>
-                            <div class="feature-description">Enable OMG DDS Security support</div>
+                            <div class="feature-name">shm - <i class="feature-description">Enable shared memory support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/iceoryx.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">iceoryx</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">source-specific-multicast - <i class="feature-description">Enable support for source-specific multicast</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">shm</div>
-                            <div class="feature-description">Enable shared memory support</div>
+                            <div class="feature-name">ssl - <i class="feature-description">Enable OpenSSL support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/iceoryx.html">iceoryx</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/openssl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openssl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">source-specific-multicast</div>
-                            <div class="feature-description">Enable support for source-specific multicast</div>
+                            <div class="feature-name">topic-discovery - <i class="feature-description">Enable Topic Discovery support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/cyclonedds.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cyclonedds</div>
+                                <div class="feature-dep-feature">features: [type-discovery]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ssl</div>
-                            <div class="feature-description">Enable OpenSSL support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/openssl.html">openssl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">topic-discovery</div>
-                            <div class="feature-description">Enable Topic Discovery support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/cyclonedds.html">cyclonedds</a>
-                                [type-discovery]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">type-discovery</div>
-                            <div class="feature-description">Enable Type Discovery support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">type-discovery - <i class="feature-description">Enable Type Discovery support</i></div>
                         </div>
                     </div>
                 </div>

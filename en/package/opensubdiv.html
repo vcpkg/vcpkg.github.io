@@ -218,214 +218,181 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cuda</div>
-                            <div class="feature-description">Enable CUDA backend</div>
+                            <div class="feature-name">cuda - <i class="feature-description">Enable CUDA backend</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/cuda.html">cuda</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cuda</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">dx - <i class="feature-description">Enable DirectX support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/directxsdk.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">directxsdk</div>
+                                <div class="feature-dep-feature">features: [xp]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">examples - <i class="feature-description">Build examples</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">dx</div>
-                            <div class="feature-description">Enable DirectX support</div>
+                            <div class="feature-name">glew - <i class="feature-description">Enable GLEW wrapper library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/directxsdk.html">directxsdk</a>
-                                [xp]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/glew.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glew</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">glfw - <i class="feature-description">Build components depending on GLFW</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glfw3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glfw3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">omp - <i class="feature-description">Enable OpenMP backend</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">examples</div>
-                            <div class="feature-description">Build examples</div>
+                            <div class="feature-name">opencl - <i class="feature-description">Enable OpenCL backend</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/opencl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opengl - <i class="feature-description">Enable OpenGL backend</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ptex - <i class="feature-description">Enable Ptex support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ptex.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ptex</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tbb - <i class="feature-description">Enable TBB backend</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/tbb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tbb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">true-deriv-eval - <i class="feature-description">Enable true derivative evaluation for Gregory basis patches</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">glew</div>
-                            <div class="feature-description">Enable GLEW wrapper library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glew.html">glew</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">glfw</div>
-                            <div class="feature-description">Build components depending on GLFW</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glfw3.html">glfw3</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">omp</div>
-                            <div class="feature-description">Enable OpenMP backend</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">opencl</div>
-                            <div class="feature-description">Enable OpenCL backend</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/opencl.html">opencl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">opengl</div>
-                            <div class="feature-description">Enable OpenGL backend</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/opengl.html">opengl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">ptex</div>
-                            <div class="feature-description">Enable Ptex support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/ptex.html">ptex</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tbb</div>
-                            <div class="feature-description">Enable TBB backend</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/tbb.html">tbb</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">true-deriv-eval</div>
-                            <div class="feature-description">Enable true derivative evaluation for Gregory basis patches</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tutorials</div>
-                            <div class="feature-description">Enable tutorials build</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">tutorials - <i class="feature-description">Enable tutorials build</i></div>
                         </div>
                     </div>
                 </div>

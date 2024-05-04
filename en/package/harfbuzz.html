@@ -218,183 +218,159 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="gettext.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="gettext.html">gettext<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
-                            <div class="dep-platform">constraints: osx</div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-name">gettext<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: osx</div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-tool-meson.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-tool-meson.html">vcpkg-tool-meson<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-tool-meson<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cairo</div>
-                            <div class="feature-description">Enable Cairo graphics library support</div>
+                            <div class="feature-name">cairo - <i class="feature-description">Enable Cairo graphics library support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/cairo.html">cairo</a>
-                                [freetype]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/cairo.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cairo</div>
+                                <div class="feature-dep-feature">features: [freetype]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">coretext - <i class="feature-description">Enable CoreText shaper backend on macOS</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">coretext</div>
-                            <div class="feature-description">Enable CoreText shaper backend on macOS</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">directwrite - <i class="feature-description">Enable DirectWrite support on Windows</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">directwrite</div>
-                            <div class="feature-description">Enable DirectWrite support on Windows</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">experimental-api - <i class="feature-description">Enable experimental api</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">experimental-api</div>
-                            <div class="feature-description">Enable experimental api</div>
+                            <div class="feature-name">freetype - <i class="feature-description">Enable FreeType support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/freetype.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">freetype</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">freetype</div>
-                            <div class="feature-description">Enable FreeType support</div>
+                            <div class="feature-name">glib - <i class="feature-description">Glib Unicode callbacks support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/freetype.html">freetype</a>
-                                
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/glib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/glib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">glib</div>
-                            <div class="feature-description">Glib Unicode callbacks support</div>
+                            <div class="feature-name">graphite2 - <i class="feature-description">Graphite2 shaper support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glib.html">glib</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/glib.html">glib</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/graphite2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">graphite2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">graphite2</div>
-                            <div class="feature-description">Graphite2 shaper support</div>
+                            <div class="feature-name">icu - <i class="feature-description">icu support for harfbuzz</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/graphite2.html">graphite2</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/icu.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">icu</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">icu</div>
-                            <div class="feature-description">icu support for harfbuzz</div>
+                            <div class="feature-name">introspection - <i class="feature-description">build with introspection</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/icu.html">icu</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/glib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gobject-introspection.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gobject-introspection</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">introspection</div>
-                            <div class="feature-description">build with introspection</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glib.html">glib</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/gobject-introspection.html">gobject-introspection</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

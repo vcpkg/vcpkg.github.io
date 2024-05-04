@@ -220,31 +220,34 @@
                 <div class="card-container">
                     <div class="dependency-card">No Dependencies</div>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">nls</div>
-                            <div class="feature-description">Enable native language support</div>
+                            <div class="feature-name">nls - <i class="feature-description">Enable native language support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/gettext.html">gettext</a>
-                                [tools]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/gettext-libintl.html">gettext-libintl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/gettext.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gettext</div>
+                                <div class="feature-dep-feature">features: [tools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gettext-libintl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gettext-libintl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

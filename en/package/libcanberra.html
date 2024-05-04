@@ -218,145 +218,116 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="gettext.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="gettext.html">gettext<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">gettext<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="libvorbis.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="libvorbis.html">libvorbis<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">libvorbis<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">alsa</div>
-                            <div class="feature-description">Enable optional ALSA support</div>
+                            <div class="feature-name">alsa - <i class="feature-description">Enable optional ALSA support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/alsa.html">alsa</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/alsa.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">alsa</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">defaults - <i class="feature-description">Default features</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libcanberra.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libcanberra</div>
+                                <div class="feature-dep-feature">features: [alsa]</div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libcanberra.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libcanberra</div>
+                                <div class="feature-dep-feature">features: [null]</div>
+                                <div class="feature-dep-platform">platform: !linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gstreamer - <i class="feature-description">Enable optional GStreamer support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gtk3 - <i class="feature-description">Enable optional GTK3 support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gtk3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gtk3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">null - <i class="feature-description">Enable optional null output</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">defaults</div>
-                            <div class="feature-description">Default features</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libcanberra.html">libcanberra</a>
-                                [alsa]
-                                
-                                 (platform: linux)
-                                </li>
-                                <li><a href="/en/package/libcanberra.html">libcanberra</a>
-                                [null]
-                                
-                                 (platform: !linux)
-                                </li>
-                            </ul>
+                            <div class="feature-name">oss - <i class="feature-description">Enable optional OSS support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gstreamer</div>
-                            <div class="feature-description">Enable optional GStreamer support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/gstreamer.html">gstreamer</a>
-                                
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">gtk3</div>
-                            <div class="feature-description">Enable optional GTK3 support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/gtk3.html">gtk3</a>
-                                
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">null</div>
-                            <div class="feature-description">Enable optional null output</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">oss</div>
-                            <div class="feature-description">Enable optional OSS support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">pulse</div>
-                            <div class="feature-description">Enable optional PulseAudio support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">pulse - <i class="feature-description">Enable optional PulseAudio support</i></div>
                         </div>
                     </div>
                 </div>

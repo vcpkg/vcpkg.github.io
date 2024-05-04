@@ -218,376 +218,325 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">all</div>
-                            <div class="feature-description">Enable all codecs</div>
+                            <div class="feature-name">all - <i class="feature-description">Enable all codecs</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sail.html">sail</a>
-                                [high-priority-codecs, highest-priority-codecs, low-priority-codecs, lowest-priority-codecs, medium-priority-codecs]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/sail.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sail</div>
+                                <div class="feature-dep-feature">features: [high-priority-codecs, highest-priority-codecs, low-priority-codecs, lowest-priority-codecs, medium-priority-codecs]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avif - <i class="feature-description">Enable AVIF codec</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libavif.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libavif</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">bmp - <i class="feature-description">Enable BMP codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">avif</div>
-                            <div class="feature-description">Enable AVIF codec</div>
+                            <div class="feature-name">gif - <i class="feature-description">Enable GIF codec</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libavif.html">libavif</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/giflib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">giflib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">high-priority-codecs - <i class="feature-description">Enable high priority codecs such as BMP</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/sail.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sail</div>
+                                <div class="feature-dep-feature">features: [bmp, svg]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">highest-priority-codecs - <i class="feature-description">Enable highest priority codecs such as JPEG or PNG</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/sail.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sail</div>
+                                <div class="feature-dep-feature">features: [gif, jpeg, png, tiff]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ico - <i class="feature-description">Enable ICO codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">bmp</div>
-                            <div class="feature-description">Enable BMP codec</div>
+                            <div class="feature-name">jpeg - <i class="feature-description">Enable JPEG codec</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/libjpeg-turbo.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libjpeg-turbo</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jpeg2000 - <i class="feature-description">Enable JPEG2000 codec</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/jasper.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">jasper</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jpegxl - <i class="feature-description">Enable JPEG XL codec</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libjxl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libjxl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">low-priority-codecs - <i class="feature-description">Enable low priority codecs such as TGA</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/sail.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sail</div>
+                                <div class="feature-dep-feature">features: [ico, pcx, psd, qoi, tga]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lowest-priority-codecs - <i class="feature-description">Enable lowest priority codecs such as XBM</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/sail.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sail</div>
+                                <div class="feature-dep-feature">features: [wal, xbm]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">medium-priority-codecs - <i class="feature-description">Enable medium priority codecs such as AVIF</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/sail.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sail</div>
+                                <div class="feature-dep-feature">features: [avif, jpeg2000, jpegxl, webp]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openmp - <i class="feature-description">Enable OpenMP support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gif</div>
-                            <div class="feature-description">Enable GIF codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/giflib.html">giflib</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <div class="feature-name">pcx - <i class="feature-description">Enable PCX codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">high-priority-codecs</div>
-                            <div class="feature-description">Enable high priority codecs such as BMP</div>
+                            <div class="feature-name">png - <i class="feature-description">Enable PNG codec</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sail.html">sail</a>
-                                [bmp, svg]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/libpng.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libpng</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">psd - <i class="feature-description">Enable PSD codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">highest-priority-codecs</div>
-                            <div class="feature-description">Enable highest priority codecs such as JPEG or PNG</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sail.html">sail</a>
-                                [gif, jpeg, png, tiff]
-                                
-                                
-                                </li>
-                            </ul>
+                            <div class="feature-name">qoi - <i class="feature-description">Enable QOI codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ico</div>
-                            <div class="feature-description">Enable ICO codec</div>
+                            <div class="feature-name">svg - <i class="feature-description">Enable SVG codec</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/nanosvg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">nanosvg</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tga - <i class="feature-description">Enable TGA codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">jpeg</div>
-                            <div class="feature-description">Enable JPEG codec</div>
+                            <div class="feature-name">tiff - <i class="feature-description">Enable TIFF codec</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/tiff.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tiff</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">wal - <i class="feature-description">Enable WAL codec</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">jpeg2000</div>
-                            <div class="feature-description">Enable JPEG2000 codec</div>
+                            <div class="feature-name">webp - <i class="feature-description">Enable WEBP codec</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/jasper.html">jasper</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/libwebp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libwebp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">jpegxl</div>
-                            <div class="feature-description">Enable JPEG XL codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libjxl.html">libjxl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">low-priority-codecs</div>
-                            <div class="feature-description">Enable low priority codecs such as TGA</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sail.html">sail</a>
-                                [ico, pcx, psd, qoi, tga]
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">lowest-priority-codecs</div>
-                            <div class="feature-description">Enable lowest priority codecs such as XBM</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sail.html">sail</a>
-                                [wal, xbm]
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">medium-priority-codecs</div>
-                            <div class="feature-description">Enable medium priority codecs such as AVIF</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sail.html">sail</a>
-                                [avif, jpeg2000, jpegxl, webp]
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">openmp</div>
-                            <div class="feature-description">Enable OpenMP support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">pcx</div>
-                            <div class="feature-description">Enable PCX codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">png</div>
-                            <div class="feature-description">Enable PNG codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libpng.html">libpng</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">psd</div>
-                            <div class="feature-description">Enable PSD codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">qoi</div>
-                            <div class="feature-description">Enable QOI codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">svg</div>
-                            <div class="feature-description">Enable SVG codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/nanosvg.html">nanosvg</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tga</div>
-                            <div class="feature-description">Enable TGA codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tiff</div>
-                            <div class="feature-description">Enable TIFF codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/tiff.html">tiff</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">wal</div>
-                            <div class="feature-description">Enable WAL codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">webp</div>
-                            <div class="feature-description">Enable WEBP codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libwebp.html">libwebp</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">xbm</div>
-                            <div class="feature-description">Enable XBM codec</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">xbm - <i class="feature-description">Enable XBM codec</i></div>
                         </div>
                     </div>
                 </div>

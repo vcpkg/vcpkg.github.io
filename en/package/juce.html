@@ -218,235 +218,181 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="alsa.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="alsa.html">alsa<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
-                            <div class="dep-platform">constraints: linux</div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-name">alsa<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="juce.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="juce.html">juce<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">juce<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">curl</div>
-                            <div class="feature-description">Enable CURL support</div>
+                            <div class="feature-name">curl - <i class="feature-description">Enable CURL support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/curl.html">curl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">extras - <i class="feature-description">Enable JUCE Extras such as Projucer, AudioPluginHost, BinaryBuilder.</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">extras</div>
-                            <div class="feature-description">Enable JUCE Extras such as Projucer, AudioPluginHost, BinaryBuilder.</div>
+                            <div class="feature-name">freetype - <i class="feature-description">Enable FreeType support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/freetype.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">freetype</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jack - <i class="feature-description">Enable JACK audio support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/jack2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">jack2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ladspa - <i class="feature-description">Enable LADSPA plugin host support.</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">freetype</div>
-                            <div class="feature-description">Enable FreeType support</div>
+                            <div class="feature-name">opengl - <i class="feature-description">Enable OpenGL support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/freetype.html">freetype</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">web-browser - <i class="feature-description">Enable WebBrowser support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">jack</div>
-                            <div class="feature-description">Enable JACK audio support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/jack2.html">jack2</a>
-                                
-                                
-                                 (platform: linux)
-                                </li>
-                            </ul>
+                            <div class="feature-name">xcursor - <i class="feature-description">Enable XCursor support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ladspa</div>
-                            <div class="feature-description">Enable LADSPA plugin host support.</div>
+                            <div class="feature-name">xinerama - <i class="feature-description">Enable Xinerama support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/libxinerama.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libxinerama</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">opengl</div>
-                            <div class="feature-description">Enable OpenGL support</div>
+                            <div class="feature-name">xrandr - <i class="feature-description">Enable XRandR support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/opengl.html">opengl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/libxrandr.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libxrandr</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">web-browser</div>
-                            <div class="feature-description">Enable WebBrowser support</div>
+                            <div class="feature-name">xrender - <i class="feature-description">Enable XRender support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/libxrender.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libxrender</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">xcursor</div>
-                            <div class="feature-description">Enable XCursor support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">xinerama</div>
-                            <div class="feature-description">Enable Xinerama support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libxinerama.html">libxinerama</a>
-                                
-                                
-                                 (platform: linux)
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">xrandr</div>
-                            <div class="feature-description">Enable XRandR support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libxrandr.html">libxrandr</a>
-                                
-                                
-                                 (platform: linux)
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">xrender</div>
-                            <div class="feature-description">Enable XRender support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libxrender.html">libxrender</a>
-                                
-                                
-                                 (platform: linux)
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

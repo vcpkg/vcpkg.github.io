@@ -218,115 +218,92 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="qtbase.html">qtbase<i class="dep-version-min"></i></a>
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <pre class="dep-features-preview">
                                 network
-                                
                                 </pre>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">default-features</div>
-                            <div class="feature-description">Platform-dependent default features</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">default-features - <i class="feature-description">Platform-dependent default features</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gds</div>
-                            <div class="feature-description">Support for global discovery server</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">gds - <i class="feature-description">Support for global discovery server</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ns0idgenerator</div>
-                            <div class="feature-description">Namespace 0 NodeIds generator from the NodeIds.csv file.</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">ns0idgenerator - <i class="feature-description">Namespace 0 NodeIds generator from the NodeIds.csv file.</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ns0idnames</div>
-                            <div class="feature-description">Support for namespace 0 NodeId names</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">ns0idnames - <i class="feature-description">Support for namespace 0 NodeId names</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">open62541</div>
-                            <div class="feature-description">Open62541 with plugin to connect to servers with signing and encryption</div>
+                            <div class="feature-name">open62541 - <i class="feature-description">Open62541 with plugin to connect to servers with signing and encryption</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/open62541.html">open62541</a>
-                                [amalgamation, historizing, openssl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/open62541.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">open62541</div>
+                                <div class="feature-dep-feature">features: [amalgamation, historizing, openssl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">qml</div>
-                            <div class="feature-description">Build QML imports</div>
+                            <div class="feature-name">qml - <i class="feature-description">Build QML imports</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/qtbase.html">qtbase</a>
-                                [gui]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/qtdeclarative.html">qtdeclarative</a>
-                                
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [gui]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qtdeclarative.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtdeclarative</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">uacpp</div>
-                            <div class="feature-description">Unified Automation C++ SDK</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">uacpp - <i class="feature-description">Unified Automation C++ SDK</i></div>
                         </div>
                     </div>
                 </div>

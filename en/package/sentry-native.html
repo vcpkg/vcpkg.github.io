@@ -218,116 +218,102 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">backend</div>
-                            <div class="feature-description">Enables the platform-specific backend.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
+                            <div class="feature-name">backend - <i class="feature-description">Enables the platform-specific backend.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/pkgconf.html">pkgconf</a>
-                                
-                                
-                                 (platform: !android &amp; !ios)
-                                </li>
-                                <li><a href="/en/package/zlib.html">zlib</a>
-                                
-                                
-                                 (platform: !android &amp; !ios)
-                                </li>
-                            </ul>
+                            <a href="/en/package/pkgconf.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">pkgconf</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !android &amp; !ios</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/zlib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zlib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !android &amp; !ios</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">compression</div>
-                            <div class="feature-description">Enables gzip compression support for the transport.,Cf.https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
+                            <div class="feature-name">compression - <i class="feature-description">Enables gzip compression support for the transport.,Cf.https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/zlib.html">zlib</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/zlib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zlib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">transport</div>
-                            <div class="feature-description">Enables the platform-specific network transport.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
+                            <div class="feature-name">transport - <i class="feature-description">Enables the platform-specific network transport.,This feature does nothing for some platforms.,Cf. https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/curl.html">curl</a>
-                                
-                                 (default-features: false)
-                                 (platform: !windows)
-                                </li>
-                            </ul>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !windows</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">wer</div>
-                            <div class="feature-description">Enables the Windows Error Reporting backend.,Cf.https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</div>
+                            <div class="feature-name">wer - <i class="feature-description">Enables the Windows Error Reporting backend.,Cf.https:&#x2F;&#x2F;github.com&#x2F;getsentry&#x2F;sentry-native#compile-time-options</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sentry-native.html">sentry-native</a>
-                                [backend]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/sentry-native.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sentry-native</div>
+                                <div class="feature-dep-feature">features: [backend]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

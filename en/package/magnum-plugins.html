@@ -218,719 +218,777 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="magnum.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="magnum.html">magnum<i class="dep-version-min"></i></a>
+                            <div class="dep-name">magnum<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">assimpimporter</div>
-                            <div class="feature-description">AssimpImporter plugin</div>
+                            <div class="feature-name">assimpimporter - <i class="feature-description">AssimpImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/assimp.html">assimp</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [anyimageimporter]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/assimp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">assimp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [anyimageimporter]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">basisimageconverter - <i class="feature-description">BasisImageConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/zstd.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zstd</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">basisimporter - <i class="feature-description">BasisImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/zstd.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zstd</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">cgltfimporter - <i class="feature-description">CgltfImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [anyimageimporter]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ddsimporter - <i class="feature-description">DdsImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">devilimageimporter - <i class="feature-description">DevIlImageImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/devil.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">devil</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">drflacaudioimporter - <i class="feature-description">DrFlacAudioImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">drmp3audioimporter - <i class="feature-description">DrMp3AudioImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">drwavaudioimporter - <i class="feature-description">DrWavAudioImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">freetypefont - <i class="feature-description">FreeTypeFont plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/freetype.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">freetype</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [text]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">glslangshaderconverter - <i class="feature-description">GlslangShaderConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glslang.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glslang</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [shadertools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">harfbuzzfont - <i class="feature-description">HarfBuzzFont plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/harfbuzz.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">harfbuzz</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum-plugins.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum-plugins</div>
+                                <div class="feature-dep-feature">features: [freetypefont]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">icoimporter - <i class="feature-description">IcoImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jpegimageconverter - <i class="feature-description">JpegImageConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libjpeg-turbo.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libjpeg-turbo</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jpegimporter - <i class="feature-description">JpegImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libjpeg-turbo.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libjpeg-turbo</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ktximageconverter - <i class="feature-description">KtxImageConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ktximporter - <i class="feature-description">KtxImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">meshoptimizersceneconverter - <i class="feature-description">MeshOptimizerSceneConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/meshoptimizer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">meshoptimizer</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">miniexrimageconverter - <i class="feature-description">MiniExrImageConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openddl - <i class="feature-description">OpenDdl library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">basisimageconverter</div>
-                            <div class="feature-description">BasisImageConverter plugin</div>
+                            <div class="feature-name">openexrimageconverter - <i class="feature-description">OpenExrImageConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/zstd.html">zstd</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openexr.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openexr</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">basisimporter</div>
-                            <div class="feature-description">BasisImporter plugin</div>
+                            <div class="feature-name">openexrimporter - <i class="feature-description">OpenExrImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/zstd.html">zstd</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openexr.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openexr</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cgltfimporter</div>
-                            <div class="feature-description">CgltfImporter plugin</div>
+                            <div class="feature-name">opengeximporter - <i class="feature-description">OpenGexImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [anyimageimporter]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [anyimageimporter]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum-plugins.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum-plugins</div>
+                                <div class="feature-dep-feature">features: [openddl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ddsimporter</div>
-                            <div class="feature-description">DdsImporter plugin</div>
+                            <div class="feature-name">pngimageconverter - <i class="feature-description">PngImageConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/libpng.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libpng</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">devilimageimporter</div>
-                            <div class="feature-description">DevIlImageImporter plugin</div>
+                            <div class="feature-name">pngimporter - <i class="feature-description">PngImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/devil.html">devil</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/libpng.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libpng</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">drflacaudioimporter</div>
-                            <div class="feature-description">DrFlacAudioImporter plugin</div>
+                            <div class="feature-name">spirvtoolsshaderconverter - <i class="feature-description">SpirvToolsShaderConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [shadertools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/spirv-tools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">spirv-tools</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">drmp3audioimporter</div>
-                            <div class="feature-description">DrMp3AudioImporter plugin</div>
+                            <div class="feature-name">stanfordimporter - <i class="feature-description">StanfordImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">drwavaudioimporter</div>
-                            <div class="feature-description">DrWavAudioImporter plugin</div>
+                            <div class="feature-name">stanfordsceneconverter - <i class="feature-description">StanfordSceneConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">freetypefont</div>
-                            <div class="feature-description">FreeTypeFont plugin</div>
+                            <div class="feature-name">stbdxtimageconverter - <i class="feature-description">StbDxtImageConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/freetype.html">freetype</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [text]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">glslangshaderconverter</div>
-                            <div class="feature-description">GlslangShaderConverter plugin</div>
+                            <div class="feature-name">stbimageconverter - <i class="feature-description">StbImageConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glslang.html">glslang</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [shadertools]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">harfbuzzfont</div>
-                            <div class="feature-description">HarfBuzzFont plugin</div>
+                            <div class="feature-name">stbimageimporter - <i class="feature-description">StbImageImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/harfbuzz.html">harfbuzz</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum-plugins.html">magnum-plugins</a>
-                                [freetypefont]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">icoimporter</div>
-                            <div class="feature-description">IcoImporter plugin</div>
+                            <div class="feature-name">stbtruetypefont - <i class="feature-description">StbTrueTypeFont plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [text]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">jpegimageconverter</div>
-                            <div class="feature-description">JpegImageConverter plugin</div>
+                            <div class="feature-name">stbvorbisaudioimporter - <i class="feature-description">StbVorbisAudioImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">jpegimporter</div>
-                            <div class="feature-description">JpegImporter plugin</div>
+                            <div class="feature-name">stlimporter - <i class="feature-description">StlImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libjpeg-turbo.html">libjpeg-turbo</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ktximageconverter</div>
-                            <div class="feature-description">KtxImageConverter plugin</div>
+                            <div class="feature-name">tinygltfimporter - <i class="feature-description">TinyGltfImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [anyimageimporter]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">ktximporter</div>
-                            <div class="feature-description">KtxImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">meshoptimizersceneconverter</div>
-                            <div class="feature-description">MeshOptimizerSceneConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/meshoptimizer.html">meshoptimizer</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">miniexrimageconverter</div>
-                            <div class="feature-description">MiniExrImageConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">openddl</div>
-                            <div class="feature-description">OpenDdl library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">openexrimageconverter</div>
-                            <div class="feature-description">OpenExrImageConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/openexr.html">openexr</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">openexrimporter</div>
-                            <div class="feature-description">OpenExrImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/openexr.html">openexr</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">opengeximporter</div>
-                            <div class="feature-description">OpenGexImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [anyimageimporter]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum-plugins.html">magnum-plugins</a>
-                                [openddl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">pngimageconverter</div>
-                            <div class="feature-description">PngImageConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libpng.html">libpng</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">pngimporter</div>
-                            <div class="feature-description">PngImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/libpng.html">libpng</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">spirvtoolsshaderconverter</div>
-                            <div class="feature-description">SpirvToolsShaderConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [shadertools]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/spirv-tools.html">spirv-tools</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stanfordimporter</div>
-                            <div class="feature-description">StanfordImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stanfordsceneconverter</div>
-                            <div class="feature-description">StanfordSceneConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stbdxtimageconverter</div>
-                            <div class="feature-description">StbDxtImageConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stbimageconverter</div>
-                            <div class="feature-description">StbImageConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stbimageimporter</div>
-                            <div class="feature-description">StbImageImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stbtruetypefont</div>
-                            <div class="feature-description">StbTrueTypeFont plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [text]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stbvorbisaudioimporter</div>
-                            <div class="feature-description">StbVorbisAudioImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">stlimporter</div>
-                            <div class="feature-description">StlImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tinygltfimporter</div>
-                            <div class="feature-description">TinyGltfImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [anyimageimporter]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

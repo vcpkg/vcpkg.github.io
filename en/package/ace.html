@@ -218,107 +218,84 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-msbuild.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-msbuild.html">vcpkg-msbuild<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
-                            <div class="dep-platform">constraints: windows</div>
+                            <div class="dep-name">vcpkg-msbuild<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: windows</div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ssl</div>
-                            <div class="feature-description">Enable SSL&#x2F;TLS features in ACE</div>
+                            <div class="feature-name">ssl - <i class="feature-description">Enable SSL&#x2F;TLS features in ACE</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/openssl.html">openssl</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/openssl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openssl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tao - <i class="feature-description">The ACE ORB</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">tao</div>
-                            <div class="feature-description">The ACE ORB</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">wchar - <i class="feature-description">Enable extra wide char functions in ACE</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">wchar</div>
-                            <div class="feature-description">Enable extra wide char functions in ACE</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">xml - <i class="feature-description">Enable XML features in ACE</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">xml</div>
-                            <div class="feature-description">Enable XML features in ACE</div>
+                            <div class="feature-name">xml-utils - <i class="feature-description">Include the ACE_XML_Utils library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/xerces-c.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">xerces-c</div>
+                                <div class="feature-dep-feature">features: [xmlch-wchar]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">xml-utils</div>
-                            <div class="feature-description">Include the ACE_XML_Utils library</div>
+                            <div class="feature-name">zlib - <i class="feature-description">Enable zlib support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/xerces-c.html">xerces-c</a>
-                                [xmlch-wchar]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/zlib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zlib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">zlib</div>
-                            <div class="feature-description">Enable zlib support</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/zlib.html">zlib</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

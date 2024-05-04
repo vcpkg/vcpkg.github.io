@@ -218,151 +218,122 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="pthreads.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="pthreads.html">pthreads<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
-                            <div class="dep-platform">constraints: !windows</div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-name">pthreads<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !windows</div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cli-tools</div>
-                            <div class="feature-description">Build Tracy command-line tools: &#x60;capture&#x60;, &#x60;csvexport&#x60;, &#x60;import-chrome&#x60; and &#x60;update&#x60;</div>
+                            <div class="feature-name">cli-tools - <i class="feature-description">Build Tracy command-line tools: &#x60;capture&#x60;, &#x60;csvexport&#x60;, &#x60;import-chrome&#x60; and &#x60;update&#x60;</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/capstone.html">capstone</a>
-                                [arm, arm64, x86]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/tbb.html">tbb</a>
-                                
-                                
-                                 (platform: !windows)
-                                </li>
-                            </ul>
+                            <a href="/en/package/capstone.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">capstone</div>
+                                <div class="feature-dep-feature">features: [arm, arm64, x86]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/tbb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tbb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !windows</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">crash-handler - <i class="feature-description">Enable crash handler</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">crash-handler</div>
-                            <div class="feature-description">Enable crash handler</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">fibers - <i class="feature-description">Enable fibers support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">fibers</div>
-                            <div class="feature-description">Enable fibers support</div>
+                            <div class="feature-name">gui-tools - <i class="feature-description">Build Tracy GUI tool: &#x60;profiler&#x60; (aka &#x60;Tracy&#x60; executable)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/capstone.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">capstone</div>
+                                <div class="feature-dep-feature">features: [arm, arm64, x86]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/dbus.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">dbus</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !windows</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/freetype.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">freetype</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/glfw3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glfw3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/tbb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tbb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !windows</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gui-tools</div>
-                            <div class="feature-description">Build Tracy GUI tool: &#x60;profiler&#x60; (aka &#x60;Tracy&#x60; executable)</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/capstone.html">capstone</a>
-                                [arm, arm64, x86]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/dbus.html">dbus</a>
-                                
-                                
-                                 (platform: !windows)
-                                </li>
-                                <li><a href="/en/package/freetype.html">freetype</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/glfw3.html">glfw3</a>
-                                
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/tbb.html">tbb</a>
-                                
-                                
-                                 (platform: !windows)
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">on-demand</div>
-                            <div class="feature-description">Enable on-demand profiling</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">on-demand - <i class="feature-description">Enable on-demand profiling</i></div>
                         </div>
                     </div>
                 </div>

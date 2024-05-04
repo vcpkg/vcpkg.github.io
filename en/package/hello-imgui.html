@@ -218,216 +218,194 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="imgui.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="imgui.html">imgui<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">imgui<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <pre class="dep-features-preview">
                                 docking-experimental
-                                
                                 </pre>
                             </div>
                         </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="stb.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="stb.html">stb<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">stb<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-config.html">vcpkg-cmake-config<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">experimental-dx11-binding</div>
-                            <div class="feature-description">Use DirectX11 renderer backend (Windows only, experimental)</div>
+                            <div class="feature-name">experimental-dx11-binding - <i class="feature-description">Use DirectX11 renderer backend (Windows only, experimental)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [dx11-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [dx11-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">experimental-dx12-binding</div>
-                            <div class="feature-description">Use DirectX12 renderer backend (Windows only, experimental)</div>
+                            <div class="feature-name">experimental-dx12-binding - <i class="feature-description">Use DirectX12 renderer backend (Windows only, experimental)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [dx12-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [dx12-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">experimental-vulkan-binding</div>
-                            <div class="feature-description">Use Vulkan renderer backend (Windows&#x2F;Linux&#x2F;macOS, experimental)</div>
+                            <div class="feature-name">experimental-vulkan-binding - <i class="feature-description">Use Vulkan renderer backend (Windows&#x2F;Linux&#x2F;macOS, experimental)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [vulkan-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [vulkan-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">freetype-lunasvg</div>
-                            <div class="feature-description">Improve font rendering and use colored fonts with freetype and lunasvg</div>
+                            <div class="feature-name">freetype-lunasvg - <i class="feature-description">Improve font rendering and use colored fonts with freetype and lunasvg</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [freetype, freetype-lunasvg]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [freetype, freetype-lunasvg]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">glfw-binding</div>
-                            <div class="feature-description">Use GLFW platform backend (default)</div>
+                            <div class="feature-name">glfw-binding - <i class="feature-description">Use GLFW platform backend (default)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [glfw-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [glfw-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">metal-binding</div>
-                            <div class="feature-description">Use Metal renderer backend (macOS&#x2F;iOS only)</div>
+                            <div class="feature-name">metal-binding - <i class="feature-description">Use Metal renderer backend (macOS&#x2F;iOS only)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [metal-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [metal-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">opengl3-binding</div>
-                            <div class="feature-description">Use OpenGL3&#x2F;ES2 renderer backend (default)</div>
+                            <div class="feature-name">opengl3-binding - <i class="feature-description">Use OpenGL3&#x2F;ES2 renderer backend (default)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glad.html">glad</a>
-                                [gl-api-43]
-                                
-                                
-                                </li>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [opengl3-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/glad.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glad</div>
+                                <div class="feature-dep-feature">features: [gl-api-43]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [opengl3-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">sdl2-binding</div>
-                            <div class="feature-description">Use SDL2 platform backend</div>
+                            <div class="feature-name">sdl2-binding - <i class="feature-description">Use SDL2 platform backend</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/imgui.html">imgui</a>
-                                [sdl2-binding]
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [sdl2-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

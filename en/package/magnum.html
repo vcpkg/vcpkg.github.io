@@ -218,758 +218,777 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="corrade.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="corrade.html">corrade<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">corrade<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <pre class="dep-features-preview">
                                 utility
-                                
                                 </pre>
                             </div>
                         </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="corrade.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="corrade.html">corrade<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">corrade<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <pre class="dep-features-preview">
                                 utility
-                                
                                 </pre>
                             </div>
                         </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake.html">vcpkg-cmake<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">al-info</div>
-                            <div class="feature-description">magnum-al-info utility</div>
+                            <div class="feature-name">al-info - <i class="feature-description">magnum-al-info utility</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">anyaudioimporter - <i class="feature-description">AnyAudioImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/corrade.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">corrade</div>
+                                <div class="feature-dep-feature">features: [pluginmanager]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">anyimageconverter - <i class="feature-description">AnyImageConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">anyimageimporter - <i class="feature-description">AnyImageImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">anysceneconverter - <i class="feature-description">AnySceneConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">anysceneimporter - <i class="feature-description">AnySceneImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">anyshaderconverter - <i class="feature-description">AnyShaderConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [shadertools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">audio - <i class="feature-description">Audio library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/openal-soft.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openal-soft</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">cglcontext - <i class="feature-description">CglContext library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">debugtools - <i class="feature-description">DebugTools library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">anyaudioimporter</div>
-                            <div class="feature-description">AnyAudioImporter plugin</div>
+                            <div class="feature-name">distancefieldconverter - <i class="feature-description">magnum-distancefieldconverter utility</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/corrade.html">corrade</a>
-                                [pluginmanager]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl, texturetools, trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">eglcontext - <i class="feature-description">EglContext library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">fontconverter - <i class="feature-description">magnum-fontconverter utility</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl, text, trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gl - <i class="feature-description">GL library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">anyimageconverter</div>
-                            <div class="feature-description">AnyImageConverter plugin</div>
+                            <div class="feature-name">gl-info - <i class="feature-description">gl-info utility</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">glfwapplication - <i class="feature-description">GlfwApplication library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glfw3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glfw3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">glxcontext - <i class="feature-description">GlxContext library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">imageconverter - <i class="feature-description">magnum-imageconverter utility</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/corrade.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">corrade</div>
+                                <div class="feature-dep-feature">features: [dynamic-pluginmanager]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">magnumfont - <i class="feature-description">MagnumFont plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [text]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">magnumfontconverter - <i class="feature-description">MagnumFontConverter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [text]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [tgaimageconverter]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">meshtools - <i class="feature-description">MeshTools library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">objimporter - <i class="feature-description">ObjImporter plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opengltester - <i class="feature-description">OpenGLTester library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/corrade.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">corrade</div>
+                                <div class="feature-dep-feature">features: [testsuite]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">primitives - <i class="feature-description">Primitives library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [meshtools, trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">sceneconverter - <i class="feature-description">magnum-sceneconverter utility</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/corrade.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">corrade</div>
+                                <div class="feature-dep-feature">features: [dynamic-pluginmanager]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [anysceneconverter]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">scenegraph - <i class="feature-description">SceneGraph library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">anyimageimporter</div>
-                            <div class="feature-description">AnyImageImporter plugin</div>
+                            <div class="feature-name">sdl2application - <i class="feature-description">Sdl2Application library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/sdl2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sdl2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">shaderconverter - <i class="feature-description">magnum-shaderconverter utility</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [anyshaderconverter, shadertools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">shaders - <i class="feature-description">Shaders library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">shadertools - <i class="feature-description">ShaderTools library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">anysceneconverter</div>
-                            <div class="feature-description">AnySceneConverter plugin</div>
+                            <div class="feature-name">text - <i class="feature-description">Text library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/corrade.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">corrade</div>
+                                <div class="feature-dep-feature">features: [pluginmanager]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [texturetools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">texturetools - <i class="feature-description">TextureTools library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">anysceneimporter</div>
-                            <div class="feature-description">AnySceneImporter plugin</div>
+                            <div class="feature-name">tgaimageconverter - <i class="feature-description">TgaImageConverter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">anyshaderconverter</div>
-                            <div class="feature-description">AnyShaderConverter plugin</div>
+                            <div class="feature-name">tgaimporter - <i class="feature-description">TgaImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [shadertools]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [trade]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">audio</div>
-                            <div class="feature-description">Audio library</div>
+                            <div class="feature-name">trade - <i class="feature-description">Trade library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/openal-soft.html">openal-soft</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/corrade.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">corrade</div>
+                                <div class="feature-dep-feature">features: [pluginmanager]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cglcontext</div>
-                            <div class="feature-description">CglContext library</div>
+                            <div class="feature-name">vk - <i class="feature-description">Vk library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/vulkan.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">vulkan</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">debugtools</div>
-                            <div class="feature-description">DebugTools library</div>
+                            <div class="feature-name">vk-info - <i class="feature-description">vk-info utility</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [vk]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">distancefieldconverter</div>
-                            <div class="feature-description">magnum-distancefieldconverter utility</div>
+                            <div class="feature-name">wavaudioimporter - <i class="feature-description">WavAudioImporter plugin</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl, texturetools, trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [audio]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">eglcontext</div>
-                            <div class="feature-description">EglContext library</div>
+                            <div class="feature-name">wglcontext - <i class="feature-description">WglContext library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">fontconverter</div>
-                            <div class="feature-description">magnum-fontconverter utility</div>
+                            <div class="feature-name">windowlesscglapplication - <i class="feature-description">WindowlessCglApplication library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl, text, trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gl</div>
-                            <div class="feature-description">GL library</div>
+                            <div class="feature-name">windowlesseglapplication - <i class="feature-description">WindowlessEglApplication library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gl-info</div>
-                            <div class="feature-description">gl-info utility</div>
+                            <div class="feature-name">windowlessglxapplication - <i class="feature-description">WindowlessGlxApplication library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">glfwapplication</div>
-                            <div class="feature-description">GlfwApplication library</div>
+                            <div class="feature-name">windowlesswglapplication - <i class="feature-description">WindowlessWglApplication library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/glfw3.html">glfw3</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/magnum.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">magnum</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">glxcontext</div>
-                            <div class="feature-description">GlxContext library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">imageconverter</div>
-                            <div class="feature-description">magnum-imageconverter utility</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/corrade.html">corrade</a>
-                                [dynamic-pluginmanager]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">magnumfont</div>
-                            <div class="feature-description">MagnumFont plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [text]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">magnumfontconverter</div>
-                            <div class="feature-description">MagnumFontConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [text]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [tgaimageconverter]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">meshtools</div>
-                            <div class="feature-description">MeshTools library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">objimporter</div>
-                            <div class="feature-description">ObjImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">opengltester</div>
-                            <div class="feature-description">OpenGLTester library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/corrade.html">corrade</a>
-                                [testsuite]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">primitives</div>
-                            <div class="feature-description">Primitives library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [meshtools, trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">sceneconverter</div>
-                            <div class="feature-description">magnum-sceneconverter utility</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/corrade.html">corrade</a>
-                                [dynamic-pluginmanager]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [anysceneconverter]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">scenegraph</div>
-                            <div class="feature-description">SceneGraph library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">sdl2application</div>
-                            <div class="feature-description">Sdl2Application library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/sdl2.html">sdl2</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">shaderconverter</div>
-                            <div class="feature-description">magnum-shaderconverter utility</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [anyshaderconverter, shadertools]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">shaders</div>
-                            <div class="feature-description">Shaders library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">shadertools</div>
-                            <div class="feature-description">ShaderTools library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">text</div>
-                            <div class="feature-description">Text library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/corrade.html">corrade</a>
-                                [pluginmanager]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [texturetools]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">texturetools</div>
-                            <div class="feature-description">TextureTools library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tgaimageconverter</div>
-                            <div class="feature-description">TgaImageConverter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tgaimporter</div>
-                            <div class="feature-description">TgaImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [trade]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">trade</div>
-                            <div class="feature-description">Trade library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/corrade.html">corrade</a>
-                                [pluginmanager]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">vk</div>
-                            <div class="feature-description">Vk library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/vulkan.html">vulkan</a>
-                                
-                                
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">vk-info</div>
-                            <div class="feature-description">vk-info utility</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [vk]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">wavaudioimporter</div>
-                            <div class="feature-description">WavAudioImporter plugin</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [audio]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">wglcontext</div>
-                            <div class="feature-description">WglContext library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">windowlesscglapplication</div>
-                            <div class="feature-description">WindowlessCglApplication library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">windowlesseglapplication</div>
-                            <div class="feature-description">WindowlessEglApplication library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">windowlessglxapplication</div>
-                            <div class="feature-description">WindowlessGlxApplication library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">windowlesswglapplication</div>
-                            <div class="feature-description">WindowlessWglApplication library</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/magnum.html">magnum</a>
-                                [gl]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

@@ -50,30 +50,29 @@
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
                     {{#dependencies}}
-                    <div class="dependency-card">
+                    <a href="{{name}}.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="{{name}}.html">{{name}}<i class="dep-version-min">{{#versionMinimum}} >=v{{versionMinimum}}{{/versionMinimum}}</i></a>
-                            <div class="dep-no-default-feat">{{#noDefaultFeatures}}default features: <i class="disabled">disabled</i>{{/noDefaultFeatures}}{{^noDefaultFeatures}}default features: <i class="enabled">enabled</i>{{/noDefaultFeatures}}</div>
-                            <div class="dep-platform">{{#platform}}constraints: {{platform}}{{/platform}}</div>
-                            <div class="dep-host">{{#host}}host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg">{{/host}}{{^host}}host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg">{{/host}}</div>
+                            <div class="dep-name">{{name}}<i class="dep-version-min">{{#versionMinimum}} >= {{versionMinimum}}{{/versionMinimum}}</i></div>
+                            <div class="dep-no-default-feat">{{#noDefaultFeatures}}default features: <i class="disabled">disabled</i>{{/noDefaultFeatures}}</div>
+                            <div class="dep-platform">{{#platform}}platform: {{platform}}{{/platform}}</div>
+                            <div class="dep-host">{{#host}}host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg">{{/host}}</div>
                         </div>
-                        <div class="vertical-rule"></div>
+                        {{#hasFeatures}}
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <pre class="dep-features-preview">
                                 {{#depFeatures}}{{#first}}{{name}}{{/first}}{{^first}}, {{name}}{{/first}}{{/depFeatures}}
-                                {{^depFeatures}}None{{/depFeatures}}
                                 </pre>
                             </div>
                         </div>
-                    </div>
+                        {{/hasFeatures}}
+                    </a>
                     {{/dependencies}}
                     {{^dependencies}}
                     <div class="dependency-card">No Dependencies</div>
                     {{/dependencies}}
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
@@ -81,30 +80,25 @@
                     {{#features}}
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">{{name}}</div>
-                            <div class="feature-description">{{description}}</div>
+                            <div class="feature-name">{{name}} - <i class="feature-description">{{description}}</i></div>
                         </div>
+                        {{#hasDependencies}}
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            {{#hasDependencies}}
-                            <ul>
-                                {{#dependencies}}
-                                <li><a href="/en/package/{{name}}.html">{{name}}</a>
-                                {{#depFeatures}}{{#first}}[{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}{{/depFeatures}}
-                                {{#noDefaultFeatures}} (default-features: false){{/noDefaultFeatures}}
-                                {{#platform}} (platform: {{.}}){{/platform}}
-                                </li>
-                                {{/dependencies}}
-                            </ul>
-                            {{/hasDependencies}}
-                            {{^hasDependencies}}
-                            <div class="no-dependencies">None</div>
-                            {{/hasDependencies}}
+                            {{#dependencies}}
+                            <a href="/en/package/{{name}}.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">{{name}}</div>
+                                <div class="feature-dep-feature">{{#depFeatures}}{{#first}}features: [{{/first}}{{name}}{{^last}}, {{/last}}{{#last}}]{{/last}}{{/depFeatures}}</div>
+                                <div class="feature-dep-platform">{{#platform}}platform: {{.}}{{/platform}}</div>
+                                <div class="feature-dep-no-default">{{#noDefaultFeatures}}default features: disabled{{/noDefaultFeatures}}</div>
+                            </div>
+                            </a>
+                            {{/dependencies}}
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                        {{/hasDependencies}}
                     </div>
-                    {{/features}}
-                    {{^features}}
-                    <div>No Features</div>
                     {{/features}}
                 </div>
             </div>

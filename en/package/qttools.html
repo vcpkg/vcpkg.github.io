@@ -218,166 +218,152 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="litehtml.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="litehtml.html">litehtml<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">litehtml<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="qtbase.html">qtbase<i class="dep-version-min"></i></a>
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/x-solid.svg"></div>
+                            <div class="dep-host"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dependency-card">
+                    </a>
+                    <a href="qttools.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="qttools.html">qttools<i class="dep-version-min"></i></a>
+                            <div class="dep-name">qttools<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <pre class="dep-features-preview">
                                 assistant, linguist
-                                
                                 </pre>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">assistant</div>
-                            <div class="feature-description">Build Qt Assistant</div>
+                            <div class="feature-name">assistant - <i class="feature-description">Build Qt Assistant</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/qtbase.html">qtbase</a>
-                                [network, png, sql-sqlite, widgets]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [network, png, sql-sqlite, widgets]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">designer</div>
-                            <div class="feature-description">Build Qt Designer</div>
+                            <div class="feature-name">designer - <i class="feature-description">Build Qt Designer</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/qtbase.html">qtbase</a>
-                                [network]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [network]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">linguist</div>
-                            <div class="feature-description">Build Qt Linguist components</div>
+                            <div class="feature-name">linguist - <i class="feature-description">Build Qt Linguist components</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/qttools.html">qttools</a>
-                                [designer]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/qttools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qttools</div>
+                                <div class="feature-dep-feature">features: [designer]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">qdbus</div>
-                            <div class="feature-description">Build QDBusViewer</div>
+                            <div class="feature-name">qdbus - <i class="feature-description">Build QDBusViewer</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/qtbase.html">qtbase</a>
-                                [dbus, widgets]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [dbus, widgets]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">qdoc</div>
-                            <div class="feature-description">Build QDoc</div>
+                            <div class="feature-name">qdoc - <i class="feature-description">Build QDoc</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/llvm.html">llvm</a>
-                                [clang, enable-rtti]
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/llvm.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">llvm</div>
+                                <div class="feature-dep-feature">features: [clang, enable-rtti]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">qml</div>
-                            <div class="feature-description">Build QML imports</div>
+                            <div class="feature-name">qml - <i class="feature-description">Build QML imports</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/qtbase.html">qtbase</a>
-                                [gui]
-                                 (default-features: false)
-                                
-                                </li>
-                                <li><a href="/en/package/qtdeclarative.html">qtdeclarative</a>
-                                
-                                 (default-features: false)
-                                
-                                </li>
-                            </ul>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [gui]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qtdeclarative.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtdeclarative</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
                     </div>
                 </div>
             </div>

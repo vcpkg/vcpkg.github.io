@@ -14,6 +14,7 @@
 .name-version-container{
     display: flex;
 }
+
 .package-name{
     font-size: 42px;
     font-weight: 700;
@@ -42,7 +43,6 @@
    padding-inline: 5px;
 }
 
-
 .versions-tab{
    border: #000;
    padding-inline: 5px;
@@ -58,7 +58,7 @@ ul.tab-container {
     padding-inline: 0;
     margin-inline-start: 0px;
     margin-block-start: 10px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid lightgrey;
 }
 
 .tab {
@@ -67,8 +67,14 @@ ul.tab-container {
     padding-inline: 15px;
     border-radius: 5px 5px 0 0;
 }
+
 .tab:hover{
     background-color: #f0f0f0;
+
+}
+
+.active-tab, .tab.active-tab:hover {
+    background-color: #ddd;
 }
 
 .active-tab{
@@ -101,22 +107,28 @@ ul.tab-container {
 }
 
 .dependency-card{
-    border: 1px solid #00000020;
-    box-shadow: 1px 1px 1px 1px #ccc;
+    border: 1px solid #403d3d21;
+    box-shadow: 1px 1px 1px 1px #f5f2f2;
     padding-inline-start: 5px;
     padding-inline-end: 15px;
     margin-block-end: 10px;
     border-radius: 5px;
-    min-height: 100px;
-    display: none;
+    display: flex;
+    color: black;
+}
 
+.dependency-card:hover{
+    text-decoration: none;
+    color: #000;
+    box-shadow: 1px 1px 1px 1px #c3c3c3;
 }
 
 .dependency-card .section-one{
-    flex: 1;
     font-size: 18px;
+    flex: 1;
     padding-block-start: 15px;
     padding-inline-start: 15px;
+    margin-block-end: 15px;
 
     .dep-name{
         font-weight: 700;
@@ -135,28 +147,28 @@ ul.tab-container {
 
 }
 
+.dependency-card .section-two{
+    flex: 2;
+}
+
+.dep-features{
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 10px;
+}
+.dep-features-title{
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+}
+
 .dep-features-preview{
+    flex: 2;
     white-space: pre-line; 
     word-wrap: break-word;
     background-color: #f4f4f4;
     border-radius: 4px;
     text-align: center;
-}
-
-.vertical-rule {
-    width: 2px;
-    background-color: #444;
-    height: 90%;
-}
-
-.dependency-card .section-two{
-    flex: 2;
-
-}
-
-.dep-features-title{
-    text-align: center;
-    font-weight: 600;
 }
 
 .dep-host{
@@ -173,22 +185,11 @@ ul.tab-container {
     font-size: 12px;
 }
 
-.dependency-card:nth-child(-n+10){
-    display: block;
-}
-
-#expandButton{
-    display: none;
-}
-
 .feature-card{
-    border: 1px solid #00000020;
-    box-shadow: 1px 1px 1px 1px #ccc;
-    padding-inline-start: 5px;
-    padding-inline-end: 15px;
+    border: 1px solid #403d3d21;
+    box-shadow: 1px 1px 1px 1px #f5f2f2;
     margin-block-end: 10px;
     border-radius: 5px;
-    min-height: 100px;
     display: flex;
 }
 
@@ -197,26 +198,34 @@ ul.tab-container {
     font-size: 18px;
     padding-block-start: 15px;
     padding-inline-start: 15px;
+    padding-inline-end: 15px;
+    margin-block-end: 15px;
+    align-content: center;
 
     .feature-name{
         font-weight: 700;
         color: #000;
         font-size: 19px;
+
+        .feature-description{
+            color: grey;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
     }
 
-    .feature-description{
-        color: grey;
-        font-size: 14px;
-        word-wrap: break-word;
-    }
+    
 }
 
 .feature-card .section-two{
     flex: 2;
+    margin-block-start: 20px;
+    padding-inline-start: 5px;
 
     .dependency-title{
-        text-align: center;
+        font-size: 16px;
         font-weight: 600;
+        padding-inline-start: 15px;
     }
 
     .no-dependencies{
@@ -224,10 +233,31 @@ ul.tab-container {
     }
 }
 
+.feature-dep-card{
+    margin-block: 10px;
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+    padding-inline-start: 8px;
+    border-left: 2px solid #c9c7c7;
+    color: black;
+    text-decoration: none;
+    .feature-dep-name{
+        font-size: 16px;
+    }
+    .feature-dep-feature{
+        font-size: 14px;
+    }
+    .feature-dep-no-default{
+        font-size: 14px;
+    }
 
-.card-container:target #expandButton,
-.card-container:target .dependency-card{
-    display: block;
+    .feature-dep-platform{
+        font-size: 14px;
+    }
+}
+
+.feature-dep-card:hover{
+    border-left: 3px solid #c9c7c7;
 }
 
 .sidebar-container{

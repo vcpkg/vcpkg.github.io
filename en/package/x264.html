@@ -218,84 +218,54 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">
+                    <a href="vcpkg-cmake-get-vars.html" class="dependency-card">
                         <div class="section-one">
-                            <a class="dep-name"href="vcpkg-cmake-get-vars.html">vcpkg-cmake-get-vars<i class="dep-version-min"></i></a>
-                            <div class="dep-no-default-feat">default features: <i class="enabled">enabled</i></div>
+                            <div class="dep-name">vcpkg-cmake-get-vars<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
                         </div>
-                        <div class="vertical-rule"></div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <pre class="dep-features-preview">
-                                
-                                None
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <button id="expandButton">Expand for more</button>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">asm</div>
-                            <div class="feature-description">Enable platform-specific assembly optimizations</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">asm - <i class="feature-description">Enable platform-specific assembly optimizations</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">chroma-format-all</div>
-                            <div class="feature-description">Output all chroma formats</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">chroma-format-all - <i class="feature-description">Output all chroma formats</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">default-features</div>
-                            <div class="feature-description">Default set of features</div>
+                            <div class="feature-name">default-features - <i class="feature-description">Default set of features</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <ul>
-                                <li><a href="/en/package/x264.html">x264</a>
-                                [asm, gpl]
-                                
-                                 (platform: x86 | x64 | (arm &amp; !windows) | arm64)
-                                </li>
-                            </ul>
+                            <a href="/en/package/x264.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">x264</div>
+                                <div class="feature-dep-feature">features: [asm, gpl]</div>
+                                <div class="feature-dep-platform">platform: x86 | x64 | (arm &amp; !windows) | arm64</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- <button class="expand-dependencies">Show Dependencies</button> -->
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gpl - <i class="feature-description">Allow use of GPL code, the resulting libs and binaries will be under GPL</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gpl</div>
-                            <div class="feature-description">Allow use of GPL code, the resulting libs and binaries will be under GPL</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tool</div>
-                            <div class="feature-description">Build the command line tool</div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <div class="no-dependencies">No Dependencies</div>
+                            <div class="feature-name">tool - <i class="feature-description">Build the command line tool</i></div>
                         </div>
                     </div>
                 </div>
