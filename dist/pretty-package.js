@@ -27,19 +27,4 @@ document.addEventListener('DOMContentLoaded', function () {
      if (tabs.length > 0) {
          tabs[0].click();
      }
-
-     // Handling expand/collapse buttons
-    //  const toggleButtons = document.querySelectorAll('.expand-dependencies');
-    //  toggleButtons.forEach(function(button) {
-    //      button.addEventListener('click', function() {
-    //          const sectionTwo = this.previousElementSibling; // Assuming section-two is directly after the button
-    //          if (sectionTwo.style.display === 'none' || sectionTwo.style.display === '') {
-    //              sectionTwo.style.display = 'block';
-    //              button.textContent = 'Hide Dependencies';
-    //          } else {
-    //              sectionTwo.style.display = 'none';
-    //              button.textContent = 'Show Dependencies';
-    //          }
-    //      });
-    //  });
 });
