@@ -78,49 +78,6 @@ async function readPorts(vcpkgDir) {
     return results;
 }
 
-async function readBaseline(vcpkgDir) {
-    const baselineFile = path.join(vcpkgDir, 'scripts', 'ci.baseline.txt');
-
-    let data = await fs.readFile(baselineFile, { encoding: 'utf-8', flag: 'r' });
-    let baseline = {};
-    const lines = data.split(/\r?\n/);
-    for (let tmp of lines) {
-        let line = tmp.trim();
-        if (line.length == 0 || line.startsWith('#')) continue;
-
-        let index = 0;
-
-        let port = '';
-        while (index < line.length && line[index] != ':') {
-            port += line[index++];
-        }
-        port = port.trim();
-        ++index;
-
-        let triplet = '';
-        while (index < line.length && line[index] != '=') {
-            triplet += line[index++];
-        }
-        triplet = triplet.trim();
-        ++index;
-
-        let result = '';
-        while (index < line.length && line[index] != '#') {
-            result += line[index++];
-        }
-        result = result.trim();
-
-        if (port.length == 0 || triplet.length == 0 || result.length == 0) continue;
-        if (!(result == 'pass' || result == 'fail' || result == 'skip')) continue;
-
-        if (!(port in baseline)) {
-            baseline[port] = {};
-        }
-        baseline[port][triplet] = result;
-    }
-    return baseline;
-}
-
 async function readStars(starsFile) {
     try {
         let data = await fs.readFile(starsFile, { encoding: 'utf-8', flag: 'r' });
@@ -133,19 +90,7 @@ async function readStars(starsFile) {
     }
 }
 
-function mergeDataSources(portsData, baselineData, githubData) {
-    const allTriplets = [
-        'arm-uwp',
-        'arm64-windows',
-        'x64-linux',
-        'x64-osx',
-        'x64-uwp',
-        'x64-windows-static-md',
-        'x64-windows-static',
-        'x64-windows',
-        'x86-windows'
-    ];
-
+function mergeDataSources(portsData, githubData) {
     // merge and normalize all data sources
     for (let port of Object.keys(portsData)) {
         // website expects an empty array if the package has no features
@@ -154,16 +99,6 @@ function mergeDataSources(portsData, baselineData, githubData) {
         }
 
         portsData[port]['Stars'] = githubData[port] ?? 0;
-
-        // website expects all known triplets to be listed
-        for (let triplet of allTriplets) {
-            if (port in baselineData && triplet in baselineData[port]) {
-                portsData[port][triplet] = baselineData[port][triplet];
-            }
-            else {
-                portsData[port][triplet] = 'pass';
-            }
-        }
     }
 }
 
@@ -172,9 +107,8 @@ async function main(vcpkgDir, destDir) {
     const outputFile = path.join(destDir, 'output.json');
 
     let portsData = await readPorts(vcpkgDir);
-    let baselineData = await readBaseline(vcpkgDir);
     let githubData = await readStars(starsFile);
-    mergeDataSources(portsData, baselineData, githubData);
+    mergeDataSources(portsData, githubData);
     let mergedData = Object.values(portsData);
 
     let outputJson = {};

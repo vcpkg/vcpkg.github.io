@@ -4,7 +4,6 @@ var wording = {
     en: {
         version: 'Version: ',
         more: ' More...',
-        compat: 'Compatibility:',
         website: 'Website',
         star: 'Star',
         'total-pkgs': 'Total Packages: ',
@@ -25,7 +24,6 @@ var triplets = [
     'x64-windows-static',
     'x86-windows',
 ];
-var compatFilter = [];
 $(document).ready(function () {
     $(".load-results").on("click", function(e) {
         renderMorePackages();
@@ -104,87 +102,6 @@ var renderCardDescription = function (fullDesc) {
     descriptionDiv.appendChild(shortDescSpan);
     return descriptionDiv;
 };
-
-var renderCompatibility = function (pkg, packageDiv) {
-    var compatRowDiv = document.createElement('div');
-    compatRowDiv.className = 'package-compatibility';
-
-    // Compatibility text
-    var compatDiv = document.createElement('span');
-    compatDiv.className = 'package-compatibility-text';
-    compatDiv.textContent = wording[lang]['compat'];
-    compatRowDiv.appendChild(compatDiv);
-
-    // Display processor statuses
-    let statusDiv = document.createElement('div');
-    statusDiv.className = 'processor-status';
-
-    let compatRowFrag = document.createDocumentFragment();
-    for (var t of triplets) {
-        var procStatusDiv = statusDiv.cloneNode(true);
-        var status = pkg[t];
-        var simplifiedStatus = status === 'pass' || status === 'fail' ? status : 'unknown';
-        procStatusDiv.classList.add(simplifiedStatus);
-
-        // hide card if it doesn't pass the compatibility filter
-        if (packageDiv && simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
-            packageDiv.classList.add('hide');
-        }
-
-        let statusIcon;
-        let alt_text;
-        switch (simplifiedStatus) {
-            case 'pass':
-                statusIcon = '✓';
-                alt_text = 'Compatible with ' + t;
-                break;
-            case 'fail':
-                statusIcon = '!';
-                alt_text = 'Not Compatible with ' + t;
-                break;
-            default:
-                statusIcon = '?';
-                alt_text = 'Compatibility unknown on ' + t;
-        }
-
-        procStatusDiv.textContent = statusIcon + ' ' + t;
-        let spanTip = document.createElement('span');
-
-        spanTip.textContent = alt_text;
-        procStatusDiv.appendChild(spanTip);
-        procStatusDiv.classList.add('tip');
-        compatRowFrag.appendChild(procStatusDiv);
-    }
-    compatRowDiv.appendChild(compatRowFrag);
-    return compatRowDiv;
-};
-
-var renderCompability = function (pkg, packageDiv) {
-    var compatRowDiv = document.createElement('div');
-    compatRowDiv.className = 'package-compatibility';
-    // Compatibility text
-    var compatDiv = document.createElement('span');
-    compatDiv.className = 'package-compatibility-text';
-    compatDiv.textContent = wording[lang]['compat'];
-    compatRowDiv.appendChild(compatDiv);
-    // Display processor statuses
-    var statusDiv = document.createElement('div');
-    statusDiv.className = 'processor-status';
-    var compatRowFrag = document.createDocumentFragment();
-    var platformPassesString = "";
-    for (var _i = 0, triplets_1 = triplets; _i < triplets_1.length; _i++) {
-        var t = triplets_1[_i];
-        var status = pkg[t];
-        if (status === 'pass') {
-            platformPassesString += ", " + triplets_1[_i]
-        }
-    }
-    statusDiv.textContent = platformPassesString.substring(2);
-    compatRowFrag.appendChild(statusDiv);
-    compatRowDiv.appendChild(compatRowFrag);
-    return compatRowDiv;
-};
-
 function expandText(moreDescSpan, extraDescSpan) {
     extraDescSpan.classList.remove('hide');
     moreDescSpan.className = 'hide';
@@ -435,8 +352,8 @@ function renderCard(package, mainDiv, oldCancellationToken) {
     });
 
     var cardFrag = document.createDocumentFragment();
-    //package details (e.g description, compatibility, website)
-    cardFrag.appendChild(renderPackageDetails(package));
+    //package details (e.g description, website)
+    cardFrag.appendChild(renderPackageDetails(package, packageDiv));
     // Add the package card to the page
     packageDiv.appendChild(cardFrag);
     // Parent div to hold all the package cards
@@ -569,25 +486,9 @@ function sortPackages() {
             break;
     }
 }
-function filterCompat() {
-    compatFilter = Array.from(document.querySelectorAll(".compat-card input[type='checkbox']:checked")).map(function (e) { return e.value; });
-    renderPackages();
-}
 
 function loadTotalPackages() {
     var totalPackages = document.getElementsByClassName('total-packages')[0];
-    var hiddenPackages = new Set();
-    for (var i = 0; i < currentPackages.length; i++) {
-        for (var _i = 0, triplets_2 = triplets; _i < triplets_2.length; _i++) {
-            var t = triplets_2[_i];
-            var status_1 = currentPackages[i][t];
-            var simplifiedStatus = status_1 === 'pass' || status_1 === 'fail' ? status_1 : 'unknown';
-            if (simplifiedStatus === 'fail' && compatFilter.indexOf(t) !== -1) {
-                hiddenPackages.add(currentPackages[i]);
-            }
-        }
-    }
-
-    let packagesFound = currentPackages.length - hiddenPackages.size;
+    let packagesFound = currentPackages.length;
     totalPackages.textContent = 'Showing 1-' + maxPackageLength + ' of ' + packagesFound + ' packages';
 }
