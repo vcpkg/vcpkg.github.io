@@ -136,7 +136,7 @@ async function renderDetailedPackages() {
 
     // Load all templates and data once at the beginning.
     const [packageTemplate, navbarHtml, footerHtml, commonHeadHtml, packageDataSource] = await Promise.all([
-        fs.readFile(templatesDir + "/pretty-package.html", 'utf8'),
+        fs.readFile(templatesDir + "/package.html", 'utf8'),
         fs.readFile(templatesDir + "/navbar.html"),
         fs.readFile(templatesDir + "/footer.html"),
         fs.readFile(templatesDir + "/commonhead.html"),
