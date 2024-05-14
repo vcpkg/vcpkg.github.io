@@ -65,12 +65,15 @@
    padding-inline: 5px;
 }
 
+.tab-container{
+    margin-block-end: 0;
+}
+
 ul.tab-container {
     display: flex;
     padding-inline: 0;
     margin-inline-start: 0px;
     margin-block-start: 10px;
-    border-bottom: 1px solid lightgrey;
 }
 
 .tab {
@@ -116,6 +119,22 @@ ul.tab-container {
 .active-header{
     font-size: 32px;
     font-weight: 700;
+}
+
+#dependencies-content{
+    border-top: 1px solid #c3c3c3;
+}
+
+#features-content{
+    border-top: 1px solid #c3c3c3;
+}
+
+#versions-content{
+    border-top: 1px solid #c3c3c3;
+}
+
+#port-content{
+    border-top: 1px solid #c3c3c3;
 }
 
 .dependency-card{
@@ -173,12 +192,12 @@ ul.tab-container {
     flex: 1;
     padding-inline-start: 5px;
     text-align: left;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .dep-features-preview{
     flex: 2;
-    border-inline-start: 2px solid #f1f1f1;
+    border-inline-start: 2px solid #c9c7c7;
     padding-inline-start: 5px;
     text-align: left;
     font-size: 12px;
@@ -202,6 +221,7 @@ ul.tab-container {
     border: 1px solid #403d3d21;
     box-shadow: 1px 1px 1px 1px #f5f2f2;
     margin-block-end: 10px;
+    padding-block-end: 10px;
     border-radius: 5px;
     display: flex;
 }
