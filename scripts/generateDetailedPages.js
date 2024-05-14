@@ -10,17 +10,6 @@ const destDir = path.dirname(__dirname);
 const commitFilePath = path.join(__dirname, 'commit.txt');
 const vcpkgDir = path.join(__dirname, '../vcpkg');
 
-var triplets = [
-    'arm-uwp',
-    'arm64-windows',
-    'x64-linux',
-    'x64-osx',
-    'x64-uwp',
-    'x64-windows',
-    'x64-windows-static',
-    'x86-windows',
-];
-
 async function readJsonFile(filePath) {
     const fileData = await fs.readFile(filePath, 'utf8');
     return JSON.parse(fileData);
@@ -86,29 +75,6 @@ function GetPackageFeatures(packageObj) {
     return featuresList;
 }
 
-function GetSupportedPlatArch(packageObj) {
-    var spaObj = {};
-    var platformPassesString = "";
-    var archiPassesString = "";
-    for (var _i = 0, triplets_1 = triplets; _i < triplets_1.length; _i++) {
-        var t = triplets_1[_i];
-        var status = packageObj[t];
-        if (status === 'pass') {
-            platformPassesString += ", " + triplets_1[_i];
-            if (archiPassesString == "") {
-                archiPassesString = triplets_1[_i];
-            }
-            else {
-                archiPassesString += ", " + triplets_1[_i];
-            }
-        }
-    }
-    spaObj.supportedPlatForms = platformPassesString;
-    spaObj.supportedArchitectures = archiPassesString;
-    return spaObj;
-}
-
-
 function transform_dep(dep) {
     if (typeof (dep) === "string") {
         return { "name": dep };
@@ -130,6 +96,41 @@ function transform_dep(dep) {
     }
 }
 
+async function getSupportedArchitectures(packageInfo, vcpkgDir) {
+    const ciBaselinePath = path.join(vcpkgDir, 'scripts', 'ci.baseline.txt');
+    const ciBaselineContent = await fs.readFile(ciBaselinePath, 'utf-8');
+
+    // Function to parse ci.baseline.txt and get skipped or failed platforms
+    function getSkippedOrFailedPlatforms(packageName, ciBaselineContent) {
+        const lines = ciBaselineContent.trim().split('\n');
+        const platforms = [];
+        for (const line of lines) {
+            if (line.startsWith('#')) continue; // Ignore comments
+            const [pkgInfo, status] = line.split('=');
+            if (pkgInfo.startsWith(packageName) && (status === 'skip' || status === 'fail')) {
+                const platform = pkgInfo.split(':')[1];
+                platforms.push(`!${platform}`);
+            }
+        }
+        return platforms;
+    }
+
+    const skippedOrFailedPlatforms = getSkippedOrFailedPlatforms(packageInfo.Name.toLowerCase(), ciBaselineContent);
+
+    if (packageInfo['Supports']) {
+        packageInfo.supportedArchitectures = [packageInfo['Supports'], ...skippedOrFailedPlatforms];
+    } else {
+        if (skippedOrFailedPlatforms.length > 0) {
+            packageInfo.supportedArchitectures = skippedOrFailedPlatforms;
+        } else {
+            packageInfo.supportedArchitectures = ["Tested on all platforms"];
+        }
+    }
+
+    return packageInfo.supportedArchitectures;
+}
+
+
 async function renderDetailedPackages() {
     const commitHash = await getCommitHash(commitFilePath);
 
@@ -147,7 +148,7 @@ async function renderDetailedPackages() {
         packageInfo.LastUpdated = packageInfo.LastModified;
         packageInfo.PortVersion = packageInfo['Port-Version'] || 0;
         packageInfo.FeaturesContent = GetPackageFeatures(packageInfo);
-        packageInfo = { ...packageInfo, ...GetSupportedPlatArch(packageInfo) };
+        packageInfo.supportedArchitectures = await getSupportedArchitectures(packageInfo, vcpkgDir);
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
         packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
 
