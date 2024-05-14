@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - fplus</title>
+  <title>vcpkg package - boost-cmake</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -190,14 +190,14 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <div class="package-name">
-                    fplus
+                    boost-cmake
                 </div>
                 <div class="package-version">
-                    0.2.23
+                    1.84.0
                 </div>
             </div>
             <div class="package-description">
-                Functional Programming Library for C++. Write concise and readable C++ code
+                Boost cmake files
             </div>
         </div>
     <div class="flex-wrapper">
@@ -219,9 +219,33 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
+                    <a href="boost-uninstall.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">boost-uninstall<i class="dep-version-min"> >= 1.84.0</i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-boost.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-boost<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
@@ -238,20 +262,24 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">0.2.23#0</li>
-                    <li class="badge badge-primary">0.2.22#0</li>
-                    <li class="badge badge-primary">0.2.20-p0#0</li>
-                    <li class="badge badge-primary">0.2.18-p0#0</li>
-                    <li class="badge badge-primary">0.2.14-p0#0</li>
-                    <li class="badge badge-primary">0.2.13-p0#0</li>
-                    <li class="badge badge-primary">0.2.3-p0#0</li>
+                    <li class="badge badge-primary">1.84.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/fplus/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/fplus/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/CMakeLists.txt.in" target="_blank">CMakeLists.txt.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/add-optional-deps.diff" target="_blank">add-optional-deps.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/fix-missing-archs.diff" target="_blank">fix-missing-archs.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/fix-mpi.diff" target="_blank">fix-mpi.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/no-prefix.diff" target="_blank">no-prefix.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/ref_sha.cmake" target="_blank">ref_sha.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/vcpkg-build.diff" target="_blank">vcpkg-build.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/vcpkg-port-config.cmake" target="_blank">vcpkg-port-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/boost-cmake/zstd.diff" target="_blank">zstd.diff</a></li>
                   </ul>
             </div>
         </div>
@@ -259,7 +287,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSL-1.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:"> 2024-04-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:"> 2024-05-03</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -275,15 +303,15 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Documentation:">
-                    <a href="https://github.com/Dobiasd/FunctionalPlus">https://github.com/Dobiasd/FunctionalPlus</a>
+                    Unavailable
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Install</div>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install fplus</pre>
+                <pre> vcpkg install boost-cmake</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port fplus</pre>
+                <pre> vcpkg add port boost-cmake</pre>
             </div>
         </div>
     </div>
