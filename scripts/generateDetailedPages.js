@@ -96,40 +96,6 @@ function transform_dep(dep) {
     }
 }
 
-async function getSupportedArchitectures(packageInfo, vcpkgDir) {
-    const ciBaselinePath = path.join(vcpkgDir, 'scripts', 'ci.baseline.txt');
-    const ciBaselineContent = await fs.readFile(ciBaselinePath, 'utf-8');
-
-    // Function to parse ci.baseline.txt and get skipped or failed platforms
-    function getSkippedOrFailedPlatforms(packageName, ciBaselineContent) {
-        const lines = ciBaselineContent.trim().split('\n');
-        const platforms = [];
-        for (const line of lines) {
-            if (line.startsWith('#')) continue; // Ignore comments
-            const [pkgInfo, status] = line.split('=');
-            if (pkgInfo.startsWith(packageName) && (status === 'skip' || status === 'fail')) {
-                const platform = pkgInfo.split(':')[1];
-                platforms.push(`!${platform}`);
-            }
-        }
-        return platforms;
-    }
-
-    const skippedOrFailedPlatforms = getSkippedOrFailedPlatforms(packageInfo.Name.toLowerCase(), ciBaselineContent);
-
-    if (packageInfo['Supports']) {
-        packageInfo.supportedArchitectures = [packageInfo['Supports'], ...skippedOrFailedPlatforms];
-    } else {
-        if (skippedOrFailedPlatforms.length > 0) {
-            packageInfo.supportedArchitectures = skippedOrFailedPlatforms;
-        } else {
-            packageInfo.supportedArchitectures = ["Tested on all platforms"];
-        }
-    }
-
-    return packageInfo.supportedArchitectures;
-}
-
 
 async function renderDetailedPackages() {
     const commitHash = await getCommitHash(commitFilePath);
@@ -148,7 +114,7 @@ async function renderDetailedPackages() {
         packageInfo.LastUpdated = packageInfo.LastModified;
         packageInfo.PortVersion = packageInfo['Port-Version'] || 0;
         packageInfo.FeaturesContent = GetPackageFeatures(packageInfo);
-        packageInfo.supportedArchitectures = await getSupportedArchitectures(packageInfo, vcpkgDir);
+        packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Information not available"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
         packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
 
