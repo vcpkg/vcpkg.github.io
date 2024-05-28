@@ -114,7 +114,7 @@ async function renderDetailedPackages() {
         packageInfo.LastUpdated = packageInfo.LastModified;
         packageInfo.PortVersion = packageInfo['Port-Version'] || 0;
         packageInfo.FeaturesContent = GetPackageFeatures(packageInfo);
-        packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Information not available"];
+        packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Supported on all triplets"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
         packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
 
