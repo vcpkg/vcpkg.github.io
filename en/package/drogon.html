@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <title>vcpkg package - drogon</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/package.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script>
+
+<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+<script src="../scripts/consentAndAnalytics.js"></script>
+
+</head>
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+<body>
+  <main class="package-body" id="main">
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    drogon
+                </div>
+                <div class="package-version">
+                    1.9.3
+                </div>
+            </div>
+            <div class="package-description">
+                A C++14/17 based HTTP web application framework running on Linux/macOS/Unix/Windows
+            </div>
+        </div>
+    <div class="flex-wrapper">
+        <div class="active-container">
+            <ul class="tab-container">
+                <li class="tab active-tab" data-target="dependencies-content">
+                    Dependencies
+                </li>
+                <li class="tab" data-target="features-content">
+                    Features
+                </li>
+                <li class="tab" data-target="versions-content">
+                    Versions
+                </li>
+                <li class="tab" data-target="port-content">
+                    Port Content
+                </li>
+            </ul>
+            <div id="dependencies-content" class="tab-content active">
+                <div class="active-header">Dependencies</div>
+                <div class="card-container">
+                    <a href="brotli.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">brotli<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="jsoncpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">jsoncpp<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="libuuid.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libuuid<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !windows &amp; !osx</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="trantor.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">trantor<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                    </a>
+                    <a href="zlib.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">zlib<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="features-content" class="tab-content">
+                <div class="active-header">Features</div>
+                <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ctl - <i class="feature-description">Build drogon_ctl tool.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/drogon.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">drogon</div>
+                                <div class="feature-dep-feature">features: [ctl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">mysql - <i class="feature-description">Support reading and writing from&#x2F;to MySQL databases.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/drogon.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">drogon</div>
+                                <div class="feature-dep-feature">features: [orm]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libmariadb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libmariadb</div>
+                                <div class="feature-dep-feature">features: [iconv]</div>
+                                <div class="feature-dep-platform">platform: osx</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libmariadb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libmariadb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !osx</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">orm - <i class="feature-description">Build with object-relational mapping support.</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">postgres - <i class="feature-description">Support reading and writing from&#x2F;to Postgres databases.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/drogon.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">drogon</div>
+                                <div class="feature-dep-feature">features: [orm]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libpq.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libpq</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">redis - <i class="feature-description">Support reading and writing from&#x2F;to Redis databases.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/drogon.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">drogon</div>
+                                <div class="feature-dep-feature">features: [orm]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/hiredis.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">hiredis</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">sqlite3 - <i class="feature-description">Support reading and writing from&#x2F;to SQLite databases.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/drogon.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">drogon</div>
+                                <div class="feature-dep-feature">features: [orm]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/sqlite3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sqlite3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">yaml - <i class="feature-description">Support YAML Drogon configuration files</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/yaml-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">yaml-cpp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="versions-content" class="tab-content">
+                <div class="active-header">Available Versions</div>
+                <ul class="version-badges">
+                    <li class="badge badge-primary">1.9.3#0</li>
+                    <li class="badge badge-primary">1.9.2#0</li>
+                    <li class="badge badge-primary">1.9.1#1</li>
+                    <li class="badge badge-primary">1.9.1#0</li>
+                    <li class="badge badge-primary">1.8.7#1</li>
+                    <li class="badge badge-primary">1.8.7#0</li>
+                    <li class="badge badge-primary">1.8.4#4</li>
+                    <li class="badge badge-primary">1.8.4#3</li>
+                    <li class="badge badge-primary">1.8.4#2</li>
+                    <li class="badge badge-primary">1.8.4#1</li>
+                    <li class="badge badge-primary">1.8.4#0</li>
+                    <li class="badge badge-primary">1.8.2#1</li>
+                    <li class="badge badge-primary">1.8.2#0</li>
+                    <li class="badge badge-primary">1.8.1#0</li>
+                    <li class="badge badge-primary">1.8.0#0</li>
+                    <li class="badge badge-primary">1.7.5#0</li>
+                    <li class="badge badge-primary">1.7.4#2</li>
+                    <li class="badge badge-primary">1.7.4#1</li>
+                    <li class="badge badge-primary">1.7.4#0</li>
+                    <li class="badge badge-primary">1.7.3#0</li>
+                    <li class="badge badge-primary">1.7.1#2</li>
+                    <li class="badge badge-primary">1.7.1#1</li>
+                    <li class="badge badge-primary">1.7.1#0</li>
+                    <li class="badge badge-primary">1.6.0#0</li>
+                    <li class="badge badge-primary">1.5.1#0</li>
+                    <li class="badge badge-primary">1.4.1#0</li>
+                    <li class="badge badge-primary">1.3.0#0</li>
+                    <li class="badge badge-primary">1.1.0#0</li>
+                    <li class="badge badge-primary">1.0.0#1</li>
+                    <li class="badge badge-primary">1.0.0#0</li>
+                    <li class="badge badge-primary">v1.0.0-beta21#0</li>
+                    <li class="badge badge-primary">v1.0.0-beta20#0</li>
+                    <li class="badge badge-primary">v1.0.0-beta18#0</li>
+                </ul>
+            </div>
+            <div id="port-content" class="tab-content">
+                <div class="active-header">Port Content</div>
+                <ul>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/0001-vcpkg.patch" target="_blank">0001-vcpkg.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/0002-drogon-config.patch" target="_blank">0002-drogon-config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/0003-deps-redis.patch" target="_blank">0003-deps-redis.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/0004-drogon-ctl.patch" target="_blank">0004-drogon-ctl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/0005-drogon-cross-compile.patch" target="_blank">0005-drogon-cross-compile.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/drogon/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="sidebar-header">Metadata</div>
+            <div class="sidebar-section">
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-03</div>
+            </div>
+            <div class="sidebar-header">Supports</div>
+            <div class="sidebar-description">This package supports the following triplets:</div>
+            <div><pre class="support-arch">!uwp</pre></div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">Documentation</div>
+                <div>
+                    <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
+                    <a href="https://drogon.docsforge.com/master/overview/">https://drogon.docsforge.com/master/overview/</a>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">Homepage</div>
+                <div>
+                    <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
+                    Unavailable
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">Install</div>
+                <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
+                <pre> vcpkg install drogon</pre>
+                <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
+                <pre> vcpkg add port drogon</pre>
+            </div>
+        </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg" />
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord" />
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group-dw">
+        <div class="footer-description">&#169; Microsoft <span id="currentYear"></span></div>
+      </div>
+      <div class="footer-info-group-dw">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-mc">
+        <div class="footer-description">
+          <a style="display: none;" class="manageCookieChoice footer-link" href="#" onclick="javascript:manageConsent(); return false;">Manage cookies</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link"
+            href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg"
+              width="30px" viewBox="0 0 30 14" xml:space="preserve">
+              <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+              <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+                style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+              <path
+                d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+                style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+              <path
+                d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+                style="fill: #fff"></path>
+              <path
+                d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+                style="fill: #06f"></path>
+            </svg>
+            <span>Your Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+  <script src="/dist/perPackageTabs.js"></script>
+</body>
+</html>

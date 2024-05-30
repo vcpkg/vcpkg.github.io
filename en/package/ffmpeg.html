@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+  <title>vcpkg package - ffmpeg</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/package.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
+
+  <!-- favicons -->
+<link rel="icon" href="/assets/mark/mark.svg" />
+<link rel="icon" href="/assets/mark/favicon.png" />
+<link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
+
+<!-- external style sheets -->
+<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+<!-- our style sheets -->
+<link href="/css/common.css" rel="stylesheet" />
+
+<!-- external scripts -->
+<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-3.min.js"></script>
+
+<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/4.5.0/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- our scripts -->
+<script src="/dist/common.js"></script>
+<script src="../scripts/consentAndAnalytics.js"></script>
+
+</head>
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+  <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
+  <a class="navbar-brand align-baseline" href="/en/index.html">
+    <span id="vcpkg-nav-logo" class=""
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      vcpkg</span
+    >
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <button class="navbar-toggler hidden" type="button" onclick="toggleNavIcon()">
+    <span class="navbar-close hidden"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-center nav-vcpkg-bar" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto navbar-right-margin">
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started </a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="/en/packages">Packages</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://learn.microsoft.com/vcpkg">Documentation</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://github.com/microsoft/vcpkg">GitHub</a>
+      </li>
+      <li class="nav-item active" onmouseover="addMouseLeave()">
+        <a class="nav-link nav-link-hover" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="mobile-nav hidden">
+    <div class="mobile-margin">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Get Started</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="/en/packages">Packages</a>
+        </li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="navbar-mobile" href="https://devblogs.microsoft.com/search?query=vcpkg">Blog</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="docs-nav" onmouseleave="addMouseLeave()">
+  <div class="docs-flex">
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">
+          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
+        </li>
+      </ul>
+
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">About</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Examples</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
+            >Installing and Using Packages</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
+            >Modifying Baseline to pin old Boost versions</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
+            >Overlay Triplets Linux Dynamic</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
+            >Packaging Github Repos</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Maintainers</li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
+            >Maintainer Guide</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
+            >Manifest Files</a
+          >
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
+            >Portfile Functions</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="docs-column">
+      <ul class="docs-col-section">
+        <li class="docs-col-bold">Users</li>
+        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
+        </li>
+        <li class="">
+          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
+            >Versioning</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div id="banner"></div>
+<body>
+  <main class="package-body" id="main">
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <div class="package-name">
+                    ffmpeg
+                </div>
+                <div class="package-version">
+                    6.1.1#3
+                </div>
+            </div>
+            <div class="package-description">
+                a library to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.,FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
+            </div>
+        </div>
+    <div class="flex-wrapper">
+        <div class="active-container">
+            <ul class="tab-container">
+                <li class="tab active-tab" data-target="dependencies-content">
+                    Dependencies
+                </li>
+                <li class="tab" data-target="features-content">
+                    Features
+                </li>
+                <li class="tab" data-target="versions-content">
+                    Versions
+                </li>
+                <li class="tab" data-target="port-content">
+                    Port Content
+                </li>
+            </ul>
+            <div id="dependencies-content" class="tab-content active">
+                <div class="active-header">Dependencies</div>
+                <div class="card-container">
+                    <a href="vcpkg-cmake-get-vars.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-get-vars<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-pkgconfig-get-modules.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-pkgconfig-get-modules<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="features-content" class="tab-content">
+                <div class="active-header">Features</div>
+                <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">all - <i class="feature-description">Build with all allowed dependencies selected that are compatible with the lgpl license</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [aom, avcodec, avdevice, avfilter, avformat, bzip2, freetype, iconv, lzma, mp3lame, openjpeg, openmpt, opus, snappy, soxr, speex, swresample, swscale, theora, vorbis, vpx, webp, xml2, zlib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [alsa]</div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [sdl2]</div>
+                                <div class="feature-dep-platform">platform: !osx</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [ass]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [fontconfig]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [fribidi]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [modplug]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [opencl]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [openh264]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [srt]</div>
+                                <div class="feature-dep-platform">platform: !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [ilbc]</div>
+                                <div class="feature-dep-platform">platform: !(arm &amp; uwp)</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [ssh]</div>
+                                <div class="feature-dep-platform">platform: !(uwp | arm)</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [amf]</div>
+                                <div class="feature-dep-platform">platform: !osx &amp; !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [opengl]</div>
+                                <div class="feature-dep-platform">platform: !uwp &amp; !(arm64 &amp; windows)</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [tensorflow]</div>
+                                <div class="feature-dep-platform">platform: x64 &amp; !static &amp; !uwp &amp; !windows</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [dav1d]</div>
+                                <div class="feature-dep-platform">platform: !(uwp | (windows &amp; x86 &amp; !static))</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [tesseract]</div>
+                                <div class="feature-dep-platform">platform: !(windows &amp; arm) &amp; !static &amp; !uwp</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [qsv]</div>
+                                <div class="feature-dep-platform">platform: linux | (!osx &amp; !uwp &amp; !(arm &amp; windows))</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [nvcodec]</div>
+                                <div class="feature-dep-platform">platform: linux | (!osx &amp; !uwp &amp; !(arm64 &amp; windows))</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">all-gpl - <i class="feature-description">Build with all allowed dependencies selected that are compatible with the gpl license</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [all, gpl, postproc]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [x264]</div>
+                                <div class="feature-dep-platform">platform: !(arm &amp; windows)</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [x265]</div>
+                                <div class="feature-dep-platform">platform: !uwp &amp; !(arm &amp; windows)</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avisynthplus]</div>
+                                <div class="feature-dep-platform">platform: windows &amp; !arm &amp; !uwp &amp; !static</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">all-nonfree - <i class="feature-description">Build with all allowed dependencies selected with a non-redistributable license</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [all-gpl, fdk-aac, nonfree, openssl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">alsa - <i class="feature-description">Enable ALSA support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/alsa.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">alsa</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">amf - <i class="feature-description">AMD AMF codec support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/amd-amf.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">amd-amf</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">aom - <i class="feature-description">AV1 video encoding&#x2F;decoding via libaom support in ffmpeg</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/aom.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">aom</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ass - <i class="feature-description">Libass subtitles rendering, needed for subtitles and ass filter support in ffmpeg</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libass.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libass</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avcodec - <i class="feature-description">Build the avcodec library</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avdevice - <i class="feature-description">Build the avdevice library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avcodec, avformat]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avfilter - <i class="feature-description">Build the avfilter library</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avformat - <i class="feature-description">Build the avformat library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avcodec]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avisynthplus - <i class="feature-description">Reading of AviSynth script files</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/avisynthplus.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">avisynthplus</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [gpl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">avresample - <i class="feature-description">Build the avresample library</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">bzip2 - <i class="feature-description">Bzip2 support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/bzip2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">bzip2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">dav1d - <i class="feature-description">AV1 decoding via libdav1d</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/dav1d.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">dav1d</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">fdk-aac - <i class="feature-description">AAC de&#x2F;encoding via libfdk-aac, **including GPL-incompatible patent-encumbered HE-AAC**. If you do not require HE-AAC, use the built-in FFmpeg AAC codec.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/fdk-aac.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">fdk-aac</div>
+                                <div class="feature-dep-feature">features: [he-aac]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [nonfree]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ffmpeg - <i class="feature-description">Build the ffmpeg application</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avcodec, avfilter, avformat]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ffplay - <i class="feature-description">Build the ffplay application</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avcodec, avfilter, avformat, sdl2, swresample, swscale]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ffprobe - <i class="feature-description">Build the ffprobe application</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avcodec, avformat]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">fontconfig - <i class="feature-description">Useful for drawtext filter</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/fontconfig.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">fontconfig</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">freetype - <i class="feature-description">Needed for drawtext filter</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/freetype.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">freetype</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">fribidi - <i class="feature-description">Improves drawtext filter</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/fribidi.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">fribidi</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gpl - <i class="feature-description">Allow use of GPL code, the resulting libs and binaries will be under GPL</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">iconv - <i class="feature-description">Iconv support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libiconv.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libiconv</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ilbc - <i class="feature-description">iLBC de&#x2F;encoding via libilbc</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libilbc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libilbc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lzma - <i class="feature-description">lzma support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/liblzma.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">liblzma</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">modplug - <i class="feature-description">ModPlug via libmodplug</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libmodplug.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libmodplug</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">mp3lame - <i class="feature-description">MP3 encoding via libmp3lame</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/mp3lame.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">mp3lame</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">nonfree - <i class="feature-description">Allow use of nonfree code, the resulting libs and binaries will be unredistributable</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">nvcodec - <i class="feature-description">Nvidia video decoding&#x2F;encoding acceleration</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffnvcodec.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffnvcodec</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opencl - <i class="feature-description">OpenCL processing</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opencl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opengl - <i class="feature-description">OpenGL rendering</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/opengl-registry.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl-registry</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openh264 - <i class="feature-description">H.264 de&#x2F;encoding via openh264</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/openh264.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openh264</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openjpeg - <i class="feature-description">JPEG 2000 de&#x2F;encoding via OpenJPEG</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/openjpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openjpeg</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openmpt - <i class="feature-description">Decoding tracked files via libopenmpt</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libopenmpt.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libopenmpt</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openssl - <i class="feature-description">Needed for https support if gnutls, libtls or mbedtls is not used</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [version3]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openssl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openssl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opus - <i class="feature-description">Opus de&#x2F;encoding via libopus</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opus.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opus</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">postproc - <i class="feature-description">Build the postproc library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [gpl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">qsv - <i class="feature-description">Intel QSV Codec</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/mfx-dispatch.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">mfx-dispatch</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">sdl2 - <i class="feature-description">Sdl2 support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/sdl2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sdl2</div>
+                                <div class="feature-dep-feature">features: [x11]</div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/sdl2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sdl2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">snappy - <i class="feature-description">Snappy compression, needed for hap encoding</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/snappy.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">snappy</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">soxr - <i class="feature-description">Include libsoxr resampling</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [swresample]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/soxr.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">soxr</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">speex - <i class="feature-description">Speex de&#x2F;encoding via libspeex</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/speex.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">speex</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">srt - <i class="feature-description">Haivision SRT protocol</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libsrt.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libsrt</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ssh - <i class="feature-description">SFTP protocol via libssh</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libssh.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libssh</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">swresample - <i class="feature-description">Build the swresample library</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">swscale - <i class="feature-description">Build the swscale library</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tensorflow - <i class="feature-description">TensorFlow as a DNN module backend for DNN based filters like sr</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/tensorflow.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tensorflow</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tesseract - <i class="feature-description">Tesseract, needed for ocr filter</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/tesseract.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tesseract</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">theora - <i class="feature-description">Theora encoding via libtheora</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libtheora.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libtheora</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">version3 - <i class="feature-description">Upgrade (L)GPL to version 3</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">vorbis - <i class="feature-description">Vorbis en&#x2F;decoding via libvorbis, native implementation exists</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libvorbis.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libvorbis</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">vpx - <i class="feature-description">VP8 and VP9 de&#x2F;encoding via libvpx</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [avcodec]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libvpx.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libvpx</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">webp - <i class="feature-description">WebP encoding via libwebp</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libwebp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libwebp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">x264 - <i class="feature-description">H.264 encoding via x264</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [gpl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/x264.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">x264</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">x265 - <i class="feature-description">HEVC encoding via x265</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [gpl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/x265.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">x265</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">xml2 - <i class="feature-description">XML parsing using the C library libxml2, needed for dash demuxing support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libxml2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libxml2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zlib - <i class="feature-description">zlib support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/zlib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zlib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="versions-content" class="tab-content">
+                <div class="active-header">Available Versions</div>
+                <ul class="version-badges">
+                    <li class="badge badge-primary">6.1.1#3</li>
+                    <li class="badge badge-primary">6.1.1#2</li>
+                    <li class="badge badge-primary">6.1.1#1</li>
+                    <li class="badge badge-primary">6.1.1#0</li>
+                    <li class="badge badge-primary">6.1#2</li>
+                    <li class="badge badge-primary">6.1#1</li>
+                    <li class="badge badge-primary">6.1#0</li>
+                    <li class="badge badge-primary">6.0#2</li>
+                    <li class="badge badge-primary">6.0#1</li>
+                    <li class="badge badge-primary">6.0#0</li>
+                    <li class="badge badge-primary">5.1.2#10</li>
+                    <li class="badge badge-primary">5.1.2#9</li>
+                    <li class="badge badge-primary">5.1.2#8</li>
+                    <li class="badge badge-primary">5.1.2#7</li>
+                    <li class="badge badge-primary">5.1.2#6</li>
+                    <li class="badge badge-primary">5.1.2#5</li>
+                    <li class="badge badge-primary">5.1.2#4</li>
+                    <li class="badge badge-primary">5.1.2#3</li>
+                    <li class="badge badge-primary">5.1.2#2</li>
+                    <li class="badge badge-primary">5.1.2#1</li>
+                    <li class="badge badge-primary">5.1.2#0</li>
+                    <li class="badge badge-primary">5.0.2#3</li>
+                    <li class="badge badge-primary">5.0.2#2</li>
+                    <li class="badge badge-primary">5.0.2#1</li>
+                    <li class="badge badge-primary">5.0.2#0</li>
+                    <li class="badge badge-primary">5.0.0#0</li>
+                    <li class="badge badge-primary">4.4.3#3</li>
+                    <li class="badge badge-primary">4.4.3#2</li>
+                    <li class="badge badge-primary">4.4.3#1</li>
+                    <li class="badge badge-primary">4.4.3#0</li>
+                    <li class="badge badge-primary">4.4.1#22</li>
+                    <li class="badge badge-primary">4.4.1#21</li>
+                    <li class="badge badge-primary">4.4.1#20</li>
+                    <li class="badge badge-primary">4.4.1#19</li>
+                    <li class="badge badge-primary">4.4.1#18</li>
+                    <li class="badge badge-primary">4.4.1#17</li>
+                    <li class="badge badge-primary">4.4.1#16</li>
+                    <li class="badge badge-primary">4.4.1#15</li>
+                    <li class="badge badge-primary">4.4.1#14</li>
+                    <li class="badge badge-primary">4.4.1#13</li>
+                    <li class="badge badge-primary">4.4.1#12</li>
+                    <li class="badge badge-primary">4.4.1#11</li>
+                    <li class="badge badge-primary">4.4.1#10</li>
+                    <li class="badge badge-primary">4.4.1#9</li>
+                    <li class="badge badge-primary">4.4.1#8</li>
+                    <li class="badge badge-primary">4.4.1#7</li>
+                    <li class="badge badge-primary">4.4.1#6</li>
+                    <li class="badge badge-primary">4.4.1#5</li>
+                    <li class="badge badge-primary">4.4.1#4</li>
+                    <li class="badge badge-primary">4.4.1#3</li>
+                    <li class="badge badge-primary">4.4.1#2</li>
+                    <li class="badge badge-primary">4.4.1#1</li>
+                    <li class="badge badge-primary">4.4.1#0</li>
+                    <li class="badge badge-primary">4.4#18</li>
+                    <li class="badge badge-primary">4.4#17</li>
+                    <li class="badge badge-primary">4.4#16</li>
+                    <li class="badge badge-primary">4.4#15</li>
+                    <li class="badge badge-primary">4.4#14</li>
+                    <li class="badge badge-primary">4.4#13</li>
+                    <li class="badge badge-primary">4.4#12</li>
+                    <li class="badge badge-primary">4.4#11</li>
+                    <li class="badge badge-primary">4.4#10</li>
+                    <li class="badge badge-primary">4.4#9</li>
+                    <li class="badge badge-primary">4.4#8</li>
+                    <li class="badge badge-primary">4.4#7</li>
+                    <li class="badge badge-primary">4.4#6</li>
+                    <li class="badge badge-primary">4.4#5</li>
+                    <li class="badge badge-primary">4.4#4</li>
+                    <li class="badge badge-primary">4.4#3</li>
+                    <li class="badge badge-primary">4.4#2</li>
+                    <li class="badge badge-primary">4.4#1</li>
+                    <li class="badge badge-primary">4.4#0</li>
+                    <li class="badge badge-primary">4.3.2#11</li>
+                    <li class="badge badge-primary">4.3.2#10</li>
+                    <li class="badge badge-primary">4.3.2#9</li>
+                    <li class="badge badge-primary">4.3.2#8</li>
+                    <li class="badge badge-primary">4.3.2#7</li>
+                    <li class="badge badge-primary">4.3.2#6</li>
+                    <li class="badge badge-primary">4.3.2#5</li>
+                    <li class="badge badge-primary">4.3.2#4</li>
+                    <li class="badge badge-primary">4.3.2#3</li>
+                    <li class="badge badge-primary">4.3.2#2</li>
+                    <li class="badge badge-primary">4.3.2#1</li>
+                    <li class="badge badge-primary">4.3.2#0</li>
+                    <li class="badge badge-primary">4.3.1#12</li>
+                    <li class="badge badge-primary">4.3.1#11</li>
+                    <li class="badge badge-primary">4.3.1#10</li>
+                    <li class="badge badge-primary">4.3.1#9</li>
+                    <li class="badge badge-primary">4.3.1#8</li>
+                    <li class="badge badge-primary">4.3.1#7</li>
+                    <li class="badge badge-primary">4.3.1#6</li>
+                    <li class="badge badge-primary">4.3.1#5</li>
+                    <li class="badge badge-primary">4.3.1#4</li>
+                    <li class="badge badge-primary">4.3.1#3</li>
+                    <li class="badge badge-primary">4.3.1#2</li>
+                    <li class="badge badge-primary">4.3.1#1</li>
+                    <li class="badge badge-primary">4.3.1#0</li>
+                    <li class="badge badge-primary">4.2#26</li>
+                    <li class="badge badge-primary">4.2#25</li>
+                    <li class="badge badge-primary">4.2#24</li>
+                    <li class="badge badge-primary">4.2#23</li>
+                    <li class="badge badge-primary">4.2#22</li>
+                    <li class="badge badge-primary">4.2#21</li>
+                    <li class="badge badge-primary">4.2#20</li>
+                    <li class="badge badge-primary">4.2#18</li>
+                    <li class="badge badge-primary">4.2#17</li>
+                    <li class="badge badge-primary">4.2#16</li>
+                    <li class="badge badge-primary">4.2#14</li>
+                    <li class="badge badge-primary">4.2-13#0</li>
+                    <li class="badge badge-primary">4.2-12#0</li>
+                    <li class="badge badge-primary">4.2-11#0</li>
+                    <li class="badge badge-primary">4.2-10#0</li>
+                    <li class="badge badge-primary">4.2-9#0</li>
+                    <li class="badge badge-primary">4.2-8#0</li>
+                    <li class="badge badge-primary">4.2-7#0</li>
+                    <li class="badge badge-primary">4.2-6#0</li>
+                    <li class="badge badge-primary">4.2-5#0</li>
+                    <li class="badge badge-primary">4.2-4#0</li>
+                    <li class="badge badge-primary">4.2-3#0</li>
+                    <li class="badge badge-primary">4.2-2#0</li>
+                    <li class="badge badge-primary">4.2-1#0</li>
+                    <li class="badge badge-primary">4.2#0</li>
+                    <li class="badge badge-primary">4.1-3#0</li>
+                    <li class="badge badge-primary">4.1-2#0</li>
+                    <li class="badge badge-primary">4.1-1#0</li>
+                    <li class="badge badge-primary">4.1#0</li>
+                    <li class="badge badge-primary">3.3.3-5#0</li>
+                    <li class="badge badge-primary">3.3.3-4#0</li>
+                    <li class="badge badge-primary">3.3.3-3#0</li>
+                    <li class="badge badge-primary">3.3.3-2#0</li>
+                    <li class="badge badge-primary">3.3.3-1#0</li>
+                    <li class="badge badge-primary">3.3.3#0</li>
+                    <li class="badge badge-primary">3.2.4-3#0</li>
+                    <li class="badge badge-primary">3.2.4-2#0</li>
+                    <li class="badge badge-primary">3.2.4-1#0</li>
+                    <li class="badge badge-primary">3.2.4#0</li>
+                </ul>
+            </div>
+            <div id="port-content" class="tab-content">
+                <div class="active-header">Port Content</div>
+                <ul>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0001-create-lib-libraries.patch" target="_blank">0001-create-lib-libraries.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0002-fix-msvc-link.patch" target="_blank">0002-fix-msvc-link.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0003-fix-windowsinclude.patch" target="_blank">0003-fix-windowsinclude.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0004-fix-debug-build.patch" target="_blank">0004-fix-debug-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0005-fix-nasm.patch" target="_blank">0005-fix-nasm.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0006-fix-StaticFeatures.patch" target="_blank">0006-fix-StaticFeatures.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0007-fix-lib-naming.patch" target="_blank">0007-fix-lib-naming.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0009-Fix-fdk-detection.patch" target="_blank">0009-Fix-fdk-detection.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0011-Fix-x265-detection.patch" target="_blank">0011-Fix-x265-detection.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0012-Fix-ssl-110-detection.patch" target="_blank">0012-Fix-ssl-110-detection.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0013-define-WINVER.patch" target="_blank">0013-define-WINVER.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0015-Fix-xml2-detection.patch" target="_blank">0015-Fix-xml2-detection.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0020-fix-aarch64-libswscale.patch" target="_blank">0020-fix-aarch64-libswscale.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0022-fix-iconv.patch" target="_blank">0022-fix-iconv.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/0023-fix-qsv-init.patch" target="_blank">0023-fix-qsv-init.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/FindFFMPEG.cmake.in" target="_blank">FindFFMPEG.cmake.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/build.sh.in" target="_blank">build.sh.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/ffmpeg/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                  </ul>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="sidebar-header">Metadata</div>
+            <div class="sidebar-section">
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-03</div>
+            </div>
+            <div class="sidebar-header">Supports</div>
+            <div class="sidebar-description">This package supports the following triplets:</div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">Documentation</div>
+                <div>
+                    <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
+                    Unavailable
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">Homepage</div>
+                <div>
+                    <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
+                    Unavailable
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-header">Install</div>
+                <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
+                <pre> vcpkg install ffmpeg</pre>
+                <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
+                <pre> vcpkg add port ffmpeg</pre>
+            </div>
+        </div>
+    </div>
+    </div>
+  </main>
+  <div id="loadFooter"><div class="footer">
+  <div class="footer-info">
+    <div class="footer-left">
+      <div class="footer-info-group">
+        <div class="footer-heading">
+          <img class="" src="/assets/mark/footer-vcpkg.svg" alt="vcpkg" />
+          <img class="" src="/assets/mark/vcpkg.svg" alt="vcpkg" />
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Get Started</div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
+        </div>
+      </div>
+      <div class="footer-info-group footer-list">
+        <div class="footer-heading">Stay in Touch</div>
+        <div class="footer-description">
+          <a class="footer-link" href="mailto:vcpkg@microsoft.com">
+            <img class="footer-group-logo" src="/assets/external-icons/email.svg" alt="email" />
+            Email
+          </a>
+        </div>
+        <div class="footer-description hidden">
+          <a class="footer-link" href="#">
+            <img class="footer-group-logo" src="/assets/external-icons/slack-1.svg" alt="slack" />
+            Slack
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://www.includecpp.org/">
+            <img class="footer-group-logo" src="/assets/external-icons/discord.svg" alt="discord" />
+            Discord
+          </a>
+        </div>
+        <div class="footer-description">
+          <a class="footer-link" href="https://github.com/microsoft/vcpkg">
+            <img class="footer-group-logo" src="/assets/external-icons/github.svg" alt="github" />
+            Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-info-group-dw">
+        <div class="footer-description">&#169; Microsoft <span id="currentYear"></span></div>
+      </div>
+      <div class="footer-info-group-dw">
+        <div class="footer-description">
+          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-mc">
+        <div class="footer-description">
+          <a style="display: none;" class="manageCookieChoice footer-link" href="#" onclick="javascript:manageConsent(); return false;">Manage cookies</a>
+        </div>
+      </div>
+      <div class="footer-info-group-privacy">
+        <div class="footer-description">
+          <a style="display: none;" class="managePrivacyChoice footer-link"
+            href="https://aka.ms/yourcaliforniaprivacychoices"><svg role="img" xmlns="http://www.w3.org/2000/svg"
+              width="30px" viewBox="0 0 30 14" xml:space="preserve">
+              <title>California Consumer Privacy Act (CPA) Opt-Out Icon</title>
+              <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+                style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"></path>
+              <path
+                d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+                style="fill-rule: evenodd; clip-rule: evenodd; fill: #06f"></path>
+              <path
+                d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+                style="fill: #fff"></path>
+              <path
+                d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+                style="fill: #06f"></path>
+            </svg>
+            <span>Your Privacy Choices</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative"><div class="logo-footer"></div></div>
+  <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
+</div>
+</div>
+  <script src="/dist/perPackageTabs.js"></script>
+</body>
+</html>
