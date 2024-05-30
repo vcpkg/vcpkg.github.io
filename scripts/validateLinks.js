@@ -92,8 +92,8 @@ async function load_page_info(page, relative_path) {
     for (const match of content.matchAll(/ name="([^"]*)"/g)) {
         ret.fragments[match[1]] = true;
     }
-    for (const match of content.matchAll(/.{0,30}\]\[.{0,30}/g)) {
-        ret.errors.push(`Incorrect markdown link: ${match[0]}`);
+    for (const match of content.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)) {
+        ret.errors.push(`Possible incorrect markdown link in HTML: ${match[0]}`);
     }
     return ret;
 }
