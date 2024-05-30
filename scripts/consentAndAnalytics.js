@@ -41,7 +41,40 @@ window.addEventListener('DOMContentLoaded', function () {
             siteConsent = _siteConsent; //siteConsent is used to get the current consent
         }
     });
+
+    siteConsent.onConsentChanged(watchConsentChanges);
+
+    if (siteConsent.isConsentRequired) {
+        document.getElementsByClassName('manageCookieChoice')[0].style.display = 'inline-block';
+    }
+    else {
+        //$(".manageCookieChoice").css("display", "none");
+        document.getElementsByClassName('manageCookieChoice')[0].style.display = 'none';
+    }
+
+    if (!siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics)) {
+        dropAnalyticsCookies();
+    }
+
+    function watchConsentChanges(consents) {
+        //scan through the categories and take action based on user consent.
+        if (!siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics)) {
+            dropAnalyticsCookies();
+        }
+    }
 });
+
+function dropAnalyticsCookies() {
+    clearCookie('_ga', document.domain, '/');
+    clearCookie('_gid', document.domain, '/');
+    clearCookie('_gat', document.domain, '/');
+}
+
+function manageConsent() {
+    if (siteConsent.isConsentRequired) {
+        siteConsent.manageConsent();
+    }
+}
 
 //Detect GPC
 const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
