@@ -41,7 +41,7 @@ $(document).ready(function () {
 });
 
 function handleLoadPkgMessage() {
-    if(maxPackageLength < currentPackages.length) {
+    if (maxPackageLength < currentPackages.length) {
         $(".load-results").html("Load more packages")
     } else {
         $(".load-results").html("")
@@ -88,6 +88,7 @@ var renderModalDescription = function (fullDesc) {
     }
     return descriptionDiv;
 };
+
 var renderCardDescription = function (fullDesc) {
     var cutoff = 200; //character cut off
     var descriptionDiv = parentDescriptionDiv.cloneNode(true);
@@ -105,6 +106,7 @@ function expandText(moreDescSpan, extraDescSpan) {
     extraDescSpan.classList.remove('hide');
     moreDescSpan.className = 'hide';
 }
+
 // elements for a package card
 var mainPackageFrag = document.createDocumentFragment();
 var parentPackageDiv = document.createElement('div');
@@ -113,6 +115,8 @@ var parentCardHeaderDiv = document.createElement('div');
 parentCardHeaderDiv.className = 'package-card-header';
 var parentNameDiv = document.createElement('div');
 parentNameDiv.className = 'package-name';
+var parentNameLink = document.createElement('a');
+parentNameLink.className = 'package-name';
 var parentDescriptionDiv = document.createElement('div');
 parentDescriptionDiv.className = 'package-text';
 var parentShortDescSpan = document.createElement('span');
@@ -126,72 +130,79 @@ parentCardFooterDiv.className = 'package-card-footer';
 var parentWebsiteLink = document.createElement('a');
 parentWebsiteLink.className = 'package-website align-bottom';
 parentWebsiteLink.textContent = wording[lang]['website'];
-parentWebsiteLink.target = '_blank';
 var parentFullBtnSpan = document.createElement('span');
 parentFullBtnSpan.className = 'github-btn';
 var parentGitHub = document.createElement('a');
 parentGitHub.className = 'gh-btn';
-parentGitHub.target = '_blank';
 var parentBtnIcoSpan = document.createElement('span');
 parentBtnIcoSpan.className = 'gh-ico';
 var parentBtnTxtSpan = document.createElement('span');
 parentBtnTxtSpan.className = 'gh-text';
 parentBtnTxtSpan.textContent = wording[lang]['star'];
 var parentGitHubCount = document.createElement('a');
-parentGitHubCount.className = 'gh-count';
-parentGitHubCount.target = '_blank';
-parentGitHubCount.style.display = 'block';
+parentGitHubCount.classList.add('gh-count');
+parentGitHubCount.classList.add('display-block');
 var parentVersionDiv = document.createElement('div');
 parentVersionDiv.className = 'package-version';
-
 var vcpkgPackagePage = document.createElement('div');
 vcpkgPackagePage.className = 'vcpkg-page-link';
 vcpkgPackagePage.textContent = "View Details";
-vcpkgPackagePage.role = "button";
-vcpkgPackagePage.tabIndex = "0";
 
-function renderPackageDetails(package, packageDiv, isCard) {
+function renderPackageDetails(package) {
 
     var vcpkgPage = vcpkgPackagePage.cloneNode(true);
-    if (isCard === void 0) { isCard = true; }
     var detailFrag = document.createDocumentFragment();
-    if (isCard) {
-        var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
-        let viewpkgDetails = "View Details for ".concat(package.Name);
-        vcpkgPage.setAttribute("name",viewpkgDetails);
-        // Package Name
-        var nameDiv = parentNameDiv.cloneNode(true);
-        nameDiv.textContent = package.Name + " |";
-        cardHeaderDiv.appendChild(nameDiv);
-        // Package Version
-        var versionDiv = parentVersionDiv.cloneNode(true);
-        let versionStr = package.Version || package["Version-semver"] || package["Version-date"];
-        versionDiv.textContent = wording[lang]['version'] + versionStr;
-        cardHeaderDiv.appendChild(versionDiv);
-        detailFrag.appendChild(cardHeaderDiv);
-    }
+
+    var cardHeaderDiv = parentCardHeaderDiv.cloneNode(true);
+    let viewpkgDetails = "View Details for ".concat(package.Name);
+    vcpkgPage.setAttribute("name",viewpkgDetails);
+    
+    //add link to package name
+    var nameLink = parentNameLink.cloneNode(true);
+    nameLink.textContent = package.Name;
+    nameLink.setAttribute('aria-label', package.Name);
+    nameLink.href = "/en/package/" + package.Name;
+    cardHeaderDiv.appendChild(nameLink);
+    
+    // Package Name
+    var nameDiv = parentNameDiv.cloneNode(true);
+    nameDiv.textContent = " |";
+    cardHeaderDiv.appendChild(nameDiv);
+    // Package Version
+    var versionDiv = parentVersionDiv.cloneNode(true);
+    let versionStr = package.Version || package["Version-semver"] || package["Version-date"];
+    versionDiv.textContent = wording[lang]['version'] + versionStr;
+    cardHeaderDiv.appendChild(versionDiv);
+    detailFrag.appendChild(cardHeaderDiv);
+    
     // Package Description (HTML version)
     var fullDesc = package.Description;
     if (fullDesc) {
         if (Array.isArray(fullDesc)) {
             fullDesc = fullDesc.join("\n");
         }
-        var descriptionDiv = isCard
-            ? renderCardDescription(fullDesc)
-            : renderModalDescription(fullDesc);
+        var descriptionDiv = renderCardDescription(fullDesc)
+         
         detailFrag.appendChild(descriptionDiv);
     }
 
-    detailFrag.appendChild(vcpkgPage);
-
-    vcpkgPage.addEventListener("click", function() {
-        showHideViewDetails.call(this);
-    })
-
-    vcpkgPage.addEventListener("keypress", function(event) {
-        if (event.keyCode == 13) {
-            showHideViewDetails.call(this);
-            return true;
+    vcpkgPage.addEventListener("click", function () {
+        if (this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
+            this.textContent = "Hide Details"
+            this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden");
+            this.parentNode.getElementsByClassName("instructions")[0].classList.remove("hidden");
+            this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
+        } else {
+            this.textContent = "View Details"
+            this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("instructions")[0].classList.add("hidden");
+            this.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
+            this.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
+            this.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
         }
     })
 
@@ -210,7 +221,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     inst.appendChild(linuxInst);
     inst.appendChild(featureInst);
 
-    windowsInst.addEventListener("click", function() {
+    windowsInst.addEventListener("click", function () {
         windowsInst.parentNode.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden")
         windowsInst.parentNode.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden")
         windowsInst.parentNode.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden")
@@ -220,7 +231,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
 
     })
 
-    linuxInst.addEventListener("click", function() {
+    linuxInst.addEventListener("click", function () {
         windowsInst.parentNode.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden")
         windowsInst.parentNode.parentNode.getElementsByClassName("linuxText")[0].classList.remove("hidden")
         windowsInst.parentNode.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden")
@@ -229,7 +240,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
         windowsInst.parentNode.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
     })
 
-    featureInst.addEventListener("click", function() {
+    featureInst.addEventListener("click", function () {
         windowsInst.parentNode.parentNode.getElementsByClassName("featureText")[0].classList.remove("hidden")
         windowsInst.parentNode.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden")
         windowsInst.parentNode.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden")
@@ -249,7 +260,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
     var featureText = document.createElement('div');
     featureText.className = "featureText hidden";
 
-    for(let i in package.Features) {
+    for (let i in package.Features) {
         var div = document.createElement('div');
         div.className = "div-action-list";
         var group = document.createElement("ul");
@@ -262,14 +273,14 @@ function renderPackageDetails(package, packageDiv, isCard) {
         name.append("Feature Name: ");
         desc.append("Description: ")
 
-        if(Array.isArray(package.Features)) {
+        if (Array.isArray(package.Features)) {
             name.textContent += package.Features[i]["name"] || package.Features[i]["Name"] || ""
         } else {
             name.textContent += i;
         }
         desc.textContent += package.Features[i]["description"] || package.Features[i]["Description"] || ""
 
-        if(package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || package.Features[i]["dependencies"]) {
+        if (package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || package.Features[i]["dependencies"]) {
             depends.append("Build-Depends: ")
             depends.textContent += package.Features[i]["build-depends"] || package.Features[i]["Build-Depends"] || package.Features[i]["dependencies"];
         }
@@ -280,7 +291,7 @@ function renderPackageDetails(package, packageDiv, isCard) {
         featureText.appendChild(div);
     }
 
-    if(package.Features.length == 0) {
+    if (package.Features.length == 0) {
         featureText.append("No features for this library.")
     }
 
@@ -288,17 +299,10 @@ function renderPackageDetails(package, packageDiv, isCard) {
     detailFrag.appendChild(windowsText);
     detailFrag.appendChild(linuxText);
     detailFrag.appendChild(featureText);
-    // Package Version for modal
 
-    if (!isCard) {
-        var versionDiv = parentDescriptionDiv.cloneNode(true);
-        versionDiv.textContent = wording[lang]['version'] + package.Version;
-        detailFrag.appendChild(versionDiv);
-    }
     // Website link (with clause)
     var homepageURL = package.Homepage;
     if (homepageURL) {
-        //var cardFooterDiv = parentCardFooterDiv.cloneNode(true);
         var websiteLink = parentWebsiteLink.cloneNode(true);
         websiteLink.href = homepageURL;
         if (package.Stars) {
@@ -317,15 +321,36 @@ function renderPackageDetails(package, packageDiv, isCard) {
             fullBtnSpan.appendChild(ghCount);
             cardHeaderDiv.appendChild(fullBtnSpan);
         }
-        //detailFrag.appendChild(cardFooterDiv);
     }
     return detailFrag;
 }
 function renderCard(package, mainDiv, oldCancellationToken) {
     if (oldCancellationToken !== null && oldCancellationToken !== cancellationToken)
         return; //don't render old packages
+
     // Div for each package
     var packageDiv = parentPackageDiv.cloneNode(true);
+
+    // Set the card to be focusable
+    packageDiv.setAttribute('tabindex', '0');
+    
+    // Add keyboard support for 'Enter' key
+    packageDiv.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Check if the focused element is not an interactive element
+            if (!event.target.matches('a, a *, button, button *, .interactive-class, .interactive-class *')) {
+                window.location.href = "/en/package/" + package.Name;
+            }
+        }
+    });
+    
+    packageDiv.addEventListener('click', function(event) {
+        // Check if the clicked element is not an interactive element
+        if (!event.target.matches('a, a *, button, button *, .interactive-class, .interactive-class *')) {
+            window.location.href = "/en/package/" + package.Name;
+        }
+    });
+
     var cardFrag = document.createDocumentFragment();
     //package details (e.g description, website)
     cardFrag.appendChild(renderPackageDetails(package, packageDiv));
@@ -355,35 +380,6 @@ var renderPackages = function () {
     handleLoadPkgMessage();
     loadTotalPackages();
 };
-
-function showHideViewDetails(){
-    if(this.parentNode.getElementsByClassName("instructions")[0].classList.contains("hidden")) {
-        this.textContent = "Hide Details"
-        let nameValue = this.getAttribute("name"); 
-        let filteredText = nameValue.replace("View Details","Hide Details");
-        this.setAttribute("name",filteredText)
-        this.role = "button";
-        this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
-        this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
-        this.parentNode.getElementsByClassName("windowsText")[0].classList.remove("hidden");
-        this.parentNode.getElementsByClassName("instructions")[0].classList.remove("hidden");
-        this.parentNode.getElementsByClassName("instructions-windows")[0].classList.add("bold-text");
-    } else {
-        this.textContent = "View Details";
-        let nameValue = this.getAttribute("name"); 
-        let filteredText = nameValue.replace("Hide Details","View Details");
-        this.setAttribute("name",filteredText)
-        this.role = "button";
-        this.parentNode.getElementsByClassName("featureText")[0].classList.add("hidden");
-        this.parentNode.getElementsByClassName("linuxText")[0].classList.add("hidden");
-        this.parentNode.getElementsByClassName("windowsText")[0].classList.add("hidden");
-        this.parentNode.getElementsByClassName("instructions")[0].classList.add("hidden");
-        this.parentNode.getElementsByClassName("instructions-linux")[0].classList.remove("bold-text");
-        this.parentNode.getElementsByClassName("instructions-features")[0].classList.remove("bold-text");
-        this.parentNode.getElementsByClassName("instructions-windows")[0].classList.remove("bold-text");
-    }
-}
-
 function clearPackages() {
     var mainDiv = document.getElementsByClassName('package-results')[0];
     while (mainDiv.firstChild) {
@@ -412,7 +408,7 @@ function searchPackages(query) {
 
 var timeoutID = undefined;
 function handlePackageInput() {
-    if(timeoutID) {
+    if (timeoutID) {
         clearTimeout(timeoutID)
     }
     timeoutID = setTimeout(searchAndRenderPackages, 500);
@@ -446,27 +442,27 @@ function searchRank(a, b) {
     let packages = [a, b];
     let scores = [0, 0];
 
-    for(let i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i++) {
         let score = 0;
         let pkg = packages[i];
 
         // Exact match
-        if(pkg.Name === query) {
+        if (pkg.Name === query) {
             score += 1000;
         }
 
         // Prefix match
-        if(pkg.Name.indexOf(query) == 0) {
+        if (pkg.Name.indexOf(query) == 0) {
             score += 500;
         }
 
         // Substring
-        if(pkg.Name.indexOf(query) != -1) {
+        if (pkg.Name.indexOf(query) != -1) {
             score += 100;
         }
 
         //Description
-        if(pkg.Description && pkg.Description.indexOf(query) != -1) {
+        if (pkg.Description && pkg.Description.indexOf(query) != -1) {
             score += 50;
         }
         scores[i] = score;
