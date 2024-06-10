@@ -193,7 +193,7 @@
                     mesa
                 </div>
                 <div class="package-version">
-                    23.2.1#1
+                    24.0.7
                 </div>
             </div>
             <div class="package-description">
@@ -265,7 +265,7 @@
                             <a href="/en/package/mesa.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">mesa</div>
-                                <div class="feature-dep-feature">features: [gles1, gles2, opengl]</div>
+                                <div class="feature-dep-feature">features: [gles1, gles2]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -275,6 +275,14 @@
                                 <div class="feature-dep-name">mesa</div>
                                 <div class="feature-dep-feature">features: [llvm]</div>
                                 <div class="feature-dep-platform">platform: x64</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/mesa.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">mesa</div>
+                                <div class="feature-dep-feature">features: [egl]</div>
+                                <div class="feature-dep-platform">platform: !osx</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
@@ -302,12 +310,12 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/mesa.html">
+                            <a href="/en/package/opengl.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">mesa</div>
-                                <div class="feature-dep-feature">features: [opengl]</div>
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
+                                <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
                         </div>
@@ -318,12 +326,12 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/mesa.html">
+                            <a href="/en/package/opengl.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">mesa</div>
-                                <div class="feature-dep-feature">features: [opengl]</div>
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
+                                <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
                         </div>
@@ -374,22 +382,6 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/mesa.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">mesa</div>
-                                <div class="feature-dep-feature">features: [opengl]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">opengl - <i class="feature-description">Build support for OpenGL (all versions)</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
                             <a href="/en/package/opengl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opengl</div>
@@ -405,6 +397,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">24.0.7#0</li>
                     <li class="badge badge-primary">23.2.1#1</li>
                     <li class="badge badge-primary">23.2.1#0</li>
                     <li class="badge badge-primary">23.0.1#2</li>
@@ -429,10 +422,8 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/mesa/clover-llvm-move-to-modern-pass-manager.patch" target="_blank">clover-llvm-move-to-modern-pass-manager.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/mesa/gallium-fix-build-with-llvm-17.patch" target="_blank">gallium-fix-build-with-llvm-17.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/mesa/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/mesa/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ad25766aefb5313b6bc4e2a4b78a2946f84fbf66/ports/mesa/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ad25766aefb5313b6bc4e2a4b78a2946f84fbf66/ports/mesa/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -440,7 +431,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT AND BSL-1.0 AND SGI-B-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-08</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -526,6 +517,11 @@
       <div class="footer-info-group-dw">
         <div class="footer-description">
           <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+        </div>
+      </div>
+      <div class="footer-info-group-mc">
+        <div class="footer-description">
+          <a style="display: none;" class="manageCookieChoice footer-link" href="#" onclick="javascript:manageConsent(); return false;">Manage cookies</a>
         </div>
       </div>
       <div class="footer-info-group-privacy">
