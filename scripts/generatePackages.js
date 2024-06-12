@@ -40,13 +40,12 @@ async function readManifest(manifestFile) {
     let out = {};
     for (let key of Object.keys(parsed)) {
         if (key.startsWith("$")) continue;
-        if (key.match("homepage"))
+        if (key === "homepage")
         {
             if (parsed[key].startsWith("https://") || parsed[key].startsWith("http://")){
                 out[key] = parsed[key];
             }
-        }else
-        {
+        }else{
             out[makeManifestKeyReadable(key)] = parsed[key];
         }
     }

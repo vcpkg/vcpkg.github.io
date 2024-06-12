@@ -56,6 +56,7 @@ async function main(vcpkgDir, destDir, githubToken) {
     let results = {};
     for (let ent of dirents) {
         const manifestFile = path.join(portsDir, ent.name, 'vcpkg.json');
+        const portfile = path.join(portsDir, ent.name, 'portfile.cmake');
         const url = await readHomepage(manifestFile);
         const stars = await getGitHubStars(octokit, url);
         results[ent.name] = stars;
