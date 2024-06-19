@@ -117,6 +117,7 @@ async function renderDetailedPackages() {
         packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Supported on all triplets"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
         packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
+        packageInfo.Homepage = packageInfo["homepage"];
 
         // Gather all data needed for rendering.
         const renderData = {
