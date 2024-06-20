@@ -193,7 +193,7 @@
                     elfutils
                 </div>
                 <div class="package-version">
-                    0.186#4
+                    0.191
                 </div>
             </div>
             <div class="package-description">
@@ -256,12 +256,52 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libdebuginfod - <i class="feature-description">Build the debuginfod library.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">nls - <i class="feature-description">Enable native language support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gettext.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gettext</div>
+                                <div class="feature-dep-feature">features: [tools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gettext-libintl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gettext-libintl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.191#0</li>
                     <li class="badge badge-primary">0.186#4</li>
                     <li class="badge badge-primary">0.186#3</li>
                     <li class="badge badge-primary">0.186#2</li>
@@ -275,9 +315,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/elfutils/configure.ac.patch" target="_blank">configure.ac.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/elfutils/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/elfutils/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37ed3467cf6ddc77f440db3945aa7010eb8eed87/ports/elfutils/disable-werror.diff" target="_blank">disable-werror.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37ed3467cf6ddc77f440db3945aa7010eb8eed87/ports/elfutils/link-libs.diff" target="_blank">link-libs.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37ed3467cf6ddc77f440db3945aa7010eb8eed87/ports/elfutils/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37ed3467cf6ddc77f440db3945aa7010eb8eed87/ports/elfutils/rpath-link.diff" target="_blank">rpath-link.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37ed3467cf6ddc77f440db3945aa7010eb8eed87/ports/elfutils/static-tools.diff" target="_blank">static-tools.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37ed3467cf6ddc77f440db3945aa7010eb8eed87/ports/elfutils/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -285,7 +328,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-19</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
