@@ -46,7 +46,7 @@
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
   <a class="navbar-brand align-baseline" href="/en/index.html">
     <span id="vcpkg-nav-logo" class=""
-      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="vcpkg-logo" class="icon" />
       vcpkg</span
     >
   </a>
@@ -193,7 +193,7 @@
                     llvm
                 </div>
                 <div class="package-version">
-                    17.0.2#5
+                    18.1.6
                 </div>
             </div>
             <div class="package-description">
@@ -232,7 +232,7 @@
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="dependency card logo"></div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake-config.html" class="dependency-card">
@@ -240,7 +240,7 @@
                             <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="dependency card logo"></div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake-get-vars.html" class="dependency-card">
@@ -248,7 +248,7 @@
                             <div class="dep-name">vcpkg-cmake-get-vars<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="dependency card logo"></div>
                         </div>
                     </a>
                 </div>
@@ -842,6 +842,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">18.1.6#0</li>
                     <li class="badge badge-primary">17.0.2#5</li>
                     <li class="badge badge-primary">17.0.2#4</li>
                     <li class="badge badge-primary">17.0.2#3</li>
@@ -912,9 +913,9 @@
                     <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/0004-disable-libomp-aliases.patch" target="_blank">0004-disable-libomp-aliases.patch</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/0005-remove-numpy.patch" target="_blank">0005-remove-numpy.patch</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/0006-create-destination-mlir-directory.patch" target="_blank">0006-create-destination-mlir-directory.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/0007-fix-compiler-rt-warnings.patch" target="_blank">0007-fix-compiler-rt-warnings.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/0008-add-missing-case.patch" target="_blank">0008-add-missing-case.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/0009-add-missing-typename.patch" target="_blank">0009-add-missing-typename.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/75711.patch" target="_blank">75711.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/79694.patch" target="_blank">79694.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/82407.patch" target="_blank">82407.patch</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/clang_usage" target="_blank">clang_usage</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/flang_usage" target="_blank">flang_usage</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/326d8b43e365352ba3ccadf388d989082fe0f2a6/ports/llvm/lld_usage" target="_blank">lld_usage</a></li>
@@ -929,7 +930,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-19</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
