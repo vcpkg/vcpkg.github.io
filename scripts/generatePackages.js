@@ -55,10 +55,7 @@ async function readManifest(manifestFile) {
 async function getLastModifiedDate(repoPath, filePath) {
     try {
         const relativeFilePath = path.relative(repoPath, filePath);
-        const { stdout } = await execAsync(`git -C ${repoPath} log -1 --format=%at -- ${relativeFilePath}`);
-        const timestamp = parseInt(stdout.trim(), 10); // Parse timestamp
-        const date = new Date(timestamp * 1000); // Convert to milliseconds
-        return date.toISOString().slice(0, 10); // Format as YYYY-MM-DD
+        const { stdout } = await execAsync(`git -C ${repoPath} log -1 --format=%at --date=format:%Y-%m-%d -- ${relativeFilePath}`);
     } catch (error) {
         console.error(`Error getting last modified date for ${repoPath}: ${error}`);
         return null;
