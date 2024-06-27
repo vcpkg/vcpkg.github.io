@@ -64,6 +64,7 @@ async function getLastModifiedDate(repoPath, filePath) {
     }
 }
 
+
 async function readPorts(vcpkgDir) {
     const portsDir = path.join(vcpkgDir, 'ports');
     let dirents = await fs.readdir(portsDir, { encoding: 'utf-8', withFileTypes: true });
