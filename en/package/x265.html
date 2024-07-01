@@ -46,7 +46,7 @@
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
   <a class="navbar-brand align-baseline" href="/en/index.html">
     <span id="vcpkg-nav-logo" class=""
-      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="" class="icon" />
+      ><img src="/assets/mark/mark.svg" width="16px" height="16px" alt="icon" class="icon" />
       vcpkg</span
     >
   </a>
@@ -193,7 +193,7 @@
                     x265
                 </div>
                 <div class="package-version">
-                    3.6
+                    3.5#1
                 </div>
             </div>
             <div class="package-description">
@@ -224,7 +224,7 @@
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
                 </div>
@@ -232,17 +232,12 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tool - <i class="feature-description">Build the command line tool</i></div>
-                        </div>
-                    </div>
+                    <div class="no-features">No Features</div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">3.6#0</li>
                     <li class="badge badge-primary">3.5#1</li>
                     <li class="badge badge-primary">3.5#0</li>
                     <li class="badge badge-primary">3.4#10</li>
@@ -271,13 +266,10 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/compiler-target.diff" target="_blank">compiler-target.diff</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/disable-install-pdb.patch" target="_blank">disable-install-pdb.patch</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/linkage.diff" target="_blank">linkage.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/neon.diff" target="_blank">neon.diff</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/pkgconfig.diff" target="_blank">pkgconfig.diff</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/pthread.diff" target="_blank">pthread.diff</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/vcpkg.json" target="_blank">vcpkg.json</a></li>
                     <li><a href="https://github.com/microsoft/vcpkg/blob/afa12e7292fb47771e619675d7915645fe0adb1b/ports/x265/version.patch" target="_blank">version.patch</a></li>
                   </ul>
@@ -287,11 +279,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-2.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-24</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-06</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!uwp & !xbox</pre></div>
+            <div><pre class="support-arch">!uwp & !(arm & windows) & !xbox</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
@@ -303,7 +295,7 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://bitbucket.org/multicoreware/x265_git/">https://bitbucket.org/multicoreware/x265_git/</a>
+                    <a href="https://github.com/videolan/x265">https://github.com/videolan/x265</a>
                 </div>
             </div>
             <div class="sidebar-section">
