@@ -43,7 +43,7 @@ async function generateGithubFileUrls(packageInfo, commitHash, vcpkgDir) {
 }
 
 
-async function GetPackageVersions(pkgName) {
+async function getPackageVersions(pkgName) {
     const pkgFolder = pkgName.charAt(0) + '-';
     const pkgJsonFile = path.join('/', pkgName + '.json');
     const versionFile = path.join(versionsDir, pkgFolder, pkgJsonFile);
@@ -59,7 +59,7 @@ async function GetPackageVersions(pkgName) {
     return versionsArray;
 }
 
-function GetPackageFeatures(packageObj) {
+function getPackageFeatures(packageObj) {
     let featuresList = [];
     if (packageObj && typeof packageObj.Features === 'object') {
         for (const [featureName, featureDetails] of Object.entries(packageObj.Features)) {
@@ -96,24 +96,48 @@ function transform_dep(dep) {
     }
 }
 
-
-async function renderDetailedPackages() {
+async function renderAllTemplates() {
     const commitHash = await getCommitHash(commitFilePath);
 
     // Load all templates and data once at the beginning.
-    const [packageTemplate, navbarHtml, footerHtml, commonHeadHtml, packageDataSource] = await Promise.all([
-        fs.readFile(templatesDir + "/package.html", 'utf8'),
-        fs.readFile(templatesDir + "/navbar.html"),
-        fs.readFile(templatesDir + "/footer.html"),
-        fs.readFile(templatesDir + "/commonhead.html"),
+    const [packageTemplate, navbarHtml, footerHtml, commonHeadHtml, gettingStartedHtml, indexHtml, packagesHtml, packageDataSource] = await Promise.all([
+        fs.readFile(path.join(templatesDir, "package.html"), 'utf8'),
+        fs.readFile(path.join(templatesDir, "navbar.html")),
+        fs.readFile(path.join(templatesDir, "footer.html")),
+        fs.readFile(path.join(templatesDir, "commonhead.html")),
+        fs.readFile(path.join(templatesDir, "getting-started.html"), 'utf8'),
+        fs.readFile(path.join(templatesDir, "index.html"), 'utf8'),
+        fs.readFile(path.join(templatesDir, "packages.html"), 'utf8'),
         readJsonFile(path.join(destDir, 'output.json'))
     ]);
 
+    const sharedData = {
+        navbar: navbarHtml,
+        footer: footerHtml,
+        commonhead: commonHeadHtml
+    };
+
+    const view = {
+        ...sharedData,
+        numPackages: packageDataSource.Source.length
+    };
+
+    const commonTemplates = [
+        { content: gettingStartedHtml, name: "getting-started.html" },
+        { content: indexHtml, name: "index.html" },
+        { content: packagesHtml, name: "packages.html" }
+    ];
+
+    for (const { content, name } of commonTemplates) {
+        const renderedTemplate = renderTemplate(content, view);
+        await fs.writeFile(path.join(rootDir, "/en/", name), renderedTemplate);
+    }
+    
     for (let packageInfo of packageDataSource.Source) {
         packageInfo.Documentation = packageInfo.Documentation || '';
         packageInfo.LastUpdated = packageInfo.LastModified;
         packageInfo.PortVersion = packageInfo['Port-Version'] || 0;
-        packageInfo.FeaturesContent = GetPackageFeatures(packageInfo);
+        packageInfo.FeaturesContent = getPackageFeatures(packageInfo);
         packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Supported on all triplets"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
         packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
@@ -121,11 +145,9 @@ async function renderDetailedPackages() {
 
         // Gather all data needed for rendering.
         const renderData = {
-            navbar: navbarHtml,
-            footer: footerHtml,
-            commonhead: commonHeadHtml,
+            ...sharedData,
             package: packageInfo,
-            packageVersions: await GetPackageVersions(packageInfo.Name),
+            packageVersions: await getPackageVersions(packageInfo.Name),
             dependencies: packageInfo.dependenciesList,
             features: packageInfo.FeaturesContent
         };
@@ -138,7 +160,7 @@ async function renderDetailedPackages() {
 
 async function main() {
     await fs.mkdir(pkgDir, { recursive: true });
-    await renderDetailedPackages();
+    await renderAllTemplates();
 }
 
 main();
