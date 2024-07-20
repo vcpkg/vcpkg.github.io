@@ -130,7 +130,7 @@ async function renderAllTemplates() {
 
     for (const { content, name } of commonTemplates) {
         const renderedTemplate = renderTemplate(content, view);
-        await fs.writeFile(path.join(rootDir, "/en/", name), renderedTemplate);
+        await fs.writeFile(path.join(rootDir, '/en', name), renderedTemplate, 'utf8');
     }
     
     for (let packageInfo of packageDataSource.Source) {
