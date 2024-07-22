@@ -193,7 +193,7 @@
                     seacas
                 </div>
                 <div class="package-version">
-                    2022-11-22#5
+                    2022-11-22#6
                 </div>
             </div>
             <div class="package-description">
@@ -230,9 +230,17 @@
                     <a href="cgns.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">cgns<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                hdf5
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="fmt.html" class="dependency-card">
@@ -249,22 +257,6 @@
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="matio.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">matio<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                hdf5
-                                </div>
-                            </div>
                         </div>
                     </a>
                     <a href="metis.html" class="dependency-card">
@@ -322,6 +314,22 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">matio - <i class="feature-description">Enable Matio support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/matio.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">matio</div>
+                                <div class="feature-dep-feature">features: [hdf5]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">mpi - <i class="feature-description">Enable MPI support</i></div>
                         </div>
                         <div class="section-two">
@@ -357,6 +365,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2022-11-22#6</li>
                     <li class="badge badge-primary">2022-11-22#5</li>
                     <li class="badge badge-primary">2022-11-22#4</li>
                     <li class="badge badge-primary">2022-11-22#3</li>
@@ -368,14 +377,14 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/deps-and-shared.patch" target="_blank">deps-and-shared.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/fix-fmt-10.patch" target="_blank">fix-fmt-10.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/fix-headers.patch" target="_blank">fix-headers.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/fix-ioss-includes.patch" target="_blank">fix-ioss-includes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/fix-mpi.patch" target="_blank">fix-mpi.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/fix_tpl_libs.patch" target="_blank">fix_tpl_libs.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7aeffc91033ad35cc4e2c152f213a866ec6c11ac/ports/seacas/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/deps-and-shared.patch" target="_blank">deps-and-shared.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/fix-fmt-10.patch" target="_blank">fix-fmt-10.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/fix-headers.patch" target="_blank">fix-headers.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/fix-ioss-includes.patch" target="_blank">fix-ioss-includes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/fix-mpi.patch" target="_blank">fix-mpi.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/fix_tpl_libs.patch" target="_blank">fix_tpl_libs.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/seacas/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -383,7 +392,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-06-28</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-07-18</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
