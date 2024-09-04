@@ -193,7 +193,7 @@
                     raylib
                 </div>
                 <div class="package-version">
-                    5.0#1
+                    5.0
                 </div>
             </div>
             <div class="package-description">
@@ -219,75 +219,11 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="cgltf.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">cgltf<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="dirent.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">dirent<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="drlibs.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">drlibs<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="glfw3.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">glfw3<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(android | emscripten)</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="miniaudio.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">miniaudio<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="mmx.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">mmx<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="nanosvg.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">nanosvg<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="qoi.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">qoi<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="stb.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">stb<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: !(windows | emscripten)</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -314,6 +250,11 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">hidpi - <i class="feature-description">Support high-DPI displays</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">use-audio - <i class="feature-description">Build raylib with audio module</i></div>
                         </div>
                     </div>
@@ -322,7 +263,6 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">5.0#1</li>
                     <li class="badge badge-primary">5.0#0</li>
                     <li class="badge badge-primary">4.5.0#2</li>
                     <li class="badge badge-primary">4.5.0#1</li>
@@ -350,9 +290,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3508985146f1b1d248c67ead13f8f54be5b4f5da/ports/raylib/android.diff" target="_blank">android.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3508985146f1b1d248c67ead13f8f54be5b4f5da/ports/raylib/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3508985146f1b1d248c67ead13f8f54be5b4f5da/ports/raylib/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e08971f3ddc13018ca858a692efe92d3b6b9fce/ports/raylib/fix-linkGlfw.patch" target="_blank">fix-linkGlfw.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e08971f3ddc13018ca858a692efe92d3b6b9fce/ports/raylib/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e08971f3ddc13018ca858a692efe92d3b6b9fce/ports/raylib/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -360,11 +300,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Zlib</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-11-27</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!arm32 & !uwp</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
