@@ -13,7 +13,6 @@ fi
 
 npm ci
 rm -rf ../en
-node generatePages.js
 node generateDocs.js
 node generateGitHubStars.js ../vcpkg $1
 node generatePackages.js ../vcpkg
