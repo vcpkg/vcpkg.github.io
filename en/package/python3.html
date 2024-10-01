@@ -193,7 +193,7 @@
                     python3
                 </div>
                 <div class="package-version">
-                    3.11.8#4
+                    3.11.8#5
                 </div>
             </div>
             <div class="package-description">
@@ -219,35 +219,11 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="bzip2.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">bzip2<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; static)</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="expat.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">expat<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="gettext.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">gettext<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform">platform: osx</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="libffi.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libffi<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; static)</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -259,14 +235,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="liblzma.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">liblzma<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; static)</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="libuuid.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">libuuid<i class="dep-version-min"></i></div>
@@ -275,28 +243,28 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="openssl.html" class="dependency-card">
+                    <a href="python3.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">openssl<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; static)</div>
-                            <div class="dep-host"></div>
+                            <div class="dep-name">python3<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
                     <a href="python3.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">python3<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
-                        </div>
-                    </a>
-                    <a href="sqlite3.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">sqlite3<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; static)</div>
+                            <div class="dep-platform">platform: !windows</div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                extensions
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="vcpkg-get-python.html" class="dependency-card">
@@ -333,11 +301,73 @@
                             <div class="feature-name">deprecated-win7-support - <i class="feature-description">Deprecated support for the Windows 7 platform -- may be removed at any time.</i></div>
                         </div>
                     </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">extensions - <i class="feature-description">Allow the build and usage of python extensions. On windows this requires python to be a dynamic library!</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/bzip2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">bzip2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/expat.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">expat</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libffi.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libffi</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/liblzma.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">liblzma</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openssl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openssl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/sqlite3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sqlite3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">readline - <i class="feature-description">Build with readline. Requires system readline to be installed</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.11.8#5</li>
                     <li class="badge badge-primary">3.11.8#4</li>
                     <li class="badge badge-primary">3.11.8#3</li>
                     <li class="badge badge-primary">3.11.8#2</li>
@@ -417,32 +447,33 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0001-only-build-required-projects.patch" target="_blank">0001-only-build-required-projects.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0002-static-library.patch" target="_blank">0002-static-library.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0003-use-vcpkg-zlib.patch" target="_blank">0003-use-vcpkg-zlib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0004-devendor-external-dependencies.patch" target="_blank">0004-devendor-external-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0005-dont-copy-vcruntime.patch" target="_blank">0005-dont-copy-vcruntime.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0006-restore-support-for-windows-7.patch" target="_blank">0006-restore-support-for-windows-7.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0007-workaround-windows-11-sdk-rc-compiler-error.patch" target="_blank">0007-workaround-windows-11-sdk-rc-compiler-error.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0008-python.pc.patch" target="_blank">0008-python.pc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0010-dont-skip-rpath.patch" target="_blank">0010-dont-skip-rpath.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0011-gcc-ldflags-fix.patch" target="_blank">0011-gcc-ldflags-fix.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0012-force-disable-modules.patch" target="_blank">0012-force-disable-modules.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0014-fix-get-python-inc-output.patch" target="_blank">0014-fix-get-python-inc-output.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0015-dont-use-WINDOWS-def.patch" target="_blank">0015-dont-use-WINDOWS-def.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0016-fix-win-cross.patch" target="_blank">0016-fix-win-cross.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0016-undup-ffi-symbols.patch" target="_blank">0016-undup-ffi-symbols.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0017-fix-win.patch" target="_blank">0017-fix-win.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/0018-fix-sysconfig-include.patch" target="_blank">0018-fix-sysconfig-include.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/openssl.props.in" target="_blank">openssl.props.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/python_vcpkg.props.in" target="_blank">python_vcpkg.props.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/usage.unix" target="_blank">usage.unix</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/usage.win" target="_blank">usage.win</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/vcpkg-port-config.cmake" target="_blank">vcpkg-port-config.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/98aa6396292d57e737a6ef999d4225ca488859d5/ports/python3/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0001-only-build-required-projects.patch" target="_blank">0001-only-build-required-projects.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0002-static-library.patch" target="_blank">0002-static-library.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0003-use-vcpkg-zlib.patch" target="_blank">0003-use-vcpkg-zlib.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0004-devendor-external-dependencies.patch" target="_blank">0004-devendor-external-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0005-dont-copy-vcruntime.patch" target="_blank">0005-dont-copy-vcruntime.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0006-restore-support-for-windows-7.patch" target="_blank">0006-restore-support-for-windows-7.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0007-workaround-windows-11-sdk-rc-compiler-error.patch" target="_blank">0007-workaround-windows-11-sdk-rc-compiler-error.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0008-python.pc.patch" target="_blank">0008-python.pc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0010-dont-skip-rpath.patch" target="_blank">0010-dont-skip-rpath.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0011-gcc-ldflags-fix.patch" target="_blank">0011-gcc-ldflags-fix.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0012-force-disable-modules.patch" target="_blank">0012-force-disable-modules.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0014-fix-get-python-inc-output.patch" target="_blank">0014-fix-get-python-inc-output.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0015-dont-use-WINDOWS-def.patch" target="_blank">0015-dont-use-WINDOWS-def.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0016-fix-win-cross.patch" target="_blank">0016-fix-win-cross.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0016-undup-ffi-symbols.patch" target="_blank">0016-undup-ffi-symbols.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0017-fix-win.patch" target="_blank">0017-fix-win.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0018-fix-sysconfig-include.patch" target="_blank">0018-fix-sysconfig-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/0019-fix-ssl-linkage.patch" target="_blank">0019-fix-ssl-linkage.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/openssl.props.in" target="_blank">openssl.props.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/python_vcpkg.props.in" target="_blank">python_vcpkg.props.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/usage.unix" target="_blank">usage.unix</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/usage.win" target="_blank">usage.win</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/vcpkg-port-config.cmake" target="_blank">vcpkg-port-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f0f811770e0538fcb295a1750c0a5e0de5131d29/ports/python3/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -450,7 +481,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Python-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-19</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-09-30</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
