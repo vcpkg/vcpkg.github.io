@@ -374,7 +374,7 @@ var renderPackages = function () {
     else {
         var noResultDiv = document.createElement('div');
         noResultDiv.className = 'card package-card';
-        noResultDiv.innerHTML = wording[lang]['no-results'] + '<b>' + query + '</b>';
+        noResultDiv.innerHTML = wording[lang]['no-results'] + '<b>' + escapeHtml(query) + '</b>';
         mainDiv.appendChild(noResultDiv);
     }
     handleLoadPkgMessage();
@@ -414,6 +414,15 @@ function handlePackageInput() {
     timeoutID = setTimeout(searchAndRenderPackages, 500);
 }
 
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 function searchAndRenderPackages() {
     query = document.getElementById('pkg-search').value.trim();
     if (query === '') {
@@ -427,6 +436,12 @@ function searchAndRenderPackages() {
     }
     renderPackages();
     timeoutID = undefined;
+
+    if (history.pushState) {
+        const basePath = window.location.pathname;
+        const newUrl = basePath + '?query=' + encodeURIComponent(query);
+        history.pushState({ path: newUrl }, '', newUrl);
+    }
 }
 var sortAlphabetical = function (a, b) {
     var pkgA = a.Name.toUpperCase();
