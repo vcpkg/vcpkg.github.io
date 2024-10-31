@@ -193,7 +193,7 @@
                     ffmpeg
                 </div>
                 <div class="package-version">
-                    7.0.2#5
+                    7.0.2#7
                 </div>
             </div>
             <div class="package-description">
@@ -640,6 +640,38 @@
                             <a href="/en/package/harfbuzz.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">harfbuzz</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">dvdvideo - <i class="feature-description">DVD-Video demuxer</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [gpl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libdvdnav.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libdvdnav</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libdvdread.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libdvdread</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -1349,6 +1381,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">7.0.2#7</li>
+                    <li class="badge badge-primary">7.0.2#6</li>
                     <li class="badge badge-primary">7.0.2#5</li>
                     <li class="badge badge-primary">7.0.2#4</li>
                     <li class="badge badge-primary">7.0.2#3</li>
@@ -1505,26 +1539,26 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0001-create-lib-libraries.patch" target="_blank">0001-create-lib-libraries.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0002-fix-msvc-link.patch" target="_blank">0002-fix-msvc-link.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0003-fix-windowsinclude.patch" target="_blank">0003-fix-windowsinclude.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0004-dependencies.patch" target="_blank">0004-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0005-fix-nasm.patch" target="_blank">0005-fix-nasm.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0007-fix-lib-naming.patch" target="_blank">0007-fix-lib-naming.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0012-Fix-ssl-110-detection.patch" target="_blank">0012-Fix-ssl-110-detection.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0013-define-WINVER.patch" target="_blank">0013-define-WINVER.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0020-fix-aarch64-libswscale.patch" target="_blank">0020-fix-aarch64-libswscale.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0024-fix-osx-host-c11.patch" target="_blank">0024-fix-osx-host-c11.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch" target="_blank">0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0041-add-const-for-opengl-definition.patch" target="_blank">0041-add-const-for-opengl-definition.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0042-fix-arm64-linux.patch" target="_blank">0042-fix-arm64-linux.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/0043-fix-miss-head.patch" target="_blank">0043-fix-miss-head.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/FindFFMPEG.cmake.in" target="_blank">FindFFMPEG.cmake.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/build.sh.in" target="_blank">build.sh.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c8582b4d83dbd36e1bebc08bf166b5eb807996b0/ports/ffmpeg/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0001-create-lib-libraries.patch" target="_blank">0001-create-lib-libraries.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0002-fix-msvc-link.patch" target="_blank">0002-fix-msvc-link.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0003-fix-windowsinclude.patch" target="_blank">0003-fix-windowsinclude.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0004-dependencies.patch" target="_blank">0004-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0005-fix-nasm.patch" target="_blank">0005-fix-nasm.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0007-fix-lib-naming.patch" target="_blank">0007-fix-lib-naming.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0012-Fix-ssl-110-detection.patch" target="_blank">0012-Fix-ssl-110-detection.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0013-define-WINVER.patch" target="_blank">0013-define-WINVER.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0020-fix-aarch64-libswscale.patch" target="_blank">0020-fix-aarch64-libswscale.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0024-fix-osx-host-c11.patch" target="_blank">0024-fix-osx-host-c11.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch" target="_blank">0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0041-add-const-for-opengl-definition.patch" target="_blank">0041-add-const-for-opengl-definition.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0042-fix-arm64-linux.patch" target="_blank">0042-fix-arm64-linux.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/0043-fix-miss-head.patch" target="_blank">0043-fix-miss-head.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/FindFFMPEG.cmake.in" target="_blank">FindFFMPEG.cmake.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/build.sh.in" target="_blank">build.sh.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b505fa789fd96eb5496a2e42c651c169e8460d27/ports/ffmpeg/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -1532,7 +1566,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-15</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-24</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
