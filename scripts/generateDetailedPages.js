@@ -140,7 +140,7 @@ async function renderAllTemplates() {
         packageInfo.FeaturesContent = getPackageFeatures(packageInfo);
         packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Supported on all triplets"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
-        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
+        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, 'master', vcpkgDir);
         packageInfo.Homepage = packageInfo["homepage"];
 
         // Gather all data needed for rendering.
