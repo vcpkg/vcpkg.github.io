@@ -2,6 +2,9 @@
 const fs = require('fs/promises');
 const path = require('path');
 const Mustache = require('mustache');
+const { exec } = require('child_process');
+const util = require('util');
+const execAsync = util.promisify(exec);
 const rootDir = path.dirname(__dirname);
 const pkgDir = rootDir + "/en/package"
 const templatesDir = rootDir + "/templates"
@@ -32,7 +35,12 @@ async function getCommitHash(commitFilePath) {
 async function generateGithubFileUrls(packageInfo, commitHash, vcpkgDir) {
     const portDirPath = path.join(vcpkgDir, 'ports', packageInfo.Name);
     const fileNames = await fs.readdir(portDirPath);
-    const githubBaseUrl = `https://github.com/microsoft/vcpkg/blob/${commitHash}/ports/${packageInfo.Name}/`;
+
+    const gitCommand = `git -C ${vcpkgDir} rev-list -n 1 ${commitHash} -- ports/${packageInfo.Name}`;
+    const { stdout: latestCommitHash } = await execAsync(gitCommand);
+    const effectiveCommitHash = latestCommitHash.trim() || 'master';
+
+    const githubBaseUrl = `https://github.com/microsoft/vcpkg/blob/${effectiveCommitHash}/ports/${packageInfo.Name}/`;
 
     return fileNames.map(fileName => {
         return {
@@ -140,7 +148,7 @@ async function renderAllTemplates() {
         packageInfo.FeaturesContent = getPackageFeatures(packageInfo);
         packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Supported on all triplets"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
-        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, 'master', vcpkgDir);
+        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
         packageInfo.Homepage = packageInfo["homepage"];
 
         // Gather all data needed for rendering.
