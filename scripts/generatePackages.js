@@ -52,12 +52,19 @@ async function readManifest(manifestFile) {
     return out;
 }
 
-async function getLastModifiedDate(repoPath, filePath) {
+async function getFileCommitInfo(repoPath, filePath) {
     try {
         // Ensure the file path is relative to the repository root
         const relativeFilePath = path.relative(repoPath, filePath);
-        const { stdout } = await execAsync(`git -C ${repoPath} log -1 --format=%cd --date=format:%Y-%m-%d -- ${relativeFilePath}`);
-        return stdout.trim();
+        const { stdout } = await execAsync(`git -C ${repoPath} log -1 --format='%H %cd' --date=format:%Y-%m-%d -- ${relativeFilePath}`);
+
+        const [commitHash, ...dateParts] = stdout.trim().split(' ');
+        const lastModifiedDate = dateParts.join(' ');
+
+        return{
+            commitHash,
+            lastModifiedDate
+        };
     } catch (error) {
         console.error(`Error getting last modified date for ${repoPath}: ${error}`);
         return null;
@@ -77,9 +84,14 @@ async function readPorts(vcpkgDir) {
             console.log('Failed to read ' + manifestFile);
             continue;
         }
+        const commitInfo = await getFileCommitInfo(vcpkgDir, manifestFile);
 
-        const lastModifiedDate = await getLastModifiedDate(vcpkgDir, manifestFile);
-        temp['LastModified'] = lastModifiedDate;
+        if (commitInfo){
+            temp['LastModified'] = commitInfo.lastModifiedDate;
+            temp['LastCommit'] = commitInfo.commitHash;
+        }else{
+            console.log('Failed to get commit info for ' + manifestFile);
+        }
 
         results[ent.name] = temp;
     }

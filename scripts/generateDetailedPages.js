@@ -36,10 +36,7 @@ async function generateGithubFileUrls(packageInfo, commitHash, vcpkgDir) {
     const portDirPath = path.join(vcpkgDir, 'ports', packageInfo.Name);
     const fileNames = await fs.readdir(portDirPath);
 
-    const gitCommand = `git -C ${vcpkgDir} rev-list -n 1 ${commitHash} -- ports/${packageInfo.Name}`;
-    const { stdout: latestCommitHash } = await execAsync(gitCommand);
-    const effectiveCommitHash = latestCommitHash.trim() || 'master';
-
+    const effectiveCommitHash = commitHash || 'master';
     const githubBaseUrl = `https://github.com/microsoft/vcpkg/blob/${effectiveCommitHash}/ports/${packageInfo.Name}/`;
 
     return fileNames.map(fileName => {
@@ -148,7 +145,7 @@ async function renderAllTemplates() {
         packageInfo.FeaturesContent = getPackageFeatures(packageInfo);
         packageInfo.supportedArchitectures = packageInfo['Supports'] ? [packageInfo['Supports']] : ["Supported on all triplets"];
         packageInfo.dependenciesList = (packageInfo.Dependencies || []).map(transform_dep);
-        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, commitHash, vcpkgDir);
+        packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, packageInfo.LastCommit, vcpkgDir);
         packageInfo.Homepage = packageInfo["homepage"];
 
         // Gather all data needed for rendering.
