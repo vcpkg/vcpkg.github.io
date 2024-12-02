@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - milerius-sfml-imgui</title>
+  <title>vcpkg package - vst3sdk</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -190,14 +190,14 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <div class="package-name">
-                    milerius-sfml-imgui
+                    vst3sdk
                 </div>
                 <div class="package-version">
-                    1.1#6
+                    v3.7.12_build_20
                 </div>
             </div>
             <div class="package-description">
-                imgui dll for sfml usage
+                Virtual Studio Technology (VST) is an audio plug-in software interface that facilitates the integration of software synthesizers and effects in digital audio workstations (DAW)
             </div>
         </div>
     <div class="flex-wrapper">
@@ -219,22 +219,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="imgui.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">imgui<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="sfml.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">sfml<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -256,41 +240,46 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">audiounit-wrapper - <i class="feature-description">Include AudioUnit wrappers for macOS</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">hosting-examples - <i class="feature-description">Build examples for VST3 host applications</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">plugin-examples - <i class="feature-description">Build examples for VST3 plugins</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">1.1#6</li>
-                    <li class="badge badge-primary">1.1#5</li>
-                    <li class="badge badge-primary">1.1#4</li>
-                    <li class="badge badge-primary">1.1#3</li>
-                    <li class="badge badge-primary">1.1-2#0</li>
-                    <li class="badge badge-primary">1.1-1#0</li>
-                    <li class="badge badge-primary">1.1#0</li>
+                    <li class="badge badge-primary">v3.7.12_build_20#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/89f00b3b8611028566a5264afce725cdfdfddbb4/ports/milerius-sfml-imgui/FixFindPackageIssue.patch" target="_blank">FixFindPackageIssue.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/89f00b3b8611028566a5264afce725cdfdfddbb4/ports/milerius-sfml-imgui/cpp11.patch" target="_blank">cpp11.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/89f00b3b8611028566a5264afce725cdfdfddbb4/ports/milerius-sfml-imgui/fix-imgui-dependency.patch" target="_blank">fix-imgui-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/89f00b3b8611028566a5264afce725cdfdfddbb4/ports/milerius-sfml-imgui/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/89f00b3b8611028566a5264afce725cdfdfddbb4/ports/milerius-sfml-imgui/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e14cd769a2336d162c0f9ca5dd028e0e55fd80e/ports/vst3sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e14cd769a2336d162c0f9ca5dd028e0e55fd80e/ports/vst3sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2022-11-28</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-3.0-only</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-17</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!android & !uwp & !(arm64 & windows) & !staticcrt</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
@@ -302,15 +291,15 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/Milerius/imgui-sfml-shared">https://github.com/Milerius/imgui-sfml-shared</a>
+                    <a href="https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/API+Documentation/Index.html">https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical+Documentation/API+Documentation/Index.html</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Install</div>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install milerius-sfml-imgui</pre>
+                <pre> vcpkg install vst3sdk</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port milerius-sfml-imgui</pre>
+                <pre> vcpkg add port vst3sdk</pre>
             </div>
         </div>
     </div>
