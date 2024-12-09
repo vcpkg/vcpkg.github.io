@@ -193,7 +193,7 @@
                     openblas
                 </div>
                 <div class="package-version">
-                    0.3.28
+                    0.3.28#1
                 </div>
             </div>
             <div class="package-description">
@@ -227,14 +227,6 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
-                    <a href="pthread.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">pthread<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !windows &amp; !uwp</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -263,7 +255,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">simplethread - <i class="feature-description">Use simple thread</i></div>
+                            <div class="feature-name">simplethread - <i class="feature-description">Use simple thread safety for level3 functions,Alternative to serialization of concurrent access to parallelized level3 functions.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -279,15 +271,15 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">threads - <i class="feature-description">Use a threading backend</i></div>
+                            <div class="feature-name">threads - <i class="feature-description">Enable multi-threading</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/pthread.html">
+                            <a href="/en/package/pthreads.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">pthread</div>
+                                <div class="feature-dep-name">pthreads</div>
                                 <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform">platform: !windows &amp; !uwp</div>
+                                <div class="feature-dep-platform">platform: !windows</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -298,6 +290,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.3.28#1</li>
                     <li class="badge badge-primary">0.3.28#0</li>
                     <li class="badge badge-primary">0.3.27#1</li>
                     <li class="badge badge-primary">0.3.27#0</li>
@@ -348,13 +341,15 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/fix-redefinition-function.patch" target="_blank">fix-redefinition-function.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/gcc14.patch" target="_blank">gcc14.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/install-tools.patch" target="_blank">install-tools.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/openblas_common.h" target="_blank">openblas_common.h</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/uwp.patch" target="_blank">uwp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6ebf8c123bc8077dc9216db6438eeabaa154c473/ports/openblas/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/arm32-asm-function.diff" target="_blank">arm32-asm-function.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/disable-testing.diff" target="_blank">disable-testing.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/getarch.diff" target="_blank">getarch.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/openblas_common.h" target="_blank">openblas_common.h</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/system-check-msvc.diff" target="_blank">system-check-msvc.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a6bfb5abd634fc866bb54b236eb3514d8baf868/ports/openblas/win32-uwp.diff" target="_blank">win32-uwp.diff</a></li>
                   </ul>
             </div>
         </div>
@@ -362,11 +357,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-17</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-06</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!arm | arm64 | !uwp</pre></div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
