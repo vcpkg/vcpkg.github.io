@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - casadi</title>
+  <title>vcpkg package - kdstatemachineeditor</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -190,14 +190,14 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <div class="package-name">
-                    casadi
+                    kdstatemachineeditor
                 </div>
                 <div class="package-version">
-                    3.6.7
+                    2.0.0
                 </div>
             </div>
             <div class="package-description">
-                CasADi is a symbolic framework for numeric optimization implementing automatic differentiation in forward and reverse modes on sparse matrix-valued computational graphs. It supports self-contained C-code generation and interfaces state-of-the-art codes such as SUNDIALS, IPOPT etc. It can be used from C++, Python or Matlab/Octave.
+                KDStateMachineEditor is a library for visualizing and editing state charts.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -219,6 +219,62 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
+                    <a href="graphviz.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">graphviz<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="qt5compat.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qt5compat<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="qtbase.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                testlib, widgets
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="qtdeclarative.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtdeclarative<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="qtremoteobjects.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtremoteobjects<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="qtscxml.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtscxml<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -246,23 +302,23 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">3.6.7#0</li>
+                    <li class="badge badge-primary">2.0.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d5cf6a9a272336036fb0547b235a8ceed2b6c693/ports/casadi/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d5cf6a9a272336036fb0547b235a8ceed2b6c693/ports/casadi/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d5cf6a9a272336036fb0547b235a8ceed2b6c693/ports/casadi/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ef6588394c4baf0630861bf316da5a896356abf3/ports/kdstatemachineeditor/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ef6588394c4baf0630861bf316da5a896356abf3/ports/kdstatemachineeditor/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ef6588394c4baf0630861bf316da5a896356abf3/ports/kdstatemachineeditor/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-3.0-only</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-22</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-only</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-17</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -278,15 +334,15 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="http://casadi.org">http://casadi.org</a>
+                    <a href="https://github.com/KDAB/KDStateMachineEditor">https://github.com/KDAB/KDStateMachineEditor</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Install</div>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install casadi</pre>
+                <pre> vcpkg install kdstatemachineeditor</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port casadi</pre>
+                <pre> vcpkg add port kdstatemachineeditor</pre>
             </div>
         </div>
     </div>

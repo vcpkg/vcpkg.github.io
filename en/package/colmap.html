@@ -193,7 +193,7 @@
                     colmap
                 </div>
                 <div class="package-version">
-                    3.10
+                    3.11.1
                 </div>
             </div>
             <div class="package-description">
@@ -219,9 +219,9 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="boost-filesystem.html" class="dependency-card">
+                    <a href="boost-algorithm.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-filesystem<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-algorithm<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -235,6 +235,14 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="boost-heap.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">boost-heap<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="boost-program-options.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-program-options<i class="dep-version-min"></i></div>
@@ -243,17 +251,17 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-system.html" class="dependency-card">
+                    <a href="boost-property-map.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-system<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-property-map<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-test.html" class="dependency-card">
+                    <a href="boost-property-tree.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-test<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-property-tree<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -273,14 +281,6 @@
                                 lapack, suitesparse
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="cgal.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">cgal<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
                         </div>
                     </a>
                     <a href="eigen3.html" class="dependency-card">
@@ -315,14 +315,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="glew.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">glew<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="glog.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">glog<i class="dep-version-min"></i></div>
@@ -331,9 +323,25 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="qt5-base.html" class="dependency-card">
+                    <a href="jasper.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">qt5-base<i class="dep-version-min"></i></div>
+                            <div class="dep-name">jasper<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="metis.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">metis<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="poselib.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">poselib<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -370,13 +378,37 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cuda - <i class="feature-description">CUDA support for current compute architecture of this machine.</i></div>
+                            <div class="feature-name">cgal - <i class="feature-description">Build with CGAL.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/cgal.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cgal</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">cuda - <i class="feature-description">Build with CUDA.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
                             <a href="/en/package/cuda.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">cuda</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/glew.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glew</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -393,6 +425,30 @@
                             <a href="/en/package/cuda.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">cuda</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gui - <i class="feature-description">Build the GUI.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glew.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glew</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qt5-base.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qt5-base</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -421,6 +477,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.11.1#0</li>
                     <li class="badge badge-primary">3.10#0</li>
                     <li class="badge badge-primary">3.9.1#0</li>
                     <li class="badge badge-primary">2023-10-01#1</li>
@@ -439,9 +496,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb31deb441597459846e2de4181767fa45278154/ports/colmap/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb31deb441597459846e2de4181767fa45278154/ports/colmap/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb31deb441597459846e2de4181767fa45278154/ports/colmap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa59239965a2f819a2b3c08721b64fa80e64eeba/ports/colmap/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa59239965a2f819a2b3c08721b64fa80e64eeba/ports/colmap/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa59239965a2f819a2b3c08721b64fa80e64eeba/ports/colmap/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -449,11 +506,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-15</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-16</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">(linux | (windows & !static) | osx) & (x86 | x64)</pre></div>
+            <div><pre class="support-arch">(linux | (windows & !static) | osx) & (x86 | x64 | arm64)</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
