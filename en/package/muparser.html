@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     muparser
                 </div>
                 <div class="package-version">
-                    2.3.4
+                    2.3.5
                 </div>
             </div>
             <div class="package-description">
@@ -240,12 +240,17 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openmp - <i class="feature-description">Enable OpenMP for multithreading</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.3.5#0</li>
                     <li class="badge badge-primary">2.3.4#0</li>
                     <li class="badge badge-primary">2.3.3#2</li>
                     <li class="badge badge-primary">2.3.3#1</li>
@@ -260,8 +265,8 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/muparser/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/muparser/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37e135d7989672c550a4bd6de4d72c994a4291d2/ports/muparser/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/37e135d7989672c550a4bd6de4d72c994a4291d2/ports/muparser/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -269,7 +274,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-2-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2022-11-21</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-23</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     usockets
                 </div>
                 <div class="package-version">
-                    0.8.8#1
+                    0.8.8#2
                 </div>
             </div>
             <div class="package-description">
@@ -223,13 +223,21 @@
                         <div class="section-one">
                             <div class="dep-name">libuv<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: windows</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -242,28 +250,7 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">event - <i class="feature-description">Build usockets with epoll support</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">network - <i class="feature-description">Build usockets with winsock support</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/winsock2.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">winsock2</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">ssl - <i class="feature-description">Build usockets with openssl support</i></div>
+                            <div class="feature-name">ssl - <i class="feature-description">Enable SSL support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -282,6 +269,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.8.8#2</li>
                     <li class="badge badge-primary">0.8.8#1</li>
                     <li class="badge badge-primary">0.8.6#1</li>
                     <li class="badge badge-primary">0.8.6#0</li>
@@ -305,9 +293,10 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/usockets/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/usockets/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/usockets/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/usockets/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/usockets/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/usockets/unofficial-usockets-config.cmake" target="_blank">unofficial-usockets-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/usockets/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -315,7 +304,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-12</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

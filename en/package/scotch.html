@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     scotch
                 </div>
                 <div class="package-version">
-                    7.0.3
+                    7.0.5#1
                 </div>
             </div>
             <div class="package-description">
@@ -272,21 +272,38 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ptscotch - <i class="feature-description">Build PT-Scotch</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/mpi.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">mpi</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">7.0.5#1</li>
+                    <li class="badge badge-primary">7.0.5#0</li>
                     <li class="badge badge-primary">7.0.3#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/scotch/fix-build.patch" target="_blank">fix-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/scotch/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/scotch/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca9f57ba4f61a12988ed0109d99f415ddb3e7090/ports/scotch/fix-build.patch" target="_blank">fix-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca9f57ba4f61a12988ed0109d99f415ddb3e7090/ports/scotch/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca9f57ba4f61a12988ed0109d99f415ddb3e7090/ports/scotch/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -294,7 +311,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-08-02</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-03</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

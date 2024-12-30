@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     poco
                 </div>
                 <div class="package-version">
-                    1.13.3
+                    1.14.0
                 </div>
             </div>
             <div class="package-description">
@@ -230,6 +230,22 @@
                     <a href="pcre2.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">pcre2<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="sqlite3.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">sqlite3<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="utf8proc.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">utf8proc<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -360,27 +376,13 @@
                             </a>
                         </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">sqlite3 - <i class="feature-description">Sqlite3 support for POCO</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/sqlite3.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">sqlite3</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.14.0#0</li>
+                    <li class="badge badge-primary">1.13.3#1</li>
                     <li class="badge badge-primary">1.13.3#0</li>
                     <li class="badge badge-primary">1.13.2#0</li>
                     <li class="badge badge-primary">1.13.0#0</li>
@@ -430,15 +432,16 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/0001-static-pcre.patch" target="_blank">0001-static-pcre.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/0002-arm64-pcre.patch" target="_blank">0002-arm64-pcre.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/0003-fix-dependency.patch" target="_blank">0003-fix-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/0004-fix-feature-sqlite3.patch" target="_blank">0004-fix-feature-sqlite3.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/0005-fix-error-c3861.patch" target="_blank">0005-fix-error-c3861.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/0007-find-pcre2.patch" target="_blank">0007-find-pcre2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/poco/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0001-static-pcre.patch" target="_blank">0001-static-pcre.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0002-arm64-pcre.patch" target="_blank">0002-arm64-pcre.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0003-fix-dependency.patch" target="_blank">0003-fix-dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0004-fix-feature-sqlite3.patch" target="_blank">0004-fix-feature-sqlite3.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0005-fix-error-c3861.patch" target="_blank">0005-fix-error-c3861.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0007-find-pcre2.patch" target="_blank">0007-find-pcre2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/0008-fix-mingw-compilation.patch" target="_blank">0008-fix-mingw-compilation.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/38bf1efc4e794dd574d2528b138ffff3c73e7662/ports/poco/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -446,7 +449,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSL-1.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-04-09</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-19</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

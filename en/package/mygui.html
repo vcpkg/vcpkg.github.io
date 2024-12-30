@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     mygui
                 </div>
                 <div class="package-version">
-                    3.4.3#1
+                    3.4.3#3
                 </div>
             </div>
             <div class="package-description">
@@ -258,6 +258,11 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">obsolete - <i class="feature-description">Keep obsolete functions.</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">opengl - <i class="feature-description">Use OpenGL render system.</i></div>
                         </div>
                         <div class="section-two">
@@ -274,6 +279,11 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">plugins - <i class="feature-description">Build MyGUI plugins.</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">tools - <i class="feature-description">Install MyGUI tools.</i></div>
                         </div>
                     </div>
@@ -282,6 +292,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.4.3#3</li>
+                    <li class="badge badge-primary">3.4.3#2</li>
                     <li class="badge badge-primary">3.4.3#1</li>
                     <li class="badge badge-primary">3.4.3#0</li>
                     <li class="badge badge-primary">3.4.2#0</li>
@@ -298,13 +310,14 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/Install-tools.patch" target="_blank">Install-tools.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/fix-generation.patch" target="_blank">fix-generation.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/fix-tools-lnk2005.patch" target="_blank">fix-tools-lnk2005.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/opengl.patch" target="_blank">opengl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/sdl2-static.patch" target="_blank">sdl2-static.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mygui/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/Install-tools.patch" target="_blank">Install-tools.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/fix-generation.patch" target="_blank">fix-generation.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/fix-tools-lnk2005.patch" target="_blank">fix-tools-lnk2005.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/opengl.patch" target="_blank">opengl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/platform-lib-static.patch" target="_blank">platform-lib-static.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/sdl2-static.patch" target="_blank">sdl2-static.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/137197a8f85e6c6cf1843ef024af7d9c28bb0bde/ports/mygui/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -312,7 +325,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-04-25</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-01</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

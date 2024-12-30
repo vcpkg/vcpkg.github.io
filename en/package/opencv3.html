@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     opencv3
                 </div>
                 <div class="package-version">
-                    3.4.18#15
+                    3.4.18#17
                 </div>
             </div>
             <div class="package-description">
@@ -258,6 +258,11 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">bgsegm - <i class="feature-description">opencv_bgsegm module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">contrib - <i class="feature-description">opencv_contrib module</i></div>
                         </div>
                         <div class="section-two">
@@ -274,7 +279,7 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opencv3</div>
                                 <div class="feature-dep-feature">features: [dnn]</div>
-                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-platform">platform: !android</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -284,38 +289,6 @@
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform">platform: !uwp &amp; !(windows &amp; (arm | arm64))</div>
                                 <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">cuda - <i class="feature-description">CUDA support for opencv</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/cuda.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">cuda</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/cudnn.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">cudnn</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/opencv3.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">opencv3</div>
-                                <div class="feature-dep-feature">features: [contrib]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -345,16 +318,8 @@
                             <a href="/en/package/opencv3.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opencv3</div>
-                                <div class="feature-dep-feature">features: [dnn, jpeg, png, quirc, tiff, webp]</div>
+                                <div class="feature-dep-feature">features: [jpeg, png, quirc, tiff, webp]</div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/opencv3.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">opencv3</div>
-                                <div class="feature-dep-feature">features: [gtk]</div>
-                                <div class="feature-dep-platform">platform: linux</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
@@ -388,22 +353,6 @@
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">ffmpeg - <i class="feature-description">ffmpeg support for opencv</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/ffmpeg.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">ffmpeg</div>
-                                <div class="feature-dep-feature">features: [avcodec, avformat, swresample, swscale]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -450,6 +399,11 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">gapi - <i class="feature-description">Enable gapi module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">gdcm - <i class="feature-description">GDCM support for opencv</i></div>
                         </div>
                         <div class="section-two">
@@ -486,9 +440,9 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/gtk.html">
+                            <a href="/en/package/gtk3.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">gtk</div>
+                                <div class="feature-dep-name">gtk3</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -591,6 +545,16 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">line-descriptor - <i class="feature-description">opencv_line_descriptor module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">msmf - <i class="feature-description">Microsoft Media Foundation support for opencv</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">nonfree - <i class="feature-description">allow nonfree and unredistributable libraries</i></div>
                         </div>
                     </div>
@@ -688,9 +652,9 @@
                             <a href="/en/package/python3.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">python3</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-feature">features: [extensions]</div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -713,6 +677,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">quality - <i class="feature-description">Build opencv_quality module</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opencv3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencv3</div>
+                                <div class="feature-dep-feature">features: [contrib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">quirc - <i class="feature-description">Enable QR code module</i></div>
                         </div>
                         <div class="section-two">
@@ -725,6 +705,11 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">salicency - <i class="feature-description">opencv_salicency module</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -826,7 +811,7 @@
                                 <div class="feature-dep-name">vtk</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -857,6 +842,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.4.18#17</li>
+                    <li class="badge badge-primary">3.4.18#16</li>
                     <li class="badge badge-primary">3.4.18#15</li>
                     <li class="badge badge-primary">3.4.18#14</li>
                     <li class="badge badge-primary">3.4.18#13</li>
@@ -911,27 +898,28 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0001-disable-downloading.patch" target="_blank">0001-disable-downloading.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0002-install-options.patch" target="_blank">0002-install-options.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0003-force-package-requirements.patch" target="_blank">0003-force-package-requirements.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0004-fix-eigen.patch" target="_blank">0004-fix-eigen.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0005-fix-vtk9.patch" target="_blank">0005-fix-vtk9.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0006-fix-uwp.patch" target="_blank">0006-fix-uwp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0007-fix-hdf5.patch" target="_blank">0007-fix-hdf5.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0008-devendor-quirc.patch" target="_blank">0008-devendor-quirc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0009-fix-protobuf.patch" target="_blank">0009-fix-protobuf.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0010-fix-uwp-tiff-imgcodecs.patch" target="_blank">0010-fix-uwp-tiff-imgcodecs.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0011-remove-python2.patch" target="_blank">0011-remove-python2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0012-fix-zlib.patch" target="_blank">0012-fix-zlib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0013-fix-ceres.patch" target="_blank">0013-fix-ceres.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0016-fix-freetype-contrib.patch" target="_blank">0016-fix-freetype-contrib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0018-fix-depend-tesseract.patch" target="_blank">0018-fix-depend-tesseract.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0019-missing-include.patch" target="_blank">0019-missing-include.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/0020-fix-supportqnx.patch" target="_blank">0020-fix-supportqnx.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/fix-tbb-error.patch" target="_blank">fix-tbb-error.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/usage.in" target="_blank">usage.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/opencv3/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0001-disable-downloading.patch" target="_blank">0001-disable-downloading.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0002-install-options.patch" target="_blank">0002-install-options.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0003-force-package-requirements.patch" target="_blank">0003-force-package-requirements.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0004-fix-eigen.patch" target="_blank">0004-fix-eigen.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0005-fix-vtk9.patch" target="_blank">0005-fix-vtk9.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0006-fix-uwp.patch" target="_blank">0006-fix-uwp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0007-contrib-fix-hdf5.patch" target="_blank">0007-contrib-fix-hdf5.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0008-devendor-quirc.patch" target="_blank">0008-devendor-quirc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0009-fix-protobuf.patch" target="_blank">0009-fix-protobuf.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0010-fix-uwp-tiff-imgcodecs.patch" target="_blank">0010-fix-uwp-tiff-imgcodecs.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0011-remove-python2.patch" target="_blank">0011-remove-python2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0012-fix-zlib.patch" target="_blank">0012-fix-zlib.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0013-contrib-fix-ceres.patch" target="_blank">0013-contrib-fix-ceres.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0014-fix-pkgconf-name.patch" target="_blank">0014-fix-pkgconf-name.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0015-fix-supportqnx.patch" target="_blank">0015-fix-supportqnx.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0016-contrib-fix-freetype.patch" target="_blank">0016-contrib-fix-freetype.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0017-missing-include.patch" target="_blank">0017-missing-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0018-contrib-fix-tesseract.patch" target="_blank">0018-contrib-fix-tesseract.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/0019-fix-tbb.patch" target="_blank">0019-fix-tbb.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/usage.in" target="_blank">usage.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/opencv3/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -939,7 +927,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-19</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-05</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     qtquick3d
                 </div>
                 <div class="package-version">
-                    6.7.2
+                    6.8.1
                 </div>
             </div>
             <div class="package-description">
@@ -219,6 +219,14 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
+                    <a href="meshoptimizer.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">meshoptimizer<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
@@ -290,7 +298,18 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">default-features - <i class="feature-description">Platform-dependent default features</i></div>
+                            <div class="feature-name">openxr - <i class="feature-description">OpenXR support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/openxr-loader.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openxr-loader</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -298,6 +317,11 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.8.1#0</li>
+                    <li class="badge badge-primary">6.8.0#2</li>
+                    <li class="badge badge-primary">6.8.0#1</li>
+                    <li class="badge badge-primary">6.8.0#0</li>
+                    <li class="badge badge-primary">6.7.3#0</li>
                     <li class="badge badge-primary">6.7.2#0</li>
                     <li class="badge badge-primary">6.7.1#0</li>
                     <li class="badge badge-primary">6.7.0#0</li>
@@ -332,8 +356,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/qtquick3d/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/qtquick3d/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/19847ac3d8cad7599e96bd531f9bc1f0ebae6131/ports/qtquick3d/0001-devendor-meshoptimizer.patch" target="_blank">0001-devendor-meshoptimizer.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/19847ac3d8cad7599e96bd531f9bc1f0ebae6131/ports/qtquick3d/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/19847ac3d8cad7599e96bd531f9bc1f0ebae6131/ports/qtquick3d/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -341,7 +366,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-20</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-12</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     msquic
                 </div>
                 <div class="package-version">
-                    2.3.5
+                    2.4.5#1
                 </div>
             </div>
             <div class="package-description">
@@ -246,17 +246,26 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.4.5#1</li>
+                    <li class="badge badge-primary">2.4.5#0</li>
+                    <li class="badge badge-primary">2.4.4#0</li>
+                    <li class="badge badge-primary">2.3.6#2</li>
+                    <li class="badge badge-primary">2.3.6#1</li>
+                    <li class="badge badge-primary">2.3.6#0</li>
+                    <li class="badge badge-primary">2.3.5#2</li>
+                    <li class="badge badge-primary">2.3.5#1</li>
                     <li class="badge badge-primary">2.3.5#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/msquic/fix-comparing-system-processor-with-win32.patch" target="_blank">fix-comparing-system-processor-with-win32.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/msquic/fix-install.patch" target="_blank">fix-install.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/msquic/fix-uwp-crt.patch" target="_blank">fix-uwp-crt.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/msquic/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/msquic/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20f600a4f5462e438c89d244d6b9bef87cfe2b42/ports/msquic/all_headers.patch" target="_blank">all_headers.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20f600a4f5462e438c89d244d6b9bef87cfe2b42/ports/msquic/fix-comparing-system-processor-with-win32.patch" target="_blank">fix-comparing-system-processor-with-win32.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20f600a4f5462e438c89d244d6b9bef87cfe2b42/ports/msquic/fix-install.patch" target="_blank">fix-install.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20f600a4f5462e438c89d244d6b9bef87cfe2b42/ports/msquic/fix-uwp-crt.patch" target="_blank">fix-uwp-crt.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20f600a4f5462e438c89d244d6b9bef87cfe2b42/ports/msquic/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20f600a4f5462e438c89d244d6b9bef87cfe2b42/ports/msquic/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -264,11 +273,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-02</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!(static & staticcrt)</pre></div>
+            <div><pre class="support-arch">!((static & staticcrt) | uwp)</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>

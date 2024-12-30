@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     allegro5
                 </div>
                 <div class="package-version">
-                    5.2.9.1
+                    5.2.10.0
                 </div>
             </div>
             <div class="package-description">
@@ -299,6 +299,14 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="minimp3.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">minimp3<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="openal-soft.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">openal-soft<i class="dep-version-min"></i></div>
@@ -386,6 +394,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">5.2.10.0#0</li>
+                    <li class="badge badge-primary">5.2.9.1#1</li>
                     <li class="badge badge-primary">5.2.9.1#0</li>
                     <li class="badge badge-primary">5.2.9.0#0</li>
                     <li class="badge badge-primary">5.2.6.0#4</li>
@@ -404,11 +414,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/allegro5/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/allegro5/do-not-copy-pdbs-to-lib.patch" target="_blank">do-not-copy-pdbs-to-lib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/allegro5/msvc-arm64-atomic.patch" target="_blank">msvc-arm64-atomic.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/allegro5/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/allegro5/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0ab0ae30bf21ab470cb2c6bdd3f7d8ec352f74f6/ports/allegro5/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0ab0ae30bf21ab470cb2c6bdd3f7d8ec352f74f6/ports/allegro5/do-not-copy-pdbs-to-lib.patch" target="_blank">do-not-copy-pdbs-to-lib.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0ab0ae30bf21ab470cb2c6bdd3f7d8ec352f74f6/ports/allegro5/minimp3-fix.patch" target="_blank">minimp3-fix.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0ab0ae30bf21ab470cb2c6bdd3f7d8ec352f74f6/ports/allegro5/msvc-arm64-atomic.patch" target="_blank">msvc-arm64-atomic.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0ab0ae30bf21ab470cb2c6bdd3f7d8ec352f74f6/ports/allegro5/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0ab0ae30bf21ab470cb2c6bdd3f7d8ec352f74f6/ports/allegro5/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -416,7 +427,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause AND Zlib</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-01-31</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-23</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

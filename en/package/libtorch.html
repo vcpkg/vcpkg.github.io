@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     libtorch
                 </div>
                 <div class="package-version">
-                    2.1.2#3
+                    2.1.2#8
                 </div>
             </div>
             <div class="package-description">
@@ -238,6 +238,14 @@
                     <a href="eigen3.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">eigen3<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="fftw3.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">fftw3<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -427,6 +435,14 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
+                    <a href="xnnpack.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">xnnpack<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
@@ -457,6 +473,14 @@
                             <a href="/en/package/magma.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">magma</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/nvidia-cutlass.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">nvidia-cutlass</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -499,22 +523,6 @@
                                 <div class="feature-dep-name">tensorpipe</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform">platform: linux | osx</div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">fftw3 - <i class="feature-description">Build with fftw3</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/fftw3.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">fftw3</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -642,30 +650,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">xnnpack - <i class="feature-description">Build with XNNPack</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/fxdiv.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">fxdiv</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform">platform: !windows</div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/xnnpack.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">xnnpack</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">zstd - <i class="feature-description">Build with ZSTD</i></div>
                         </div>
                         <div class="section-two">
@@ -685,6 +669,11 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.1.2#8</li>
+                    <li class="badge badge-primary">2.1.2#7</li>
+                    <li class="badge badge-primary">2.1.2#6</li>
+                    <li class="badge badge-primary">2.1.2#5</li>
+                    <li class="badge badge-primary">2.1.2#4</li>
                     <li class="badge badge-primary">2.1.2#3</li>
                     <li class="badge badge-primary">2.1.2#2</li>
                     <li class="badge badge-primary">2.1.2#1</li>
@@ -700,22 +689,25 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/clang-cl.patch" target="_blank">clang-cl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/cmake-fixes.patch" target="_blank">cmake-fixes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/cuda-adjustments.patch" target="_blank">cuda-adjustments.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fix-api-export.patch" target="_blank">fix-api-export.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fix-build.patch" target="_blank">fix-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fix-calculate-minloglevel.patch" target="_blank">fix-calculate-minloglevel.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fix-glog.patch" target="_blank">fix-glog.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fix-msvc-ICE.patch" target="_blank">fix-msvc-ICE.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fix-sleef.patch" target="_blank">fix-sleef.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/force-cuda-include.patch" target="_blank">force-cuda-include.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/fxdiv.patch" target="_blank">fxdiv.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/kineto.patch" target="_blank">kineto.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/more-fixes.patch" target="_blank">more-fixes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/protoc.patch" target="_blank">protoc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/libtorch/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/clang-cl.patch" target="_blank">clang-cl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/cmake-fixes.patch" target="_blank">cmake-fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/cuda-adjustments.patch" target="_blank">cuda-adjustments.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-api-export.patch" target="_blank">fix-api-export.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-aten-cutlass.patch" target="_blank">fix-aten-cutlass.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-build-error-with-fmt11.patch" target="_blank">fix-build-error-with-fmt11.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-build.patch" target="_blank">fix-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-calculate-minloglevel.patch" target="_blank">fix-calculate-minloglevel.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-glog.patch" target="_blank">fix-glog.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-msvc-ICE.patch" target="_blank">fix-msvc-ICE.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fix-sleef.patch" target="_blank">fix-sleef.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/force-cuda-include.patch" target="_blank">force-cuda-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/fxdiv.patch" target="_blank">fxdiv.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/kineto.patch" target="_blank">kineto.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/more-fixes.patch" target="_blank">more-fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/no-abs-path.patch" target="_blank">no-abs-path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/protoc.patch" target="_blank">protoc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8cbc1d7ab8fad003ca237c06c849596d30d7ee12/ports/libtorch/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -723,7 +715,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-07-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-17</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

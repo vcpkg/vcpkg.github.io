@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     mdl-sdk
                 </div>
                 <div class="package-version">
-                    2021.1.2#5
+                    2024.0.4#1
                 </div>
             </div>
             <div class="package-description">
@@ -227,22 +227,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-any.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-any<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="boost-bind.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-bind<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="boost-core.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-core<i class="dep-version-min"></i></div>
@@ -251,9 +235,9 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-function.html" class="dependency-card">
+                    <a href="boost-dynamic-bitset.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-function<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-dynamic-bitset<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -267,9 +251,9 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-smart-ptr.html" class="dependency-card">
+                    <a href="boost-intrusive.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-smart-ptr<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-intrusive<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -286,30 +270,6 @@
                     <a href="boost-unordered.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-unordered<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="boost-uuid.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-uuid<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="freeimage.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">freeimage<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="opengl.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">opengl<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -343,14 +303,14 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">freeimage - <i class="feature-description">Build image plugin for various image formats using Freeimage</i></div>
+                            <div class="feature-name">openimageio - <i class="feature-description">Build image plugin for various image formats using OpenImageIO</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/freeimage.html">
+                            <a href="/en/package/openimageio.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">freeimage</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-name">openimageio</div>
+                                <div class="feature-dep-feature">features: [gif, openjpeg, webp]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -362,6 +322,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2024.0.4#1</li>
+                    <li class="badge badge-primary">2024.0.4#0</li>
                     <li class="badge badge-primary">2021.1.2#5</li>
                     <li class="badge badge-primary">2021.1.2#4</li>
                     <li class="badge badge-primary">2021.1.2#3</li>
@@ -373,20 +335,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/001-freeimage-from-vcpkg.patch" target="_blank">001-freeimage-from-vcpkg.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/002-install-rules.patch" target="_blank">002-install-rules.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/003-freeimage-disable-faxg3.patch" target="_blank">003-freeimage-disable-faxg3.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/004-missing-std-includes.patch" target="_blank">004-missing-std-includes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/005-missing-link-windows-crypt-libraries.patch" target="_blank">005-missing-link-windows-crypt-libraries.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/006-guard-nonexisting-targets.patch" target="_blank">006-guard-nonexisting-targets.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/007-plugin-options.patch" target="_blank">007-plugin-options.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/008-build-static-llvm.patch" target="_blank">008-build-static-llvm.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/009-include-priority-vendored-llvm.patch" target="_blank">009-include-priority-vendored-llvm.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/010-workaround-gcc-bit.patch" target="_blank">010-workaround-gcc-bit.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/011-fix-python.patch" target="_blank">011-fix-python.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/unofficial-mdl-config.cmake.in" target="_blank">unofficial-mdl-config.cmake.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/mdl-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d05fa3fd4d0271a89f1c13c7e4ab2214366943d5/ports/mdl-sdk/008-build-static-llvm.patch" target="_blank">008-build-static-llvm.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d05fa3fd4d0271a89f1c13c7e4ab2214366943d5/ports/mdl-sdk/012-remove-wrong-llvm-cxx-standard.patch" target="_blank">012-remove-wrong-llvm-cxx-standard.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d05fa3fd4d0271a89f1c13c7e4ab2214366943d5/ports/mdl-sdk/013-openimageio-3.0.patch" target="_blank">013-openimageio-3.0.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d05fa3fd4d0271a89f1c13c7e4ab2214366943d5/ports/mdl-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d05fa3fd4d0271a89f1c13c7e4ab2214366943d5/ports/mdl-sdk/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d05fa3fd4d0271a89f1c13c7e4ab2214366943d5/ports/mdl-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -394,11 +348,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-04-30</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-03</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!arm & !x86 & !staticcrt</pre></div>
+            <div><pre class="support-arch">!x86 & !(windows & (staticcrt | arm | uwp)) & !(osx & arm) & !android</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>

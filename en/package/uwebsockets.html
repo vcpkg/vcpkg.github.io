@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     uwebsockets
                 </div>
                 <div class="package-version">
-                    20.62.0
+                    20.71.0
                 </div>
             </div>
             <div class="package-description">
@@ -227,25 +227,52 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="zlib.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">zlib<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">ssl - <i class="feature-description">Enable SSL support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/usockets.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">usockets</div>
+                                <div class="feature-dep-feature">features: [ssl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zlib - <i class="feature-description">Enable ZLIB support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/zlib.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zlib</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">20.71.0#0</li>
+                    <li class="badge badge-primary">20.70.0#0</li>
+                    <li class="badge badge-primary">20.67.0#0</li>
+                    <li class="badge badge-primary">20.65.0#0</li>
                     <li class="badge badge-primary">20.62.0#0</li>
                     <li class="badge badge-primary">20.60.0#0</li>
                     <li class="badge badge-primary">20.59.0#0</li>
@@ -298,8 +325,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/uwebsockets/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/uwebsockets/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/uwebsockets/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/uwebsockets/unofficial-uwebsockets-config.cmake" target="_blank">unofficial-uwebsockets-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c42b86e59d7bb4cba9346178324febd7e654b09/ports/uwebsockets/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -307,7 +335,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-04-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-12</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -39,7 +39,7 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="../scripts/consentAndAnalytics.js"></script>
+<script src="/scripts/consentAndAnalytics.js"></script>
 
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
@@ -183,7 +183,7 @@
   </div>
 </div>
 </div>
-<div id="banner"></div>
+<div id="cookie-banner"></div>
 <body>
   <main class="package-body" id="main">
     <div class="package-page-wrapper">
@@ -193,7 +193,7 @@
                     fontconfig
                 </div>
                 <div class="package-version">
-                    2.14.2#2
+                    2.15.0#2
                 </div>
             </div>
             <div class="package-description">
@@ -238,23 +238,7 @@
                     <a href="freetype.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">freetype<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="getopt.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">getopt<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="gettext.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">gettext<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -271,7 +255,7 @@
                         <div class="section-one">
                             <div class="dep-name">libiconv<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: !windows</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -279,7 +263,7 @@
                         <div class="section-one">
                             <div class="dep-name">libuuid<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !windows &amp; !osx &amp; !mingw</div>
+                            <div class="dep-platform">platform: !osx &amp; !windows</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -287,7 +271,7 @@
                         <div class="section-one">
                             <div class="dep-name">pthread<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: !emscripten &amp; !windows</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -304,12 +288,54 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">nls - <i class="feature-description">Native languages support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gettext.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gettext</div>
+                                <div class="feature-dep-feature">features: [tools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gettext-libintl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gettext-libintl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools - <i class="feature-description">Build tools</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/getopt.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">getopt</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.15.0#2</li>
+                    <li class="badge badge-primary">2.15.0#1</li>
+                    <li class="badge badge-primary">2.15.0#0</li>
                     <li class="badge badge-primary">2.14.2#2</li>
                     <li class="badge badge-primary">2.14.2#1</li>
                     <li class="badge badge-primary">2.14.2#0</li>
@@ -354,13 +380,14 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/fix-preprocessor-clang-cl.patch" target="_blank">fix-preprocessor-clang-cl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/libgetopt.patch" target="_blank">libgetopt.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/no-etc-symlinks.patch" target="_blank">no-etc-symlinks.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/vcpkg-cmake-wrapper.cmake.in" target="_blank">vcpkg-cmake-wrapper.cmake.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821100d967e1737d96414a308e3f7cbe0d1abf18/ports/fontconfig/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/emscripten.diff" target="_blank">emscripten.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/fix-wasm-shared-memory-atomics.patch" target="_blank">fix-wasm-shared-memory-atomics.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/libgetopt.patch" target="_blank">libgetopt.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/no-etc-symlinks.patch" target="_blank">no-etc-symlinks.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/vcpkg-cmake-wrapper.cmake.in" target="_blank">vcpkg-cmake-wrapper.cmake.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/00bd5c4aa5ab20dfeb466eeb4e246728de3040b2/ports/fontconfig/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -368,11 +395,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-19</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-16</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
