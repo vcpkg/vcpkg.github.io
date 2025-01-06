@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - libgpod</title>
+  <title>vcpkg package - lief</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -190,14 +190,14 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <div class="package-name">
-                    libgpod
+                    lief
                 </div>
                 <div class="package-version">
-                    2019-08-29#4
+                    0.16.1
                 </div>
             </div>
             <div class="package-description">
-                libgpod is a library meant to abstract access to an iPod content.
+                LIEF - Library to Instrument Executable Formats
             </div>
         </div>
     <div class="flex-wrapper">
@@ -219,28 +219,76 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="glib.html" class="dependency-card">
+                    <a href="fmt.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">glib<i class="dep-version-min"></i></div>
+                            <div class="dep-name">fmt<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="libplist.html" class="dependency-card">
+                    <a href="frozen.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">libplist<i class="dep-version-min"></i></div>
+                            <div class="dep-name">frozen<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="sqlite3.html" class="dependency-card">
+                    <a href="mbedtls.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">sqlite3<i class="dep-version-min"></i></div>
+                            <div class="dep-name">mbedtls<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="spdlog.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">spdlog<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="tcb-span.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">tcb-span<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="tl-expected.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">tl-expected<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="utfcpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">utfcpp<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
                 </div>
@@ -248,37 +296,111 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">art - <i class="feature-description">Build LIEF with ART module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">c-api - <i class="feature-description">C API</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">dex - <i class="feature-description">Build LIEF with DEX module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">elf - <i class="feature-description">Build LIEF with ELF module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">enable-json - <i class="feature-description">Enable JSON-related APIs</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/nlohmann-json.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">nlohmann-json</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">extra-warnings - <i class="feature-description">Enable extra warning from the compiler</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">logging - <i class="feature-description">Enable logging</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">logging-debug - <i class="feature-description">Enable debug logging</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">macho - <i class="feature-description">Build LIEF with MachO module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">oat - <i class="feature-description">Build LIEF with OAT module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pe - <i class="feature-description">Build LIEF with PE module</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">use-ccache - <i class="feature-description">Use ccache to speed up compilation</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">vdex - <i class="feature-description">Build LIEF with VDEX module</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">2019-08-29#4</li>
-                    <li class="badge badge-primary">2019-08-29#3</li>
-                    <li class="badge badge-primary">2019-08-29#2</li>
-                    <li class="badge badge-primary">2019-08-29#1</li>
-                    <li class="badge badge-primary">2019-08-29#0</li>
+                    <li class="badge badge-primary">0.16.1#0</li>
+                    <li class="badge badge-primary">0.16.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b06a316ff4f1e468d5482722abbe4283538ae55f/ports/libgpod/configure.ac.patch" target="_blank">configure.ac.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b06a316ff4f1e468d5482722abbe4283538ae55f/ports/libgpod/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b06a316ff4f1e468d5482722abbe4283538ae55f/ports/libgpod/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b32534780c038b51ac81956f11dde85b5451ea86/ports/lief/fix-cmakelists.patch" target="_blank">fix-cmakelists.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b32534780c038b51ac81956f11dde85b5451ea86/ports/lief/fix-liefconfig-cmake-in.patch" target="_blank">fix-liefconfig-cmake-in.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b32534780c038b51ac81956f11dde85b5451ea86/ports/lief/fix-vcpkg-includes.patch" target="_blank">fix-vcpkg-includes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b32534780c038b51ac81956f11dde85b5451ea86/ports/lief/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b32534780c038b51ac81956f11dde85b5451ea86/ports/lief/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2022-01-24</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-30</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!windows & !osx</pre></div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
@@ -290,15 +412,15 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/fadingred/libgpod">https://github.com/fadingred/libgpod</a>
+                    <a href="https://lief.quarkslab.com">https://lief.quarkslab.com</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Install</div>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install libgpod</pre>
+                <pre> vcpkg install lief</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port libgpod</pre>
+                <pre> vcpkg add port lief</pre>
             </div>
         </div>
     </div>
