@@ -193,7 +193,7 @@
                     bullet3
                 </div>
                 <div class="package-version">
-                    3.25#2
+                    3.25#3
                 </div>
             </div>
             <div class="package-description">
@@ -247,12 +247,28 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">extras - <i class="feature-description">Build the extras</i></div>
+                            <div class="feature-name">extras - <i class="feature-description">Build selected extras</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/tinyxml2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tinyxml2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">multithreading - <i class="feature-description">Multithreading functionality for bullet3</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opencl - <i class="feature-description">Build Bullet3OpenCL_clew library</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -265,6 +281,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.25#3</li>
                     <li class="badge badge-primary">3.25#2</li>
                     <li class="badge badge-primary">3.25#1</li>
                     <li class="badge badge-primary">3.25#0</li>
@@ -294,10 +311,13 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76472ad8222a1d5ae360381d5d2909f638bd7991/ports/bullet3/cmake-fix.patch" target="_blank">cmake-fix.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76472ad8222a1d5ae360381d5d2909f638bd7991/ports/bullet3/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76472ad8222a1d5ae360381d5d2909f638bd7991/ports/bullet3/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76472ad8222a1d5ae360381d5d2909f638bd7991/ports/bullet3/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/cmake-config-export.diff" target="_blank">cmake-config-export.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/cmake-version.diff" target="_blank">cmake-version.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/opencl.diff" target="_blank">opencl.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/tinyxml2.diff" target="_blank">tinyxml2.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f54003d6596b091aa8d1142d28a13a21708f5128/ports/bullet3/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -305,7 +325,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Zlib</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-05</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-07</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
