@@ -193,7 +193,7 @@
                     open62541
                 </div>
                 <div class="package-version">
-                    1.3.15
+                    1.3.15#2
                 </div>
             </div>
             <div class="package-description">
@@ -249,6 +249,17 @@
                         <div class="section-one">
                             <div class="feature-name">diagnostics - <i class="feature-description">Enable diagnostics information exposed by the server</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/open62541.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">open62541</div>
+                                <div class="feature-dep-feature">features: [subscriptions-events]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
@@ -258,6 +269,17 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">historizing - <i class="feature-description">Enable basic support for historical access (client and server)</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/open62541.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">open62541</div>
+                                <div class="feature-dep-feature">features: [subscriptions-events]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -279,6 +301,22 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">methodcalls - <i class="feature-description">Enable the Method service set</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">multithreading - <i class="feature-description">Enable multi threading support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/open62541.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">open62541</div>
+                                <div class="feature-dep-feature">features: [methodcalls]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -306,12 +344,25 @@
                         <div class="section-one">
                             <div class="feature-name">subscriptions-events - <i class="feature-description">Enable event monitoring</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/open62541.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">open62541</div>
+                                <div class="feature-dep-feature">features: [subscriptions]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.3.15#2</li>
+                    <li class="badge badge-primary">1.3.15#1</li>
                     <li class="badge badge-primary">1.3.15#0</li>
                     <li class="badge badge-primary">1.3.14#1</li>
                     <li class="badge badge-primary">1.3.14#0</li>
@@ -344,10 +395,10 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d88aebfb4c994ab70c38f0cbe202390f6d82e9e/ports/open62541/android-librt.diff" target="_blank">android-librt.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d88aebfb4c994ab70c38f0cbe202390f6d82e9e/ports/open62541/clang-sanitizer.diff" target="_blank">clang-sanitizer.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d88aebfb4c994ab70c38f0cbe202390f6d82e9e/ports/open62541/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d88aebfb4c994ab70c38f0cbe202390f6d82e9e/ports/open62541/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/79ec851853c98ea35041919fc0fd160b647226a1/ports/open62541/android-librt.diff" target="_blank">android-librt.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/79ec851853c98ea35041919fc0fd160b647226a1/ports/open62541/clang-sanitizer.diff" target="_blank">clang-sanitizer.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/79ec851853c98ea35041919fc0fd160b647226a1/ports/open62541/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/79ec851853c98ea35041919fc0fd160b647226a1/ports/open62541/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -355,7 +406,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MPL-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-04</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-26</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

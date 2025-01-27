@@ -193,7 +193,7 @@
                     portaudio
                 </div>
                 <div class="package-version">
-                    19.7#5
+                    19.7#6
                 </div>
             </div>
             <div class="package-description">
@@ -219,6 +219,14 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
+                    <a href="jack2.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">jack2<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !ios &amp; !osx &amp; !windows</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -246,6 +254,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">19.7#6</li>
                     <li class="badge badge-primary">19.7#5</li>
                     <li class="badge badge-primary">19.7#4</li>
                     <li class="badge badge-primary">19.7#3</li>
@@ -270,18 +279,17 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a28aae61c575c6b5b2318d3d2dd97de1e55dc049/ports/portaudio/fix-library-can-not-be-found.patch" target="_blank">fix-library-can-not-be-found.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a28aae61c575c6b5b2318d3d2dd97de1e55dc049/ports/portaudio/framework_link.patch" target="_blank">framework_link.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a28aae61c575c6b5b2318d3d2dd97de1e55dc049/ports/portaudio/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a28aae61c575c6b5b2318d3d2dd97de1e55dc049/ports/portaudio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/57db540f3c2add9c8fd2518f461bee5c7a5c6570/ports/portaudio/jack.diff" target="_blank">jack.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/57db540f3c2add9c8fd2518f461bee5c7a5c6570/ports/portaudio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/57db540f3c2add9c8fd2518f461bee5c7a5c6570/ports/portaudio/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-08-02</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-26</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
