@@ -193,7 +193,7 @@
                     sdl3-image
                 </div>
                 <div class="package-version">
-                    3.1.0
+                    3.1.1
                 </div>
             </div>
             <div class="package-description">
@@ -219,14 +219,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="libpng.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libpng<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="sdl3.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">sdl3<i class="dep-version-min"></i></div>
@@ -258,7 +250,7 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">libjpeg-turbo - <i class="feature-description">Support for JPEG image format</i></div>
+                            <div class="feature-name">jpeg - <i class="feature-description">Support for JPEG image format</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -274,13 +266,13 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">libwebp - <i class="feature-description">Support for WEBP image format.</i></div>
+                            <div class="feature-name">png - <i class="feature-description">Support for PNG image format</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/libwebp.html">
+                            <a href="/en/package/libpng.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">libwebp</div>
+                                <div class="feature-dep-name">libpng</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -304,21 +296,39 @@
                             </a>
                         </div>
                     </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">webp - <i class="feature-description">Support for WEBP image format.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libwebp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libwebp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.1.1#0</li>
                     <li class="badge badge-primary">3.1.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c7961da7380ecdb92242c9dbc8ee1bca2105e335/ports/sdl3-image/cmake-sdl3.patch" target="_blank">cmake-sdl3.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c7961da7380ecdb92242c9dbc8ee1bca2105e335/ports/sdl3-image/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c7961da7380ecdb92242c9dbc8ee1bca2105e335/ports/sdl3-image/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c7961da7380ecdb92242c9dbc8ee1bca2105e335/ports/sdl3-image/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ddbfd0c7b2febc276a673c96f66493f3adb81b12/ports/sdl3-image/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ddbfd0c7b2febc276a673c96f66493f3adb81b12/ports/sdl3-image/pkgconfig-libname.diff" target="_blank">pkgconfig-libname.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ddbfd0c7b2febc276a673c96f66493f3adb81b12/ports/sdl3-image/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ddbfd0c7b2febc276a673c96f66493f3adb81b12/ports/sdl3-image/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ddbfd0c7b2febc276a673c96f66493f3adb81b12/ports/sdl3-image/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -326,7 +336,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Zlib</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-21</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-30</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
