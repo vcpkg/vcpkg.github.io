@@ -193,7 +193,7 @@
                     rtlsdr
                 </div>
                 <div class="package-version">
-                    2020-04-16#4
+                    2.0.2
                 </div>
             </div>
             <div class="package-description">
@@ -231,7 +231,7 @@
                         <div class="section-one">
                             <div class="dep-name">pthreads<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: windows</div>
+                            <div class="dep-platform">platform: windows &amp; !mingw</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -256,12 +256,17 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools - <i class="feature-description">Build tools</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.0.2#0</li>
                     <li class="badge badge-primary">2020-04-16#4</li>
                     <li class="badge badge-primary">2020-04-16#3</li>
                     <li class="badge badge-primary">2020-04-16#2</li>
@@ -272,23 +277,24 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43c6e295a0bbff0c96a4203368e6f72b4f5bdf16/ports/rtlsdr/Compile-with-msvc.patch" target="_blank">Compile-with-msvc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43c6e295a0bbff0c96a4203368e6f72b4f5bdf16/ports/rtlsdr/Findlibusb.cmake" target="_blank">Findlibusb.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43c6e295a0bbff0c96a4203368e6f72b4f5bdf16/ports/rtlsdr/fix-version.patch" target="_blank">fix-version.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43c6e295a0bbff0c96a4203368e6f72b4f5bdf16/ports/rtlsdr/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43c6e295a0bbff0c96a4203368e6f72b4f5bdf16/ports/rtlsdr/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3a2cda955a08aff87c2d9f6b72fb955ecfabd49/ports/rtlsdr/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3a2cda955a08aff87c2d9f6b72fb955ecfabd49/ports/rtlsdr/library-linkage.diff" target="_blank">library-linkage.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3a2cda955a08aff87c2d9f6b72fb955ecfabd49/ports/rtlsdr/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3a2cda955a08aff87c2d9f6b72fb955ecfabd49/ports/rtlsdr/tools.diff" target="_blank">tools.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3a2cda955a08aff87c2d9f6b72fb955ecfabd49/ports/rtlsdr/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3a2cda955a08aff87c2d9f6b72fb955ecfabd49/ports/rtlsdr/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-03-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-2.0-or-later</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-08</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">windows & (x86 | x64)</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>

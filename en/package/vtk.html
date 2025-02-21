@@ -193,7 +193,7 @@
                     vtk
                 </div>
                 <div class="package-version">
-                    9.3.0-pv5.12.1#5
+                    9.3.0-pv5.12.1#7
                 </div>
             </div>
             <div class="package-description">
@@ -679,6 +679,11 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">openmp - <i class="feature-description">Use openmp multithreading parallel implementation</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">openvr - <i class="feature-description">OpenVR functionality for VTK</i></div>
                         </div>
                         <div class="section-two">
@@ -855,6 +860,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">tbb - <i class="feature-description">Use TBB multithreading parallel implementation</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/tbb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tbb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">utf8 - <i class="feature-description">Enables vtk reader&#x2F;writer with utf-8 path support</i></div>
                         </div>
                         <div class="section-two">
@@ -890,6 +911,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">9.3.0-pv5.12.1#7</li>
+                    <li class="badge badge-primary">9.3.0-pv5.12.1#6</li>
                     <li class="badge badge-primary">9.3.0-pv5.12.1#5</li>
                     <li class="badge badge-primary">9.3.0-pv5.12.1#4</li>
                     <li class="badge badge-primary">9.3.0-pv5.12.1#3</li>
@@ -978,41 +1001,42 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/FindExpat.patch" target="_blank">FindExpat.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/FindHDF5.cmake" target="_blank">FindHDF5.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/FindLZ4.patch" target="_blank">FindLZ4.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/FindLZMA.patch" target="_blank">FindLZMA.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/NoUndefDebug.patch" target="_blank">NoUndefDebug.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/afxdll.patch" target="_blank">afxdll.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/cgns.patch" target="_blank">cgns.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/devendor_exodusII.patch" target="_blank">devendor_exodusII.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/fast-float.patch" target="_blank">fast-float.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/fix-exprtk.patch" target="_blank">fix-exprtk.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/fix-gdal.patch" target="_blank">fix-gdal.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/fix-using-hdf5.patch" target="_blank">fix-using-hdf5.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/hdf5helper.patch" target="_blank">hdf5helper.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/iotr.patch" target="_blank">iotr.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/jsoncpp.patch" target="_blank">jsoncpp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/libproj.patch" target="_blank">libproj.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/no-libharu-for-ioexport.patch" target="_blank">no-libharu-for-ioexport.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/no-libproj-for-netcdf.patch" target="_blank">no-libproj-for-netcdf.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/opencascade-7.8.0.patch" target="_blank">opencascade-7.8.0.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/pegtl.patch" target="_blank">pegtl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/pythonwrapper.patch" target="_blank">pythonwrapper.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/remove-prefix-changes.patch" target="_blank">remove-prefix-changes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/vcpkg.json" target="_blank">vcpkg.json</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/vtkioss.patch" target="_blank">vtkioss.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ed7e2a7cde45751be258a20835e89ac78c29bb0d/ports/vtk/vtkm.patch" target="_blank">vtkm.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/FindExpat.patch" target="_blank">FindExpat.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/FindHDF5.cmake" target="_blank">FindHDF5.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/FindLZ4.patch" target="_blank">FindLZ4.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/FindLZMA.patch" target="_blank">FindLZMA.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/NoUndefDebug.patch" target="_blank">NoUndefDebug.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/afxdll.patch" target="_blank">afxdll.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/cgns.patch" target="_blank">cgns.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/devendor_exodusII.patch" target="_blank">devendor_exodusII.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/fast-float.patch" target="_blank">fast-float.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/fix-exprtk.patch" target="_blank">fix-exprtk.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/fix-gdal.patch" target="_blank">fix-gdal.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/fix-tbbsmptool.patch" target="_blank">fix-tbbsmptool.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/fix-using-hdf5.patch" target="_blank">fix-using-hdf5.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/hdf5helper.patch" target="_blank">hdf5helper.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/iotr.patch" target="_blank">iotr.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/jsoncpp.patch" target="_blank">jsoncpp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/libproj.patch" target="_blank">libproj.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/no-libharu-for-ioexport.patch" target="_blank">no-libharu-for-ioexport.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/no-libproj-for-netcdf.patch" target="_blank">no-libproj-for-netcdf.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/opencascade-7.8.0.patch" target="_blank">opencascade-7.8.0.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/pegtl.patch" target="_blank">pegtl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/pythonwrapper.patch" target="_blank">pythonwrapper.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/remove-prefix-changes.patch" target="_blank">remove-prefix-changes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/vtkioss.patch" target="_blank">vtkioss.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc5118086f5db341ee4ab3a7d4d64c0f39896270/ports/vtk/vtkm.patch" target="_blank">vtkm.patch</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-22</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-24</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

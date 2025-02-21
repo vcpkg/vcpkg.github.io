@@ -193,7 +193,7 @@
                     etcd-cpp-apiv3
                 </div>
                 <div class="package-version">
-                    0.15.4#1
+                    0.15.4#3
                 </div>
             </div>
             <div class="package-description">
@@ -251,14 +251,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="cpprestsdk.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">cpprestsdk<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="grpc.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">grpc<i class="dep-version-min"></i></div>
@@ -304,12 +296,29 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">async - <i class="feature-description">Enable async features supported by cpprestsdk.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/cpprestsdk.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cpprestsdk</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.15.4#3</li>
+                    <li class="badge badge-primary">0.15.4#2</li>
                     <li class="badge badge-primary">0.15.4#1</li>
                     <li class="badge badge-primary">0.15.4#0</li>
                     <li class="badge badge-primary">0.15.3#0</li>
@@ -322,9 +331,10 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ae7d8f5056f717c0aac58e6bf24ef3911f33b7c5/ports/etcd-cpp-apiv3/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ae7d8f5056f717c0aac58e6bf24ef3911f33b7c5/ports/etcd-cpp-apiv3/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ae7d8f5056f717c0aac58e6bf24ef3911f33b7c5/ports/etcd-cpp-apiv3/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3cf004dd2cea2b7cdf2859fb85b7c98c29b2e172/ports/etcd-cpp-apiv3/fix-find-cpprestsdk.patch" target="_blank">fix-find-cpprestsdk.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3cf004dd2cea2b7cdf2859fb85b7c98c29b2e172/ports/etcd-cpp-apiv3/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3cf004dd2cea2b7cdf2859fb85b7c98c29b2e172/ports/etcd-cpp-apiv3/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3cf004dd2cea2b7cdf2859fb85b7c98c29b2e172/ports/etcd-cpp-apiv3/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -332,7 +342,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-27</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-03</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

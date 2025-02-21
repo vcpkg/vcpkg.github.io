@@ -193,7 +193,7 @@
                     openvino
                 </div>
                 <div class="package-version">
-                    2024.4.0#5
+                    2025.0.0
                 </div>
             </div>
             <div class="package-description">
@@ -261,7 +261,7 @@
                     </a>
                     <a href="xbyak.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">xbyak<i class="dep-version-min"> >= 6.69</i></div>
+                            <div class="dep-name">xbyak<i class="dep-version-min"> >= 6.73</i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform">platform: !(arm | uwp)</div>
                             <div class="dep-host"></div>
@@ -323,7 +323,18 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">npu - <i class="feature-description">NPU Support</i></div>
+                            <div class="feature-name">npu - <i class="feature-description">Enables NPU plugin for inference</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/level-zero.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">level-zero</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -448,6 +459,11 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2025.0.0#0</li>
+                    <li class="badge badge-primary">2024.6.0#1</li>
+                    <li class="badge badge-primary">2024.6.0#0</li>
+                    <li class="badge badge-primary">2024.5.0#0</li>
+                    <li class="badge badge-primary">2024.4.0#6</li>
                     <li class="badge badge-primary">2024.4.0#5</li>
                     <li class="badge badge-primary">2024.4.0#4</li>
                     <li class="badge badge-primary">2024.4.0#3</li>
@@ -479,13 +495,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/001-disable-tools.patch" target="_blank">001-disable-tools.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/002-fix-onnx.patch" target="_blank">002-fix-onnx.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/003-protobuf.patch" target="_blank">003-protobuf.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/add-include-chrono.patch" target="_blank">add-include-chrono.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/887288b044e54102fb09a5f3a0b97dc42f3cfaac/ports/openvino/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d447aba21c87664394d4e6d4063b440ff4944dc0/ports/openvino/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d447aba21c87664394d4e6d4063b440ff4944dc0/ports/openvino/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d447aba21c87664394d4e6d4063b440ff4944dc0/ports/openvino/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -493,7 +505,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-10</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

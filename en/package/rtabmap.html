@@ -193,7 +193,7 @@
                     rtabmap
                 </div>
                 <div class="package-version">
-                    0.21.4.1#2
+                    0.21.4.1#5
                 </div>
             </div>
             <div class="package-description">
@@ -241,6 +241,14 @@
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                fs, intrinsics, thread
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="pcl.html" class="dependency-card">
@@ -369,7 +377,7 @@
                             <a href="/en/package/opencv.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opencv</div>
-                                <div class="feature-dep-feature">features: [contrib]</div>
+                                <div class="feature-dep-feature">features: [contrib, fs, intrinsics, thread]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -385,7 +393,7 @@
                             <a href="/en/package/opencv.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opencv</div>
-                                <div class="feature-dep-feature">features: [cuda]</div>
+                                <div class="feature-dep-feature">features: [cuda, fs, intrinsics, thread]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -401,11 +409,16 @@
                             <a href="/en/package/opencv.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opencv</div>
-                                <div class="feature-dep-feature">features: [nonfree]</div>
+                                <div class="feature-dep-feature">features: [fs, intrinsics, nonfree, thread]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openmp - <i class="feature-description">Enable OpenMP parallel execution</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -469,6 +482,9 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.21.4.1#5</li>
+                    <li class="badge badge-primary">0.21.4.1#4</li>
+                    <li class="badge badge-primary">0.21.4.1#3</li>
                     <li class="badge badge-primary">0.21.4.1#2</li>
                     <li class="badge badge-primary">0.21.4.1#1</li>
                     <li class="badge badge-primary">0.21.4.1#0</li>
@@ -493,15 +509,15 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/apple.patch" target="_blank">apple.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/fix_link.patch" target="_blank">fix_link.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/gklib.patch" target="_blank">gklib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/link-keywords.patch" target="_blank">link-keywords.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/multi-definition.patch" target="_blank">multi-definition.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/rtabmap-res-tool.patch" target="_blank">rtabmap-res-tool.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/sqlite3.patch" target="_blank">sqlite3.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ca1501f4b2cbc0a502594db6f303622394dbdf9f/ports/rtabmap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0001-cmakelists-fixes.patch" target="_blank">0001-cmakelists-fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0002-fix-link.patch" target="_blank">0002-fix-link.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0003-multi-definition.patch" target="_blank">0003-multi-definition.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0004-fix-manfold-typo.patch" target="_blank">0004-fix-manfold-typo.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0005-fix-opencv3-aruco.patch" target="_blank">0005-fix-opencv3-aruco.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0006-remove-apple-sys-path.patch" target="_blank">0006-remove-apple-sys-path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/0007-fix-g2o.patch" target="_blank">0007-fix-g2o.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cbf6fe29bd66f7e9c4474d7086b39c3012cce225/ports/rtabmap/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -509,7 +525,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-05</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-03</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
