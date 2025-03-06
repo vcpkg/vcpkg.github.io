@@ -86,7 +86,7 @@
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="/en/packages">Packages</a>
         </li>
-        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Documentation</a></li>
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
         </li>
@@ -97,91 +97,6 @@
     </div>
   </div>
 </nav>
-<div class="docs-nav" onmouseleave="addMouseLeave()">
-  <div class="docs-flex">
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">
-          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
-        </li>
-      </ul>
-
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">About</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Examples</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
-            >Installing and Using Packages</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
-            >Modifying Baseline to pin old Boost versions</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
-            >Overlay Triplets Linux Dynamic</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
-            >Packaging Github Repos</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Maintainers</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
-            >Maintainer Guide</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
-            >Manifest Files</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
-            >Portfile Functions</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Users</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
-            >Versioning</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </div>
 <div id="cookie-banner"></div>
 <body>
@@ -193,7 +108,7 @@
                     opentelemetry-cpp
                 </div>
                 <div class="package-version">
-                    1.19.0
+                    1.19.0#2
                 </div>
             </div>
             <div class="package-description">
@@ -294,6 +209,22 @@
                             <a href="/en/package/opentelemetry-cpp-contrib-version.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opentelemetry-cpp-contrib-version</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">opentracing - <i class="feature-description">Whether to include the Opentracing shim</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opentracing.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opentracing</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -415,6 +346,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.19.0#2</li>
+                    <li class="badge badge-primary">1.19.0#1</li>
                     <li class="badge badge-primary">1.19.0#0</li>
                     <li class="badge badge-primary">1.18.0#0</li>
                     <li class="badge badge-primary">1.17.0#1</li>
@@ -465,9 +398,10 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1f3f10d4911f46339411e12b1d0947c22bad5937/ports/opentelemetry-cpp/cmake-quirks.diff" target="_blank">cmake-quirks.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1f3f10d4911f46339411e12b1d0947c22bad5937/ports/opentelemetry-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1f3f10d4911f46339411e12b1d0947c22bad5937/ports/opentelemetry-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/903698327715067885a023aad13cb9cc19154b4c/ports/opentelemetry-cpp/cmake-quirks.diff" target="_blank">cmake-quirks.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/903698327715067885a023aad13cb9cc19154b4c/ports/opentelemetry-cpp/fix-target_link.patch" target="_blank">fix-target_link.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/903698327715067885a023aad13cb9cc19154b4c/ports/opentelemetry-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/903698327715067885a023aad13cb9cc19154b4c/ports/opentelemetry-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -475,7 +409,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-04</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-27</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -517,13 +451,13 @@
       <div class="footer-info-group footer-list">
         <div class="footer-heading">Get Started</div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-cmd">Windows</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Linux</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Mac</a>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -560,7 +494,7 @@
       </div>
       <div class="footer-info-group-dw">
         <div class="footer-description">
-          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/about/privacy">Privacy</a>
         </div>
       </div>
       <div class="footer-info-group-mc">

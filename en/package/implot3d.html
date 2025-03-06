@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - ignition-cmake0</title>
+  <title>vcpkg package - implot3d</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -86,7 +86,7 @@
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="/en/packages">Packages</a>
         </li>
-        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Documentation</a></li>
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
         </li>
@@ -97,91 +97,6 @@
     </div>
   </div>
 </nav>
-<div class="docs-nav" onmouseleave="addMouseLeave()">
-  <div class="docs-flex">
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">
-          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
-        </li>
-      </ul>
-
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">About</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Examples</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
-            >Installing and Using Packages</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
-            >Modifying Baseline to pin old Boost versions</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
-            >Overlay Triplets Linux Dynamic</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
-            >Packaging Github Repos</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Maintainers</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
-            >Maintainer Guide</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
-            >Manifest Files</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
-            >Portfile Functions</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Users</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
-            >Versioning</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </div>
 <div id="cookie-banner"></div>
 <body>
@@ -190,14 +105,14 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <div class="package-name">
-                    ignition-cmake0
+                    implot3d
                 </div>
                 <div class="package-version">
-                    0.6.2#4
+                    0.2
                 </div>
             </div>
             <div class="package-description">
-                CMake helper functions for building robotic applications
+                Immediate Mode 3D Plotting
             </div>
         </div>
     <div class="flex-wrapper">
@@ -219,9 +134,25 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="ignition-modularscripts.html" class="dependency-card">
+                    <a href="imgui.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">ignition-modularscripts<i class="dep-version-min"></i></div>
+                            <div class="dep-name">imgui<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -238,31 +169,23 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">0.6.2#4</li>
-                    <li class="badge badge-primary">0.6.2#3</li>
-                    <li class="badge badge-primary">0.6.2-2#0</li>
-                    <li class="badge badge-primary">0.6.2-1#0</li>
-                    <li class="badge badge-primary">0.6.2#0</li>
+                    <li class="badge badge-primary">0.2#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/do-not-compile-gtest.patch" target="_blank">do-not-compile-gtest.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/fix-find-ign-curl.patch" target="_blank">fix-find-ign-curl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/support-arm64.patch" target="_blank">support-arm64.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/uuid-do-not-require-pkg-config.patch" target="_blank">uuid-do-not-require-pkg-config.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1e24ff507492069fa2be89d6fb32d8b12b1fffd4/ports/ignition-cmake0/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3e3abce32308265648e1603fa9f93c0252b4edcc/ports/implot3d/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3e3abce32308265648e1603fa9f93c0252b4edcc/ports/implot3d/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3e3abce32308265648e1603fa9f93c0252b4edcc/ports/implot3d/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2022-05-12</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-20</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -278,15 +201,15 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://ignitionrobotics.org/libs/cmake">https://ignitionrobotics.org/libs/cmake</a>
+                    <a href="https://github.com/brenocq/implot3d">https://github.com/brenocq/implot3d</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Install</div>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install ignition-cmake0</pre>
+                <pre> vcpkg install implot3d</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port ignition-cmake0</pre>
+                <pre> vcpkg add port implot3d</pre>
             </div>
         </div>
     </div>
@@ -304,13 +227,13 @@
       <div class="footer-info-group footer-list">
         <div class="footer-heading">Get Started</div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-cmd">Windows</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Linux</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Mac</a>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -347,7 +270,7 @@
       </div>
       <div class="footer-info-group-dw">
         <div class="footer-description">
-          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/about/privacy">Privacy</a>
         </div>
       </div>
       <div class="footer-info-group-mc">

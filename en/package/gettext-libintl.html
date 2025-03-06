@@ -86,7 +86,7 @@
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="/en/packages">Packages</a>
         </li>
-        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Documentation</a></li>
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
         </li>
@@ -97,91 +97,6 @@
     </div>
   </div>
 </nav>
-<div class="docs-nav" onmouseleave="addMouseLeave()">
-  <div class="docs-flex">
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">
-          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
-        </li>
-      </ul>
-
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">About</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Examples</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
-            >Installing and Using Packages</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
-            >Modifying Baseline to pin old Boost versions</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
-            >Overlay Triplets Linux Dynamic</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
-            >Packaging Github Repos</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Maintainers</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
-            >Maintainer Guide</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
-            >Manifest Files</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
-            >Portfile Functions</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Users</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
-            >Versioning</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </div>
 <div id="cookie-banner"></div>
 <body>
@@ -193,7 +108,7 @@
                     gettext-libintl
                 </div>
                 <div class="package-version">
-                    0.22.5#2
+                    0.22.5#3
                 </div>
             </div>
             <div class="package-description">
@@ -227,11 +142,11 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="vcpkg-cmake.html" class="dependency-card">
+                    <a href="vcpkg-make.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
@@ -246,6 +161,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.22.5#3</li>
                     <li class="badge badge-primary">0.22.5#2</li>
                     <li class="badge badge-primary">0.22.5#1</li>
                     <li class="badge badge-primary">0.22.5#0</li>
@@ -258,14 +174,14 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/0003-Fix-win-unicode-paths.patch" target="_blank">0003-Fix-win-unicode-paths.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/bashify.cmake" target="_blank">bashify.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/detect" target="_blank">detect</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/uwp.patch" target="_blank">uwp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b593af97f717a0821badaf159d1f1c8f0463c245/ports/gettext-libintl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/0003-Fix-win-unicode-paths.patch" target="_blank">0003-Fix-win-unicode-paths.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/bashify.cmake" target="_blank">bashify.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/detect" target="_blank">detect</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/uwp.patch" target="_blank">uwp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8c72cf66b94948b7dfcb41c6106a11260a8b3b2/ports/gettext-libintl/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -273,7 +189,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-07-05</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-19</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -315,13 +231,13 @@
       <div class="footer-info-group footer-list">
         <div class="footer-heading">Get Started</div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-cmd">Windows</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Linux</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Mac</a>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -358,7 +274,7 @@
       </div>
       <div class="footer-info-group-dw">
         <div class="footer-description">
-          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/about/privacy">Privacy</a>
         </div>
       </div>
       <div class="footer-info-group-mc">

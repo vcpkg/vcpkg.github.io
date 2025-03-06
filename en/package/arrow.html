@@ -86,7 +86,7 @@
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="/en/packages">Packages</a>
         </li>
-        <li class="mobile-nav-item"><a class="navbar-mobile" href="/en/docs/README.html">Documentation</a></li>
+        <li class="mobile-nav-item"><a class="navbar-mobile" href="https://learn.microsoft.com/vcpkg/get_started/overview">Documentation</a></li>
         <li class="mobile-nav-item">
           <a class="navbar-mobile" href="https://github.com/microsoft/vcpkg">Github</a>
         </li>
@@ -97,91 +97,6 @@
     </div>
   </div>
 </nav>
-<div class="docs-nav" onmouseleave="addMouseLeave()">
-  <div class="docs-flex">
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">
-          <a class="docs-nav-link" href="/en/docs/README.html">Quick Start</a>
-        </li>
-      </ul>
-
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">About</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/faq.html">FAQ</a></li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/about/privacy.html">Privacy</a></li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Examples</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/installing-and-using-packages.html"
-            >Installing and Using Packages</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/modify-baseline-to-pin-old-boost.html"
-            >Modifying Baseline to pin old Boost versions</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/overlay-triplets-linux-dynamic.html"
-            >Overlay Triplets Linux Dynamic</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/packaging-github-repos.html"
-            >Packaging Github Repos</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/examples/patching.html">Patching</a>
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Maintainers</li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/control-files.html">Control Files</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/maintainer-guide.html"
-            >Maintainer Guide</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/manifest-files.html"
-            >Manifest Files</a
-          >
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/maintainers/portfile-functions.html"
-            >Portfile Functions</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="docs-column">
-      <ul class="docs-col-section">
-        <li class="docs-col-bold">Users</li>
-        <li class=""><a class="docs-nav-link" href="/en/docs/users/android.html">Android</a></li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/binarycaching.html">Binary Caching</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/buildsystems/integration.html">Integration</a>
-        </li>
-        <li class="">
-          <a class="docs-nav-link" href="/en/docs/users/versioning.html"
-            >Versioning</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </div>
 <div id="cookie-banner"></div>
 <body>
@@ -193,7 +108,7 @@
                     arrow
                 </div>
                 <div class="package-version">
-                    19.0.0#1
+                    19.0.1
                 </div>
             </div>
             <div class="package-description">
@@ -557,6 +472,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">19.0.1#0</li>
                     <li class="badge badge-primary">19.0.0#1</li>
                     <li class="badge badge-primary">19.0.0#0</li>
                     <li class="badge badge-primary">18.1.0#0</li>
@@ -636,21 +552,22 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0001-msvc-static-name.patch" target="_blank">0001-msvc-static-name.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0002-thrift.patch" target="_blank">0002-thrift.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0003-utf8proc.patch" target="_blank">0003-utf8proc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0004-android-musl.patch" target="_blank">0004-android-musl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0005-android-datetime.patch" target="_blank">0005-android-datetime.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0006-cmake-msvcruntime.patch" target="_blank">0006-cmake-msvcruntime.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/0007-fix-path.patch" target="_blank">0007-fix-path.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/usage-acero" target="_blank">usage-acero</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/usage-dataset" target="_blank">usage-dataset</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/usage-flight" target="_blank">usage-flight</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/usage-flightsql" target="_blank">usage-flightsql</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/usage-parquet" target="_blank">usage-parquet</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/446219a9108a1f141d098693b60dafa070625e5c/ports/arrow/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0001-msvc-static-name.patch" target="_blank">0001-msvc-static-name.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0002-thrift.patch" target="_blank">0002-thrift.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0003-utf8proc.patch" target="_blank">0003-utf8proc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0004-android-musl.patch" target="_blank">0004-android-musl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0005-android-datetime.patch" target="_blank">0005-android-datetime.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0006-cmake-msvcruntime.patch" target="_blank">0006-cmake-msvcruntime.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0007-fix-path.patch" target="_blank">0007-fix-path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/0008-arrow-parquet-size-statistics-include.patch" target="_blank">0008-arrow-parquet-size-statistics-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/usage-acero" target="_blank">usage-acero</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/usage-dataset" target="_blank">usage-dataset</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/usage-flight" target="_blank">usage-flight</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/usage-flightsql" target="_blank">usage-flightsql</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/usage-parquet" target="_blank">usage-parquet</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3b091c4d44af86ff17390fd9768c899df301e909/ports/arrow/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -658,7 +575,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-19</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -700,13 +617,13 @@
       <div class="footer-info-group footer-list">
         <div class="footer-heading">Get Started</div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=windows">Windows</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-cmd">Windows</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=linux">Linux</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Linux</a>
         </div>
         <div class="footer-description">
-          <a class="footer-link" href="/en/getting-started?platform=mac">Mac</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/get_started/get-started?pivots=shell-bash">Mac</a>
         </div>
       </div>
       <div class="footer-info-group footer-list">
@@ -743,7 +660,7 @@
       </div>
       <div class="footer-info-group-dw">
         <div class="footer-description">
-          <a class="footer-link" href="/en/docs/about/privacy.html">Privacy</a>
+          <a class="footer-link" href="https://learn.microsoft.com/vcpkg/about/privacy">Privacy</a>
         </div>
       </div>
       <div class="footer-info-group-mc">
