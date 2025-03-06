@@ -193,7 +193,7 @@
                     usearch
                 </div>
                 <div class="package-version">
-                    2.17.2
+                    2.17.2#1
                 </div>
             </div>
             <div class="package-description">
@@ -240,12 +240,60 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">fp16 - <i class="feature-description">Use software emulation for half-precision types</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/fp16.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">fp16</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jemalloc - <i class="feature-description">Use JeMalloc for faster memory allocations</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/jemalloc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">jemalloc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">simsimd - <i class="feature-description">Use SimSIMD hardware-accelerated metrics</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/simsimd.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">simsimd</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.17.2#1</li>
                     <li class="badge badge-primary">2.17.2#0</li>
                     <li class="badge badge-primary">2.3.2#0</li>
                 </ul>
@@ -253,8 +301,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/60b8fc8114eb2cb2baa70b760b67ad2c00a9f01a/ports/usearch/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/60b8fc8114eb2cb2baa70b760b67ad2c00a9f01a/ports/usearch/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5caba36ebe878ea9b56f04db1da02faf096d097d/ports/usearch/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5caba36ebe878ea9b56f04db1da02faf096d097d/ports/usearch/use-vcpkg-ports.patch" target="_blank">use-vcpkg-ports.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5caba36ebe878ea9b56f04db1da02faf096d097d/ports/usearch/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -262,7 +311,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-26</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
