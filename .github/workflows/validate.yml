@@ -31,3 +31,15 @@ jobs:
             git diff --stat
             exit 1
           fi
+    - name: Scan for accessibility issues
+      task: accessibility-insights.prod.task.accessibility-insights@3
+      condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+      enabled: true
+      inputs:
+        baselineFile: "$(Build.SourcesDirectory)/baselines/vcpkg.github.io.baseline"
+        url: "https://vcpkg.io/en/"
+        inputUrls: |
+          https://vcpkg.io/en/packages
+        maxUrls: 1
+        scanTimeout: 1200000
+        failOnAccessibilityError: false
