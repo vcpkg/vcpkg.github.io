@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - azure-core-cpp</title>
+  <title>vcpkg package - liquid-dsp</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -105,14 +105,14 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <div class="package-name">
-                    azure-core-cpp
+                    liquid-dsp
                 </div>
                 <div class="package-version">
-                    1.15.0
+                    1.7.0
                 </div>
             </div>
             <div class="package-description">
-                Microsoft Azure Core SDK for C++,This library provides shared primitives, abstractions, and helpers for modern Azure SDK client libraries written in the C++.
+                Digital signal processing library for software-defined radios.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -134,25 +134,9 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <a href="openssl.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">openssl<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !windows &amp; !uwp</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
-                        </div>
-                    </a>
-                    <a href="vcpkg-cmake-config.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -163,134 +147,20 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">curl - <i class="feature-description">Libcurl HTTP transport implementation</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/azure-core-cpp.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">azure-core-cpp</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [ssl]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">http - <i class="feature-description">All HTTP transport implementations available on the platform</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/azure-core-cpp.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">azure-core-cpp</div>
-                                <div class="feature-dep-feature">features: [curl]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/azure-core-cpp.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">azure-core-cpp</div>
-                                <div class="feature-dep-feature">features: [curl, winhttp]</div>
-                                <div class="feature-dep-platform">platform: windows &amp; !uwp</div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">winhttp - <i class="feature-description">WinHTTP HTTP transport implementation</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/azure-core-cpp.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">azure-core-cpp</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/wil.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">wil</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="no-features">No Features</div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">1.15.0#0</li>
-                    <li class="badge badge-primary">1.14.1#0</li>
-                    <li class="badge badge-primary">1.14.0#1</li>
-                    <li class="badge badge-primary">1.14.0#0</li>
-                    <li class="badge badge-primary">1.13.0#0</li>
-                    <li class="badge badge-primary">1.12.0#0</li>
-                    <li class="badge badge-primary">1.11.3#0</li>
-                    <li class="badge badge-primary">1.11.2#0</li>
-                    <li class="badge badge-primary">1.11.1#0</li>
-                    <li class="badge badge-primary">1.11.0#0</li>
-                    <li class="badge badge-primary">1.10.3#2</li>
-                    <li class="badge badge-primary">1.10.3#1</li>
-                    <li class="badge badge-primary">1.10.3#0</li>
-                    <li class="badge badge-primary">1.10.2#5</li>
-                    <li class="badge badge-primary">1.10.2#4</li>
-                    <li class="badge badge-primary">1.10.2#3</li>
-                    <li class="badge badge-primary">1.10.2#2</li>
-                    <li class="badge badge-primary">1.10.2#1</li>
-                    <li class="badge badge-primary">1.10.2#0</li>
-                    <li class="badge badge-primary">1.10.1#0</li>
-                    <li class="badge badge-primary">1.10.0#0</li>
-                    <li class="badge badge-primary">1.9.0#0</li>
-                    <li class="badge badge-primary">1.8.2#0</li>
-                    <li class="badge badge-primary">1.8.1#0</li>
-                    <li class="badge badge-primary">1.8.0#0</li>
-                    <li class="badge badge-primary">1.7.2#2</li>
-                    <li class="badge badge-primary">1.7.2#1</li>
-                    <li class="badge badge-primary">1.7.2#0</li>
-                    <li class="badge badge-primary">1.7.1#0</li>
                     <li class="badge badge-primary">1.7.0#0</li>
-                    <li class="badge badge-primary">1.6.0#0</li>
-                    <li class="badge badge-primary">1.5.0#0</li>
-                    <li class="badge badge-primary">1.4.0#0</li>
-                    <li class="badge badge-primary">1.3.1#0</li>
-                    <li class="badge badge-primary">1.2.1#0</li>
-                    <li class="badge badge-primary">1.2.0#0</li>
-                    <li class="badge badge-primary">1.1.0#0</li>
-                    <li class="badge badge-primary">1.0.0#0</li>
-                    <li class="badge badge-primary">1.0.0-beta.9#0</li>
-                    <li class="badge badge-primary">1.0.0-beta.8#1</li>
-                    <li class="badge badge-primary">1.0.0-beta.8#0</li>
-                    <li class="badge badge-primary">1.0.0-beta.7#0</li>
-                    <li class="badge badge-primary">1.0.0-beta.6#0</li>
-                    <li class="badge badge-primary">1.0.0-beta.5#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36d4ff5a65ff7f64e6b1e8c68534e7d46a01f73d/ports/azure-core-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36d4ff5a65ff7f64e6b1e8c68534e7d46a01f73d/ports/azure-core-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5f877f132d1ac99df50f47df839467b6ee0c92b2/ports/liquid-dsp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5f877f132d1ac99df50f47df839467b6ee0c92b2/ports/liquid-dsp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -302,7 +172,7 @@
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">linux | osx</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
@@ -314,15 +184,15 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/core/azure-core">https://github.com/Azure/azure-sdk-for-cpp/tree/main/sdk/core/azure-core</a>
+                    <a href="https://liquidsdr.org/">https://liquidsdr.org/</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Install</div>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install azure-core-cpp</pre>
+                <pre> vcpkg install liquid-dsp</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port azure-core-cpp</pre>
+                <pre> vcpkg add port liquid-dsp</pre>
             </div>
         </div>
     </div>
