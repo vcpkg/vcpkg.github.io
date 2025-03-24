@@ -108,7 +108,7 @@
                     duckdb
                 </div>
                 <div class="package-version">
-                    1.2.1
+                    1.2.1#2
                 </div>
             </div>
             <div class="package-description">
@@ -158,6 +158,30 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">autocomplete - <i class="feature-description">Statically link the autocomplete extension into DuckDB</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">excel - <i class="feature-description">Statically link the excel extension into DuckDB</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/expat.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">expat</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/minizip-ng.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">minizip-ng</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -212,6 +236,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.2.1#2</li>
+                    <li class="badge badge-primary">1.2.1#1</li>
                     <li class="badge badge-primary">1.2.1#0</li>
                     <li class="badge badge-primary">1.2.0#0</li>
                 </ul>
@@ -219,12 +245,14 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c164091516570c6cadb204837ce4d1f01b7e55ff/ports/duckdb/bigobj.patch" target="_blank">bigobj.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c164091516570c6cadb204837ce4d1f01b7e55ff/ports/duckdb/httpfs.patch" target="_blank">httpfs.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c164091516570c6cadb204837ce4d1f01b7e55ff/ports/duckdb/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c164091516570c6cadb204837ce4d1f01b7e55ff/ports/duckdb/unvendor_icu_and_find_dependency.patch" target="_blank">unvendor_icu_and_find_dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c164091516570c6cadb204837ce4d1f01b7e55ff/ports/duckdb/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c164091516570c6cadb204837ce4d1f01b7e55ff/ports/duckdb/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/bigobj.patch" target="_blank">bigobj.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/excel-libname.patch" target="_blank">excel-libname.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/extensions.patch" target="_blank">extensions.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/t-external-icu.patch" target="_blank">t-external-icu.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/unvendor_icu_and_find_dependency.patch" target="_blank">unvendor_icu_and_find_dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/97613c6633d4ab6d08286ae938c563aa339a808b/ports/duckdb/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -232,7 +260,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-11</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-24</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
