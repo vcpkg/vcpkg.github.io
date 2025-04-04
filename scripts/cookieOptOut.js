@@ -5,7 +5,7 @@
     iFrame.style.height = "0";
     iFrame.style.position = "absolute";
     iFrame.style.border = "none";
-    iFrame.src = PRIVACY_ORIGIN + "/dotnetprivacy";
+    iFrame.src = PRIVACY_ORIGIN + "/dotnetprivacy.html";
     let messageEventListener;
 
     window.optOutPromise = new Promise((resolve, reject) => {
