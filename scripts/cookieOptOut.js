@@ -1,6 +1,6 @@
 /*
-        This script fetches the assigned value of the 3PAdsOptOut cookie from the dotnet.microsoft.com website.
-        It then saves the value to a promise( @optOutPromise ) assigned to the window object, so that it can be consumed by other scripts.
+    This script fetches the assigned value of the 3PAdsOptOut cookie from the dotnet.microsoft.com website.
+    It then saves the value to a promise( @optOutPromise ) assigned to the window object, so that it can be consumed by other scripts.
 */
 (function () {
     const PRIVACY_ORIGIN = "https://dotnet.microsoft.com";
@@ -9,7 +9,7 @@
     iFrame.style.height = "0";
     iFrame.style.position = "absolute";
     iFrame.style.border = "none";
-    iFrame.src = PRIVACY_ORIGIN + "/dotnetprivacy";
+    iFrame.src = PRIVACY_ORIGIN + "/dotnetprivacy.html";
     let messageEventListener;
 
     // Creating a javascipt promise assigned to the window object, that will store user's preference for displaying third party Ads (3PAds)
