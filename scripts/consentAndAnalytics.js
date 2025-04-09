@@ -79,6 +79,6 @@ function manageConsent() {
 //Detect GPC
 const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
 
-// set data sharing opt-in to false when GPC/AMC controls detected
+// Set data sharing opt-in to false when GPC/3PAds controls detected
 const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : await window.optOutPromise;
 analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
