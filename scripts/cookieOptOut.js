@@ -12,13 +12,13 @@
     iFrame.src = PRIVACY_ORIGIN + "/dotnetprivacy.html";
     let messageEventListener;
 
-    // Creating a javascipt promise assigned to the window object, that will store user's preference for displaying third party Ads (3PAds)
+    // Promise storing user's 3PAds opt-out status (true = show ads, false = opt-out)
     window.optOutPromise = new Promise((resolve, reject) => {
         messageEventListener = (event) => {
             if (event.origin === PRIVACY_ORIGIN) {
                 const optOutEventData = event.data?.["3PAdsOptOut"];
 
-                // If the value received is not undefined and is set to "1", that means signifies that the user has opted out for data sharing 
+                // If the user has opted out ("1"), resolves with false (i.e. do not show ads)
                 if (typeof optOutEventData !== "undefined" && optOutEventData === "1") {
                     resolve(false);
                 }
@@ -30,9 +30,7 @@
         }
     });
 
-    // An event listener, listening for message from the embedded iFrame
     addEventListener("message", messageEventListener);
 
-    // Embedding the dotnet.microsoft.com website as a headless iFrame
     document.body.appendChild(iFrame);
 })();
