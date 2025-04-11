@@ -21,9 +21,9 @@
                 // If the user has opted out ("1"), resolves with false (i.e. do not show ads)
                 if (typeof optOutEventData !== "undefined" && optOutEventData === "1") {
                     resolve(false);
+                } else {
+                    resolve(true);
                 }
-
-                resolve(true);
                 removeEventListener("message", messageEventListener);
                 iFrame.remove();
             }
