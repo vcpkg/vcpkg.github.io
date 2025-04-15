@@ -108,7 +108,7 @@
                     mimalloc
                 </div>
                 <div class="package-version">
-                    2.1.7#1
+                    2.2.3#1
                 </div>
             </div>
             <div class="package-description">
@@ -157,17 +157,12 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">asm - <i class="feature-description">Generate assembly files</i></div>
+                            <div class="feature-name">override - <i class="feature-description">Override the standard malloc interface (i.e. define entry points for &#39;malloc&#39;, &#39;free&#39;, etc)</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">override - <i class="feature-description">Override the standard malloc interface</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">secure - <i class="feature-description">Use security mitigations (like guard pages and randomization)</i></div>
+                            <div class="feature-name">secure - <i class="feature-description">Use full security mitigations (like guard pages, allocation randomization, double-free mitigation, and free-list corruption detection)</i></div>
                         </div>
                     </div>
                 </div>
@@ -175,6 +170,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.2.3#1</li>
+                    <li class="badge badge-primary">2.2.3#0</li>
                     <li class="badge badge-primary">2.1.7#1</li>
                     <li class="badge badge-primary">2.1.7#0</li>
                     <li class="badge badge-primary">2.1.2#3</li>
@@ -205,13 +202,11 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/add_ref_to_page_malloc_zero.patch" target="_blank">add_ref_to_page_malloc_zero.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/fix-cmake.patch" target="_blank">fix-cmake.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/fix-param.patch" target="_blank">fix-param.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c54f02999b5edac434722dc6cebf93cc7700f752/ports/mimalloc/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa98b3d3012394e53b1d2ca104146c50be433bc5/ports/mimalloc/pkgconfig-cxx.diff" target="_blank">pkgconfig-cxx.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa98b3d3012394e53b1d2ca104146c50be433bc5/ports/mimalloc/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa98b3d3012394e53b1d2ca104146c50be433bc5/ports/mimalloc/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa98b3d3012394e53b1d2ca104146c50be433bc5/ports/mimalloc/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa98b3d3012394e53b1d2ca104146c50be433bc5/ports/mimalloc/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -219,7 +214,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-29</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-11</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
