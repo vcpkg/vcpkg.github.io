@@ -104,12 +104,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     ceres
-                </div>
-                <div class="package-version">
-                    2.2.0#1
-                </div>
+                    <span class="package-version">2.2.0#2</span>
+                </h1>
             </div>
             <div class="package-description">
                 non-linear optimization package
@@ -191,6 +189,17 @@
                         <div class="section-one">
                             <div class="feature-name">eigensparse - <i class="feature-description">Use of Eigen as a sparse linear algebra library in Ceres</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/metis.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">metis</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
@@ -266,6 +275,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.2.0#2</li>
                     <li class="badge badge-primary">2.2.0#1</li>
                     <li class="badge badge-primary">2.2.0#0</li>
                     <li class="badge badge-primary">2.1.0#5</li>
@@ -306,12 +316,15 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ab42fb3032acd29dd12cea7897f85025526a60e6/ports/ceres/0001_cmakelists_fixes.patch" target="_blank">0001_cmakelists_fixes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ab42fb3032acd29dd12cea7897f85025526a60e6/ports/ceres/0002_use_glog_target.patch" target="_blank">0002_use_glog_target.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ab42fb3032acd29dd12cea7897f85025526a60e6/ports/ceres/0003_fix_exported_ceres_config.patch" target="_blank">0003_fix_exported_ceres_config.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ab42fb3032acd29dd12cea7897f85025526a60e6/ports/ceres/0004_remove_broken_fake_ba_jac.patch" target="_blank">0004_remove_broken_fake_ba_jac.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ab42fb3032acd29dd12cea7897f85025526a60e6/ports/ceres/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ab42fb3032acd29dd12cea7897f85025526a60e6/ports/ceres/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0001_cmakelists_fixes.patch" target="_blank">0001_cmakelists_fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0002_use_glog_target.patch" target="_blank">0002_use_glog_target.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0003_fix_exported_ceres_config.patch" target="_blank">0003_fix_exported_ceres_config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0004_remove_broken_fake_ba_jac.patch" target="_blank">0004_remove_broken_fake_ba_jac.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0005_find_package_required.patch" target="_blank">0005_find_package_required.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0006_use_official_suitesparse_config.patch" target="_blank">0006_use_official_suitesparse_config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/0007_use_metis_config.patch" target="_blank">0007_use_metis_config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ec9c894f010cf6ccea053bb64df526d0e6da3e63/ports/ceres/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -319,7 +332,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-27</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-16</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
