@@ -108,7 +108,7 @@
                     gsasl
                 </div>
                 <div class="package-version">
-                    2.2.2
+                    2.2.2#1
                 </div>
             </div>
             <div class="package-description">
@@ -134,18 +134,30 @@
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">No Dependencies</div>
+                    <a href="vcpkg-make.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tool - <i class="feature-description">Build gsasl tool</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.2.2#1</li>
                     <li class="badge badge-primary">2.2.2#0</li>
                     <li class="badge badge-primary">2.2.1#0</li>
                 </ul>
@@ -153,17 +165,17 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/24502eafbe4386ca4586501e8d8e73396e0bd7cc/ports/gsasl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/24502eafbe4386ca4586501e8d8e73396e0bd7cc/ports/gsasl/remove-tests-examples-docs.patch" target="_blank">remove-tests-examples-docs.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/24502eafbe4386ca4586501e8d8e73396e0bd7cc/ports/gsasl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20c3f04d6a7a179936161a4c54f4417e184c4c86/ports/gsasl/configure.patch" target="_blank">configure.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20c3f04d6a7a179936161a4c54f4417e184c4c86/ports/gsasl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20c3f04d6a7a179936161a4c54f4417e184c4c86/ports/gsasl/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-3.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-05</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-17</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -194,7 +206,7 @@
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
-  <div class="footer-info">
+  <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
@@ -278,7 +290,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>
