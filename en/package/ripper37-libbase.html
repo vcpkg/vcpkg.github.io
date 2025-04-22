@@ -108,7 +108,7 @@
                     ripper37-libbase
                 </div>
                 <div class="package-version">
-                    1.0.1
+                    1.1.0
                 </div>
             </div>
             <div class="package-description">
@@ -119,16 +119,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -171,23 +171,58 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">net - <i class="feature-description">Networking module</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">win - <i class="feature-description">Integration module for WinAPI</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">wx - <i class="feature-description">Integration module for wxWidgets</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/wxwidgets.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">wxwidgets</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.1.0#0</li>
                     <li class="badge badge-primary">1.0.1#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43155e3a45a036d5af8b69af7810aabf772f6726/ports/ripper37-libbase/01_fix_output_lib_name_conflict.patch" target="_blank">01_fix_output_lib_name_conflict.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43155e3a45a036d5af8b69af7810aabf772f6726/ports/ripper37-libbase/02_remove_unneeded_find_dependency_calls.patch" target="_blank">02_remove_unneeded_find_dependency_calls.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43155e3a45a036d5af8b69af7810aabf772f6726/ports/ripper37-libbase/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43155e3a45a036d5af8b69af7810aabf772f6726/ports/ripper37-libbase/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/43155e3a45a036d5af8b69af7810aabf772f6726/ports/ripper37-libbase/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0a0f5fcaf278cc25bfa7b678b433768d39625213/ports/ripper37-libbase/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0a0f5fcaf278cc25bfa7b678b433768d39625213/ports/ripper37-libbase/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/0a0f5fcaf278cc25bfa7b678b433768d39625213/ports/ripper37-libbase/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -195,7 +230,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-16</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

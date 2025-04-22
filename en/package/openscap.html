@@ -108,27 +108,27 @@
                     openscap
                 </div>
                 <div class="package-version">
-                    1.4.0#1
+                    1.4.2
                 </div>
             </div>
             <div class="package-description">
-                The oscap program is a command line tool that allows users to load, scan, validate, edit, and export SCAP documents.
+                OpenSCAP represents both a library and a command line tool which can be used to parse and evaluate each component of the SCAP standard.
             </div>
         </div>
     <div class="flex-wrapper">
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -145,7 +145,7 @@
                     <a href="curl.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">curl<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -169,7 +169,7 @@
                     <a href="libxml2.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">libxml2<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -177,6 +177,14 @@
                     <a href="libxslt.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">libxslt<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="libyaml.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libyaml<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -234,7 +242,7 @@
                         <div class="section-one">
                             <div class="dep-name">zlib<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: windows</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -245,12 +253,55 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">python - <i class="feature-description">build with python3</i></div>
+                            <div class="feature-name">crypto - <i class="feature-description">Build with crypto support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libgcrypt.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libgcrypt</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !windows | mingw</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/shiftmedia-libgcrypt.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">shiftmedia-libgcrypt</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: windows &amp; !mingw</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">util - <i class="feature-description">build available utils</i></div>
+                            <div class="feature-name">python - <i class="feature-description">Build Python SWIG bindings</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/openscap.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openscap</div>
+                                <div class="feature-dep-feature">features: [crypto]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/python3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">python3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">util - <i class="feature-description">Build the oscap utility</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -262,6 +313,14 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/openscap.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openscap</div>
+                                <div class="feature-dep-feature">features: [crypto]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -269,6 +328,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.4.2#0</li>
                     <li class="badge badge-primary">1.4.0#1</li>
                     <li class="badge badge-primary">1.4.0#0</li>
                     <li class="badge badge-primary">1.3.7#3</li>
@@ -285,12 +345,11 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b90e21b5e770ca59fdc5aadaae5b70eb544f59a6/ports/openscap/fix-build.patch" target="_blank">fix-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b90e21b5e770ca59fdc5aadaae5b70eb544f59a6/ports/openscap/fix-buildflag-and-install.patch" target="_blank">fix-buildflag-and-install.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b90e21b5e770ca59fdc5aadaae5b70eb544f59a6/ports/openscap/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b90e21b5e770ca59fdc5aadaae5b70eb544f59a6/ports/openscap/fix-utils.patch" target="_blank">fix-utils.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b90e21b5e770ca59fdc5aadaae5b70eb544f59a6/ports/openscap/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b90e21b5e770ca59fdc5aadaae5b70eb544f59a6/ports/openscap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/095a29ce59608465032c3747307dd0009b3e089c/ports/openscap/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/095a29ce59608465032c3747307dd0009b3e089c/ports/openscap/install-dirs.diff" target="_blank">install-dirs.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/095a29ce59608465032c3747307dd0009b3e089c/ports/openscap/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/095a29ce59608465032c3747307dd0009b3e089c/ports/openscap/python-win32.diff" target="_blank">python-win32.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/095a29ce59608465032c3747307dd0009b3e089c/ports/openscap/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -298,11 +357,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-18</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!xbox</pre></div>
+            <div><pre class="support-arch">(linux | windows) & !(static & staticcrt)</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
@@ -314,7 +373,7 @@
                 <div class="sidebar-header">Homepage</div>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/OpenSCAP/openscap">https://github.com/OpenSCAP/openscap</a>
+                    <a href="https://www.open-scap.org/tools/openscap-base/">https://www.open-scap.org/tools/openscap-base/</a>
                 </div>
             </div>
             <div class="sidebar-section">
