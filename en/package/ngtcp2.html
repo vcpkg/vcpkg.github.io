@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -108,7 +108,7 @@
                     ngtcp2
                 </div>
                 <div class="package-version">
-                    1.11.0
+                    1.12.0
                 </div>
             </div>
             <div class="package-description">
@@ -181,13 +181,13 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">libressl - <i class="feature-description">Compile with libressl</i></div>
+                            <div class="feature-name">openssl - <i class="feature-description">Compile with openssl</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/libressl.html">
+                            <a href="/en/package/openssl.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">libressl</div>
+                                <div class="feature-dep-name">openssl</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -216,6 +216,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.12.0#0</li>
                     <li class="badge badge-primary">1.11.0#0</li>
                     <li class="badge badge-primary">1.10.0#0</li>
                     <li class="badge badge-primary">1.9.1#0</li>
@@ -246,8 +247,8 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/517d5f1353756e23b2cf38facedeb93ecb981f7d/ports/ngtcp2/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/517d5f1353756e23b2cf38facedeb93ecb981f7d/ports/ngtcp2/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7cd46ec6873c1325b541a068c8e4cdf54633dabe/ports/ngtcp2/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7cd46ec6873c1325b541a068c8e4cdf54633dabe/ports/ngtcp2/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -255,7 +256,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-25</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-17</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
