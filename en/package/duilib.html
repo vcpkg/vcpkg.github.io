@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,8 +106,10 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     duilib
-                    <span class="package-version">2024-12-23</span>
-                </h1>
+                </div>
+                <div class="package-version">
+                    2024-12-23#1
+                </div>
             </div>
             <div class="package-description">
                 Duilib is a free open source DirectUI interface library under Windows. It is widely accepted by major Internet companies due to its simple and easy to expand design and stable and efficient implementation. It is widely used in IM, video client, stock market software, navigation software, and mobile phone assistive software. Duilib is still evolving, and will continue to improve in many aspects such as documentation, examples, animations, and rendering engines.
@@ -159,6 +161,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2024-12-23#1</li>
                     <li class="badge badge-primary">2024-12-23#0</li>
                     <li class="badge badge-primary">2019-04-28#6</li>
                     <li class="badge badge-primary">2019-04-28#5</li>
@@ -172,11 +175,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f0dc7c5b0a6e42c41b31e5e2aa9d01879b5cd4/ports/duilib/enable-static.patch" target="_blank">enable-static.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f0dc7c5b0a6e42c41b31e5e2aa9d01879b5cd4/ports/duilib/fix-arm-build.patch" target="_blank">fix-arm-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f0dc7c5b0a6e42c41b31e5e2aa9d01879b5cd4/ports/duilib/fix-encoding.patch" target="_blank">fix-encoding.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f0dc7c5b0a6e42c41b31e5e2aa9d01879b5cd4/ports/duilib/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f0dc7c5b0a6e42c41b31e5e2aa9d01879b5cd4/ports/duilib/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c61455896c8e23f34ae5a2b80f6b9503360dd6cc/ports/duilib/enable-static.patch" target="_blank">enable-static.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c61455896c8e23f34ae5a2b80f6b9503360dd6cc/ports/duilib/fix-arm-build.patch" target="_blank">fix-arm-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c61455896c8e23f34ae5a2b80f6b9503360dd6cc/ports/duilib/fix-encoding.patch" target="_blank">fix-encoding.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c61455896c8e23f34ae5a2b80f6b9503360dd6cc/ports/duilib/fix-include-path.patch" target="_blank">fix-include-path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c61455896c8e23f34ae5a2b80f6b9503360dd6cc/ports/duilib/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c61455896c8e23f34ae5a2b80f6b9503360dd6cc/ports/duilib/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -184,7 +188,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-18</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-22</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,8 +106,10 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     abseil
-                    <span class="package-version">20250127.0</span>
-                </h1>
+                </div>
+                <div class="package-version">
+                    20250127.1
+                </div>
             </div>
             <div class="package-description">
                 Abseil is an open-source collection of C++ library code designed to augment the C++ standard library. The Abseil library code is collected from Google's own C++ code base, has been extensively tested and used in production, and is the same code we depend on in our daily coding lives.,In some cases, Abseil provides pieces missing from the C++ standard; in others, Abseil provides alternatives to the standard for special needs we've found through usage in the Google code base. We denote those cases clearly within the library code we provide you.,Abseil is not meant to be a competitor to the standard library; we've just found that many of these utilities serve a purpose within our code base, and we now want to provide those resources to the C++ community as a whole.
@@ -163,6 +165,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">20250127.1#0</li>
                     <li class="badge badge-primary">20250127.0#0</li>
                     <li class="badge badge-primary">20240722.0#0</li>
                     <li class="badge badge-primary">20240116.2#3</li>
@@ -247,8 +250,8 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5a4b2d7ace739748cc28221132f4e0be6396a56b/ports/abseil/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5a4b2d7ace739748cc28221132f4e0be6396a56b/ports/abseil/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6760f636e7bcd0dd034c5c0906f6174009465c29/ports/abseil/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6760f636e7bcd0dd034c5c0906f6174009465c29/ports/abseil/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -256,7 +259,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-25</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

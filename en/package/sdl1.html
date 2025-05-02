@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,8 +106,10 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     sdl1
-                    <span class="package-version">1.2.15#21</span>
-                </h1>
+                </div>
+                <div class="package-version">
+                    1.2.15#22
+                </div>
             </div>
             <div class="package-description">
                 Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
@@ -151,6 +153,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.2.15#22</li>
                     <li class="badge badge-primary">1.2.15#21</li>
                     <li class="badge badge-primary">1.2.15#20</li>
                     <li class="badge badge-primary">1.2.15#19</li>
@@ -175,14 +178,14 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/SDL.vcxproj.in" target="_blank">SDL.vcxproj.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/SDL1_2017.sln.in" target="_blank">SDL1_2017.sln.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/SDLmain.vcxproj.in" target="_blank">SDLmain.vcxproj.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/export-symbols-only-in-shared-build.patch" target="_blank">export-symbols-only-in-shared-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/fix-linux-build.patch" target="_blank">fix-linux-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/sdl-config.patch" target="_blank">sdl-config.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c25d79278b23b79afc2ac927b6b308828876d296/ports/sdl1/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/SDL.vcxproj.in" target="_blank">SDL.vcxproj.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/SDL1_2017.sln.in" target="_blank">SDL1_2017.sln.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/SDLmain.vcxproj.in" target="_blank">SDLmain.vcxproj.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/export-symbols-only-in-shared-build.patch" target="_blank">export-symbols-only-in-shared-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/fix-linux-build.patch" target="_blank">fix-linux-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/sdl-config.patch" target="_blank">sdl-config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/sdl1/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -190,11 +193,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-20</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-26</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!osx & !uwp</pre></div>
+            <div><pre class="support-arch">!android & !osx & !uwp</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>

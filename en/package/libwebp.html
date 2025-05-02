@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,8 +106,10 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libwebp
-                    <span class="package-version">1.5.0</span>
-                </h1>
+                </div>
+                <div class="package-version">
+                    1.5.0#1
+                </div>
             </div>
             <div class="package-description">
                 WebP codec: library to encode and decode images in WebP format
@@ -211,7 +213,7 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">libwebp</div>
                                 <div class="feature-dep-feature">features: [vwebp-sdl]</div>
-                                <div class="feature-dep-platform">platform: !osx &amp; !static &amp; !uwp</div>
+                                <div class="feature-dep-platform">platform: !android &amp; !osx &amp; !uwp &amp; !(windows &amp; static)</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -432,22 +434,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">libbwebpmux - <i class="feature-description">Obsolete, use feature libwebpmux instead.</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/libwebp.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">libwebp</div>
-                                <div class="feature-dep-feature">features: [libwebpmux]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">libwebpmux - <i class="feature-description">Build the libwebpmux library</i></div>
                         </div>
                     </div>
@@ -540,6 +526,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.5.0#1</li>
                     <li class="badge badge-primary">1.5.0#0</li>
                     <li class="badge badge-primary">1.4.0#1</li>
                     <li class="badge badge-primary">1.4.0#0</li>
@@ -577,12 +564,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c9dfbe26bc71ec7ba5d9e5a59d6d19a02be6ee0/ports/libwebp/0002-cmake-config.patch" target="_blank">0002-cmake-config.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c9dfbe26bc71ec7ba5d9e5a59d6d19a02be6ee0/ports/libwebp/0003-simd.patch" target="_blank">0003-simd.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c9dfbe26bc71ec7ba5d9e5a59d6d19a02be6ee0/ports/libwebp/0008-sdl.patch" target="_blank">0008-sdl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c9dfbe26bc71ec7ba5d9e5a59d6d19a02be6ee0/ports/libwebp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c9dfbe26bc71ec7ba5d9e5a59d6d19a02be6ee0/ports/libwebp/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6c9dfbe26bc71ec7ba5d9e5a59d6d19a02be6ee0/ports/libwebp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/libwebp/0002-cmake-config.patch" target="_blank">0002-cmake-config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/libwebp/0003-simd.patch" target="_blank">0003-simd.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/libwebp/0008-sdl.patch" target="_blank">0008-sdl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/libwebp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/libwebp/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/96d5fb3de135b86d7222c53f2352ca92827a156b/ports/libwebp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -590,7 +577,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-26</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

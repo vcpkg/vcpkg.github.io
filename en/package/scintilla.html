@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,8 +106,10 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     scintilla
-                    <span class="package-version">5.5.1</span>
-                </h1>
+                </div>
+                <div class="package-version">
+                    5.5.6
+                </div>
             </div>
             <div class="package-description">
                 A free source code editing component for Win32, GTK+, and OS X
@@ -151,6 +153,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">5.5.6#0</li>
                     <li class="badge badge-primary">5.5.1#0</li>
                     <li class="badge badge-primary">5.5.0#0</li>
                     <li class="badge badge-primary">4.4.6#3</li>
@@ -169,10 +172,10 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/653e011fcb580539269a00422e38d5e284606896/ports/scintilla/0001-static-lib.patch" target="_blank">0001-static-lib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/653e011fcb580539269a00422e38d5e284606896/ports/scintilla/0002-static-crt.patch" target="_blank">0002-static-crt.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/653e011fcb580539269a00422e38d5e284606896/ports/scintilla/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/653e011fcb580539269a00422e38d5e284606896/ports/scintilla/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3db09f58b750b9d097d2eb2223b4dba220ee5275/ports/scintilla/0001-static-lib.patch" target="_blank">0001-static-lib.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3db09f58b750b9d097d2eb2223b4dba220ee5275/ports/scintilla/0002-static-crt.patch" target="_blank">0002-static-crt.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3db09f58b750b9d097d2eb2223b4dba220ee5275/ports/scintilla/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3db09f58b750b9d097d2eb2223b4dba220ee5275/ports/scintilla/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -180,11 +183,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-16</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-24</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!(uwp | linux | osx)</pre></div>
+            <div><pre class="support-arch">windows & !uwp & !mingw</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>

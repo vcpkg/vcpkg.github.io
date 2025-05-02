@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,8 +106,10 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     mysvac-jsonlib
-                    <span class="package-version">2.1.0</span>
-                </h1>
+                </div>
+                <div class="package-version">
+                    2.1.1
+                </div>
             </div>
             <div class="package-description">
                 A lightweight and efficient C++17 JSON library.
@@ -159,6 +161,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.1.1#0</li>
                     <li class="badge badge-primary">2.1.0#0</li>
                     <li class="badge badge-primary">2.0.0#0</li>
                     <li class="badge badge-primary">1.0.0#0</li>
@@ -167,9 +170,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b40a3d847ad4c04a429c312430c9324a0c36d0bd/ports/mysvac-jsonlib/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b40a3d847ad4c04a429c312430c9324a0c36d0bd/ports/mysvac-jsonlib/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b40a3d847ad4c04a429c312430c9324a0c36d0bd/ports/mysvac-jsonlib/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27c60b15357cd4a243dc0d066953e7652c35c7/ports/mysvac-jsonlib/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27c60b15357cd4a243dc0d066953e7652c35c7/ports/mysvac-jsonlib/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27c60b15357cd4a243dc0d066953e7652c35c7/ports/mysvac-jsonlib/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -177,7 +180,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-11</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-24</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
