@@ -106,10 +106,8 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     folly
-                </div>
-                <div class="package-version">
-                    2025.04.14.00
-                </div>
+                    <span class="package-version">2025.04.28.00</span>
+                </h1>
             </div>
             <div class="package-description">
                 An open-source C++ library developed and used at Facebook. The library is UNSTABLE on Windows
@@ -472,6 +470,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2025.04.28.00#0</li>
+                    <li class="badge badge-primary">2025.04.21.00#0</li>
                     <li class="badge badge-primary">2025.04.14.00#0</li>
                     <li class="badge badge-primary">2025.04.07.00#0</li>
                     <li class="badge badge-primary">2025.03.31.00#1</li>
@@ -613,12 +613,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/folly/disable-uninitialized-resize-on-new-stl.patch" target="_blank">disable-uninitialized-resize-on-new-stl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/folly/fix-absolute-dir.patch" target="_blank">fix-absolute-dir.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/folly/fix-deps.patch" target="_blank">fix-deps.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/folly/fix-unistd-include.patch" target="_blank">fix-unistd-include.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/folly/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/folly/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/folly/disable-uninitialized-resize-on-new-stl.patch" target="_blank">disable-uninitialized-resize-on-new-stl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/folly/fix-absolute-dir.patch" target="_blank">fix-absolute-dir.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/folly/fix-deps.patch" target="_blank">fix-deps.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/folly/fix-unistd-include.patch" target="_blank">fix-unistd-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/folly/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/folly/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -626,11 +626,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-15</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-01</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">(windows & x64 & !uwp & !mingw) | (!windows & (x64 | arm64))</pre></div>
+            <div><pre class="support-arch">(windows & x64 & !uwp & !mingw) | (!windows & !android & (x64 | arm64))</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
