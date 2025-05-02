@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +104,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     flux
-                </div>
-                <div class="package-version">
-                    0.4.0
-                </div>
+                    <span class="package-version">0.4.0</span>
+                </h1>
             </div>
             <div class="package-description">
                 Experimental C++20 library that provides a broadly equivalent feature set to C++20 Ranges, but uses a slightly different model based around cursors rather than iterators. Safer, easier, more efficient, compatible.

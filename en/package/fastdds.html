@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +104,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     fastdds
-                </div>
-                <div class="package-version">
-                    3.2.1
-                </div>
+                    <span class="package-version">3.2.2</span>
+                </h1>
             </div>
             <div class="package-description">
                 eprosima Fast DDS (formerly Fast RTPS) is a C++ implementation of the DDS (Data Distribution Service) standard of the OMG (Object Management Group). eProsima Fast DDS implements the RTPS (Real Time Publish Subscribe) protocol, which provides publisher-subscriber communications over unreliable transports such as UDP, as defined and maintained by the Object Management Group (OMG) consortium.
@@ -201,6 +199,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.2.2#0</li>
                     <li class="badge badge-primary">3.2.1#0</li>
                     <li class="badge badge-primary">3.1.2#1</li>
                     <li class="badge badge-primary">3.1.2#0</li>
@@ -211,11 +210,13 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb4d76e955b38246698f3f863e25cf73eb8409cd/ports/fastdds/fix-find-package-asio.patch" target="_blank">fix-find-package-asio.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb4d76e955b38246698f3f863e25cf73eb8409cd/ports/fastdds/pdb-file.patch" target="_blank">pdb-file.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb4d76e955b38246698f3f863e25cf73eb8409cd/ports/fastdds/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb4d76e955b38246698f3f863e25cf73eb8409cd/ports/fastdds/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/cb4d76e955b38246698f3f863e25cf73eb8409cd/ports/fastdds/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/disable-werror.patch" target="_blank">disable-werror.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/fix-find-package-asio.patch" target="_blank">fix-find-package-asio.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/include-cstdint.patch" target="_blank">include-cstdint.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/pdb-file.patch" target="_blank">pdb-file.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1541d5458da5abc551fa9c64526cd4070404283e/ports/fastdds/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -223,7 +224,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-14</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-01</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
