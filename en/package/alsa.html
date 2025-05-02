@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +104,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     alsa
-                </div>
-                <div class="package-version">
-                    1.2.13#1
-                </div>
+                    <span class="package-version">1.2.14</span>
+                </h1>
             </div>
             <div class="package-description">
                 The Advanced Linux Sound Architecture (ALSA) - library
@@ -119,16 +117,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -146,6 +144,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.2.14#0</li>
                     <li class="badge badge-primary">1.2.13#1</li>
                     <li class="badge badge-primary">1.2.13#0</li>
                     <li class="badge badge-primary">1.2.11#2</li>
@@ -163,12 +162,12 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa643c3cc3bfaf6a61ce47f4c271d82cb5d48b4b/ports/alsa/fix-plugin-dir.patch" target="_blank">fix-plugin-dir.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa643c3cc3bfaf6a61ce47f4c271d82cb5d48b4b/ports/alsa/libdl.diff" target="_blank">libdl.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa643c3cc3bfaf6a61ce47f4c271d82cb5d48b4b/ports/alsa/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa643c3cc3bfaf6a61ce47f4c271d82cb5d48b4b/ports/alsa/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa643c3cc3bfaf6a61ce47f4c271d82cb5d48b4b/ports/alsa/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fa643c3cc3bfaf6a61ce47f4c271d82cb5d48b4b/ports/alsa/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f40434b32f284cf0e431e6c50635b602b0343793/ports/alsa/fix-plugin-dir.patch" target="_blank">fix-plugin-dir.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f40434b32f284cf0e431e6c50635b602b0343793/ports/alsa/libdl.diff" target="_blank">libdl.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f40434b32f284cf0e431e6c50635b602b0343793/ports/alsa/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f40434b32f284cf0e431e6c50635b602b0343793/ports/alsa/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f40434b32f284cf0e431e6c50635b602b0343793/ports/alsa/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f40434b32f284cf0e431e6c50635b602b0343793/ports/alsa/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -176,7 +175,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-02</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-25</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>

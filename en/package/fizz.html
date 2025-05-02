@@ -40,7 +40,7 @@
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
 <script src="/scripts/consentAndAnalytics.js"></script>
-
+<script src="/scripts/cookieOptOut.js" defer></script>
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +104,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     fizz
-                </div>
-                <div class="package-version">
-                    2025.04.14.00
-                </div>
+                    <span class="package-version">2025.04.28.00</span>
+                </h1>
             </div>
             <div class="package-description">
                 a TLS 1.3 implementation by Facebook
@@ -119,16 +117,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -241,6 +239,8 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2025.04.28.00#0</li>
+                    <li class="badge badge-primary">2025.04.21.00#0</li>
                     <li class="badge badge-primary">2025.04.14.00#0</li>
                     <li class="badge badge-primary">2025.04.07.00#0</li>
                     <li class="badge badge-primary">2025.03.31.00#0</li>
@@ -319,9 +319,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/fizz/fix-build.patch" target="_blank">fix-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/fizz/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/dae63854f9551c343daa560bdd977d6f05f37f9b/ports/fizz/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/fizz/fix-build.patch" target="_blank">fix-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/fizz/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e5a2863170f6423b896e7f4661f68b82bca2a36/ports/fizz/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -329,7 +329,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-15</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-01</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
