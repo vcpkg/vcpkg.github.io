@@ -82,5 +82,6 @@ const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
 // Set data sharing opt-in to false when GPC/3PAds controls detected
 (async function() {
     const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : await window.optOutPromise;
+    window.GPC_value = GPC_DataSharingOptIn;
     analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
 })();
