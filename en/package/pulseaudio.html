@@ -39,8 +39,9 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="/scripts/consentAndAnalytics.js"></script>
 <script src="/scripts/cookieOptOut.js" defer></script>
+<script src="/scripts/consentAndAnalytics.js" defer></script>
+
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -106,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     pulseaudio
-                    <span class="package-version">17.0#2</span>
+                    <span class="package-version">17.0#3</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -164,14 +165,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="gstreamer.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">gstreamer<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="jack2.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">jack2<i class="dep-version-min"></i></div>
@@ -220,14 +213,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="orc.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">orc<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="soxr.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">soxr<i class="dep-version-min"></i></div>
@@ -265,12 +250,28 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gstreamer - <i class="feature-description">Use GStreamer media-related functionality.,This feauture may cause dependency cycles with other libs used by gstreamer.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">17.0#3</li>
                     <li class="badge badge-primary">17.0#2</li>
                     <li class="badge badge-primary">17.0#1</li>
                     <li class="badge badge-primary">17.0#0</li>
@@ -279,8 +280,8 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d4b7b9bdd563f657b4d9b4d98292ac14094e6ee1/ports/pulseaudio/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d4b7b9bdd563f657b4d9b4d98292ac14094e6ee1/ports/pulseaudio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/513d2e186e9ffe96d48bb9282b858ebb3d5defda/ports/pulseaudio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/513d2e186e9ffe96d48bb9282b858ebb3d5defda/ports/pulseaudio/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -288,11 +289,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-07</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!windows & !osx</pre></div>
+            <div><pre class="support-arch">!android & !osx & !windows</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
