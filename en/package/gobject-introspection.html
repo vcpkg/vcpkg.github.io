@@ -107,11 +107,11 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     gobject-introspection
-                    <span class="package-version">1.82.0</span>
+                    <span class="package-version">1.82.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
-                A middleware layer between C libraries (using GObject) and language bindings.
+                A middleware layer between C libraries (using GObject) and language bindings.,Building (with) gobject-introspection is based on dynamic library linkage. Static builds of the core feature set are supported only for CI purposes.,The g-ir-scanner program runs executables for the target system. This limits actual cross-build support to targets supported by the host CPU.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -131,46 +131,14 @@
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
-                <div class="active-header">Dependencies</div>
+                <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="cairo.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">cairo<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                gobject
-                                </div>
-                            </div>
-                        </div>
-                    </a>
                     <a href="glib.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">glib<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="glib.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">glib<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
-                        </div>
-                    </a>
-                    <a href="gobject-introspection.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">gobject-introspection<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; x86)</div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
                     <a href="libffi.html" class="dependency-card">
@@ -189,22 +157,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="python3.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">python3<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; x86)</div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
-                        </div>
-                    </a>
-                    <a href="vcpkg-get-python-packages.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">vcpkg-get-python-packages<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-tool-meson.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-tool-meson<i class="dep-version-min"></i></div>
@@ -216,14 +168,30 @@
                 </div>
             </div>
             <div id="features-content" class="tab-content">
-                <div class="active-header">Features</div>
+                <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">cairo - <i class="feature-description">Install introspection data for cairo.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/cairo.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cairo</div>
+                                <div class="feature-dep-feature">features: [gobject]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
-                <div class="active-header">Available Versions</div>
+                <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.82.0#1</li>
                     <li class="badge badge-primary">1.82.0#0</li>
                     <li class="badge badge-primary">1.72.0#9</li>
                     <li class="badge badge-primary">1.72.0#8</li>
@@ -240,42 +208,41 @@
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
-                <div class="active-header">Port Content</div>
+                <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ce613c41372b23b1f51333815feb3edd87ef8a8b/ports/gobject-introspection/0001-g-ir-tool-template.in.patch" target="_blank">0001-g-ir-tool-template.in.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ce613c41372b23b1f51333815feb3edd87ef8a8b/ports/gobject-introspection/0002-cross-build.patch" target="_blank">0002-cross-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ce613c41372b23b1f51333815feb3edd87ef8a8b/ports/gobject-introspection/0003-fix-paths.patch" target="_blank">0003-fix-paths.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ce613c41372b23b1f51333815feb3edd87ef8a8b/ports/gobject-introspection/0004-fastcall.patch" target="_blank">0004-fastcall.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ce613c41372b23b1f51333815feb3edd87ef8a8b/ports/gobject-introspection/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ce613c41372b23b1f51333815feb3edd87ef8a8b/ports/gobject-introspection/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5618da41e81a208ec03ee1c808472ced607c5907/ports/gobject-introspection/0001-g-ir-tool-template.in.patch" target="_blank">0001-g-ir-tool-template.in.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5618da41e81a208ec03ee1c808472ced607c5907/ports/gobject-introspection/0004-fastcall.patch" target="_blank">0004-fastcall.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5618da41e81a208ec03ee1c808472ced607c5907/ports/gobject-introspection/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5618da41e81a208ec03ee1c808472ced607c5907/ports/gobject-introspection/vcpkg-port-config.cmake" target="_blank">vcpkg-port-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5618da41e81a208ec03ee1c808472ced607c5907/ports/gobject-introspection/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
-            <div class="sidebar-header">Metadata</div>
+            <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-09</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-09</div>
             </div>
-            <div class="sidebar-header">Supports</div>
+            <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!static & (native | (windows & x86))</pre></div>
+            <div><pre class="support-arch">!(static & staticcrt)</pre></div>
             <div class="sidebar-section">
-                <div class="sidebar-header">Documentation</div>
+                <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
                     Unavailable
                 </div>
             </div>
             <div class="sidebar-section">
-                <div class="sidebar-header">Homepage</div>
+                <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
                     <a href="https://gi.readthedocs.io/en/latest/">https://gi.readthedocs.io/en/latest/</a>
                 </div>
             </div>
             <div class="sidebar-section">
-                <div class="sidebar-header">Install</div>
+                <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
                 <pre> vcpkg install gobject-introspection</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
