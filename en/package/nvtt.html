@@ -39,8 +39,9 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="/scripts/consentAndAnalytics.js"></script>
 <script src="/scripts/cookieOptOut.js" defer></script>
+<script src="/scripts/consentAndAnalytics.js" defer></script>
+
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +105,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     nvtt
-                </div>
-                <div class="package-version">
-                    2.1.2#8
-                </div>
+                    <span class="package-version">2.1.2#9</span>
+                </h1>
             </div>
             <div class="package-description">
                 Texture processing tools with support for Direct3D 10 and 11 formats.
@@ -119,16 +118,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -176,6 +175,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.1.2#9</li>
                     <li class="badge badge-primary">2.1.2#8</li>
                     <li class="badge badge-primary">2.1.2#7</li>
                     <li class="badge badge-primary">2.1.2#6</li>
@@ -195,17 +195,17 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch" target="_blank">001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/add-compile-options-for-osx.patch" target="_blank">add-compile-options-for-osx.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/bc6h.patch" target="_blank">bc6h.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/bc7.patch" target="_blank">bc7.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/fix-build-error.patch" target="_blank">fix-build-error.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/fix-intrinsic-function.patch" target="_blank">fix-intrinsic-function.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/fix-release-flags.patch" target="_blank">fix-release-flags.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/skip-building-libsquish.patch" target="_blank">skip-building-libsquish.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/squish.patch" target="_blank">squish.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8e4bacadbf4e2e9a9801194dcca3fda45136644e/ports/nvtt/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch" target="_blank">001-define-value-for-HAVE_UNISTD_H-in-mac-os.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/add-compile-options-for-osx.patch" target="_blank">add-compile-options-for-osx.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/bc6h.patch" target="_blank">bc6h.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/bc7.patch" target="_blank">bc7.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/fix-build-error.patch" target="_blank">fix-build-error.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/fix-intrinsic-function.patch" target="_blank">fix-intrinsic-function.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/fix-release-flags.patch" target="_blank">fix-release-flags.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/skip-building-libsquish.patch" target="_blank">skip-building-libsquish.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/squish.patch" target="_blank">squish.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/1bdadb8cc5b82d587a0c8f3f9bde25e36ff0eb45/ports/nvtt/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -213,11 +213,11 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2022-12-27</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-28</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!uwp & !arm</pre></div>
+            <div><pre class="support-arch">!android & !uwp & !arm</pre></div>
             <div class="sidebar-section">
                 <div class="sidebar-header">Documentation</div>
                 <div>
@@ -244,7 +244,7 @@
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
-  <div class="footer-info">
+  <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
@@ -328,7 +328,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>

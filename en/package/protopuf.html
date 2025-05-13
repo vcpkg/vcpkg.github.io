@@ -39,8 +39,9 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="/scripts/consentAndAnalytics.js"></script>
 <script src="/scripts/cookieOptOut.js" defer></script>
+<script src="/scripts/consentAndAnalytics.js" defer></script>
+
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +105,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     protopuf
-                </div>
-                <div class="package-version">
-                    3.0.0
-                </div>
+                    <span class="package-version">3.0.0</span>
+                </h1>
             </div>
             <div class="package-description">
                 A little, highly templated, and protobuf-compatible serialization/deserialization library written in C++20
@@ -119,16 +118,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -214,7 +213,7 @@
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
-  <div class="footer-info">
+  <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
@@ -298,7 +297,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>

@@ -39,8 +39,9 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="/scripts/consentAndAnalytics.js"></script>
 <script src="/scripts/cookieOptOut.js" defer></script>
+<script src="/scripts/consentAndAnalytics.js" defer></script>
+
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +105,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     ms-gdk
-                </div>
-                <div class="package-version">
-                    2410.1.1897
-                </div>
+                    <span class="package-version">2504.0.4020</span>
+                </h1>
             </div>
             <div class="package-description">
                 Microsoft Game Development Kit (GDK)
@@ -119,16 +118,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -155,21 +154,28 @@
             <div id="features-content" class="tab-content">
                 <div class="active-header">Features</div>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">playfab - <i class="feature-description">Include PlayFab Extension Libraries</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2504.0.4020#0</li>
+                    <li class="badge badge-primary">2410.2.1916#0</li>
                     <li class="badge badge-primary">2410.1.1897#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e40d24cb149dd138e7c11d490834fa2c81298b32/ports/ms-gdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e40d24cb149dd138e7c11d490834fa2c81298b32/ports/ms-gdk/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e40d24cb149dd138e7c11d490834fa2c81298b32/ports/ms-gdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d8ad13c401b30c2836d00b8923c9127f05f591c7/ports/ms-gdk/pfusage" target="_blank">pfusage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d8ad13c401b30c2836d00b8923c9127f05f591c7/ports/ms-gdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d8ad13c401b30c2836d00b8923c9127f05f591c7/ports/ms-gdk/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d8ad13c401b30c2836d00b8923c9127f05f591c7/ports/ms-gdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -177,7 +183,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-05</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -208,7 +214,7 @@
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
-  <div class="footer-info">
+  <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
@@ -292,7 +298,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>

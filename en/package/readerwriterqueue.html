@@ -39,8 +39,9 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="/scripts/consentAndAnalytics.js"></script>
 <script src="/scripts/cookieOptOut.js" defer></script>
+<script src="/scripts/consentAndAnalytics.js" defer></script>
+
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +105,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     readerwriterqueue
-                </div>
-                <div class="package-version">
-                    1.0.6
-                </div>
+                    <span class="package-version">1.0.7</span>
+                </h1>
             </div>
             <div class="package-description">
                 A single-producer, single-consumer lock-free queue
@@ -119,22 +118,37 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
                 <div class="active-header">Dependencies</div>
                 <div class="card-container">
-                    <div class="dependency-card">No Dependencies</div>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
@@ -146,6 +160,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.0.7#0</li>
                     <li class="badge badge-primary">1.0.6#0</li>
                     <li class="badge badge-primary">1.0.5#0</li>
                     <li class="badge badge-primary">1.0.3#0</li>
@@ -157,8 +172,8 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4581bb43c1bd3528ba44736008ce42af62c2b4c0/ports/readerwriterqueue/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4581bb43c1bd3528ba44736008ce42af62c2b4c0/ports/readerwriterqueue/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4c226f3d81c8532d13380c94bb8395f7bab718be/ports/readerwriterqueue/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4c226f3d81c8532d13380c94bb8395f7bab718be/ports/readerwriterqueue/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -166,7 +181,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2021-11-30</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-29</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -197,7 +212,7 @@
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
-  <div class="footer-info">
+  <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
@@ -281,7 +296,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>

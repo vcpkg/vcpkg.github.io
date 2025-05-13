@@ -39,8 +39,9 @@
 
 <!-- our scripts -->
 <script src="/dist/common.js"></script>
-<script src="/scripts/consentAndAnalytics.js"></script>
 <script src="/scripts/cookieOptOut.js" defer></script>
+<script src="/scripts/consentAndAnalytics.js" defer></script>
+
 </head>
 <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
@@ -104,12 +105,10 @@
     <div class="package-page-wrapper">
         <div class="package-name-header">
             <div class="name-version-container">
-                <div class="package-name">
+                <h1 class="package-name">
                     baresip-libre
-                </div>
-                <div class="package-version">
-                    3.21.0
-                </div>
+                    <span class="package-version">3.22.0</span>
+                </h1>
             </div>
             <div class="package-description">
                 Generic library for real-time communications with async IO support
@@ -119,16 +118,16 @@
         <div class="active-container">
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
-                    Dependencies
+                    <button>Dependencies</button>
                 </li>
                 <li class="tab" data-target="features-content">
-                    Features
+                    <button>Features</button>
                 </li>
                 <li class="tab" data-target="versions-content">
-                    Versions
+                    <button>Versions</button>
                 </li>
                 <li class="tab" data-target="port-content">
-                    Port Content
+                    <button>Port Content</button>
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
@@ -177,6 +176,7 @@
             <div id="versions-content" class="tab-content">
                 <div class="active-header">Available Versions</div>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.22.0#0</li>
                     <li class="badge badge-primary">3.21.0#0</li>
                     <li class="badge badge-primary">3.20.0#0</li>
                     <li class="badge badge-primary">3.19.0#0</li>
@@ -203,9 +203,9 @@
             <div id="port-content" class="tab-content">
                 <div class="active-header">Port Content</div>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d5ee3cf41f9205662e4638209aaaf3b495219c08/ports/baresip-libre/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d5ee3cf41f9205662e4638209aaaf3b495219c08/ports/baresip-libre/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/d5ee3cf41f9205662e4638209aaaf3b495219c08/ports/baresip-libre/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a29aef6b0786abe51a8d43d8d11f226d030b4d9/ports/baresip-libre/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a29aef6b0786abe51a8d43d8d11f226d030b4d9/ports/baresip-libre/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a29aef6b0786abe51a8d43d8d11f226d030b4d9/ports/baresip-libre/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -213,7 +213,7 @@
             <div class="sidebar-header">Metadata</div>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-01</div>
             </div>
             <div class="sidebar-header">Supports</div>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -244,7 +244,7 @@
     </div>
   </main>
   <div id="loadFooter"><div class="footer">
-  <div class="footer-info">
+  <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
         <div class="footer-heading">
@@ -328,7 +328,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <div style="position: relative"><div class="logo-footer"></div></div>
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>
