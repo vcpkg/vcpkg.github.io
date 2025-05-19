@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     gstreamer
-                    <span class="package-version">1.24.12</span>
+                    <span class="package-version">1.24.12#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -147,14 +147,6 @@
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
-                        </div>
-                    </a>
-                    <a href="opengl.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">opengl<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: windows | osx</div>
-                            <div class="dep-host"></div>
                         </div>
                     </a>
                     <a href="vcpkg-tool-meson.html" class="dependency-card">
@@ -244,7 +236,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">asio - <i class="feature-description">Enable support for the Steinberg Audio Streaming Input Output (ASIO) library (Windows only)</i></div>
+                            <div class="feature-name">asio - <i class="feature-description">Enable support for the Steinberg Audio Streaming Input Output (ASIO) library</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -252,7 +244,7 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">asiosdk</div>
                                 <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform">platform: windows</div>
+                                <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -292,7 +284,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">bzip2-bad - <i class="feature-description">Enable bzip2 stream compression in bad plugins</i></div>
+                            <div class="feature-name">bzip2 - <i class="feature-description">Enable bzip2 stream compression in plugins</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -302,38 +294,6 @@
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/gstreamer.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">gstreamer</div>
-                                <div class="feature-dep-feature">features: [plugins-bad]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">bzip2-good - <i class="feature-description">Enable bzip2 stream compression in good plugins</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/bzip2.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">bzip2</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/gstreamer.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">gstreamer</div>
-                                <div class="feature-dep-feature">features: [plugins-good]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -644,6 +604,38 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">gl - <i class="feature-description">Enable OpenGL integration library and OpenGL plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/egl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">egl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: android</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature">features: [plugins-base]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !android</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">gl-graphene - <i class="feature-description">Use Graphene in OpenGL plugin</i></div>
                         </div>
                         <div class="section-two">
@@ -659,7 +651,7 @@
                             <a href="/en/package/gstreamer.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">gstreamer</div>
-                                <div class="feature-dep-feature">features: [plugins-base]</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -1080,6 +1072,14 @@
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature">features: [gl]</div>
+                                <div class="feature-dep-platform">platform: osx</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -1404,6 +1404,78 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">vulkan - <i class="feature-description">Enable Vulkan video sink plugin</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature">features: [plugins-bad]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature">features: [wayland]</div>
+                                <div class="feature-dep-platform">platform: !android &amp; !ios &amp; !osx &amp; !windows</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/shaderc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">shaderc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/vulkan.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">vulkan</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">wayland - <i class="feature-description">Enable Wayland plugin&#x2F;library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/gstreamer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">gstreamer</div>
+                                <div class="feature-dep-feature">features: [plugins-bad]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/wayland.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">wayland</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/wayland-protocols.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">wayland-protocols</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">webp - <i class="feature-description">Enable support for WebP image format</i></div>
                         </div>
                         <div class="section-two">
@@ -1476,39 +1548,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">x11-bad - <i class="feature-description">Enable support for X11 in bad plugins</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/gstreamer.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">gstreamer</div>
-                                <div class="feature-dep-feature">features: [plugins-bad]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/libxkbcommon.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">libxkbcommon</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/xcb.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">xcb</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">x11-base - <i class="feature-description">Enable support for X11 in base plugins</i></div>
+                            <div class="feature-name">x11 - <i class="feature-description">Enable X11 support in libraries and plugins</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -1531,6 +1571,22 @@
                             <a href="/en/package/libxext.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">libxext</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libxkbcommon.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libxkbcommon</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/xcb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">xcb</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -1591,6 +1647,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.24.12#1</li>
                     <li class="badge badge-primary">1.24.12#0</li>
                     <li class="badge badge-primary">1.24.7#4</li>
                     <li class="badge badge-primary">1.24.7#3</li>
@@ -1637,20 +1694,13 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-bz2-windows-debug-dependency.patch" target="_blank">fix-bz2-windows-debug-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-clang-cl-bad.patch" target="_blank">fix-clang-cl-bad.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-clang-cl-base.patch" target="_blank">fix-clang-cl-base.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-clang-cl-good.patch" target="_blank">fix-clang-cl-good.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-clang-cl-gstreamer.patch" target="_blank">fix-clang-cl-gstreamer.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-clang-cl-ugly.patch" target="_blank">fix-clang-cl-ugly.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-clang-cl.patch" target="_blank">fix-clang-cl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/fix-multiple-def.patch" target="_blank">fix-multiple-def.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/gstreamer-disable-no-unused.patch" target="_blank">gstreamer-disable-no-unused.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/no-downloads.patch" target="_blank">no-downloads.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/plugin-base-disable-no-unused.patch" target="_blank">plugin-base-disable-no-unused.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/srtp_fix.patch" target="_blank">srtp_fix.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f5e6a3bb0b4e90e4c6c56f6bb75bbd1f89961056/ports/gstreamer/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/duplicate-unused.diff" target="_blank">duplicate-unused.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/fix-bz2-windows-debug-dependency.patch" target="_blank">fix-bz2-windows-debug-dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/fix-clang-cl.patch" target="_blank">fix-clang-cl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/fix-multiple-def.patch" target="_blank">fix-multiple-def.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a3d6c3762c4f8a40b9a9f171288ed7cf2b57f44/ports/gstreamer/x264-api-imports.diff" target="_blank">x264-api-imports.diff</a></li>
                   </ul>
             </div>
         </div>
@@ -1658,7 +1708,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.0-only</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-15</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

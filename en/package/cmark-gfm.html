@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - yyjson</title>
+  <title>vcpkg package - cmark-gfm</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    yyjson
-                    <span class="package-version">0.11.1</span>
+                    cmark-gfm
+                    <span class="package-version">0.29.0.13</span>
                 </h1>
             </div>
             <div class="package-description">
-                A high performance JSON library written in ANSI C
+                GitHub Flavored Markdown parser based on cmark.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -156,33 +156,7 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">fast-fp-conv - <i class="feature-description">Build with custom floating-point number conversion</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">non-standard - <i class="feature-description">Build with support for non-standard JSON</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">reader - <i class="feature-description">Build with JSON reader</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">writer - <i class="feature-description">Build with JSON writer</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/yyjson.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">yyjson</div>
-                                <div class="feature-dep-feature">features: [reader]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
+                            <div class="feature-name">tools - <i class="feature-description">Build tools</i></div>
                         </div>
                     </div>
                 </div>
@@ -190,32 +164,22 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">0.11.1#0</li>
-                    <li class="badge badge-primary">0.11.0#0</li>
-                    <li class="badge badge-primary">0.10.0#0</li>
-                    <li class="badge badge-primary">0.9.0#0</li>
-                    <li class="badge badge-primary">0.8.0#0</li>
-                    <li class="badge badge-primary">0.6.0#1</li>
-                    <li class="badge badge-primary">0.6.0#0</li>
-                    <li class="badge badge-primary">0.5.1#0</li>
-                    <li class="badge badge-primary">0.5.0#0</li>
-                    <li class="badge badge-primary">0.4.0#0</li>
-                    <li class="badge badge-primary">0.3.0#0</li>
-                    <li class="badge badge-primary">2021-04-12#0</li>
+                    <li class="badge badge-primary">0.29.0.13#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fcc39da302564c6b168da7f57308655cd8416efe/ports/yyjson/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fcc39da302564c6b168da7f57308655cd8416efe/ports/yyjson/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9dd12f8d791f6fa4e396adbebc714d51cbee2143/ports/cmark-gfm/add-feature-tools.patch" target="_blank">add-feature-tools.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9dd12f8d791f6fa4e396adbebc714d51cbee2143/ports/cmark-gfm/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9dd12f8d791f6fa4e396adbebc714d51cbee2143/ports/cmark-gfm/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-2-Clause</div>
                 <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-15</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
@@ -232,15 +196,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/ibireme/yyjson">https://github.com/ibireme/yyjson</a>
+                    <a href="https://github.com/github/cmark-gfm">https://github.com/github/cmark-gfm</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install yyjson</pre>
+                <pre> vcpkg install cmark-gfm</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port yyjson</pre>
+                <pre> vcpkg add port cmark-gfm</pre>
             </div>
         </div>
     </div>
