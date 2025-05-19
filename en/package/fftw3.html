@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     fftw3
-                    <span class="package-version">3.3.10#9</span>
+                    <span class="package-version">3.3.10#10</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -131,7 +131,7 @@
                 </li>
             </ul>
             <div id="dependencies-content" class="tab-content active">
-                <div class="active-header">Dependencies</div>
+                <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div id="features-content" class="tab-content">
-                <div class="active-header">Features</div>
+                <h2 class="active-header">Features</h2>
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
@@ -162,6 +162,11 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">avx2 - <i class="feature-description">Builds part of the library with avx2, fma, avx, sse2, sse</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">neon - <i class="feature-description">Builds part of the library with neon</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -187,8 +192,9 @@
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
-                <div class="active-header">Available Versions</div>
+                <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.3.10#10</li>
                     <li class="badge badge-primary">3.3.10#9</li>
                     <li class="badge badge-primary">3.3.10#8</li>
                     <li class="badge badge-primary">3.3.10#7</li>
@@ -215,44 +221,45 @@
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
-                <div class="active-header">Port Content</div>
+                <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/aligned_malloc.patch" target="_blank">aligned_malloc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/bigobj.patch" target="_blank">bigobj.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/fftw3_arch_fix.patch" target="_blank">fftw3_arch_fix.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/fix-openmp.patch" target="_blank">fix-openmp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/fix-wrong-version.patch" target="_blank">fix-wrong-version.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/install-subtargets.patch" target="_blank">install-subtargets.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a8f43557804af34d7ff4265aaa63ae59ce82ee1a/ports/fftw3/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/aligned_malloc.patch" target="_blank">aligned_malloc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/bigobj.patch" target="_blank">bigobj.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/fftw3_arch_fix.patch" target="_blank">fftw3_arch_fix.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/fix-openmp.patch" target="_blank">fix-openmp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/fix-wrong-version.patch" target="_blank">fix-wrong-version.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/install-subtargets.patch" target="_blank">install-subtargets.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/neon.patch" target="_blank">neon.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/64810c6bf2bdc91ebcd75f140aec77580113f219/ports/fftw3/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
-            <div class="sidebar-header">Metadata</div>
+            <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-2.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-07-09</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-14</div>
             </div>
-            <div class="sidebar-header">Supports</div>
+            <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
             <div><pre class="support-arch">Supported on all triplets</pre></div>
             <div class="sidebar-section">
-                <div class="sidebar-header">Documentation</div>
+                <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
                     Unavailable
                 </div>
             </div>
             <div class="sidebar-section">
-                <div class="sidebar-header">Homepage</div>
+                <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
                     <a href="https://www.fftw.org/">https://www.fftw.org/</a>
                 </div>
             </div>
             <div class="sidebar-section">
-                <div class="sidebar-header">Install</div>
+                <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
                 <pre> vcpkg install fftw3</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
