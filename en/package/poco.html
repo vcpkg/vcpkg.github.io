@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     poco
-                    <span class="package-version">1.14.1#1</span>
+                    <span class="package-version">1.14.1#2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,25 +133,9 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="expat.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">expat<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="pcre2.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">pcre2<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="sqlite3.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">sqlite3<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -196,6 +180,51 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">activerecord - <i class="feature-description">Simple and lightweight object-relational mapping (ORM) framework built on top of the POCO Data</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/expat.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">expat</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [data]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">activerecord-compiler - <i class="feature-description">Compiler for Simple and lightweight object-relational mapping (ORM) framework built on top of the POCO Data</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [util, xml]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">cpp-parser - <i class="feature-description">POCO C++ parser</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">crypto - <i class="feature-description">Crypto support</i></div>
                         </div>
                         <div class="section-two">
@@ -206,6 +235,42 @@
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">data - <i class="feature-description">Database abstraction layer for POCO</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">encodings - <i class="feature-description">Encodings support for POCO</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">encodings-compiler - <i class="feature-description">Compiler for encodings support for POCO</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">json - <i class="feature-description">JSON support for POCO</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">jwt - <i class="feature-description">JWT support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [crypto, json]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -224,6 +289,30 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [data]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">mongodb - <i class="feature-description">MongoDB support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [net]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -240,6 +329,19 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [data]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">net - <i class="feature-description">Network support for POCO</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -251,7 +353,63 @@
                             <a href="/en/package/poco.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">poco</div>
-                                <div class="feature-dep-feature">features: [crypto]</div>
+                                <div class="feature-dep-feature">features: [crypto, net, util]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">odbc - <i class="feature-description">ODBC support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [data]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/unixodbc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">unixodbc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: osx | linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pagecompiler - <i class="feature-description">Command line tool that translates HTML files into C++ code</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [net, util, xml]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pagecompiler-file2page - <i class="feature-description">Command line tool that translates HTML files into C++ code</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [net, util, xml]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -272,6 +430,30 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [util, xml]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pocodoc - <i class="feature-description">POCO documentation generator</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [cpp-parser, data, sqlite, util, xml]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -288,6 +470,112 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [data]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">prometheus - <i class="feature-description">Prometheus support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [net]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">redis - <i class="feature-description">Redis support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [net]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">sevenzip - <i class="feature-description">Support for parsing and creating 7Zip files</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">sqlite - <i class="feature-description">SQLite support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [data]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/sqlite3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">sqlite3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">util - <i class="feature-description">Utility support library for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/poco.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">poco</div>
+                                <div class="feature-dep-feature">features: [json, xml]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">xml - <i class="feature-description">XML support for POCO</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/expat.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">expat</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zip - <i class="feature-description">Support for parsing and creating Zip files</i></div>
                         </div>
                     </div>
                 </div>
@@ -295,6 +583,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.14.1#2</li>
                     <li class="badge badge-primary">1.14.1#1</li>
                     <li class="badge badge-primary">1.14.1#0</li>
                     <li class="badge badge-primary">1.14.0#2</li>
@@ -350,16 +639,17 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0001-static-pcre.patch" target="_blank">0001-static-pcre.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0002-arm64-pcre.patch" target="_blank">0002-arm64-pcre.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0003-fix-dependency.patch" target="_blank">0003-fix-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0004-fix-feature-sqlite3.patch" target="_blank">0004-fix-feature-sqlite3.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0005-fix-error-c3861.patch" target="_blank">0005-fix-error-c3861.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0007-find-pcre2.patch" target="_blank">0007-find-pcre2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/0008-fix-mingw-compilation.patch" target="_blank">0008-fix-mingw-compilation.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/36e6a8b98c23a00365bb01103152fbe0aaf61ed7/ports/poco/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0001-static-pcre.patch" target="_blank">0001-static-pcre.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0002-arm64-pcre.patch" target="_blank">0002-arm64-pcre.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0003-fix-dependency.patch" target="_blank">0003-fix-dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0004-fix-feature-sqlite3.patch" target="_blank">0004-fix-feature-sqlite3.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0005-fix-error-c3861.patch" target="_blank">0005-fix-error-c3861.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0007-find-pcre2.patch" target="_blank">0007-find-pcre2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0008-fix-mingw-compilation.patch" target="_blank">0008-fix-mingw-compilation.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/0009-fix-zip-to-xml-dependency.patch" target="_blank">0009-fix-zip-to-xml-dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/cde4530dcd7d9b305d25a8d1f67f985a5192676e/ports/poco/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -367,7 +657,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSL-1.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-12</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-20</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
