@@ -4,8 +4,8 @@ function start_email() {
 function checkEnter(e) {
     if (e.keyCode === 13) {
         // redirect query to packages.html
-        window.location.href =
-            'packages.html?query=' + document.getElementById('idx-search').value;
+        const query = encodeURIComponent(document.getElementById('idx-search').value);
+        window.location.href = 'packages.html?query=' + query;
     }
     return false;
 }
