@@ -3,13 +3,13 @@ name: Site Validation
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
-    
-    env:
-     Codeql.Enabled: true
-     
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3

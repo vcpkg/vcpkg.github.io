@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 set -e
 
@@ -7,7 +7,7 @@ if [ ! -e ../vcpkg ]; then
     vcpkg_commit=$(cat commit.txt)
     if [ ! -e commit.txt ]; then exit 1; fi
     git init ../vcpkg
-    git -C ../vcpkg fetch https://github.com/Microsoft/vcpkg $vcpkg_commit
+    git -C ../vcpkg fetch https://github.com/microsoft/vcpkg $vcpkg_commit
     git -C ../vcpkg checkout FETCH_HEAD
 fi
 
