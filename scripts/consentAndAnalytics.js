@@ -11,7 +11,7 @@ var config = {
         env: "PROD", // Environment can be set to PPE or PROD as needed.
         gpcDataSharingOptIn: false, // Include the CCPA "GPC_DataSharingOptIn" property as false
         callback: {
-            userConsentDetails: typeof WcpConsent !== 'undefined' && WcpConsent.siteConsent ? WcpConsent.siteConsent.getConsent : undefined
+			userConsentDetails: typeof WcpConsent !== 'undefined' && WcpConsent.siteConsent ? WcpConsent.siteConsent.getConsent() : { Required: true, Analytics: false, SocialMedia: false, Advertising: false }
         },
     },
     webAnalyticsConfiguration: { // Web Analytics Plugin configuration
