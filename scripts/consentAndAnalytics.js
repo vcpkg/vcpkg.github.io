@@ -60,10 +60,10 @@ window.addEventListener('DOMContentLoaded', function () {
             dropAnalyticsCookies();
         }
     }
-});
 
-//Initialize SDK
-analytics.initialize(config, []);
+    //Initialize SDK
+    analytics.initialize(config, []);
+});
 
 function dropAnalyticsCookies() {
     clearCookie('_ga', document.domain, '/');
