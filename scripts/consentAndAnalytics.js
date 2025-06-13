@@ -11,7 +11,7 @@ var config = {
         env: "PROD", // Environment can be set to PPE or PROD as needed.
         gpcDataSharingOptIn: false, // Include the CCPA "GPC_DataSharingOptIn" property as false
         callback: {
-			userConsentDetails: typeof WcpConsent !== 'undefined' && WcpConsent.siteConsent ? WcpConsent.siteConsent.getConsent() : undefined
+			userConsentDetails: typeof WcpConsent !== 'undefined' && WcpConsent.siteConsent ? WcpConsent.siteConsent.getConsent : undefined
         },
     },
     webAnalyticsConfiguration: { // Web Analytics Plugin configuration
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function () {
     function onConsentChanged(categoryPreferences) { console.log("onConsentChanged", categoryPreferences); }
     WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
         if (err != undefined) {
-            return error;
+            return err;
         } else {
             siteConsent = _siteConsent; //siteConsent is used to get the current consent
         }
