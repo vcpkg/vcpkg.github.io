@@ -11,7 +11,7 @@ var config = {
         env: "PROD", // Environment can be set to PPE or PROD as needed.
         gpcDataSharingOptIn: false, // Include the CCPA "GPC_DataSharingOptIn" property as false
         callback: {
-            userConsentDetails: typeof WcpConsent !== 'undefined' && WcpConsent.siteConsent ? WcpConsent.siteConsent.getConsent : undefined
+			userConsentDetails: typeof WcpConsent !== 'undefined' && WcpConsent.siteConsent ? WcpConsent.siteConsent.getConsent : undefined
         },
     },
     webAnalyticsConfiguration: { // Web Analytics Plugin configuration
@@ -29,14 +29,12 @@ var config = {
     }
 };
 
-//Initialize SDK
-analytics.initialize(config, []);
 
 window.addEventListener('DOMContentLoaded', function () {
     function onConsentChanged(categoryPreferences) { console.log("onConsentChanged", categoryPreferences); }
     WcpConsent.init("en-US", "cookie-banner", function (err, _siteConsent) {
         if (err != undefined) {
-            return error;
+            return err;
         } else {
             siteConsent = _siteConsent; //siteConsent is used to get the current consent
         }
@@ -62,6 +60,9 @@ window.addEventListener('DOMContentLoaded', function () {
             dropAnalyticsCookies();
         }
     }
+
+    //Initialize SDK
+    analytics.initialize(config, []);
 });
 
 function dropAnalyticsCookies() {
@@ -85,3 +86,7 @@ const globalPrivacyControlEnabled = navigator.globalPrivacyControl;
     window.GPC_value = GPC_DataSharingOptIn;
     analytics.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
 })();
+
+function clearCookie(cookieName, domain, path) {
+    document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${path}; domain=${domain};`
+}
