@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libzip
-                    <span class="package-version">1.11.3#1</span>
+                    <span class="package-version">1.11.4</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -180,31 +180,10 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">commoncrypto - <i class="feature-description">AES (encryption) support using Apple&#39;s Common Crypto API</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">default-aes - <i class="feature-description">Use default AES</i></div>
+                            <div class="feature-name">default-aes - <i class="feature-description">AES (encryption) support using a default backend</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/libzip.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">libzip</div>
-                                <div class="feature-dep-feature">features: [commoncrypto]</div>
-                                <div class="feature-dep-platform">platform: osx</div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/libzip.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">libzip</div>
-                                <div class="feature-dep-feature">features: [wincrypto]</div>
-                                <div class="feature-dep-platform">platform: windows</div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
                             <a href="/en/package/libzip.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">libzip</div>
@@ -265,11 +244,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">wincrypto - <i class="feature-description">AES (encryption) support using Windows Crypto API</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">zstd - <i class="feature-description">Support Zstandard-compressed zip archives</i></div>
                         </div>
                         <div class="section-two">
@@ -289,6 +263,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.11.4#0</li>
                     <li class="badge badge-primary">1.11.3#1</li>
                     <li class="badge badge-primary">1.11.3#0</li>
                     <li class="badge badge-primary">1.10.1#0</li>
@@ -321,11 +296,11 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5106a4ecfd30365922b78cd0690b5c043d947749/ports/libzip/fix-dependency.patch" target="_blank">fix-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5106a4ecfd30365922b78cd0690b5c043d947749/ports/libzip/initialize-have_dos_time.patch" target="_blank">initialize-have_dos_time.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5106a4ecfd30365922b78cd0690b5c043d947749/ports/libzip/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5106a4ecfd30365922b78cd0690b5c043d947749/ports/libzip/use-requires.patch" target="_blank">use-requires.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5106a4ecfd30365922b78cd0690b5c043d947749/ports/libzip/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f6729a3ac3bfdefc999aa8e3664f8014370886b8/ports/libzip/config-vars.diff" target="_blank">config-vars.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f6729a3ac3bfdefc999aa8e3664f8014370886b8/ports/libzip/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f6729a3ac3bfdefc999aa8e3664f8014370886b8/ports/libzip/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f6729a3ac3bfdefc999aa8e3664f8014370886b8/ports/libzip/use-requires.patch" target="_blank">use-requires.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f6729a3ac3bfdefc999aa8e3664f8014370886b8/ports/libzip/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -333,7 +308,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-07</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-19</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

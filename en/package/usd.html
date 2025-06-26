@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     usd
-                    <span class="package-version">25.2</span>
+                    <span class="package-version">25.5.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,14 +133,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="opensubdiv.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">opensubdiv<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="tbb.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">tbb<i class="dep-version-min"></i></div>
@@ -180,6 +172,30 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">imaging - <i class="feature-description">Enable the imaging components</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/opensubdiv.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opensubdiv</div>
+                                <div class="feature-dep-feature">features: [[object Object]]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">materialx - <i class="feature-description">Enable MaterialX support</i></div>
                         </div>
                         <div class="section-two">
@@ -192,11 +208,6 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">metal - <i class="feature-description">Enable Metal based components</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -269,6 +280,14 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/vulkan-utility-libraries.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">vulkan-utility-libraries</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -276,6 +295,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">25.5.1#0</li>
                     <li class="badge badge-primary">25.2#0</li>
                     <li class="badge badge-primary">24.11#1</li>
                     <li class="badge badge-primary">24.11#0</li>
@@ -303,18 +323,15 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/001-fix_rename_find_package_to_find_dependency.patch" target="_blank">001-fix_rename_find_package_to_find_dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/002-vcpkg_find_tbb.patch" target="_blank">002-vcpkg_find_tbb.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/003-fix-dep.patch" target="_blank">003-fix-dep.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/004-fix_cmake_package.patch" target="_blank">004-fix_cmake_package.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/007-fix_cmake_hgi_interop.patch" target="_blank">007-fix_cmake_hgi_interop.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/008-fix_clang8_compiler_error.patch" target="_blank">008-fix_clang8_compiler_error.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/009-vcpkg_install_folder_conventions.patch" target="_blank">009-vcpkg_install_folder_conventions.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/010-cmake_export_plugin_as_modules.patch" target="_blank">010-cmake_export_plugin_as_modules.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/011-TBB-2022.patch" target="_blank">011-TBB-2022.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/012-fix-find-vulkan.patch" target="_blank">012-fix-find-vulkan.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2d1b8a130c1679d64c5d1e9db4e2d783e560fe5a/ports/usd/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/003-fix-dep.patch" target="_blank">003-fix-dep.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/004-fix_cmake_package.patch" target="_blank">004-fix_cmake_package.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/007-fix_cmake_hgi_interop.patch" target="_blank">007-fix_cmake_hgi_interop.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/008-fix_clang8_compiler_error.patch" target="_blank">008-fix_clang8_compiler_error.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/009-vcpkg_install_folder_conventions.patch" target="_blank">009-vcpkg_install_folder_conventions.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/010-cmake_export_plugin_as_modules.patch" target="_blank">010-cmake_export_plugin_as_modules.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/013-openimageio-3.patch" target="_blank">013-openimageio-3.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/32e3e6cdfc27a5803b1e4bd5774dfa742b1c00e9/ports/usd/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -322,7 +339,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-19</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
