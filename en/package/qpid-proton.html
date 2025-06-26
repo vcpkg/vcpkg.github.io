@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     qpid-proton
-                    <span class="package-version">0.38.0#2</span>
+                    <span class="package-version">0.40.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -184,6 +184,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.40.0#0</li>
                     <li class="badge badge-primary">0.38.0#2</li>
                     <li class="badge badge-primary">0.38.0#1</li>
                     <li class="badge badge-primary">0.38.0#0</li>
@@ -208,9 +209,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6db51d86a9c2796581d74c9a7eb46e52ee8cb7eb/ports/qpid-proton/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6db51d86a9c2796581d74c9a7eb46e52ee8cb7eb/ports/qpid-proton/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6db51d86a9c2796581d74c9a7eb46e52ee8cb7eb/ports/qpid-proton/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20dad1facdf97c8cb6bde78a9704af995f49b87c/ports/qpid-proton/early-cxx.diff" target="_blank">early-cxx.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20dad1facdf97c8cb6bde78a9704af995f49b87c/ports/qpid-proton/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20dad1facdf97c8cb6bde78a9704af995f49b87c/ports/qpid-proton/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/20dad1facdf97c8cb6bde78a9704af995f49b87c/ports/qpid-proton/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -218,11 +220,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-19</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-16</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!(static & staticcrt) & !uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>

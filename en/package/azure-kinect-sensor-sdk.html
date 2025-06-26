@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     azure-kinect-sensor-sdk
-                    <span class="package-version">1.4.1#8</span>
+                    <span class="package-version">1.4.2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -141,6 +141,14 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="azure-kinect-depth-engine.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">azure-kinect-depth-engine<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="cjson.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">cjson<i class="dep-version-min"></i></div>
@@ -152,30 +160,6 @@
                     <a href="ebml.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">ebml<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="glfw3.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">glfw3<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="gtest.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">gtest<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="imgui.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">imgui<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -209,7 +193,7 @@
                         <div class="section-one">
                             <div class="dep-name">libuvc<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-platform">platform: !windows</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -260,11 +244,6 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">docs - <i class="feature-description">Build K4A doxygen documentation.</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">tool - <i class="feature-description">Build tools.</i></div>
                         </div>
                         <div class="section-two">
@@ -277,9 +256,9 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                            <a href="/en/package/glew.html">
+                            <a href="/en/package/glfw3.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">glew</div>
+                                <div class="feature-dep-name">glfw3</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -300,6 +279,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.4.2#0</li>
                     <li class="badge badge-primary">1.4.1#8</li>
                     <li class="badge badge-primary">1.4.1#7</li>
                     <li class="badge badge-primary">1.4.1#6</li>
@@ -321,27 +301,25 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/fix-build-imgui.patch" target="_blank">fix-build-imgui.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/fix-builds.patch" target="_blank">fix-builds.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/fix-calibration-c.patch" target="_blank">fix-calibration-c.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/fix-dependency-imgui.patch" target="_blank">fix-dependency-imgui.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/fix-header.patch" target="_blank">fix-header.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/fix-linux.patch" target="_blank">fix-linux.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/k4adeploy.ps1" target="_blank">k4adeploy.ps1</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3c24aa351645c267bf3afef1e3a96125380a2f6c/ports/azure-kinect-sensor-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/fix-build-imgui.patch" target="_blank">fix-build-imgui.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/fix-builds.patch" target="_blank">fix-builds.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/fix-calibration-c.patch" target="_blank">fix-calibration-c.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/fix-header.patch" target="_blank">fix-header.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/fix-linux.patch" target="_blank">fix-linux.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/43d4575ddd352afcaeb14e37ca50355a77b0468a/ports/azure-kinect-sensor-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-16</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-17</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">linux | windows</pre></div>
+            <div><pre class="support-arch">(linux | windows) & !(static & staticcrt)</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
