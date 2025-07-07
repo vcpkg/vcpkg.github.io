@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     nspr
-                    <span class="package-version">4.35#4</span>
+                    <span class="package-version">4.36</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,9 +133,17 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="vcpkg-tool-mozbuild.html" class="dependency-card">
+                    <a href="nspr.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">vcpkg-tool-mozbuild<i class="dep-version-min"></i></div>
+                            <div class="dep-name">nspr<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-make.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -152,6 +160,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">4.36#0</li>
                     <li class="badge badge-primary">4.35#4</li>
                     <li class="badge badge-primary">4.35#3</li>
                     <li class="badge badge-primary">4.35#2</li>
@@ -163,8 +172,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5d2a0a9814db499f6ba2e847ca7ab5912badcdbf/ports/nspr/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5d2a0a9814db499f6ba2e847ca7ab5912badcdbf/ports/nspr/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f9c128a6f7a96f5fa2f6f089f37ed6788a90e4b0/ports/nspr/android.diff" target="_blank">android.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f9c128a6f7a96f5fa2f6f089f37ed6788a90e4b0/ports/nspr/library-linkage.diff" target="_blank">library-linkage.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f9c128a6f7a96f5fa2f6f089f37ed6788a90e4b0/ports/nspr/nsinstall-windows.diff" target="_blank">nsinstall-windows.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f9c128a6f7a96f5fa2f6f089f37ed6788a90e4b0/ports/nspr/parallel.diff" target="_blank">parallel.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f9c128a6f7a96f5fa2f6f089f37ed6788a90e4b0/ports/nspr/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f9c128a6f7a96f5fa2f6f089f37ed6788a90e4b0/ports/nspr/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -172,11 +185,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MPL-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-06-15</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">windows & !(arm | uwp | static | xbox)</pre></div>
+            <div><pre class="support-arch">!uwp & !xbox & !(windows & static & staticcrt)</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
