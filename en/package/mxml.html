@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - readline-osx</title>
+  <title>vcpkg package - mxml</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    readline-osx
-                    <span class="package-version">2020-01-04</span>
+                    mxml
+                    <span class="package-version">4.0.4</span>
                 </h1>
             </div>
             <div class="package-description">
-                empty package, linking to readline-unix
+                A tiny xml parsing library
             </div>
         </div>
     <div class="flex-wrapper">
@@ -133,12 +133,20 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="readline-unix.html" class="dependency-card">
+                    <a href="vcpkg-make.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">readline-unix<i class="dep-version-min"></i></div>
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
+                            <div class="dep-platform">platform: !windows | mingw</div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-msbuild.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-msbuild<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: windows &amp; !mingw</div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
                 </div>
@@ -152,27 +160,26 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">2020-01-04#0</li>
-                    <li class="badge badge-primary">8.1#0</li>
+                    <li class="badge badge-primary">4.0.4#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b68f3cc7ecc5977d12596b6a168b7c0e5c2bbcfc/ports/readline-osx/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b68f3cc7ecc5977d12596b6a168b7c0e5c2bbcfc/ports/readline-osx/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4164706e69d5237928da7ddb3a9dd277ffe24da3/ports/mxml/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4164706e69d5237928da7ddb3a9dd277ffe24da3/ports/mxml/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2022-01-04</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-30</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">osx</pre></div>
+            <div><pre class="support-arch">!(windows & (uwp | static | arm))</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -184,15 +191,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    Unavailable
+                    <a href="https://github.com/michaelrsweet/mxml">https://github.com/michaelrsweet/mxml</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install readline-osx</pre>
+                <pre> vcpkg install mxml</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port readline-osx</pre>
+                <pre> vcpkg add port mxml</pre>
             </div>
         </div>
     </div>
