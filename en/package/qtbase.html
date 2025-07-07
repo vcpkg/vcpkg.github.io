@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     qtbase
-                    <span class="package-version">6.8.3#2</span>
+                    <span class="package-version">6.8.3#3</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -299,6 +299,17 @@
                         <div class="section-one">
                             <div class="feature-name">cups - <i class="feature-description">Provides support for the Common Unix Printing System.</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [widgets]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
@@ -376,6 +387,14 @@
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [opengl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -867,6 +886,14 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [gui]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                             <a href="/en/package/vulkan.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">vulkan</div>
@@ -902,7 +929,7 @@
                             <a href="/en/package/qtbase.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">qtbase</div>
-                                <div class="feature-dep-feature">features: [concurrent, xkbcommon-x11, xlib]</div>
+                                <div class="feature-dep-feature">features: [thread, xkbcommon-x11, xlib]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -950,6 +977,17 @@
                         <div class="section-one">
                             <div class="feature-name">xlib - <i class="feature-description">XLib</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [gui]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
@@ -960,7 +998,7 @@
                             <a href="/en/package/qtbase.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">qtbase</div>
-                                <div class="feature-dep-feature">features: [xcb]</div>
+                                <div class="feature-dep-feature">features: [fontconfig, xcb-xlib]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -988,6 +1026,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.8.3#3</li>
                     <li class="badge badge-primary">6.8.3#2</li>
                     <li class="badge badge-primary">6.8.3#1</li>
                     <li class="badge badge-primary">6.8.3#0</li>
@@ -1082,30 +1121,30 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/GLIB2-static.patch" target="_blank">GLIB2-static.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/allow_outside_prefix.patch" target="_blank">allow_outside_prefix.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/clang-cl_QGADGET_fix.diff" target="_blank">clang-cl_QGADGET_fix.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/clang-cl_source_location.patch" target="_blank">clang-cl_source_location.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/cmake" target="_blank">cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/config_install.patch" target="_blank">config_install.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/dont_force_cmakecache_latest.patch" target="_blank">dont_force_cmakecache_latest.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/env.patch" target="_blank">env.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/fix-host-aliasing.patch" target="_blank">fix-host-aliasing.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/fix-link-lib-discovery.patch" target="_blank">fix-link-lib-discovery.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/fix_cmake_build.patch" target="_blank">fix_cmake_build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/fix_deploy_windows.patch" target="_blank">fix_deploy_windows.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/fix_egl.patch" target="_blank">fix_egl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/fix_egl_2.patch" target="_blank">fix_egl_2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/harfbuzz.patch" target="_blank">harfbuzz.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/installed_dir.patch" target="_blank">installed_dir.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/macdeployqt-symlinks.patch" target="_blank">macdeployqt-symlinks.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/qmake.debug.bat" target="_blank">qmake.debug.bat</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/qt.conf.in" target="_blank">qt.conf.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/qtpaths.debug.bat" target="_blank">qtpaths.debug.bat</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/use-shared-mime-info.patch" target="_blank">use-shared-mime-info.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/vcpkg.json" target="_blank">vcpkg.json</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/294f76666c3000630d828703e675814c05a4fd43/ports/qtbase/windeployqt.debug.bat" target="_blank">windeployqt.debug.bat</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/GLIB2-static.patch" target="_blank">GLIB2-static.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/allow_outside_prefix.patch" target="_blank">allow_outside_prefix.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/clang-cl_QGADGET_fix.diff" target="_blank">clang-cl_QGADGET_fix.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/clang-cl_source_location.patch" target="_blank">clang-cl_source_location.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/cmake" target="_blank">cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/config_install.patch" target="_blank">config_install.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/dont_force_cmakecache_latest.patch" target="_blank">dont_force_cmakecache_latest.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/env.patch" target="_blank">env.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/fix-host-aliasing.patch" target="_blank">fix-host-aliasing.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/fix-link-lib-discovery.patch" target="_blank">fix-link-lib-discovery.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/fix_cmake_build.patch" target="_blank">fix_cmake_build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/fix_deploy_windows.patch" target="_blank">fix_deploy_windows.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/fix_egl.patch" target="_blank">fix_egl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/fix_egl_2.patch" target="_blank">fix_egl_2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/harfbuzz.patch" target="_blank">harfbuzz.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/installed_dir.patch" target="_blank">installed_dir.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/macdeployqt-symlinks.patch" target="_blank">macdeployqt-symlinks.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/qmake.debug.bat" target="_blank">qmake.debug.bat</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/qt.conf.in" target="_blank">qt.conf.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/qtpaths.debug.bat" target="_blank">qtpaths.debug.bat</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/use-shared-mime-info.patch" target="_blank">use-shared-mime-info.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4a82168731f334481babeacbf6de474ff3265cb1/ports/qtbase/windeployqt.debug.bat" target="_blank">windeployqt.debug.bat</a></li>
                   </ul>
             </div>
         </div>
@@ -1113,7 +1152,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-22</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-25</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
