@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libarchive
-                    <span class="package-version">3.7.8#1</span>
+                    <span class="package-version">3.8.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -196,22 +196,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">libxml2 - <i class="feature-description">Libxml2 support</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/libxml2.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">libxml2</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">lz4 - <i class="feature-description">Lz4 support</i></div>
                         </div>
                         <div class="section-two">
@@ -260,6 +244,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">xar - <i class="feature-description">Xar support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libxml2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libxml2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !windows | mingw</div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">zstd - <i class="feature-description">Zstd support</i></div>
                         </div>
                         <div class="section-two">
@@ -279,6 +279,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.8.1#0</li>
                     <li class="badge badge-primary">3.7.8#1</li>
                     <li class="badge badge-primary">3.7.8#0</li>
                     <li class="badge badge-primary">3.7.7#2</li>
@@ -331,15 +332,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/disable-warnings.patch" target="_blank">disable-warnings.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/fix-buildsystem.patch" target="_blank">fix-buildsystem.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/fix-cmake-version.patch" target="_blank">fix-cmake-version.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/fix-cpu-set.patch" target="_blank">fix-cpu-set.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/fix-deps.patch" target="_blank">fix-deps.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/vcpkg-cmake-wrapper.cmake.in" target="_blank">vcpkg-cmake-wrapper.cmake.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1ea3a8ad6b4fb05f7b4a8f25840a7901e458e718/ports/libarchive/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/69e2771d1607297054761526a46dc6555f59f606/ports/libarchive/fix-buildsystem.patch" target="_blank">fix-buildsystem.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/69e2771d1607297054761526a46dc6555f59f606/ports/libarchive/fix-deps.patch" target="_blank">fix-deps.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/69e2771d1607297054761526a46dc6555f59f606/ports/libarchive/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/69e2771d1607297054761526a46dc6555f59f606/ports/libarchive/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/69e2771d1607297054761526a46dc6555f59f606/ports/libarchive/vcpkg-cmake-wrapper.cmake.in" target="_blank">vcpkg-cmake-wrapper.cmake.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/69e2771d1607297054761526a46dc6555f59f606/ports/libarchive/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -347,7 +345,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-10</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     openslide
-                    <span class="package-version">3.4.1#4</span>
+                    <span class="package-version">4.0.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -152,6 +152,14 @@
                     <a href="glib.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">glib<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="libdicom.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libdicom<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -204,6 +212,14 @@
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                jpeg
+                                </div>
+                            </div>
+                        </div>
                     </a>
                     <a href="vcpkg-tool-meson.html" class="dependency-card">
                         <div class="section-one">
@@ -232,6 +248,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">4.0.0#0</li>
                     <li class="badge badge-primary">3.4.1#4</li>
                     <li class="badge badge-primary">3.4.1#3</li>
                     <li class="badge badge-primary">3.4.1#2</li>
@@ -242,10 +259,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/openslide/fix-win-build.patch" target="_blank">fix-win-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/openslide/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/openslide/remove-w-flags.patch" target="_blank">remove-w-flags.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/openslide/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d5b31016dd775725368c62b894d753e53445df3/ports/openslide/fix-win-build.patch" target="_blank">fix-win-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d5b31016dd775725368c62b894d753e53445df3/ports/openslide/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d5b31016dd775725368c62b894d753e53445df3/ports/openslide/slidetool-unicode.patch" target="_blank">slidetool-unicode.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3d5b31016dd775725368c62b894d753e53445df3/ports/openslide/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -253,11 +270,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-13</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">native & !(windows & static) & !xbox & !osx</pre></div>
+            <div><pre class="support-arch">!xbox</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
