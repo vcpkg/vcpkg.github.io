@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - luau</title>
+  <title>vcpkg package - superglu</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    luau
-                    <span class="package-version">0.682</span>
+                    superglu
+                    <span class="package-version">1.3.3</span>
                 </h1>
             </div>
             <div class="package-description">
-                A fast, small, safe, gradually typed embeddable scripting language derived from Lua
+                SGI GLU with miscellaneous fixes
             </div>
         </div>
     <div class="flex-wrapper">
@@ -133,6 +133,14 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="opengl-registry.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">opengl-registry<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -154,55 +162,34 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tool - <i class="feature-description">Builds luau executable</i></div>
-                        </div>
-                    </div>
+                    <div class="no-features">No Features</div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">0.682#0</li>
-                    <li class="badge badge-primary">0.681#0</li>
-                    <li class="badge badge-primary">0.680#0</li>
-                    <li class="badge badge-primary">0.679#0</li>
-                    <li class="badge badge-primary">0.678#0</li>
-                    <li class="badge badge-primary">0.677#0</li>
-                    <li class="badge badge-primary">0.676#0</li>
-                    <li class="badge badge-primary">0.675#0</li>
-                    <li class="badge badge-primary">0.674#0</li>
-                    <li class="badge badge-primary">0.673#0</li>
-                    <li class="badge badge-primary">0.672#0</li>
-                    <li class="badge badge-primary">0.671#0</li>
-                    <li class="badge badge-primary">0.670#0</li>
-                    <li class="badge badge-primary">0.669#0</li>
-                    <li class="badge badge-primary">0.668#0</li>
-                    <li class="badge badge-primary">0.666#0</li>
-                    <li class="badge badge-primary">0.665#0</li>
-                    <li class="badge badge-primary">0.660#0</li>
-                    <li class="badge badge-primary">0.651#0</li>
+                    <li class="badge badge-primary">1.3.3#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a60b8ef26bb19e87e367e7b419f18e66881fa25d/ports/luau/cmake-config-export.patch" target="_blank">cmake-config-export.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a60b8ef26bb19e87e367e7b419f18e66881fa25d/ports/luau/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a60b8ef26bb19e87e367e7b419f18e66881fa25d/ports/luau/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/51bf8db55fcc2110bf5b6453889cdb05aa5b90ff/ports/superglu/change-output-name.patch" target="_blank">change-output-name.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/51bf8db55fcc2110bf5b6453889cdb05aa5b90ff/ports/superglu/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/51bf8db55fcc2110bf5b6453889cdb05aa5b90ff/ports/superglu/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/51bf8db55fcc2110bf5b6453889cdb05aa5b90ff/ports/superglu/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-13</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> SGI-B-1.1</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-09</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">windows & !uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -214,15 +201,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/luau-lang/luau">https://github.com/luau-lang/luau</a>
+                    <a href="https://github.com/coin3d/superglu">https://github.com/coin3d/superglu</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install luau</pre>
+                <pre> vcpkg install superglu</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port luau</pre>
+                <pre> vcpkg add port superglu</pre>
             </div>
         </div>
     </div>
