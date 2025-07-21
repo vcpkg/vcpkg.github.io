@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     realsense2
-                    <span class="package-version">2.56.2#2</span>
+                    <span class="package-version">2.56.3</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -141,9 +141,41 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="lz4.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">lz4<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="nlohmann-json.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">nlohmann-json<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="realsense2.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">realsense2<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform">platform: android | osx</div>
+                            <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                rs-usb-backend
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="stb.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">stb<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -188,6 +220,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">rs-usb-backend - <i class="feature-description">Use RS USB backend</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libusb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libusb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">tools - <i class="feature-description">Build Intel® RealSense™ tools</i></div>
                         </div>
                     </div>
@@ -196,6 +244,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.56.3#0</li>
                     <li class="badge badge-primary">2.56.2#2</li>
                     <li class="badge badge-primary">2.56.2#1</li>
                     <li class="badge badge-primary">2.56.2#0</li>
@@ -247,12 +296,18 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e534a9d589ff25fecd29c3430dfcf0a42fdc4cb6/ports/realsense2/add-include-chrono.patch" target="_blank">add-include-chrono.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e534a9d589ff25fecd29c3430dfcf0a42fdc4cb6/ports/realsense2/fix-android-prefix-path.patch" target="_blank">fix-android-prefix-path.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e534a9d589ff25fecd29c3430dfcf0a42fdc4cb6/ports/realsense2/fix-nlohmann_json.patch" target="_blank">fix-nlohmann_json.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e534a9d589ff25fecd29c3430dfcf0a42fdc4cb6/ports/realsense2/fix_openni2.patch" target="_blank">fix_openni2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e534a9d589ff25fecd29c3430dfcf0a42fdc4cb6/ports/realsense2/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e534a9d589ff25fecd29c3430dfcf0a42fdc4cb6/ports/realsense2/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/add-include-chrono.patch" target="_blank">add-include-chrono.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/android-config.diff" target="_blank">android-config.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/build.diff" target="_blank">build.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/devendor-lz4.diff" target="_blank">devendor-lz4.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/devendor-nlohmann-json.diff" target="_blank">devendor-nlohmann-json.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/devendor-stb.diff" target="_blank">devendor-stb.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/fix_openni2.patch" target="_blank">fix_openni2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/libusb.diff" target="_blank">libusb.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/using-firmware.diff" target="_blank">using-firmware.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f368f080f98de39abef2bcd13bbd93af3006bab1/ports/realsense2/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -260,7 +315,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-16</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-16</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
