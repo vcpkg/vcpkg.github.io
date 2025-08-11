@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     octave
-                    <span class="package-version">9.4.0#1</span>
+                    <span class="package-version">10.2.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -388,6 +388,46 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">gui - <i class="feature-description">build with gui support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/freeglut.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">freeglut</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/octave.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">octave</div>
+                                <div class="feature-dep-feature">features: [fontconfig, freetype]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qt5-base.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qt5-base</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qt5-tools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qt5-tools</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">hdf5 - <i class="feature-description">hdf5 support</i></div>
                         </div>
                         <div class="section-two">
@@ -471,6 +511,8 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">10.2.0#1</li>
+                    <li class="badge badge-primary">10.2.0#0</li>
                     <li class="badge badge-primary">9.4.0#1</li>
                     <li class="badge badge-primary">9.4.0#0</li>
                     <li class="badge badge-primary">9.3.0#2</li>
@@ -483,10 +525,9 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/61c70ce627a2a4ffff809f887e4188ff39ce0a14/ports/octave/dep_pc_names.patch" target="_blank">dep_pc_names.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/61c70ce627a2a4ffff809f887e4188ff39ce0a14/ports/octave/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/61c70ce627a2a4ffff809f887e4188ff39ce0a14/ports/octave/run-mk-ops.diff" target="_blank">run-mk-ops.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/61c70ce627a2a4ffff809f887e4188ff39ce0a14/ports/octave/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ee5c9041e8126600e79e0c80f7e6c70101c1353a/ports/octave/add_other_linkage_flags.patch" target="_blank">add_other_linkage_flags.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ee5c9041e8126600e79e0c80f7e6c70101c1353a/ports/octave/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ee5c9041e8126600e79e0c80f7e6c70101c1353a/ports/octave/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -494,7 +535,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-3.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-07</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
