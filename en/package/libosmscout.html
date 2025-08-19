@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libosmscout
-                    <span class="package-version">1.1.1#7</span>
+                    <span class="package-version">1.1.1#8</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -152,7 +152,7 @@
                     <a href="libxml2.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">libxml2<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -205,7 +205,7 @@
                                 <div class="feature-dep-name">cairo</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                             <a href="/en/package/freetype.html">
@@ -213,7 +213,7 @@
                                 <div class="feature-dep-name">freetype</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                             <a href="/en/package/harfbuzz.html">
@@ -221,7 +221,7 @@
                                 <div class="feature-dep-name">harfbuzz</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                             <a href="/en/package/libpng.html">
@@ -287,7 +287,7 @@
                                 <div class="feature-dep-name">freetype</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                             <a href="/en/package/harfbuzz.html">
@@ -295,7 +295,7 @@
                                 <div class="feature-dep-name">harfbuzz</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                             <a href="/en/package/pango.html">
@@ -308,11 +308,17 @@
                             </a>
                         </div>
                     </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools - <i class="feature-description">Install tools</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.1.1#8</li>
                     <li class="badge badge-primary">1.1.1#7</li>
                     <li class="badge badge-primary">1.1.1#6</li>
                     <li class="badge badge-primary">1.1.1#5</li>
@@ -326,10 +332,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/085820b35f4ef5ad54967c8a46fb822e53c4be33/ports/libosmscout/fix-libxml2.patch" target="_blank">fix-libxml2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/085820b35f4ef5ad54967c8a46fb822e53c4be33/ports/libosmscout/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/085820b35f4ef5ad54967c8a46fb822e53c4be33/ports/libosmscout/protobuf-linkage.patch" target="_blank">protobuf-linkage.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/085820b35f4ef5ad54967c8a46fb822e53c4be33/ports/libosmscout/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f2985fb63453a78fbb48d14e51d864efb290be86/ports/libosmscout/fix-libxml2.patch" target="_blank">fix-libxml2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f2985fb63453a78fbb48d14e51d864efb290be86/ports/libosmscout/msvc-arm.diff" target="_blank">msvc-arm.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f2985fb63453a78fbb48d14e51d864efb290be86/ports/libosmscout/msvc-static.diff" target="_blank">msvc-static.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f2985fb63453a78fbb48d14e51d864efb290be86/ports/libosmscout/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f2985fb63453a78fbb48d14e51d864efb290be86/ports/libosmscout/protobuf-linkage.patch" target="_blank">protobuf-linkage.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f2985fb63453a78fbb48d14e51d864efb290be86/ports/libosmscout/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -337,11 +345,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-11</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-12</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!uwp & !(windows & arm) & !android & !(windows & static) & !wasm32 & !emscripten</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
