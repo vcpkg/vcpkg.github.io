@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     angle
-                    <span class="package-version">chromium_5414#10</span>
+                    <span class="package-version">chromium_7258</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -141,30 +141,6 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="libx11.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libx11<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="libxext.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libxext<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="libxi.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libxi<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="opengl-registry.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">opengl-registry<i class="dep-version-min"></i></div>
@@ -189,6 +165,14 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
+                    <a href="vcpkg-get-python-packages.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-get-python-packages<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                     <a href="zlib.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">zlib<i class="dep-version-min"></i></div>
@@ -202,12 +186,17 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">metal - <i class="feature-description">Metal support for angle</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">chromium_7258#0</li>
                     <li class="badge badge-primary">chromium_5414#10</li>
                     <li class="badge badge-primary">chromium_5414#9</li>
                     <li class="badge badge-primary">chromium_5414#8</li>
@@ -254,15 +243,17 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/001-fix-uwp.patch" target="_blank">001-fix-uwp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/002-fix-builder-error.patch" target="_blank">002-fix-builder-error.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/003-fix-mingw.patch" target="_blank">003-fix-mingw.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/angle_commit.h.in" target="_blank">angle_commit.h.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/cmake-buildsystem" target="_blank">cmake-buildsystem</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/unofficial-angle-config.cmake" target="_blank">unofficial-angle-config.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/fc75cfe2f86dcdd159ede8552ad0d78c2d60ae08/ports/angle/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/001-fix-builder-error.patch" target="_blank">001-fix-builder-error.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/001-fix-uwp.patch" target="_blank">001-fix-uwp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/002-fix-builder-error.patch" target="_blank">002-fix-builder-error.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/003-fix-mingw.patch" target="_blank">003-fix-mingw.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/ANGLEShaderProgramVersion.h.in" target="_blank">ANGLEShaderProgramVersion.h.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/angle_commit.h.in" target="_blank">angle_commit.h.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/cmake-buildsystem" target="_blank">cmake-buildsystem</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/unofficial-angle-config.cmake" target="_blank">unofficial-angle-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2c27d320ef40bb188b6893100e790bdc9094d2de/ports/angle/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -270,7 +261,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-12-31</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-12</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
