@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     lapack
-                    <span class="package-version">2023-06-10#2</span>
+                    <span class="package-version">2023-06-10#3</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -137,7 +137,7 @@
                         <div class="section-one">
                             <div class="dep-name">clapack<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: uwp | (arm &amp; windows)</div>
+                            <div class="dep-platform">platform: !osx &amp; !ios &amp; (uwp | (arm &amp; windows) | (static &amp; windows &amp; !mingw))</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -145,7 +145,7 @@
                         <div class="section-one">
                             <div class="dep-name">lapack-reference<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !osx &amp; !ios &amp; !uwp &amp; !(arm &amp; windows)</div>
+                            <div class="dep-platform">platform: !osx &amp; !ios &amp; (!uwp &amp; !(arm &amp; windows) &amp; !(static &amp; windows &amp; !mingw))</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -168,6 +168,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2023-06-10#3</li>
                     <li class="badge badge-primary">2023-06-10#2</li>
                     <li class="badge badge-primary">2023-06-10#1</li>
                     <li class="badge badge-primary">2023-06-10#0</li>
@@ -185,10 +186,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b69ec652ae6fe9c9b934b54d8cf2e17a8a684c66/ports/lapack/lapack.pc.in" target="_blank">lapack.pc.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b69ec652ae6fe9c9b934b54d8cf2e17a8a684c66/ports/lapack/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b69ec652ae6fe9c9b934b54d8cf2e17a8a684c66/ports/lapack/vcpkg-cmake-wrapper.cmake.in" target="_blank">vcpkg-cmake-wrapper.cmake.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b69ec652ae6fe9c9b934b54d8cf2e17a8a684c66/ports/lapack/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d23688e78a071042dea5d760c768384643bd3255/ports/lapack/lapack.pc.in" target="_blank">lapack.pc.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d23688e78a071042dea5d760c768384643bd3255/ports/lapack/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d23688e78a071042dea5d760c768384643bd3255/ports/lapack/vcpkg-cmake-wrapper.cmake.in" target="_blank">vcpkg-cmake-wrapper.cmake.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d23688e78a071042dea5d760c768384643bd3255/ports/lapack/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -196,7 +197,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-06-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-09-03</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
