@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     curl
-                    <span class="package-version">8.14.1</span>
+                    <span class="package-version">8.15.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -196,7 +196,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gnutls - <i class="feature-description">SSL support (gnutls)</i></div>
+                            <div class="feature-name">gnutls - <i class="feature-description">TLS support (gnutls)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -276,6 +276,38 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">http3 - <i class="feature-description">HTTP3 support with ngtcp2 on openssl</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature">features: [openssl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/nghttp3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">nghttp3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/ngtcp2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ngtcp2</div>
+                                <div class="feature-dep-feature">features: [openssl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">httpsrr - <i class="feature-description">enable support for HTTPS RR</i></div>
                         </div>
                     </div>
@@ -345,7 +377,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">mbedtls - <i class="feature-description">SSL support (mbedTLS)</i></div>
+                            <div class="feature-name">mbedtls - <i class="feature-description">TLS support (mbedTLS)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -361,12 +393,12 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">non-http - <i class="feature-description">Enables protocols beyond HTTP&#x2F;HTTPS&#x2F;HTTP2</i></div>
+                            <div class="feature-name">non-http - <i class="feature-description">Enables protocols beyond HTTP&#x2F;HTTPS&#x2F;HTTP2&#x2F;HTTP3</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">openssl - <i class="feature-description">SSL support (OpenSSL)</i></div>
+                            <div class="feature-name">openssl - <i class="feature-description">TLS support (OpenSSL)</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -414,27 +446,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">schannel - <i class="feature-description">SSL support (Secure Channel)</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [sspi]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">sectransp - <i class="feature-description">SSL support (sectransp)</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">ssh - <i class="feature-description">SSH support via libssh2</i></div>
                         </div>
                         <div class="section-two">
@@ -467,22 +478,14 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">ssl - <i class="feature-description">Default SSL backend</i></div>
+                            <div class="feature-name">ssl - <i class="feature-description">Default SSL &#x2F; TLS implementation.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
                             <a href="/en/package/curl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [sectransp]</div>
-                                <div class="feature-dep-platform">platform: osx | ios</div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [schannel]</div>
+                                <div class="feature-dep-feature">features: [sspi]</div>
                                 <div class="feature-dep-platform">platform: (windows &amp; !uwp) | mingw</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -491,7 +494,7 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">curl</div>
                                 <div class="feature-dep-feature">features: [openssl]</div>
-                                <div class="feature-dep-platform">platform: (uwp | !windows) &amp; !(osx | ios) &amp; !mingw</div>
+                                <div class="feature-dep-platform">platform: (uwp | !windows) &amp; !mingw</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
@@ -586,6 +589,8 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">8.15.0#1</li>
+                    <li class="badge badge-primary">8.15.0#0</li>
                     <li class="badge badge-primary">8.14.1#0</li>
                     <li class="badge badge-primary">8.14.0#0</li>
                     <li class="badge badge-primary">8.13.0#1</li>
@@ -712,13 +717,13 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/dependencies.patch" target="_blank">dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/pkgconfig-curl-config.patch" target="_blank">pkgconfig-curl-config.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2e6ee4fbab3d758b9671f52b38969899c2826e7a/ports/curl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/dependencies.patch" target="_blank">dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/pkgconfig-curl-config.patch" target="_blank">pkgconfig-curl-config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/55d639f39e069ac683d127445dc96600c254f22f/ports/curl/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -726,7 +731,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> curl AND ISC AND BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-11</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

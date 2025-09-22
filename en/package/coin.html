@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     coin
-                    <span class="package-version">4.0.3</span>
+                    <span class="package-version">4.0.4#2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -176,6 +176,14 @@
                     <a href="boost-static-assert.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-static-assert<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="expat.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">expat<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -300,6 +308,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">superglu - <i class="feature-description">Use SuperGLU (SGI GLU fork with fixes) instead of system GLU</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/superglu.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">superglu</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">zlib - <i class="feature-description">Use zlib for reading&#x2F;writing compressed files</i></div>
                         </div>
                         <div class="section-two">
@@ -319,6 +343,9 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">4.0.4#2</li>
+                    <li class="badge badge-primary">4.0.4#1</li>
+                    <li class="badge badge-primary">4.0.4#0</li>
                     <li class="badge badge-primary">4.0.3#0</li>
                     <li class="badge badge-primary">4.0.2#3</li>
                     <li class="badge badge-primary">4.0.2#2</li>
@@ -338,9 +365,11 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/318a8a4a5226cfe3da9c6fc50276ab07f61c2a96/ports/coin/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/318a8a4a5226cfe3da9c6fc50276ab07f61c2a96/ports/coin/remove-default-config.patch" target="_blank">remove-default-config.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/318a8a4a5226cfe3da9c6fc50276ab07f61c2a96/ports/coin/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d3cd1ffd77b5dec0b7b00d1d8b059ce9ef3837c/ports/coin/expat.diff" target="_blank">expat.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d3cd1ffd77b5dec0b7b00d1d8b059ce9ef3837c/ports/coin/openal.diff" target="_blank">openal.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d3cd1ffd77b5dec0b7b00d1d8b059ce9ef3837c/ports/coin/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d3cd1ffd77b5dec0b7b00d1d8b059ce9ef3837c/ports/coin/remove-default-config.patch" target="_blank">remove-default-config.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d3cd1ffd77b5dec0b7b00d1d8b059ce9ef3837c/ports/coin/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -348,11 +377,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-09-08</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-30</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!arm & !android & !uwp</pre></div>
+            <div><pre class="support-arch">!android & !uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>

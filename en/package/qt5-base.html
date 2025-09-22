@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     qt5-base
-                    <span class="package-version">5.15.16#4</span>
+                    <span class="package-version">5.15.17#2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -176,17 +176,33 @@
                     <a href="freetype.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">freetype<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                png, zlib
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="harfbuzz.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">harfbuzz<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                freetype
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="libjpeg-turbo.html" class="dependency-card">
@@ -253,19 +269,16 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="zstd.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">zstd<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">cups - <i class="feature-description">Provides support for the Common Unix Printing System</i></div>
+                        </div>
+                    </div>
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">icu - <i class="feature-description">Enable ICU support</i></div>
@@ -299,6 +312,14 @@
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qt5-base.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qt5-base</div>
+                                <div class="feature-dep-feature">features: [zstd]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -346,7 +367,7 @@
                                 <div class="feature-dep-name">sqlite3</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -367,11 +388,31 @@
                             </a>
                         </div>
                     </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zstd - <i class="feature-description">Zstandard support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/zstd.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zstd</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">5.15.17#2</li>
+                    <li class="badge badge-primary">5.15.17#1</li>
+                    <li class="badge badge-primary">5.15.17#0</li>
+                    <li class="badge badge-primary">5.15.16#5</li>
                     <li class="badge badge-primary">5.15.16#4</li>
                     <li class="badge badge-primary">5.15.16#3</li>
                     <li class="badge badge-primary">5.15.16#2</li>
@@ -502,11 +543,11 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9589967d228300217d24d493e690ead3585bbe46/ports/qt5-base/cmake" target="_blank">cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9589967d228300217d24d493e690ead3585bbe46/ports/qt5-base/patches" target="_blank">patches</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9589967d228300217d24d493e690ead3585bbe46/ports/qt5-base/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9589967d228300217d24d493e690ead3585bbe46/ports/qt5-base/qtdeploy.ps1" target="_blank">qtdeploy.ps1</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9589967d228300217d24d493e690ead3585bbe46/ports/qt5-base/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5919680a071e144cc5add8fe2814249f3c1c4570/ports/qt5-base/cmake" target="_blank">cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5919680a071e144cc5add8fe2814249f3c1c4570/ports/qt5-base/patches" target="_blank">patches</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5919680a071e144cc5add8fe2814249f3c1c4570/ports/qt5-base/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5919680a071e144cc5add8fe2814249f3c1c4570/ports/qt5-base/qtdeploy.ps1" target="_blank">qtdeploy.ps1</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5919680a071e144cc5add8fe2814249f3c1c4570/ports/qt5-base/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -514,7 +555,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-19</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-02</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

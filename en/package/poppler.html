@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     poppler
-                    <span class="package-version">24.3.0#1</span>
+                    <span class="package-version">25.7.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,14 +136,6 @@
                     <a href="boost-container.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-container<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="boost-move.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-move<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -211,6 +203,14 @@
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="zlib.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">zlib<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
                         </div>
                     </a>
                 </div>
@@ -336,7 +336,7 @@
                             <a href="/en/package/qtbase.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">qtbase</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-feature">features: [gui]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -345,23 +345,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">splash - <i class="feature-description">The splash backend is always enabled. This option is kept for compatibility.</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">zlib - <i class="feature-description">zlib for poppler</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/zlib.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">zlib</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
+                            <div class="feature-name">zlib - <i class="feature-description">Use zlib to uncompress flate streams (not totally safe).</i></div>
                         </div>
                     </div>
                 </div>
@@ -369,6 +353,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">25.7.0#0</li>
                     <li class="badge badge-primary">24.3.0#1</li>
                     <li class="badge badge-primary">24.3.0#0</li>
                     <li class="badge badge-primary">24.2.0#1</li>
@@ -396,13 +381,13 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/export-unofficial-poppler.patch" target="_blank">export-unofficial-poppler.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/private-namespace.patch" target="_blank">private-namespace.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/unofficial-poppler-config.cmake" target="_blank">unofficial-poppler-config.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/3a882b3efc01c0e3118b54ca51eff57205117b55/ports/poppler/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/export-unofficial-poppler.patch" target="_blank">export-unofficial-poppler.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/private-namespace.patch" target="_blank">private-namespace.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/unofficial-poppler-config.cmake" target="_blank">unofficial-poppler-config.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5059ecc292b53c602262a95082021d877436f09b/ports/poppler/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -410,7 +395,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-2.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-05-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-10</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

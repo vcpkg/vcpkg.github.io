@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     opencolorio
-                    <span class="package-version">2.2.1#3</span>
+                    <span class="package-version">2.4.2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -152,9 +152,17 @@
                     <a href="minizip-ng.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">minizip-ng<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                zlib
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="pystring.html" class="dependency-card">
@@ -162,6 +170,14 @@
                             <div class="dep-name">pystring<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="sse2neon.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">sse2neon<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: arm</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -204,7 +220,7 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">glew</div>
                                 <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-platform">platform: !ios &amp; !osx</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -224,6 +240,14 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -231,6 +255,8 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.4.2#0</li>
+                    <li class="badge badge-primary">2.2.1#4</li>
                     <li class="badge badge-primary">2.2.1#3</li>
                     <li class="badge badge-primary">2.2.1#2</li>
                     <li class="badge badge-primary">2.2.1#1</li>
@@ -254,12 +280,11 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/74d4bc75ec715039fec68ec4fc0236ecf6647f79/ports/opencolorio/fix-del-install-file.patch" target="_blank">fix-del-install-file.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/74d4bc75ec715039fec68ec4fc0236ecf6647f79/ports/opencolorio/fix-dependency.patch" target="_blank">fix-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/74d4bc75ec715039fec68ec4fc0236ecf6647f79/ports/opencolorio/fix-func-param.patch" target="_blank">fix-func-param.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/74d4bc75ec715039fec68ec4fc0236ecf6647f79/ports/opencolorio/fix-pkgconfig.patch" target="_blank">fix-pkgconfig.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/74d4bc75ec715039fec68ec4fc0236ecf6647f79/ports/opencolorio/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/74d4bc75ec715039fec68ec4fc0236ecf6647f79/ports/opencolorio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aceb85fdc3c32ef24f54aa2c2a4e58a33d5caf57/ports/opencolorio/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aceb85fdc3c32ef24f54aa2c2a4e58a33d5caf57/ports/opencolorio/glew-no-glu.diff" target="_blank">glew-no-glu.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aceb85fdc3c32ef24f54aa2c2a4e58a33d5caf57/ports/opencolorio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aceb85fdc3c32ef24f54aa2c2a4e58a33d5caf57/ports/opencolorio/pystring.diff" target="_blank">pystring.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aceb85fdc3c32ef24f54aa2c2a4e58a33d5caf57/ports/opencolorio/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -267,7 +292,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-07-05</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-06</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
