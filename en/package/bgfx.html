@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     bgfx
-                    <span class="package-version">1.129.8866-491</span>
+                    <span class="package-version">1.129.8930-495#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -141,9 +141,33 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="lodepng.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">lodepng<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="mgnlibs.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">mgnlibs<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="miniz.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">miniz<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="stb.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">stb<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -187,12 +211,57 @@
                         <div class="section-one">
                             <div class="feature-name">tools - <i class="feature-description">Shader, Texture and Geometry compilers for bgfx.</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/cgltf.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cgltf</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/glslang.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glslang</div>
+                                <div class="feature-dep-feature">features: [opt]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/meshoptimizer.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">meshoptimizer</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/spirv-cross.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">spirv-cross</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/spirv-tools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">spirv-tools</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.129.8930-495#1</li>
+                    <li class="badge badge-primary">1.129.8930-495#0</li>
                     <li class="badge badge-primary">1.129.8866-491#0</li>
                     <li class="badge badge-primary">1.128.8808-482#0</li>
                     <li class="badge badge-primary">1.128.8786-481#0</li>
@@ -212,9 +281,9 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7e21420f775f72ae938bdeb5e6068f722088f06a/ports/bgfx/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7e21420f775f72ae938bdeb5e6068f722088f06a/ports/bgfx/vcpkg-inject-packages.cmake" target="_blank">vcpkg-inject-packages.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7e21420f775f72ae938bdeb5e6068f722088f06a/ports/bgfx/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d413bca06a16c60ce3718502df4bae6b322ca946/ports/bgfx/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d413bca06a16c60ce3718502df4bae6b322ca946/ports/bgfx/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/d413bca06a16c60ce3718502df4bae6b322ca946/ports/bgfx/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -222,7 +291,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-2-Clause AND CC0-1.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-09-22</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

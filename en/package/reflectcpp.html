@@ -107,11 +107,11 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     reflectcpp
-                    <span class="package-version">0.20.0</span>
+                    <span class="package-version">0.21.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                A C++ library for serialization and deserialization using reflection. Supports JSON, Avro, BSON, Cap'n Proto, CBOR, flexbuffers, msgpack, TOML, UBJSON, XML, YAML.
+                A C++ library for serialization and deserialization using reflection. Supports JSON, Avro, BSON, Cap'n Proto, CBOR, CSV, flexbuffers, msgpack, parquet, TOML, UBJSON, XML, YAML.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -135,7 +135,7 @@
                 <div class="card-container">
                     <a href="ctre.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">ctre<i class="dep-version-min"> >= 3.9.0</i></div>
+                            <div class="dep-name">ctre<i class="dep-version-min"> >= 3.10.0</i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -220,6 +220,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">csv - <i class="feature-description">Enable CSV support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/arrow.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">arrow</div>
+                                <div class="feature-dep-feature">features: [csv]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">flexbuffers - <i class="feature-description">Support for the flexbuffers format (part of flatbuffers)</i></div>
                         </div>
                         <div class="section-two">
@@ -244,6 +260,22 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">msgpack-c</div>
                                 <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">parquet - <i class="feature-description">Enable parquet support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/arrow.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">arrow</div>
+                                <div class="feature-dep-feature">features: [parquet]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -319,6 +351,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.21.0#0</li>
                     <li class="badge badge-primary">0.20.0#0</li>
                     <li class="badge badge-primary">0.19.0#0</li>
                     <li class="badge badge-primary">0.18.0#0</li>
@@ -330,9 +363,9 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4fea4b5ff05c28111e6c5eda0996b7feb7241317/ports/reflectcpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4fea4b5ff05c28111e6c5eda0996b7feb7241317/ports/reflectcpp/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4fea4b5ff05c28111e6c5eda0996b7feb7241317/ports/reflectcpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2cf95b874ebdc94157a61d432546732c1427bb6f/ports/reflectcpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2cf95b874ebdc94157a61d432546732c1427bb6f/ports/reflectcpp/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/2cf95b874ebdc94157a61d432546732c1427bb6f/ports/reflectcpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -340,7 +373,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-08-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-09-15</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
