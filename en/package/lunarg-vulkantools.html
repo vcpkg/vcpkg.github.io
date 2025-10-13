@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     lunarg-vulkantools
-                    <span class="package-version">1.4.309.0</span>
+                    <span class="package-version">1.4.309.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -141,12 +141,20 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="qt5-base.html" class="dependency-card">
+                    <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">qt5-base<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                gui, network, thread, vulkan, widgets
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="valijson.html" class="dependency-card">
@@ -208,6 +216,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.4.309.0#1</li>
                     <li class="badge badge-primary">1.4.309.0#0</li>
                     <li class="badge badge-primary">1.4.304.1#0</li>
                     <li class="badge badge-primary">1.4.304.0#0</li>
@@ -221,9 +230,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a67c780178c1fe93dbb89a97fdbe4b95da3addb/ports/lunarg-vulkantools/disable-qtdeploy.patch" target="_blank">disable-qtdeploy.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a67c780178c1fe93dbb89a97fdbe4b95da3addb/ports/lunarg-vulkantools/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8a67c780178c1fe93dbb89a97fdbe4b95da3addb/ports/lunarg-vulkantools/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8037a5d8075950fb74a6f232d83d128a89a8fd28/ports/lunarg-vulkantools/disable-qtdeploy.patch" target="_blank">disable-qtdeploy.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8037a5d8075950fb74a6f232d83d128a89a8fd28/ports/lunarg-vulkantools/jsoncpp.diff" target="_blank">jsoncpp.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8037a5d8075950fb74a6f232d83d128a89a8fd28/ports/lunarg-vulkantools/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/8037a5d8075950fb74a6f232d83d128a89a8fd28/ports/lunarg-vulkantools/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -231,7 +241,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-06-17</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-10-07</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
