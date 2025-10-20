@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - spdk-dpdk</title>
+  <title>vcpkg package - lexilla</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    spdk-dpdk
-                    <span class="package-version">2018-11-24#3</span>
+                    lexilla
+                    <span class="package-version">5.4.5</span>
                 </h1>
             </div>
             <div class="package-description">
-                SPDK mirror of DPDK. A set of libraries and drivers for fast packet processing
+                Lexilla is a free library of language lexers that can be used with the Scintilla editing component. It comes with complete source code and a license that permits use in any free project or commercial product.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -133,11 +133,19 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="vcpkg-cmake.html" class="dependency-card">
+                    <a href="scintilla.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-name">scintilla<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-msbuild.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-msbuild<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: windows</div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
@@ -152,21 +160,17 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">2018-11-24#3</li>
-                    <li class="badge badge-primary">2018-11-24#2</li>
-                    <li class="badge badge-primary">20181124#1</li>
-                    <li class="badge badge-primary">20181124#0</li>
+                    <li class="badge badge-primary">5.4.5#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6aa4fca940e9d90e6afb6d8b95ef2a08da372ca2/ports/spdk-dpdk/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6aa4fca940e9d90e6afb6d8b95ef2a08da372ca2/ports/spdk-dpdk/FindNuma.cmake" target="_blank">FindNuma.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6aa4fca940e9d90e6afb6d8b95ef2a08da372ca2/ports/spdk-dpdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6aa4fca940e9d90e6afb6d8b95ef2a08da372ca2/ports/spdk-dpdk/spdk-dpdkConfig.cmake" target="_blank">spdk-dpdkConfig.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6aa4fca940e9d90e6afb6d8b95ef2a08da372ca2/ports/spdk-dpdk/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/6aa4fca940e9d90e6afb6d8b95ef2a08da372ca2/ports/spdk-dpdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/74e6536215718009aae747d86d84b78376bf9e09/ports/lexilla/0001-static-lib.patch" target="_blank">0001-static-lib.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/74e6536215718009aae747d86d84b78376bf9e09/ports/lexilla/0002-static-crt.patch" target="_blank">0002-static-crt.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/74e6536215718009aae747d86d84b78376bf9e09/ports/lexilla/0003-fix-include-path.patch" target="_blank">0003-fix-include-path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/74e6536215718009aae747d86d84b78376bf9e09/ports/lexilla/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/74e6536215718009aae747d86d84b78376bf9e09/ports/lexilla/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -174,11 +178,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-03-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-10-17</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">linux</pre></div>
+            <div><pre class="support-arch">windows & !uwp & !mingw</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -190,15 +194,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    Unavailable
+                    <a href="https://www.scintilla.org/Lexilla.html">https://www.scintilla.org/Lexilla.html</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install spdk-dpdk</pre>
+                <pre> vcpkg install lexilla</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port spdk-dpdk</pre>
+                <pre> vcpkg add port lexilla</pre>
             </div>
         </div>
     </div>
