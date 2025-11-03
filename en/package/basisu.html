@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     basisu
-                    <span class="package-version">1.50.0</span>
+                    <span class="package-version">1.60</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,14 +133,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="lodepng.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">lodepng<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -168,6 +160,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.60#0</li>
                     <li class="badge badge-primary">1.50.0#0</li>
                     <li class="badge badge-primary">1.16.4#0</li>
                     <li class="badge badge-primary">1.11#7</li>
@@ -184,21 +177,23 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9d163f0612f75a49133cfd051f0ed997a24602d5/ports/basisu/0001-cmake.patch" target="_blank">0001-cmake.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9d163f0612f75a49133cfd051f0ed997a24602d5/ports/basisu/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9d163f0612f75a49133cfd051f0ed997a24602d5/ports/basisu/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4edccbd609375836b5c99ae5b57ac7bf2fb5c1b6/ports/basisu/examples.diff" target="_blank">examples.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4edccbd609375836b5c99ae5b57ac7bf2fb5c1b6/ports/basisu/export-cmake-config.diff" target="_blank">export-cmake-config.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4edccbd609375836b5c99ae5b57ac7bf2fb5c1b6/ports/basisu/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4edccbd609375836b5c99ae5b57ac7bf2fb5c1b6/ports/basisu/skip-strip.diff" target="_blank">skip-strip.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4edccbd609375836b5c99ae5b57ac7bf2fb5c1b6/ports/basisu/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-05</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-10-31</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!android & !arm</pre></div>
+            <div><pre class="support-arch">(x86 | x64) & !android</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
