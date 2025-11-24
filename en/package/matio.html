@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     matio
-                    <span class="package-version">1.5.28</span>
+                    <span class="package-version">1.5.29</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,6 +136,14 @@
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -177,11 +185,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">pic - <i class="feature-description">Enable position-independent code (PIC), i.e., compilation with the -fPIC flag</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">zlib - <i class="feature-description">Check for zlib library</i></div>
                         </div>
                         <div class="section-two">
@@ -201,6 +204,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.5.29#0</li>
                     <li class="badge badge-primary">1.5.28#0</li>
                     <li class="badge badge-primary">1.5.27#1</li>
                     <li class="badge badge-primary">1.5.27#0</li>
@@ -227,10 +231,9 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32c57af41c54eb1b0de0fe311d9497a7e10a9b7e/ports/matio/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32c57af41c54eb1b0de0fe311d9497a7e10a9b7e/ports/matio/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32c57af41c54eb1b0de0fe311d9497a7e10a9b7e/ports/matio/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32c57af41c54eb1b0de0fe311d9497a7e10a9b7e/ports/matio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/98405903dfe93e9fc75b1f9675f9b839ec01e645/ports/matio/cmake-config.diff" target="_blank">cmake-config.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/98405903dfe93e9fc75b1f9675f9b839ec01e645/ports/matio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/98405903dfe93e9fc75b1f9675f9b839ec01e645/ports/matio/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -238,7 +241,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-2-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-03-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-11-17</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
