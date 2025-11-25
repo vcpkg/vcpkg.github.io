@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libmicrohttpd
-                    <span class="package-version">1.0.1#2</span>
+                    <span class="package-version">1.0.2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,12 +133,12 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="gettext.html" class="dependency-card">
+                    <a href="vcpkg-make.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">gettext<i class="dep-version-min"></i></div>
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !windows</div>
-                            <div class="dep-host"></div>
+                            <div class="dep-platform">platform: !windows | mingw</div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
                     <a href="vcpkg-msbuild.html" class="dependency-card">
@@ -175,6 +175,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.0.2#0</li>
                     <li class="badge badge-primary">1.0.1#2</li>
                     <li class="badge badge-primary">1.0.1#1</li>
                     <li class="badge badge-primary">1.0.1#0</li>
@@ -199,9 +200,9 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7be4abc92a01afad8dfe326e2fbee584694a30c6/ports/libmicrohttpd/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7be4abc92a01afad8dfe326e2fbee584694a30c6/ports/libmicrohttpd/remove_pdb_install.patch" target="_blank">remove_pdb_install.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/7be4abc92a01afad8dfe326e2fbee584694a30c6/ports/libmicrohttpd/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/398cb1ea98f0b5fa8a5fb8c98b256d5b76e7ae66/ports/libmicrohttpd/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/398cb1ea98f0b5fa8a5fb8c98b256d5b76e7ae66/ports/libmicrohttpd/remove_pdb_install.patch" target="_blank">remove_pdb_install.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/398cb1ea98f0b5fa8a5fb8c98b256d5b76e7ae66/ports/libmicrohttpd/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -209,11 +210,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-09-12</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-11-17</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!((arm & windows) | uwp)</pre></div>
+            <div><pre class="support-arch">!(arm & windows) & !uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
