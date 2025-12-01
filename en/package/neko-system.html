@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - duckdb</title>
+  <title>vcpkg package - neko-system</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    duckdb
-                    <span class="package-version">1.4.2#1</span>
+                    neko-system
+                    <span class="package-version">1.0.1</span>
                 </h1>
             </div>
             <div class="package-description">
-                High-performance in-process analytical database system
+                A cross-platform C++20 system information library providing memory information, platform detection, and system utilities.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -133,6 +133,22 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="neko-function.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">neko-function<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="neko-schema.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">neko-schema<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -154,154 +170,33 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">autocomplete - <i class="feature-description">Statically link the autocomplete extension into DuckDB</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">excel - <i class="feature-description">Statically link the excel extension into DuckDB</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/expat.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">expat</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/minizip-ng.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">minizip-ng</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">httpfs - <i class="feature-description">Statically link the httpfs extension into DuckDB</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/openssl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">openssl</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/zlib.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">zlib</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform">platform: mingw</div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">iceberg - <i class="feature-description">Statically link the iceberg extension into DuckDB</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/roaring.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">roaring</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">icu - <i class="feature-description">Statically link the icu extension into DuckDB</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/icu.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">icu</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">json - <i class="feature-description">Statically link the json extension into DuckDB</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tpcds - <i class="feature-description">Statically link the tpcds extension into DuckDB</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tpch - <i class="feature-description">Statically link the tpch extension into DuckDB</i></div>
-                        </div>
-                    </div>
+                    <div class="no-features">No Features</div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">1.4.2#1</li>
-                    <li class="badge badge-primary">1.4.2#0</li>
-                    <li class="badge badge-primary">1.4.1#2</li>
-                    <li class="badge badge-primary">1.4.1#1</li>
-                    <li class="badge badge-primary">1.4.1#0</li>
-                    <li class="badge badge-primary">1.4.0#0</li>
-                    <li class="badge badge-primary">1.3.2#0</li>
-                    <li class="badge badge-primary">1.2.2#0</li>
-                    <li class="badge badge-primary">1.2.1#2</li>
-                    <li class="badge badge-primary">1.2.1#1</li>
-                    <li class="badge badge-primary">1.2.1#0</li>
-                    <li class="badge badge-primary">1.2.0#0</li>
+                    <li class="badge badge-primary">1.0.1#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821b652f6f84bfb41e7c7180bd9644d2962fffd8/ports/duckdb/library-linkage-excel.diff" target="_blank">library-linkage-excel.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821b652f6f84bfb41e7c7180bd9644d2962fffd8/ports/duckdb/library-linkage-httpfs.diff" target="_blank">library-linkage-httpfs.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821b652f6f84bfb41e7c7180bd9644d2962fffd8/ports/duckdb/library-linkage.diff" target="_blank">library-linkage.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821b652f6f84bfb41e7c7180bd9644d2962fffd8/ports/duckdb/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821b652f6f84bfb41e7c7180bd9644d2962fffd8/ports/duckdb/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/821b652f6f84bfb41e7c7180bd9644d2962fffd8/ports/duckdb/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dac47c6016845bf418aad6ea2165d8cb6632ec53/ports/neko-system/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dac47c6016845bf418aad6ea2165d8cb6632ec53/ports/neko-system/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dac47c6016845bf418aad6ea2165d8cb6632ec53/ports/neko-system/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT OR Apache-2.0</div>
                 <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-11-26</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!uwp</pre></div>
+            <div><pre class="support-arch">windows | linux | osx</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -313,15 +208,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://duckdb.org">https://duckdb.org</a>
+                    <a href="https://github.com/moehoshio/NekoSystem">https://github.com/moehoshio/NekoSystem</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install duckdb</pre>
+                <pre> vcpkg install neko-system</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port duckdb</pre>
+                <pre> vcpkg add port neko-system</pre>
             </div>
         </div>
     </div>
