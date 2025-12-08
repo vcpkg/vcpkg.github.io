@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     opencv4
-                    <span class="package-version">4.11.0#6</span>
+                    <span class="package-version">4.11.0#9</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -226,28 +226,12 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/hdf5.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">hdf5</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform">platform: !uwp &amp; !(windows &amp; (arm | arm64)) &amp; !ios</div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
                             <a href="/en/package/opencv4.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">opencv4</div>
                                 <div class="feature-dep-feature">features: [calib3d]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                            <a href="/en/package/tesseract.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">tesseract</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform">platform: !uwp &amp; !(windows &amp; (arm | arm64)) &amp; !ios</div>
-                                <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
                         </div>
@@ -340,6 +324,14 @@
                                 <div class="feature-dep-name">flatbuffers</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/opencv4.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencv4</div>
+                                <div class="feature-dep-feature">features: [intrinsics]</div>
+                                <div class="feature-dep-platform">platform: arm64</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
@@ -516,6 +508,30 @@
                                 <div class="feature-dep-feature">features: [dnn]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">hdf - <i class="feature-description">Enable Hierarchical Data Format (hdf) I&#x2F;O</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/hdf5.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">hdf5</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/opencv4.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencv4</div>
+                                <div class="feature-dep-feature">features: [contrib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -872,6 +888,30 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">text - <i class="feature-description">Enable Scene Text Detection and Recognition</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opencv4.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencv4</div>
+                                <div class="feature-dep-feature">features: [contrib]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/tesseract.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tesseract</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">thread - <i class="feature-description">Enable thread support</i></div>
                         </div>
                     </div>
@@ -962,6 +1002,9 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">4.11.0#9</li>
+                    <li class="badge badge-primary">4.11.0#8</li>
+                    <li class="badge badge-primary">4.11.0#7</li>
                     <li class="badge badge-primary">4.11.0#6</li>
                     <li class="badge badge-primary">4.11.0#5</li>
                     <li class="badge badge-primary">4.11.0#4</li>
@@ -1060,32 +1103,32 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0001-disable-downloading.patch" target="_blank">0001-disable-downloading.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0002-install-options.patch" target="_blank">0002-install-options.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0003-force-package-requirements.patch" target="_blank">0003-force-package-requirements.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0004-fix-eigen.patch" target="_blank">0004-fix-eigen.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0005-fix-policy-CMP0057.patch" target="_blank">0005-fix-policy-CMP0057.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0006-fix-uwp.patch" target="_blank">0006-fix-uwp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0007-contrib-fix-hdf5.patch" target="_blank">0007-contrib-fix-hdf5.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0008-devendor-quirc.patch" target="_blank">0008-devendor-quirc.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0009-fix-protobuf.patch" target="_blank">0009-fix-protobuf.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0010-fix-uwp-tiff-imgcodecs.patch" target="_blank">0010-fix-uwp-tiff-imgcodecs.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0011-remove-python2.patch" target="_blank">0011-remove-python2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0012-miss-openexr.patch" target="_blank">0012-miss-openexr.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0013-contrib-fix-ogre.patch" target="_blank">0013-contrib-fix-ogre.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0014-fix-cmake-in-list.patch" target="_blank">0014-fix-cmake-in-list.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0015-fix-freetype.patch" target="_blank">0015-fix-freetype.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0016-contrib-fix-freetype.patch" target="_blank">0016-contrib-fix-freetype.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0017-fix-flatbuffers.patch" target="_blank">0017-fix-flatbuffers.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0018-contrib-fix-tesseract.patch" target="_blank">0018-contrib-fix-tesseract.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0019-opencl-kernel.patch" target="_blank">0019-opencl-kernel.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0020-fix-narrow-filesystem.diff" target="_blank">0020-fix-narrow-filesystem.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0021-fix-qt-gen-def.patch" target="_blank">0021-fix-qt-gen-def.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0022-android-use-vcpkg-cpu-features.patch" target="_blank">0022-android-use-vcpkg-cpu-features.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/0022-fix-miss-exception-include.patch" target="_blank">0022-fix-miss-exception-include.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/usage.in" target="_blank">usage.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/70663f97389ee87ff32df79805cf3d8d5771d4e0/ports/opencv4/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0001-disable-downloading.patch" target="_blank">0001-disable-downloading.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0002-install-options.patch" target="_blank">0002-install-options.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0003-force-package-requirements.patch" target="_blank">0003-force-package-requirements.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0004-fix-eigen.patch" target="_blank">0004-fix-eigen.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0005-fix-policy-CMP0057.patch" target="_blank">0005-fix-policy-CMP0057.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0006-fix-uwp.patch" target="_blank">0006-fix-uwp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0007-contrib-fix-hdf5.patch" target="_blank">0007-contrib-fix-hdf5.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0008-devendor-quirc.patch" target="_blank">0008-devendor-quirc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0009-fix-protobuf.patch" target="_blank">0009-fix-protobuf.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0010-fix-uwp-tiff-imgcodecs.patch" target="_blank">0010-fix-uwp-tiff-imgcodecs.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0011-remove-python2.patch" target="_blank">0011-remove-python2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0012-miss-openexr.patch" target="_blank">0012-miss-openexr.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0013-contrib-fix-ogre.patch" target="_blank">0013-contrib-fix-ogre.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0014-fix-cmake-in-list.patch" target="_blank">0014-fix-cmake-in-list.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0015-fix-freetype.patch" target="_blank">0015-fix-freetype.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0016-contrib-fix-freetype.patch" target="_blank">0016-contrib-fix-freetype.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0017-fix-flatbuffers.patch" target="_blank">0017-fix-flatbuffers.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0018-contrib-fix-tesseract.patch" target="_blank">0018-contrib-fix-tesseract.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0019-opencl-kernel.patch" target="_blank">0019-opencl-kernel.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0020-fix-narrow-filesystem.diff" target="_blank">0020-fix-narrow-filesystem.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0021-fix-qt-gen-def.patch" target="_blank">0021-fix-qt-gen-def.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0022-android-use-vcpkg-cpu-features.patch" target="_blank">0022-android-use-vcpkg-cpu-features.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/0022-fix-miss-exception-include.patch" target="_blank">0022-fix-miss-exception-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/usage.in" target="_blank">usage.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7b69ba9f7afe7403380a4a75b33fc4d47365ef7b/ports/opencv4/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -1093,7 +1136,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-11-18</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-04</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
