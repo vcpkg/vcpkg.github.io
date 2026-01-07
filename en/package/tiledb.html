@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - deadlightreal-swiftnet</title>
+  <title>vcpkg package - tiledb</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    deadlightreal-swiftnet
-                    <span class="package-version">0.2.0</span>
+                    tiledb
+                    <span class="package-version">2.30.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                SwiftNet is a C networking library built on raw sockets with no external dependencies, providing a clean and readable API.
+                Cloud-native embeddable array storage engine
             </div>
         </div>
     <div class="flex-wrapper">
@@ -133,9 +133,49 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="libpcap.html" class="dependency-card">
+                    <a href="blosc2.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">libpcap<i class="dep-version-min"></i></div>
+                            <div class="dep-name">blosc2<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="bzip2.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">bzip2<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="lz4.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">lz4<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="nlohmann-json.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">nlohmann-json<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="openssl.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">openssl<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !windows</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="spdlog.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">spdlog<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -149,39 +189,174 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="zlib.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">zlib<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="zstd.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">zstd<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">azure - <i class="feature-description">Support Azure Blob Storage</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/azure-identity-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">azure-identity-cpp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/azure-storage-blobs-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">azure-storage-blobs-cpp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/azure-storage-files-datalake-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">azure-storage-files-datalake-cpp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gcs - <i class="feature-description">Support Google Cloud Storage</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/google-cloud-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">google-cloud-cpp</div>
+                                <div class="feature-dep-feature">features: [storage]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">s3 - <i class="feature-description">Support Amazon S3</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/aws-sdk-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">aws-sdk-cpp</div>
+                                <div class="feature-dep-feature">features: [identity-management, s3, sts]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">serialization - <i class="feature-description">Support TileDB Cloud</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/capnproto.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">capnproto</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/capnproto.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">capnproto</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature">features: [zstd]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">webp - <i class="feature-description">Support WebP filtering</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libwebp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libwebp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">0.2.0#0</li>
-                    <li class="badge badge-primary">0.1.0#0</li>
+                    <li class="badge badge-primary">2.30.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e5cfd9d906b9c4a0d5bd075c8cef9e9677dd6b88/ports/deadlightreal-swiftnet/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e5cfd9d906b9c4a0d5bd075c8cef9e9677dd6b88/ports/deadlightreal-swiftnet/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e5cfd9d906b9c4a0d5bd075c8cef9e9677dd6b88/ports/deadlightreal-swiftnet/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/313060aebf70693a257681b2982ad980c845835d/ports/tiledb/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/313060aebf70693a257681b2982ad980c845835d/ports/tiledb/rm-cpp17-pmr.patch" target="_blank">rm-cpp17-pmr.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/313060aebf70693a257681b2982ad980c845835d/ports/tiledb/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/313060aebf70693a257681b2982ad980c845835d/ports/tiledb/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-11</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">(osx & arm64) | (linux & arm64)</pre></div>
+            <div><pre class="support-arch">!(x86 | arm32 | uwp)</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -193,15 +368,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/deadlightreal/SwiftNet">https://github.com/deadlightreal/SwiftNet</a>
+                    <a href="https://github.com/TileDB-Inc/TileDB">https://github.com/TileDB-Inc/TileDB</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install deadlightreal-swiftnet</pre>
+                <pre> vcpkg install tiledb</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port deadlightreal-swiftnet</pre>
+                <pre> vcpkg add port tiledb</pre>
             </div>
         </div>
     </div>

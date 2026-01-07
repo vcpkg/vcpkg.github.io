@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     dawn
-                    <span class="package-version">20250922.223923#1</span>
+                    <span class="package-version">20251202.213730#2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -174,10 +174,32 @@
                         <div class="section-one">
                             <div class="feature-name">d3d11 - <i class="feature-description">Direct3D 11 backend support</i></div>
                         </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/directx-dxc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">directx-dxc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">d3d12 - <i class="feature-description">Direct3D 12 backend support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/directx-dxc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">directx-dxc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -235,6 +257,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">tint - <i class="feature-description">Compiles a minimal tint compiler (mainly for WGSL validation)</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glslang.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glslang</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">vulkan - <i class="feature-description">Vulkan backend support</i></div>
                         </div>
                         <div class="section-two">
@@ -272,6 +310,9 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">20251202.213730#2</li>
+                    <li class="badge badge-primary">20251202.213730#1</li>
+                    <li class="badge badge-primary">20251202.213730#0</li>
                     <li class="badge badge-primary">20250922.223923#1</li>
                     <li class="badge badge-primary">20250922.223923#0</li>
                 </ul>
@@ -279,18 +320,23 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/000-fix-emdawnwebgpu.patch" target="_blank">000-fix-emdawnwebgpu.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/001-fix-windows-build.patch" target="_blank">001-fix-windows-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/002-fix-uwp.patch" target="_blank">002-fix-uwp.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/003-fix-d3d11.patch" target="_blank">003-fix-d3d11.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/004-deps.patch" target="_blank">004-deps.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/005-bsd-support.patch" target="_blank">005-bsd-support.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/006-fix-x11-include-dirs.patch" target="_blank">006-fix-x11-include-dirs.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/DawnConfig.cmake" target="_blank">DawnConfig.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/unofficial_webgpu_dawn.pc.in" target="_blank">unofficial_webgpu_dawn.pc.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/ace93222348e3a5b8573cdff0c825f2e29a974b6/ports/dawn/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/000-fix-emdawnwebgpu.patch" target="_blank">000-fix-emdawnwebgpu.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/001-fix-windows-build.patch" target="_blank">001-fix-windows-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/002-fix-uwp.patch" target="_blank">002-fix-uwp.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/003-fix-d3d11.patch" target="_blank">003-fix-d3d11.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/004-deps.patch" target="_blank">004-deps.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/005-bsd-support.patch" target="_blank">005-bsd-support.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/006-msvc-spirv-tools-disable-warnaserror.patch" target="_blank">006-msvc-spirv-tools-disable-warnaserror.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/007-fix-tint-null-only-writer.patch" target="_blank">007-fix-tint-null-only-writer.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/008-wrong-dxcapi-include.patch" target="_blank">008-wrong-dxcapi-include.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/009-fix-tint-install.patch" target="_blank">009-fix-tint-install.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/010-fix-glslang.patch" target="_blank">010-fix-glslang.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/011-fix-dxc.patch" target="_blank">011-fix-dxc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/DawnConfig.cmake" target="_blank">DawnConfig.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/unofficial_webgpu_dawn.pc.in" target="_blank">unofficial_webgpu_dawn.pc.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/11e7864f16f643a211c44d20dadb56c91451a77d/ports/dawn/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -298,7 +344,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-09-29</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-31</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
