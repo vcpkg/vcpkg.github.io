@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     graphviz
-                    <span class="package-version">10.0.1#3</span>
+                    <span class="package-version">14.1.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -157,11 +157,11 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="getopt.html" class="dependency-card">
+                    <a href="getopt-win32.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">getopt<i class="dep-version-min"></i></div>
+                            <div class="dep-name">getopt-win32<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: windows &amp; !mingw</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -189,6 +189,14 @@
                             </div>
                         </div>
                     </a>
+                    <a href="libltdl.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libltdl<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !windows | mingw</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="librsvg.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">librsvg<i class="dep-version-min"></i></div>
@@ -213,17 +221,17 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="pkgconf.html" class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">pkgconf<i class="dep-version-min"></i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
-                    <a href="vcpkg-cmake.html" class="dependency-card">
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -242,12 +250,17 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools - <i class="feature-description">Install graphviz executables</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">14.1.1#0</li>
                     <li class="badge badge-primary">10.0.1#3</li>
                     <li class="badge badge-primary">10.0.1#2</li>
                     <li class="badge badge-primary">10.0.1#1</li>
@@ -268,16 +281,16 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/disable-pragma-lib.patch" target="_blank">disable-pragma-lib.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/no-absolute-paths.patch" target="_blank">no-absolute-paths.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/select-plugins.patch" target="_blank">select-plugins.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/static-linkage.patch" target="_blank">static-linkage.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/vcpkg.json" target="_blank">vcpkg.json</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/webp-install.patch" target="_blank">webp-install.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9a718185e570b2366fda05eb65f1fc826fbf1cef/ports/graphviz/workaround-insufficiently-ugly-wchar-h.patch" target="_blank">workaround-insufficiently-ugly-wchar-h.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/build.diff" target="_blank">build.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/install.diff" target="_blank">install.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/no-absolute-paths.patch" target="_blank">no-absolute-paths.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/official-include-dir.diff" target="_blank">official-include-dir.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/skip-configure-plugins.diff" target="_blank">skip-configure-plugins.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e3db8f65d2414c301c29a8467c6aee94e3ba09fc/ports/graphviz/version.diff" target="_blank">version.diff</a></li>
                   </ul>
             </div>
         </div>
@@ -285,11 +298,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> EPL-1.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-02-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!staticcrt</pre></div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>

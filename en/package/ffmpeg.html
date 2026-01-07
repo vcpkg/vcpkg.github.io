@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     ffmpeg
-                    <span class="package-version">7.1.2#3</span>
+                    <span class="package-version">7.1.2#5</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -981,6 +981,30 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">rubberband - <i class="feature-description">Enable rubberband support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/ffmpeg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">ffmpeg</div>
+                                <div class="feature-dep-feature">features: [gpl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/rubberband.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">rubberband</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">sdl2 - <i class="feature-description">Sdl2 support</i></div>
                         </div>
                         <div class="section-two">
@@ -1322,11 +1346,29 @@
                             </a>
                         </div>
                     </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zmq - <i class="feature-description">Enable ZeroMQ support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/zeromq.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zeromq</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">7.1.2#5</li>
+                    <li class="badge badge-primary">7.1.2#4</li>
                     <li class="badge badge-primary">7.1.2#3</li>
                     <li class="badge badge-primary">7.1.2#2</li>
                     <li class="badge badge-primary">7.1.2#1</li>
@@ -1500,26 +1542,26 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0001-create-lib-libraries.patch" target="_blank">0001-create-lib-libraries.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0002-fix-msvc-link.patch" target="_blank">0002-fix-msvc-link.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0003-fix-windowsinclude.patch" target="_blank">0003-fix-windowsinclude.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0004-dependencies.patch" target="_blank">0004-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0005-fix-nasm.patch" target="_blank">0005-fix-nasm.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0007-fix-lib-naming.patch" target="_blank">0007-fix-lib-naming.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0013-define-WINVER.patch" target="_blank">0013-define-WINVER.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0020-fix-aarch64-libswscale.patch" target="_blank">0020-fix-aarch64-libswscale.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0024-fix-osx-host-c11.patch" target="_blank">0024-fix-osx-host-c11.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch" target="_blank">0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0041-add-const-for-opengl-definition.patch" target="_blank">0041-add-const-for-opengl-definition.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0042-fix-arm64-linux.patch" target="_blank">0042-fix-arm64-linux.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0043-fix-miss-head.patch" target="_blank">0043-fix-miss-head.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/0044-fix-vulkan-debug-callback-abi.patch" target="_blank">0044-fix-vulkan-debug-callback-abi.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/FindFFMPEG.cmake.in" target="_blank">FindFFMPEG.cmake.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/build.sh.in" target="_blank">build.sh.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/593fd5199fa33253a6cae907f3689e79100ac030/ports/ffmpeg/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0001-create-lib-libraries.patch" target="_blank">0001-create-lib-libraries.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0002-fix-msvc-link.patch" target="_blank">0002-fix-msvc-link.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0003-fix-windowsinclude.patch" target="_blank">0003-fix-windowsinclude.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0004-dependencies.patch" target="_blank">0004-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0005-fix-nasm.patch" target="_blank">0005-fix-nasm.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0007-fix-lib-naming.patch" target="_blank">0007-fix-lib-naming.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0013-define-WINVER.patch" target="_blank">0013-define-WINVER.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0020-fix-aarch64-libswscale.patch" target="_blank">0020-fix-aarch64-libswscale.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0024-fix-osx-host-c11.patch" target="_blank">0024-fix-osx-host-c11.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch" target="_blank">0040-ffmpeg-add-av_stream_get_first_dts-for-chromium.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0041-add-const-for-opengl-definition.patch" target="_blank">0041-add-const-for-opengl-definition.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0042-fix-arm64-linux.patch" target="_blank">0042-fix-arm64-linux.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0043-fix-miss-head.patch" target="_blank">0043-fix-miss-head.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/0044-fix-vulkan-debug-callback-abi.patch" target="_blank">0044-fix-vulkan-debug-callback-abi.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/FindFFMPEG.cmake.in" target="_blank">FindFFMPEG.cmake.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/build.sh.in" target="_blank">build.sh.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/5087d22fd76fe1844ca492866055dea3c34e7f52/ports/ffmpeg/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -1527,7 +1569,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-11-18</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

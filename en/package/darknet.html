@@ -107,11 +107,11 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     darknet
-                    <span class="package-version">2024-10-10#1</span>
+                    <span class="package-version">2025-10-24</span>
                 </h1>
             </div>
             <div class="package-description">
-                Darknet is an open source neural network framework written in C and CUDA. You only look once (YOLO) is a state-of-the-art, real-time object detection system, best example of darknet functionalities.
+                Darknet is an open source neural network framework written in C and CUDA for processing images or video frames in computer vision.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -133,28 +133,20 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="getopt.html" class="dependency-card">
+                    <a href="opencv.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">getopt<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: windows &amp; !mingw</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="pthreads.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">pthreads<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-name">opencv<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
-                    </a>
-                    <a href="stb.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">stb<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                highgui
+                                </div>
+                            </div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
@@ -192,6 +184,14 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/opencv.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opencv</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -200,14 +200,6 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/cuda.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">cuda</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
                             <a href="/en/package/cudnn.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">cudnn</div>
@@ -216,18 +208,10 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">full - <i class="feature-description">Build darknet fully featured</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
                             <a href="/en/package/darknet.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">darknet</div>
-                                <div class="feature-dep-feature">features: [cuda, cudnn, opencv-cuda]</div>
+                                <div class="feature-dep-feature">features: [cuda]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -236,42 +220,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">opencv-base - <i class="feature-description">Build darknet with support for latest version of OpenCV</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/opencv.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">opencv</div>
-                                <div class="feature-dep-feature">features: [ffmpeg]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">opencv-cuda - <i class="feature-description">Build darknet with support for latest version of CUDA-enabled OpenCV</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/darknet.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">darknet</div>
-                                <div class="feature-dep-feature">features: [cuda, opencv-base]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/opencv.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">opencv</div>
-                                <div class="feature-dep-feature">features: [contrib, cuda, dnn]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
+                            <div class="feature-name">openmp - <i class="feature-description">Build darknet with support for OpenMP</i></div>
                         </div>
                     </div>
                 </div>
@@ -279,6 +228,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2025-10-24#0</li>
                     <li class="badge badge-primary">2024-10-10#1</li>
                     <li class="badge badge-primary">2024-10-10#0</li>
                     <li class="badge badge-primary">2022-03-06#4</li>
@@ -310,22 +260,27 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/00061670e530aa56859da9e0e606e39258d3dac7/ports/darknet/android.diff" target="_blank">android.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/00061670e530aa56859da9e0e606e39258d3dac7/ports/darknet/msvc-names.diff" target="_blank">msvc-names.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/00061670e530aa56859da9e0e606e39258d3dac7/ports/darknet/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/00061670e530aa56859da9e0e606e39258d3dac7/ports/darknet/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/android.diff" target="_blank">android.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/installation.diff" target="_blank">installation.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/msvc-names.diff" target="_blank">msvc-names.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/purely-openmp_cxx-target.diff" target="_blank">purely-openmp_cxx-target.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/system-processor.diff" target="_blank">system-processor.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/version-info.diff" target="_blank">version-info.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/4f95fba7a7d1101bb8acdeb51e4609686449701e/ports/darknet/windows-getopt.diff" target="_blank">windows-getopt.diff</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-11-17</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0 AND BSD-2-Clause</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-12</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!android & !uwp & !(static & staticcrt)</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -337,7 +292,7 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/alexeyab/darknet">https://github.com/alexeyab/darknet</a>
+                    <a href="https://darknetcv.ai/">https://darknetcv.ai/</a>
                 </div>
             </div>
             <div class="sidebar-section">

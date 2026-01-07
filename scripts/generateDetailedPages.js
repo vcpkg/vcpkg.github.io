@@ -8,10 +8,8 @@ const execAsync = util.promisify(exec);
 const rootDir = path.dirname(__dirname);
 const pkgDir = rootDir + "/en/package"
 const templatesDir = rootDir + "/templates"
-const versionsDir = rootDir + "/vcpkg/versions"
 const destDir = path.dirname(__dirname);
 const commitFilePath = path.join(__dirname, 'commit.txt');
-const vcpkgDir = path.join(__dirname, '../vcpkg');
 
 async function readJsonFile(filePath) {
     const fileData = await fs.readFile(filePath, 'utf8');
@@ -35,7 +33,7 @@ async function getCommitHash(commitFilePath) {
 async function generateGithubFileUrls(packageInfo, commitHash, vcpkgDir) {
     const portDirPath = path.join(vcpkgDir, 'ports', packageInfo.Name);
     const fileNames = await fs.readdir(portDirPath);
-
+    fileNames.sort();
     const effectiveCommitHash = commitHash || 'master';
     const githubBaseUrl = `https://github.com/microsoft/vcpkg/blob/${effectiveCommitHash}/ports/${packageInfo.Name}/`;
 
@@ -48,10 +46,10 @@ async function generateGithubFileUrls(packageInfo, commitHash, vcpkgDir) {
 }
 
 
-async function getPackageVersions(pkgName) {
+async function getPackageVersions(pkgName, vcpkgDir) {
     const pkgFolder = pkgName.charAt(0) + '-';
     const pkgJsonFile = path.join('/', pkgName + '.json');
-    const versionFile = path.join(versionsDir, pkgFolder, pkgJsonFile);
+    const versionFile = path.join(vcpkgDir, 'versions', pkgFolder, pkgJsonFile);
 
     const rawData = await fs.readFile(versionFile);
     const versionsInfo = JSON.parse(rawData);
@@ -101,7 +99,7 @@ function transform_dep(dep) {
     }
 }
 
-async function renderAllTemplates() {
+async function renderAllTemplates(vcpkgDir) {
     const commitHash = await getCommitHash(commitFilePath);
 
     // Load all templates and data once at the beginning.
@@ -152,7 +150,7 @@ async function renderAllTemplates() {
         const renderData = {
             ...sharedData,
             package: packageInfo,
-            packageVersions: await getPackageVersions(packageInfo.Name),
+            packageVersions: await getPackageVersions(packageInfo.Name, vcpkgDir),
             dependencies: packageInfo.dependenciesList,
             features: packageInfo.FeaturesContent
         };
@@ -163,9 +161,15 @@ async function renderAllTemplates() {
     }
 }
 
-async function main() {
+async function main(vcpkgDir) {
     await fs.mkdir(pkgDir, { recursive: true });
-    await renderAllTemplates();
+    await renderAllTemplates(vcpkgDir);
 }
 
-main();
+if (process.argv.length < 3) {
+    console.log("Usage: node generateDetailedPages.js <vcpkg-root>");
+    process.exit(1);
+}
+
+const vcpkgDir = process.argv[2];
+main(vcpkgDir);

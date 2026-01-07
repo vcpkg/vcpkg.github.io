@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     faiss
-                    <span class="package-version">1.8.0</span>
+                    <span class="package-version">1.13.2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,17 +133,17 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="lapack.html" class="dependency-card">
+                    <a href="blas.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">lapack<i class="dep-version-min"></i></div>
+                            <div class="dep-name">blas<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="openblas.html" class="dependency-card">
+                    <a href="lapack.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">openblas<i class="dep-version-min"></i></div>
+                            <div class="dep-name">lapack<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -191,6 +191,8 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.13.2#0</li>
+                    <li class="badge badge-primary">1.13.1#0</li>
                     <li class="badge badge-primary">1.8.0#0</li>
                     <li class="badge badge-primary">1.7.4#1</li>
                     <li class="badge badge-primary">1.7.4#0</li>
@@ -205,9 +207,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f85492940229e050e510072f92250da12f940408/ports/faiss/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f85492940229e050e510072f92250da12f940408/ports/faiss/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f85492940229e050e510072f92250da12f940408/ports/faiss/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/de46587b4beaa638743916fe5674825cecfb48b3/ports/faiss/msvc-template.diff" target="_blank">msvc-template.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/de46587b4beaa638743916fe5674825cecfb48b3/ports/faiss/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/de46587b4beaa638743916fe5674825cecfb48b3/ports/faiss/undef-small.diff" target="_blank">undef-small.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/de46587b4beaa638743916fe5674825cecfb48b3/ports/faiss/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -215,11 +218,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-10-29</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-21</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!uwp & !osx & !x86 & !(arm64 & windows)</pre></div>
+            <div><pre class="support-arch">!x86 & !uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -231,7 +234,7 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/facebookresearch/faiss">https://github.com/facebookresearch/faiss</a>
+                    <a href="https://faiss.ai/">https://faiss.ai/</a>
                 </div>
             </div>
             <div class="sidebar-section">

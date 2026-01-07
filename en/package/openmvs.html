@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     openmvs
-                    <span class="package-version">2.1.0#6</span>
+                    <span class="package-version">2.3.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,6 +133,22 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="boost-assert.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">boost-assert<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="boost-graph.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">boost-graph<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="boost-iostreams.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-iostreams<i class="dep-version-min"></i></div>
@@ -141,9 +157,9 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-program-options.html" class="dependency-card">
+                    <a href="boost-pool.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-program-options<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-pool<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -189,17 +205,9 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="glew.html" class="dependency-card">
+                    <a href="libjpeg-turbo.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">glew<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="glfw3.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">glfw3<i class="dep-version-min"></i></div>
+                            <div class="dep-name">libjpeg-turbo<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -213,26 +221,26 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="opencv.html" class="dependency-card">
+                    <a href="nlohmann-json.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">opencv<i class="dep-version-min"></i></div>
+                            <div class="dep-name">nlohmann-json<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="openmvg.html" class="dependency-card">
+                    <a href="opencv.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">openmvg<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(windows &amp; static)</div>
+                            <div class="dep-name">opencv<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                software
+                                highgui
                                 </div>
                             </div>
                         </div>
@@ -241,6 +249,22 @@
                         <div class="section-one">
                             <div class="dep-name">tiff<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="tinygltf.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">tinygltf<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="tinyxml2.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">tinyxml2<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -316,7 +340,18 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">nonfree - <i class="feature-description">nonfree support for openmvs</i></div>
+                            <div class="feature-name">opengl - <i class="feature-description">OpenGL support for openmvs</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/opengl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">opengl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -324,11 +359,62 @@
                             <div class="feature-name">openmp - <i class="feature-description">OpenMP support for openmvs</i></div>
                         </div>
                     </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tools - <i class="feature-description">Install tools</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/boost-program-options.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">boost-program-options</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">viewer - <i class="feature-description">Install Viewer tool</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glew.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glew</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/glfw3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glfw3</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openmvs.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openmvs</div>
+                                <div class="feature-dep-feature">features: [opengl, tools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.3.0#0</li>
+                    <li class="badge badge-primary">2.1.0#8</li>
+                    <li class="badge badge-primary">2.1.0#7</li>
                     <li class="badge badge-primary">2.1.0#6</li>
                     <li class="badge badge-primary">2.1.0#5</li>
                     <li class="badge badge-primary">2.1.0#4</li>
@@ -359,13 +445,16 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/fix-build.patch" target="_blank">fix-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/fix-lib-name-conflict.patch" target="_blank">fix-lib-name-conflict.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/fix-static-build.patch" target="_blank">fix-static-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/fix_no_zstd.patch" target="_blank">fix_no_zstd.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/no-absolute-paths.patch" target="_blank">no-absolute-paths.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d6d2a2f2d77b150013395f9b446cf0566c13e81/ports/openmvs/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/ambiguous-uint_t.diff" target="_blank">ambiguous-uint_t.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/cmake.diff" target="_blank">cmake.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/common-log.diff" target="_blank">common-log.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/devendor.diff" target="_blank">devendor.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/interface-metashape.diff" target="_blank">interface-metashape.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/missing-include.diff" target="_blank">missing-include.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/no-absolute-paths.patch" target="_blank">no-absolute-paths.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/63e54877280d132fc939e9fca80b936b7852459c/ports/openmvs/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -373,7 +462,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> AGPL-3.0-only</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-09-08</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-31</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -389,7 +478,7 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://cdcseacave.github.io/openMVS">https://cdcseacave.github.io/openMVS</a>
+                    <a href="https://cdcseacave.github.io/">https://cdcseacave.github.io/</a>
                 </div>
             </div>
             <div class="sidebar-section">
