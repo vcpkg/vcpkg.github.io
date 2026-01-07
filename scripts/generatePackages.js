@@ -52,27 +52,41 @@ async function readManifest(manifestFile) {
     return out;
 }
 
-async function getFileCommitInfo(repoPath, filePath) {
+function toPosixPath(p) {
+    return p.split(path.sep).join('/');
+}
+
+async function getPortsCommitInfo(repoPath) {
     try {
-        // Ensure the file path is relative to the repository root
-        const relativeFilePath = path.relative(repoPath, filePath);
-        const { stdout } = await execAsync(`git -C ${repoPath} log -1 --format='%H %cd' --date=format:%Y-%m-%d -- ${relativeFilePath}`);
-
-        const [commitHash, ...dateParts] = stdout.trim().split(' ');
-        const lastModifiedDate = dateParts.join(' ');
-
-        return{
-            commitHash,
-            lastModifiedDate
-        };
+        const { stdout } = await execAsync(
+            `git -C ${repoPath} log --format=%H%x09%cd --date=format:%Y-%m-%d --name-only -- ports/*/vcpkg.json`,
+            { maxBuffer: 64 * 1024 * 1024 }
+        );
+        const commitInfoMap = new Map();
+        let currentCommit = null;
+        for (const line of stdout.split('\n')) {
+            if (!line.trim()) continue;
+            const commitMatch = line.match(/^([0-9a-f]{40})\t(.+)$/);
+            if (commitMatch) {
+                currentCommit = { commitHash: commitMatch[1], lastModifiedDate: commitMatch[2] };
+                continue;
+            }
+            if (currentCommit) {
+                const normalizedPath = toPosixPath(line.trim());
+                if (!commitInfoMap.has(normalizedPath)) {
+                    commitInfoMap.set(normalizedPath, currentCommit);
+                }
+            }
+        }
+        return commitInfoMap;
     } catch (error) {
-        console.error(`Error getting last modified date for ${repoPath}: ${error}`);
-        return null;
+        console.error(`Error getting commit info for ports: ${error}`);
+        return new Map();
     }
 }
 
 
-async function readPorts(vcpkgDir) {
+async function readPorts(vcpkgDir, commitInfoMap) {
     const portsDir = path.join(vcpkgDir, 'ports');
     let dirents = await fs.readdir(portsDir, { encoding: 'utf-8', withFileTypes: true });
 
@@ -84,7 +98,8 @@ async function readPorts(vcpkgDir) {
             console.log('Failed to read ' + manifestFile);
             continue;
         }
-        const commitInfo = await getFileCommitInfo(vcpkgDir, manifestFile);
+        const relativeManifestPath = toPosixPath(path.relative(vcpkgDir, manifestFile));
+        const commitInfo = commitInfoMap.get(relativeManifestPath);
 
         if (commitInfo){
             temp['LastModified'] = commitInfo.lastModifiedDate;
@@ -126,7 +141,8 @@ async function main(vcpkgDir, destDir) {
     const starsFile = path.join(destDir, 'stars.json');
     const outputFile = path.join(destDir, 'output.json');
 
-    let portsData = await readPorts(vcpkgDir);
+    const commitInfoMap = await getPortsCommitInfo(vcpkgDir);
+    let portsData = await readPorts(vcpkgDir, commitInfoMap);
     let githubData = await readStars(starsFile);
     mergeDataSources(portsData, githubData);
     let mergedData = Object.values(portsData);
