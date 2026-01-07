@@ -16,6 +16,5 @@ rm -rf ../en
 node generateDocs.js
 node generateGitHubStars.js ../vcpkg $1
 node generatePackages.js ../vcpkg
-node generateDetailedPages.js
+node generateDetailedPages.js ../vcpkg
 node validateLinks.js
-
