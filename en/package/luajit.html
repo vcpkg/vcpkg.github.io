@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     luajit
-                    <span class="package-version">2023-01-04#7</span>
+                    <span class="package-version">2026-01-09</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -137,14 +137,14 @@
                         <div class="section-one">
                             <div class="dep-name">luajit<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !native &amp; (arm64 | x64) &amp; (!windows | mingw)</div>
+                            <div class="dep-platform">platform: !native &amp; (arm32 | x86) &amp; (!windows | mingw)</div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                buildvm-64
+                                buildvm-32
                                 </div>
                             </div>
                         </div>
@@ -153,14 +153,14 @@
                         <div class="section-one">
                             <div class="dep-name">luajit<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !native &amp; ((arm &amp; !arm64) | x86) &amp; (!windows | mingw)</div>
+                            <div class="dep-platform">platform: !native &amp; (arm64 | x64) &amp; (!windows | mingw)</div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                         <div class="section-two">
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                buildvm-32
+                                buildvm-64
                                 </div>
                             </div>
                         </div>
@@ -209,6 +209,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2026-01-09#0</li>
                     <li class="badge badge-primary">2023-01-04#7</li>
                     <li class="badge badge-primary">2023-01-04#6</li>
                     <li class="badge badge-primary">2023-01-04#5</li>
@@ -235,14 +236,13 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/003-do-not-set-macosx-deployment-target.patch" target="_blank">003-do-not-set-macosx-deployment-target.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/005-do-not-pass-ld-e-macosx.patch" target="_blank">005-do-not-pass-ld-e-macosx.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/Makefile.nmake" target="_blank">Makefile.nmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/configure" target="_blank">configure</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/luajit.pc" target="_blank">luajit.pc</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/msvcbuild.patch" target="_blank">msvcbuild.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0068e81e443ea94e0b3cb3b64f928fdcd4ceb9ef/ports/luajit/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/003-do-not-set-macosx-deployment-target.patch" target="_blank">003-do-not-set-macosx-deployment-target.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/Makefile.nmake" target="_blank">Makefile.nmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/configure" target="_blank">configure</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/luajit.pc" target="_blank">luajit.pc</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/msvcbuild.patch" target="_blank">msvcbuild.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/884cae8dd33261d741bb88b009165a3c5bba5914/ports/luajit/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -250,11 +250,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-24</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-25</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!uwp & !(arm64 & windows)</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
