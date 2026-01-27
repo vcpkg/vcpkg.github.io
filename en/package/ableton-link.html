@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     ableton-link
-                    <span class="package-version">3.1.2</span>
+                    <span class="package-version">3.1.5</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -200,11 +200,27 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/alsa.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">alsa</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux | android | freebsd | openbsd</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                             <a href="/en/package/asiosdk.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">asiosdk</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform">platform: windows</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/portaudio.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">portaudio</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: linux | android | freebsd | openbsd</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -220,6 +236,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.1.5#0</li>
                     <li class="badge badge-primary">3.1.2#0</li>
                     <li class="badge badge-primary">3.1.1#1</li>
                     <li class="badge badge-primary">3.1.1#0</li>
@@ -232,13 +249,13 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/correct_cmake_include_directory.patch" target="_blank">correct_cmake_include_directory.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/no-werror.patch" target="_blank">no-werror.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/replace_asiosdk_download_by_vcpkg_asiosdk.patch" target="_blank">replace_asiosdk_download_by_vcpkg_asiosdk.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/replace_local_asiostandalone_by_vcpkg_asio.patch" target="_blank">replace_local_asiostandalone_by_vcpkg_asio.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/replace_local_catch_by_vcpkg_catch2.patch" target="_blank">replace_local_catch_by_vcpkg_catch2.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5ccf385657d9960c7212c7669027721ffddde0ef/ports/ableton-link/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/fix_android_build.patch" target="_blank">fix_android_build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/no-werror.patch" target="_blank">no-werror.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/replace_asiosdk_download_by_vcpkg_asiosdk.patch" target="_blank">replace_asiosdk_download_by_vcpkg_asiosdk.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/replace_local_asiostandalone_by_vcpkg_asio.patch" target="_blank">replace_local_asiostandalone_by_vcpkg_asio.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/replace_local_catch_by_vcpkg_catch2.patch" target="_blank">replace_local_catch_by_vcpkg_catch2.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/22c598b9bff9f297217e13e2c1e9d76674b79031/ports/ableton-link/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -246,7 +263,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> GPL-2.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-08-19</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-25</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

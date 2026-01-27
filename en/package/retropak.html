@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - sfl</title>
+  <title>vcpkg package - retropak</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    sfl
-                    <span class="package-version">2.1.2</span>
+                    retropak
+                    <span class="package-version">1.0.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                header-only C++11 library that offers several new or less-known containers
+                A modern container format for retro software preservation. Provides JSON schema and metadata specification for Retropak software containers.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -141,6 +141,14 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
@@ -152,33 +160,27 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">2.1.2#0</li>
-                    <li class="badge badge-primary">2.1.1#0</li>
-                    <li class="badge badge-primary">2.1.0#0</li>
-                    <li class="badge badge-primary">2.0.2#0</li>
-                    <li class="badge badge-primary">2.0.0#0</li>
-                    <li class="badge badge-primary">1.10.1#0</li>
-                    <li class="badge badge-primary">1.10.0#0</li>
-                    <li class="badge badge-primary">1.9.2#0</li>
+                    <li class="badge badge-primary">1.0.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa1480500e004a351d615b1d04eabb30fd752839/ports/sfl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa1480500e004a351d615b1d04eabb30fd752839/ports/sfl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b4dd6f84a7ab0636aa2fd3204e683edaa7d22f6c/ports/retropak/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b4dd6f84a7ab0636aa2fd3204e683edaa7d22f6c/ports/retropak/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/b4dd6f84a7ab0636aa2fd3204e683edaa7d22f6c/ports/retropak/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Zlib</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-26</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> CC0-1.0</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-25</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -190,15 +192,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/slavenf/sfl-library">https://github.com/slavenf/sfl-library</a>
+                    <a href="https://retropak.org">https://retropak.org</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install sfl</pre>
+                <pre> vcpkg install retropak</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port sfl</pre>
+                <pre> vcpkg add port retropak</pre>
             </div>
         </div>
     </div>
