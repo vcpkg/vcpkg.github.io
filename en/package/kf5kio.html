@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     kf5kio
-                    <span class="package-version">5.116.0</span>
+                    <span class="package-version">5.116.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -217,7 +217,7 @@
                         <div class="section-one">
                             <div class="dep-name">kf5crash<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: !android</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -289,7 +289,7 @@
                         <div class="section-one">
                             <div class="dep-name">kf5textwidgets<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
+                            <div class="dep-platform">platform: !android</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -313,15 +313,7 @@
                         <div class="section-one">
                             <div class="dep-name">kf5xmlgui<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="libiconv.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libiconv<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: windows &amp; static</div>
+                            <div class="dep-platform">platform: !android</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -336,7 +328,7 @@
                     <a href="qt5-base.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">qt5-base<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -353,7 +345,7 @@
                         <div class="section-one">
                             <div class="dep-name">qt5-x11extras<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-platform">platform: !(android | ios | osx | windows)</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -380,23 +372,28 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">kf5notifications - <i class="feature-description">Required to have error notification support in kpac</i></div>
+                            <div class="feature-name">designer-plugin - <i class="feature-description">Build plugin for Qt Designer</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">kf5notifications - <i class="feature-description">Error notification support in kpac</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/kf5kio.html">
+                            <a href="/en/package/kf5notifications.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">kf5kio</div>
-                                <div class="feature-dep-feature">features: [unixkf5notifications]</div>
-                                <div class="feature-dep-platform">platform: !(windows | android)</div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
+                                <div class="feature-dep-name">kf5notifications</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">kf5wallet - <i class="feature-description">Required to have permanent storage of passwords for kpasswdserver</i></div>
+                            <div class="feature-name">kf5wallet - <i class="feature-description">Safe desktop-wide storage for passwords</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -412,16 +409,16 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">unixkf5notifications - <i class="feature-description">Required to have error notification support in kpac (windows only)</i></div>
+                            <div class="feature-name">qml - <i class="feature-description">Enable QML support</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/kf5notifications.html">
+                            <a href="/en/package/qt5-declarative.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">kf5notifications</div>
+                                <div class="feature-dep-name">qt5-declarative</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -431,6 +428,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">5.116.0#1</li>
                     <li class="badge badge-primary">5.116.0#0</li>
                     <li class="badge badge-primary">5.98.0#1</li>
                     <li class="badge badge-primary">5.98.0#0</li>
@@ -446,8 +444,8 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/25b458671af03578e6a34edd8f0d1ac85e084df4/ports/kf5kio/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/25b458671af03578e6a34edd8f0d1ac85e084df4/ports/kf5kio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f14401ca0f2754347c3864da7488a9b955b4e47a/ports/kf5kio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f14401ca0f2754347c3864da7488a9b955b4e47a/ports/kf5kio/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -455,7 +453,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-25</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -464,14 +462,14 @@
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
-                    Unavailable
+                    <a href="https://api.kde.org/kio-index.html ">https://api.kde.org/kio-index.html </a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://api.kde.org/kio-index.html">https://api.kde.org/kio-index.html</a>
+                    <a href="https://invent.kde.org/frameworks/kio">https://invent.kde.org/frameworks/kio</a>
                 </div>
             </div>
             <div class="sidebar-section">

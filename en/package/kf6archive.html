@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     kf6archive
-                    <span class="package-version">6.7.0</span>
+                    <span class="package-version">6.7.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -133,14 +133,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="bzip2.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">bzip2<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="ecm.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">ecm<i class="dep-version-min"></i></div>
@@ -149,44 +141,12 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="liblzma.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">liblzma<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="openssl.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">openssl<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="qttools.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">qttools<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                linguist
-                                </div>
-                            </div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
@@ -208,14 +168,6 @@
                     <a href="zlib.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">zlib<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="zstd.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">zstd<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -260,14 +212,14 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">openssl - <i class="feature-description">Support for compressed encrypted files and data streams</i></div>
+                            <div class="feature-name">translations - <i class="feature-description">Install translations</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/openssl.html">
+                            <a href="/en/package/qttools.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">openssl</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-name">qttools</div>
+                                <div class="feature-dep-feature">features: [linguist]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -295,14 +247,16 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.7.0#1</li>
                     <li class="badge badge-primary">6.7.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e9bb3f9e7ae3bf82a861a818e8a0f1187db399c0/ports/kf6archive/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e9bb3f9e7ae3bf82a861a818e8a0f1187db399c0/ports/kf6archive/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f14401ca0f2754347c3864da7488a9b955b4e47a/ports/kf6archive/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f14401ca0f2754347c3864da7488a9b955b4e47a/ports/kf6archive/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/f14401ca0f2754347c3864da7488a9b955b4e47a/ports/kf6archive/zstd.diff" target="_blank">zstd.diff</a></li>
                   </ul>
             </div>
         </div>
@@ -310,7 +264,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.0-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-07-31</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-25</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -319,14 +273,14 @@
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
-                    Unavailable
+                    <a href="https://api.kde.org/karchive-index.html">https://api.kde.org/karchive-index.html</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://api.kde.org/frameworks/karchive/html/index.html">https://api.kde.org/frameworks/karchive/html/index.html</a>
+                    <a href="https://invent.kde.org/frameworks/karchive">https://invent.kde.org/frameworks/karchive</a>
                 </div>
             </div>
             <div class="sidebar-section">
