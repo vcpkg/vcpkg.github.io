@@ -113,38 +113,22 @@ async function readPorts(vcpkgDir, commitInfoMap) {
     return results;
 }
 
-async function readStars(starsFile) {
-    try {
-        let data = await fs.readFile(starsFile, { encoding: 'utf-8', flag: 'r' });
-        return JSON.parse(data);
-    }
-    catch
-    {
-        console.log(`Failed to parse GitHub data from ${starsFile}`);
-        return {};
-    }
-}
-
-function mergeDataSources(portsData, githubData) {
+function mergeDataSources(portsData) {
     // merge and normalize all data sources
     for (let port of Object.keys(portsData)) {
         // website expects an empty array if the package has no features
         if (!('Features' in portsData[port])) {
             portsData[port]['Features'] = [];
         }
-
-        portsData[port]['Stars'] = githubData[port] ?? 0;
     }
 }
 
 async function main(vcpkgDir, destDir) {
-    const starsFile = path.join(destDir, 'stars.json');
     const outputFile = path.join(destDir, 'output.json');
 
     const commitInfoMap = await getPortsCommitInfo(vcpkgDir);
     let portsData = await readPorts(vcpkgDir, commitInfoMap);
-    let githubData = await readStars(starsFile);
-    mergeDataSources(portsData, githubData);
+    mergeDataSources(portsData);
     let mergedData = Object.values(portsData);
 
     let outputJson = {};
