@@ -108,19 +108,14 @@ async function readPorts(vcpkgDir, commitInfoMap) {
             console.log('Failed to get commit info for ' + manifestFile);
         }
 
+        if (!('Features' in temp)) {
+            temp['Features'] = [];
+        }
+
         results[ent.name] = temp;
     }
-    return results;
-}
 
-function mergeDataSources(portsData) {
-    // merge and normalize all data sources
-    for (let port of Object.keys(portsData)) {
-        // website expects an empty array if the package has no features
-        if (!('Features' in portsData[port])) {
-            portsData[port]['Features'] = [];
-        }
-    }
+    return Object.values(results);
 }
 
 async function main(vcpkgDir, destDir) {
@@ -128,13 +123,11 @@ async function main(vcpkgDir, destDir) {
 
     const commitInfoMap = await getPortsCommitInfo(vcpkgDir);
     let portsData = await readPorts(vcpkgDir, commitInfoMap);
-    mergeDataSources(portsData);
-    let mergedData = Object.values(portsData);
 
     let outputJson = {};
     outputJson['Baseline'] = (await fs.readFile(vcpkgDir + "/.git/HEAD", 'utf-8')).trim();
-    outputJson['Size'] = mergedData.length;
-    outputJson['Source'] = mergedData;
+    outputJson['Size'] = portsData.length;
+    outputJson['Source'] = portsData;
     await fs.writeFile(outputFile, JSON.stringify(outputJson, null, 2), 'utf-8');
 }
 
