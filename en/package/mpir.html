@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     mpir
-                    <span class="package-version">2022-03-02#3</span>
+                    <span class="package-version">3.0.0#12</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,11 +136,19 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="vcpkg-make.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !windows | mingw</div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-msbuild.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-msbuild<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: windows</div>
+                            <div class="dep-platform">platform: windows &amp; !mingw</div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
@@ -165,6 +173,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.0.0#12</li>
                     <li class="badge badge-primary">2022-03-02#3</li>
                     <li class="badge badge-primary">2022-03-02#2</li>
                     <li class="badge badge-primary">2022-03-02#1</li>
@@ -187,10 +196,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/13da141b82c5fcdde34b28de535b2da0e51f1436/ports/mpir/enable-runtimelibrary-toggle.patch" target="_blank">enable-runtimelibrary-toggle.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/13da141b82c5fcdde34b28de535b2da0e51f1436/ports/mpir/fix-static-include-files.patch" target="_blank">fix-static-include-files.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/13da141b82c5fcdde34b28de535b2da0e51f1436/ports/mpir/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/13da141b82c5fcdde34b28de535b2da0e51f1436/ports/mpir/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e2860d8451402592a6458426023c5a28d2cc355a/ports/mpir/enable-runtimelibrary-toggle.patch" target="_blank">enable-runtimelibrary-toggle.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e2860d8451402592a6458426023c5a28d2cc355a/ports/mpir/fix-static-include-files.patch" target="_blank">fix-static-include-files.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e2860d8451402592a6458426023c5a28d2cc355a/ports/mpir/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e2860d8451402592a6458426023c5a28d2cc355a/ports/mpir/subdirs.diff" target="_blank">subdirs.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e2860d8451402592a6458426023c5a28d2cc355a/ports/mpir/vcpkg-cross-builds.diff" target="_blank">vcpkg-cross-builds.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e2860d8451402592a6458426023c5a28d2cc355a/ports/mpir/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -198,7 +209,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-09-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-02-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
