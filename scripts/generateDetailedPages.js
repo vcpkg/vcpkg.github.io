@@ -135,6 +135,42 @@ async function renderAllTemplates(vcpkgDir) {
         const renderedTemplate = renderTemplate(content, view);
         await fs.writeFile(path.join(rootDir, '/en', name), renderedTemplate, 'utf8');
     }
+
+    // Calculate reverse dependencies
+    const usedByMap = new Map();
+    for (const pkg of packageDataSource.Source) {
+        // 1. Core dependencies
+        const deps = pkg.Dependencies || [];
+        for (const dep of deps) {
+            const depName = typeof dep === 'string' ? dep : dep.name;
+            if (!usedByMap.has(depName)) {
+                usedByMap.set(depName, new Map());
+            }
+            const dependeeMap = usedByMap.get(depName);
+            if (!dependeeMap.has(pkg.Name)) {
+                dependeeMap.set(pkg.Name, { core: false, features: [] });
+            }
+            dependeeMap.get(pkg.Name).core = true;
+        }
+
+        // 2. Feature dependencies
+        if (pkg.Features) {
+            for (const [featureName, featureSpec] of Object.entries(pkg.Features)) {
+                const featureDeps = featureSpec.dependencies || [];
+                for (const dep of featureDeps) {
+                    const depName = typeof dep === 'string' ? dep : dep.name;
+                    if (!usedByMap.has(depName)) {
+                        usedByMap.set(depName, new Map());
+                    }
+                    const dependeeMap = usedByMap.get(depName);
+                    if (!dependeeMap.has(pkg.Name)) {
+                        dependeeMap.set(pkg.Name, { core: false, features: [] });
+                    }
+                    dependeeMap.get(pkg.Name).features.push(featureName);
+                }
+            }
+        }
+    }
     
     for (let packageInfo of packageDataSource.Source) {
         packageInfo.Documentation = packageInfo.Documentation || '';
@@ -146,13 +182,35 @@ async function renderAllTemplates(vcpkgDir) {
         packageInfo.githubFileUrls = await generateGithubFileUrls(packageInfo, packageInfo.LastCommit, vcpkgDir);
         packageInfo.Homepage = packageInfo["homepage"];
 
+        const usedByEntry = usedByMap.get(packageInfo.Name);
+        let usedByList = [];
+        if (usedByEntry) {
+            usedByList = Array.from(usedByEntry.entries()).map(([name, info]) => {
+                info.features.sort();
+                return {
+                    name: name,
+                    core: info.core,
+                    features: info.features,
+                    hasFeatures: info.features.length > 0,
+                    featuresList: info.features.map((f, i, arr) => ({
+                        name: f,
+                        first: i === 0,
+                        last: i === arr.length - 1
+                    }))
+                };
+            });
+            usedByList.sort((a, b) => a.name.localeCompare(b.name));
+        }
+        packageInfo.usedBy = usedByList;
+
         // Gather all data needed for rendering.
         const renderData = {
             ...sharedData,
             package: packageInfo,
             packageVersions: await getPackageVersions(packageInfo.Name, vcpkgDir),
             dependencies: packageInfo.dependenciesList,
-            features: packageInfo.FeaturesContent
+            features: packageInfo.FeaturesContent,
+            usedBy: packageInfo.usedBy
         };
 
         const renderedHtml = renderTemplate(packageTemplate, renderData);
