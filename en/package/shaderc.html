@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     shaderc
-                    <span class="package-version">2025.2#1</span>
+                    <span class="package-version">2026.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -119,6 +119,9 @@
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
                     <button>Dependencies</button>
+                </li>
+                <li class="tab" data-target="used-by-content">
+                    <button>Used By</button>
                 </li>
                 <li class="tab" data-target="features-content">
                     <button>Features</button>
@@ -167,6 +170,65 @@
                     </a>
                 </div>
             </div>
+            <div id="used-by-content" class="tab-content">
+                <h2 class="active-header">Used By</h2>
+                <div class="card-container">
+                    <a href="ggml.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">ggml</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                vulkan
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="gstreamer.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">gstreamer</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                vulkan
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="hikogui.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">hikogui</div>
+                        </div>
+                    </a>
+                    <a href="libtorch.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libtorch</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                vulkan
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="usd.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">usd</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                vulkan
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="vulkan-sdk-components.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vulkan-sdk-components</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
@@ -176,6 +238,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2026.1#0</li>
                     <li class="badge badge-primary">2025.2#1</li>
                     <li class="badge badge-primary">2025.2#0</li>
                     <li class="badge badge-primary">2023.8#0</li>
@@ -198,14 +261,14 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/build-version.inc" target="_blank">build-version.inc</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/cmake-config-export.patch" target="_blank">cmake-config-export.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/disable-update-version.patch" target="_blank">disable-update-version.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/fix-build-type.patch" target="_blank">fix-build-type.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/8f5fedd59dcacf3302ae6341a83b59fbd26274d1/ports/shaderc/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/build-version.inc" target="_blank">build-version.inc</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/cmake-config-export.patch" target="_blank">cmake-config-export.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/disable-update-version.patch" target="_blank">disable-update-version.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/fix-build-type.patch" target="_blank">fix-build-type.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/610f8a9b9f554730cf86d9b6324fff92a630548b/ports/shaderc/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -213,7 +276,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-07</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-02-03</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     yaml-cpp
-                    <span class="package-version">0.8.0#3</span>
+                    <span class="package-version">0.9.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -119,6 +119,9 @@
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
                     <button>Dependencies</button>
+                </li>
+                <li class="tab" data-target="used-by-content">
+                    <button>Used By</button>
                 </li>
                 <li class="tab" data-target="features-content">
                     <button>Features</button>
@@ -151,6 +154,85 @@
                     </a>
                 </div>
             </div>
+            <div id="used-by-content" class="tab-content">
+                <h2 class="active-header">Used By</h2>
+                <div class="card-container">
+                    <a href="drogon.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">drogon</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                yaml
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="future-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">future-config</div>
+                        </div>
+                    </a>
+                    <a href="irsdkcpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">irsdkcpp</div>
+                        </div>
+                    </a>
+                    <a href="jaeger-client-cpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">jaeger-client-cpp</div>
+                        </div>
+                    </a>
+                    <a href="luminoengine.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">luminoengine</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                engine
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="opencolorio.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">opencolorio</div>
+                        </div>
+                    </a>
+                    <a href="reflectcpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">reflectcpp</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                yaml
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="robotraconteur-companion.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">robotraconteur-companion</div>
+                        </div>
+                    </a>
+                    <a href="rtabmap.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">rtabmap</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                tools
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="velodyne-decoder.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">velodyne-decoder</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
@@ -160,6 +242,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.9.0#0</li>
                     <li class="badge badge-primary">0.8.0#3</li>
                     <li class="badge badge-primary">0.8.0#2</li>
                     <li class="badge badge-primary">0.8.0#1</li>
@@ -183,10 +266,8 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/38d9cf0bd45404cd25aeb03f79bcb0af256de343/ports/yaml-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/38d9cf0bd45404cd25aeb03f79bcb0af256de343/ports/yaml-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/38d9cf0bd45404cd25aeb03f79bcb0af256de343/ports/yaml-cpp/yaml-cpp-pr-1212.patch" target="_blank">yaml-cpp-pr-1212.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/38d9cf0bd45404cd25aeb03f79bcb0af256de343/ports/yaml-cpp/yaml-cpp-pr-1310.patch" target="_blank">yaml-cpp-pr-1310.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa9126f7d22dabf6e43c63ae740398082a39e416/ports/yaml-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/aa9126f7d22dabf6e43c63ae740398082a39e416/ports/yaml-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -194,7 +275,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-05-07</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-02-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

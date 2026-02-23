@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libxxf86vm
-                    <span class="package-version">1.1.6</span>
+                    <span class="package-version">1.1.7</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -119,6 +119,9 @@
             <ul class="tab-container">
                 <li class="tab active-tab" data-target="dependencies-content">
                     <button>Dependencies</button>
+                </li>
+                <li class="tab" data-target="used-by-content">
+                    <button>Used By</button>
                 </li>
                 <li class="tab" data-target="features-content">
                     <button>Features</button>
@@ -133,14 +136,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="bzip2.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">bzip2<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="libxext.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">libxext<i class="dep-version-min"></i></div>
@@ -167,6 +162,12 @@
                     </a>
                 </div>
             </div>
+            <div id="used-by-content" class="tab-content">
+                <h2 class="active-header">Used By</h2>
+                <div class="card-container">
+                    <div class="dependency-card">Not used by any other package</div>
+                </div>
+            </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
@@ -176,6 +177,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.1.7#0</li>
                     <li class="badge badge-primary">1.1.6#0</li>
                     <li class="badge badge-primary">1.1.5#0</li>
                 </ul>
@@ -183,8 +185,8 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9c832cddf00441f0b2e44fa79868dbd7cf24b711/ports/libxxf86vm/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/9c832cddf00441f0b2e44fa79868dbd7cf24b711/ports/libxxf86vm/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fde2ad66e405ede7524d3dea02416c47ecdc8bb4/ports/libxxf86vm/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/fde2ad66e405ede7524d3dea02416c47ecdc8bb4/ports/libxxf86vm/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -192,7 +194,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-01-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-02-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
