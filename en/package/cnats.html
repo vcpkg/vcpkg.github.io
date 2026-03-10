@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     cnats
-                    <span class="package-version">3.12.0</span>
+                    <span class="package-version">3.12.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,25 +136,9 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="libsodium.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libsodium<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="openssl.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">openssl<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="protobuf-c.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">protobuf-c<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -189,7 +173,34 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">streaming - <i class="feature-description">Include NATS Streaming APIs in the NATS library</i></div>
+                            <div class="feature-name">sodium - <i class="feature-description">Use libsodium for improved NKey signing performance</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libsodium.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libsodium</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">streaming - <i class="feature-description">Include deprecated NATS Streaming (STAN) APIs in the NATS library</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/protobuf-c.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">protobuf-c</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -197,6 +208,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.12.0#1</li>
                     <li class="badge badge-primary">3.12.0#0</li>
                     <li class="badge badge-primary">3.10.1#0</li>
                     <li class="badge badge-primary">3.10.0#0</li>
@@ -216,10 +228,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/386ed10aee045c7475d6eb6072169eb3a93fc861/ports/cnats/fix-sodium-dep.patch" target="_blank">fix-sodium-dep.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/386ed10aee045c7475d6eb6072169eb3a93fc861/ports/cnats/fix_install_path.patch" target="_blank">fix_install_path.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/386ed10aee045c7475d6eb6072169eb3a93fc861/ports/cnats/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/386ed10aee045c7475d6eb6072169eb3a93fc861/ports/cnats/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/df94362fa3af6f42985d9dab4c4de0d9e1928908/ports/cnats/fix-sodium-dep.patch" target="_blank">fix-sodium-dep.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/df94362fa3af6f42985d9dab4c4de0d9e1928908/ports/cnats/fix_install_path.patch" target="_blank">fix_install_path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/df94362fa3af6f42985d9dab4c4de0d9e1928908/ports/cnats/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/df94362fa3af6f42985d9dab4c4de0d9e1928908/ports/cnats/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -227,7 +239,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-01</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

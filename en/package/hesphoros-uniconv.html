@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - protobuf-c</title>
+  <title>vcpkg package - hesphoros-uniconv</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    protobuf-c
-                    <span class="package-version">1.5.2</span>
+                    hesphoros-uniconv
+                    <span class="package-version">3.3.2</span>
                 </h1>
             </div>
             <div class="package-description">
-                This is protobuf-c, a C implementation of the Google Protocol Buffers data serialization format.
+                A high-performance C++ character encoding conversion library with modern C++17 interface
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,9 +136,17 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="protobuf.html" class="dependency-card">
+                    <a href="libiconv.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">protobuf<i class="dep-version-min"></i></div>
+                            <div class="dep-name">libiconv<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="parallel-hashmap.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">parallel-hashmap<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -165,117 +173,58 @@
             <div id="used-by-content" class="tab-content">
                 <h2 class="active-header">Used By</h2>
                 <div class="card-container">
-                    <a href="cnats.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">cnats</div>
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                streaming
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="libpg-query.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libpg-query</div>
-                        </div>
-                    </a>
-                    <a href="protobuf-c.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">protobuf-c</div>
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                test
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="dependency-card">Not used by any other package</div>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">test - <i class="feature-description">Build test project.</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/protobuf-c.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">protobuf-c</div>
-                                <div class="feature-dep-feature">features: [tools]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">tools - <i class="feature-description">Build tools (protoc-gen-c).</i></div>
-                        </div>
-                    </div>
+                    <div class="no-features">No Features</div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">1.5.2#0</li>
-                    <li class="badge badge-primary">1.5.1#0</li>
-                    <li class="badge badge-primary">1.5.0#0</li>
-                    <li class="badge badge-primary">1.4.1#1</li>
-                    <li class="badge badge-primary">1.4.1#0</li>
-                    <li class="badge badge-primary">1.4.0#2</li>
-                    <li class="badge badge-primary">1.4.0#1</li>
-                    <li class="badge badge-primary">1.4.0#0</li>
-                    <li class="badge badge-primary">1.3.2#3</li>
-                    <li class="badge badge-primary">1.3.2-2#0</li>
-                    <li class="badge badge-primary">1.3.2-1#0</li>
-                    <li class="badge badge-primary">1.3.2#0</li>
+                    <li class="badge badge-primary">3.3.2#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2a80e7357441c65675c3951c43a3e6e91f836410/ports/protobuf-c/fix-crt-linkage.patch" target="_blank">fix-crt-linkage.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2a80e7357441c65675c3951c43a3e6e91f836410/ports/protobuf-c/fix-dependency-protobuf.patch" target="_blank">fix-dependency-protobuf.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2a80e7357441c65675c3951c43a3e6e91f836410/ports/protobuf-c/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2a80e7357441c65675c3951c43a3e6e91f836410/ports/protobuf-c/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/443d40ce0b277ad9a095bd5e338eecd1b45fa0d6/ports/hesphoros-uniconv/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/443d40ce0b277ad9a095bd5e338eecd1b45fa0d6/ports/hesphoros-uniconv/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-04-08</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-05</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!(arm & windows)</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
-                    Unavailable
+                    <a href="https://github.com/hesphoros/UniConv/blob/main/README.MD">https://github.com/hesphoros/UniConv/blob/main/README.MD</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/protobuf-c/protobuf-c">https://github.com/protobuf-c/protobuf-c</a>
+                    <a href="https://github.com/hesphoros/UniConv">https://github.com/hesphoros/UniConv</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install protobuf-c</pre>
+                <pre> vcpkg install hesphoros-uniconv</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port protobuf-c</pre>
+                <pre> vcpkg add port hesphoros-uniconv</pre>
             </div>
         </div>
     </div>
