@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     mdl-sdk
-                    <span class="package-version">2025.0.5</span>
+                    <span class="package-version">2025.0.5#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -266,6 +266,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">materialx - <i class="feature-description">Enables MaterialX support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/materialx.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">materialx</div>
+                                <div class="feature-dep-feature">features: [mdl-generator]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">openimageio - <i class="feature-description">Build image plugin for various image formats using OpenImageIO</i></div>
                         </div>
                         <div class="section-two">
@@ -285,6 +301,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2025.0.5#1</li>
                     <li class="badge badge-primary">2025.0.5#0</li>
                     <li class="badge badge-primary">2025.0.3#1</li>
                     <li class="badge badge-primary">2025.0.3#0</li>
@@ -306,9 +323,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76b3df93652dda5119346877490673691c28a397/ports/mdl-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76b3df93652dda5119346877490673691c28a397/ports/mdl-sdk/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/76b3df93652dda5119346877490673691c28a397/ports/mdl-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dfefa2e7adba66f69b909e4bbdda23c7d1d1fda3/ports/mdl-sdk/fix_find_materialx.diff" target="_blank">fix_find_materialx.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dfefa2e7adba66f69b909e4bbdda23c7d1d1fda3/ports/mdl-sdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dfefa2e7adba66f69b909e4bbdda23c7d1d1fda3/ports/mdl-sdk/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/dfefa2e7adba66f69b909e4bbdda23c7d1d1fda3/ports/mdl-sdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -316,7 +334,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-02</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-03</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
