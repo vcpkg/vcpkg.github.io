@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     qtmultimedia
-                    <span class="package-version">6.10.1</span>
+                    <span class="package-version">6.10.2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,22 +136,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="pipewire.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">pipewire<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="pulseaudio.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">pulseaudio<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: linux</div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
@@ -163,7 +147,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                concurrent, gui, network, thread
+                                concurrent, gui, network
                                 </div>
                             </div>
                         </div>
@@ -226,6 +210,14 @@
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [thread]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                             <a href="/en/package/qtdeclarative.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">qtdeclarative</div>
@@ -237,7 +229,7 @@
                             <a href="/en/package/qtmultimedia.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">qtmultimedia</div>
-                                <div class="feature-dep-feature">features: [qml]</div>
+                                <div class="feature-dep-feature">features: [pulseaudio, qml]</div>
                                 <div class="feature-dep-platform">platform: linux</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -272,6 +264,54 @@
                                 <div class="feature-dep-feature">features: [plugins-bad, plugins-base]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [thread]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pipewire - <i class="feature-description">Build with pipewire</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/pipewire.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">pipewire</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature">features: [thread]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">pulseaudio - <i class="feature-description">Build with pulseaudio</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/pulseaudio.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">pulseaudio</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
                         </div>
@@ -313,6 +353,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.10.2#0</li>
                     <li class="badge badge-primary">6.10.1#0</li>
                     <li class="badge badge-primary">6.10.0#3</li>
                     <li class="badge badge-primary">6.10.0#2</li>
@@ -363,14 +404,14 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/ae41d3e-ffmpeg8.diff" target="_blank">ae41d3e-ffmpeg8.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/ffmpeg-compile-def-and-devendor-signalsmith-stretch.patch" target="_blank">ffmpeg-compile-def-and-devendor-signalsmith-stretch.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/ffmpeg.patch" target="_blank">ffmpeg.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/port.data.cmake" target="_blank">port.data.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/remove-static-ssl-stub.patch" target="_blank">remove-static-ssl-stub.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/static_find_modules.patch" target="_blank">static_find_modules.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/57987637aac17d62bac535bc839baca3754490e6/ports/qtmultimedia/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/ae41d3e-ffmpeg8.diff" target="_blank">ae41d3e-ffmpeg8.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/ffmpeg-compile-def-and-devendor-signalsmith-stretch.patch" target="_blank">ffmpeg-compile-def-and-devendor-signalsmith-stretch.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/ffmpeg.patch" target="_blank">ffmpeg.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/port.data.cmake" target="_blank">port.data.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/remove-static-ssl-stub.patch" target="_blank">remove-static-ssl-stub.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/static_find_modules.patch" target="_blank">static_find_modules.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13bf92b7216b42ffc7d8cf55b6181e486039accd/ports/qtmultimedia/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -378,7 +419,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-04</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-18</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
