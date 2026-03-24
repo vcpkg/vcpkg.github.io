@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - onnx-optimizer</title>
+  <title>vcpkg package - kdgpu</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    onnx-optimizer
-                    <span class="package-version">0.4.2</span>
+                    kdgpu
+                    <span class="package-version">0.10.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
-                Actively maintained ONNX Optimizer
+                KDGPU Library - C++ Vulkan wrapper for GPU programming
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,9 +136,33 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="onnx.html" class="dependency-card">
+                    <a href="glslang.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">onnx<i class="dep-version-min"></i></div>
+                            <div class="dep-name">glslang<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                tools
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="kdutils.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">kdutils<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="spdlog.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">spdlog<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -160,54 +184,142 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
+                    <a href="vulkan-sdk-components.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vulkan-sdk-components<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="used-by-content" class="tab-content">
                 <h2 class="active-header">Used By</h2>
                 <div class="card-container">
-                    <a href="libtorch.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libtorch</div>
-                        </div>
-                    </a>
+                    <div class="dependency-card">Not used by any other package</div>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">hlsl - <i class="feature-description">Enable HLSL shader support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/directx-dxc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">directx-dxc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">kdgpuexample - <i class="feature-description">Enable KDGpuExample</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glm.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glm</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/imgui.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">imgui</div>
+                                <div class="feature-dep-feature">features: [vulkan-binding]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">kdgpukdgui - <i class="feature-description">Enable KDGui integration</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">kdgpuutils - <i class="feature-description">Enable KDGpuUtils</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">openxr - <i class="feature-description">Enable OpenXR support for VR&#x2F;AR</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/kdbindings.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">kdbindings</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openxr-loader.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openxr-loader</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">slang - <i class="feature-description">Enable Slang shader support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/shader-slang.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">shader-slang</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">0.4.2#0</li>
-                    <li class="badge badge-primary">0.3.19#2</li>
-                    <li class="badge badge-primary">0.3.19#1</li>
-                    <li class="badge badge-primary">0.3.19#0</li>
-                    <li class="badge badge-primary">0.3.18#0</li>
-                    <li class="badge badge-primary">0.3.17#0</li>
-                    <li class="badge badge-primary">0.2.6#0</li>
+                    <li class="badge badge-primary">0.10.0#1</li>
+                    <li class="badge badge-primary">0.10.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e35b275106c2973203b8beea13ac45e79df462b2/ports/onnx-optimizer/fix-cmake.patch" target="_blank">fix-cmake.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e35b275106c2973203b8beea13ac45e79df462b2/ports/onnx-optimizer/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e35b275106c2973203b8beea13ac45e79df462b2/ports/onnx-optimizer/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/52cb4557736c2a85844e335346219e128e4411ac/ports/kdgpu/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/52cb4557736c2a85844e335346219e128e4411ac/ports/kdgpu/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/52cb4557736c2a85844e335346219e128e4411ac/ports/kdgpu/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
                 <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-23</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -219,15 +331,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/onnx/optimizer">https://github.com/onnx/optimizer</a>
+                    <a href="https://github.com/KDAB/kdgpu">https://github.com/KDAB/kdgpu</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install onnx-optimizer</pre>
+                <pre> vcpkg install kdgpu</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port onnx-optimizer</pre>
+                <pre> vcpkg add port kdgpu</pre>
             </div>
         </div>
     </div>
