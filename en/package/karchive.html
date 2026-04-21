@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - kf6breezeicons</title>
+  <title>vcpkg package - karchive</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    kf6breezeicons
-                    <span class="package-version">6.23.0</span>
+                    karchive
+                    <span class="package-version">6.25.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                Breeze icon theme for KDE Frameworks 6
+                File compression
             </div>
         </div>
     <div class="flex-wrapper">
@@ -151,14 +151,6 @@
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                gui
-                                </div>
-                            </div>
-                        </div>
                     </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
@@ -176,6 +168,14 @@
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
+                    <a href="zlib.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">zlib<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="used-by-content" class="tab-content">
@@ -187,52 +187,117 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">bzip2 - <i class="feature-description">Support for bzip2 compressed files and data streams</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/bzip2.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">bzip2</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lzma - <i class="feature-description">Support for xz compressed files and data streams</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/liblzma.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">liblzma</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">translations - <i class="feature-description">Install translations</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qttools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qttools</div>
+                                <div class="feature-dep-feature">features: [linguist]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">zstd - <i class="feature-description">Support for zstd compressed files and data streams</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/zstd.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">zstd</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.25.0#0</li>
                     <li class="badge badge-primary">6.23.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b5d1a94fb7f88fd835e360fd23a45a09ceedbf48/ports/kf6breezeicons/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b5d1a94fb7f88fd835e360fd23a45a09ceedbf48/ports/kf6breezeicons/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a39810a0ed90835bdeed5e281940c0af67d14f6f/ports/karchive/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a39810a0ed90835bdeed5e281940c0af67d14f6f/ports/karchive/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a39810a0ed90835bdeed5e281940c0af67d14f6f/ports/karchive/zstd.diff" target="_blank">zstd.diff</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-27</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.0-or-later</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-04-20</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!windows & !android</pre></div>
+            <div><pre class="support-arch">!xbox</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
-                    <a href="https://api.kde.org/breeze-icons-index.html">https://api.kde.org/breeze-icons-index.html</a>
+                    <a href="https://api.kde.org/karchive-index.html">https://api.kde.org/karchive-index.html</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://invent.kde.org/frameworks/breeze-icons">https://invent.kde.org/frameworks/breeze-icons</a>
+                    <a href="https://invent.kde.org/frameworks/karchive">https://invent.kde.org/frameworks/karchive</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install kf6breezeicons</pre>
+                <pre> vcpkg install karchive</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port kf6breezeicons</pre>
+                <pre> vcpkg add port karchive</pre>
             </div>
         </div>
     </div>

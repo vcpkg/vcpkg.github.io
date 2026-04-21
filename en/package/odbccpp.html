@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - atomic-queue</title>
+  <title>vcpkg package - odbccpp</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    atomic-queue
-                    <span class="package-version">1.8.1</span>
+                    odbccpp
+                    <span class="package-version">1.6#1</span>
                 </h1>
             </div>
             <div class="package-description">
-                Minimalistic header-only thread-safe ultra-low-latency multiple-producer-multiple-consumer lockless queues based on circular buffer with std::atomic.
+                An object-oriented C++ wrapper of the ODBC API from SAP
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,6 +136,14 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="unixodbc.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">unixodbc<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: linux | osx</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -169,37 +177,28 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">1.8.1#0</li>
-                    <li class="badge badge-primary">1.8.0#0</li>
-                    <li class="badge badge-primary">1.7.3#0</li>
-                    <li class="badge badge-primary">1.7.2#0</li>
-                    <li class="badge badge-primary">1.7.1#0</li>
-                    <li class="badge badge-primary">1.6.9#0</li>
-                    <li class="badge badge-primary">1.6.6#0</li>
-                    <li class="badge badge-primary">1.6.5#0</li>
-                    <li class="badge badge-primary">1.6.4#0</li>
-                    <li class="badge badge-primary">1.6.3#0</li>
-                    <li class="badge badge-primary">1.5#0</li>
-                    <li class="badge badge-primary">2021-05-03#0</li>
+                    <li class="badge badge-primary">1.6#1</li>
+                    <li class="badge badge-primary">1.6#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/02d10bb57f94e3f03e46caa00ff59c220f74bb99/ports/atomic-queue/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/02d10bb57f94e3f03e46caa00ff59c220f74bb99/ports/atomic-queue/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/160e2eb53f1308cad89ef9001922637f44e6e1e6/ports/odbccpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/160e2eb53f1308cad89ef9001922637f44e6e1e6/ports/odbccpp/use-vcpkg-unixodbc.patch" target="_blank">use-vcpkg-unixodbc.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/160e2eb53f1308cad89ef9001922637f44e6e1e6/ports/odbccpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-04-17</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-04-20</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!uwp & !android</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -211,15 +210,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/max0x7ba/atomic_queue">https://github.com/max0x7ba/atomic_queue</a>
+                    <a href="https://github.com/SAP/odbc-cpp-wrapper">https://github.com/SAP/odbc-cpp-wrapper</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install atomic-queue</pre>
+                <pre> vcpkg install odbccpp</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port atomic-queue</pre>
+                <pre> vcpkg add port odbccpp</pre>
             </div>
         </div>
     </div>
