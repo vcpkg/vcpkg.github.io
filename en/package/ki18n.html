@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - kf6dbusaddons</title>
+  <title>vcpkg package - ki18n</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    kf6dbusaddons
-                    <span class="package-version">6.23.0</span>
+                    ki18n
+                    <span class="package-version">6.25.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                Convenience classes for D-Bus
+                Advanced internationalization framework
             </div>
         </div>
     <div class="flex-wrapper">
@@ -144,20 +144,36 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="gettext.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">gettext<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="gettext.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">gettext<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                tools
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                     <a href="qtbase.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                dbus
-                                </div>
-                            </div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
@@ -189,16 +205,16 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">translations - <i class="feature-description">Install translations</i></div>
+                            <div class="feature-name">qml - <i class="feature-description">Build with support for scripted translations</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/qttools.html">
+                            <a href="/en/package/qtdeclarative.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">qttools</div>
-                                <div class="feature-dep-feature">features: [linguist]</div>
+                                <div class="feature-dep-name">qtdeclarative</div>
+                                <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                         </div>
@@ -208,14 +224,15 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.25.0#0</li>
                     <li class="badge badge-primary">6.23.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5478b06a12607ee6bd9d003d64434a84de54b408/ports/kf6dbusaddons/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5478b06a12607ee6bd9d003d64434a84de54b408/ports/kf6dbusaddons/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a39810a0ed90835bdeed5e281940c0af67d14f6f/ports/ki18n/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a39810a0ed90835bdeed5e281940c0af67d14f6f/ports/ki18n/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -223,7 +240,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-27</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-04-20</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
@@ -232,22 +249,22 @@
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
-                    <a href="https://api.kde.org/kdbusaddons-index.html">https://api.kde.org/kdbusaddons-index.html</a>
+                    <a href="https://api.kde.org/ki18n-index.html">https://api.kde.org/ki18n-index.html</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://invent.kde.org/frameworks/kdbusaddons">https://invent.kde.org/frameworks/kdbusaddons</a>
+                    <a href="https://invent.kde.org/frameworks/ki18n">https://invent.kde.org/frameworks/ki18n</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install kf6dbusaddons</pre>
+                <pre> vcpkg install ki18n</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port kf6dbusaddons</pre>
+                <pre> vcpkg add port ki18n</pre>
             </div>
         </div>
     </div>
