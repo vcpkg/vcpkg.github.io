@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>vcpkg - Open source C/C++ dependency manager from Microsoft</title>
-    <meta name="description" content="vcpkg product homepage for C and C++ developers. Download, build, and manage C and C++ libraries for all platforms, buildsystems, and workflows.">
-    <meta name="keywords" content="vcpkg, C, C++, cpp, Microsoft, library, libraries, package manager, library manager">
-    <!-- Bing Webmaster Tools integration -->
-    <meta name="viewport" content="width=device-width">
-    <meta name="msvalidate.01" content="5704D9CB14CCA7C4612DC0FE14669DD1" />
+<html lang="en" class="js">
+<head>
+  <title>vcpkg package - curve-rebind</title>
+  <meta name="description" content="Explore vcpkg libraries to install">
+  <meta name="keywords"
+    content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- our style sheet and fonts -->
-    <link href="/css/index.css" rel="stylesheet" />
+  <!-- additional stylesheets and fonts -->
+  <link href="/css/package.css" rel="stylesheet" />
+  <link href="/css/githubBtn.css" rel="stylesheet" />
 
-    <!-- favicons -->
+  <!-- favicons -->
 <link rel="icon" href="/assets/mark/mark.svg" />
 <link rel="icon" href="/assets/mark/favicon.png" />
 <link rel="mask-icon" href="/assets/mark/favicon-mask-icon.svg" />
@@ -42,13 +42,8 @@
 <script src="/scripts/cookieOptOut.js" defer></script>
 <script src="/scripts/consentAndAnalytics.js" defer></script>
 
-
-    <!-- our scripts -->
-    <script src="/dist/index.js"></script>
-  </head>
-  <body>
-    <div id="cookie-banner"></div>
-    <div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
+</head>
+<div id="loadNavBar"><nav class="navbar-background navbar navbar-expand-lg navbar-light fixed-top">
   <a href="#main" class="main-link" tabindex="10000">Skip to Main Content</a>
   <a class="navbar-brand align-baseline" href="/en/index.html">
     <span id="vcpkg-nav-logo" class=""
@@ -104,100 +99,127 @@
   </div>
 </nav>
 </div>
-    <div class="margin-box">
-    <div tabindex="-1" role="main" id="main">
-    <div class="header-block">
-      <img
-        class="logo-design-first-upper"
-        src="/assets/mark/mark-left.svg"
-        alt="vcpkg logo"
-        title="vcpkg logo"
-      />
-      <div class="header-text-block">
-        <div class="vcpkg-name"><h1>vcpkg</h1></div>
-        <div class="vcpkg-description">
-          C/C++ dependency manager from Microsoft
-          <p><span>For all platforms, buildsystems, and workflows</span></p>
+<div id="cookie-banner"></div>
+<body>
+  <main class="package-body" id="main">
+    <div class="package-page-wrapper">
+        <div class="package-name-header">
+            <div class="name-version-container">
+                <h1 class="package-name">
+                    curve-rebind
+                    <span class="package-version">5.3.1</span>
+                </h1>
+            </div>
+            <div class="package-description">
+                A C++23 reflection library for aggregates and enums
+            </div>
         </div>
-
-        <a role="button" class="btn-lg vcpkg-btn-left text-nowrap" href="getting-started"
-          >Get started</a
-        >
-
-        <a role="button" class="btn-lg vcpkg-btn-right text-nowrap" href="packages"
-          >Browse Packages</a
-        >
-      </div>
-      <div style="position: relative">
-        <div class="vcpkg-center-block">
-          <div class="vcpkg-center-heading"><h2>About vcpkg</h2></div>
-          <div class="vcpkg-center-description">
-            vcpkg is a free C/C++ package manager for acquiring and managing libraries. 
-            Choose from 2810 open source libraries to download and build in a single step or add
-            your own private libraries to simplify your build process. Maintained by the Microsoft 
-            C++ team and open source contributors.
-          </div>
+    <div class="flex-wrapper">
+        <div class="active-container">
+            <ul class="tab-container">
+                <li class="tab active-tab" data-target="dependencies-content">
+                    <button>Dependencies</button>
+                </li>
+                <li class="tab" data-target="used-by-content">
+                    <button>Used By</button>
+                </li>
+                <li class="tab" data-target="features-content">
+                    <button>Features</button>
+                </li>
+                <li class="tab" data-target="versions-content">
+                    <button>Versions</button>
+                </li>
+                <li class="tab" data-target="port-content">
+                    <button>Port Content</button>
+                </li>
+            </ul>
+            <div id="dependencies-content" class="tab-content active">
+                <h2 class="active-header">Dependencies</h2>
+                <div class="card-container">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="used-by-content" class="tab-content">
+                <h2 class="active-header">Used By</h2>
+                <div class="card-container">
+                    <a href="saucer.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">saucer</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="features-content" class="tab-content">
+                <h2 class="active-header">Features</h2>
+                <div class="card-container">
+                    <div class="no-features">No Features</div>
+                </div>
+            </div>
+            <div id="versions-content" class="tab-content">
+                <h2 class="active-header">Available Versions</h2>
+                <ul class="version-badges">
+                    <li class="badge badge-primary">5.3.1#0</li>
+                </ul>
+            </div>
+            <div id="port-content" class="tab-content">
+                <h2 class="active-header">Port Content</h2>
+                <ul>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9e9d930570981dc92ce7bbb1913628017be0b0c7/ports/curve-rebind/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9e9d930570981dc92ce7bbb1913628017be0b0c7/ports/curve-rebind/remove-cpm.patch" target="_blank">remove-cpm.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/9e9d930570981dc92ce7bbb1913628017be0b0c7/ports/curve-rebind/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                  </ul>
+            </div>
         </div>
-      </div>
-
-      <div style="position: relative">
-        <img
-        class="logo-design-second-upper"
-        src="/assets/mark/logo-right.svg"
-        alt="vcpkg logo"
-        title="vcpkg logo"
-        />
-      </div>
+        <div class="sidebar-container">
+            <h2 class="sidebar-header">Metadata</h2>
+            <div class="sidebar-section">
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-04-29</div>
+            </div>
+            <h2 class="sidebar-header">Supports</h2>
+            <div class="sidebar-description">This package supports the following triplets:</div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-header">Documentation</h2>
+                <div>
+                    <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
+                    Unavailable
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-header">Homepage</h2>
+                <div>
+                    <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
+                    <a href="https://github.com/Curve/rebind">https://github.com/Curve/rebind</a>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h2 class="sidebar-header">Install</h2>
+                <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
+                <pre> vcpkg install curve-rebind</pre>
+                <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
+                <pre> vcpkg add port curve-rebind</pre>
+            </div>
+        </div>
     </div>
-    <div class="questions">
-      <p class="questions2"><h3>Simplicity and flexibility are central to vcpkg.</h3></p>
     </div>
-    <div class="why-us-box-shadow">
-      <div class="why-us-flexbox">
-        <div class="why-us-group">
-          <img class="why-us-icon" src="/assets/mark/easy.svg"  alt="easy icon" />
-          <div class="why-us-heading">Easy To Use</div>
-          <p class="why-us-description">
-              Download and build popular libraries in a single step. 
-              Never worry about upstream dependencies or version conflicts.
-              Declare dependencies with commandline actions or in a manifest that can live with your repo. 
-              Get support from the development team, documentation, and an active community.
-          </p>
-        </div>
-        <div class="why-us-group">
-          <img class="why-us-icon" src="/assets/mark/reliable.svg" alt="Universal" />
-          <div class="why-us-heading">Universal</div>
-          <p class="why-us-description">
-              vcpkg works with your preferred OS, 
-              buildsystem, target architectures, IDE, editor, and continuous integration 
-              process. Libraries are built from source and can be configured.
-          </p>
-        </div>
-        <div class="why-us-group">
-          <img class="why-us-icon" src="/assets/mark/secure.svg" alt="Reliable" />
-          <div class="why-us-heading">Reliable</div>
-          <p class="why-us-description">
-              Maintain consistency between local developer and CI/CD workflows.
-              Stay on your preferred library versions. Sync your dependency ecosystem with the rest of your team.
-          </p>
-        </div>
-        <div class="why-us-group">
-          <img class="why-us-icon" src="/assets/mark/open.svg" alt="For Everyone" />
-          <div class="why-us-heading">For Everyone</div>
-          <p class="why-us-description">
-              Whether you are a one-person team on a small open source project or a large 
-              enterprise with complex build and security needs, take advantage of the latest 
-              vcpkg features for your workflow. Cache binaries for faster consumption, 
-              avoid diamond dependency resolution issues, reproduce identical builds for all developers,  
-              CI machines, and containers. Bring your own libraries or consume popular public ones. 
-              Take advantage of existing Visual Studio and Visual Studio Code integration.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-    <div id="loadFooter"><div class="footer">
+  </main>
+  <div id="loadFooter"><div class="footer">
   <section class="footer-info" aria-label="footer">
     <div class="footer-left">
       <div class="footer-info-group">
@@ -287,5 +309,6 @@
   <!--<img class="logo-footer" src="/assets/mark/logo-footer.svg" alt="vcpkg logo" title="vcpkg logo" />-->
 </div>
 </div>
-  </body>
+  <script src="/dist/perPackageTabs.js"></script>
+</body>
 </html>
