@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     curl
-                    <span class="package-version">8.19.0</span>
+                    <span class="package-version">8.20.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -276,7 +276,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                http2, http3, idn, idn, ldap, ssh, ssh, ssl, ssl, ssls-export, winldap
+                                http2, http3, idn, idn, ldap, ssh, ssh, ssl, ssl, ssls-export, websockets
                                 </div>
                             </div>
                         </div>
@@ -954,22 +954,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">rtmp - <i class="feature-description">RTMP support</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/librtmp.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">librtmp</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">ssh - <i class="feature-description">SSH support via libssh2</i></div>
                         </div>
                         <div class="section-two">
@@ -1009,16 +993,16 @@
                             <a href="/en/package/curl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [sspi]</div>
-                                <div class="feature-dep-platform">platform: (windows &amp; !uwp) | mingw</div>
+                                <div class="feature-dep-feature">features: [openssl]</div>
+                                <div class="feature-dep-platform">platform: uwp | !windows</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
                             <a href="/en/package/curl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [openssl]</div>
-                                <div class="feature-dep-platform">platform: (uwp | !windows) &amp; !mingw</div>
+                                <div class="feature-dep-feature">features: [sspi]</div>
+                                <div class="feature-dep-platform">platform: windows &amp; !uwp</div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
@@ -1054,26 +1038,21 @@
                         <div class="section-one">
                             <div class="feature-name">websockets - <i class="feature-description">WebSocket support</i></div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">winidn - <i class="feature-description">WinIDN support</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">winldap - <i class="feature-description">Obsolete. Use feature &#39;ldap&#39; instead.</i></div>
-                        </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
                             <a href="/en/package/curl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [ldap]</div>
+                                <div class="feature-dep-feature">features: [non-http]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
                             </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">winidn - <i class="feature-description">WinIDN support</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -1113,6 +1092,8 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">8.20.0#1</li>
+                    <li class="badge badge-primary">8.20.0#0</li>
                     <li class="badge badge-primary">8.19.0#0</li>
                     <li class="badge badge-primary">8.18.0#1</li>
                     <li class="badge badge-primary">8.18.0#0</li>
@@ -1246,12 +1227,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/48cfe1e0e928341709d97fc3d2eff10ad6262c96/ports/curl/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/48cfe1e0e928341709d97fc3d2eff10ad6262c96/ports/curl/dependencies.patch" target="_blank">dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/48cfe1e0e928341709d97fc3d2eff10ad6262c96/ports/curl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/48cfe1e0e928341709d97fc3d2eff10ad6262c96/ports/curl/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/48cfe1e0e928341709d97fc3d2eff10ad6262c96/ports/curl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/48cfe1e0e928341709d97fc3d2eff10ad6262c96/ports/curl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6b9af370af07d33e9b712abe9265375c9a036eb7/ports/curl/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6b9af370af07d33e9b712abe9265375c9a036eb7/ports/curl/dependencies.patch" target="_blank">dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6b9af370af07d33e9b712abe9265375c9a036eb7/ports/curl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6b9af370af07d33e9b712abe9265375c9a036eb7/ports/curl/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6b9af370af07d33e9b712abe9265375c9a036eb7/ports/curl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6b9af370af07d33e9b712abe9265375c9a036eb7/ports/curl/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -1259,7 +1240,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> curl AND ISC AND BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-03-12</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-11</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

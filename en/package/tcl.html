@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     tcl
-                    <span class="package-version">core-9-0-a1#8</span>
+                    <span class="package-version">9.0.3</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,6 +136,54 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="libtommath.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libtommath<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="minizip.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">minizip<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="sqlite3.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">sqlite3<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                dbpage-vtab, dbstat, fts3, fts4, fts5, geopoly, json1, limit, math, rtree, soundex
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="tcl.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">tcl<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-make.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-make<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !windows</div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                     <a href="zlib.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">zlib<i class="dep-version-min"></i></div>
@@ -149,20 +197,14 @@
             <div id="used-by-content" class="tab-content">
                 <h2 class="active-header">Used By</h2>
                 <div class="card-container">
-                    <a href="libpq.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libpq</div>
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                tcl
-                                </div>
-                            </div>
-                        </div>
-                    </a>
                     <a href="sqlcipher.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">sqlcipher</div>
+                        </div>
+                    </a>
+                    <a href="tcl.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">tcl</div>
                         </div>
                     </a>
                 </div>
@@ -172,7 +214,7 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">profile - <i class="feature-description">Adds profiling hooks.  Map file is assumed.</i></div>
+                            <div class="feature-name">profile - <i class="feature-description">Produce an image that can be used with the Windows Performance Tools profiler.</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -182,12 +224,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">unchecked - <i class="feature-description">Allows a symbols build to not use the debug enabled runtime (msvcrt.dll not msvcrtd.dll or libcmt.lib not libcmtd.lib).</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">utfmax - <i class="feature-description">Forces Tcl_UniChar to be a 32-bit quantity in stead of 16-bits</i></div>
+                            <div class="feature-name">time64bit - <i class="feature-description">Force 64-bit time_t.</i></div>
                         </div>
                     </div>
                 </div>
@@ -195,6 +232,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">9.0.3#0</li>
                     <li class="badge badge-primary">core-9-0-a1#8</li>
                     <li class="badge badge-primary">core-9-0-a1#7</li>
                     <li class="badge badge-primary">core-9-0-a1#6</li>
@@ -212,9 +250,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32b365ee996d56118f290cfe22ebc13dacf8baf6/ports/tcl/force-shell-install.patch" target="_blank">force-shell-install.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32b365ee996d56118f290cfe22ebc13dacf8baf6/ports/tcl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/32b365ee996d56118f290cfe22ebc13dacf8baf6/ports/tcl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a0e4fcb7034115a8f0677e73abb08cf277b7ca2e/ports/tcl/dependencies.diff" target="_blank">dependencies.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a0e4fcb7034115a8f0677e73abb08cf277b7ca2e/ports/tcl/nmake.diff" target="_blank">nmake.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a0e4fcb7034115a8f0677e73abb08cf277b7ca2e/ports/tcl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a0e4fcb7034115a8f0677e73abb08cf277b7ca2e/ports/tcl/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -222,11 +261,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-09-18</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-10</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!android & !(windows & arm) & !uwp</pre></div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
