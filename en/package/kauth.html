@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - scylla-wrapper</title>
+  <title>vcpkg package - kauth</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    scylla-wrapper
-                    <span class="package-version">2018-08-26-16e6f435#3</span>
+                    kauth
+                    <span class="package-version">6.25.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                This is a wrapper around Scylla.  It exports functions for IAT fixing, dumping and PE rebuilding. based on https://github.com/NtQuery/Scylla commit 0f6b7198be  (v0.9.6b).
+                Execute actions as privileged user
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,17 +136,81 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="distorm.html" class="dependency-card">
+                    <a href="ecm.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">distorm<i class="dep-version-min"></i></div>
+                            <div class="dep-name">ecm<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="kcoreaddons.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">kcoreaddons<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="kwindowsystem.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">kwindowsystem<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="polkit-qt-1.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">polkit-qt-1<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="qtbase.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                gui
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="qtbase.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform">platform: linux</div>
+                            <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                dbus
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
@@ -163,56 +227,67 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">translations - <i class="feature-description">Build and install translation files</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qttools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qttools</div>
+                                <div class="feature-dep-feature">features: [linguist]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">2018-08-26-16e6f435#3</li>
-                    <li class="badge badge-primary">2018-08-26-16e6f435#2</li>
-                    <li class="badge badge-primary">2018-08-26-16e6f435#1</li>
-                    <li class="badge badge-primary">2018-08-26-16e6f435#0</li>
+                    <li class="badge badge-primary">6.25.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5b11232d00476c66724c81adfe5e3777a9aec38f/ports/scylla-wrapper/CMakeLists.txt" target="_blank">CMakeLists.txt</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5b11232d00476c66724c81adfe5e3777a9aec38f/ports/scylla-wrapper/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5b11232d00476c66724c81adfe5e3777a9aec38f/ports/scylla-wrapper/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d2f52d4f9d16e11a9cfdf0ff349810e541aaeb3/ports/kauth/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/7d2f52d4f9d16e11a9cfdf0ff349810e541aaeb3/ports/kauth/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-04-13</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.1-or-later</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-14</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">windows & !uwp & !arm & !static</pre></div>
+            <div><pre class="support-arch">!android & !windows</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/book-solid.svg" alt="Documentation:">
-                    Unavailable
+                    <a href="https://api.kde.org/kauth-index.html">https://api.kde.org/kauth-index.html</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    Unavailable
+                    <a href="https://invent.kde.org/frameworks/kauth">https://invent.kde.org/frameworks/kauth</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install scylla-wrapper</pre>
+                <pre> vcpkg install kauth</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port scylla-wrapper</pre>
+                <pre> vcpkg add port kauth</pre>
             </div>
         </div>
     </div>
