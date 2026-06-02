@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     dpdk
-                    <span class="package-version">26.3#4</span>
+                    <span class="package-version">26.3#5</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -182,6 +182,22 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">docs - <i class="feature-description">Build and install docs</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gpu-cuda - <i class="feature-description">Build CUDA GPU driver</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/cuda.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">cuda</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -391,6 +407,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">26.3#5</li>
                     <li class="badge badge-primary">26.3#4</li>
                     <li class="badge badge-primary">26.3#3</li>
                     <li class="badge badge-primary">26.3#2</li>
@@ -414,14 +431,14 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/0001-enable-either-static-or-shared-build.patch" target="_blank">0001-enable-either-static-or-shared-build.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/0002-fix-dependencies.patch" target="_blank">0002-fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/0003-remove-examples-src-from-datadir.patch" target="_blank">0003-remove-examples-src-from-datadir.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/0004-stop-building-apps.patch" target="_blank">0004-stop-building-apps.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/0005-no-absolute-driver-path.patch" target="_blank">0005-no-absolute-driver-path.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/0006-rename-sched.h.patch" target="_blank">0006-rename-sched.h.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/41ff869322957910971416698824571006d160c0/ports/dpdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/0001-enable-either-static-or-shared-build.patch" target="_blank">0001-enable-either-static-or-shared-build.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/0002-fix-dependencies.patch" target="_blank">0002-fix-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/0003-remove-examples-src-from-datadir.patch" target="_blank">0003-remove-examples-src-from-datadir.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/0004-stop-building-apps.patch" target="_blank">0004-stop-building-apps.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/0005-no-absolute-driver-path.patch" target="_blank">0005-no-absolute-driver-path.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/0006-rename-sched.h.patch" target="_blank">0006-rename-sched.h.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/783ee8e599eb63674422ff8d49eea4dd7ee3b277/ports/dpdk/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -429,7 +446,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-18</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-06-01</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
