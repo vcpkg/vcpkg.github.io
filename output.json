@@ -1,5 +1,5 @@
 {
-  "Baseline": "18a4723aeb7adbbae84bcff0edf510883800f32f",
+  "Baseline": "fb67f8d52560208f80b08db2528631a73a6e0d0c",
   "Size": 2849,
   "Source": [
     {
@@ -210,7 +210,7 @@
     },
     {
       "Name": "ace",
-      "Version": "8.0.5",
+      "Version": "8.0.6",
       "Maintainers": "Johnny Willemsen <jwillemsen@remedy.nl>",
       "Description": "The ADAPTIVE Communication Environment",
       "homepage": "https://github.com/DOCGroup/ACE_TAO",
@@ -263,8 +263,8 @@
           ]
         }
       },
-      "LastModified": "2025-08-27",
-      "LastCommit": "85fd966831118e697538a7a1ab2b47391deed166"
+      "LastModified": "2026-06-29",
+      "LastCommit": "1b19a3015669129bed0d2221176ee1d046df1b6d"
     },
     {
       "Name": "acl",
@@ -650,7 +650,7 @@
     },
     {
       "Name": "alibabacloud-oss-cpp-sdk-v2",
-      "Version": "0.1.0",
+      "Version": "0.1.1",
       "Description": "Alibaba Cloud OSS SDK for C++ v2",
       "homepage": "https://github.com/aliyun/alibabacloud-oss-cpp-sdk-v2",
       "License": "Apache-2.0 AND Zlib AND BSL-1.0",
@@ -699,13 +699,19 @@
         "rtti": {
           "description": "Build with run-time type information"
         },
+        "tinyxml2": {
+          "description": "Use system tinyxml2 for XML parsing",
+          "dependencies": [
+            "tinyxml2"
+          ]
+        },
         "winhttp": {
           "description": "WinHTTP transport (Windows only)",
           "supports": "windows"
         }
       },
-      "LastModified": "2026-06-09",
-      "LastCommit": "81fd6444aa83ecee24d290d1bbaa798ee4c7de27"
+      "LastModified": "2026-06-26",
+      "LastCommit": "bbffd910422c03bf151366af956cce726e1be659"
     },
     {
       "Name": "aliyun-oss-c-sdk",
@@ -3266,10 +3272,11 @@
     },
     {
       "Name": "aws-c-common",
-      "Version": "0.14.0",
+      "Version": "0.14.1",
+      "Port-Version": 1,
       "Description": "AWS common library for C",
       "homepage": "https://github.com/awslabs/aws-c-common",
-      "License": "Apache-2.0",
+      "License": "Apache-2.0 AND BSD-3-Clause AND MIT",
       "Supports": "!(windows & arm32) & !uwp",
       "Dependencies": [
         {
@@ -3281,8 +3288,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-01",
-      "LastCommit": "d948245ab5d09173e94018530d875838914bbd4d",
+      "LastModified": "2026-06-26",
+      "LastCommit": "ba9f458e205e02484b22de95132730525186b0ce",
       "Features": []
     },
     {
@@ -3407,7 +3414,7 @@
     },
     {
       "Name": "aws-c-s3",
-      "Version": "0.12.6",
+      "Version": "0.12.7",
       "Description": "C99 library implementation for communicating with the S3 service, designed for maximizing throughput on high bandwidth EC2 instances.",
       "homepage": "https://github.com/awslabs/aws-c-s3",
       "License": "Apache-2.0",
@@ -3434,12 +3441,12 @@
           "description": "Whether to include the s3 endpoint resolver and related config files"
         }
       },
-      "LastModified": "2026-06-12",
-      "LastCommit": "c13aebd2c12bc55933073c1ba6d7d7876f78f4e6"
+      "LastModified": "2026-06-25",
+      "LastCommit": "c8f45a069ad0266bc70e703c1252cb51506ddcaf"
     },
     {
       "Name": "aws-c-sdkutils",
-      "Version": "0.2.5",
+      "Version": "0.2.6",
       "Description": "C99 library implementing AWS SDK specific utilities. Includes utilities for ARN parsing, reading AWS profiles, etc...",
       "homepage": "https://github.com/awslabs/aws-c-sdkutils",
       "License": "Apache-2.0",
@@ -3454,8 +3461,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-10",
-      "LastCommit": "fdb6a8e4a51b1a1aa0dc574765b15296032723f8",
+      "LastModified": "2026-06-25",
+      "LastCommit": "6ba78048f4273c6d5fd0a500734f7fa6c41023d4",
       "Features": []
     },
     {
@@ -6735,7 +6742,7 @@
     },
     {
       "Name": "blosc2",
-      "Version": "3.1.4",
+      "Version": "3.1.5",
       "Description": "A fast, compressed, persistent binary data store library for C.",
       "homepage": "https://github.com/Blosc/c-blosc2",
       "License": "BSD-3-Clause",
@@ -6769,8 +6776,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-18",
-      "LastCommit": "bca299467f50cdf19371a21882fab98908da2779"
+      "LastModified": "2026-06-29",
+      "LastCommit": "4387220967b7e8b61757b5cbb58c2ad5d34ad18c"
     },
     {
       "Name": "blpapi",
@@ -16675,7 +16682,7 @@
     },
     {
       "Name": "buck-yeh-bux",
-      "Version": "1.12.4",
+      "Version": "1.12.5",
       "Description": "A supplemental C++ library with functionalities not directly supported from Modern C++ standard.",
       "homepage": "https://github.com/buck-yeh/bux",
       "License": "MIT",
@@ -16686,8 +16693,8 @@
           "host": true
         }
       ],
-      "LastModified": "2025-05-06",
-      "LastCommit": "08ec1e04aaeaedf9b28c4b8426ffc98996058e45",
+      "LastModified": "2026-06-29",
+      "LastCommit": "3ac972e614c395894f4ffd5e84ba2483a7cb72a4",
       "Features": []
     },
     {
@@ -19423,7 +19430,7 @@
     },
     {
       "Name": "comms-ublox",
-      "Version": "1.0.0",
+      "Version": "3.0.7",
       "Description": "UBLOX (UBX) protocol definition, generated out of cc.ublox.commsdsl",
       "homepage": "https://commschamp.github.io/",
       "Documentation": "https://github.com/commschamp/cc.ublox.generated",
@@ -19439,8 +19446,8 @@
           "host": true
         }
       ],
-      "LastModified": "2022-06-17",
-      "LastCommit": "92136965aca862dad698d27941d097e60781f280",
+      "LastModified": "2026-06-24",
+      "LastCommit": "cd61e1e26a038e82d6550a3ebbe0fbbfe7da78e3",
       "Features": []
     },
     {
@@ -21396,8 +21403,7 @@
     },
     {
       "Name": "curl",
-      "Version": "8.20.0",
-      "Port-Version": 2,
+      "Version": "8.21.0",
       "Description": "A library for transferring data with URLs",
       "homepage": "https://curl.se/",
       "License": "curl AND ISC AND BSD-3-Clause",
@@ -21648,8 +21654,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-04",
-      "LastCommit": "81de6771512413aaf89ea77add5ad1fda126b9d0"
+      "LastModified": "2026-06-24",
+      "LastCommit": "667550429b1a7b35422380ae19078376d72b00e4"
     },
     {
       "Name": "curlcpp",
@@ -22542,7 +22548,7 @@
     },
     {
       "Name": "dawn",
-      "Version": "20260423.175430",
+      "Version": "20260624.223603",
       "Description": "Dawn is an open-source and cross-platform implementation of the WebGPU standard.",
       "homepage": "https://dawn.googlesource.com/dawn",
       "License": "BSD-3-Clause",
@@ -22653,8 +22659,8 @@
           "supports": "linux | freebsd | openbsd"
         }
       },
-      "LastModified": "2026-06-04",
-      "LastCommit": "7ab5b49ce68147038eb450831d57b1ca66811d67"
+      "LastModified": "2026-06-29",
+      "LastCommit": "fb67f8d52560208f80b08db2528631a73a6e0d0c"
     },
     {
       "Name": "daxa",
@@ -24496,7 +24502,7 @@
     },
     {
       "Name": "dv-processing",
-      "Version": "2.0.2",
+      "Version": "2.0.3",
       "Description": "Generic algorithms for event cameras. (C++20 required.)",
       "homepage": "https://gitlab.com/inivation/dv/dv-processing",
       "License": "Apache-2.0",
@@ -24543,8 +24549,8 @@
           "description": "Build CLI utilities"
         }
       },
-      "LastModified": "2025-12-27",
-      "LastCommit": "11bbc873e00e9e58d4e9dffb30b7a5493a030e0b"
+      "LastModified": "2026-06-24",
+      "LastCommit": "297a609f7499dc0ffcabef9029c0565b6646d192"
     },
     {
       "Name": "dx",
@@ -25802,7 +25808,7 @@
     },
     {
       "Name": "expat",
-      "Version": "2.8.1",
+      "Version": "2.8.2",
       "Description": "XML parser library written in C",
       "homepage": "https://github.com/libexpat/libexpat",
       "License": "MIT",
@@ -25816,8 +25822,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-05-12",
-      "LastCommit": "d2131427ff63e85430a5c47e8c33ed14b206fa62",
+      "LastModified": "2026-06-26",
+      "LastCommit": "6da16a9600492fbcb7713560d993ac76823290de",
       "Features": []
     },
     {
@@ -25989,7 +25995,7 @@
     },
     {
       "Name": "faiss",
-      "Version": "1.14.1",
+      "Version": "1.14.3",
       "Description": "Faiss is a library for efficient similarity search and clustering of dense vectors.",
       "homepage": "https://faiss.ai/",
       "License": "MIT",
@@ -26014,8 +26020,8 @@
           ]
         }
       },
-      "LastModified": "2026-03-09",
-      "LastCommit": "458c9e0420c5f58ec13d674377a03bde5d224474"
+      "LastModified": "2026-06-24",
+      "LastCommit": "8ae2d92383df7f2665f585d8e207a14c474367b1"
     },
     {
       "Name": "fakeit",
@@ -30932,7 +30938,7 @@
     },
     {
       "Name": "glaze",
-      "Version": "7.8.2",
+      "Version": "7.8.3",
       "Description": "One of the fastest JSON libraries in the world. Glaze reads and writes from C++ memory, simplifying interfaces and offering incredible performance.",
       "homepage": "https://github.com/stephenberry/glaze",
       "License": "MIT",
@@ -30955,8 +30961,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-17",
-      "LastCommit": "a5ac4c37640e9cd2b1662e5b0c33886ea2dda9bf"
+      "LastModified": "2026-06-24",
+      "LastCommit": "91a0a88997a7de71726192d4dab060446b49928d"
     },
     {
       "Name": "glbinding",
@@ -35948,11 +35954,12 @@
     {
       "Name": "hamlib",
       "Version": "4.7.2",
+      "Port-Version": 1,
       "Description": "Ham radio control library for rigs (radios), rotators, and amplifiers.",
       "homepage": "https://hamlib.github.io/",
       "Documentation": "https://github.com/Hamlib/Hamlib/wiki/Documentation",
       "License": null,
-      "Supports": "(!windows | mingw) & !android",
+      "Supports": "!windows | mingw",
       "Dependencies": [
         {
           "name": "vcpkg-make",
@@ -35973,8 +35980,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-22",
-      "LastCommit": "74a896d035ae4a333e7404d510aede88acea4e41"
+      "LastModified": "2026-06-29",
+      "LastCommit": "b4099d67c018c469f6219190e7bcb70ad6939fce"
     },
     {
       "Name": "hanjingo-high-jump",
@@ -36563,7 +36570,7 @@
     },
     {
       "Name": "hdr-histogram",
-      "Version": "0.11.9",
+      "Version": "0.11.10",
       "Description": "'C' port of High Dynamic Range (HDR) Histogram",
       "homepage": "https://github.com/HdrHistogram/HdrHistogram_c",
       "License": "CC0-1.0",
@@ -36586,8 +36593,8 @@
           ]
         }
       },
-      "LastModified": "2025-08-29",
-      "LastCommit": "50ae8c2596ff6e0d772dcffe4dd5d9393e7b0d77"
+      "LastModified": "2026-06-29",
+      "LastCommit": "e8034a6ef53b983a48c6d64b78b8e511113be012"
     },
     {
       "Name": "healpix",
@@ -37215,11 +37222,10 @@
     },
     {
       "Name": "htscodecs",
-      "Version": "1.6.6",
-      "Port-Version": 1,
+      "Version": "1.6.7",
       "Description": "Custom compression for CRAM and others.",
       "homepage": "https://github.com/samtools/htscodecs",
-      "License": "MIT",
+      "License": null,
       "Supports": "!windows",
       "Dependencies": [
         {
@@ -37235,8 +37241,8 @@
           ]
         }
       },
-      "LastModified": "2026-03-18",
-      "LastCommit": "4ef2a7144d00c2f446029b9700e701a3094b8bfb"
+      "LastModified": "2026-06-26",
+      "LastCommit": "e287d598bce5311742c23b421820cc78396142e5"
     },
     {
       "Name": "htslib",
@@ -38961,7 +38967,7 @@
     },
     {
       "Name": "ixwebsocket",
-      "Version": "12.0.0",
+      "Version": "12.0.1",
       "Description": "Lightweight WebSocket Client and Server + HTTP Client and Server",
       "homepage": "https://github.com/machinezone/IXWebSocket",
       "License": "BSD-3-Clause",
@@ -39031,8 +39037,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-08",
-      "LastCommit": "75672db6bd812b060482b0f00b5a16b18a0c0f07"
+      "LastModified": "2026-06-26",
+      "LastCommit": "1ca48a2cb8dac6b087a66ae29d05b420afbde3bd"
     },
     {
       "Name": "jack2",
@@ -44003,8 +44009,7 @@
     },
     {
       "Name": "libass",
-      "Version": "0.17.4",
-      "Port-Version": 1,
+      "Version": "0.17.5",
       "Description": "libass is a portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format",
       "homepage": "https://github.com/libass/libass",
       "License": "ISC",
@@ -44021,8 +44026,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-05-05",
-      "LastCommit": "a60e2443e61ad6429fc887e819285fd9e5be5ec1",
+      "LastModified": "2026-06-24",
+      "LastCommit": "97284aa9936717fbe2129e7156e204c24a5130ae",
       "Features": []
     },
     {
@@ -44383,7 +44388,7 @@
     },
     {
       "Name": "libcap",
-      "Version": "2.77",
+      "Version": "2.78",
       "Description": "A library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.",
       "homepage": "https://sites.google.com/site/fullycapable/",
       "License": "BSD-3-Clause OR GPL-2.0-only",
@@ -44402,8 +44407,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-01-09",
-      "LastCommit": "5fb84d3fc61b8cd5d9cbf11dd8517498cdb8b81e",
+      "LastModified": "2026-06-24",
+      "LastCommit": "ba91fd5468486c3fb34db0a8fbf3f5d9fe0bfe37",
       "Features": []
     },
     {
@@ -51896,8 +51901,7 @@
     },
     {
       "Name": "libvpl",
-      "Version": "2.16.0",
-      "Port-Version": 1,
+      "Version": "2.17.0",
       "Description": "Intel Video Processing Library (oneVPL) dispatcher",
       "homepage": "https://github.com/intel/libvpl",
       "License": "MIT",
@@ -51912,8 +51916,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-12",
-      "LastCommit": "2f35abfc8c898bcf37b1eeb3e89d753e02f2e7d1",
+      "LastModified": "2026-06-29",
+      "LastCommit": "c218de7610526bdfe3d9d7213d28c701ffb095b1",
       "Features": []
     },
     {
@@ -54590,7 +54594,7 @@
     },
     {
       "Name": "ls-qpack",
-      "Version": "2.6.4",
+      "Version": "2.6.5",
       "Description": "QPACK compression library for use with HTTP/3",
       "homepage": "https://github.com/litespeedtech/ls-qpack",
       "License": "MIT",
@@ -54605,8 +54609,8 @@
         },
         "xxhash"
       ],
-      "LastModified": "2026-06-23",
-      "LastCommit": "1ace9e8815f4b64907db1fc6fe5473c30da08423",
+      "LastModified": "2026-06-29",
+      "LastCommit": "40892d326660dcdff7bd9afb401461472ab61ffc",
       "Features": []
     },
     {
@@ -58745,7 +58749,7 @@
     },
     {
       "Name": "mongo-cxx-driver",
-      "Version": "4.3.1",
+      "Version": "4.4.0",
       "Description": "MongoDB C++ Driver.",
       "homepage": "https://github.com/mongodb/mongo-cxx-driver",
       "License": "Apache-2.0",
@@ -58761,13 +58765,13 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-10",
-      "LastCommit": "f93e4415de0647db3819bbbe685688cb2a458cb9",
+      "LastModified": "2026-06-26",
+      "LastCommit": "db0dbbfa0a0fb6c82f286cb0c51d0ce188a04bbe",
       "Features": []
     },
     {
       "Name": "mongoose",
-      "Version": "7.21",
+      "Version": "7.22",
       "Description": "Embedded web server / embedded networking library",
       "homepage": "https://cesanta.com/",
       "License": null,
@@ -58793,8 +58797,8 @@
           ]
         }
       },
-      "LastModified": "2026-04-02",
-      "LastCommit": "61d43ee6f0cc440dc97983d36e0c85e80fe429d4"
+      "LastModified": "2026-06-24",
+      "LastCommit": "35dec85b17329668a48cdd8611a1d1a2bd6a743f"
     },
     {
       "Name": "monkeys-audio",
@@ -60275,11 +60279,11 @@
     },
     {
       "Name": "nanoprintf",
-      "Version": "0.6.0",
+      "Version": "0.6.1",
       "Description": "A tiny embeddable printf replacement written in C99",
       "homepage": "https://github.com/charlesnicholson/nanoprintf",
-      "LastModified": "2026-03-30",
-      "LastCommit": "4ff012344adb5de12c4218bee937824961d05c01",
+      "LastModified": "2026-06-24",
+      "LastCommit": "065e196ea8b5935ea2d2af1ee8c9d2f6fb04c130",
       "Features": []
     },
     {
@@ -61100,7 +61104,7 @@
     },
     {
       "Name": "nghttp3",
-      "Version": "1.16.0",
+      "Version": "1.17.0",
       "Description": "Implementation of RFC 9114 HTTP/3 mapping over QUIC and RFC 9204 QPACK in C",
       "homepage": "https://github.com/ngtcp2/nghttp3",
       "License": "MIT",
@@ -61114,8 +61118,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-01",
-      "LastCommit": "3249e75a98c1ad93e0e0fc56c18eba51225ab335",
+      "LastModified": "2026-06-29",
+      "LastCommit": "6bb60cd35818fa68ecd2a5419ce7e13039eb8cca",
       "Features": []
     },
     {
@@ -61345,7 +61349,7 @@
     },
     {
       "Name": "nng",
-      "Version": "1.11",
+      "Version": "1.12.0",
       "Description": "nanomsg-next-gen, lightweight messaging library",
       "homepage": "https://nng.nanomsg.org",
       "License": "MIT",
@@ -61371,8 +61375,8 @@
           "description": "nng tools (nngcat, for example)"
         }
       },
-      "LastModified": "2025-06-03",
-      "LastCommit": "d3bba90a61d792e5850c9f1f96c4ac749c5dc212"
+      "LastModified": "2026-06-29",
+      "LastCommit": "5f1cc58285f8107052772afee21d295fe6256046"
     },
     {
       "Name": "nngpp",
@@ -61424,7 +61428,7 @@
     },
     {
       "Name": "node-addon-api",
-      "Version": "8.8.0",
+      "Version": "8.9.0",
       "Description": "Module for using Node-API from C++",
       "homepage": "https://github.com/nodejs/node-addon-api",
       "License": "MIT",
@@ -61440,8 +61444,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-05-25",
-      "LastCommit": "e1831a44bc977ded427b0ca336404508f29ed15a",
+      "LastModified": "2026-06-29",
+      "LastCommit": "7e4ef903392e7cfe79d67233af6f6980ce3960b9",
       "Features": []
     },
     {
@@ -70796,7 +70800,7 @@
     },
     {
       "Name": "proxy",
-      "Version": "4.0.2",
+      "Version": "4.1.0",
       "Description": "A single-header C++20 library that facilitates runtime polymorphism.",
       "homepage": "https://github.com/ngcpp/proxy",
       "License": "MIT",
@@ -70810,8 +70814,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-03-14",
-      "LastCommit": "c0ab9b4c89f04a911e336a3f0d7a755560ad4e99",
+      "LastModified": "2026-06-25",
+      "LastCommit": "7b86e24899eefd7a5cd94929059bb658cc116b69",
       "Features": []
     },
     {
@@ -71198,7 +71202,7 @@
     },
     {
       "Name": "pystring",
-      "Version": "1.1.5",
+      "Version": "1.2.0",
       "Description": "Pystring is a collection of C++ functions which match the interface and behavior of python's string class methods using std::string",
       "homepage": "https://github.com/imageworks/pystring",
       "License": "BSD-3-Clause",
@@ -71212,8 +71216,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-04-13",
-      "LastCommit": "0051faf1714af40f0e033ade5422fab71ebd98ef",
+      "LastModified": "2026-06-29",
+      "LastCommit": "55b08219b7b08132affe4e6531211f02ad571f12",
       "Features": []
     },
     {
@@ -78318,8 +78322,7 @@
     },
     {
       "Name": "rocksdb",
-      "Version": "11.1.1",
-      "Port-Version": 1,
+      "Version": "11.1.2",
       "Description": "A library that provides an embeddable, persistent key-value store for fast storage",
       "homepage": "https://github.com/facebook/rocksdb",
       "License": "GPL-2.0-only OR Apache-2.0",
@@ -78400,8 +78403,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-16",
-      "LastCommit": "2a5ea1e58fc6776ede8fd1470db0aea26ae320c4"
+      "LastModified": "2026-06-25",
+      "LastCommit": "0308db5e395e701b5dff6e2f141bf7f42f58e60c"
     },
     {
       "Name": "rp-ntuples",
@@ -78605,7 +78608,7 @@
     },
     {
       "Name": "rtabmap",
-      "Version": "0.23.2",
+      "Version": "0.23.7",
       "Description": "Real-Time Appearance-Based Mapping",
       "homepage": "https://introlab.github.io/rtabmap/",
       "License": null,
@@ -78760,8 +78763,8 @@
           ]
         }
       },
-      "LastModified": "2025-11-03",
-      "LastCommit": "36e865795cc144329c3f53d747e808d290c8771d"
+      "LastModified": "2026-06-29",
+      "LastCommit": "eaf56b3baee36af065d54402fd078dbec8fc39f2"
     },
     {
       "Name": "rtabmap-res-tool",
@@ -81032,7 +81035,7 @@
     },
     {
       "Name": "sentry-native",
-      "Version": "0.15.1",
+      "Version": "0.15.2",
       "Description": "Sentry SDK for C, C++ and native applications.",
       "homepage": "https://sentry.io/",
       "License": "MIT",
@@ -81127,8 +81130,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-18",
-      "LastCommit": "46c9f8d8398360278222d335c28bceb776ebb61f"
+      "LastModified": "2026-06-24",
+      "LastCommit": "a1c2fcf550ce186b6b3525e97e09732411f715b1"
     },
     {
       "Name": "septag-dmon",
@@ -81338,10 +81341,11 @@
     {
       "Name": "sfcgal",
       "Version": "2.3.0",
+      "Port-Version": 1,
       "Description": "sfcgal is a C++ wrapper library around CGAL with the aim of supporting ISO 191007:2013 and OGC Simple Features for 3D operations.",
       "homepage": "https://gitlab.com/SFCGAL/SFCGAL",
       "License": "LGPL-2.0-or-later",
-      "Supports": "(x64 & (windows | osx | linux)) | (arm64 & osx)",
+      "Supports": "(x64 | arm64) & (linux | windows | osx)",
       "Dependencies": [
         "cgal",
         "eigen3",
@@ -81355,8 +81359,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-12",
-      "LastCommit": "cfd0ea018f1cdc0cbd200193cde91d524f05180c",
+      "LastModified": "2026-06-24",
+      "LastCommit": "a7f44ff8c25368d2a5076632d7c54bcff7cdf2b0",
       "Features": []
     },
     {
@@ -82798,7 +82802,7 @@
     },
     {
       "Name": "slickquant-hyperliquid-cpp",
-      "Version": "0.2.0",
+      "Version": "0.2.1",
       "Description": "SDK for Hyperliquid API trading with C++",
       "homepage": "https://github.com/SlickQuant/hyperliquid-cpp",
       "License": "MIT",
@@ -82825,8 +82829,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-23",
-      "LastCommit": "b46e6b0531f0c4192147b4e18d2dedef0c196d84",
+      "LastModified": "2026-06-24",
+      "LastCommit": "7766dbfe8af725dbe47f3a1ed412c2fcbd10ff7a",
       "Features": []
     },
     {
@@ -84202,6 +84206,7 @@
     {
       "Name": "sqlite3",
       "Version": "3.53.2",
+      "Port-Version": 1,
       "Description": "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.",
       "homepage": "https://sqlite.org/",
       "License": "blessing",
@@ -84255,6 +84260,9 @@
         "omit-load-extension": {
           "description": "Enable loading of external extensions"
         },
+        "percentile": {
+          "description": "Enable the aggregate functions percentile, percentile_cont, percentile_disc, and median"
+        },
         "rtree": {
           "description": "Enable the RTREE extension"
         },
@@ -84284,8 +84292,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-05",
-      "LastCommit": "4dbd4a48908ff48d26b3cf063f8c9e1da5759185"
+      "LastModified": "2026-06-24",
+      "LastCommit": "930ecc42b512b564571d767f70775d284a6fa307"
     },
     {
       "Name": "sqlitecpp",
@@ -85928,6 +85936,7 @@
     {
       "Name": "supernovas",
       "Version": "1.7.1",
+      "Port-Version": 1,
       "Description": "SuperNOVAS C/C++ high-precision astrometry library",
       "homepage": "https://sigmyne.github.io/SuperNOVAS/",
       "Documentation": "https://sigmyne.github.io/SuperNOVAS/doc/html/",
@@ -85954,8 +85963,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-18",
-      "LastCommit": "f171e8241df45ddc4fe62b86d226d8c7a2daba00"
+      "LastModified": "2026-06-29",
+      "LastCommit": "4d3d83e108983e099fb6d584e6789cc8389c9ee3"
     },
     {
       "Name": "sushant-wayal-stringhash",
@@ -92694,8 +92703,7 @@
     },
     {
       "Name": "wolfssl",
-      "Version": "5.9.1",
-      "Port-Version": 1,
+      "Version": "5.9.2",
       "Description": "TLS and Cryptographic library for many platforms",
       "homepage": "https://wolfssl.com",
       "License": "GPL-3.0-or-later",
@@ -92731,8 +92739,8 @@
           "description": "Enables callback to provide TLS keys for debugging"
         }
       },
-      "LastModified": "2026-04-16",
-      "LastCommit": "296b89248ad13be09e9324488eb4f74dd322d26c"
+      "LastModified": "2026-06-26",
+      "LastCommit": "5807a82762529d6c1f0768ff4ae9ffcd9dbfd689"
     },
     {
       "Name": "wolftpm",
@@ -92781,7 +92789,7 @@
     },
     {
       "Name": "workflow",
-      "Version": "1.0.0",
+      "Version": "1.0.1",
       "Description": "C++ Parallel Computing and Asynchronous Networking Engine",
       "homepage": "https://github.com/sogou/workflow",
       "License": "Apache-2.0",
@@ -92797,8 +92805,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-02-10",
-      "LastCommit": "b994c828b6f3509a4e851ba04813587e3cf806bc",
+      "LastModified": "2026-06-26",
+      "LastCommit": "8756d0fc775bcb493bb1b18423dccf306d8a128e",
       "Features": []
     },
     {
@@ -93257,8 +93265,7 @@
     },
     {
       "Name": "x265",
-      "Version": "4.1",
-      "Port-Version": 1,
+      "Version": "4.2",
       "Description": "x265 is a H.265 / HEVC video encoder application library, designed to encode video or images into an H.265 / HEVC encoded bitstream.",
       "homepage": "https://bitbucket.org/multicoreware/x265_git/",
       "License": "GPL-2.0-or-later",
@@ -93275,8 +93282,8 @@
           "supports": "!uwp"
         }
       },
-      "LastModified": "2025-09-10",
-      "LastCommit": "5ed70064390f11112c34b91a6382bba0fdc1706d"
+      "LastModified": "2026-06-29",
+      "LastCommit": "8c2d4ef38e65567e4b9140f0fc31306a3b6ed77f"
     },
     {
       "Name": "x509cert-banned",
