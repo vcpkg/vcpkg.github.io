@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     aws-sdk-cpp
-                    <span class="package-version">1.11.820</span>
+                    <span class="package-version">1.11.840</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -214,7 +214,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                access-management, identity-management, queues, s3-encryption, text-to-speech, transfer
+                                access-management, identity-management, queues, s3-encryption, s3-transfer, text-to-speech, transfer
                                 </div>
                             </div>
                         </div>
@@ -1249,16 +1249,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">iotevents - <i class="feature-description">C++ SDK for the AWS iotevents service</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">iotevents-data - <i class="feature-description">C++ SDK for the AWS iotevents-data service</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">iotfleetwise - <i class="feature-description">C++ SDK for the AWS iotfleetwise service</i></div>
                         </div>
                     </div>
@@ -1385,6 +1375,16 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">lambda - <i class="feature-description">C++ SDK for the AWS lambda service</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lambda-core - <i class="feature-description">C++ SDK for the AWS lambda-core service</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">lambda-microvms - <i class="feature-description">C++ SDK for the AWS lambda-microvms service</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -1724,11 +1724,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">panorama - <i class="feature-description">C++ SDK for the AWS panorama service</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">partnercentral-account - <i class="feature-description">C++ SDK for the AWS partnercentral-account service</i></div>
                         </div>
                     </div>
@@ -2016,6 +2011,22 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">s3-transfer - <i class="feature-description">C++ SDK for the AWS s3-transfer service</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/aws-sdk-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">aws-sdk-cpp</div>
+                                <div class="feature-dep-feature">features: [s3]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">s3control - <i class="feature-description">C++ SDK for the AWS s3control service</i></div>
                         </div>
                     </div>
@@ -2186,11 +2197,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">simspaceweaver - <i class="feature-description">C++ SDK for the AWS simspaceweaver service</i></div>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">sms-voice - <i class="feature-description">C++ SDK for the AWS sms-voice service</i></div>
                         </div>
                     </div>
@@ -2292,6 +2298,11 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">support-app - <i class="feature-description">C++ SDK for the AWS support-app service</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">supportauthz - <i class="feature-description">C++ SDK for the AWS supportauthz service</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -2486,6 +2497,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.11.840#0</li>
                     <li class="badge badge-primary">1.11.820#0</li>
                     <li class="badge badge-primary">1.11.800#0</li>
                     <li class="badge badge-primary">1.11.790#0</li>
@@ -2610,16 +2622,16 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/configure-binary-dir.patch" target="_blank">configure-binary-dir.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/find-dependency.patch" target="_blank">find-dependency.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/fix-aws-root.patch" target="_blank">fix-aws-root.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/fix_find_curl.patch" target="_blank">fix_find_curl.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/generateFeatures.ps1" target="_blank">generateFeatures.ps1</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/lock-curl-http-and-tls-settings.patch" target="_blank">lock-curl-http-and-tls-settings.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/vcpkg.in.json" target="_blank">vcpkg.in.json</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a092d9ba358391ea88d748514643da58963c7514/ports/aws-sdk-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/configure-binary-dir.patch" target="_blank">configure-binary-dir.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/find-dependency.patch" target="_blank">find-dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/fix-aws-root.patch" target="_blank">fix-aws-root.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/fix_find_curl.patch" target="_blank">fix_find_curl.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/generateFeatures.ps1" target="_blank">generateFeatures.ps1</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/lock-curl-http-and-tls-settings.patch" target="_blank">lock-curl-http-and-tls-settings.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/vcpkg.in.json" target="_blank">vcpkg.in.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/c559ab330095507462a4b74970acfc42fdcd5e0f/ports/aws-sdk-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -2627,7 +2639,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-06-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-07-07</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

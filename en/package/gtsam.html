@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     gtsam
-                    <span class="package-version">4.2.0#2</span>
+                    <span class="package-version">4.2.2</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -144,17 +144,9 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-bimap.html" class="dependency-card">
+                    <a href="boost-chrono.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-bimap<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="boost-date-time.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-date-time<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-chrono<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -200,9 +192,9 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="boost-regex.html" class="dependency-card">
+                    <a href="boost-ptr-container.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">boost-regex<i class="dep-version-min"></i></div>
+                            <div class="dep-name">boost-ptr-container<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -211,22 +203,6 @@
                     <a href="boost-serialization.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">boost-serialization<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="boost-system.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-system<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="boost-thread.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">boost-thread<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -251,14 +227,6 @@
                     <a href="metis.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">metis<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="tbb.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">tbb<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -291,12 +259,28 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">tbb - <i class="feature-description">Use GTSAM parallelization</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/tbb.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">tbb</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">4.2.2#0</li>
                     <li class="badge badge-primary">4.2.0#2</li>
                     <li class="badge badge-primary">4.2.0#1</li>
                     <li class="badge badge-primary">4.2.0#0</li>
@@ -308,12 +292,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/11bbc873e00e9e58d4e9dffb30b7a5493a030e0b/ports/gtsam/build-fixes.patch" target="_blank">build-fixes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/11bbc873e00e9e58d4e9dffb30b7a5493a030e0b/ports/gtsam/eigen3-fixes.patch" target="_blank">eigen3-fixes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/11bbc873e00e9e58d4e9dffb30b7a5493a030e0b/ports/gtsam/path-fixes.patch" target="_blank">path-fixes.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/11bbc873e00e9e58d4e9dffb30b7a5493a030e0b/ports/gtsam/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/11bbc873e00e9e58d4e9dffb30b7a5493a030e0b/ports/gtsam/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/11bbc873e00e9e58d4e9dffb30b7a5493a030e0b/ports/gtsam/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/081d23100a052155e204d926593e6ea38686fb12/ports/gtsam/build-fixes.patch" target="_blank">build-fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/081d23100a052155e204d926593e6ea38686fb12/ports/gtsam/eigen3-fixes.patch" target="_blank">eigen3-fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/081d23100a052155e204d926593e6ea38686fb12/ports/gtsam/path-fixes.patch" target="_blank">path-fixes.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/081d23100a052155e204d926593e6ea38686fb12/ports/gtsam/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/081d23100a052155e204d926593e6ea38686fb12/ports/gtsam/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/081d23100a052155e204d926593e6ea38686fb12/ports/gtsam/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -321,7 +305,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-27</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-07-06</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
