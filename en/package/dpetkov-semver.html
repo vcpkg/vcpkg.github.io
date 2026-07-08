@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - gsoap</title>
+  <title>vcpkg package - dpetkov-semver</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    gsoap
-                    <span class="package-version">2.8.112#2</span>
+                    dpetkov-semver
+                    <span class="package-version">0.4.1</span>
                 </h1>
             </div>
             <div class="package-description">
-                The gSOAP toolkit is a C and C++ software development toolkit for SOAP and REST XML Web services and generic C/C++ XML data bindings.
+                C++20 Semantic Versioning Library — a faithful translation of python-semanticversion, with deprecated features removed.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,11 +136,19 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="vcpkg-msbuild.html" class="dependency-card">
+                    <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">vcpkg-msbuild<i class="dep-version-min"></i></div>
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: windows</div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
                         </div>
                     </a>
@@ -161,43 +169,27 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">2.8.112#2</li>
-                    <li class="badge badge-primary">2.8.112#1</li>
-                    <li class="badge badge-primary">2.8.112#0</li>
-                    <li class="badge badge-primary">2.8.111#0</li>
-                    <li class="badge badge-primary">2.8.105#0</li>
-                    <li class="badge badge-primary">2.8.102-4#0</li>
-                    <li class="badge badge-primary">2.8.102-1#0</li>
-                    <li class="badge badge-primary">2.8.102#0</li>
-                    <li class="badge badge-primary">2.8.93-3#0</li>
-                    <li class="badge badge-primary">2.8.93-2#0</li>
-                    <li class="badge badge-primary">2.8.93-1#0</li>
-                    <li class="badge badge-primary">2.8.87-1#0</li>
-                    <li class="badge badge-primary">2.8.84-1#0</li>
-                    <li class="badge badge-primary">2.8.82-2#0</li>
-                    <li class="badge badge-primary">2.8.82-1#0</li>
-                    <li class="badge badge-primary">2.8.81-1#0</li>
-                    <li class="badge badge-primary">2.8.78-1#0</li>
+                    <li class="badge badge-primary">0.4.1#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c77bce443d80168b29abff9dec64f7c9b714437a/ports/gsoap/fix-build-in-windows.patch" target="_blank">fix-build-in-windows.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c77bce443d80168b29abff9dec64f7c9b714437a/ports/gsoap/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/c77bce443d80168b29abff9dec64f7c9b714437a/ports/gsoap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6165a89674c040800226005f21ae0e7c19a04ede/ports/dpetkov-semver/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6165a89674c040800226005f21ae0e7c19a04ede/ports/dpetkov-semver/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/6165a89674c040800226005f21ae0e7c19a04ede/ports/dpetkov-semver/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-08-16</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-2-Clause</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-07-07</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!(linux | osx | arm | uwp)</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -209,15 +201,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://sourceforge.net/projects/gsoap2/">https://sourceforge.net/projects/gsoap2/</a>
+                    <a href="https://github.com/DavidPetkovsek/semver">https://github.com/DavidPetkovsek/semver</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install gsoap</pre>
+                <pre> vcpkg install dpetkov-semver</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port gsoap</pre>
+                <pre> vcpkg add port dpetkov-semver</pre>
             </div>
         </div>
     </div>

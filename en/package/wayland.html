@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     wayland
-                    <span class="package-version">1.25.0</span>
+                    <span class="package-version">1.25.0#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -202,7 +202,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                force-build, force-build
+                                force-build, generated-headers
                                 </div>
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">expat</div>
                                 <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-platform">platform: native</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
@@ -245,7 +245,31 @@
                             <a href="/en/package/wayland.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">wayland</div>
-                                <div class="feature-dep-feature">features: [force-build]</div>
+                                <div class="feature-dep-feature">features: [scanner]</div>
+                                <div class="feature-dep-platform">platform: !native</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">scanner - <i class="feature-description">Build the wayland-scanner host tool without building the Wayland libraries.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/expat.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">expat</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/vcpkg-tool-meson.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">vcpkg-tool-meson</div>
+                                <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -257,6 +281,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.25.0#1</li>
                     <li class="badge badge-primary">1.25.0#0</li>
                     <li class="badge badge-primary">1.23.1#0</li>
                     <li class="badge badge-primary">1.21.0#1</li>
@@ -267,9 +292,9 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/140057915cbe11472be91fab313694304aba43fb/ports/wayland/cross-build.diff" target="_blank">cross-build.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/140057915cbe11472be91fab313694304aba43fb/ports/wayland/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/140057915cbe11472be91fab313694304aba43fb/ports/wayland/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3aa8b347b1fb40c6983adeaa3a22733254413f7/ports/wayland/cross-build.diff" target="_blank">cross-build.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3aa8b347b1fb40c6983adeaa3a22733254413f7/ports/wayland/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a3aa8b347b1fb40c6983adeaa3a22733254413f7/ports/wayland/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -277,7 +302,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-04-08</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-06-30</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
