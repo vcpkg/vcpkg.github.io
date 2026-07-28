@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     vsg
-                    <span class="package-version">1.1.15</span>
+                    <span class="package-version">1.1.15#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -144,6 +144,14 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="libxcb.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libxcb<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform">platform: !(android | windows | osx)</div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -165,14 +173,6 @@
                             <div class="dep-name">vulkan<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
-                    <a href="xcb.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">xcb<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform">platform: !(android | windows | osx)</div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
@@ -223,18 +223,18 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/vulkan-loader.html">
+                            <a href="/en/package/libxcb.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">vulkan-loader</div>
-                                <div class="feature-dep-feature">features: [xcb]</div>
+                                <div class="feature-dep-name">libxcb</div>
+                                <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform">platform: !(android | ios | osx | windows)</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                            <a href="/en/package/xcb.html">
+                            <a href="/en/package/vulkan-loader.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">xcb</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-name">vulkan-loader</div>
+                                <div class="feature-dep-feature">features: [xcb]</div>
                                 <div class="feature-dep-platform">platform: !(android | ios | osx | windows)</div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -246,6 +246,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.1.15#1</li>
                     <li class="badge badge-primary">1.1.15#0</li>
                     <li class="badge badge-primary">1.1.14#0</li>
                     <li class="badge badge-primary">1.1.13#1</li>
@@ -268,8 +269,8 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e88874b6daefcae3ccf6f8acdb3a614bad3edc9e/ports/vsg/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/e88874b6daefcae3ccf6f8acdb3a614bad3edc9e/ports/vsg/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13089abb1790559b60119758e7aebf9019d69a51/ports/vsg/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/13089abb1790559b60119758e7aebf9019d69a51/ports/vsg/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -277,7 +278,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-12</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-07-28</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
