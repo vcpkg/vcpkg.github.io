@@ -13,6 +13,13 @@ docker run --rm -it --mount "type=bind,source=.,target=/dst" "vcpkg-io" bash dst
 
 The `rebuild.sh` script can be modified to build a specific commit in this repository. Alternatively, use `updateAndRebuild.sh` to use the current commit on https://github.com/microsoft/vcpkg 's master branch.
 
+On Windows, the equivalent PowerShell scripts use the `-VcpkgRoot` parameter:
+
+```powershell
+.\scripts\rebuild.ps1 -VcpkgRoot D:\vcpkg
+.\scripts\updateAndRebuild.ps1 -VcpkgRoot D:\vcpkg
+```
+
 ## Start website
 Run:
 ```
