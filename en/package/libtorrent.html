@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libtorrent
-                    <span class="package-version">2.0.11</span>
+                    <span class="package-version">2.1.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -277,7 +277,17 @@
             <div id="used-by-content" class="tab-content">
                 <h2 class="active-header">Used By</h2>
                 <div class="card-container">
-                    <div class="dependency-card">Not used by any other package</div>
+                    <a href="libtorrent.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libtorrent</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                python
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
@@ -285,33 +295,17 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">deprfun - <i class="feature-description">build with deprecated functions enabled</i></div>
+                            <div class="feature-name">deprfun - <i class="feature-description">Build with deprecated libtorrent APIs enabled</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">examples - <i class="feature-description">build the examples in the examples directory</i></div>
+                            <div class="feature-name">examples - <i class="feature-description">Build the examples in the examples directory</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">iconv - <i class="feature-description">build with libiconv</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/libiconv.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">libiconv</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">python - <i class="feature-description">build the python bindings in bindings&#x2F;python directory</i></div>
+                            <div class="feature-name">python - <i class="feature-description">Build the Python bindings</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -323,16 +317,64 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
+                            <a href="/en/package/libtorrent.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libtorrent</div>
+                                <div class="feature-dep-feature">features: [deprfun]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/python3.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">python3</div>
+                                <div class="feature-dep-feature">features: [extensions]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">test - <i class="feature-description">build the libtorrent tests</i></div>
+                            <div class="feature-name">test - <i class="feature-description">Build the libtorrent tests</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">tools - <i class="feature-description">build the tools in the tools directory</i></div>
+                            <div class="feature-name">tools - <i class="feature-description">Build the libtorrent tools</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">webtorrent - <i class="feature-description">Build with WebTorrent&#x2F;WebRTC support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/boost-beast.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">boost-beast</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/boost-json.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">boost-json</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/libdatachannel.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libdatachannel</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -340,6 +382,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">2.1.1#0</li>
                     <li class="badge badge-primary">2.0.11#0</li>
                     <li class="badge badge-primary">2.0.10#0</li>
                     <li class="badge badge-primary">2.0.9#0</li>
@@ -380,16 +423,18 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a11353c6c816809f7bcfb5b3cacc8be9c4bb6b62/ports/libtorrent/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a11353c6c816809f7bcfb5b3cacc8be9c4bb6b62/ports/libtorrent/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e90cc0982b7cfae62447f1f3bed1fbca0bc8f6be/ports/libtorrent/fix-shared-extra-exports.patch" target="_blank">fix-shared-extra-exports.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e90cc0982b7cfae62447f1f3bed1fbca0bc8f6be/ports/libtorrent/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e90cc0982b7cfae62447f1f3bed1fbca0bc8f6be/ports/libtorrent/use-system-libdatachannel.patch" target="_blank">use-system-libdatachannel.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e90cc0982b7cfae62447f1f3bed1fbca0bc8f6be/ports/libtorrent/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-2-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-01-30</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause AND Zlib AND BSL-1.0 AND APSL-2.0 AND BSD-4-Clause</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-08-12</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
