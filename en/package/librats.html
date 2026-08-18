@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - stringzilla</title>
+  <title>vcpkg package - librats</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    stringzilla
-                    <span class="package-version">5.1.2</span>
+                    librats
+                    <span class="package-version">2.0.12</span>
                 </h1>
             </div>
             <div class="package-description">
-                StringZilla is the GodZilla of string libraries, using SIMD and SWAR to accelerate string operations on modern CPUs.
+                C++17 peer-to-peer networking library: encrypted P2P (Noise XX), DHT/mDNS discovery, NAT traversal (STUN/UPnP/NAT-PMP), GossipSub pub/sub, file transfer, optional BitTorrent.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,7 +136,22 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <div class="dependency-card">No Dependencies</div>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="used-by-content" class="tab-content">
@@ -148,57 +163,46 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="no-features">No Features</div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">bindings - <i class="feature-description">Build the C API used by Node.js &#x2F; Python &#x2F; Java bindings</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">search-features - <i class="feature-description">Enable BitTorrent client (bt_*, tracker, disk_io, info_hash spider)</i></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">storage - <i class="feature-description">Enable distributed key-value storage module</i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">5.1.2#0</li>
-                    <li class="badge badge-primary">5.1.1#0</li>
-                    <li class="badge badge-primary">5.1.0#0</li>
-                    <li class="badge badge-primary">4.6.2#0</li>
-                    <li class="badge badge-primary">4.6.1#0</li>
-                    <li class="badge badge-primary">4.6.0#0</li>
-                    <li class="badge badge-primary">4.5.1#0</li>
-                    <li class="badge badge-primary">4.4.2#0</li>
-                    <li class="badge badge-primary">4.4.1#0</li>
-                    <li class="badge badge-primary">4.4.0#0</li>
-                    <li class="badge badge-primary">4.2.3#0</li>
-                    <li class="badge badge-primary">4.2.1#0</li>
-                    <li class="badge badge-primary">4.2.0#0</li>
-                    <li class="badge badge-primary">4.1.0#0</li>
-                    <li class="badge badge-primary">4.0.11#0</li>
-                    <li class="badge badge-primary">4.0.7#0</li>
-                    <li class="badge badge-primary">3.12.6#0</li>
-                    <li class="badge badge-primary">3.12.5#0</li>
-                    <li class="badge badge-primary">3.12.4#0</li>
-                    <li class="badge badge-primary">3.12.3#0</li>
-                    <li class="badge badge-primary">3.12.2#0</li>
-                    <li class="badge badge-primary">3.12.1#0</li>
-                    <li class="badge badge-primary">3.11.3#0</li>
-                    <li class="badge badge-primary">3.11.2#0</li>
-                    <li class="badge badge-primary">3.10.5#0</li>
-                    <li class="badge badge-primary">3.7.0#0</li>
+                    <li class="badge badge-primary">2.0.12#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b3d503fa29d48f9df440863353696d69b8983f7a/ports/stringzilla/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b3d503fa29d48f9df440863353696d69b8983f7a/ports/stringzilla/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ffbe9596560f30c128363d4b9efdff2bcbd90733/ports/librats/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ffbe9596560f30c128363d4b9efdff2bcbd90733/ports/librats/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-08-14</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT AND BSD-3-Clause AND BSD-2-Clause AND BSD-1-Clause</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-08-15</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">Supported on all triplets</pre></div>
+            <div><pre class="support-arch">!uwp</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -210,15 +214,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="https://github.com/ashvardanian/StringZilla">https://github.com/ashvardanian/StringZilla</a>
+                    <a href="https://github.com/librats/librats">https://github.com/librats/librats</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install stringzilla</pre>
+                <pre> vcpkg install librats</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port stringzilla</pre>
+                <pre> vcpkg add port librats</pre>
             </div>
         </div>
     </div>
