@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     glaze
-                    <span class="package-version">8.0.0</span>
+                    <span class="package-version">8.3.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,14 +136,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="asio.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">asio<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -165,6 +157,17 @@
             <div id="used-by-content" class="tab-content">
                 <h2 class="active-header">Used By</h2>
                 <div class="card-container">
+                    <a href="glaze.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">glaze</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                ssl
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                     <a href="marzbanpp.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">marzbanpp</div>
@@ -182,10 +185,34 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">networking - <i class="feature-description">Enable networking support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/asio.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">asio</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">ssl - <i class="feature-description">Enable SSL&#x2F;TLS support for HTTPS servers</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/glaze.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">glaze</div>
+                                <div class="feature-dep-feature">features: [networking]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
                             <a href="/en/package/openssl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">openssl</div>
@@ -201,6 +228,10 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">8.3.0#0</li>
+                    <li class="badge badge-primary">8.2.0#1</li>
+                    <li class="badge badge-primary">8.2.0#0</li>
+                    <li class="badge badge-primary">8.1.0#0</li>
                     <li class="badge badge-primary">8.0.0#0</li>
                     <li class="badge badge-primary">7.9.1#0</li>
                     <li class="badge badge-primary">7.9.0#0</li>
@@ -304,9 +335,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/75826f73dd37afda87591183b837693710f3a334/ports/glaze/001-fix-asio.patch" target="_blank">001-fix-asio.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/75826f73dd37afda87591183b837693710f3a334/ports/glaze/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/75826f73dd37afda87591183b837693710f3a334/ports/glaze/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ad040a56b5f4aad9ca1e0f60c642b8c457fc9900/ports/glaze/001-fix-asio.patch" target="_blank">001-fix-asio.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ad040a56b5f4aad9ca1e0f60c642b8c457fc9900/ports/glaze/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ad040a56b5f4aad9ca1e0f60c642b8c457fc9900/ports/glaze/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/ad040a56b5f4aad9ca1e0f60c642b8c457fc9900/ports/glaze/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -314,7 +346,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-08-03</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-02</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
