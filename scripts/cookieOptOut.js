@@ -10,6 +10,8 @@
     iFrame.style.position = "absolute";
     iFrame.style.border = "none";
     iFrame.src = PRIVACY_ORIGIN + "/dotnetprivacy.html";
+    // the <iframe> is a non-visible element used only as an auxiliary to fetch cookie values, it should not be read by screen readers
+    iFrame.setAttribute("aria-hidden", "true");
     let messageEventListener;
 
     // Promise storing user's 3PAds opt-out status (true = show ads, false = opt-out)
