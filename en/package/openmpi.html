@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     openmpi
-                    <span class="package-version">4.1.8#2</span>
+                    <span class="package-version">5.0.10</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,6 +136,22 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
+                    <a href="hwloc.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">hwloc<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="libevent.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">libevent<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="pkgconf.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">pkgconf<i class="dep-version-min"></i></div>
@@ -225,6 +241,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">5.0.10#0</li>
                     <li class="badge badge-primary">4.1.8#2</li>
                     <li class="badge badge-primary">4.1.8#1</li>
                     <li class="badge badge-primary">4.1.8#0</li>
@@ -249,22 +266,21 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d61518465fb561a1350ded112bc80964b097c04/ports/openmpi/keep_isystem.patch" target="_blank">keep_isystem.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d61518465fb561a1350ded112bc80964b097c04/ports/openmpi/mpi-wrapper.cmake" target="_blank">mpi-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d61518465fb561a1350ded112bc80964b097c04/ports/openmpi/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/0d61518465fb561a1350ded112bc80964b097c04/ports/openmpi/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3216b5541d1e352dbafbe014e154877cc1521f31/ports/openmpi/mpi-wrapper.cmake" target="_blank">mpi-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3216b5541d1e352dbafbe014e154877cc1521f31/ports/openmpi/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/3216b5541d1e352dbafbe014e154877cc1521f31/ports/openmpi/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-08</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause-Open-MPI AND mpich2 AND CECILL-B AND BSD-3-Clause</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-21</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!windows</pre></div>
+            <div><pre class="support-arch">!windows & !android & !x86 & !arm32</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
