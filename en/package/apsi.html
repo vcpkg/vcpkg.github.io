@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     apsi
-                    <span class="package-version">0.11.0#3</span>
+                    <span class="package-version">1.0.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -146,7 +146,7 @@
                     </a>
                     <a href="jsoncpp.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">jsoncpp<i class="dep-version-min"></i></div>
+                            <div class="dep-name">jsoncpp<i class="dep-version-min"> >= 1.9.5</i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -160,9 +160,17 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
+                    <a href="ms-gsl.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">ms-gsl<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
                     <a href="seal.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">seal<i class="dep-version-min"></i></div>
+                            <div class="dep-name">seal<i class="dep-version-min"> >= 4.4.5</i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -171,7 +179,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                ms-gsl, no-throw-tran, zstd
+                                no-throw-tran, zstd
                                 </div>
                             </div>
                         </div>
@@ -221,22 +229,6 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">log4cplus - <i class="feature-description">Use log4cplus for logging.</i></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/log4cplus.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">log4cplus</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
                             <div class="feature-name">zeromq - <i class="feature-description">Use ZeroMQ for networking.</i></div>
                         </div>
                         <div class="section-two">
@@ -264,6 +256,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.0.1#0</li>
                     <li class="badge badge-primary">0.11.0#3</li>
                     <li class="badge badge-primary">0.11.0#2</li>
                     <li class="badge badge-primary">0.11.0#1</li>
@@ -284,21 +277,16 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/fix-c2398.patch" target="_blank">fix-c2398.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/fix-find-kuku.patch" target="_blank">fix-find-kuku.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/fix-find-seal.patch" target="_blank">fix-find-seal.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/fix-jsoncpp-target.patch" target="_blank">fix-jsoncpp-target.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/fix-log4cplus-byte-ambiguity.patch" target="_blank">fix-log4cplus-byte-ambiguity.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f29188ab71f34a184e1868147bea6e519d9d74e4/ports/apsi/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e45d0f61457e096b875fede9506da932bc7bc4f6/ports/apsi/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e45d0f61457e096b875fede9506da932bc7bc4f6/ports/apsi/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-08-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT AND Zlib</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-22</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
