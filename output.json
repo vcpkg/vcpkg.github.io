@@ -1,6 +1,6 @@
 {
-  "Baseline": "52d80838fb40c755b1615fbc9c7b994a33742a22",
-  "Size": 2862,
+  "Baseline": "b61d33065508ba0d5e393206abb3cb2366299699",
+  "Size": 2863,
   "Source": [
     {
       "Name": "3fd",
@@ -1432,23 +1432,26 @@
     },
     {
       "Name": "apsi",
-      "Version": "0.11.0",
-      "Port-Version": 3,
+      "Version": "1.0.1",
       "Description": "APSI is a research library for asymmetric private set intersection.",
       "homepage": "https://github.com/microsoft/APSI",
-      "License": "MIT",
+      "License": "MIT AND Zlib",
       "Dependencies": [
         "flatbuffers",
-        "jsoncpp",
+        {
+          "name": "jsoncpp",
+          "version>=": "1.9.5"
+        },
         "kuku",
+        "ms-gsl",
         {
           "name": "seal",
           "default-features": false,
           "features": [
-            "ms-gsl",
             "no-throw-tran",
             "zstd"
-          ]
+          ],
+          "version>=": "4.4.5"
         },
         {
           "name": "vcpkg-cmake",
@@ -1460,7 +1463,6 @@
         }
       ],
       "Default-Features": [
-        "log4cplus",
         "zeromq"
       ],
       "Features": {
@@ -1476,12 +1478,6 @@
             }
           ]
         },
-        "log4cplus": {
-          "description": "Use log4cplus for logging.",
-          "dependencies": [
-            "log4cplus"
-          ]
-        },
         "zeromq": {
           "description": "Use ZeroMQ for networking.",
           "dependencies": [
@@ -1490,8 +1486,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-10",
-      "LastCommit": "f29188ab71f34a184e1868147bea6e519d9d74e4"
+      "LastModified": "2026-09-22",
+      "LastCommit": "e45d0f61457e096b875fede9506da932bc7bc4f6"
     },
     {
       "Name": "aravis",
@@ -1813,7 +1809,7 @@
     },
     {
       "Name": "argus",
-      "Version": "0.2.1",
+      "Version": "0.3.0",
       "Description": "Argus is a cross-platform modern feature-rich command-line argument parser for C",
       "homepage": "https://github.com/lucocozz/argus",
       "License": "MIT",
@@ -1832,8 +1828,8 @@
           ]
         }
       },
-      "LastModified": "2026-05-14",
-      "LastCommit": "3ed566a31a11cc040127d589c5579656ddf1f906"
+      "LastModified": "2026-09-22",
+      "LastCommit": "9e3427bc82738568947beb508e78231f99c04f4c"
     },
     {
       "Name": "aricpp",
@@ -2811,7 +2807,7 @@
     },
     {
       "Name": "atomic-queue",
-      "Version": "1.9.2",
+      "Version": "1.9.4",
       "Description": "Minimalistic header-only thread-safe ultra-low-latency multiple-producer-multiple-consumer lockless queues based on circular buffer with std::atomic.",
       "homepage": "https://github.com/max0x7ba/atomic_queue",
       "License": "MIT",
@@ -2825,8 +2821,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-15",
-      "LastCommit": "adf1105203fa81efcb9594127b624c50dd900ebf",
+      "LastModified": "2026-09-18",
+      "LastCommit": "c07e933c4cd613dcb0f5e7012d082e3aa3254aa2",
       "Features": []
     },
     {
@@ -3373,7 +3369,7 @@
     },
     {
       "Name": "aws-c-common",
-      "Version": "1.0.0",
+      "Version": "1.0.1",
       "Description": "AWS common library for C",
       "homepage": "https://github.com/awslabs/aws-c-common",
       "License": "Apache-2.0 AND BSD-3-Clause AND MIT",
@@ -3388,8 +3384,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-30",
-      "LastCommit": "88a643813a35111a9e8f4c08eeb2b897467dd6df",
+      "LastModified": "2026-09-22",
+      "LastCommit": "46dc3460d0858505a182472e969a4c1ce93716ff",
       "Features": []
     },
     {
@@ -3514,7 +3510,7 @@
     },
     {
       "Name": "aws-c-s3",
-      "Version": "1.0.0",
+      "Version": "1.1.3",
       "Description": "C99 library implementation for communicating with the S3 service, designed for maximizing throughput on high bandwidth EC2 instances.",
       "homepage": "https://github.com/awslabs/aws-c-s3",
       "License": "Apache-2.0",
@@ -3541,8 +3537,8 @@
           "description": "Whether to include the s3 endpoint resolver and related config files"
         }
       },
-      "LastModified": "2026-08-31",
-      "LastCommit": "6ad206f2bf58cab83ac7479ddfcde502e0ac40fc"
+      "LastModified": "2026-09-22",
+      "LastCommit": "e4f73fe114a4b7c6cb421aa9e93af6bb5a70cf12"
     },
     {
       "Name": "aws-c-sdkutils",
@@ -3588,7 +3584,7 @@
     },
     {
       "Name": "aws-crt-cpp",
-      "Version": "0.43.6",
+      "Version": "0.43.7",
       "Description": "C++ wrapper around the aws-c-* libraries. Provides Cross-Platform Transport Protocols and SSL/TLS implementations for C++.",
       "homepage": "https://github.com/awslabs/aws-crt-cpp",
       "License": "Apache-2.0",
@@ -3616,13 +3612,13 @@
           "host": true
         }
       ],
-      "LastModified": "2026-09-10",
-      "LastCommit": "311b6b275fd397e298b58fde32d7fed4769eeba1",
+      "LastModified": "2026-09-18",
+      "LastCommit": "0a5b937829f66d96b6ab279befebfa5e1ded648a",
       "Features": []
     },
     {
       "Name": "aws-lambda-cpp",
-      "Version": "0.2.10",
+      "Version": "1.0.1",
       "Description": "C++ Runtime for AWS Lambda.",
       "License": "Apache-2.0",
       "Supports": "linux",
@@ -3637,8 +3633,8 @@
           "host": true
         }
       ],
-      "LastModified": "2024-01-22",
-      "LastCommit": "ad959f8de842f54ab30d53455f695d3f99435a17",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ba6cd7818b96f03f581c4be8762870beb85c7127",
       "Features": []
     },
     {
@@ -6900,7 +6896,7 @@
     },
     {
       "Name": "blosc2",
-      "Version": "3.3.2",
+      "Version": "3.3.4",
       "Description": "A fast, compressed, persistent binary data store library for C.",
       "homepage": "https://github.com/Blosc/c-blosc2",
       "License": "BSD-3-Clause AND MIT AND BSD-2-Clause",
@@ -6934,8 +6930,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-13",
-      "LastCommit": "c61aa239e2454ed0120a5a0e9afb5434409aecdc"
+      "LastModified": "2026-09-14",
+      "LastCommit": "6a108a998c4cfaebc309bcc5718e751419fa05c7"
     },
     {
       "Name": "blpapi",
@@ -17290,8 +17286,7 @@
     },
     {
       "Name": "cairo",
-      "Version": "1.18.4",
-      "Port-Version": 1,
+      "Version": "1.18.6",
       "Description": "Cairo is a 2D graphics library with support for multiple output devices. Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers, PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB.",
       "homepage": "https://cairographics.org",
       "License": "LGPL-2.1-only OR MPL-1.1",
@@ -17357,8 +17352,8 @@
           ]
         }
       },
-      "LastModified": "2025-10-13",
-      "LastCommit": "4cc89db96fc6bdacaf26aa034bba1812ac061f52"
+      "LastModified": "2026-09-23",
+      "LastCommit": "dd66fb0e91a27da86229b69ac475a6e975977acb"
     },
     {
       "Name": "cairomm",
@@ -17381,7 +17376,7 @@
     },
     {
       "Name": "calceph",
-      "Version": "5.0.0",
+      "Version": "5.0.1",
       "Description": "C library to access the binary planetary ephemeris files.",
       "homepage": "https://calceph.imcce.fr/",
       "Documentation": "https://calceph.imcce.fr/docs/latest/html/c/index.html",
@@ -17397,8 +17392,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-06",
-      "LastCommit": "12b52b38ec6c82585e4ccd3f2a8b06c8f13f0c96",
+      "LastModified": "2026-09-21",
+      "LastCommit": "086179d50042f308a2b1bff5ab5482238a9f3417",
       "Features": []
     },
     {
@@ -17547,7 +17542,7 @@
     },
     {
       "Name": "casadi",
-      "Version": "3.8.0",
+      "Version": "3.8.1",
       "Description": "CasADi is a symbolic framework for numeric optimization implementing automatic differentiation in forward and reverse modes on sparse matrix-valued computational graphs. It supports self-contained C-code generation and interfaces state-of-the-art codes such as SUNDIALS, IPOPT etc. It can be used from C++, Python or Matlab/Octave.",
       "homepage": "https://web.casadi.org",
       "License": "LGPL-3.0-only",
@@ -17562,8 +17557,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-09-02",
-      "LastCommit": "ae853ae70915721fa61a5b697cf4a49d68a31f44",
+      "LastModified": "2026-09-20",
+      "LastCommit": "fd901660339dc25b9748f1d81e1141b4309d3d5f",
       "Features": []
     },
     {
@@ -18729,7 +18724,7 @@
     },
     {
       "Name": "cleishm-frequency-cpp",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Description": "Type-safe frequency handling library modeled after std::chrono",
       "homepage": "https://github.com/cleishm/frequency-cpp",
       "License": "MIT",
@@ -18744,8 +18739,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-13",
-      "LastCommit": "692583d333c4472a2c9bd1e329cb6a32876eb6ea",
+      "LastModified": "2026-09-14",
+      "LastCommit": "0591fe0cc3ce236535cfbd2649eb62c08ad1ffe7",
       "Features": []
     },
     {
@@ -19079,7 +19074,7 @@
     },
     {
       "Name": "cnats",
-      "Version": "3.13.0",
+      "Version": "3.14.0",
       "Description": "A C client for the NATS messaging system",
       "homepage": "https://github.com/nats-io/nats.c",
       "License": "Apache-2.0",
@@ -19110,8 +19105,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-02",
-      "LastCommit": "836d5e90fd474b2f664ede6be7eadd6cd745e8c4"
+      "LastModified": "2026-09-22",
+      "LastCommit": "9cd6dd9009d2a9b27dd943aa0ca2ca6cd61a4089"
     },
     {
       "Name": "cnl",
@@ -19389,7 +19384,7 @@
     },
     {
       "Name": "coinbase-advanced-cpp",
-      "Version": "1.0.1",
+      "Version": "2.0.0",
       "Description": "C++20 SDK for the Coinbase Advanced API (REST + WebSocket).",
       "homepage": "https://github.com/SlickQuant/coinbase-advanced-cpp",
       "License": "MIT",
@@ -19408,7 +19403,7 @@
         },
         {
           "name": "slick-net",
-          "version>=": "3.0.0"
+          "version>=": "4.0.0"
         },
         {
           "name": "vcpkg-cmake",
@@ -19419,8 +19414,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-30",
-      "LastCommit": "2687ff07e8ca1e7f56030e809c8c2c5227975a7b",
+      "LastModified": "2026-09-23",
+      "LastCommit": "95143a6455757ca560b57237a243df4fbd5eb8de",
       "Features": []
     },
     {
@@ -19592,7 +19587,7 @@
     },
     {
       "Name": "comms",
-      "Version": "5.5.2",
+      "Version": "5.5.3",
       "Description": "COMMS is the C++(11) headers only, platform independent library, which makes the implementation of a communication protocol to be an easy and relatively quick process.",
       "homepage": "https://commschamp.github.io/",
       "Documentation": "https://github.com/commschamp/comms",
@@ -19607,19 +19602,22 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-22",
-      "LastCommit": "052c8fcb758e4d1ec280ef0ad83bef611d591553",
+      "LastModified": "2026-09-14",
+      "LastCommit": "2973dc1daa548cc96e2d32d331b82c8edf1825f7",
       "Features": []
     },
     {
       "Name": "comms-ublox",
-      "Version": "3.0.7",
+      "Version": "3.0.8",
       "Description": "UBLOX (UBX) protocol definition, generated out of cc.ublox.commsdsl",
       "homepage": "https://commschamp.github.io/",
       "Documentation": "https://github.com/commschamp/cc.ublox.generated",
-      "License": null,
+      "License": "MPL-2.0",
       "Dependencies": [
-        "comms",
+        {
+          "name": "comms",
+          "version>=": "5.5.3"
+        },
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -19629,8 +19627,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-24",
-      "LastCommit": "cd61e1e26a038e82d6550a3ebbe0fbbfe7da78e3",
+      "LastModified": "2026-09-15",
+      "LastCommit": "4b6825283f814d7f522aafd11990454ed39e9983",
       "Features": []
     },
     {
@@ -20150,7 +20148,7 @@
     },
     {
       "Name": "cpp-httplib",
-      "Version": "0.54.1",
+      "Version": "0.56.0",
       "Description": "A single file C++11 header-only HTTP/HTTPS server and client library",
       "homepage": "https://github.com/yhirose/cpp-httplib",
       "License": "MIT",
@@ -20193,8 +20191,8 @@
           ]
         }
       },
-      "LastModified": "2026-09-02",
-      "LastCommit": "b45fe136ff576ad06105fed78245e765ab35ad16"
+      "LastModified": "2026-09-14",
+      "LastCommit": "d725c087a0e9ab0d0d359e9e2e6fdbb8cc666773"
     },
     {
       "Name": "cpp-ipc",
@@ -20355,10 +20353,10 @@
     },
     {
       "Name": "cpp-sort",
-      "Version": "2.1.0",
-      "Description": "Sorting algorithms & related tools for C++14",
+      "Version": "2.2.0",
+      "Description": "Sorting algorithms & related tools for C++17",
       "homepage": "https://github.com/Morwenn/cpp-sort/",
-      "License": "MIT",
+      "License": null,
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -20369,8 +20367,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-01-18",
-      "LastCommit": "00aef9fa22461c6b8f37ab4662f3cacf2e97ee6a",
+      "LastModified": "2026-09-11",
+      "LastCommit": "e93e1f6ab41a22fe711b1045dbbac5cbc9db60af",
       "Features": []
     },
     {
@@ -20391,6 +20389,16 @@
       ],
       "LastModified": "2024-12-23",
       "LastCommit": "84630f057cbe9bcfc593c0308e9e0b1689f03f02",
+      "Features": []
+    },
+    {
+      "Name": "cpp-unicodelib",
+      "Version": "2026-09-05",
+      "Description": "A C++17 header-only Unicode library. (Unicode 17.0.0)",
+      "homepage": "https://github.com/yhirose/cpp-unicodelib",
+      "License": "MIT AND Unicode-3.0",
+      "LastModified": "2026-09-17",
+      "LastCommit": "a8e651479553e625f4d380c316bb953fc105cb73",
       "Features": []
     },
     {
@@ -20495,7 +20503,7 @@
     },
     {
       "Name": "cppduals",
-      "Version": "0.9.3",
+      "Version": "0.9.6",
       "Description": [
         "Header-only C++17 dual-number library for exact forward-mode automatic differentiation",
         "If you use this in research, please cite doi:10.21105/joss.01487 (Tesch, JOSS 4(43):1487, 2019)."
@@ -20514,8 +20522,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "ff408b329115d9d2e40f70cc07356a281cd1e866",
+      "LastModified": "2026-09-23",
+      "LastCommit": "acb0937f9ee44d3f9963073a38bcb16d065f0a99",
       "Features": []
     },
     {
@@ -20857,15 +20865,14 @@
     },
     {
       "Name": "cppwinrt",
-      "Version": "2.0.250303.1",
-      "Port-Version": 1,
+      "Version": "3.0.260818.1",
       "Description": "C++/WinRT is a standard C++ language projection for the Windows Runtime.",
       "homepage": "https://github.com/microsoft/cppwinrt",
       "Documentation": "https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/",
       "License": "MIT",
       "Supports": "windows",
-      "LastModified": "2026-04-30",
-      "LastCommit": "8e6be0084fab1936e34dd4092d96855967e63ad1",
+      "LastModified": "2026-09-21",
+      "LastCommit": "bea9a48f022e730ff5a95267764338c25e7d5547",
       "Features": []
     },
     {
@@ -20972,10 +20979,10 @@
     },
     {
       "Name": "cpuid",
-      "Version": "0.8.1",
+      "Version": "0.8.2",
       "Description": "Provides CPU identification for the x86 (and x86_64)",
       "homepage": "https://github.com/anrieff/libcpuid",
-      "License": "MIT",
+      "License": "BSD-2-Clause",
       "Supports": "!uwp & !(windows & arm)",
       "Dependencies": [
         {
@@ -20987,8 +20994,8 @@
           "host": true
         }
       ],
-      "LastModified": "2025-09-03",
-      "LastCommit": "46f0f5e38a1127e1fd0d4106024889958d746178",
+      "LastModified": "2026-09-17",
+      "LastCommit": "fa8cecf91d7f31a1715a7a6524f208897ffb33ce",
       "Features": []
     },
     {
@@ -21571,7 +21578,7 @@
     },
     {
       "Name": "cudnn-frontend",
-      "Version": "1.27.0",
+      "Version": "1.29.0",
       "Description": "cudnn_frontend provides a c++ wrapper for the cudnn backend API and samples on how to use it",
       "homepage": "https://github.com/NVIDIA/cudnn-frontend",
       "License": "Apache-2.0 AND MIT",
@@ -21588,8 +21595,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-15",
-      "LastCommit": "3d5231d5783702dcf323ff38630ea97ca7ff0c6b",
+      "LastModified": "2026-09-18",
+      "LastCommit": "6adca2650aad42e6eb1b6ea41c5fc4c89f81c4ca",
       "Features": []
     },
     {
@@ -22745,7 +22752,8 @@
     },
     {
       "Name": "dawn",
-      "Version": "20260714.215939",
+      "Version": "20260911.162847",
+      "Port-Version": 1,
       "Description": "Dawn is an open-source and cross-platform implementation of the WebGPU standard.",
       "homepage": "https://dawn.googlesource.com/dawn",
       "License": "BSD-3-Clause",
@@ -22853,8 +22861,8 @@
           "supports": "linux | freebsd | openbsd"
         }
       },
-      "LastModified": "2026-07-16",
-      "LastCommit": "908da3a305a0a8028d9602ab241b433652b3df69"
+      "LastModified": "2026-09-18",
+      "LastCommit": "72ab63d882f7c94ed622010804f71febdf9e1265"
     },
     {
       "Name": "daxa",
@@ -24152,7 +24160,7 @@
     {
       "Name": "dpdk",
       "Version": "26.3",
-      "Port-Version": 5,
+      "Port-Version": 6,
       "Description": "A set of libraries and drivers for fast packet processing",
       "homepage": "https://www.dpdk.org/",
       "Documentation": "https://doc.dpdk.org/guides/",
@@ -24277,8 +24285,8 @@
           "description": "Build with fast path traces enabled"
         }
       },
-      "LastModified": "2026-06-01",
-      "LastCommit": "783ee8e599eb63674422ff8d49eea4dd7ee3b277"
+      "LastModified": "2026-09-18",
+      "LastCommit": "7964f974ba8e7a42f867aadae97d1857c1b1873a"
     },
     {
       "Name": "dpetkov-semver",
@@ -24303,10 +24311,10 @@
     },
     {
       "Name": "dpp",
-      "Version": "10.1.5",
+      "Version": "10.1.6",
       "Description": "D++ Extremely Lightweight C++ Discord Library.",
       "homepage": "https://dpp.dev/",
-      "License": "Apache-2.0",
+      "License": "Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND MIT",
       "Supports": "(windows & !static & !uwp) | linux | osx",
       "Dependencies": [
         "nlohmann-json",
@@ -24322,8 +24330,8 @@
         },
         "zlib"
       ],
-      "LastModified": "2026-05-26",
-      "LastCommit": "fb1221d27e6c46fed2950a5cc5c96825886dcd7f",
+      "LastModified": "2026-09-14",
+      "LastCommit": "7a5a88d6dbdb1e4d555f159b2c252e1755ee9054",
       "Features": []
     },
     {
@@ -25167,18 +25175,17 @@
     },
     {
       "Name": "ecbuild",
-      "Version": "3.15.2",
-      "Port-Version": 1,
+      "Version": "3.16.0",
       "Description": "ECMWF CMake build system and CMake macro collection",
       "homepage": "https://github.com/ecmwf/ecbuild",
       "License": null,
-      "LastModified": "2026-08-29",
-      "LastCommit": "91e8cb4be8195112ea3a9c7e5846bd0b3ff74673",
+      "LastModified": "2026-09-18",
+      "LastCommit": "d1092c91da241556e36a8462678efd7d89322cf0",
       "Features": []
     },
     {
       "Name": "eccodes",
-      "Version": "2.48.2",
+      "Version": "2.48.3",
       "Description": "ECMWF GRIB, BUFR and GTS decoding and encoding library and tools",
       "homepage": "https://github.com/ecmwf/eccodes",
       "License": "Apache-2.0",
@@ -25227,12 +25234,12 @@
           ]
         }
       },
-      "LastModified": "2026-09-03",
-      "LastCommit": "be224ad0d6fdc957ffa2c3929671ecef27caf777"
+      "LastModified": "2026-09-22",
+      "LastCommit": "eb119e90e5f991c1840429091ef2c53f7376d96f"
     },
     {
       "Name": "ecm",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Extra CMake Modules (ECM), extra modules and scripts for CMake",
       "homepage": "https://invent.kde.org/frameworks/extra-cmake-modules",
       "Documentation": "https://api.kde.org/ecm/",
@@ -25247,8 +25254,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-20",
-      "LastCommit": "809d4e072ea48e74bc0c5e6c1227a5cc636a63ad",
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8",
       "Features": []
     },
     {
@@ -26048,7 +26055,7 @@
     },
     {
       "Name": "expat",
-      "Version": "2.8.4",
+      "Version": "2.8.5",
       "Description": "XML parser library written in C",
       "homepage": "https://github.com/libexpat/libexpat",
       "License": "MIT AND CC0-1.0",
@@ -26062,8 +26069,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-09-11",
-      "LastCommit": "771b0a2e7c473c3a6bee56553be4d5bb32bb653c",
+      "LastModified": "2026-09-23",
+      "LastCommit": "673823e14f1c45e79941f18d44cfb7e5248a6b9d",
       "Features": []
     },
     {
@@ -26394,8 +26401,7 @@
     },
     {
       "Name": "fast-float",
-      "Version": "8.2.10",
-      "Port-Version": 1,
+      "Version": "8.3.0",
       "Description": "Fast and exact implementation of the C++ from_chars functions for float and double types: 4x faster than strtod",
       "homepage": "https://github.com/fastfloat/fast_float",
       "License": "Apache-2.0 OR BSL-1.0 OR MIT",
@@ -26409,8 +26415,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-23",
-      "LastCommit": "e861f04798ca54fa70ff906b5e43e5fc99b7f406",
+      "LastModified": "2026-09-18",
+      "LastCommit": "adf440693ffeb75b29d5a7bd1c82bca518b8c2c8",
       "Features": []
     },
     {
@@ -26793,8 +26799,7 @@
     },
     {
       "Name": "ffmpeg",
-      "Version": "9.0.1",
-      "Port-Version": 1,
+      "Version": "9.0.2",
       "Description": [
         "A library to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.",
         "FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations."
@@ -26969,14 +26974,6 @@
                 "opengl"
               ],
               "platform": "!uwp & !(arm64 & windows)"
-            },
-            {
-              "name": "ffmpeg",
-              "default-features": false,
-              "features": [
-                "tensorflow"
-              ],
-              "platform": "x64 & !static & !uwp & !windows"
             },
             {
               "name": "ffmpeg",
@@ -27445,13 +27442,6 @@
         "swscale": {
           "description": "Build the swscale library"
         },
-        "tensorflow": {
-          "description": "TensorFlow as a DNN module backend for DNN based filters like sr",
-          "supports": "!static",
-          "dependencies": [
-            "tensorflow"
-          ]
-        },
         "tesseract": {
           "description": "Tesseract, needed for ocr filter",
           "supports": "!static",
@@ -27561,12 +27551,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-17",
-      "LastCommit": "2e6b92385d891ae14291b7b926863f74ed59a7ad"
+      "LastModified": "2026-09-19",
+      "LastCommit": "dc1dbc7d46ceb78858f26d21fd22ee4d530e30ea"
     },
     {
       "Name": "ffmpeg-bin2c",
-      "Version": "9.0.1",
+      "Version": "9.0.2",
       "Description": "Host tool bin2c for FFmpeg build",
       "License": "MIT",
       "Supports": "native",
@@ -27576,8 +27566,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-13",
-      "LastCommit": "36677bbd0b3bf11da7376e62e14bffcc54d2eaeb",
+      "LastModified": "2026-09-19",
+      "LastCommit": "dc1dbc7d46ceb78858f26d21fd22ee4d530e30ea",
       "Features": []
     },
     {
@@ -28200,7 +28190,7 @@
     },
     {
       "Name": "flatcc",
-      "Version": "0.6.3",
+      "Version": "0.6.4",
       "Description": "FlatBuffers Compiler and Library in C for C",
       "homepage": "https://github.com/dvidelabs/flatcc",
       "License": "Apache-2.0",
@@ -28214,8 +28204,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-07",
-      "LastCommit": "1d250ffd1e84e18bb48a74cc1fe6b8e0b60c17c6",
+      "LastModified": "2026-09-22",
+      "LastCommit": "7c8c2a1d2ac1fd14c7309d866c20320e8c055fac",
       "Features": []
     },
     {
@@ -28933,7 +28923,7 @@
     },
     {
       "Name": "freerdp",
-      "Version": "3.31.0",
+      "Version": "3.31.1",
       "Description": "A free implementation of the Remote Desktop Protocol (RDP)",
       "homepage": "https://github.com/FreeRDP/FreeRDP",
       "License": "Apache-2.0 AND BSD-3-Clause",
@@ -29007,8 +28997,8 @@
           "supports": "!android & !ios & !windows & !osx"
         }
       },
-      "LastModified": "2026-08-31",
-      "LastCommit": "d71ed7a78d70065edc7f7faa89499afcd39eee3a"
+      "LastModified": "2026-09-18",
+      "LastCommit": "ea8f2163477c4af274157a42b03b3ae959748511"
     },
     {
       "Name": "freetds",
@@ -29202,10 +29192,10 @@
     },
     {
       "Name": "fribidi",
-      "Version": "1.0.16",
+      "Version": "1.0.17",
       "Description": "GNU FriBidi is an implementation of the Unicode Bidirectional Algorithm (bidi)",
       "homepage": "https://www.gnu.org/software/fribidi",
-      "License": "LGPL-2.1-or-later",
+      "License": "LGPL-2.1-or-later AND Unicode-3.0",
       "Supports": "!uwp",
       "Dependencies": [
         {
@@ -29217,8 +29207,8 @@
           "host": true
         }
       ],
-      "LastModified": "2024-09-27",
-      "LastCommit": "3dacdbc2e2d73b9f830738c629c4cb6b286722d3",
+      "LastModified": "2026-09-22",
+      "LastCommit": "5321e3e9a888b2aaf0369e0aef18bc9120fbccde",
       "Features": []
     },
     {
@@ -30621,8 +30611,7 @@
     },
     {
       "Name": "ggml",
-      "Version": "0.11.1",
-      "Port-Version": 1,
+      "Version": "0.24.0",
       "Description": "Tensor library for machine learning",
       "homepage": "https://github.com/ggml-org/ggml",
       "License": "MIT",
@@ -30679,6 +30668,11 @@
               ]
             },
             {
+              "name": "glslang",
+              "host": true,
+              "version>=": "16.1.0"
+            },
+            {
               "name": "shaderc",
               "host": true
             },
@@ -30687,8 +30681,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-28",
-      "LastCommit": "1d8862cfcb4bca20209ee542ccf1542548bbd198"
+      "LastModified": "2026-09-23",
+      "LastCommit": "117099e6ec313b2226be3f6721bb08dc5ed58b67"
     },
     {
       "Name": "ghc-filesystem",
@@ -31223,7 +31217,7 @@
     },
     {
       "Name": "glaze",
-      "Version": "8.3.0",
+      "Version": "8.4.0",
       "Description": "One of the fastest JSON libraries in the world. Glaze reads and writes from C++ memory, simplifying interfaces and offering incredible performance.",
       "homepage": "https://github.com/stephenberry/glaze",
       "License": "MIT",
@@ -31259,8 +31253,8 @@
           ]
         }
       },
-      "LastModified": "2026-09-02",
-      "LastCommit": "ad040a56b5f4aad9ca1e0f60c642b8c457fc9900"
+      "LastModified": "2026-09-21",
+      "LastCommit": "bb459018d278ab3c5eff40b70d8052bc1a725943"
     },
     {
       "Name": "glbinding",
@@ -31404,11 +31398,11 @@
     },
     {
       "Name": "glib-networking",
-      "Version": "2.80.1",
+      "Version": "2.90.0",
       "Description": "Network extensions for GLib",
       "homepage": "https://gitlab.gnome.org/GNOME/glib-networking",
       "License": "LGPL-2.1-only",
-      "Supports": "!uwp",
+      "Supports": "!uwp & !static",
       "Dependencies": [
         "glib",
         {
@@ -31455,13 +31449,12 @@
           ]
         }
       },
-      "LastModified": "2026-02-04",
-      "LastCommit": "18ee449aa869c450317d7a40c2f93d733f41bf20"
+      "LastModified": "2026-09-21",
+      "LastCommit": "b2165872bdb4d156faebf8b2427c0374668add8f"
     },
     {
       "Name": "glibmm",
-      "Version": "2.88.1",
-      "Port-Version": 1,
+      "Version": "2.90.0",
       "Description": "This is glibmm, a C++ API for parts of glib that are useful for C++.",
       "homepage": "https://www.gtkmm.org.",
       "License": "LGPL-2.1-or-later",
@@ -31479,8 +31472,8 @@
         },
         "zlib"
       ],
-      "LastModified": "2026-09-10",
-      "LastCommit": "b05503a0def5fb6c16fa3ff49fa58bd14b639008",
+      "LastModified": "2026-09-18",
+      "LastCommit": "967230898e4386c0d28ec393354243dd1421124c",
       "Features": []
     },
     {
@@ -31746,7 +31739,7 @@
     },
     {
       "Name": "gmmlib",
-      "Version": "22.10.1",
+      "Version": "22.10.2",
       "Description": "Intel(R) Graphics Memory Management Library",
       "homepage": "https://github.com/intel/gmmlib",
       "License": "MIT AND BSD-2-Clause",
@@ -31757,8 +31750,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-15",
-      "LastCommit": "94a541197763a4f449a1b91478df48c0584a6256",
+      "LastModified": "2026-09-23",
+      "LastCommit": "c091903ed90316bff194d553361f7b964bd2d5a5",
       "Features": []
     },
     {
@@ -35184,10 +35177,10 @@
     },
     {
       "Name": "gtk",
-      "Version": "4.22.4",
+      "Version": "4.24.0",
       "Description": "Portable library for creating graphical user interfaces.",
       "homepage": "https://www.gtk.org/",
-      "License": "LGPL-2.0-only",
+      "License": "LGPL-2.1-or-later AND Apache-2.0",
       "Supports": "!android & !xbox & !(arm64 & windows)",
       "Dependencies": [
         {
@@ -35272,8 +35265,8 @@
           ]
         }
       },
-      "LastModified": "2026-05-15",
-      "LastCommit": "8cef5dcb6d18ec61b37251b509972c1fdf6fc63e"
+      "LastModified": "2026-09-22",
+      "LastCommit": "f9ae10f0b53a7c0a63ce91a8eb601cea474b0d0d"
     },
     {
       "Name": "gtk3",
@@ -35382,7 +35375,7 @@
     },
     {
       "Name": "gtkmm",
-      "Version": "4.22.0",
+      "Version": "4.24.0",
       "Description": "gtkmm is the official C++ interface for the popular GUI library GTK+.",
       "homepage": "https://www.gtkmm.org/",
       "License": "LGPL-3.0-or-later",
@@ -35399,8 +35392,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-03-13",
-      "LastCommit": "df7f3bda71f369d96d4f1891f987e85b9d0232d0",
+      "LastModified": "2026-09-22",
+      "LastCommit": "f9ae10f0b53a7c0a63ce91a8eb601cea474b0d0d",
       "Features": []
     },
     {
@@ -35439,21 +35432,11 @@
     },
     {
       "Name": "gtsam",
-      "Version": "4.2.2",
+      "Version": "4.3.0",
       "Description": "GTSAM is a library of C++ classes that implement smoothing and mapping (SAM) in robotics and vision, using factor graphs and Bayes networks as the underlying computing paradigm rather than sparse matrices.",
       "homepage": "https://github.com/borglab/gtsam",
-      "License": "BSD-3-Clause",
+      "License": "BSD-3-Clause AND MIT AND MPL-2.0",
       "Dependencies": [
-        "boost-assign",
-        "boost-chrono",
-        "boost-filesystem",
-        "boost-format",
-        "boost-graph",
-        "boost-math",
-        "boost-program-options",
-        "boost-ptr-container",
-        "boost-serialization",
-        "boost-timer",
         "eigen3",
         "metis",
         {
@@ -35466,6 +35449,17 @@
         }
       ],
       "Features": {
+        "boost": {
+          "description": "Boost serialization and other remaining Boost-dependent features",
+          "dependencies": [
+            "boost-chrono",
+            "boost-graph",
+            "boost-program-options",
+            "boost-random",
+            "boost-serialization",
+            "boost-timer"
+          ]
+        },
         "tbb": {
           "description": "Use GTSAM parallelization",
           "dependencies": [
@@ -35473,8 +35467,8 @@
           ]
         }
       },
-      "LastModified": "2026-07-06",
-      "LastCommit": "081d23100a052155e204d926593e6ea38686fb12"
+      "LastModified": "2026-09-23",
+      "LastCommit": "8948160a6f307241436b11c2a305c3760651222b"
     },
     {
       "Name": "guetzli",
@@ -36043,8 +36037,7 @@
     },
     {
       "Name": "halide",
-      "Version": "18.0.0",
-      "Port-Version": 1,
+      "Version": "21.0.0",
       "Description": "Halide is a programming language designed to make it easier to write high-performance image and array processing code on modern machines.",
       "homepage": "https://github.com/halide/Halide",
       "License": "MIT",
@@ -36087,9 +36080,13 @@
           "features": [
             "clang",
             "enable-rtti",
+            "lld",
+            "target-webassembly",
+            "target-x86",
             "tools"
           ]
         },
+        "spirv-headers",
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -36097,7 +36094,8 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        }
+        },
+        "vulkan-headers"
       ],
       "Features": {
         "target-aarch64": {
@@ -36245,8 +36243,8 @@
           ]
         }
       },
-      "LastModified": "2024-11-25",
-      "LastCommit": "2bf7865b9a85079e7a49bab6fe269fec6ea9dcca"
+      "LastModified": "2026-09-17",
+      "LastCommit": "62f86d7f9e69832798f2db8db6930dfed7b81498"
     },
     {
       "Name": "hamlib",
@@ -36599,7 +36597,7 @@
     },
     {
       "Name": "harfbuzz",
-      "Version": "14.4.0",
+      "Version": "14.5.0",
       "Description": "HarfBuzz OpenType text shaping engine",
       "homepage": "https://github.com/harfbuzz/harfbuzz",
       "License": "MIT-Modern-Variant AND MIT",
@@ -36699,8 +36697,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-28",
-      "LastCommit": "8278385629de540714418325d67fc51d3ba10977"
+      "LastModified": "2026-09-23",
+      "LastCommit": "43e65f40a8a835416bb974c1e05bb39ffe8b35e7"
     },
     {
       "Name": "hash-library",
@@ -37274,7 +37272,7 @@
     {
       "Name": "highs",
       "Version": "1.15.1",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "High performance library to solve linear, mixed-integer, and convex quadratic optimization problems.",
       "homepage": "https://highs.dev",
       "License": "MIT AND BSD-3-Clause AND Zlib",
@@ -37289,9 +37287,24 @@
         },
         "zlib"
       ],
-      "LastModified": "2026-08-14",
-      "LastCommit": "173a20135d7daa83d048d25f50506b6eba8c0d5e",
-      "Features": []
+      "Features": {
+        "extras": {
+          "description": "Build the HiPO interior point solver, using OpenBLAS on Windows/Linux and Accelerate on macOS",
+          "license": "Apache-2.0",
+          "dependencies": [
+            "blas",
+            {
+              "name": "openblas",
+              "features": [
+                "threads"
+              ],
+              "platform": "!osx"
+            }
+          ]
+        }
+      },
+      "LastModified": "2026-09-14",
+      "LastCommit": "5f2bf1ae33f3e68c0d596c7571e011f25cfb5120"
     },
     {
       "Name": "highway",
@@ -37614,7 +37627,7 @@
     },
     {
       "Name": "huira",
-      "Version": "0.9.8",
+      "Version": "0.9.9",
       "Description": "A library for space rendering, LiDAR simulation, and solar radiation pressure modeling.",
       "homepage": "https://github.com/huira-render/huira",
       "Documentation": "https://docs.huira.space",
@@ -37666,8 +37679,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "e7d346886edf5ddcc4bf5b698157e96817252655"
+      "LastModified": "2026-09-14",
+      "LastCommit": "ff0a89211d0e0cf19ba70f939f10dd7f8c4184fa"
     },
     {
       "Name": "hungarian",
@@ -37739,7 +37752,7 @@
     {
       "Name": "hyperscan",
       "Version": "5.4.2",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "A regular expression library with O(length of input) match times that takes advantage of Intel hardware to provide blazing speed.",
       "homepage": "https://www.hyperscan.io",
       "License": "BSD-3-Clause",
@@ -37774,8 +37787,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-05-14",
-      "LastCommit": "e175d8d19dfe9ba4c4e82bd43835346d34f87e56",
+      "LastModified": "2026-09-17",
+      "LastCommit": "e4161dbac4fce60b4c94b3b7db01e5710815b410",
       "Features": []
     },
     {
@@ -38249,7 +38262,7 @@
     },
     {
       "Name": "imath",
-      "Version": "3.2.2",
+      "Version": "3.2.3",
       "Description": "Imath is a C++ and Python library of 2D and 3D vector, matrix, and math operations for computer graphics.",
       "homepage": "https://github.com/AcademySoftwareFoundation/Imath",
       "License": "BSD-3-Clause",
@@ -38263,8 +38276,8 @@
           "host": true
         }
       ],
-      "LastModified": "2025-10-09",
-      "LastCommit": "958592be61f9fa29c3fd0b8e0fd44a97447cd08d",
+      "LastModified": "2026-09-23",
+      "LastCommit": "27397656d994c7375f25537b55490a0ffcbfc775",
       "Features": []
     },
     {
@@ -38761,7 +38774,7 @@
     },
     {
       "Name": "iniparser",
-      "Version": "4.2.6",
+      "Version": "4.3.0",
       "Description": "C library for parsing INI-style files",
       "homepage": "https://github.com/ndevilla/iniparser",
       "License": "MIT",
@@ -38775,8 +38788,8 @@
           "host": true
         }
       ],
-      "LastModified": "2025-09-04",
-      "LastCommit": "13748f7a0e6aba896412830c76ac878e5b494d08",
+      "LastModified": "2026-09-21",
+      "LastCommit": "8bdff015da616766d092609e22abaa9e220a19e5",
       "Features": []
     },
     {
@@ -40218,7 +40231,7 @@
     },
     {
       "Name": "karchive",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "File compression",
       "homepage": "https://invent.kde.org/frameworks/karchive",
       "Documentation": "https://api.kde.org/karchive-index.html",
@@ -40278,12 +40291,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kauth",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Execute actions as privileged user",
       "homepage": "https://invent.kde.org/frameworks/kauth",
       "Documentation": "https://api.kde.org/kauth-index.html",
@@ -40338,12 +40351,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kbreezeicons",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Breeze icon theme for KDE Frameworks 6",
       "homepage": "https://invent.kde.org/frameworks/breeze-icons",
       "Documentation": "https://api.kde.org/breeze-icons-index.html",
@@ -40367,8 +40380,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7",
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8",
       "Features": []
     },
     {
@@ -40401,7 +40414,7 @@
     },
     {
       "Name": "kcodecs",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "String encoding library",
       "homepage": "https://invent.kde.org/frameworks/kcodecs",
       "Documentation": "https://api.kde.org/kcodecs-index.html",
@@ -40434,12 +40447,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kconfig",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Configuration system",
       "homepage": "https://invent.kde.org/frameworks/kconfig",
       "Documentation": "https://api.kde.org/kconfig-index.html",
@@ -40481,12 +40494,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kcoreaddons",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Addons to QtCore",
       "homepage": "https://invent.kde.org/frameworks/kcoreaddons",
       "Documentation": "https://api.kde.org/kcoreaddons-index.html",
@@ -40528,8 +40541,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kcp",
@@ -40552,7 +40565,7 @@
     },
     {
       "Name": "kcrash",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "KCrash provides support for intercepting and handling application crashes.",
       "homepage": "https://invent.kde.org/frameworks/kcrash",
       "Documentation": "https://api.kde.org/kcrash-index.html",
@@ -40573,8 +40586,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7",
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8",
       "Features": []
     },
     {
@@ -40609,7 +40622,7 @@
     },
     {
       "Name": "kdbusaddons",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Convenience classes for D-Bus",
       "homepage": "https://invent.kde.org/frameworks/kdbusaddons",
       "Documentation": "https://api.kde.org/kdbusaddons-index.html",
@@ -40646,8 +40659,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kddockwidgets",
@@ -41006,28 +41019,6 @@
       ],
       "LastModified": "2025-04-29",
       "LastCommit": "bd26ad17899bc79e3ad398270e345e3e43a667a6",
-      "Features": []
-    },
-    {
-      "Name": "keccak-tiny",
-      "Version": "2014-09-08",
-      "Port-Version": 2,
-      "Description": "A tiny implementation of SHA-3, SHAKE, Keccak, and sha3sum",
-      "homepage": "https://github.com/coruus/keccak-tiny",
-      "License": "CC0-1.0",
-      "Supports": "!android",
-      "Dependencies": [
-        {
-          "name": "vcpkg-cmake",
-          "host": true
-        },
-        {
-          "name": "vcpkg-cmake-config",
-          "host": true
-        }
-      ],
-      "LastModified": "2024-06-14",
-      "LastCommit": "47633daa65ac56b82d58da47ee083aab2171d400",
       "Features": []
     },
     {
@@ -42550,7 +42541,7 @@
     },
     {
       "Name": "kf6-solid",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Desktop hardware abstraction",
       "homepage": "https://invent.kde.org/frameworks/solid",
       "Documentation": "https://api.kde.org/solid-index.html",
@@ -42595,8 +42586,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kfr",
@@ -42637,7 +42628,7 @@
     },
     {
       "Name": "kglobalaccel",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Global desktop keyboard shortcuts",
       "homepage": "https://invent.kde.org/frameworks/kglobalaccel",
       "Documentation": "https://api.kde.org/kglobalaccel-index.html",
@@ -42671,12 +42662,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kguiaddons",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Addons to QtGui",
       "homepage": "https://invent.kde.org/frameworks/kguiaddons",
       "Documentation": "https://api.kde.org/kguiaddons-index.html",
@@ -42716,12 +42707,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "ki18n",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Advanced internationalization framework",
       "homepage": "https://invent.kde.org/frameworks/ki18n",
       "Documentation": "https://api.kde.org/ki18n-index.html",
@@ -42750,6 +42741,12 @@
         }
       ],
       "Features": {
+        "iso-codes": {
+          "description": "Build with support of iso-codes",
+          "dependencies": [
+            "iso-codes"
+          ]
+        },
         "qml": {
           "description": "Build with support for scripted translations",
           "dependencies": [
@@ -42760,8 +42757,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kinectsdk1",
@@ -42866,7 +42863,7 @@
     },
     {
       "Name": "kitemmodels",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Models for Qt Model/View system",
       "homepage": "https://invent.kde.org/frameworks/kitemmodels",
       "Documentation": "https://api.kde.org/kitemmodels-index.html",
@@ -42885,13 +42882,23 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7",
-      "Features": []
+      "Features": {
+        "qml": {
+          "description": "Build QML integration and plugins",
+          "dependencies": [
+            {
+              "name": "qtdeclarative",
+              "default-features": false
+            }
+          ]
+        }
+      },
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kitemviews",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Widget addons for Qt Model/View",
       "homepage": "https://invent.kde.org/frameworks/kitemviews",
       "Documentation": "https://api.kde.org/kitemviews-index.html",
@@ -42938,8 +42945,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kleidiai",
@@ -43317,7 +43324,7 @@
     },
     {
       "Name": "kwidgetsaddons",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Addons to QtWidgets",
       "homepage": "https://invent.kde.org/frameworks/kwidgetsaddons",
       "Documentation": "https://api.kde.org/kwidgetsaddons-index.html",
@@ -43364,12 +43371,12 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kwindowsystem",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Access to the windowing system",
       "homepage": "https://invent.kde.org/frameworks/kwindowsystem",
       "Documentation": "https://api.kde.org/kwindowsystem-index.html",
@@ -43424,8 +43431,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "kwsys",
@@ -43825,7 +43832,7 @@
     },
     {
       "Name": "level-zero",
-      "Version": "1.32.0",
+      "Version": "1.33.1",
       "Description": "oneAPI Level Zero Specification Headers and Loader.",
       "homepage": "https://github.com/oneapi-src/level-zero",
       "License": "MIT AND Apache-2.0",
@@ -43840,8 +43847,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-20",
-      "LastCommit": "07425ae85e730721ba2deeb55937be1498a7115a",
+      "LastModified": "2026-09-15",
+      "LastCommit": "4a93e615730c8593f5b68cbd34db8881af742307",
       "Features": []
     },
     {
@@ -45266,10 +45273,10 @@
     },
     {
       "Name": "libde265",
-      "Version": "1.1.1",
+      "Version": "1.1.3",
       "Description": "Open h.265 video codec implementation.",
       "homepage": "https://www.libde265.org/",
-      "License": "LGPL-3.0-only",
+      "License": "LGPL-3.0-only AND DOC",
       "Supports": "!uwp & !xbox",
       "Dependencies": [
         {
@@ -45281,9 +45288,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-04",
-      "LastCommit": "24f823387ecf09661aaadcda7a024b0398fe8919",
-      "Features": []
+      "Features": {
+        "decoder-tool": {
+          "description": "Build the dec265 decoder tool",
+          "license": "MIT AND BSD-4-Clause"
+        }
+      },
+      "LastModified": "2026-09-22",
+      "LastCommit": "68112cf89d41fdb70c5910f7581707135be298f4"
     },
     {
       "Name": "libdeflate",
@@ -45584,7 +45596,7 @@
     },
     {
       "Name": "libe57format",
-      "Version": "3.4.0",
+      "Version": "3.4.1",
       "Description": "A library to provide read & write support for the E57 file format.",
       "homepage": "https://github.com/asmaloney/libE57Format",
       "License": "BSL-1.0",
@@ -45603,8 +45615,8 @@
           "default-features": false
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "529405e29a003008b9d172e60e915e9f3386f38d",
+      "LastModified": "2026-09-21",
+      "LastCommit": "fa8cbe73287ce9e1924a73fef9b58d5b736bb4f9",
       "Features": []
     },
     {
@@ -45741,7 +45753,7 @@
     {
       "Name": "libevent",
       "Version": "2.1.12+20230128",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "An event notification library",
       "homepage": "https://github.com/libevent/libevent",
       "License": "BSD-3-Clause",
@@ -45775,8 +45787,8 @@
           "description": "Support for thread"
         }
       },
-      "LastModified": "2024-06-19",
-      "LastCommit": "6db51d86a9c2796581d74c9a7eb46e52ee8cb7eb"
+      "LastModified": "2026-09-23",
+      "LastCommit": "b61d33065508ba0d5e393206abb3cb2366299699"
     },
     {
       "Name": "libeventheader-decode",
@@ -46872,10 +46884,10 @@
     },
     {
       "Name": "libheif",
-      "Version": "1.23.2",
+      "Version": "1.23.5",
       "Description": "libheif is an HEIF and AVIF file format decoder and encoder.",
       "homepage": "http://www.libheif.org/",
-      "License": "LGPL-3.0-only",
+      "License": "LGPL-3.0-only AND MIT",
       "Supports": "!xbox",
       "Dependencies": [
         "libde265",
@@ -46907,10 +46919,18 @@
           ]
         },
         "h264-decoder": {
-          "description": "OpenH264 decoder",
+          "description": "OpenH264 AVC decoder",
           "license": "BSD-2-Clause",
           "dependencies": [
             "openh264"
+          ]
+        },
+        "header-compression": {
+          "description": "Support for HEIF header compression",
+          "license": "LGPL-3.0-only",
+          "dependencies": [
+            "brotli",
+            "zlib"
           ]
         },
         "hevc": {
@@ -46921,9 +46941,10 @@
           ]
         },
         "iso23001-17": {
-          "description": "Support for ISO23001-17 (uncompressed) codec (experimental)",
+          "description": "Support for ISO23001-17 (uncompressed) codec",
           "license": "LGPL-3.0-only",
           "dependencies": [
+            "brotli",
             "zlib"
           ]
         },
@@ -46941,6 +46962,14 @@
             "openjpeg"
           ]
         },
+        "uvg266": {
+          "description": "uvg266 VVC encoder",
+          "supports": "!x86",
+          "license": "BSD-3-Clause",
+          "dependencies": [
+            "uvg266"
+          ]
+        },
         "x264": {
           "description": "x264 AVC encoder",
           "license": "GPL-2.0-or-later",
@@ -46949,8 +46978,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-31",
-      "LastCommit": "40b11e0869a93e6eafc65cb41b6060de2387e0fb"
+      "LastModified": "2026-09-22",
+      "LastCommit": "b30c88338f4ec47a322a81f4113d7385702e03a7"
     },
     {
       "Name": "libhsplasma",
@@ -47456,10 +47485,12 @@
     {
       "Name": "libjpeg-turbo",
       "Version": "3.2.0",
+      "Port-Version": 1,
       "Description": "libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.",
       "homepage": "https://libjpeg-turbo.org/",
-      "License": "BSD-3-Clause",
+      "License": "BSD-3-Clause AND IJG",
       "Dependencies": [
+        "libspng",
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -47467,7 +47498,8 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        }
+        },
+        "zlib"
       ],
       "Features": {
         "jpeg7": {
@@ -47480,8 +47512,8 @@
           "description": "Build executables"
         }
       },
-      "LastModified": "2026-07-01",
-      "LastCommit": "0c2253bac5c7ce253bdbccb9880a2c47b47f7c9c"
+      "LastModified": "2026-09-17",
+      "LastCommit": "d53f25d56e7806475054f624439e93ee38e1e81d"
     },
     {
       "Name": "libjuice",
@@ -47874,10 +47906,10 @@
     },
     {
       "Name": "liblzma",
-      "Version": "5.8.3",
+      "Version": "5.8.4",
       "Description": "Compression library with an API similar to that of zlib.",
       "homepage": "https://tukaani.org/xz/",
-      "License": null,
+      "License": "0BSD",
       "Dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -47890,11 +47922,12 @@
       ],
       "Features": {
         "tools": {
-          "description": "Build tools"
+          "description": "Build tools",
+          "license": "LGPL-2.1-or-later"
         }
       },
-      "LastModified": "2026-04-02",
-      "LastCommit": "8b40b8bc951475d5efcb661b032ccf7db40df57d"
+      "LastModified": "2026-09-15",
+      "LastCommit": "9e44ec0e9f247d77c230ced0ee66c76296837807"
     },
     {
       "Name": "libmad",
@@ -48262,7 +48295,7 @@
     },
     {
       "Name": "libmodbus",
-      "Version": "3.1.12",
+      "Version": "3.2.0",
       "Description": "libmodbus is a free software library to send/receive data with a device which respects the Modbus protocol",
       "homepage": "https://github.com/stephane/libmodbus",
       "License": "LGPL-2.1-or-later",
@@ -48273,8 +48306,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-03-09",
-      "LastCommit": "7f3deaa9f42114202e6b6f8890cc58f5b3226089",
+      "LastModified": "2026-09-19",
+      "LastCommit": "b73465f152a91ddaad6256c7d29ef000da18345b",
       "Features": []
     },
     {
@@ -48612,6 +48645,23 @@
       ],
       "LastModified": "2026-05-30",
       "LastCommit": "e40cf469e336487149889b4fcee23df9e8ff97be",
+      "Features": []
+    },
+    {
+      "Name": "libnatpmp",
+      "Version": "2025-04-03",
+      "Description": "A client-side NAT traversal library implementing the NAT-PMP protocol",
+      "homepage": "http://miniupnp.free.fr/libnatpmp.html",
+      "License": "BSD-3-Clause",
+      "Supports": "!uwp",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        }
+      ],
+      "LastModified": "2026-09-23",
+      "LastCommit": "fe5672002a39946229e878fc496ed631abc61f34",
       "Features": []
     },
     {
@@ -51043,7 +51093,7 @@
     },
     {
       "Name": "libsrtp",
-      "Version": "2.8.0",
+      "Version": "2.8.1",
       "Description": "This package provides an implementation of the Secure Real-time Transport Protocol (SRTP), the Universal Security Transform (UST), and a supporting cryptographic kernel.",
       "homepage": "https://github.com/cisco/libsrtp/",
       "License": "BSD-3-Clause",
@@ -51065,8 +51115,8 @@
           ]
         }
       },
-      "LastModified": "2026-03-17",
-      "LastCommit": "fb31f0bb58ab5e3b3dee4e74eaab3c9b2647801c"
+      "LastModified": "2026-09-22",
+      "LastCommit": "e4cf83c25a80e330522992b7ce9d40a88540c362"
     },
     {
       "Name": "libssh",
@@ -52028,12 +52078,19 @@
     {
       "Name": "liburing",
       "Version": "2.15",
+      "Port-Version": 1,
       "Description": "Linux-native io_uring I/O access library",
       "homepage": "https://github.com/axboe/liburing",
       "License": "(MIT OR LGPL-2.1) AND (MIT OR GPL-2.0 WITH Linux-syscall-note)",
       "Supports": "linux",
-      "LastModified": "2026-06-30",
-      "LastCommit": "1b7038084b0fe157f39d091634b7b59b78c2ad2a",
+      "Dependencies": [
+        {
+          "name": "vcpkg-make",
+          "host": true
+        }
+      ],
+      "LastModified": "2026-09-17",
+      "LastCommit": "c903f98155681fb3e83da51951d0725f7bef53ec",
       "Features": []
     },
     {
@@ -52404,7 +52461,7 @@
     },
     {
       "Name": "libvmaf",
-      "Version": "3.2.0",
+      "Version": "3.2.1",
       "Description": "libvmaf is a library developed by Netflix to compute the VMAF (Video Multi-Method Assessment Fusion) metric.",
       "homepage": "https://github.com/Netflix/vmaf",
       "License": "BSD-2-Clause-Patent",
@@ -52415,8 +52472,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-22",
-      "LastCommit": "ade921ed36f0414d40fafed83f1df7a95c6d1db4",
+      "LastModified": "2026-09-18",
+      "LastCommit": "319504a5326aa870edde46438c5455fa76305a56",
       "Features": []
     },
     {
@@ -53382,7 +53439,7 @@
     },
     {
       "Name": "libxmp",
-      "Version": "4.7.2",
+      "Version": "4.7.3",
       "Description": "Libxmp is a library that renders module files to PCM data.",
       "homepage": "https://sourceforge.net/projects/xmp/",
       "License": "MIT AND 0BSD AND BSD-3-Clause AND ISC AND LicenseRef-Public-Domain",
@@ -53409,8 +53466,8 @@
           "description": "Enable ProWizard format loaders."
         }
       },
-      "LastModified": "2026-07-27",
-      "LastCommit": "32ad2122558e327bf51be8fc3ed23e5f5e34af66"
+      "LastModified": "2026-09-21",
+      "LastCommit": "a6583ebe54c917a87ac94eb6b7574f82dbfd0478"
     },
     {
       "Name": "libxmu",
@@ -54240,12 +54297,15 @@
     },
     {
       "Name": "llama-cpp",
-      "Version": "9030",
+      "Version": "0.4.1",
       "Description": "LLM inference in C/C++",
       "homepage": "https://github.com/ggml-org/llama.cpp",
-      "License": "MIT",
+      "License": "MIT AND Unlicense",
       "Dependencies": [
-        "cpp-httplib",
+        {
+          "name": "cpp-httplib",
+          "default-features": false
+        },
         "ggml",
         "nlohmann-json",
         {
@@ -54262,24 +54322,36 @@
           "description": "Support downloading a model from an URL",
           "dependencies": [
             {
-              "name": "curl",
-              "default-features": false
+              "name": "cpp-httplib",
+              "default-features": false,
+              "features": [
+                "openssl"
+              ]
             }
           ]
         },
         "server": {
-          "description": "Build llama-server and llama-cli"
+          "description": "Build llama-server and llama-cli",
+          "dependencies": [
+            {
+              "name": "llama-cpp",
+              "features": [
+                "tools"
+              ]
+            }
+          ]
         },
         "tools": {
           "description": "Build tools",
+          "license": "BSD-2-Clause AND MIT AND LicenseRef-Public-Domain",
           "dependencies": [
             "miniaudio",
             "stb"
           ]
         }
       },
-      "LastModified": "2026-05-11",
-      "LastCommit": "68fb1ad0dfa102f6c2be6f68ef3cdf26b0692c07"
+      "LastModified": "2026-09-23",
+      "LastCommit": "117099e6ec313b2226be3f6721bb08dc5ed58b67"
     },
     {
       "Name": "llfio",
@@ -54485,8 +54557,7 @@
     },
     {
       "Name": "llvm",
-      "Version": "18.1.6",
-      "Port-Version": 6,
+      "Version": "23.1.2",
       "Description": "The LLVM Compiler Infrastructure.",
       "homepage": "https://llvm.org",
       "License": "Apache-2.0 WITH LLVM-exception",
@@ -54513,7 +54584,7 @@
         "clang",
         "default-targets",
         "enable-bindings",
-        "enable-terminfo",
+        "enable-libxml2",
         "enable-zlib",
         "enable-zstd",
         "lld",
@@ -54540,6 +54611,19 @@
               "default-features": false,
               "features": [
                 "tools"
+              ]
+            }
+          ]
+        },
+        "clang-enable-cir": {
+          "description": "Include ClangIR.",
+          "dependencies": [
+            {
+              "name": "llvm",
+              "default-features": false,
+              "features": [
+                "clang",
+                "mlir"
               ]
             }
           ]
@@ -54631,6 +54715,7 @@
               "name": "llvm",
               "default-features": false,
               "features": [
+                "compiler-rt",
                 "target-arm"
               ]
             }
@@ -54653,15 +54738,15 @@
                 "mlir"
               ]
             },
-            "pybind11",
-            "python3"
+            "python3",
+            {
+              "name": "vcpkg-get-python-packages",
+              "host": true
+            }
           ]
         },
         "enable-rtti": {
           "description": "Build LLVM with run-time type information."
-        },
-        "enable-terminfo": {
-          "description": "Use terminfo database if available."
         },
         "enable-zlib": {
           "description": "Build with ZLib.",
@@ -54679,15 +54764,14 @@
           "description": "Export symbols for plugins."
         },
         "flang": {
-          "description": "Include Fortran front end.",
+          "description": "Include the Flang compiler and runtime libraries.",
           "dependencies": [
             {
               "name": "llvm",
               "default-features": false,
               "features": [
                 "clang",
-                "mlir",
-                "tools"
+                "mlir"
               ]
             }
           ]
@@ -54700,14 +54784,30 @@
               "name": "llvm",
               "default-features": false,
               "features": [
-                "clang",
-                "tools"
+                "clang"
               ]
+            },
+            {
+              "name": "vcpkg-get-python-packages",
+              "host": true
             }
           ]
         },
         "libclc": {
-          "description": "Include OpenCL library."
+          "description": "Include OpenCL library.",
+          "dependencies": [
+            {
+              "name": "llvm",
+              "default-features": false,
+              "features": [
+                "clang",
+                "target-amdgpu",
+                "target-nvptx",
+                "target-spirv",
+                "tools"
+              ]
+            }
+          ]
         },
         "libcxx": {
           "description": "Include libcxx library.",
@@ -54717,8 +54817,7 @@
               "default-features": false,
               "features": [
                 "clang",
-                "libcxxabi",
-                "tools"
+                "libcxxabi"
               ]
             }
           ]
@@ -54731,11 +54830,14 @@
               "default-features": false,
               "features": [
                 "clang",
-                "libcxx",
-                "tools"
+                "libcxx"
               ]
             }
           ]
+        },
+        "libsycl": {
+          "description": "Export libsycl library.",
+          "supports": "!(windows & staticcrt)"
         },
         "libunwind": {
           "description": "Include libunwind library.",
@@ -54768,9 +54870,7 @@
               "name": "llvm",
               "default-features": false,
               "features": [
-                "clang",
-                "enable-terminfo",
-                "tools"
+                "clang"
               ]
             }
           ]
@@ -54782,8 +54882,19 @@
               "name": "llvm",
               "default-features": false,
               "features": [
-                "tools",
                 "utils"
+              ]
+            }
+          ]
+        },
+        "offload": {
+          "description": "Include offload library.",
+          "dependencies": [
+            {
+              "name": "llvm",
+              "default-features": false,
+              "features": [
+                "openmp"
               ]
             }
           ]
@@ -54801,6 +54912,9 @@
             }
           ]
         },
+        "orc-rt": {
+          "description": "Include orc-rt library."
+        },
         "polly": {
           "description": "Include Polly (Polyhedral optimizations for LLVM) project.",
           "dependencies": [
@@ -54808,20 +54922,7 @@
               "name": "llvm",
               "default-features": false,
               "features": [
-                "tools",
                 "utils"
-              ]
-            }
-          ]
-        },
-        "pstl": {
-          "description": "Include pstl (Parallel STL) library.",
-          "dependencies": [
-            {
-              "name": "llvm",
-              "default-features": false,
-              "features": [
-                "tools"
               ]
             }
           ]
@@ -54917,7 +55018,7 @@
           "description": "Build with Sparc backend."
         },
         "target-spirv": {
-          "description": "Build with SPIRV backend (experimental)."
+          "description": "Build with SPIRV backend."
         },
         "target-systemz": {
           "description": "Build with SystemZ backend."
@@ -54953,8 +55054,8 @@
           ]
         }
       },
-      "LastModified": "2026-05-27",
-      "LastCommit": "f4a2b74e2c6e4e419a3d26c41b5fd6e64a711de9"
+      "LastModified": "2026-09-23",
+      "LastCommit": "33d78c1ed898a06938f31312167c7abefd229455"
     },
     {
       "Name": "lmdb",
@@ -55428,7 +55529,7 @@
     },
     {
       "Name": "luajit",
-      "Version": "2026-08-19",
+      "Version": "2026-09-08",
       "Description": "LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language.",
       "homepage": "https://github.com/LuaJIT/LuaJIT",
       "License": "MIT",
@@ -55473,8 +55574,8 @@
           "supports": "native & (arm64 | x64) & (!windows | mingw)"
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "bc0581e1d9b075b09553b5770817c90d9f1b63fc"
+      "LastModified": "2026-09-18",
+      "LastCommit": "344000da1c38035dd4bd5c79c230e82c9592627d"
     },
     {
       "Name": "luasec",
@@ -55522,7 +55623,7 @@
     },
     {
       "Name": "luau",
-      "Version": "0.737",
+      "Version": "0.739",
       "Description": "A fast, small, safe, gradually typed embeddable scripting language derived from Lua",
       "homepage": "https://github.com/luau-lang/luau",
       "License": "MIT",
@@ -55542,8 +55643,8 @@
           "supports": "!uwp"
         }
       },
-      "LastModified": "2026-09-08",
-      "LastCommit": "86f61acf5a72d90847b8137f5a03cffa513f7c75"
+      "LastModified": "2026-09-22",
+      "LastCommit": "c5a785f33c9e076dde99d337654814a9eae01ee9"
     },
     {
       "Name": "lunarg-vulkantools",
@@ -58105,7 +58206,7 @@
     },
     {
       "Name": "md4c",
-      "Version": "0.5.3",
+      "Version": "0.6.0",
       "Description": "MD4C is a C library providing a Markdown parser.",
       "homepage": "https://github.com/mity/md4c",
       "License": "MIT",
@@ -58119,8 +58220,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-04-22",
-      "LastCommit": "42f37e46d37baf7b218966434b91116bddf73461",
+      "LastModified": "2026-09-22",
+      "LastCommit": "20f3f14fe83780ce9fe452ee4ce70ce4ba5cc222",
       "Features": []
     },
     {
@@ -58320,7 +58421,7 @@
     {
       "Name": "mesa",
       "Version": "24.0.7",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "Mesa - The 3D Graphics Library",
       "homepage": "https://www.mesa3d.org/",
       "License": "MIT AND BSL-1.0 AND SGI-B-2.0",
@@ -58368,11 +58469,20 @@
           "description": "Build with llvmpipe",
           "dependencies": [
             {
+              "name": "glslang",
+              "host": true,
+              "features": [
+                "tools"
+              ],
+              "platform": "linux | android"
+            },
+            {
               "name": "llvm",
               "default-features": false,
               "features": [
                 "enable-rtti",
-                "libclc"
+                "libclc",
+                "tools"
               ]
             },
             {
@@ -58408,8 +58518,8 @@
           ]
         }
       },
-      "LastModified": "2025-01-24",
-      "LastCommit": "4a9af5e5efcb24d0c8fcdf82dacf3b2b780b99f8"
+      "LastModified": "2026-09-17",
+      "LastCommit": "62f86d7f9e69832798f2db8db6930dfed7b81498"
     },
     {
       "Name": "meschach",
@@ -58720,7 +58830,7 @@
     },
     {
       "Name": "mimalloc",
-      "Version": "3.5.1",
+      "Version": "3.5.3",
       "Description": "Compact general purpose allocator with excellent performance",
       "homepage": "https://github.com/microsoft/mimalloc",
       "License": "MIT",
@@ -58744,8 +58854,8 @@
           "description": "Use full security mitigations (like guard pages, allocation randomization, double-free mitigation, and free-list corruption detection)"
         }
       },
-      "LastModified": "2026-09-08",
-      "LastCommit": "5804c66010d1fd0ab81146927937481ed2f1189a"
+      "LastModified": "2026-09-17",
+      "LastCommit": "03d1638fa266e1495918ac95c864f2ba8353523a"
     },
     {
       "Name": "mimicpp",
@@ -58836,7 +58946,7 @@
     },
     {
       "Name": "minifb",
-      "Version": "0.11.0",
+      "Version": "0.13.0",
       "Description": "MiniFB (Mini FrameBuffer) is a small cross platform library that makes it easy to render (32-bit) pixels in a window.",
       "homepage": "https://github.com/emoon/minifb",
       "License": "MIT",
@@ -58855,8 +58965,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-30",
-      "LastCommit": "60c7c2c0813e59d7f15bc5e89a25c5bf4e4f070c",
+      "LastModified": "2026-09-14",
+      "LastCommit": "0e5e2e7fcddb72964f970717ee4e73682e88c816",
       "Features": []
     },
     {
@@ -59756,6 +59866,24 @@
       "Features": []
     },
     {
+      "Name": "mpdecimal",
+      "Version": "4.0.1",
+      "Description": "Correctly rounded arbitrary precision decimal floating point arithmetic (libmpdec)",
+      "homepage": "https://www.bytereef.org/mpdecimal/",
+      "License": "BSD-2-Clause",
+      "Supports": "!uwp",
+      "Dependencies": [
+        {
+          "name": "vcpkg-make",
+          "host": true,
+          "platform": "!windows | mingw"
+        }
+      ],
+      "LastModified": "2026-09-17",
+      "LastCommit": "405de27f94c78ac2228dfe654928b162d0b593da",
+      "Features": []
+    },
+    {
       "Name": "mpfr",
       "Version": "4.2.2",
       "Port-Version": 1,
@@ -59807,7 +59935,7 @@
     {
       "Name": "mpi",
       "Version": "1",
-      "Port-Version": 6,
+      "Port-Version": 7,
       "Description": "Message Passing Interface (MPI) is a standardized and portable message-passing standard designed by a group of researchers from academia and industry to function on a wide variety of parallel computing architectures. The standard defines the syntax and semantics of a core of library routines useful to a wide range of users writing portable message-passing programs in C, C++, and Fortran. There are several well-tested and efficient implementations of MPI, many of which are open-source or in the public domain.",
       "License": null,
       "Supports": "!uwp",
@@ -59821,8 +59949,8 @@
           "platform": "!windows"
         }
       ],
-      "LastModified": "2026-03-18",
-      "LastCommit": "9125c7861d9a91b603c2769ea3018eba179eaf02",
+      "LastModified": "2026-09-21",
+      "LastCommit": "3216b5541d1e352dbafbe014e154877cc1521f31",
       "Features": []
     },
     {
@@ -60814,7 +60942,7 @@
     },
     {
       "Name": "nanoflann",
-      "Version": "1.12.1",
+      "Version": "1.13.0",
       "Description": "nanoflann is a C++11 header-only library for building KD-Trees of datasets with different topologies: R2, R3 (point clouds), SO(2) and SO(3) (2D and 3D rotation groups).",
       "homepage": "https://github.com/jlblancoc/nanoflann",
       "License": "BSD-2-Clause",
@@ -60828,8 +60956,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-10",
-      "LastCommit": "cbcd9cc750bdb1f030abc1e465ee81ac6fb3e704",
+      "LastModified": "2026-09-18",
+      "LastCommit": "5001c7695fda28bce743f9c6ee78b462c8a01978",
       "Features": []
     },
     {
@@ -60988,19 +61116,24 @@
     },
     {
       "Name": "nanovg",
-      "Version": "2023-08-26",
+      "Version": "2026-02-19",
       "Description": "NanoVG is small antialiased vector graphics rendering library for OpenGL.",
       "homepage": "https://github.com/memononen/nanovg",
+      "License": "Zlib",
       "Supports": "!uwp",
       "Dependencies": [
         "stb",
         {
           "name": "vcpkg-cmake",
           "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
         }
       ],
-      "LastModified": "2026-02-12",
-      "LastCommit": "72ffac6c917d93150a59fff2667f495786509c52",
+      "LastModified": "2026-09-21",
+      "LastCommit": "9dafa5e088a65e48ed8853a85978f68c90c27d9c",
       "Features": []
     },
     {
@@ -61413,7 +61546,7 @@
     {
       "Name": "netcdf-c",
       "Version": "4.9.3",
-      "Port-Version": 4,
+      "Port-Version": 5,
       "Description": "A set of self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.",
       "homepage": "https://github.com/Unidata/netcdf-c",
       "License": null,
@@ -61536,8 +61669,8 @@
           ]
         }
       },
-      "LastModified": "2026-09-11",
-      "LastCommit": "52d80838fb40c755b1615fbc9c7b994a33742a22"
+      "LastModified": "2026-09-18",
+      "LastCommit": "1ea71e3a88a1ff8ecf0f3e98d46290bb544e121c"
     },
     {
       "Name": "netcdf-cxx4",
@@ -62007,7 +62140,7 @@
     },
     {
       "Name": "nng",
-      "Version": "1.12.0",
+      "Version": "1.12.4",
       "Description": "nanomsg-next-gen, lightweight messaging library",
       "homepage": "https://nng.nanomsg.org",
       "License": "MIT",
@@ -62033,8 +62166,8 @@
           "description": "nng tools (nngcat, for example)"
         }
       },
-      "LastModified": "2026-06-29",
-      "LastCommit": "5f1cc58285f8107052772afee21d295fe6256046"
+      "LastModified": "2026-09-18",
+      "LastCommit": "44420e487de1d2ee76079699106b8fe86832023c"
     },
     {
       "Name": "nngpp",
@@ -62405,6 +62538,7 @@
     {
       "Name": "numcpp",
       "Version": "2.16.1",
+      "Port-Version": 1,
       "Description": "C++ implementation of the Python Numpy library",
       "homepage": "https://dpilger26.github.io/NumCpp",
       "License": "MIT",
@@ -62442,8 +62576,8 @@
           ]
         }
       },
-      "LastModified": "2026-03-30",
-      "LastCommit": "501262d51e0725f81db09cf528e0e3b14bad1527"
+      "LastModified": "2026-09-17",
+      "LastCommit": "e4e2213e51c0cb6b3610a9d1e08ad27efafa52f4"
     },
     {
       "Name": "numkong",
@@ -62494,13 +62628,13 @@
     },
     {
       "Name": "nuspell",
-      "Version": "5.1.8",
+      "Version": "5.1.9",
       "Description": [
         "Nuspell is a fast and safe spelling checker software program.",
         "It is designed for languages with rich morphology and complex word compounding.",
         "Nuspell is written in modern C++ and it supports Hunspell dictionaries."
       ],
-      "homepage": "https://nuspell.github.io/",
+      "homepage": "https://nuspell.github.io",
       "License": "LGPL-3.0-or-later",
       "Supports": "!xbox",
       "Dependencies": [
@@ -62522,8 +62656,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-14",
-      "LastCommit": "ed60c2d9db987655de09259fc606f8f8a7717280"
+      "LastModified": "2026-09-18",
+      "LastCommit": "01d509b036faa3e2d686b1e252267e1662fc630c"
     },
     {
       "Name": "nvidia-cutlass",
@@ -63214,7 +63348,7 @@
     },
     {
       "Name": "octomap",
-      "Version": "1.10.0",
+      "Version": "1.10.1",
       "Description": "An Efficient Probabilistic 3D Mapping Framework Based on Octrees",
       "homepage": "https://octomap.github.io/",
       "License": "BSD-3-Clause",
@@ -63229,8 +63363,8 @@
           "host": true
         }
       ],
-      "LastModified": "2024-04-02",
-      "LastCommit": "1daec834f2095a800631df5d86a7f9075222aebe",
+      "LastModified": "2026-09-22",
+      "LastCommit": "4652a0acb2a491427f51a4afd99aef420bb3b2b8",
       "Features": []
     },
     {
@@ -63517,7 +63651,7 @@
     {
       "Name": "omniorb",
       "Version": "4.3.0",
-      "Port-Version": 5,
+      "Port-Version": 6,
       "Description": "omniORB is a robust high performance CORBA ORB for C++",
       "homepage": "https://omniorb.sourceforge.io/",
       "License": "LGPL-2.1-or-later",
@@ -63536,8 +63670,8 @@
         "zlib",
         "zstd"
       ],
-      "LastModified": "2026-04-23",
-      "LastCommit": "f77737496dabd44c63ecc599dc0f4d6cff30d0d5",
+      "LastModified": "2026-09-21",
+      "LastCommit": "f64c6cfdc73fee2ac58dfbc7009080ff9979d7b1",
       "Features": []
     },
     {
@@ -64013,11 +64147,10 @@
     },
     {
       "Name": "openal-soft",
-      "Version": "1.25.1",
-      "Port-Version": 2,
+      "Version": "1.25.2",
       "Description": "OpenAL Soft is an LGPL-licensed, cross-platform, software implementation of the OpenAL 3D audio API.",
       "homepage": "https://github.com/kcat/openal-soft",
-      "License": "LGPL-2.0-or-later",
+      "License": "LGPL-2.0-or-later AND BSD-3-Clause AND MIT",
       "Supports": "!xbox",
       "Dependencies": [
         {
@@ -64052,8 +64185,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-18",
-      "LastCommit": "341432707e39394e70abbe74c49642dc65e0976c"
+      "LastModified": "2026-09-23",
+      "LastCommit": "398e9a716997ec84676dc7c7afdd51afcede2269"
     },
     {
       "Name": "openblas",
@@ -66385,12 +66518,14 @@
     },
     {
       "Name": "openmpi",
-      "Version": "4.1.8",
-      "Port-Version": 2,
+      "Version": "5.0.10",
       "Description": "The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available. Open MPI offers advantages for system and software vendors, application developers and computer science researchers.",
       "homepage": "https://www.open-mpi.org/",
-      "Supports": "!windows",
+      "License": "BSD-3-Clause-Open-MPI AND mpich2 AND CECILL-B AND BSD-3-Clause",
+      "Supports": "!windows & !android & !x86 & !arm32",
       "Dependencies": [
+        "hwloc",
+        "libevent",
         {
           "name": "pkgconf",
           "host": true
@@ -66401,8 +66536,8 @@
         },
         "zlib"
       ],
-      "LastModified": "2026-05-08",
-      "LastCommit": "0d61518465fb561a1350ded112bc80964b097c04",
+      "LastModified": "2026-09-21",
+      "LastCommit": "3216b5541d1e352dbafbe014e154877cc1521f31",
       "Features": []
     },
     {
@@ -66720,6 +66855,7 @@
     {
       "Name": "openssl",
       "Version": "3.6.4",
+      "Port-Version": 1,
       "Description": "OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.",
       "homepage": "https://www.openssl.org",
       "License": "Apache-2.0",
@@ -66753,8 +66889,8 @@
           "description": "Enable weak-ssl-ciphers"
         }
       },
-      "LastModified": "2026-08-27",
-      "LastCommit": "7e43e0768a5af180a9cf75d87d692dce1b9da34f"
+      "LastModified": "2026-09-21",
+      "LastCommit": "960d40ee7351cca3fc648e9d38993b59f01dfd2b"
     },
     {
       "Name": "opensubdiv",
@@ -66846,7 +66982,7 @@
     },
     {
       "Name": "opentelemetry-cpp",
-      "Version": "1.28.0",
+      "Version": "1.29.0",
       "Description": [
         "OpenTelemetry is a collection of tools, APIs, and SDKs.",
         "You use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior."
@@ -66951,8 +67087,8 @@
           ]
         }
       },
-      "LastModified": "2026-07-22",
-      "LastCommit": "77ce8c50af17c7dfb1e0e213b7a01c05cc06bdf7"
+      "LastModified": "2026-09-18",
+      "LastCommit": "3bc71cd70c40c2b0ec0aa7021d87a666fa1ecff1"
     },
     {
       "Name": "opentelemetry-cpp-contrib-version",
@@ -67118,6 +67254,7 @@
     {
       "Name": "openvino",
       "Version": "2026.3.1",
+      "Port-Version": 1,
       "Maintainers": "OpenVINO Developers <openvino@intel.com>",
       "Summary": "This is a port for Open Visual Inference And Optimization toolkit for AI inference",
       "Description": [
@@ -67304,8 +67441,8 @@
           ]
         }
       },
-      "LastModified": "2026-09-09",
-      "LastCommit": "3f0f863f20492dfeebba48d25099765dd236de8f"
+      "LastModified": "2026-09-17",
+      "LastCommit": "b7fabe2af06cf10ede56a85eb59b7369e184eed0"
     },
     {
       "Name": "openvpn3",
@@ -69572,20 +69709,25 @@
     },
     {
       "Name": "pistache",
-      "Version": "2021-03-31",
-      "Port-Version": 4,
-      "Description": "Pistache is a modern and elegant HTTP and REST framework for C++. It is entirely written in pure-C++11 and provides a clear and pleasant API",
-      "homepage": "https://github.com/oktal/pistache",
-      "Supports": "linux",
+      "Version": "0.4.25",
+      "Description": "Pistache is a modern and elegant HTTP and REST framework for C++. It is entirely written in pure-C++17 and provides a clear and pleasant API",
+      "homepage": "https://github.com/pistacheio/pistache",
+      "License": "Apache-2.0",
+      "Supports": "!android & !windows",
       "Dependencies": [
+        "date",
+        {
+          "name": "libevent",
+          "platform": "osx | bsd"
+        },
         "rapidjson",
         {
           "name": "vcpkg-tool-meson",
           "host": true
         }
       ],
-      "LastModified": "2025-09-24",
-      "LastCommit": "2626652f01caffa87a42f354d6fc43552ebd8db2",
+      "LastModified": "2026-09-23",
+      "LastCommit": "b61d33065508ba0d5e393206abb3cb2366299699",
       "Features": []
     },
     {
@@ -69644,6 +69786,7 @@
     {
       "Name": "pkgconf",
       "Version": "3.0.3",
+      "Port-Version": 1,
       "Description": "pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.",
       "homepage": "https://github.com/pkgconf/pkgconf",
       "License": null,
@@ -69654,8 +69797,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-16",
-      "LastCommit": "6c4c85578e047780802fa2df73208a51ad6ddff6",
+      "LastModified": "2026-09-22",
+      "LastCommit": "cd49c5c9fec3f600b63952873168c011aa253c73",
       "Features": []
     },
     {
@@ -69700,11 +69843,15 @@
     },
     {
       "Name": "plf-colony",
-      "Version": "7.6.10",
+      "Version": "7.7.11",
       "Description": "An unordered C++ data container providing fast iteration/insertion/erasure while maintaining pointer/iterator validity to non-erased elements regardless of insertions/erasures.",
       "homepage": "https://plflib.org/colony.htm",
-      "LastModified": "2026-03-04",
-      "LastCommit": "4e6b67d8c636b91c85832d9c594370ddc772a8f6",
+      "License": "Zlib",
+      "Dependencies": [
+        "plf-tools"
+      ],
+      "LastModified": "2026-09-21",
+      "LastCommit": "22f414a38fc830ca4afc2a501e241976d3095560",
       "Features": []
     },
     {
@@ -69719,20 +69866,28 @@
     },
     {
       "Name": "plf-indiesort",
-      "Version": "1.4.4",
+      "Version": "1.4.10",
       "Description": "A sort wrapper enabling both use of random-access sorting on non-random access containers, and increased performance for the sorting of large types.",
       "homepage": "https://plflib.org/indiesort.htm",
-      "LastModified": "2025-12-23",
-      "LastCommit": "afef7d8e6ea636f8bb14159191eeb9ca97c97c0a",
+      "License": "Zlib",
+      "Dependencies": [
+        "plf-tools"
+      ],
+      "LastModified": "2026-09-21",
+      "LastCommit": "0d2e7e74b05fa570f6b47e018113dfac385ddaad",
       "Features": []
     },
     {
       "Name": "plf-list",
-      "Version": "2.8.0",
+      "Version": "7.6.21",
       "Description": "A drop-in replacement for std::list with 293% faster insertion, 57% faster erasure, 17% faster iteration and 77% faster sorting on average",
-      "homepage": "https://www.plflib.org/",
-      "LastModified": "2026-03-04",
-      "LastCommit": "684347c690512054989ec2c94e93f23bbdbcbb55",
+      "homepage": "https://www.plflib.org",
+      "License": "Zlib",
+      "Dependencies": [
+        "plf-tools"
+      ],
+      "LastModified": "2026-09-21",
+      "LastCommit": "e4919466583ba191f144e89eda0cbc1b8c82e4db",
       "Features": []
     },
     {
@@ -69747,20 +69902,38 @@
     },
     {
       "Name": "plf-queue",
-      "Version": "2.2",
+      "Version": "2.0.21",
       "Description": "A data container replicating std::queue functionality but with better performance than standard library containers in a queue context. C++98/03/11/14/etc-compatible.",
       "homepage": "https://plflib.org/queue.htm",
-      "LastModified": "2024-03-15",
-      "LastCommit": "a0bdf9f1bab8832a1f6aff094fe0153d3c05eeb3",
+      "License": "Zlib",
+      "Dependencies": [
+        "plf-tools"
+      ],
+      "LastModified": "2026-09-21",
+      "LastCommit": "8ad42bc1c505b52541b8c49f7d5518d09f49be8e",
       "Features": []
     },
     {
       "Name": "plf-stack",
-      "Version": "2.0.13",
+      "Version": "2.0.21",
       "Description": "A C++ data container replicating std::stack functionality but with better performance",
-      "homepage": "https://www.plflib.org/",
-      "LastModified": "2025-12-25",
-      "LastCommit": "ae57bad5975be6454f38a23a9e123e4b67179a65",
+      "homepage": "https://www.plflib.org",
+      "License": "Zlib",
+      "Dependencies": [
+        "plf-tools"
+      ],
+      "LastModified": "2026-09-21",
+      "LastCommit": "9c8137d0b11f711899c04180eefbfd730899f692",
+      "Features": []
+    },
+    {
+      "Name": "plf-tools",
+      "Version": "1.0.4",
+      "Description": "Toolsets shared across plf:: libraries",
+      "homepage": "https://www.plflib.org",
+      "License": "Zlib",
+      "LastModified": "2026-09-20",
+      "LastCommit": "249d92b4482e58e2a6a5e788aec4fd2e724a9638",
       "Features": []
     },
     {
@@ -70985,6 +71158,7 @@
     {
       "Name": "ppqsort",
       "Version": "1.0.6",
+      "Port-Version": 1,
       "Description": "a efficient implementation of parallel quicksort algorithm",
       "homepage": "https://gabtux.github.io/PPQSort/",
       "License": "MIT",
@@ -71003,8 +71177,8 @@
           "description": "Build with openmp, otherwise use native threads"
         }
       },
-      "LastModified": "2025-12-05",
-      "LastCommit": "3555ac8477a4e4c2e7bf93e479d6e2b6da15d74d"
+      "LastModified": "2026-09-22",
+      "LastCommit": "20f3f14fe83780ce9fe452ee4ce70ce4ba5cc222"
     },
     {
       "Name": "pprint",
@@ -71851,8 +72025,7 @@
     },
     {
       "Name": "python3",
-      "Version": "3.12.13",
-      "Port-Version": 1,
+      "Version": "3.14.7",
       "Description": "The Python programming language",
       "homepage": "https://github.com/python/cpython",
       "License": "Python-2.0",
@@ -71930,6 +72103,7 @@
               "name": "liblzma",
               "default-features": false
             },
+            "mpdecimal",
             {
               "name": "openssl",
               "default-features": false
@@ -71942,7 +72116,8 @@
               "name": "vcpkg-pkgconfig-get-modules",
               "host": true,
               "platform": "windows & !mingw"
-            }
+            },
+            "zstd"
           ]
         },
         "readline": {
@@ -71953,8 +72128,8 @@
           ]
         }
       },
-      "LastModified": "2026-04-23",
-      "LastCommit": "f77737496dabd44c63ecc599dc0f4d6cff30d0d5"
+      "LastModified": "2026-09-21",
+      "LastCommit": "f64c6cfdc73fee2ac58dfbc7009080ff9979d7b1"
     },
     {
       "Name": "qca",
@@ -72780,7 +72955,8 @@
     {
       "Name": "qt3d",
       "Version": "6.11.1",
-      "Description": "Qt wrapper for existing OPC UA stacks",
+      "Port-Version": 1,
+      "Description": "Qt 3D provides a fully configurable renderer that enables developers to quickly implement any rendering pipeline that they need.",
       "homepage": "https://www.qt.io/",
       "License": null,
       "Dependencies": [
@@ -72792,6 +72968,7 @@
             "concurrent",
             "gui",
             "network",
+            "opengl",
             "widgets"
           ]
         }
@@ -72890,8 +73067,8 @@
           ]
         }
       },
-      "LastModified": "2026-05-31",
-      "LastCommit": "f9ffbaa46ad8e284b2b74919f7e0ba259564d424"
+      "LastModified": "2026-09-18",
+      "LastCommit": "5fc0504292275b996f50138047277811f6f9118c"
     },
     {
       "Name": "qt5",
@@ -73306,6 +73483,7 @@
     {
       "Name": "qt5-base",
       "Version": "5.15.19",
+      "Port-Version": 1,
       "Description": "Qt Base provides the basic non-GUI functionality required by all Qt applications.",
       "homepage": "https://www.qt.io/",
       "License": null,
@@ -73432,8 +73610,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-12",
-      "LastCommit": "24a073fa2e63a93ca85d7f9e0e54e5de601ce412"
+      "LastModified": "2026-09-22",
+      "LastCommit": "20f3f14fe83780ce9fe452ee4ce70ce4ba5cc222"
     },
     {
       "Name": "qt5-charts",
@@ -73638,7 +73816,7 @@
     {
       "Name": "qt5-location",
       "Version": "5.15.19",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "The Qt Location API helps you create viable mapping solutions using the data available from some of the popular location services.",
       "License": null,
       "Dependencies": [
@@ -73651,8 +73829,8 @@
         "qt5-quickcontrols2",
         "qt5-serialport"
       ],
-      "LastModified": "2026-08-14",
-      "LastCommit": "173a20135d7daa83d048d25f50506b6eba8c0d5e",
+      "LastModified": "2026-09-18",
+      "LastCommit": "db5f23b3d6514a3b7dcff308552d350bd8911efb",
       "Features": []
     },
     {
@@ -74379,7 +74557,7 @@
     {
       "Name": "qtbase",
       "Version": "6.11.1",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "Qt Base (Core, Gui, Widgets, Network, ...)",
       "homepage": "https://www.qt.io/",
       "License": null,
@@ -75101,8 +75279,8 @@
           ]
         }
       },
-      "LastModified": "2026-09-10",
-      "LastCommit": "ca2870de424aaf682b07193212944e0624c6f180"
+      "LastModified": "2026-09-22",
+      "LastCommit": "20f3f14fe83780ce9fe452ee4ce70ce4ba5cc222"
     },
     {
       "Name": "qtcharts",
@@ -77235,7 +77413,7 @@
     },
     {
       "Name": "rapidcsv",
-      "Version": "8.99",
+      "Version": "9.07",
       "Description": "Rapidcsv is a C++ header-only library for CSV parsing.",
       "homepage": "https://github.com/d99kris/rapidcsv/",
       "License": "BSD-3-Clause",
@@ -77249,8 +77427,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-15",
-      "LastCommit": "f381adeb660ca8e7f7c075b91b599f5d752e11cb",
+      "LastModified": "2026-09-14",
+      "LastCommit": "7e65d02cc4f93c687eb0e2ec80d40b49cd571f45",
       "Features": []
     },
     {
@@ -78762,10 +78940,10 @@
     },
     {
       "Name": "roaring",
-      "Version": "4.7.2",
+      "Version": "5.2.1",
       "Description": "A better compressed bitset in C (and C++)",
       "homepage": "https://github.com/RoaringBitmap/CRoaring",
-      "License": "Apache-2.0 OR MIT",
+      "License": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
       "Supports": "!(android & arm32)",
       "Dependencies": [
         {
@@ -78777,8 +78955,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-05",
-      "LastCommit": "796612d67ed256e32f09075692a8fa7af13f1e4f",
+      "LastModified": "2026-09-17",
+      "LastCommit": "3d79b90e398456c1de452977edcd10683b0b893d",
       "Features": []
     },
     {
@@ -79805,11 +79983,19 @@
     {
       "Name": "sail",
       "Version": "1.2.0",
+      "Port-Version": 2,
       "Description": "The missing small and fast image decoding library for humans (not for machines)",
       "homepage": "https://github.com/HappySeaFox/sail",
       "License": "MIT",
       "Supports": "!uwp",
       "Dependencies": [
+        {
+          "name": "ffmpeg",
+          "default-features": false,
+          "features": [
+            "swscale"
+          ]
+        },
         {
           "name": "vcpkg-cmake",
           "host": true
@@ -80075,8 +80261,8 @@
           "description": "Enable XWD codec"
         }
       },
-      "LastModified": "2026-08-31",
-      "LastCommit": "b70085cf11b06cbf15ef066c58738b02838c3c51"
+      "LastModified": "2026-09-16",
+      "LastCommit": "a97c98d785fc0b1710bc711acf47767b756e6b7c"
     },
     {
       "Name": "sajson",
@@ -80314,7 +80500,7 @@
     },
     {
       "Name": "scinumtools3",
-      "Version": "0.6.3",
+      "Version": "0.8.0",
       "Description": "SciNumTools3: C++ toolkit for unit-aware scientific computation with runtime expressions and validated parameters.",
       "homepage": "https://github.com/vrtulka23/scinumtools3",
       "License": "MIT",
@@ -80328,8 +80514,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-11",
-      "LastCommit": "aae277acf4e7de287ddb5e208b5316614de6aad7",
+      "LastModified": "2026-09-18",
+      "LastCommit": "23a050016fbb7ad712132de1dc2da86c1790d091",
       "Features": []
     },
     {
@@ -80982,6 +81168,7 @@
     {
       "Name": "sdl3",
       "Version": "3.4.16",
+      "Port-Version": 1,
       "Description": "Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.",
       "homepage": "https://www.libsdl.org",
       "License": "Zlib AND MIT AND Apache-2.0 AND BSD-3-Clause",
@@ -81053,6 +81240,10 @@
             "libusb"
           ]
         },
+        "macos-keyboard-grab": {
+          "description": "Let SDL_SetWindowKeyboardGrab() capture system keyboard shortcuts on macOS (uses private API, so it is not suitable for sandboxed apps)",
+          "supports": "osx"
+        },
         "vulkan": {
           "description": "Vulkan functionality for SDL"
         },
@@ -81065,8 +81256,8 @@
           "supports": "!windows"
         }
       },
-      "LastModified": "2026-09-03",
-      "LastCommit": "3cab406c07fa9d669a60500740dce3b671c7b234"
+      "LastModified": "2026-09-20",
+      "LastCommit": "5f96cd15fd745122cf27e0524606d6c1efc5fd07"
     },
     {
       "Name": "sdl3-image",
@@ -81395,7 +81586,7 @@
     },
     {
       "Name": "seal",
-      "Version": "4.4.4",
+      "Version": "4.4.5",
       "Description": "Microsoft SEAL is an easy-to-use and powerful homomorphic encryption library.",
       "homepage": "https://github.com/microsoft/SEAL",
       "License": "MIT AND CC0-1.0",
@@ -81444,8 +81635,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-28",
-      "LastCommit": "52fd90f2b7798d9fe6fef18fc1787db44574d704"
+      "LastModified": "2026-09-15",
+      "LastCommit": "f299b5f6a89ff0e6869458758cad3aadb7c23ae7"
     },
     {
       "Name": "seasocks",
@@ -81586,7 +81777,7 @@
     },
     {
       "Name": "sentry-native",
-      "Version": "0.16.6",
+      "Version": "0.17.0",
       "Description": "Sentry SDK for C, C++ and native applications.",
       "homepage": "https://sentry.io/",
       "License": "MIT AND Apache-2.0 AND BSD-3-Clause AND ICU",
@@ -81675,8 +81866,8 @@
           ]
         }
       },
-      "LastModified": "2026-09-09",
-      "LastCommit": "8d9213361c72751856d7ceeab2b62562ccc644d2"
+      "LastModified": "2026-09-23",
+      "LastCommit": "8320904c3fbee4d9f5c145234d8eed3ab5a3a0e5"
     },
     {
       "Name": "septag-dmon",
@@ -81951,8 +82142,7 @@
     },
     {
       "Name": "shader-slang",
-      "Version": "2026.7.1",
-      "Port-Version": 1,
+      "Version": "2026.18",
       "Description": "Slang is a shading language that makes it easier to build and maintain large shader codebases in a modular and extensible fashion, while also maintaining the highest possible performance on modern GPUs and graphics APIs. Slang is based on years of collaboration between researchers at NVIDIA, Carnegie Mellon University, and Stanford.",
       "homepage": "https://github.com/shader-slang/slang",
       "License": null,
@@ -81963,8 +82153,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-30",
-      "LastCommit": "596402954bd6e9a970d21287418d6cca02d8e768",
+      "LastModified": "2026-09-20",
+      "LastCommit": "217a1ee0c6f4744726a7855666c8868fc2f1e688",
       "Features": []
     },
     {
@@ -82391,7 +82581,7 @@
     },
     {
       "Name": "simd",
-      "Version": "7.2.164",
+      "Version": "7.2.165",
       "Description": "Simd image processing and machine learning library, designed for C and C++ programmers",
       "homepage": "https://github.com/ermig1979/Simd",
       "License": "MIT",
@@ -82406,8 +82596,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-04",
-      "LastCommit": "fe6cdb1d441084900d9478ad3557b907504b0138",
+      "LastModified": "2026-09-14",
+      "LastCommit": "ad50f6d886d3f9fc92158be1072eafbacb1ffca2",
       "Features": []
     },
     {
@@ -82422,7 +82612,7 @@
     },
     {
       "Name": "simdjson",
-      "Version": "4.6.8",
+      "Version": "4.6.11",
       "Description": "An extremely fast JSON library that can parse gigabytes of JSON per second",
       "homepage": "https://simdjson.org/",
       "License": "(Apache-2.0 OR MIT) AND BSL-1.0 AND BSD-3-Clause",
@@ -82456,8 +82646,8 @@
           "description": "Enable UTF-8 validation"
         }
       },
-      "LastModified": "2026-08-30",
-      "LastCommit": "e8a82dfad0c4a0dab656f350aa33dc8cef3e92ee"
+      "LastModified": "2026-09-14",
+      "LastCommit": "8d854c5983f91cec81a9b38e076bbd270f8f3c8d"
     },
     {
       "Name": "simdutf",
@@ -82593,7 +82783,7 @@
     },
     {
       "Name": "simpleini",
-      "Version": "4.26",
+      "Version": "4.27",
       "Description": "Cross-platform C++ library providing a simple API to read and write INI-style configuration files",
       "homepage": "https://github.com/brofield/simpleini",
       "License": "MIT",
@@ -82607,8 +82797,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-16",
-      "LastCommit": "dbae1f8fddac333177a0bd3b0415ed1f400ebf6c",
+      "LastModified": "2026-09-14",
+      "LastCommit": "db316c8eaabafd910ad7e01e0ed16bedd7f79d42",
       "Features": []
     },
     {
@@ -83090,7 +83280,7 @@
     },
     {
       "Name": "slick-net",
-      "Version": "3.1.0",
+      "Version": "4.0.0",
       "Description": "A modern C++20 networking library providing HTTP/HTTPS client, WebSocket/WebSocket Secure client, and HTTP streaming support built on Boost.Beast and Boost.Asio",
       "homepage": "https://github.com/SlickQuant/slick-net",
       "License": "MIT",
@@ -83118,19 +83308,19 @@
         },
         {
           "name": "slick-dynamic-buffer",
-          "version>=": "1.0.1"
+          "version>=": "1.0.2"
         },
         {
           "name": "slick-queue",
-          "version>=": "1.5.0"
+          "version>=": "2.0.0"
         },
         {
           "name": "slick-stream-buffer",
-          "version>=": "1.0.5"
+          "version>=": "2.0.0"
         },
         {
           "name": "slick-stream-buffer-multiplexer",
-          "version>=": "1.0.1"
+          "version>=": "2.0.0"
         },
         {
           "name": "vcpkg-cmake",
@@ -83141,8 +83331,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-08",
-      "LastCommit": "5801d43df148a6d09c9baaa0d9c66f63428c5a3a",
+      "LastModified": "2026-09-21",
+      "LastCommit": "746abc463f0bed120c75a84141468f9efbfa8924",
       "Features": []
     },
     {
@@ -83261,7 +83451,7 @@
     },
     {
       "Name": "slick-stream-buffer-multiplexer",
-      "Version": "1.0.1",
+      "Version": "2.0.0",
       "Description": "A C++ lock-free MPMC byte stream buffer multiplexer",
       "homepage": "https://github.com/SlickQuant/slick-stream-buffer-multiplexer",
       "License": "MIT",
@@ -83269,11 +83459,11 @@
       "Dependencies": [
         {
           "name": "slick-queue",
-          "version>=": "1.5.0"
+          "version>=": "2.0.0"
         },
         {
           "name": "slick-stream-buffer",
-          "version>=": "1.0.5"
+          "version>=": "2.0.0"
         },
         {
           "name": "vcpkg-cmake",
@@ -83284,8 +83474,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-06-17",
-      "LastCommit": "ea368600e76cc1e553c496e7093e980fec93b7c8",
+      "LastModified": "2026-09-11",
+      "LastCommit": "a1cae005c39be7b18ba319fced856b68d7276271",
       "Features": []
     },
     {
@@ -83599,7 +83789,7 @@
     },
     {
       "Name": "sobjectizer",
-      "Version": "5.8.6",
+      "Version": "5.8.6.1",
       "Description": "SObjectizer is a C++ in-process message dispatching framework with implementation of Actor Model, Publish-Subscribe Model and CSP-like channels.",
       "homepage": "https://github.com/Stiffstream/sobjectizer",
       "License": "BSD-3-Clause",
@@ -83613,8 +83803,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "11b60a9f2789e2d7756a73b61735583cc6bf1114",
+      "LastModified": "2026-09-14",
+      "LastCommit": "38ad83ebaf5080ff85d54318828534f7121bf0e7",
       "Features": []
     },
     {
@@ -84690,6 +84880,7 @@
     {
       "Name": "sqlite3",
       "Version": "3.53.4",
+      "Port-Version": 1,
       "Description": "SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.",
       "homepage": "https://sqlite.org/",
       "License": "blessing",
@@ -84775,8 +84966,8 @@
           ]
         }
       },
-      "LastModified": "2026-07-27",
-      "LastCommit": "c8d75617b3ec62debd4cce63c780b623daa53c83"
+      "LastModified": "2026-09-14",
+      "LastCommit": "ec0a12ee6b28d813dca2a32869b034ef46f14a3e"
     },
     {
       "Name": "sqlitecpp",
@@ -85735,7 +85926,7 @@
     },
     {
       "Name": "suitesparse",
-      "Version": "7.14.0",
+      "Version": "7.14.1",
       "Description": "A suite of sparse matrix algorithms",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": null,
@@ -85833,13 +86024,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-amd",
       "Version": "3.3.4",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "AMD: Routines for permuting sparse matrices prior to factorization in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "BSD-3-Clause",
@@ -85854,14 +86045,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-btf",
       "Version": "2.3.3",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "BTF: Software package for permuting a matrix into block upper triangular form in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "LGPL-2.1-or-later",
@@ -85876,14 +86067,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-camd",
       "Version": "3.3.5",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "AMD: Routines for permuting sparse matrices prior to factorization in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "BSD-3-Clause",
@@ -85898,14 +86089,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-ccolamd",
       "Version": "3.3.5",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "CCOLAMD: Routines for constrained column approximate minimum degree ordering algorithm in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "BSD-3-Clause",
@@ -85920,14 +86111,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-cholmod",
       "Version": "5.3.5",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "CHOLMOD: Routines for factorizing sparse symmetric positive definite matrices in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "LGPL-2.1-or-later AND Apache-2.0",
@@ -85995,13 +86186,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-colamd",
       "Version": "3.3.5",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "COLAMD: Routines for column approximate minimum degree ordering algorithm in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "BSD-3-Clause",
@@ -86016,13 +86207,13 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-config",
-      "Version": "7.14.0",
+      "Version": "7.14.1",
       "Description": "Configuration for SuiteSparse libraries",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "BSD-3-Clause",
@@ -86042,13 +86233,13 @@
           "description": "Enable OpenMP support (in SuiteSparse_config only)"
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-cxsparse",
       "Version": "4.4.2",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "CXSparse: Software package for permuting a matrix into block upper triangular form in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "LGPL-2.1-or-later",
@@ -86063,13 +86254,13 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-graphblas",
-      "Version": "10.5.0",
+      "Version": "10.5.1",
       "Description": "SuiteSparse:GraphBLAS: graph algorithms in the language of linear algebra",
       "homepage": "https://people.engr.tamu.edu/davis/GraphBLAS.html",
       "License": null,
@@ -86095,13 +86286,13 @@
           "description": "Pre-compile kernels instead of using JIT compilation at runtime. Increases the library size and compile time by about 15x. Use the GRAPHBLAS_CACHE_PATH env var to set the JIT cache directory if not enabled."
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-klu",
       "Version": "2.3.6",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "KLU: Routines for solving sparse linear systems of equations in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "LGPL-2.1-or-later",
@@ -86127,13 +86318,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-lagraph",
       "Version": "1.2.2",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "LAGraph: Library plus test harness for collecting algorithms that use GraphBLAS",
       "homepage": "https://lagraph.readthedocs.io/en/latest/",
       "License": "BSD-2-Clause",
@@ -86161,13 +86352,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-ldl",
       "Version": "3.3.3",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "LDL: A sparse LDL' factorization and solve package in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "LGPL-2.1-or-later",
@@ -86183,14 +86374,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-mongoose",
       "Version": "3.3.6",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "Mongoose: Graph partitioning library in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "GPL-3.0-only",
@@ -86210,13 +86401,13 @@
           "description": "Build suitesparse_mongoose CLI tool"
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-paru",
       "Version": "1.1.2",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "ParU: Routines for solving sparse linear system via parallel multifrontal LU factorization algorithms in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "GPL-3.0-or-later",
@@ -86247,13 +86438,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-rbio",
       "Version": "4.3.5",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "RBio: routines for reading/writing sparse matrices in Rutherford/Boeing format in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "GPL-2.0-or-later",
@@ -86268,14 +86459,14 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933",
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a",
       "Features": []
     },
     {
       "Name": "suitesparse-spex",
       "Version": "3.2.4",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "SPEX: Software package for SParse EXact algebra in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "GPL-2.0-or-later OR LGPL-3.0-or-later",
@@ -86307,13 +86498,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-spqr",
       "Version": "4.3.6",
-      "Port-Version": 3,
+      "Port-Version": 4,
       "Description": "SPQR: Multithreaded, multifrontal, rank-revealing sparse QR factorization method in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "GPL-2.0-or-later",
@@ -86343,13 +86534,13 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "suitesparse-umfpack",
       "Version": "6.3.8",
-      "Port-Version": 2,
+      "Port-Version": 3,
       "Description": "UMFPACK: Routines solving sparse linear systems via LU factorization in SuiteSparse",
       "homepage": "https://people.engr.tamu.edu/davis/suitesparse.html",
       "License": "GPL-2.0-or-later",
@@ -86376,8 +86567,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "f3457518c19c4efdb3b9307a8bb4e27d4b989933"
+      "LastModified": "2026-09-15",
+      "LastCommit": "ddd884429aeb6bffb2e417ca2fdcb20a0abc7e2a"
     },
     {
       "Name": "sundials",
@@ -86542,8 +86733,7 @@
     },
     {
       "Name": "symengine",
-      "Version": "0.14.0",
-      "Port-Version": 1,
+      "Version": "0.15.0",
       "Description": "SymEngine is a fast symbolic manipulation library",
       "homepage": "https://github.com/symengine/symengine",
       "License": "BSD-3-Clause",
@@ -86618,12 +86808,12 @@
           ]
         }
       },
-      "LastModified": "2026-03-12",
-      "LastCommit": "8e1af6bc69b7df46d629c0d528df28c1bd6e02cd"
+      "LastModified": "2026-09-17",
+      "LastCommit": "62f86d7f9e69832798f2db8db6930dfed7b81498"
     },
     {
       "Name": "syntax-highlighting",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "Syntax highlighting engine for Kate syntax definitions",
       "homepage": "https://invent.kde.org/frameworks/syntax-highlighting",
       "Documentation": "https://api.kde.org/ksyntaxhighlighting-index.html",
@@ -86665,8 +86855,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7"
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8"
     },
     {
       "Name": "syscalls-cpp",
@@ -86769,9 +86959,9 @@
     },
     {
       "Name": "talib",
-      "Version": "0.7.1",
+      "Version": "0.8.1",
       "Description": "TA-Lib - Technical Analysis Library",
-      "homepage": "https://ta-lib.github.io/",
+      "homepage": "https://ta-lib.org/",
       "License": "BSD-3-Clause",
       "Supports": "linux | osx | (windows & !uwp)",
       "Dependencies": [
@@ -86780,8 +86970,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-07-13",
-      "LastCommit": "5e928c2f0a783604b539bef2375cc2368a82e365",
+      "LastModified": "2026-09-16",
+      "LastCommit": "b7700e75fc2990ab4223b8f708500455cd8281ce",
       "Features": []
     },
     {
@@ -87110,53 +87300,6 @@
       },
       "LastModified": "2026-04-20",
       "LastCommit": "e40b3d93b582e091e5ee2dd223f2b01ac9eee6da"
-    },
-    {
-      "Name": "tensorflow",
-      "Version": "2.10.0",
-      "Description": "Library for computation using data flow graphs for scalable machine learning (C API version)",
-      "homepage": "https://github.com/tensorflow/tensorflow",
-      "License": "Apache-2.0",
-      "Supports": "!(x86 | arm | uwp) | (arm64 & osx)",
-      "Dependencies": [
-        "tensorflow-common",
-        {
-          "name": "vcpkg-tool-bazel",
-          "host": true
-        }
-      ],
-      "LastModified": "2022-10-21",
-      "LastCommit": "a251c002471d8931eecc12201f84aa8e8e01dbbb",
-      "Features": []
-    },
-    {
-      "Name": "tensorflow-cc",
-      "Version": "2.10.0",
-      "Description": "Library for computation using data flow graphs for scalable machine learning (C++ API version)",
-      "homepage": "https://github.com/tensorflow/tensorflow",
-      "License": "Apache-2.0",
-      "Supports": "!(x86 | arm | uwp) | (arm64 & osx)",
-      "Dependencies": [
-        "tensorflow-common",
-        {
-          "name": "vcpkg-tool-bazel",
-          "host": true
-        }
-      ],
-      "LastModified": "2022-10-21",
-      "LastCommit": "a251c002471d8931eecc12201f84aa8e8e01dbbb",
-      "Features": []
-    },
-    {
-      "Name": "tensorflow-common",
-      "Version": "2.10.0",
-      "Port-Version": 4,
-      "Description": "This meta package holds common files for the C [tensorflow] and the C++ [tensorflow-cc] API version of TensorFlow but is not installable on its own.",
-      "homepage": "https://github.com/tensorflow/tensorflow",
-      "License": "Apache-2.0",
-      "LastModified": "2025-01-24",
-      "LastCommit": "8f37aa557974f79992eef319905dbbe4e8f230c4",
-      "Features": []
     },
     {
       "Name": "tensorpipe",
@@ -87535,7 +87678,7 @@
     },
     {
       "Name": "thorvg",
-      "Version": "1.1.1",
+      "Version": "1.1.2",
       "Description": "ThorVG is a platform-independent portable library for drawing vector-based scenes and animations",
       "homepage": "https://www.thorvg.org",
       "License": "MIT",
@@ -87551,12 +87694,12 @@
           "description": "Build tools"
         }
       },
-      "LastModified": "2026-08-30",
-      "LastCommit": "152dccd1a80bad07e801bfacbb08ba0a610b5708"
+      "LastModified": "2026-09-18",
+      "LastCommit": "b80c518bb2f96122f959ecba59a269c8793e77bb"
     },
     {
       "Name": "threadweaver",
-      "Version": "6.29.0",
+      "Version": "6.30.0",
       "Description": "KDE Threading library",
       "homepage": "https://invent.kde.org/frameworks/threadweaver",
       "Documentation": "https://api.kde.org/threadweaver-index.html",
@@ -87575,8 +87718,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-08-24",
-      "LastCommit": "9aaae1d79407ac910728b2894cd4cfb7efd1a9e7",
+      "LastModified": "2026-09-16",
+      "LastCommit": "1577f17ee57f42a0ef6d75bbb82cb37d0b76d7e8",
       "Features": []
     },
     {
@@ -87808,6 +87951,26 @@
       },
       "LastModified": "2026-02-26",
       "LastCommit": "260af2b13e4b6e56019cb4de008f36cc9c872843"
+    },
+    {
+      "Name": "time-shield-cpp",
+      "Version": "2.0.0",
+      "Description": "Header-only C++ library for time conversions, formatting, and utilities.",
+      "homepage": "https://github.com/LimiNode/time-shield-cpp",
+      "License": "MIT",
+      "Dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        }
+      ],
+      "LastModified": "2026-09-17",
+      "LastCommit": "83030b34390d1bb5cc6361dcc4c3914616faf190",
+      "Features": []
     },
     {
       "Name": "tinkerforge",
@@ -88740,8 +88903,7 @@
     },
     {
       "Name": "tracy",
-      "Version": "0.13.1",
-      "Port-Version": 1,
+      "Version": "0.14.1",
       "Description": "A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.",
       "homepage": "https://github.com/wolfpld/tracy",
       "License": "BSD-3-Clause",
@@ -88765,7 +88927,7 @@
       ],
       "Features": {
         "cli-tools": {
-          "description": "Build Tracy command-line tools: `capture`, `csvexport`, `import-chrome`, `import-fuchsia` and `update`",
+          "description": "Build Tracy command-line tools: `capture`, `capture-daemon`, `csvexport`, `import-chrome`, `import-fuchsia`, `merge` and `update`",
           "supports": "!(windows & x86)",
           "dependencies": [
             {
@@ -88795,6 +88957,7 @@
         "gui-tools": {
           "description": "Build Tracy GUI tool: `profiler` (aka `Tracy` executable)",
           "supports": "!(windows & x86)",
+          "license": "MIT",
           "dependencies": [
             "aklomp-base64",
             {
@@ -88831,8 +88994,8 @@
           "supports": "!android"
         }
       },
-      "LastModified": "2026-07-31",
-      "LastCommit": "25b93347d8b1cb83bba83899c85455de050b8d02"
+      "LastModified": "2026-09-22",
+      "LastCommit": "20f3f14fe83780ce9fe452ee4ce70ce4ba5cc222"
     },
     {
       "Name": "transwarp",
@@ -89247,6 +89410,16 @@
       ],
       "LastModified": "2025-11-04",
       "LastCommit": "23aacbe2adf3c793be11e55f65991ae6d6a74ba4",
+      "Features": []
+    },
+    {
+      "Name": "ttmath",
+      "Version": "2019-10-23",
+      "Description": "A bignum library for C++",
+      "homepage": "https://www.ttmath.org/",
+      "License": "BSD-3-Clause",
+      "LastModified": "2026-09-19",
+      "LastCommit": "06feeed2118ae0e24263cc672418855dcfb4aff3",
       "Features": []
     },
     {
@@ -89692,8 +89865,8 @@
     },
     {
       "Name": "unordered-dense",
-      "Version": "4.11.0",
-      "Description": "A fast & densely stored hashmap and hashset based on robin-hood backward shift deletion",
+      "Version": "5.0.1",
+      "Description": "A fast & densely stored hashmap and hashset",
       "homepage": "https://github.com/martinus/unordered_dense",
       "License": "MIT",
       "Dependencies": [
@@ -89706,8 +89879,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-09-03",
-      "LastCommit": "bacd008527d24b3bff4630722d85f38446f8e0e2",
+      "LastModified": "2026-09-17",
+      "LastCommit": "89d6f85ba283211bffc74dbf1f9e3beec7aea5b8",
       "Features": []
     },
     {
@@ -89865,7 +90038,7 @@
     {
       "Name": "usd",
       "Version": "26.8",
-      "Port-Version": 1,
+      "Port-Version": 2,
       "Description": "Universal Scene Description (USD) is an efficient, scalable system for authoring, reading, and streaming time-sampled scene description for interchange between graphics applications.",
       "homepage": "https://github.com/PixarAnimationStudios/OpenUSD",
       "License": null,
@@ -89936,8 +90109,8 @@
           ]
         }
       },
-      "LastModified": "2026-08-30",
-      "LastCommit": "6c2efca1a0f8f3e1b06b0a8bbf3b4c3ba34cec91"
+      "LastModified": "2026-09-15",
+      "LastCommit": "50433c3aa021435d8d83d1ce74fa61d2448e11d2"
     },
     {
       "Name": "usearch",
@@ -90080,7 +90253,7 @@
     },
     {
       "Name": "utfcpp",
-      "Version": "4.2.0",
+      "Version": "4.2.1",
       "Description": "UTF-8 with C++ in a Portable Way",
       "homepage": "https://github.com/nemtrif/utfcpp",
       "License": "BSL-1.0",
@@ -90094,8 +90267,8 @@
           "host": true
         }
       ],
-      "LastModified": "2026-09-08",
-      "LastCommit": "a50d16faf7e5f4914f7d525913256ff6638ef1d5",
+      "LastModified": "2026-09-22",
+      "LastCommit": "6e856794aebd1ee877acb74c9264d9552903c6fe",
       "Features": []
     },
     {
@@ -90662,17 +90835,6 @@
       ],
       "LastModified": "2025-05-22",
       "LastCommit": "294f76666c3000630d828703e675814c05a4fd43",
-      "Features": []
-    },
-    {
-      "Name": "vcpkg-tool-bazel",
-      "Version": "5.2.0",
-      "Description": "Bazel build system",
-      "homepage": "https://github.com/bazelbuild/bazel",
-      "License": "Apache-2.0",
-      "Supports": "native",
-      "LastModified": "2022-10-21",
-      "LastCommit": "a251c002471d8931eecc12201f84aa8e8e01dbbb",
       "Features": []
     },
     {
@@ -91556,7 +91718,7 @@
     {
       "Name": "vtk",
       "Version": "9.3.0-pv5.12.1",
-      "Port-Version": 17,
+      "Port-Version": 18,
       "Description": "Software system for 3D computer graphics, image processing, and visualization",
       "homepage": "https://github.com/Kitware/VTK",
       "License": null,
@@ -91911,8 +92073,8 @@
           ]
         }
       },
-      "LastModified": "2026-06-18",
-      "LastCommit": "341432707e39394e70abbe74c49642dc65e0976c"
+      "LastModified": "2026-09-17",
+      "LastCommit": "405de27f94c78ac2228dfe654928b162d0b593da"
     },
     {
       "Name": "vtk-compile-tools",
@@ -92359,7 +92521,7 @@
     },
     {
       "Name": "wabt",
-      "Version": "1.0.41",
+      "Version": "1.0.42",
       "Description": "The WebAssembly Binary Toolkit",
       "homepage": "https://github.com/WebAssembly/wabt/",
       "License": "Apache-2.0",
@@ -92382,8 +92544,8 @@
           "description": "Include the WABT C runtime implementation library"
         }
       },
-      "LastModified": "2026-05-08",
-      "LastCommit": "13aa6414af619870a0aa62f9b034b462cefbd75c"
+      "LastModified": "2026-09-18",
+      "LastCommit": "a4f0cb5c486a360dcca41dded0424b9ba1f85540"
     },
     {
       "Name": "wampcc",
@@ -93105,13 +93267,13 @@
     },
     {
       "Name": "winreg",
-      "Version": "6.4.0",
+      "Version": "8.0.0",
       "Description": "High-level C++ wrapper around the Windows Registry C API.",
       "homepage": "https://github.com/GiovanniDicanio/WinReg",
       "License": "MIT",
-      "Supports": "windows | uwp",
-      "LastModified": "2026-01-07",
-      "LastCommit": "83198335eeb327264527404f3d2a26bb4b3c3d62",
+      "Supports": "windows & !uwp",
+      "LastModified": "2026-09-18",
+      "LastCommit": "0816d443774bb9b6c7edbc8527619232b583efb1",
       "Features": []
     },
     {
@@ -93287,7 +93449,7 @@
     },
     {
       "Name": "wolftpm",
-      "Version": "4.0.0",
+      "Version": "4.2.0",
       "Description": "TPM library used with wolfSSL library for many platforms",
       "homepage": "https://wolfssl.com",
       "License": "GPL-3.0-or-later",
@@ -93303,8 +93465,8 @@
         },
         "wolfssl"
       ],
-      "LastModified": "2026-04-28",
-      "LastCommit": "031f4afe03be385aee354f15be6e6b1fe57497c7",
+      "LastModified": "2026-09-21",
+      "LastCommit": "17394f49a069918729b7eaf6a8e83d1482889274",
       "Features": []
     },
     {
@@ -94616,7 +94778,7 @@
     },
     {
       "Name": "xxhash",
-      "Version": "0.8.3",
+      "Version": "0.8.4",
       "Description": "Extremely fast hash algorithm",
       "homepage": "https://github.com/Cyan4973/xxHash",
       "License": "BSD-2-Clause",
@@ -94632,11 +94794,12 @@
       ],
       "Features": {
         "xxhsum": {
-          "description": "Build the xxhsum binary"
+          "description": "Build the xxhsum binary",
+          "license": "GPL-2.0-or-later"
         }
       },
-      "LastModified": "2025-03-24",
-      "LastCommit": "0bde25d4ffc4349ac70a8c22615203eb1201aa4a"
+      "LastModified": "2026-09-22",
+      "LastCommit": "00be06124721b0fa2fb451982e707f81b3b06e5a"
     },
     {
       "Name": "xyo-sdk",
@@ -95346,7 +95509,7 @@
     },
     {
       "Name": "zimpl",
-      "Version": "3.7.1",
+      "Version": "3.8.0",
       "Description": "Zuse Institut Mathematical Programming Language",
       "homepage": "https://zimpl.zib.de/",
       "License": "LGPL-3.0-or-later",
@@ -95367,8 +95530,8 @@
         },
         "zlib"
       ],
-      "LastModified": "2026-07-06",
-      "LastCommit": "94b14f2607dafa3c6bf30920d4fd33bc66b159c1",
+      "LastModified": "2026-09-18",
+      "LastCommit": "3e501caa7a40d8a6dbc5d8b58fb428b7400dcfd2",
       "Features": []
     },
     {
@@ -95828,7 +95991,7 @@
     },
     {
       "Name": "zxc",
-      "Version": "0.14.0",
+      "Version": "0.14.1",
       "Description": "High-performance asymmetric lossless compression library",
       "homepage": "https://github.com/hellobertrand/zxc",
       "License": "BSD-3-Clause AND MIT",
@@ -95848,8 +96011,8 @@
           "description": "Build the command-line interface"
         }
       },
-      "LastModified": "2026-09-03",
-      "LastCommit": "21997c7e0fee670341bf810f2bc73c3e982a931d"
+      "LastModified": "2026-09-21",
+      "LastCommit": "95ae852c50d1914dd6c60dd3f9d49f878bbd0f76"
     },
     {
       "Name": "zycore",
