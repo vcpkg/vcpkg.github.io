@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="js">
 <head>
-  <title>vcpkg package - ctp</title>
+  <title>vcpkg package - vvdec</title>
   <meta name="description" content="Explore vcpkg libraries to install">
   <meta name="keywords"
     content="vcpkg, packages, libraries, C, C++, cpp, Microsoft, library, package manager, library manager">
@@ -106,12 +106,12 @@
         <div class="package-name-header">
             <div class="name-version-container">
                 <h1 class="package-name">
-                    ctp
-                    <span class="package-version">6.6.1_P1_20210406_se#4</span>
+                    vvdec
+                    <span class="package-version">3.2.0</span>
                 </h1>
             </div>
             <div class="package-description">
-                The Comprehensive Transaction Platform (CTP) is a future brokerage management system developed specially for futures companies. CTP API client library allows users to connect to CTP gateway for algorithmic trading.
+                VVdeC is a fast and efficient H.266/VVC decoder implementation.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -136,7 +136,30 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <div class="dependency-card">No Dependencies</div>
+                    <a href="simde.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">simde<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vcpkg-cmake-config.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vcpkg-cmake-config<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="used-by-content" class="tab-content">
@@ -148,42 +171,33 @@
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">datacollect - <i class="feature-description">Data collect support of CTP</i></div>
-                        </div>
-                    </div>
+                    <div class="no-features">No Features</div>
                 </div>
             </div>
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
-                    <li class="badge badge-primary">6.6.1_P1_20210406_se#4</li>
-                    <li class="badge badge-primary">6.6.1_P1_20210406_se#3</li>
-                    <li class="badge badge-primary">6.6.1_P1_20210406_se#2</li>
-                    <li class="badge badge-primary">6.6.1_P1_20210406_se#1</li>
-                    <li class="badge badge-primary">6.6.1_P1_20210406_se#0</li>
-                    <li class="badge badge-primary">6.3.15_20190220_se#1</li>
-                    <li class="badge badge-primary">6.3.15_20190220_se#0</li>
+                    <li class="badge badge-primary">3.2.0#0</li>
                 </ul>
             </div>
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5b11232d00476c66724c81adfe5e3777a9aec38f/ports/ctp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/5b11232d00476c66724c81adfe5e3777a9aec38f/ports/ctp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/bad67e2ca872af1b46f978a4cadbca964108dde6/ports/vvdec/fix-dependency.patch" target="_blank">fix-dependency.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/bad67e2ca872af1b46f978a4cadbca964108dde6/ports/vvdec/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/bad67e2ca872af1b46f978a4cadbca964108dde6/ports/vvdec/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> null</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2023-04-13</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause-Clear</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-10-02</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">!osx & !uwp & !arm & !(static & staticcrt)</pre></div>
+            <div><pre class="support-arch">Supported on all triplets</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
@@ -195,15 +209,15 @@
                 <h2 class="sidebar-header">Homepage</h2>
                 <div>
                     <img class="sidebar-logo" src="/assets/package-pages/house-solid.svg" alt="Homepage:">
-                    <a href="http://www.sfit.com.cn/index.htm">http://www.sfit.com.cn/index.htm</a>
+                    <a href="https://github.com/fraunhoferhhi/vvdec">https://github.com/fraunhoferhhi/vvdec</a>
                 </div>
             </div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Install</h2>
                 <div class="sidebar-description">In classic mode, run the following vcpkg command:</div>
-                <pre> vcpkg install ctp</pre>
+                <pre> vcpkg install vvdec</pre>
                 <div class="sidebar-description">In manifest mode, run the following vcpkg command in your project directory:</div>
-                <pre> vcpkg add port ctp</pre>
+                <pre> vcpkg add port vvdec</pre>
             </div>
         </div>
     </div>
