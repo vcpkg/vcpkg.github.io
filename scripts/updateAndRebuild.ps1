@@ -17,7 +17,7 @@ try {
         throw 'Unable to determine the vcpkg master commit.'
     }
 
-    Set-Content -LiteralPath commit.txt -Value $commit -Encoding ascii
+    Set-Content -LiteralPath commit.txt -Value $commit -Encoding ascii -NoNewline
     & (Join-Path $PSScriptRoot 'rebuild.ps1') -VcpkgRoot $VcpkgRoot
 }
 finally {

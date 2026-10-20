@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     llama-cpp
-                    <span class="package-version">9030</span>
+                    <span class="package-version">0.4.1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -139,7 +139,7 @@
                     <a href="cpp-httplib.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">cpp-httplib<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
@@ -192,6 +192,17 @@
                             </div>
                         </div>
                     </a>
+                    <a href="llama-cpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">llama-cpp</div>
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                server
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
@@ -203,10 +214,10 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/curl.html">
+                            <a href="/en/package/cpp-httplib.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-name">cpp-httplib</div>
+                                <div class="feature-dep-feature">features: [openssl]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -216,6 +227,17 @@
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">server - <i class="feature-description">Build llama-server and llama-cli</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/llama-cpp.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">llama-cpp</div>
+                                <div class="feature-dep-feature">features: [tools]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -247,6 +269,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">0.4.1#0</li>
                     <li class="badge badge-primary">9030#0</li>
                     <li class="badge badge-primary">7146#0</li>
                     <li class="badge badge-primary">6550#0</li>
@@ -260,19 +283,19 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/68fb1ad0dfa102f6c2be6f68ef3cdf26b0692c07/ports/llama-cpp/cmake-config.diff" target="_blank">cmake-config.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/68fb1ad0dfa102f6c2be6f68ef3cdf26b0692c07/ports/llama-cpp/pkgconfig.diff" target="_blank">pkgconfig.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/68fb1ad0dfa102f6c2be6f68ef3cdf26b0692c07/ports/llama-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/68fb1ad0dfa102f6c2be6f68ef3cdf26b0692c07/ports/llama-cpp/unvendor.diff" target="_blank">unvendor.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/68fb1ad0dfa102f6c2be6f68ef3cdf26b0692c07/ports/llama-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/117099e6ec313b2226be3f6721bb08dc5ed58b67/ports/llama-cpp/cmake-config.diff" target="_blank">cmake-config.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/117099e6ec313b2226be3f6721bb08dc5ed58b67/ports/llama-cpp/pkgconfig.diff" target="_blank">pkgconfig.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/117099e6ec313b2226be3f6721bb08dc5ed58b67/ports/llama-cpp/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/117099e6ec313b2226be3f6721bb08dc5ed58b67/ports/llama-cpp/unvendor.diff" target="_blank">unvendor.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/117099e6ec313b2226be3f6721bb08dc5ed58b67/ports/llama-cpp/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
         <div class="sidebar-container">
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
-                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-05-11</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT AND Unlicense</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-23</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>

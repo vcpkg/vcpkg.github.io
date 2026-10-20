@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     halide
-                    <span class="package-version">18.0.0#1</span>
+                    <span class="package-version">21.0.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -211,9 +211,17 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                clang, enable-rtti, tools
+                                clang, enable-rtti, lld, target-webassembly, target-x86, tools
                                 </div>
                             </div>
+                        </div>
+                    </a>
+                    <a href="spirv-headers.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">spirv-headers<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
                         </div>
                     </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
@@ -230,6 +238,14 @@
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host">host: <img class="dep-card-logo" src="/assets/package-pages/check-solid.svg" alt="check-mark"></div>
+                        </div>
+                    </a>
+                    <a href="vulkan-headers.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">vulkan-headers<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
                         </div>
                     </a>
                 </div>
@@ -460,6 +476,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">21.0.0#0</li>
                     <li class="badge badge-primary">18.0.0#1</li>
                     <li class="badge badge-primary">18.0.0#0</li>
                     <li class="badge badge-primary">17.0.1#1</li>
@@ -487,9 +504,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2bf7865b9a85079e7a49bab6fe269fec6ea9dcca/ports/halide/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2bf7865b9a85079e7a49bab6fe269fec6ea9dcca/ports/halide/usage.in" target="_blank">usage.in</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/2bf7865b9a85079e7a49bab6fe269fec6ea9dcca/ports/halide/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/62f86d7f9e69832798f2db8db6930dfed7b81498/ports/halide/fix-llvm-23.patch" target="_blank">fix-llvm-23.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/62f86d7f9e69832798f2db8db6930dfed7b81498/ports/halide/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/62f86d7f9e69832798f2db8db6930dfed7b81498/ports/halide/usage.in" target="_blank">usage.in</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/62f86d7f9e69832798f2db8db6930dfed7b81498/ports/halide/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -497,7 +515,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2024-11-25</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-17</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
