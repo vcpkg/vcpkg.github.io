@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     curl
-                    <span class="package-version">8.22.0#1</span>
+                    <span class="package-version">8.23.0</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -270,6 +270,11 @@
                             </div>
                         </div>
                     </a>
+                    <a href="countly-sdk-cpp.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">countly-sdk-cpp</div>
+                        </div>
+                    </a>
                     <a href="cpp-client-telemetry.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">cpp-client-telemetry</div>
@@ -302,7 +307,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                http2, http3, idn, idn, ldap, ssh, ssh, ssl, ssl, ssls-export, websockets
+                                http2, http3, idn, idn, ssh, ssl, ssl, ssls-export
                                 </div>
                             </div>
                         </div>
@@ -903,14 +908,6 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [non-http]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
                             <a href="/en/package/openldap.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">openldap</div>
@@ -935,11 +932,6 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="section-one">
-                            <div class="feature-name">non-http - <i class="feature-description">Enables protocols beyond HTTP&#x2F;HTTPS&#x2F;HTTP2&#x2F;HTTP3</i></div>
                         </div>
                     </div>
                     <div class="feature-card">
@@ -980,14 +972,6 @@
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [non-http]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
                             <a href="/en/package/curl.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">curl</div>
@@ -1060,17 +1044,6 @@
                         <div class="section-one">
                             <div class="feature-name">websockets - <i class="feature-description">WebSocket support</i></div>
                         </div>
-                        <div class="section-two">
-                            <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/curl.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">curl</div>
-                                <div class="feature-dep-feature">features: [non-http]</div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default">default features: disabled</div>
-                            </div>
-                            </a>
-                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
@@ -1114,6 +1087,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">8.23.0#0</li>
                     <li class="badge badge-primary">8.22.0#1</li>
                     <li class="badge badge-primary">8.22.0#0</li>
                     <li class="badge badge-primary">8.21.0#1</li>
@@ -1254,12 +1228,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1391150599c0b9dc6f2a3c79c50eff6c94b077d1/ports/curl/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1391150599c0b9dc6f2a3c79c50eff6c94b077d1/ports/curl/dependencies.patch" target="_blank">dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1391150599c0b9dc6f2a3c79c50eff6c94b077d1/ports/curl/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1391150599c0b9dc6f2a3c79c50eff6c94b077d1/ports/curl/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1391150599c0b9dc6f2a3c79c50eff6c94b077d1/ports/curl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/1391150599c0b9dc6f2a3c79c50eff6c94b077d1/ports/curl/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/357b1a6f8343064ca982a20771e420fcecfe7efc/ports/curl/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/357b1a6f8343064ca982a20771e420fcecfe7efc/ports/curl/dependencies.patch" target="_blank">dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/357b1a6f8343064ca982a20771e420fcecfe7efc/ports/curl/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/357b1a6f8343064ca982a20771e420fcecfe7efc/ports/curl/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/357b1a6f8343064ca982a20771e420fcecfe7efc/ports/curl/vcpkg-cmake-wrapper.cmake" target="_blank">vcpkg-cmake-wrapper.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/357b1a6f8343064ca982a20771e420fcecfe7efc/ports/curl/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -1267,7 +1241,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> curl AND ISC AND BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-10</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-10-14</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
