@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     libheif
-                    <span class="package-version">1.23.5</span>
+                    <span class="package-version">1.23.6</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -136,14 +136,6 @@
             <div id="dependencies-content" class="tab-content active">
                 <h2 class="active-header">Dependencies</h2>
                 <div class="card-container">
-                    <a href="libde265.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">libde265<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat"></div>
-                            <div class="dep-platform"></div>
-                            <div class="dep-host"></div>
-                        </div>
-                    </a>
                     <a href="vcpkg-cmake.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">vcpkg-cmake<i class="dep-version-min"></i></div>
@@ -212,6 +204,22 @@
                             <a href="/en/package/aom.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">aom</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">dav1d - <i class="feature-description">AVIF decoding via dav1d</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/dav1d.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">dav1d</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -333,6 +341,38 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">kvazaar - <i class="feature-description">HEVC encoding via kvazaar</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/kvazaar.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">kvazaar</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">libde265 - <i class="feature-description">libde265 HEVC decoder</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/libde265.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">libde265</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">openjpeg - <i class="feature-description">JPEG-2000 decoding and encoding via OpenJPEG</i></div>
                         </div>
                         <div class="section-two">
@@ -365,6 +405,38 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">vvdec - <i class="feature-description">vvdec VVC decoder</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/vvdec.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">vvdec</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">vvenc - <i class="feature-description">vvenc VVC encoder</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/vvenc.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">vvenc</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">x264 - <i class="feature-description">x264 AVC encoder</i></div>
                         </div>
                         <div class="section-two">
@@ -384,6 +456,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.23.6#0</li>
                     <li class="badge badge-primary">1.23.5#0</li>
                     <li class="badge badge-primary">1.23.4#0</li>
                     <li class="badge badge-primary">1.23.2#0</li>
@@ -435,13 +508,14 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/cxx-linkage-pkgconfig.diff" target="_blank">cxx-linkage-pkgconfig.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/find-modules.diff" target="_blank">find-modules.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/gdk-pixbuf.patch" target="_blank">gdk-pixbuf.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/symbol-exports.diff" target="_blank">symbol-exports.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/b30c88338f4ec47a322a81f4113d7385702e03a7/ports/libheif/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/cmake-project-include.cmake" target="_blank">cmake-project-include.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/cxx-linkage-pkgconfig.diff" target="_blank">cxx-linkage-pkgconfig.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/find-modules.diff" target="_blank">find-modules.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/gdk-pixbuf.patch" target="_blank">gdk-pixbuf.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/symbol-exports.diff" target="_blank">symbol-exports.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a6b252495fb3d690961d6de7715a971a8473190d/ports/libheif/vvc-pkgconfig.patch" target="_blank">vvc-pkgconfig.patch</a></li>
                   </ul>
             </div>
         </div>
@@ -449,7 +523,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-3.0-only AND MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-09-22</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-10-20</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
