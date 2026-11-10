@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     onnxruntime
-                    <span class="package-version">1.31.0</span>
+                    <span class="package-version">1.31.1#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -333,11 +333,32 @@
                             <div class="dep-name">onnxruntime-gpu</div>
                         </div>
                     </a>
+                    <a href="rapidai-rapidocronnx.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">rapidai-rapidocronnx</div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="features-content" class="tab-content">
                 <h2 class="active-header">Features</h2>
                 <div class="card-container">
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">coreml - <i class="feature-description">Build with CoreML support</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/coremltools.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">coremltools</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
                     <div class="feature-card">
                         <div class="section-one">
                             <div class="feature-name">cuda - <i class="feature-description">Build with CUDA support</i></div>
@@ -436,6 +457,8 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">1.31.1#1</li>
+                    <li class="badge badge-primary">1.31.1#0</li>
                     <li class="badge badge-primary">1.31.0#0</li>
                     <li class="badge badge-primary">1.23.2#1</li>
                     <li class="badge badge-primary">1.23.2#0</li>
@@ -444,11 +467,12 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a5f736224e85b32e25a8ffc52562333180396642/ports/onnxruntime/fix-cmake-cuda.patch" target="_blank">fix-cmake-cuda.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a5f736224e85b32e25a8ffc52562333180396642/ports/onnxruntime/fix-cmake-mlas.patch" target="_blank">fix-cmake-mlas.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a5f736224e85b32e25a8ffc52562333180396642/ports/onnxruntime/fix-cmake.patch" target="_blank">fix-cmake.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a5f736224e85b32e25a8ffc52562333180396642/ports/onnxruntime/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/a5f736224e85b32e25a8ffc52562333180396642/ports/onnxruntime/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/80aae04504a834399456d74605204bfe514762bf/ports/onnxruntime/fix-cmake-cuda.patch" target="_blank">fix-cmake-cuda.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/80aae04504a834399456d74605204bfe514762bf/ports/onnxruntime/fix-cmake-mlas.patch" target="_blank">fix-cmake-mlas.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/80aae04504a834399456d74605204bfe514762bf/ports/onnxruntime/fix-cmake.patch" target="_blank">fix-cmake.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/80aae04504a834399456d74605204bfe514762bf/ports/onnxruntime/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/80aae04504a834399456d74605204bfe514762bf/ports/onnxruntime/use-vcpkg-coremltools.patch" target="_blank">use-vcpkg-coremltools.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/80aae04504a834399456d74605204bfe514762bf/ports/onnxruntime/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -456,7 +480,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> MIT</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-10-16</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-11-02</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
