@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     openimageio
-                    <span class="package-version">3.2.1.2</span>
+                    <span class="package-version">3.2.1.2#1</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -221,6 +221,11 @@
             <div id="used-by-content" class="tab-content">
                 <h2 class="active-header">Used By</h2>
                 <div class="card-container">
+                    <a href="colmap.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">colmap</div>
+                        </div>
+                    </a>
                     <a href="mdl-sdk.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">mdl-sdk</div>
@@ -273,7 +278,7 @@
                             <a href="/en/package/ffmpeg.html">
                             <div class="feature-dep-card">
                                 <div class="feature-dep-name">ffmpeg</div>
-                                <div class="feature-dep-feature">features: [avresample]</div>
+                                <div class="feature-dep-feature">features: [avcodec, avformat, swscale]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default">default features: disabled</div>
                             </div>
@@ -490,6 +495,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">3.2.1.2#1</li>
                     <li class="badge badge-primary">3.2.1.2#0</li>
                     <li class="badge badge-primary">3.1.14.0#1</li>
                     <li class="badge badge-primary">3.1.14.0#0</li>
@@ -580,14 +586,14 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/fix-openimageio_include_dir.patch" target="_blank">fix-openimageio_include_dir.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/fix-static-ffmpeg.patch" target="_blank">fix-static-ffmpeg.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/imath-version-guard.patch" target="_blank">imath-version-guard.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/remove-agl-framework.patch" target="_blank">remove-agl-framework.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/f8f9b3729af5cbd688dd78ed37630f2dbb2755fd/ports/openimageio/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/fix-openimageio_include_dir.patch" target="_blank">fix-openimageio_include_dir.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/fix-static-ffmpeg.patch" target="_blank">fix-static-ffmpeg.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/imath-version-guard.patch" target="_blank">imath-version-guard.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/remove-agl-framework.patch" target="_blank">remove-agl-framework.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/15fd70c123f8dd4069bbdf7170484eac7d49ee60/ports/openimageio/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -595,7 +601,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> Apache-2.0</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-10-28</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-11-23</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
