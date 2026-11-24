@@ -107,11 +107,11 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     colmap
-                    <span class="package-version">3.12.6#1</span>
+                    <span class="package-version">4.1.1</span>
                 </h1>
             </div>
             <div class="package-description">
-                COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface. It offers a wide range of features for reconstruction of ordered and unordered image collections. The software is licensed under the new BSD license.
+                COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface.
             </div>
         </div>
     <div class="flex-wrapper">
@@ -195,7 +195,7 @@
                             <div class="dep-features">
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
-                                lapack, suitesparse
+                                lapack, schur, suitesparse
                                 </div>
                             </div>
                         </div>
@@ -216,17 +216,17 @@
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="freeimage.html" class="dependency-card">
+                    <a href="gflags.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">freeimage<i class="dep-version-min"></i></div>
+                            <div class="dep-name">gflags<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
                         </div>
                     </a>
-                    <a href="gflags.html" class="dependency-card">
+                    <a href="glew.html" class="dependency-card">
                         <div class="section-one">
-                            <div class="dep-name">gflags<i class="dep-version-min"></i></div>
+                            <div class="dep-name">glew<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -251,6 +251,14 @@
                     <a href="metis.html" class="dependency-card">
                         <div class="section-one">
                             <div class="dep-name">metis<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat"></div>
+                            <div class="dep-platform"></div>
+                            <div class="dep-host"></div>
+                        </div>
+                    </a>
+                    <a href="openimageio.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">openimageio<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat"></div>
                             <div class="dep-platform"></div>
                             <div class="dep-host"></div>
@@ -301,7 +309,7 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cgal - <i class="feature-description">Build with CGAL.</i></div>
+                            <div class="feature-name">cgal - <i class="feature-description">Build with CGAL support.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -317,7 +325,7 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cuda - <i class="feature-description">Build with CUDA.</i></div>
+                            <div class="feature-name">cuda - <i class="feature-description">Build with CUDA support for the native architecture.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -329,19 +337,11 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                            <a href="/en/package/glew.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">glew</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
                         </div>
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">cuda-redist - <i class="feature-description">Redistributable CUDA support for common supported compute architectures.</i></div>
+                            <div class="feature-name">cuda-redist - <i class="feature-description">Build with redistributable CUDA support for common supported compute architectures.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
@@ -353,9 +353,57 @@
                                 <div class="feature-dep-no-default"></div>
                             </div>
                             </a>
-                            <a href="/en/package/glew.html">
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">download - <i class="feature-description">Build with automatic resource download support.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/cryptopp.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">glew</div>
+                                <div class="feature-dep-name">cryptopp</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: windows &amp; arm64</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/curl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">curl</div>
+                                <div class="feature-dep-feature">features: [ssl]</div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                            <a href="/en/package/openssl.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">openssl</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform">platform: !(windows &amp; arm64)</div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
+                            <div class="feature-name">gui - <i class="feature-description">Build with GUI support.</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qtbase.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtbase</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default"></div>
+                            </div>
+                            </a>
+                            <a href="/en/package/qtsvg.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtsvg</div>
                                 <div class="feature-dep-feature"></div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
@@ -365,22 +413,14 @@
                     </div>
                     <div class="feature-card">
                         <div class="section-one">
-                            <div class="feature-name">gui - <i class="feature-description">Build the GUI.</i></div>
+                            <div class="feature-name">onnx - <i class="feature-description">Build with ONNX support.</i></div>
                         </div>
                         <div class="section-two">
                             <div class="dependency-title">Dependencies</div>
-                            <a href="/en/package/glew.html">
+                            <a href="/en/package/onnxruntime.html">
                             <div class="feature-dep-card">
-                                <div class="feature-dep-name">glew</div>
-                                <div class="feature-dep-feature"></div>
-                                <div class="feature-dep-platform"></div>
-                                <div class="feature-dep-no-default"></div>
-                            </div>
-                            </a>
-                            <a href="/en/package/qt5-base.html">
-                            <div class="feature-dep-card">
-                                <div class="feature-dep-name">qt5-base</div>
-                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-name">onnxruntime</div>
+                                <div class="feature-dep-feature">features: [cuda]</div>
                                 <div class="feature-dep-platform"></div>
                                 <div class="feature-dep-no-default"></div>
                             </div>
@@ -392,6 +432,7 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">4.1.1#0</li>
                     <li class="badge badge-primary">3.12.6#1</li>
                     <li class="badge badge-primary">3.12.6#0</li>
                     <li class="badge badge-primary">3.11.1#4</li>
@@ -417,11 +458,11 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/adc5a060111cc411cd21c2eeb59c8c719bd2305d/ports/colmap/add-missing-cassert.patch" target="_blank">add-missing-cassert.patch</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/adc5a060111cc411cd21c2eeb59c8c719bd2305d/ports/colmap/no-glu.diff" target="_blank">no-glu.diff</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/adc5a060111cc411cd21c2eeb59c8c719bd2305d/ports/colmap/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/adc5a060111cc411cd21c2eeb59c8c719bd2305d/ports/colmap/usage" target="_blank">usage</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/adc5a060111cc411cd21c2eeb59c8c719bd2305d/ports/colmap/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e621874d4c10385de5c3f0ef21c15a50e93058df/ports/colmap/fix-dependencies.patch" target="_blank">fix-dependencies.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e621874d4c10385de5c3f0ef21c15a50e93058df/ports/colmap/no-glu.diff" target="_blank">no-glu.diff</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e621874d4c10385de5c3f0ef21c15a50e93058df/ports/colmap/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e621874d4c10385de5c3f0ef21c15a50e93058df/ports/colmap/usage" target="_blank">usage</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/e621874d4c10385de5c3f0ef21c15a50e93058df/ports/colmap/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -429,11 +470,11 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> BSD-3-Clause</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2025-12-17</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-11-13</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
-            <div><pre class="support-arch">(linux | (windows & !static) | osx) & (x86 | x64 | arm64)</pre></div>
+            <div><pre class="support-arch">(linux | windows | osx) & (x86 | x64 | arm64)</pre></div>
             <div class="sidebar-section">
                 <h2 class="sidebar-header">Documentation</h2>
                 <div>
