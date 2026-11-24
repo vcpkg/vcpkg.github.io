@@ -107,7 +107,7 @@
             <div class="name-version-container">
                 <h1 class="package-name">
                     knotifications
-                    <span class="package-version">6.31.0#2</span>
+                    <span class="package-version">6.31.0#5</span>
                 </h1>
             </div>
             <div class="package-description">
@@ -188,22 +188,6 @@
                         <div class="section-one">
                             <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
                             <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
-                            <div class="dep-platform">platform: linux</div>
-                            <div class="dep-host"></div>
-                        </div>
-                        <div class="section-two">
-                            <div class="dep-features">
-                                <div class="dep-features-title">Features</div>
-                                <div class="dep-features-preview">
-                                dbus
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="qtbase.html" class="dependency-card">
-                        <div class="section-one">
-                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
-                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
                             <div class="dep-platform">platform: windows</div>
                             <div class="dep-host"></div>
                         </div>
@@ -212,6 +196,22 @@
                                 <div class="dep-features-title">Features</div>
                                 <div class="dep-features-preview">
                                 network
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="qtbase.html" class="dependency-card">
+                        <div class="section-one">
+                            <div class="dep-name">qtbase<i class="dep-version-min"></i></div>
+                            <div class="dep-no-default-feat">default features: <i class="disabled">disabled</i></div>
+                            <div class="dep-platform">platform: linux | bsd</div>
+                            <div class="dep-host"></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dep-features">
+                                <div class="dep-features-title">Features</div>
+                                <div class="dep-features-preview">
+                                dbus
                                 </div>
                             </div>
                         </div>
@@ -249,6 +249,22 @@
                 <div class="card-container">
                     <div class="feature-card">
                         <div class="section-one">
+                            <div class="feature-name">qml - <i class="feature-description">Build the QML module</i></div>
+                        </div>
+                        <div class="section-two">
+                            <div class="dependency-title">Dependencies</div>
+                            <a href="/en/package/qtdeclarative.html">
+                            <div class="feature-dep-card">
+                                <div class="feature-dep-name">qtdeclarative</div>
+                                <div class="feature-dep-feature"></div>
+                                <div class="feature-dep-platform"></div>
+                                <div class="feature-dep-no-default">default features: disabled</div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="section-one">
                             <div class="feature-name">translations - <i class="feature-description">Build and install translation files</i></div>
                         </div>
                         <div class="section-two">
@@ -268,6 +284,9 @@
             <div id="versions-content" class="tab-content">
                 <h2 class="active-header">Available Versions</h2>
                 <ul class="version-badges">
+                    <li class="badge badge-primary">6.31.0#5</li>
+                    <li class="badge badge-primary">6.31.0#4</li>
+                    <li class="badge badge-primary">6.31.0#3</li>
                     <li class="badge badge-primary">6.31.0#2</li>
                     <li class="badge badge-primary">6.31.0#1</li>
                     <li class="badge badge-primary">6.31.0#0</li>
@@ -276,8 +295,10 @@
             <div id="port-content" class="tab-content">
                 <h2 class="active-header">Port Content</h2>
                 <ul>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e463d3dddbe2dab292c806f4e0b4a64132429d5/ports/knotifications/portfile.cmake" target="_blank">portfile.cmake</a></li>
-                    <li><a href="https://github.com/microsoft/vcpkg/blob/4e463d3dddbe2dab292c806f4e0b4a64132429d5/ports/knotifications/vcpkg.json" target="_blank">vcpkg.json</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a7db734bdab412a49c1526ef3b0888a78f416c79/ports/knotifications/export-qml-modules.patch" target="_blank">export-qml-modules.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a7db734bdab412a49c1526ef3b0888a78f416c79/ports/knotifications/optional-qml.patch" target="_blank">optional-qml.patch</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a7db734bdab412a49c1526ef3b0888a78f416c79/ports/knotifications/portfile.cmake" target="_blank">portfile.cmake</a></li>
+                    <li><a href="https://github.com/microsoft/vcpkg/blob/a7db734bdab412a49c1526ef3b0888a78f416c79/ports/knotifications/vcpkg.json" target="_blank">vcpkg.json</a></li>
                   </ul>
             </div>
         </div>
@@ -285,7 +306,7 @@
             <h2 class="sidebar-header">Metadata</h2>
             <div class="sidebar-section">
                 <div><img class="sidebar-logo" src="/assets/package-pages/scale-balanced-solid.svg" alt="License:"> LGPL-2.0-only AND LGPL-2.0-or-later AND (LGPL-2.0-only OR LGPL-3.0-only) AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)</div>
-                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-11-06</div>
+                <div><img class="sidebar-logo" src="/assets/package-pages/wrench-solid.svg" alt="Last Updated:">2026-11-23</div>
             </div>
             <h2 class="sidebar-header">Supports</h2>
             <div class="sidebar-description">This package supports the following triplets:</div>
